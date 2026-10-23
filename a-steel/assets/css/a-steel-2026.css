@@ -1,0 +1,347 @@
+/* ========================================================
+   ANBU TRADERS — A-STEEL (Sheets & Pipes) 2026 DESIGN SYSTEM
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-navy: #062B5B;
+  --primary-navy-dark: #041B3B;
+  --primary-orange: #F36A21;
+  --primary-orange-hover: #d95813;
+  --dark-text: #1B1F24;
+  --body-text: #4A5568;
+  --muted-text: #718096;
+  --bg-light: #F8FAFC;
+  --border-color: #E2E8F0;
+  --card-shadow: 0 4px 20px rgba(6, 43, 91, 0.08);
+  --card-shadow-hover: 0 12px 32px rgba(6, 43, 91, 0.14);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: var(--font-body) !important;
+  color: var(--body-text) !important;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--primary-navy) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+/* ── Top Header ── */
+.header-top.dark-bg {
+  background: var(--primary-navy-dark) !important;
+  padding: 10px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.header-top .contact-info,
+.header-top .site-info {
+  color: #E2E8F0 !important;
+}
+
+.header-top .contact-info i {
+  color: var(--primary-orange) !important;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.header-top .social-area a {
+  color: #CBD5E1 !important;
+  margin-left: 12px;
+  transition: var(--transition);
+}
+
+.header-top .social-area a:hover {
+  color: var(--primary-orange) !important;
+  transform: translateY(-2px);
+}
+
+/* ── Navigation Bar ── */
+.header-area {
+  background: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.sticky-area {
+  background: #ffffff !important;
+  transition: var(--transition);
+}
+
+.is-sticky .sticky-area {
+  box-shadow: 0 4px 24px rgba(6, 43, 91, 0.12) !important;
+}
+
+.navigation .navbar-nav .nav-item .nav-link {
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px !important;
+  color: var(--primary-navy) !important;
+  padding: 24px 16px !important;
+  position: relative;
+  transition: var(--transition);
+}
+
+.navigation .navbar-nav .nav-item .nav-link:hover,
+.navigation .navbar-nav .nav-item .nav-link.active {
+  color: var(--primary-orange) !important;
+}
+
+.navigation .navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: var(--primary-orange);
+  transform: scaleX(0);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.navigation .navbar-nav .nav-item .nav-link:hover::after,
+.navigation .navbar-nav .nav-item .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Main Portal Back Link */
+.main-portal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 43, 91, 0.06);
+  color: var(--primary-navy) !important;
+  padding: 8px 16px !important;
+  border-radius: 50px;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  margin-left: 10px;
+}
+
+.main-portal-pill:hover {
+  background: var(--primary-navy) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.2);
+}
+
+/* ── Hero Slider Enhancement ── */
+.single-slide-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.single-slide-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(6, 43, 91, 0.85) 0%, rgba(6, 43, 91, 0.55) 60%, rgba(243, 106, 33, 0.3) 100%);
+  z-index: 2;
+}
+
+.hero-area-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-area-content h1 {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+  line-height: 1.15 !important;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.hero-area-content h6 {
+  color: var(--primary-orange) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.hero-area-content p {
+  color: #E2E8F0 !important;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+/* Buttons */
+.main-btn,
+.btn-review,
+.theme-btn {
+  background: var(--primary-orange) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 14px 28px !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.3) !important;
+  transition: var(--transition) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+}
+
+.main-btn:hover,
+.btn-review:hover,
+.theme-btn:hover {
+  background: var(--primary-orange-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 106, 33, 0.45) !important;
+}
+
+/* ── Cards & Promos ── */
+.single-promo-item {
+  background: #ffffff !important;
+  border-radius: var(--radius-md) !important;
+  padding: 35px 25px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: var(--transition) !important;
+}
+
+.single-promo-item:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+  border-color: rgba(243, 106, 33, 0.3) !important;
+}
+
+.single-service-item {
+  border-radius: var(--radius-md) !important;
+  overflow: hidden;
+  box-shadow: var(--card-shadow) !important;
+  transition: var(--transition) !important;
+  border: 1px solid var(--border-color);
+}
+
+.single-service-item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* ── Footer ── */
+.footer {
+  background-color: var(--primary-navy-dark) !important;
+  color: #CBD5E1 !important;
+  padding: 70px 0 30px !important;
+}
+
+.footer h5 {
+  color: #ffffff !important;
+  font-size: 18px;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--primary-orange);
+}
+
+.footer .btn.btn-link {
+  color: #94A3B8 !important;
+  font-size: 14px;
+  padding: 6px 0 !important;
+  transition: var(--transition);
+}
+
+.footer .btn.btn-link:hover {
+  color: var(--primary-orange) !important;
+  padding-left: 6px !important;
+}
+
+.footer .btn.btn-square {
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.footer .btn.btn-square:hover {
+  background: var(--primary-orange) !important;
+  border-color: var(--primary-orange) !important;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-top: 25px;
+  margin-top: 50px;
+  color: #64748B !important;
+  font-size: 14px;
+}
+
+/* ── Floating Actions ── */
+.floating-actions {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.32);
+}
+
+.floating-whatsapp { background: #25D366; }
+.floating-call { background: var(--primary-orange); }
+
+@media (max-width: 576px) {
+  .floating-actions {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+  .floating-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 19px;
+  }
+}

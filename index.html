@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,332 +30,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>/* Tabs container */
-.tabs-container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Tabs Navigation */
-.tabs-navigation {
-  display: flex;
-  justify-content: center;
-  background-color: #333;
-  border-radius: 10px 10px 0 0;
-  margin-bottom: 20px;
-}
-/* Popup background */
-.popup-form {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-
-/* Popup box */
-.popup-content {
-  background-color: #fff;
-  margin: auto;
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: relative;
-}
-
-/* Close button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 25px;
-  cursor: pointer;
-  color: #555;
-}
-
-.popup-content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.popup-content label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-.popup-content input,
-.popup-content textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.submit-btn {
-  width: 100%;
-  background-color: orange;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.submit-btn:hover {
-  background-color: #e69500;
-}
-
-/* Tab item styling */
-.tab-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 25px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  flex: 1;
-  text-align: center;
-  border: 1px solid transparent;
-  position: relative;
-}
-
-.tab-item:hover {
-  background-color: #f39c12;
-  transform: scale(1.05);
-}
-
-/* Tab item active state */
-.tab-item.active {
-  background-color: #f39c12;
-  color: white;
-}
-
-/* Tab icon styling */
-.tab-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-.tab-item:hover .tab-icon {
-  transform: rotate(15deg);
-}
-
-/* Tab Content Sections */
-.tab-content {
-  display: none;
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Active tab content */
-.tab-content.active {
-  display: block;
-  opacity: 1;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Content overlay styling */
-.content-overlay {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 25px;
-  max-width: 80%;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-/* Title inside the content overlay */
-.content-overlay h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Paragraph text in the overlay */
-.content-overlay p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Call to action link */
-.cta-link {
-  color: #f39c12;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-link:hover {
-  color: #f1c40f;
-  transform: scale(1.05);
-}
-
-/* Content overlay hover effect */
-.tab-content:hover .content-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Fade in animation for tab content */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* --------- RESPONSIVE CSS --------- */
-
-/* For tablets and smaller (up to 1024px wide) */
-@media (max-width: 1024px) {
-  .tabs-navigation {
-    flex-wrap: wrap;
-  }
-
-  .tab-item {
-    flex: 1 1 50%;
-    padding: 12px 20px;
-  }
-
-  .tab-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .content-overlay h2 {
-    font-size: 22px;
-  }
-
-  .content-overlay p {
-    font-size: 15px;
-  }
-}
-
-/* For mobile devices (up to 768px wide) */
-@media (max-width: 768px) {
-  .tabs-navigation {
-    flex-direction: column;
-    border-radius: 8px;
-  }
-
-  .tab-item {
-    flex: 1 1 100%;
-    border-bottom: 1px solid #444;
-    text-align: left;
-    justify-content: flex-start;
-    padding: 14px 20px;
-  }
-
-  .tab-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
-
-  .tab-content {
-    height: auto;
-    min-height: 400px;
-    background-position: center center;
-    background-size: cover;
-    padding: 20px 15px;
-  }
-
-  .content-overlay {
-    position: static;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-    transform: none;
-    opacity: 1;
-  }
-
-  .content-overlay h2 {
-    font-size: 20px;
-  }
-
-  .content-overlay p {
-    font-size: 14px;
-  }
-
-  .cta-link {
-    font-size: 14px;
-  }
-}
-
-/* For very small phones (up to 480px) */
-@media (max-width: 480px) {
-  .tab-item {
-    font-size: 14px;
-    padding: 12px 16px;
-  }
-
-  .tab-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .content-overlay {
-    padding: 16px;
-  }
-
-  .content-overlay h2 {
-    font-size: 18px;
-  }
-
-  .content-overlay p {
-    font-size: 13px;
-  }
-
-  .cta-link {
-    font-size: 13px;
-    padding: 6px 10px;
-  }
-}
-.tab-cements {
-  background-image: url('/Untitled design.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  .tab-cements {
-    background-position: top center;
-    background-size: contain; /* OR: cover, based on testing */
-    background-repeat: no-repeat;
-  }
-}
-
-</style>
 </head>
 
 <body>
@@ -609,26 +283,26 @@
 
 <div class="tabs-container">
   <div class="tabs-navigation">
-    <div class="tab-item" data-tab="cements">
-      <img src="/cement.png" alt="Cements" class="tab-icon">
+    <div class="tab-item active" data-tab="cements">
+      <img src="cement.png" alt="Cements" class="tab-icon">
       <span>Cements</span>
     </div>
     <div class="tab-item" data-tab="tmt">
-      <img src="/iron-bar (1).png" alt="TMT Rods" class="tab-icon">
+      <img src="iron-bar (1).png" alt="TMT Rods" class="tab-icon">
       <span>TMT Rods</span>
     </div>
     <div class="tab-item" data-tab="pipes">
-      <img src="/tubes.png" alt="Sheets & Pipes" class="tab-icon">
+      <img src="tubes.png" alt="Sheets & Pipes" class="tab-icon">
       <span>Sheets & Pipes</span>
     </div>
     <div class="tab-item" data-tab="paints">
-      <img src="/varnish.png" alt="Paints" class="tab-icon">
+      <img src="varnish.png" alt="Paints" class="tab-icon">
       <span>Paints</span>
     </div>
   </div>
 
   <!-- Tab Content Sections -->
-  <section class="tab-content tab-cements" id="cements">
+  <section class="tab-content tab-cements active" id="cements">
   <article class="content-overlay">
     <h2 style="color: #f39c12;">High-Quality Cements for Every Project</h2>
     <p>Our premium cements ensure strong and durable construction with guaranteed performance for every type of building project.</p>
@@ -1467,15 +1141,31 @@
     <!-- Footer End -->
 
 
-    <!-- Copyright Start -->
+                <!-- Copyright Start -->
     <div class="container-fluid copyright bg-dark py-4">
-        <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Anbu Traders</a>, All Right Reserved.</p>
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                    <p class="mb-0">Copyright &copy; <span class="current-year">2026</span> <a class="fw-semi-bold text-primary text-decoration-none" href="index.html">Anbu Traders</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Proudly created with <a class="text-primary text-decoration-none fw-semibold" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a></p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Copyright End -->
 
+
+    <!-- Floating Contact Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20your%20products." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919626325204" class="floating-btn floating-call" title="Call Us" aria-label="Call Us">
+            <i class="fa fa-phone-alt"></i>
+        </a>
+    </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>

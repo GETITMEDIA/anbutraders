@@ -1,0 +1,322 @@
+/* ========================================================
+   ANBU TRADERS — CEMENT & STEEL 2026 UNIFIED DESIGN SYSTEM
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-navy: #062B5B;
+  --primary-navy-dark: #041B3B;
+  --primary-orange: #F36A21;
+  --primary-orange-hover: #d95813;
+  --body-text: #334155;
+  --muted-text: #64748B;
+  --bg-light: #F8FAFC;
+  --border-color: #E2E8F0;
+  --card-shadow: 0 4px 20px rgba(6, 43, 91, 0.08);
+  --card-shadow-hover: 0 12px 32px rgba(6, 43, 91, 0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: var(--font-body) !important;
+  color: var(--body-text) !important;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--primary-navy) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+/* ── Fixed Navbar ── */
+#banner.navbar {
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 20px rgba(6, 43, 91, 0.08) !important;
+  padding: 12px 0 !important;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5px !important;
+  color: var(--primary-navy) !important;
+  padding: 12px 16px !important;
+  margin-left: 10px !important;
+  position: relative;
+  transition: var(--transition);
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+  color: var(--primary-orange) !important;
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: var(--primary-orange);
+  transform: scaleX(0);
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Main Portal Back Button */
+.cement-main-portal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 43, 91, 0.06);
+  color: var(--primary-navy) !important;
+  padding: 8px 18px !important;
+  border-radius: 50px;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  text-decoration: none !important;
+  margin-left: 14px;
+}
+
+.cement-main-portal-pill:hover {
+  background: var(--primary-navy) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.2);
+}
+
+/* ── Hero Section ── */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(6, 43, 91, 0.90) 0%, rgba(6, 43, 91, 0.70) 55%, rgba(243, 106, 33, 0.35) 100%) !important;
+  z-index: 1;
+}
+
+.hero-section-content,
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-content h1,
+.hero-section h1 {
+  color: #ffffff !important;
+  font-size: clamp(2.2rem, 5vw, 4.2rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+  margin-bottom: 24px;
+}
+
+.welcome-content h1 span,
+.welcome-content .gradient-text {
+  color: var(--primary-orange) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--primary-orange) !important;
+}
+
+.welcome-content p,
+.hero-section p {
+  color: #E2E8F0 !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7;
+}
+
+/* Contact Us / Action Buttons */
+.btn.dream-btn,
+.btn-primary,
+.more-btn {
+  background: var(--primary-orange) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 14px 32px !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 16px rgba(243, 106, 33, 0.35) !important;
+  transition: var(--transition) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+}
+
+.btn.dream-btn:hover,
+.btn-primary:hover,
+.more-btn:hover {
+  background: var(--primary-orange-hover) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 106, 33, 0.5) !important;
+}
+
+/* ── Service Boxes & Features ── */
+.service_single_content {
+  background: #ffffff !important;
+  border-radius: var(--radius-md) !important;
+  padding: 35px 25px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+  transition: var(--transition) !important;
+}
+
+.service_single_content:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+  border-color: rgba(243, 106, 33, 0.3) !important;
+}
+
+/* Fix garish blue inline paragraph styles */
+p[style*="rgb(13, 5, 247)"],
+p[style*="rgb(13,5,247)"] {
+  color: var(--body-text) !important;
+}
+
+/* ── Testimonials ── */
+.single-testimonial {
+  background: #ffffff !important;
+  border-radius: var(--radius-md) !important;
+  padding: 30px !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+/* ── Form inputs styling ── */
+.contact_form .group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100% !important;
+  padding: 14px 18px !important;
+  background: #FAFCFE !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-body) !important;
+  font-size: 15px !important;
+  color: var(--body-text) !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: var(--transition) !important;
+}
+
+.contact_form textarea {
+  min-height: 140px;
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus {
+  border-color: var(--primary-orange) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(243, 106, 33, 0.15) !important;
+}
+
+.contact_form label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--primary-navy) !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+  position: static !important;
+}
+
+/* ── Footer ── */
+.footer-area {
+  background: var(--primary-navy-dark) !important;
+  color: #CBD5E1 !important;
+}
+
+.footer-area h5,
+.footer-area h6 {
+  color: #ffffff !important;
+}
+
+.footer-area a {
+  color: #94A3B8 !important;
+  transition: var(--transition);
+}
+
+.footer-area a:hover {
+  color: var(--primary-orange) !important;
+}
+
+/* ── Floating Contact Actions ── */
+.floating-actions {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff !important;
+  font-size: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  transition: var(--transition);
+  text-decoration: none !important;
+}
+
+.floating-btn:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.32);
+}
+
+.floating-whatsapp { background: #25D366; }
+.floating-call { background: var(--primary-orange); }
+
+@media (max-width: 576px) {
+  .floating-actions {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+  .floating-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 19px;
+  }
+}
