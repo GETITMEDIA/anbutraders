@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-    <!-- Session check to avoid repeated spinner on every page navigation -->
+        <!-- Session check to avoid repeated preloader on every page navigation, but allow on reload/entry -->
     <script>
         try {
-            if (sessionStorage.getItem('anbu_site_loaded')) {
+            var navEntries = performance.getEntriesByType('navigation');
+            var isReload = (navEntries && navEntries.length > 0 && navEntries[0].type === 'reload');
+            if (isReload) {
+                sessionStorage.removeItem('anbu_site_loaded');
+            } else if (sessionStorage.getItem('anbu_site_loaded')) {
                 document.documentElement.classList.add('already-visited');
             }
         } catch (e) {}
@@ -42,25 +46,39 @@
 </head>
 
 <body>
-        <!-- Custom Industrial Steel Preloader Start -->
+                        <!-- Heavy Industrial Steel Shutter Preloader Start -->
     <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true">
-        <div class="anbu-preloader-stage">
-            <div class="anbu-beam-track">
-                <div class="anbu-steel-beam anbu-beam-left"></div>
-                <div class="anbu-steel-beam anbu-beam-right"></div>
-                <div class="anbu-joint-spark">
-                    <span class="anbu-joint-flash"></span>
-                    <span class="anbu-joint-pulse"></span>
+        <!-- Left Industrial Steel Shutter Gate -->
+        <div class="anbu-shutter-gate anbu-shutter-left">
+            <div class="anbu-gate-edge-bar"></div>
+        </div>
+
+        <!-- Right Industrial Steel Shutter Gate -->
+        <div class="anbu-shutter-gate anbu-shutter-right">
+            <div class="anbu-gate-edge-bar"></div>
+        </div>
+
+        <!-- Full-Height Vertical Seam Laser Glow -->
+        <div class="anbu-seam-laser"></div>
+
+        <!-- Center Heavy Vault Badge -->
+        <div class="anbu-shutter-center">
+            <div class="anbu-vault-badge">
+                <img src="img/ANUBU STEEL.png" alt="Anbu Traders" class="anbu-vault-logo">
+                <h2 class="anbu-vault-title">ANBU <span>TRADERS</span></h2>
+                
+                <div class="anbu-vault-progress">
+                    <div class="anbu-vault-track">
+                        <div class="anbu-vault-fill"></div>
+                    </div>
+                    <div class="anbu-vault-percent">
+                        <span id="anbu-counter">0%</span>
+                    </div>
                 </div>
             </div>
-            <div class="anbu-preloader-logo-wrap">
-                <img src="img/ANUBU STEEL.png" alt="Anbu Traders" class="anbu-preloader-logo">
-                <div class="anbu-preloader-tagline">ANBU <span>TRADERS</span></div>
-            </div>
-            <div class="anbu-steady-line"></div>
         </div>
     </div>
-    <!-- Custom Industrial Steel Preloader End -->
+    <!-- Heavy Industrial Steel Shutter Preloader End -->
 
 
     <!-- Topbar Start -->

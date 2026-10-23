@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Anbu Traders — Ultra-Premium Preloader Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link href="css/preloader.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #03142B;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .preview-content {
+            text-align: center;
+            padding: 40px;
+        }
+        .preview-btn {
+            background: #F36A21;
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(243, 106, 33, 0.4);
+            transition: all 0.2s ease;
+            margin-top: 20px;
+        }
+        .preview-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 106, 33, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+            <!-- Heavy Industrial Steel Shutter Preloader Start -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true">
+        <!-- Left Industrial Steel Shutter Gate -->
+        <div class="anbu-shutter-gate anbu-shutter-left">
+            <div class="anbu-gate-edge-bar"></div>
+        </div>
+
+        <!-- Right Industrial Steel Shutter Gate -->
+        <div class="anbu-shutter-gate anbu-shutter-right">
+            <div class="anbu-gate-edge-bar"></div>
+        </div>
+
+        <!-- Full-Height Vertical Seam Laser Glow -->
+        <div class="anbu-seam-laser"></div>
+
+        <!-- Center Heavy Vault Badge -->
+        <div class="anbu-shutter-center">
+            <div class="anbu-vault-badge">
+                <img src="img/ANUBU STEEL.png" alt="Anbu Traders" class="anbu-vault-logo">
+                <h2 class="anbu-vault-title">ANBU <span>TRADERS</span></h2>
+                
+                <div class="anbu-vault-progress">
+                    <div class="anbu-vault-track">
+                        <div class="anbu-vault-fill"></div>
+                    </div>
+                    <div class="anbu-vault-percent">
+                        <span id="anbu-counter">0%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Heavy Industrial Steel Shutter Preloader End -->
+
+    <div class="preview-content">
+        <h1 style="font-size: 32px; margin-bottom: 8px;">Anbu Traders Preloader Preview</h1>
+        <p style="color: #94A3B8; max-width: 500px; margin: 0 auto 20px;">
+            The preloader has completed its animation and smoothly revealed the content.
+        </p>
+        <button class="preview-btn" onclick="location.reload()">Replay Preloader Animation</button>
+        <div style="margin-top: 15px;">
+            <a href="index.html" style="color: #F36A21; text-decoration: none; font-size: 14px; font-weight: 600;">Go to Homepage &rarr;</a>
+        </div>
+    </div>
+
+    <script src="js/preloader.js"></script>
+</body>
+</html>
