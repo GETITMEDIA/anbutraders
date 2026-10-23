@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header Start -->
+
+
+<!-- Mirrored from kamleshyadav.com/templatemonster-html/penter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Aug 2025 05:08:43 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Anbu Paint </title>
+
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords"
+		content="colors, creative, home renovation, house maintenance, interior, paint, painter, painting, Painting company, responsive, sketch, photography, portfolio, artists, artwork,">
+	<meta name="MobileOptimized" content="320">
+	<!--start theme style-->
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom_animation.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<!-- favicon link-->
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+	  <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>/* General Styling for the Menu */
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.color-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-transform: capitalize;
+}
+
+.tab-btn:hover {
+  background-color: #ddd;
+}
+
+.image-gallery .gallery {
+  display: none; /* Hide all galleries by default */
+}
+
+.image-gallery .gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.image-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-grid img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Button Background Colors */
+#greys-btn {
+  background-color: #808080; /* Grey */
+  color: white;
+}
+
+#browns-btn {
+  background-color: #8B4513; /* Brown */
+  color: white;
+}
+
+#blues-btn {
+  background-color: #4682B4; /* Blue */
+  color: white;
+}
+
+#reds-btn {
+  background-color: #B22222; /* Red */
+  color: white;
+}
+
+#oranges-btn {
+  background-color: #FFA500; /* Orange */
+  color: white;
+}
+
+#yellows-btn {
+  background-color: #FFD700; /* Yellow */
+  color: #333; /* Dark text for better contrast */
+}
+
+#purples-btn {
+  background-color: #800080; /* Purple */
+  color: white;
+}
+
+#pink-btn {
+  background-color: #FFC0CB; /* Pink */
+  color: #333;
+}
+
+#green-btn {
+  background-color: #008000; /* Green */
+  color: white;
+}
+
+/* Desktop Menu Gap */
+.temp_menu_wrapper .temp_menu ul.temp_res_ul li {
+    margin-right: 20px;  /* Adjust this value to increase/decrease the gap */
+}
+
+/* Optional: Add a little margin to the last item to prevent extra space at the end */
+.temp_menu_wrapper .temp_menu ul.temp_res_ul li:last-child {
+    margin-right: 0;
+}
+
+/* Mobile Menu Adjustments */
+@media (max-width: 768px) {
+    /* Initially hide the mobile menu */
+    .temp_menu_wrapper .temp_menu ul.temp_res_ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Space out the menu items in mobile */
+    .temp_menu_wrapper .temp_menu ul.temp_res_ul li {
+        margin: 10px 0; /* Adjust the gap between items */
+    }
+
+    /* Show the burger icon */
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Hide menu when closed */
+    .temp_menu_wrapper .temp_menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Ensure that the burger icon only appears on smaller screens */
+    .navbar-toggle .line {
+        display: block;
+        width: 25px;
+        height: 4px;
+        margin: 5px auto;
+        background-color: #333;
+        border-radius: 5px;
+    }
+}
+
+/* Show the menu when the burger icon is clicked (on mobile) */
+.temp_menu_wrapper .temp_menu.show-menu ul.temp_res_ul {
+    display: block;
+}
+/* General Styling */
+
+
+.color-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.image-gallery .gallery {
+  display: none;
+  margin-top: 30px;
+}
+
+.image-gallery .gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.image-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image-grid img {
+  width: 1000px;        /* Make the image take up the full width of its container */
+  height: 500px;       /* Make the image take up the full height of its container */
+  object-fit: cover;  /* Ensure the image covers the container while maintaining aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+/* Mobile menu hidden by default */
+@media (max-width: 991px) {
+  .temp_res_ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    padding: 16px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+  }
+
+  /* Show when .show-menu is added */
+  .temp_menu.show-menu .temp_res_ul {
+    display: flex;
+  }
+
+  /* Submenu hidden by default */
+  .submenu { display: none; }
+  .temp_res_ul li.open > .submenu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 12px;
+  }
+
+  .navbar-toggle { display: block; cursor: pointer; }
+}
+.navbar-toggle { display: none; }
+.navbar-toggle .line {
+  width: 25px; height: 3px; background: #333;
+  margin: 5px 0; border-radius: 2px;
+}
+
+</style>
+</head>
+
+
+
+
+
+<body>
+	<div class="temp_loader_wrapper">
+    <div class="temp_loader">
+        <img src="assets/images/loader.gif" alt="painter-pre-loader">
+    </div>
+</div>
+
+<!-- Section1 Start -->
+<header class="site-header">
+    <div class="header-container">
+        
+        <!-- Logo -->
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="img/paint logo.png" alt="Paint Logo">
+            </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="header-nav desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li class="has-submenu">
+                    <a href="#">Products ▼</a>
+                   <ul class="submenu">
+                        <li><a href="jsw.html">JSW Paints</a></li>
+                        <li><a href="burger.html">Berger Paints</a></li>
+                        <li><a href="asianpant.html">Asian Paints</a></li>
+                        <li><a href="wallputty.html">Wallputty</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="index.html#servicepaint">Service</a></li>
+                <li><a href="ourproject.html">Our Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="hamburger-btn" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- Slide-in Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li class="has-submenu">
+                <a href="#">Products ▼</a>
+                <ul class="submenu">
+                    <li><a href="jsw.html">JSW Paints</a></li>
+                    <li><a href="burger.html">Berger Paints</a></li>
+                    <li><a href="asianpant.html">Asian Paints</a></li>
+                </ul>
+            </li>
+
+            <li><a href="index.html#servicepaint">Service</a></li>
+            <li><a href="ourproject.html">Our Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Background Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section style="position:relative; width:100%; height:80vh; background:url('paint/yellow.jpg') no-repeat center center/cover; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff;">
+  <!-- Overlay -->
+  <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);"></div>
+  
+  <!-- Content -->
+  <div style="position:relative; z-index:1; padding:20px; max-width:800px;">
+    <h1 style="font-size:4rem; margin-bottom:20px; font-weight:bold;">
+Berger Paint </h1>
+    <p style="font-size:2rem; margin-bottom:30px; line-height:1.5;">
+      ColourDur Coil Coatings – Durable, Vibrant & Eco-Friendly
+    </p>
+    <a href="#about" style="background:#0d47a1; color:#fff; padding:15px 30px; border-radius:8px; font-size:1.5rem; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.3); transition:0.3s;">
+      Explore More
+    </a>
+  </div>
+</section>
+
+<!-- JSW Paints Section -->
+<!-- Berger Paints Section -->
+<section style="max-width:1200px; margin:60px auto; padding:20px; display:flex; flex-wrap:wrap; align-items:center; gap:30px;">
+  
+  <!-- Left Content -->
+  <div style="flex:1 1 500px;">
+    <h2 style="font-size:3rem; margin-bottom:20px; color:#b71c1c;">
+      Berger Paints
+    </h2>
+    <p style="font-size:1.6rem; line-height:1.6; margin-bottom:25px;">
+      Berger has been able to provide environment-friendly paints. Rather than offer more breeding 
+      spaces for harmful air pollutants like formaldehyde, these paints reduce their impacts to a great extent. 
+      Emulsion paints are water-based, making them almost odour-less and the most preferred choice 
+      for interior wall paint colours.
+    </p>
+    <div style="background:#efc7c7;color: #000; padding:20px; border-left:5px solid #b71c1c; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05);">
+      <h3 style="font-size:2rem; margin-bottom:15px; color:#b71c1c;">Benefits of Berger Paints</h3>
+      <ul style="list-style:circle; margin-left:20px; font-size:1.5rem; line-height:1.6;">
+        <li>Eco-friendly & reduces harmful air pollutants</li>
+        <li>Water-based emulsion paints with low odour</li>
+        <li>Customer-friendly Express Painting service</li>
+        <li>Transforms living spaces with vibrant colours</li>
+        <li>Brings families together to create joyful memories</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Right Image -->
+  <div style="flex:1 1 400px; text-align:center;">
+    <img src="paint/Berger paint benfits.webp" 
+         alt="Berger Paints Showcase" 
+         style="max-width:100%; border-radius:15px; box-shadow:0 6px 18px rgba(0,0,0,0.2);">
+  </div>
+</section>
+
+
+
+<!-- Footer Start -->
+<div class="container-fluid" style="background-color: #043a6f; padding-top: 5rem; padding-bottom: 5rem; margin-top: 30px;">
+  <div class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+    <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem;">
+      
+      <!-- Our Office -->
+      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
+        <h5 style="color: white; margin-bottom: 1.5rem;">Our shop</h5>
+        <p style="margin-bottom: 0.5rem; color: white;">
+          <i class="fa fa-map-marker-alt" style="margin-right: 0.75rem; "></i>
+       No. 4/5, Pondy – Mailam Main Road,Opposite to Venkateswara Weighment,
+Thiruchitrambalam Kootroad, Vanur Taluk,
+Villupuram Dt. – 605111
+        </p>
+        <p style="margin-bottom: 0.5rem;color: white;">
+          <i class="fa fa-phone-alt" style="margin-right: 0.75rem;color: white;"></i>919626325232
+
++919894011468
+
++919626325204
+        </p>
+
+
+        <p style="margin-bottom: 0.5rem;color: white;">
+          <i class="fa fa-phone-alt" style="margin-right: 0.75rem;"color: white;></i>0413-2980014
+        </p>
+        <p style="margin-bottom: 0.5rem;color: white;">
+          <i class="fa fa-envelope" style="margin-right: 0.75rem;"></i>anbutraders1468@gmail.com
+        </p>
+        <div style="display: flex; margin-top: 1.5rem;">
+          <a href="https://www.instagram.com/anbutraders_py/" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
+            <i class="fab fa-instagram" style="color: white; font-size: 20px;"></i>
+          </a>
+          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
+            <i class="fab fa-facebook-f" style="color: white; font-size: 20px;"></i>
+          </a>
+          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
+            <i class="fab fa-youtube" style="color: white; font-size: 20px;"></i>
+          </a>
+          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
+            <i class="fab fa-linkedin-in" style="color: white; font-size: 20px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
+        <h5 style="color: white; margin-bottom: 1.5rem;">Quick Links</h5>
+        <a href="about.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">About Us</a>
+        <a href="contact.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Contact Us</a>
+        <a href="service.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Our Services</a>
+        <a href="steel.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Steel</a>
+        <a href="sheets.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Sheets and Pipes</a>
+        <a href="paints.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Paints</a>
+      </div>
+
+      <!-- Business Hours -->
+      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
+        <h5 style="color: white; margin-bottom: 1.5rem;">Business Hours</h5>
+        <p style="margin-bottom: 0.5rem;color: #fcfeff;">Monday - Saturday</p>
+        <h6 style="color: #fbfdff;">08:00 am - 08:00 pm</h6>
+        <p style="margin-bottom: 0.5rem;color: #fcfeff;">Sunday</p>
+        <h6 style="color: #fcfeff;">08:00 am - 02:30 pm</h6>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
+        <h5 style="color: white; margin-bottom: 1.5rem;">Leave a Google Review</h5>
+        <p style="color: #f8fcff; margin-bottom: 1rem;">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+        <div style="position: relative; width: 100%;">
+          <button type="button" style="background-color: #3498db; border: none; padding: 0.75rem 1.5rem; color: white; font-size: 1rem; position: absolute; top: 0; right: 0; margin-top: 0.75rem; margin-right: 0.75rem;" onclick="redirectToGoogleReview()">Leave a Review</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".navbar-toggle");
+  const tempMenu = document.querySelector(".temp_menu");
+
+  // Burger toggle
+  burger.addEventListener("click", function () {
+    tempMenu.classList.toggle("show-menu");
+  });
+
+  // Submenu toggle on mobile
+  document.querySelectorAll(".temp_res_ul > li > a").forEach(link => {
+    const submenu = link.nextElementSibling;
+    if (submenu && submenu.classList.contains("submenu")) {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          link.parentElement.classList.toggle("open");
+        }
+      });
+    }
+  });
+});
+</script>
+<script>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("mobileOverlay");
+
+hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+});
+
+overlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
+});
+</script>
+
+    
+</body></html>
+<!-- Mirrored from kamleshyadav.com/templatemonster-html/penter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Aug 2025 05:09:00 GMT -->

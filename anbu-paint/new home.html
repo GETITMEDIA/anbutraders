@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Businesses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .section-title {
+      text-align: center;
+      padding: 30px 10px 10px;
+      font-size: 2.5em;
+      color: #003366;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 0;
+    }
+
+    .tab {
+      padding: 15px 30px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #333;
+      position: relative;
+    }
+
+    .tab.active {
+      color: red;
+    }
+
+    .tab.active::after {
+      content: '';
+      height: 3px;
+      background: red;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 40px;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      min-height: 400px;
+      position: relative;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      max-width: 500px;
+    }
+
+    .tab-content h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .tab-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .read-more {
+      color: red;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="section-title">Our Businesses</h2>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="steels">Steels</div>
+    <div class="tab" data-tab="cements">Cements</div>
+    <div class="tab" data-tab="tmt">TMT Rods</div>
+    <div class="tab" data-tab="pipes">Sheets & Pipes</div>
+    <div class="tab" data-tab="paints">Paints</div>
+  </div>
+
+  <!-- Content: Steels -->
+  <div class="tab-content active" id="steels" style="background-image: url('https://www.tatasteel.com/media/12024/hr-coils.jpg');">
+    <div class="overlay">
+      <h2>Discover the unrivalled quality of our steel</h2>
+      <p>Strengthening ideas with optimum durability and innovation</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+
+  <!-- Placeholder content for other tabs -->
+  <div class="tab-content" id="cements" style="background: #f7f7f7;">
+    <div class="overlay">
+      <h2>Cement Solutions</h2>
+      <p>Durable and long-lasting cement for infrastructure.</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tmt" style="background: #f2f2f2;">
+    <div class="overlay">
+      <h2>TMT Rods</h2>
+      <p>High-strength rods that reinforce your foundation.</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="pipes" style="background: #efefef;">
+    <div class="overlay">
+      <h2>Sheets & Pipes</h2>
+      <p>Versatile sheet and pipe solutions for industrial use.</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+
+  <div class="tab-content" id="paints" style="background: #eaeaea;">
+    <div class="overlay">
+      <h2>Paints</h2>
+      <p>Color your world with lasting quality and brilliance.</p>
+      <a href="#" class="read-more">READ MORE</a>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deactivate all tabs and contents
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+
+        // Activate clicked tab and corresponding content
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from iideainformatics.it/html/devgalaxy/industrify/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 06:33:51 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">    
+
+    <title>sheets&pipes</title>
+
+    <!--Favicon--> 
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Line Awesome CSS -->
+    <link href="assets/css/line-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
+    <!-- Animate CSS-->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <!-- Bar Filler CSS -->
+    <link href="assets/css/barfiller.css" rel="stylesheet">
+    <!-- Magnific Popup Video -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Flaticon CSS -->
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <!-- Nice Select  -->
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <!-- Back to Top -->
+    <link href="assets/css/backToTop.css" rel="stylesheet">
+    <!-- Style CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    
+<style>@media (max-width: 768px) {
+
+    .single-slide-item {
+        position: relative;
+        text-align: center;
+    }
+
+    .image-layer {
+        background-size: cover !important;
+        background-position: center !important;
+        height: 100px; /* Adjust if needed */
+    }
+
+    .hero-area-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .section-title h1 {
+        font-size: 22px !important;
+        line-height: 28px;
+    }
+
+    .section-title h6 {
+        font-size: 14px;
+    }
+}/* Default image for desktop */
+.image-layer {
+    background-image: url("assets/img/slider/slidersheet.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Change image for mobile */
+@media (max-width: 768px) {
+    .image-layer {
+        height: 250px !important;   /* change height here */
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-area-content {
+        position: absolute;
+        top: 55%;            /* move text vertically */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .single-slide-item {
+        position: relative;
+    }
+
+    .image-layer {
+        height: 280px !important; /* adjust image height */
+        position: relative;
+    }
+}
+
+
+</style>
+    <!-- jquery -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <style>
+        /* Footer Base */
+/*** Footer ***/
+/* Footer Styling */
+.footer {
+    background-color: #062744; /* Blue background */
+    color: #B0B9AE;
+}
+
+/* Quick Links Styling */
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #B0B9AE;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.footer .btn.btn-link:hover {
+    color: #ffffff;
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+/* Social Icons */
+.footer .btn.btn-square {
+    background-color: transparent;
+    border: 1px solid #dc231b;
+    color:#dc231b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer .btn.btn-square:hover {
+    background-color:#dc231b;
+    color: #000;
+}
+
+/* Copyright */
+.copyright {
+    color: #B0B9AE;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+/* Yellow Button Style */
+.btn-review {
+  background-color:#dc231b; /* Yellow */
+    color: #000000; /* Black text for contrast */
+    border: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Hover Effect */
+.btn-review:hover {
+    background-color:#dc231b; /* Slightly darker yellow */
+    color: #000;
+}
+.single-promo-item {
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.779); /* Adjust values as needed */
+    transition: box-shadow 0.3s ease; /* Optional: adds smooth hover effect */
+}
+
+.single-promo-item:hover {
+    box-shadow: 0 8px 16px rgba(26, 0, 0, 0.2); /* Optional: deeper shadow on hover */
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Mouse Cursor  -->
+    <div class="mouseCursor cursor-outer"></div>
+    <div class="mouseCursor cursor-inner"><span>Drag</span></div>
+
+    <!-- Pre-Loader -->
+    <div id="loader"></div>
+
+<!-- Header Top Area -->
+
+ 	<div class="header-top dark-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="contact-info">
+                        <i class="las la-envelope"></i> anbutraders1468@gmail.com |
+                       <i class="las la-phone"></i>
+ 09626325204
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 text-end">
+                    <div class="site-info">
+                        Turning big ideas into great products!
+                        <div class="social-area">
+                            <a href="#"><i class="lab la-facebook-f"></i></a>
+                            <a href="#"><i class="lab la-instagram"></i></a>
+                            <a href="#"><i class="lab la-twitter"></i></a>
+                            <a href="#"><i class="la la-skype"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Area -->
+
+    <header class="header-area">
+        <div class="sticky-area">
+            <div class="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="logo">
+                                <a class="navbar-brand" href="index.html"><img src="assets/img/logos11.png" alt="" style="width: 120px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main-menu">
+                                <nav class="navbar navbar-expand-lg">
+                                    <button class="navbar-toggler" style="color: #dc231b;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                        <span class="navbar-toggler-icon"></span>
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+    
+                                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                                        <ul class="navbar-nav m-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="index.html"  style="color: #3300ff;">HOME
+                                                    <span class="sub-nav-toggler"> </span>
+                                                </a>
+                                            
+                                            </li>
+        
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#about"  style="color: #3300ff;">ABOUT 
+                                                    <span class="sub-nav-toggler"> </span>
+                                                </a>
+                                           
+                                            </li>
+
+                                            <li class="nav-item smooth-menu">
+                                                <a class="nav-link" href="#services"  style="color: #3300ff;">SERVICES</a>
+                                            </li>
+
+                                     
+                                                                                                                                    
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="gallery.html"  style="color: #3300ff;"> PROJECTS
+                                                    <span class="sub-nav-toggler"> </span>
+                                                </a>
+                                               
+                                            </li>
+                                            
+                                            <li class="nav-item smooth-menu">
+                                                <a class="nav-link" href="contact.html"  style="color: #3300ff;">CONTACT</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 text-right">
+                            <div class="header-right-content">                                    
+                                <!-- <div class="header-icon">
+                                    <i class="las la-shopping-bag"></i>
+                                </div> -->
+                            
+                                <div class="header-icon search-trigger">                                        
+                                    <i class="las la-search"></i>                                        
+                                </div>
+                            
+                                <div class="header-icon menu-trigger">
+                                    <i class="las la-bars"></i>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Dropdown Area -->
+
+    <div class="search-popup">
+        <span class="search-back-drop"></span>
+
+        <div class="search-inner">
+            <div class="container">
+                <div class="upper-text">
+                    <div class="text">Search for anything.</div>
+                    <button class="close-search"><span class="la la-times"></span></button>
+                </div>
+
+                <form method="post" action="https://iideainformatics.it/html/devgalaxy/industrify/index.html">
+                    <div class="form-group">
+                        <input type="search" name="search-field" value="" placeholder="Search..." required="">
+                        <button type="submit"><i class="la la-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Area -->
+<style>/* Default desktop look */
+.single-slide-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-layer {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-area-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+
+/* ----------------------------
+    MOBILE FIX (100% WORKING)
+----------------------------- */
+@media (max-width: 768px) {
+
+    .image-layer {
+        height: 320px !important;     /* change height if needed */
+        background-position: center !important;
+        background-size: cover !important;
+    }
+
+    .hero-area-content {
+        top: 55%;                    /* move text slightly lower */
+        transform: translate(-50%, -50%);
+        width: 90%;                  /* better fitting */
+        text-align: center;
+    }
+
+    .section-title h1 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+    }
+.homepage-slides .single-slide-item{height: 400px;}
+    .section-title h6 {
+        font-size: 14px !important;
+    }
+}
+</style>
+    <div id="home-1" class="homepage-slides owl-carousel">
+        <div class="single-slide-item">
+            <div class="image-layer" style="background-image: url(assets/img/slider/slidersheet.png);">
+                <div class="overlay"></div>
+            </div>
+            <div class="hero-area-content">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".2s">
+                            <div class="section-title">
+                                <h6>We provide best satisfied work</h6>
+                                <h1 style="font-size: 35px;">Top Quality Roof Sheets & MS Pipes – At the Best Prices!</b></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <!-- Promo Section -->
+
+    <div class="promo-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="single-promo-item mb-50">
+                    <div class="promo-icon">
+                        <i class="flaticon-factory"></i>
+                    </div>
+                    <h5>Industrial Solution</h5>
+                    <p>Reliable industrial solutions for roofing, piping, and structural steel needs.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="single-promo-item mb-50 spro">
+                    <div class="promo-icon">
+                        <i class="flaticon-cogwheel"></i>
+                    </div>
+                    <h5>Eco Development</h5>
+                    <p>Promoting sustainable growth through eco-friendly development solutions.</p>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-12">
+                <div class="single-promo-item mb-50">
+                    <div class="promo-icon">
+                        <i class="flaticon-maintenance"></i>
+                    </div>
+                    <h5>Modern Technology </h5>
+                    <p>Empowering progress through cutting-edge modern technology.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- About Section-->
+
+ 	<div class="about-area section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay=".6s">
+                    <div class="about-img">
+                        <img src="assets/img/service/roofsheethome.jpg" alt="">                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay=".2s">
+                    <div class="info-content-area">
+                        <div class="section-title">
+                            <h6>Welcome to Anbu </h6>
+                            <h2 style="font-size:29px;">Quality roof sheets and MS pipes.</h2>
+                        </div>
+                        <p class="highlight">Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients. “Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.” We at Anbu Traders believe in building relationships and the testimony to this is that our customers continue to remain with us. We are one of the best dealers of steel and cement suppliers in Pondicherry.
+
+</p>
+                        <br>
+                        <p>We have a dedicated team working round the clock tirelessly to deliver materials on time. With our comprehensive facilities, we meet our customers’ demands with zero-hour precision. We offer wholesale supplies of steel and cement and are committed to extending our services further. Our infrastructure is equipped to handle large-scale wholesale orders and meet all our clients' needs.
+                            <br>
+
+
+                        </p>
+                 
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+   
+  
+
+  <!-- Services Section -->
+
+    <div class="services-area service-two gray-bg section-padding pb-50" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8 text-center">
+                    <div class="section-title">
+                        <h6>What We Offer</h6>
+                        <h2> Global <b>Industry Services</b></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="service-slider-two owl-carousel">
+                        
+                        <div class="single-service-area mb-50">
+                            <div class="service-img">
+                                <img src="assets/img/service/ms pipsss.jpg" alt="">
+                                <div class="service-icon">
+                                    <span><i class="flaticon-oil-industry"></i></span>
+                                </div>
+                            </div>
+                            <div class="service-content white-bg">
+                                <h5>Ms Pipes And Tubes</h5>
+                                <p>High-strength MS pipes and tubes designed for structural and industrial use.
+Reliable, durable, and available in various sizes to meet your project needs.</p>
+                                <hr>
+                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="single-service-area mb-50">
+                            <div class="service-img">
+                                <img src="assets/img/service/gi pipe.avif" alt="">
+                                <div class="service-icon">
+                                    <span><i class="flaticon-lab-tool"></i></span>
+                                </div>
+                            </div>
+                            <div class="service-content white-bg">
+                                <h5>Gi Pipes</h5>
+                                <p>Corrosion-resistant GI pipes ideal for plumbing, water supply, and structural applications.
+Strong, durable, and built to withstand harsh environmental conditions.</p>
+                                <hr>
+                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="single-service-area mb-50">
+                            <div class="service-img">
+                                <img src="assets/img/service/ms-ps.avif" alt="">
+                                <div class="service-icon">
+                                    <span><i class="flaticon-eco-factory"></i></span>
+                                </div>
+                            </div>
+                            <div class="service-content white-bg">
+                                <h5>Puf panel Sheet</h5>
+                                <p>Lightweight and insulated Puff Sheets perfect for roofing and cladding applications.
+Provides excellent thermal insulation, durability, and weather resistance.</p>
+                                <hr>
+                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="single-service-area mb-50">
+                            <div class="service-img">
+                                <img src="assets/img/service/jsw-pragati-colour-coating.avif" alt="">
+                                <div class="service-icon">
+                                    <span><i class="flaticon-production"></i></span>
+                                </div>
+                            </div>
+                            <div class="service-content white-bg">
+                                <h5>Jsw Roofing Sheet</h5>
+                                <p>JSW Roofing Sheets offer superior strength and corrosion resistance for long-lasting protection.
+Ideal for residential, commercial, and industrial roofing needs with excellent durability.</p>
+                                <hr>
+                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+    
+   
+
+    <!-- Counter Section -->
+
+<div class="counter-area" style="
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #200177, #1c1c1c);
+    overflow: hidden;
+">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4);"></div>
+
+    <div class="container" style="position:relative; z-index:2;">
+        <div class="row">
+
+            <!-- Counter Box -->
+            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
+                <div style="
+                    text-align:center;
+                    padding:30px 20px;
+                    background:rgba(255,255,255,0.05);
+                    border-radius:15px;
+                    backdrop-filter:blur(6px);
+                    transition:0.4s ease;
+                " 
+                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
+                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
+
+                    <p style="
+                        font-size:40px;
+                        font-weight:800;
+                        color:#fff;
+                        margin:0 0 8px 0;
+                    ">10,000</p>
+
+                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Project</h6>
+                </div>
+            </div>
+
+            <!-- Counter Box -->
+            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
+                <div style="
+                    text-align:center;
+                    padding:30px 20px;
+                    background:rgba(255,255,255,0.05);
+                    border-radius:15px;
+                    backdrop-filter:blur(6px);
+                    transition:0.4s ease;
+                " 
+                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
+                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
+
+                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">3,000</p>
+                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Products</h6>
+                </div>
+            </div>
+
+            <!-- Counter Box -->
+            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
+                <div style="
+                    text-align:center;
+                    padding:30px 20px;
+                    background:rgba(26, 0, 173, 0.05);
+                    border-radius:15px;
+                    backdrop-filter:blur(6px);
+                    transition:0.4s ease;
+                " 
+                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
+                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
+
+                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">1Lakh</p>
+                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Customers</h6>
+                </div>
+            </div>
+
+            <!-- Counter Box -->
+            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
+                <div style="
+                    text-align:center;
+                    padding:30px 20px;
+                    background:rgba(255,255,255,0.05);
+                    border-radius:15px;
+                    backdrop-filter:blur(6px);
+                    transition:0.4s ease;
+                " 
+                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
+                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
+
+                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">11</p>
+                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Experience</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <div id="about-3" class="about-area section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                    <div class="info-content-area">
+                        <div class="section-title wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
+                            <h6>Let's to Know Us</h6>
+                            <h2>We provides the best <b>service</b> for Industrial</h2>
+                        </div>
+                        <p>We are the leaders in the construction industries and factories. We’re world wide reknown for our dignity. We provide high quality service all time.
+                        </p>
+                    </div>
+
+
+                  <!-- Choose Us Section -->
+<section class="choose-us-section" style="padding: 60px 0; background-color: #f9f9f9;">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Item 1 -->
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="choose-certify-card">
+          <div class="icon">
+            <i class="la la-clipboard-check"></i>
+          </div>
+          <h5>Certified Company</h5>
+          <p>We are a certified company, ensuring top-notch quality and professionalism in every project we deliver.</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="choose-certify-card">
+          <div class="icon">
+            <i class="la la-medal"></i>
+          </div>
+          <h5>Experienced Employees</h5>
+          <p>Our skilled and experienced employees ensure flawless execution and satisfaction </p>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.choose-certify-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.918);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.choose-certify-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.choose-certify-card .icon {
+  font-size: 40px;
+  color: #ff6b01;
+  margin-bottom: 20px;
+}
+
+.choose-certify-card h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.choose-certify-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+</style>
+
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="progress-bar-area">
+                                <div class="single-bar-item">
+                                    <h4>Industrial</h4>
+                                    <div id="bar1" class="barfiller">
+                                        <span class="tip" style="left: 438.7px; transition: left 5s ease-in-out;">90%</span>
+                                        <span class="fill" data-percentage="90" style="background: rgb(255, 216, 87); width: 470.7px; transition: width 5s ease-in-out;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="single-bar-item">
+                                    <h4>Construction</h4>
+                                    <div id="bar2" class="barfiller">
+                                        <span class="tip" style="left: 334.1px; transition: left 6s ease-in-out;">70%</span>
+                                        <span class="fill" data-percentage="70" style="background: rgb(255, 216, 87); width: 366.1px; transition: width 6s ease-in-out;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="about-bg text-end">
+                        <img src="assets/img/slider/pipiandsheet.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="testimonial-area-2 section-padding">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="testimonial-carousel-two owl-carousel owl-loaded owl-drag">
+
+                    <div class="single-testimonial-wrap">
+                        <div class="testimonial-content">
+                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
+                            <p>Excellent quality sheets and pipes. Durable and worth every penny. Anbu Sheets and Pipes is my go-to supplier!</p>
+                        </div>
+                 
+                        <h4>Ravi Kumar <span>Contractor, Chennai</span></h4>
+                    </div>
+
+                    <div class="single-testimonial-wrap">
+                        <div class="testimonial-content">
+                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
+                            <p>Prompt delivery, great service, and unmatched quality. Highly recommend Anbu for all sheet and pipe needs!</p>
+                        </div>
+                     
+                        <h4>Sneha Raj <span>Architect</span></h4>
+                    </div>
+
+                    <div class="single-testimonial-wrap">
+                        <div class="testimonial-content">
+                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
+                            <p>We’ve been sourcing from Anbu Sheets and Pipes for 3 years now. No complaints — just consistent quality and service.</p>
+                        </div>
+                      
+                        <h4>Manoj Pillai <span>Builder, Coimbatore</span></h4>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Blog Section  -->
+   
+
+    <!-- Footer Area -->
+
+    <!-- Footer Start -->
+     <footer>
+        <!-- Footer Start -->
+<div class="container-fluid  footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+
+      <!-- Our Office -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-white mb-4">Our Office</h5>
+        <p  style="color: #ffffff;"  class="mb-2">
+       <i style="color: #ffffff;" class="las la-map-marker"></i>
+
+         Sheet / pipe
+
+No. 76/3, Pondy - Mailam Main Road
+
+Sedarapet, Tamil Nadu 605111
+        </p>
+        <p   style="color: #ffffff;"class="mb-2">
+         <i class="las la-phone"></i>96263 25204 / 96555 51468
+        </p>
+        <p  style="color: #ffffff;" class="mb-2">
+      <i class="las la-phone"></i>0413-2980014
+        </p>
+        <p  style="color: #ffffff;"class="mb-2">
+              <i class="las la-envelope-open"></i>
+anbutraders1468@gmail.com
+        </p>
+        <div class="d-flex pt-3">
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/anbutraders_py/"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-white mb-4">Quick Links</h5>
+        <a class="btn btn-link" href="about.html">About Us</a>
+        <a class="btn btn-link" href="contact.html">Contact Us</a>
+        <a class="btn btn-link" href="service.html">Our Services</a>
+        <a class="btn btn-link" href="steel.html">steel</a>
+        <a class="btn btn-link" href="sheets.html">Sheets and Pipes</a>
+              <a class="btn btn-link" href="paints.html">paints</a>
+
+      </div>
+
+      <!-- Business Hours -->
+      <div class="col-lg-3 col-md-6">
+    <h5 class="text-white mb-4">Business Hours</h5>
+    <p style="color: #ffffff;" class="mb-1">Monday - Saturday</p>
+    <h6 class="text-light">08:00 am - 08:00 pm</h6>
+    <p  style="color: #ffffff;"class="mb-1">Sunday</p>
+    <h6 class="text-light">08:00 am - 02:30 pm</h6>
+</div>
+
+
+      <!-- Newsletter -->
+<div class="col-lg-3 col-md-6">
+    <h5 class="text-white mb-4">Leave a Google Review</h5>
+    <p  style="color: #ffffff;">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+    <div class="position-relative w-100">
+        <!-- Google Review Button -->
+<button type="button" class="btn btn-review py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="redirectToGoogleReview()">Leave a Review</button>
+
+    </div>
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+    <!-- Footer End -->
+     </footer>
+
+
+    <!-- Footer End -->
+
+    <!-- Footer Bottom Area -->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row justify-content-center align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p class="copyright-line">© 2023 anbutraders All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <p class="privacy">Privacy Policy | Terms &amp; Conditions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Off-canvas Area-->
+
+ 	<div class="extra-info">
+        <div class="close-icon menu-close">
+            <button>
+                <i class="las la-window-close"></i>
+            </button>
+        </div>
+        <div class="logo-side mb-30">
+            <a href="index.html" class="site-logo-2">
+                <img src="assets/img/ANUBU TRADERS new logo.png" alt="">
+            </a>
+        </div>
+        <div class="side-info">
+            <div class="contact-list mb-40">
+                <h4>About Us</h4>
+                <p>Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients.</p>
+                <div class="mt-30 mb-30">
+                    <a href="contact.html" class="main-btn">Get In Touch</a>
+                </div>
+            </div>
+            <div class="contact-list mb-40">
+                <h4>Contact Info</h4>
+                <p><i class="las la-rocket"></i> <span>No.76/3, Pondy - Mailam Main Road, Main Road, next to Sri Sathya Saw Mill,
+Sedarapet, Tamil Nadu 605111
+
+</span>
+                </p>
+                <p><i class="las la-phone"></i> <span> 09626325204</span> </p>
+                <p><i class="las la-envelope-open"></i><span>anbutraders1468@gmail.com</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-overly"></div>
+
+    <!-- back to top start -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>    
+
+
+    <!-- Popper JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Wow JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Way Points JS -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Counter Up JS -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="assets/js/slick.min.js"></script>    
+    <!-- Magnific Popup JS -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- Isotope JS -->
+    <script src="assets/js/isotope-3.0.6-min.js"></script>
+    <!-- Sticky JS -->
+    <script src="assets/js/jquery.sticky.js"></script>
+    <!-- Nice Select JS -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- Back To Top JS -->
+    <script src="assets/js/backToTop.js"></script>
+    <!-- Progress Bar JS -->
+    <script src="assets/js/jquery.barfiller.js"></script>    
+    <!-- Circle Progress Bar JS -->
+    <script src="assets/js/circle-progress.min.js"></script>    
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>    
+    <script>
+function animateCounter(element, duration = 2000) {
+    const target = +element.getAttribute("data-target");
+    const increment = target / (duration / 16);
+
+    let current = 0;
+
+    function update() {
+        current += increment;
+        if (current < target) {
+            element.innerText = Math.floor(current).toLocaleString();
+            requestAnimationFrame(update);
+        } else {
+            element.innerText = target.toLocaleString();
+        }
+    }
+    update();
+}
+
+// Run when visible (Intersection Observer)
+const counters = document.querySelectorAll(".counter-value");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+counters.forEach(counter => observer.observe(counter));
+</script>
+
+</body>
+
+
+<!-- Mirrored from iideainformatics.it/html/devgalaxy/industrify/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 06:34:24 GMT -->
+</html>

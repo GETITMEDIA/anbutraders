@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Anbu Traders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+   <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>/* Tabs container */
+.tabs-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Tabs Navigation */
+.tabs-navigation {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 20px;
+}
+/* Popup background */
+.popup-form {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Popup box */
+.popup-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #555;
+}
+
+.popup-content h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #e69500;
+}
+
+/* Tab item styling */
+.tab-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  flex: 1;
+  text-align: center;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.tab-item:hover {
+  background-color: #f39c12;
+  transform: scale(1.05);
+}
+
+/* Tab item active state */
+.tab-item.active {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Tab icon styling */
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tab-item:hover .tab-icon {
+  transform: rotate(15deg);
+}
+
+/* Tab Content Sections */
+.tab-content {
+  display: none;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Active tab content */
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Content overlay styling */
+.content-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 25px;
+  max-width: 80%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+/* Title inside the content overlay */
+.content-overlay h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Paragraph text in the overlay */
+.content-overlay p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Call to action link */
+.cta-link {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-link:hover {
+  color: #f1c40f;
+  transform: scale(1.05);
+}
+
+/* Content overlay hover effect */
+.tab-content:hover .content-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in animation for tab content */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* --------- RESPONSIVE CSS --------- */
+
+/* For tablets and smaller (up to 1024px wide) */
+@media (max-width: 1024px) {
+  .tabs-navigation {
+    flex-wrap: wrap;
+  }
+
+  .tab-item {
+    flex: 1 1 50%;
+    padding: 12px 20px;
+  }
+
+  .tab-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .content-overlay h2 {
+    font-size: 22px;
+  }
+
+  .content-overlay p {
+    font-size: 15px;
+  }
+}
+
+/* For mobile devices (up to 768px wide) */
+@media (max-width: 768px) {
+  .tabs-navigation {
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .tab-item {
+    flex: 1 1 100%;
+    border-bottom: 1px solid #444;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 14px 20px;
+  }
+
+  .tab-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .tab-content {
+    height: auto;
+    min-height: 400px;
+    background-position: center center;
+    background-size: cover;
+    padding: 20px 15px;
+  }
+
+  .content-overlay {
+    position: static;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transform: none;
+    opacity: 1;
+  }
+
+  .content-overlay h2 {
+    font-size: 20px;
+  }
+
+  .content-overlay p {
+    font-size: 14px;
+  }
+
+  .cta-link {
+    font-size: 14px;
+  }
+}
+
+/* For very small phones (up to 480px) */
+@media (max-width: 480px) {
+  .tab-item {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .content-overlay {
+    padding: 16px;
+  }
+
+  .content-overlay h2 {
+    font-size: 18px;
+  }
+
+  .content-overlay p {
+    font-size: 13px;
+  }
+
+  .cta-link {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+.tab-cements {
+  background-image: url('/Untitled design.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .tab-cements {
+    background-position: top center;
+    background-size: contain; /* OR: cover, based on testing */
+    background-repeat: no-repeat;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-white">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href="https://www.youtube.com/@anbutraders1353"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-link text-light" href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                    <span class="fs-5 fw-bold"> +919626325204</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center">
+        <img src="img/ANUBU STEEL.png" alt="Industro Logo" style="height: 90px;width: 90px;">
+    </a>
+    
+    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
+                <div class="dropdown-menu bg-light m-0">
+                                        <a href="./a-steel/index.html" class="dropdown-item">Sheets and Pipes</a>
+
+                    <a href="./anbu-paint/index.html" class="dropdown-item">paints</a>
+                                        <a href="cement/anbucement/index-demo-3.html" class="dropdown-item">Steels &Cement</a>
+
+                </div>
+            </div>
+            <a href="index.html#products" class="nav-item nav-link">products</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+<a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary px-3 d-none d-lg-block" target="_blank">
+  Enquiry
+</a>
+    </div>
+</nav>
+
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/slide2.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                    <p  class="fs-5 fw-medium text-primary text-uppercase animated slideInRight" >11 Years of Working Experience </p style="color: white;">
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">The smile on your face is our success</h1>
+                                    <a href="https://anbutradersonlineshopping.com/Anbu-Traders-Online-Shopping" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="paintshop.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">11 Years of Working Experience</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">Let Your Home Shine  Anbu paints Has the Perfect Color.</h1>
+                                    <a href="https://anbutradersonlineshopping.com/Anbu-Traders-Online-Shopping" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/slide3.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                    <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">11 Years of Working Experience</p>
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">The beginning of your dream home is our Anbu Traders.</h1>
+                                    <a href="https://anbutradersonlineshopping.com/Anbu-Traders-Online-Shopping" class="btn btn-primary py-3 px-5 animated slideInRight">Explore More products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            
+            <!-- Images Column -->
+            <div class="col-lg-6">
+                <div class="row gx-3 h-100">
+
+ <div class="col-12 mt-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <img class="img-fluid" src="img/steel.jpg" alt="Construction site 3">
+                    </div>
+<br>
+                    <div class="col-6 align-self-start wow fadeInUp" data-wow-delay="0.1s">
+                        <img  style="width: 400px;height: 200px;" class="img-fluid" src="img/slide3.jpg" alt="Construction site 1">
+                    </div>
+
+                    <div class="col-6 align-self-end wow fadeInDown" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="paintshop.jpg" alt="Construction site 2">
+                    </div>
+
+                    <!-- ⭐ New Image Added -->
+                   
+
+                </div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="color: black;">
+                <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
+                <h1 class="display-5 mb-4">About Anbu Traders</h1>
+
+                <p class="mb-4">
+                    Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients.
+                    “Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.”
+                    We at Anbu Traders believe in building relationships and the testimony to this is that our customers continue to remain with us.
+                    We are one of the best dealers of steel and cement suppliers in Pondicherry.
+                </p>
+
+                <p class="mb-4">
+                    We have a dedicated team working round the clock tirelessly to deliver materials on time. 
+                    With our comprehensive facilities, we meet our customers’ demands with zero-hour precision. 
+                    We offer wholesale supplies of steel and cement and are committed to extending our services further. 
+                    Our infrastructure is equipped to handle large-scale wholesale orders and meet all our clients' needs.
+                </p>
+
+                <div class="row pt-2">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-envelope-open text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <p class="mb-2">Email us</p>
+                                <h5 class="mb-0">anbutraders1468@gmail.com</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary custom-margin">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ms-3">
+                                <p class="mb-2">Call us</p>
+                                <h5 class="mb-0">+919626325204</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 p-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">11</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Years Experience</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">3000</h1>
+                    <span class="fs-5 fw-semi-bold text-white">numbers of products</span>
+                </div>
+            </div>
+          <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+    <div class="text-center border p-5">
+        <i class="fa fa-users fa-3x text-white mb-3"></i>
+        <h1 class="display-2 text-primary mb-0" style="margin-left: -35px;">1 lakh</h1>
+        <span class="fs-5 fw-semi-bold text-white">Happy Clients</span>
+    </div>
+</div>
+
+            <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+                <div class="text-center border p-5">
+                    <i class="fa fa-check-double fa-3x text-white mb-3"></i>
+                    <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">10,000</h1>
+                    <span class="fs-5 fw-semi-bold text-white">Projects Done</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+<h2 class="section-title">Our Businesses</h2>
+
+<div class="tabs-container">
+  <div class="tabs-navigation">
+    <div class="tab-item" data-tab="cements">
+      <img src="/cement.png" alt="Cements" class="tab-icon">
+      <span>Cements</span>
+    </div>
+    <div class="tab-item" data-tab="tmt">
+      <img src="/iron-bar (1).png" alt="TMT Rods" class="tab-icon">
+      <span>TMT Rods</span>
+    </div>
+    <div class="tab-item" data-tab="pipes">
+      <img src="/tubes.png" alt="Sheets & Pipes" class="tab-icon">
+      <span>Sheets & Pipes</span>
+    </div>
+    <div class="tab-item" data-tab="paints">
+      <img src="/varnish.png" alt="Paints" class="tab-icon">
+      <span>Paints</span>
+    </div>
+  </div>
+
+  <!-- Tab Content Sections -->
+  <section class="tab-content tab-cements" id="cements">
+  <article class="content-overlay">
+    <h2 style="color: #f39c12;">High-Quality Cements for Every Project</h2>
+    <p>Our premium cements ensure strong and durable construction with guaranteed performance for every type of building project.</p>
+    <a href="#" class="cta-link">Explore More</a>
+  </article>
+</section>
+
+
+  <section class="tab-content" id="tmt" style="background-image: url('img/TMT-Bars_Ultra-TMT_TMT-Bars-Manufacturers-In-Hyderabad-1024x538.png');">
+    <article class="content-overlay">
+      <h2 style="color: #f39c12;">Premium TMT Rods for Every Construction Need</h2>
+      <p>Discover unparalleled strength and durability with our Premium TMT Rods, designed to meet the demands of every construction project.</p>
+      <a href="#" class="cta-link">Explore More</a>
+    </article>
+  </section>
+
+  <section class="tab-content" id="pipes" style="background-image: url('img/sheets.jpg');">
+    <article class="content-overlay">
+      <h2 style="color: #f39c12;">Essential Materials for Industrial and Construction Excellence</h2>
+      <p>Explore our Essential Materials for Industrial and Construction Excellence, featuring high-quality sheets and pipes designed to meet rigorous standards and diverse needs.</p>
+      <a href="#" class="cta-link">Explore More</a>
+    </article>
+  </section>
+
+  <section class="tab-content" id="paints" style="background-image: url('img/paints.jpg');">
+    <article class="content-overlay">
+      <h2 style="color: #f39c12;">Vibrant Colors and Superior Coverage for Every Surface</h2>
+      <p>Experience the brilliance of our paints, offering vibrant colors and superior coverage for every surface. Designed for exceptional performance, our paints provide long-lasting durability and a flawless finish.</p>
+      <a href="#" class="cta-link">Explore More</a>
+    </article>
+  </section>
+</div>
+
+
+
+
+
+
+<div class="container1" id="products">
+    <h1 style="text-align: center; margin-bottom: 50px; margin-top: 30px;">Our Products</h1>
+    <div class="products">
+        <!-- Product 1: JSW Cement -->
+        <div class="product">
+            <img src="img/jsw-concreel-hd-cement-500x500.webp" alt="JSW Cement">
+            <h3>JSW Cement</h3>
+            <p>The Leader's Choice in cement</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20JSW%20Cement" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 2: TMT Bar -->
+        <div class="product">
+            <img src="img/tmt-rod-1000x1000.png" alt="TMT Bar">
+            <h3>TMT Bar</h3>
+            <p>High-strength construction rods</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20TMT%20Bar" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 3: acc block -->
+      <div class="product">
+    <img src="img/AACblocks_63ff761f-1f2c-4b78-9bda-c5d7a1c66fdf.webp" alt="ACC Blocks">
+    <h3>AAC Blocks</h3>
+    <p>Durable and lightweight construction blocks</p>
+    <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20ACC%20Blocks" class="buy-btn" target="_blank">Buy Now</a>
+</div>
+<!-- products 4 jsw paints -->
+        <div class="product">
+            <img src="img/find-jsw--paints-sft-prices.jpg" alt="JSW Paints">
+            <h3>JSW Paints</h3>
+            <p>Quality paints for a vibrant life</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20JSW%20Paints" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+    <!-- products 5 berger -->    
+    <div class="product">
+            <img src="img/burger-paint.jpg" alt="Berger">
+            <h3>Berger</h3>
+            <p>Paints that make your walls shine</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20Berger%20Paints" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+            <!-- Product 6: Asian Paints -->
+        <div class="product">
+            <img src="img/asian-paints-all-product-500x500.webp" alt="Asian Paints">
+            <h3>Asian Paints</h3>
+            <p>Vibrant colors for your walls</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20Asian%20Paints" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+        <!-- Product 7: Roofing Sheets -->
+        <div class="product">
+            <img src="img/sheets.jpg" alt="Roofing Sheets">
+            <h3>Roofing Sheets</h3>
+            <p>Reliable and long-lasting roofing solutions</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20Roofing%20Sheets" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+    <!-- Product 8:  Cement Sheet -->
+        <div class="product">
+            <img src="EVEREST CEMENT SHEET.webp" alt="Everrest Cement Sheet">
+            <h3> Cement Sheet</h3>
+            <p>Durable cement sheets for various applications</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20Everrest%20Cement%20Sheet" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+             <!-- Product 9: Gate Plain Sheet -->
+        <div class="product">
+            <img src="GATE ACCESSORIES.webp" alt="Gate Plain Sheet">
+            <h3>Gate accessories</h3>
+            <p>Strong and durable sheets for gates</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20Gate%20Plain%20Sheet" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        
+        <!-- Product 9: Ultratech Cement -->
+        <div class="product">
+            <img  src="ultratechhh cement.jpg" alt="Ultratech Cement">
+            <h3>Ultratech Cement</h3>
+            <p>Premium quality cement for your construction needs</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20Ultratech%20Cement" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+  <!-- Product 13: Maha Cement -->
+        <div class="product">
+            <img style="width: 200px;" src="/img/mahanew.jpg" alt="Maha Cement">
+            <h3>Maha Cement</h3>
+            <p>Durable cement for your construction needs</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20Maha%20Cement" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+        <!-- Product 5: TATA Fence -->
+        <div class="product">
+            <img src="img/tata-fencing-wire-.webp" alt="TATA Fence">
+            <h3>TATA Fence</h3>
+            <p>Durable and strong fences</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20TATA%20Fence" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 6: MS Pipe & SQ. Tubes -->
+        <div class="product">
+            <img src="MS-Square-Tubes_edited.jpg" alt="MS Pipe & SQ. Tubes">
+            <h3>MS Pipe & SQ. Tubes</h3>
+            <p>Quality pipes and tubes for various needs</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20MS%20Pipe%20and%20SQ%20Tubes" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 7: Priya Cement -->
+        <div class="product">
+            <img style="width: 200px;" src="priyacement.jpg" alt="Priya Cement">
+            <h3>Priya Cement</h3>
+            <p>Reliable and strong cement</p>
+            <a href="https://wa.me/+919994011468?text=I%20am%20interested%20in%20Priya%20Cement" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+    
+
+    
+
+        <!-- Product 11: Colour Metal Sheet -->
+        <div class="product">
+            <img src="PREMIUM METAL ROOFING SHEETS (1).webp" alt="Colour Metal Sheet">
+            <h3>Colour Metal Sheet</h3>
+            <p>Metal roofing sheets for aesthetic and durable construction</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20Colour%20Metal%20Sheet" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+   
+
+      
+
+        <!-- Product 14: Nippon Paints -->
+      
+
+        <!-- Product 15: GI Pipes -->
+        <div class="product">
+            <img src="gi pipe.webp" alt="GI Pipes">
+            <h3>GI Pipes</h3>
+            <p>High-quality galvanized pipes for all needs</p>
+            <a href="https://wa.me/9626325204?text=I%20am%20interested%20in%20GI%20Pipes" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 16: Metal Screw -->
+        <div class="product">
+            <img src="METAL SCREW.webp" alt="Metal Screw">
+            <h3>Metal Screw</h3>
+            <p>Strong metal screws for construction</p>
+            <a href="https://wa.me/9655551468?text=I%20am%20interested%20in%20Metal%20Screw" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <!-- Product 17: Berger -->
+    
+
+        <!-- Product 18: Download Image -->
+        <div class="product">
+            <img style="width: 200px;" src="jkwallputty.jpg" alt="Download Image">
+            <h3>JK wall putty</h3>
+            <p>High-quality product for your needs</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20JK%20wallputty" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img style="width: 200px;" src="asianwallputty.jpg" alt="Download Image">
+            <h3> Asian wall putty</h3>
+            <p>High-quality product for your needs</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20Asian%20wallputty" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product">
+            <img src="indicowall.jpg" alt="Download Image">
+            <h3> Indicus wall putty</h3>
+            <p>High-quality product for your needs</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20indicus%20wallputty" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+        <div class="product">
+            <img src="wall-putty-cement.png" alt="Download Image">
+            <h3> JSW wall putty</h3>
+            <p>High-quality product for your needs</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20JSW%20wallputty" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+       
+        <div class="product">
+            <img style="width: 200px;" src="bisonwallputty.jpg" alt="Download Image">
+            <h3> Berger wall putty</h3>
+            <p>High-quality product for your needs</p>
+            <a href="https://wa.me/9894011468?text=I%20am%20interested%20in%20Berger%20wallputty" class="buy-btn" target="_blank">Buy Now</a>
+        </div>
+    </div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Features Start -->
+ <div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Left Image and Video -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative me-lg-4">
+                    <img class="img-fluid w-100" src="ssss.jpg" alt="Why Choose Us">
+                    <span class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block" style="width: 120px; height: 120px;"></span>
+                    <button type="button" class="btn-play" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <p class="fw-medium text-uppercase text-primary mb-2">Why Choosing Us!</p>
+                <h1 class="display-5 mb-4">Here’s Why People Choose Anbu Traders</h1>
+                <p class="mb-4">We’re committed to providing quality products, fast delivery, and real value to both buyers and suppliers.</p>
+
+                <div class="row gy-4">
+
+                    <!-- Quality Product -->
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-star text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Quality Product</h4>
+                                <span>You can be sure that any product you purchase from Anbu Traders will be of high standard and consistent quality every time.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fast Delivery -->
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-truck text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Fast Delivery</h4>
+                                <span>We recognize the importance of timely material delivery and pledge to offer the quickest service possible.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits for Buyers -->
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-user text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Benefits for Buyers</h4>
+                                <ul class="mb-0">
+                                    <li>Get in touch with dealers and suppliers effortlessly</li>
+                                    <li>A wide range of products and services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits for Dealers and Suppliers -->
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-handshake text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>Benefits for Dealers & Suppliers</h4>
+                                <ul class="mb-0">
+                                    <li>Amplify business visibility</li>
+                                    <li>Improve the reach of your business</li>
+                                    <li>Enhance your brand value</li>
+                                    <li>Generate brand credibility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- End row -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Features End -->
+<section class="brands-section">
+  <h2>OUR BRANDS</h2>
+
+  <div class="brand-grid">
+
+    <div class="brand-card">
+      <img src="img/agni-tmt-logo.png" alt="Agni">
+      <h3>Agni TMT</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+  <div class="brand-card">
+      <img src="img/Untitled%20design/1.png" alt="Birla Aerocon">
+      <h3>Birla Aerocon</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/ARS_logo.webp" alt="ARS">-->
+    <!--  <h3>ARS Steel</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+    <div class="brand-card">
+      <img src="img/jsw-steel-logo.jpg" alt="JSW Steel">
+      <h3>JSW Steel</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <div class="brand-card">
+      <img src="img/tata-tiscon-logo.png" alt="TATA Tiscon">
+      <h3>TATA Tiscon</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <div class="brand-card">
+      <img src="img/suryadevbrand.png" alt="Suryadev">
+      <h3>Suryadev</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+ <div class="brand-card">
+      <img src="img/Untitled%20design/6.png" alt="Renacon Wall Panel">
+      <h3>Renacon Wall Panel</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/pulkit_logo.jpg" alt="Pulkit">-->
+    <!--  <h3>Pulkit Steel</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+    <div class="brand-card">
+      <img src="img/sumangalalogo.jpg" alt="Sumangala">
+      <h3>Sumangala</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+    
+    <div class="brand-card">
+      <img src="img/Untitled%20design/3.png" alt="DURASTRONG TMT BARS">
+      <h3>Durastrong TMT Bars</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/DURGA.brand.webp" alt="Durga">-->
+    <!--  <h3>Durga Steel</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+    <div class="brand-card">
+      <img src="newbrand.jpg" alt="Cubecrete">
+      <h3>Isteel XLS Tmt Bars</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+    <div class="brand-card">
+      <img src="img/jswbrand.jpg" alt="JSW Cement">
+      <h3>JSW Cement</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <div class="brand-card">
+      <img src="img/ultratechlogo.png" alt="Ultratech">
+      <h3>Ultratech Cement</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <div class="brand-card">
+      <img src="img/ramcobrand.jpg" alt="Ramco">
+      <h3>Ramco</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/coramandalbrand.jpg" alt="Coramandel">-->
+    <!--  <h3>Coramandel Cement</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+
+ <div class="brand-card">
+      <img src="img/Untitled%20design/4.png" alt=" Shyam steel ">
+      <h3> Shyam steel </h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+    <div class="brand-card">
+      <img src="img/zuari-cement-logo-vector.png" alt="Zuari">
+      <h3>Zuari Cement</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+ <div class="brand-card">
+      <img src="img/Untitled%20design/2.png" alt=" JSW Waterguard Cement">
+      <h3> JSW Waterguard Cement</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/priyacement-redlogo.svg" alt="Priya">-->
+    <!--  <h3>Priya Cement</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+    <!--<div class="brand-card">-->
+    <!--  <img src="img/maha-cement-opc-53-1000x1000-removebg-preview.png" alt="Maha">-->
+    <!--  <h3>Maha Cement</h3>-->
+    <!--  <a href="#" class="btn">View Products</a>-->
+    <!--</div>-->
+
+<div class="brand-card">
+      <img src="img/Untitled%20design/5.png" alt=" priya cement">
+      <h3> priya cement</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+    <div class="brand-card">
+      <img src="img/blocks.png" alt="Renacon">
+      <h3>Renacon Blocks</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+    <div class="brand-card">
+      <img src="img/cube-logo.jpg" alt="Cubecrete">
+      <h3>Cubecrete</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+    <div class="brand-card">
+      <img src="img/dalmiabrand.jpg" alt="Cubecrete">
+      <h3>Dalmia</h3>
+      <a href="#" class="btn">View Products</a>
+    </div>
+
+
+  </div>
+</section>
+
+    <!-- Video Modal Start -->
+    <!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <! 16:9 aspect ratio -->
+                    <!-- <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --> --
+    <!-- Video Modal End -->
+
+
+    <!-- Service Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
+                <h1 class="display-5 mb-4">We Provide Best Industrial Services</h1>
+            </div>
+            <div class="row gy-5 gx-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">Civil & Gas Engineering</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">Power & Energy Engineering</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                        </div>
+                        <div class="service-detail">
+                            <div class="service-title">
+                                <hr class="w-25">
+                                <h3 class="mb-0">Plumbing & Water Treatment</h3>
+                                <hr class="w-25">
+                            </div>
+                            <div class="service-text">
+                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            </div>
+                        </div>
+                        <a class="btn btn-light" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Service End -->
+
+
+    <!-- Project Start -->
+    <!-- <div class="container-fluid bg-dark pt-5 my-5 px-0">
+        <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fw-medium text-uppercase text-primary mb-2">Our Projects</p>
+            <h1 class="display-5 text-white mb-5">See What We Have Completed Recently</h1>
+        </div>
+        <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-1.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Auto Engineering</h5>
+                </div>
+            </a>
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-2.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Civil Engineering</h5>
+                </div>
+            </a>
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-3.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Gas Engineering</h5>
+                </div>
+            </a>
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-4.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Power Engineering</h5>
+                </div>
+            </a>
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-5.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Energy Engineering</h5>
+                </div>
+            </a>
+            <a class="project-item" href="">
+                <img class="img-fluid" src="img/project-6.jpg" alt="">
+                <div class="project-title">
+                    <h5 class="text-primary mb-0">Water Engineering</h5>
+                </div>
+            </a>
+        </div>
+    </div> -->
+    <!-- Project End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase text-primary mb-2">Our Team</p>
+                <h1 class="display-5 mb-5">Dedicated Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
+                                <i class="fa fa-2x fa-share text-white"></i>
+                            </div>
+                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
+                                <h5>Rob Miller</h5>
+                                <span class="text-primary">CEO & Founder</span>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>                                                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
+                                <i class="fa fa-2x fa-share text-white"></i>
+                            </div>
+                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
+                                <h5>Adam Crew</h5>
+                                <span class="text-primary">Project Manager</span>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
+                                <i class="fa fa-2x fa-share text-white"></i>
+                            </div>
+                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
+                                <h5>Peter Farel</h5>
+                                <span class="text-primary">Engineer</span>
+                                <div class="team-social">
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+<!-- Testimonials Section Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+      <p class="fw-medium text-uppercase text-primary mb-2">Testimonials</p>
+      <h1 class="display-5 mb-5">What Our Clients Say!</h1>
+    </div>
+
+    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+      
+      <!-- Testimonial Item 1 -->
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/user.gif" alt="Client 1">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p class="mb-4">
+            “Anbu Traders delivered high-quality materials on time every time. Extremely professional and reliable!”
+          </p>
+          <h5 class="mb-1">Ravi Kumar</h5>
+          <span class="fst-italic">Site Engineer, BuildCore</span>
+        </div>
+      </div>
+
+      <!-- Testimonial Item 2 -->
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/avatar.gif" alt="Client 2">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p class="mb-4">
+            “We’ve been sourcing steel and cement from Anbu Traders for years now. Great pricing and prompt support!”
+          </p>
+          <h5 class="mb-1">kavin.s</h5>
+          <span class="fst-italic">Architect, Creative Studio</span>
+        </div>
+      </div>
+
+      <!-- Testimonial Item 3 -->
+      <div class="testimonial-item text-center">
+        <div class="testimonial-img position-relative">
+          <img class="img-fluid rounded-circle mx-auto mb-5" src="img/avatar2.webp" alt="Client 3">
+          <div class="btn-square bg-primary rounded-circle">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+        </div>
+        <div class="testimonial-text text-center rounded p-4">
+          <p class="mb-4">
+            “The team at Anbu Traders is very supportive. Their on-time delivery helped us complete our project faster.”
+          </p>
+          <h5 class="mb-1">Sathish R.</h5>
+          <span class="fst-italic">Project Manager, InfraBuild</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Testimonials Section End -->
+
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+
+      <!-- Our Office -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-white mb-4">Our Office</h5>
+        <p class="mb-2">
+          <i class="fa fa-map-marker-alt me-3"></i>
+          No.76/3, Pondy - Mailam Main Road, Main Road, next to Sri Sathya Saw Mill,<br> 
+          Sedarapet, Tamil Nadu 605111
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-phone-alt me-3"></i>96263 25204 / 96555 51468
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-phone-alt me-3"></i>0413-2980014
+        </p>
+        <p class="mb-2">
+          <i class="fa fa-envelope me-3"></i>anbutraders1468@gmail.com
+
+        </p>
+        <div class="d-flex pt-3">
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.youtube.com/@anbutraders1353""><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="text-white mb-4">Quick Links</h5>
+        <a class="btn btn-link" href="about.html">About Us</a>
+        <a class="btn btn-link" href="contact.html">Contact Us</a>
+        <a class="btn btn-link" href="service.html">Our Services</a>
+        <a class="btn btn-link" href="./cement/anbucement/index-demo-3.html">steel</a>
+        <a class="btn btn-link" href="./a-steel/index.html">Sheets and Pipes</a>
+              <a class="btn btn-link" href="./anbu-paint/index.html">paints</a>
+
+      </div>
+
+      <!-- Business Hours -->
+      <div class="col-lg-3 col-md-6">
+    <h5 class="text-white mb-4">Business Hours</h5>
+    <p class="mb-1">Monday - Saturday</p>
+    <h6 class="text-light">08:00 am - 08:00 pm</h6>
+    <p class="mb-1">Sunday</p>
+    <h6 class="text-light">08:00 am - 02:30 pm</h6>
+</div>
+
+
+      <!-- Newsletter -->
+<div class="col-lg-3 col-md-6">
+    <h5 class="text-white mb-4">Leave a Google Review</h5>
+    <p>We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+    <div class="position-relative w-100">
+        <!-- Google Review Button -->
+        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="redirectToGoogleReview()">Leave a Review</button>
+    </div>
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Anbu Traders</a>, All Right Reserved.</p>
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+<script>// JavaScript to toggle active class and show the relevant tab content
+document.querySelectorAll('.tab-item').forEach(tab => {
+  tab.addEventListener('click', function () {
+    // Remove 'active' class from all tabs and content
+    document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    // Add 'active' class to the clicked tab and corresponding content
+    this.classList.add('active');
+    const activeTabContent = document.getElementById(this.getAttribute('data-tab'));
+    activeTabContent.classList.add('active');
+  });
+});
+</script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("popupForm");
+  const closeBtn = document.querySelector(".close-btn");
+  const productInput = document.getElementById("product");
+  const form = document.getElementById("orderForm");
+
+  // Open popup when "Buy Now" clicked
+  document.querySelectorAll(".buy-btn").forEach(button => {
+    button.addEventListener("click", function() {
+      const productName = this.getAttribute("data-product");
+      productInput.value = productName;
+      popup.style.display = "block";
+    });
+  });
+
+  // Close popup
+  closeBtn.addEventListener("click", () => popup.style.display = "none");
+  window.addEventListener("click", e => {
+    if (e.target === popup) popup.style.display = "none";
+  });
+
+  // Submit form (send to WhatsApp)
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+    const product = document.getElementById("product").value;
+
+    const message = `Name: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProduct: ${product}`;
+    const whatsappURL = `https://wa.me/+919994011468?text=${message}`;
+    
+    window.open(whatsappURL, "_blank");
+    popup.style.display = "none";
+    form.reset();
+  });
+});
+</script>
+
+</body>
+
+</html>
