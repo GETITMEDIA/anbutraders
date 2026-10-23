@@ -37,14 +37,29 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/preloader.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <!-- Custom Industrial Steel Preloader Start -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true">
+        <div class="anbu-preloader-stage">
+            <div class="anbu-beam-track">
+                <div class="anbu-steel-beam anbu-beam-left"></div>
+                <div class="anbu-steel-beam anbu-beam-right"></div>
+                <div class="anbu-joint-spark">
+                    <span class="anbu-joint-flash"></span>
+                    <span class="anbu-joint-pulse"></span>
+                </div>
+            </div>
+            <div class="anbu-preloader-logo-wrap">
+                <img src="img/ANUBU STEEL.png" alt="Anbu Traders" class="anbu-preloader-logo">
+                <div class="anbu-preloader-tagline">ANBU <span>TRADERS</span></div>
+            </div>
+            <div class="anbu-steady-line"></div>
+        </div>
     </div>
-    <!-- Spinner End -->
+    <!-- Custom Industrial Steel Preloader End -->
 
 
     <!-- Topbar Start -->
@@ -414,6 +429,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>
