@@ -113,6 +113,14 @@ a {
 }
 
 /* ── Spinner ── */
+/* Hide spinner immediately if user has already entered the site */
+html.already-visited #spinner {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 #spinner {
   opacity: 0;
   visibility: hidden;

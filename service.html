@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
     <meta charset="utf-8">
     <title>Anbu Traders - Steel & Cement Suppliers</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -73,7 +81,7 @@
     
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
             <div class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
@@ -85,7 +93,7 @@
                 </div>
             </div>
             <a href="index.html#products" class="nav-item nav-link">products</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="service.html" class="nav-item nav-link active">Services</a>
             
             <a href="contact.html" class="nav-item nav-link">Contact</a>
         </div>

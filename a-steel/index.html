@@ -4,6 +4,14 @@
 
 <!-- Mirrored from iideainformatics.it/html/devgalaxy/industrify/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 06:33:51 GMT -->
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">    
@@ -113,76 +121,7 @@
 </style>
     <!-- jquery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <style>
-        /* Footer Base */
-/*** Footer ***/
-/* Footer Styling */
-.footer {
-    background-color: #062744; /* Blue background */
-    color: #B0B9AE;
-}
-
-/* Quick Links Styling */
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #B0B9AE;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-    text-decoration: none;
-}
-
-.footer .btn.btn-link:hover {
-    color: #ffffff;
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-/* Social Icons */
-.footer .btn.btn-square {
-    background-color: transparent;
-    border: 1px solid #dc231b;
-    color:#dc231b;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.footer .btn.btn-square:hover {
-    background-color:#dc231b;
-    color: #000;
-}
-
-/* Copyright */
-.copyright {
-    color: #B0B9AE;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-}
-
-/* Yellow Button Style */
-.btn-review {
-  background-color:#dc231b; /* Yellow */
-    color: #000000; /* Black text for contrast */
-    border: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Optional: Hover Effect */
-.btn-review:hover {
-    background-color:#dc231b; /* Slightly darker yellow */
-    color: #000;
-}
-.single-promo-item {
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.779); /* Adjust values as needed */
-    transition: box-shadow 0.3s ease; /* Optional: adds smooth hover effect */
-}
-
-.single-promo-item:hover {
-    box-shadow: 0 8px 16px rgba(26, 0, 0, 0.2); /* Optional: deeper shadow on hover */
-}
-    </style>
+    
 </head>
 
 <body>
@@ -389,7 +328,7 @@
                         <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".2s">
                             <div class="section-title">
                                 <h6>We provide best satisfied work</h6>
-                                <h1 style="font-size: 35px;">Top Quality Roof Sheets & MS Pipes – At the Best Prices!</b></h1>
+                                <h1>Top Quality Roof Sheets & MS Pipes – At the Best Prices!</h1>
                             </div>
                         </div>
                     </div>
@@ -570,181 +509,81 @@ Ideal for residential, commercial, and industrial roofing needs with excellent d
    
 
     <!-- Counter Section -->
-
-<div class="counter-area" style="
-    position: relative;
-    padding: 80px 0;
-    background: linear-gradient(135deg, #200177, #1c1c1c);
-    overflow: hidden;
-">
-    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4);"></div>
-
-    <div class="container" style="position:relative; z-index:2;">
+<div class="counter-area">
+    <div class="container">
         <div class="row">
-
             <!-- Counter Box -->
-            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
-                <div style="
-                    text-align:center;
-                    padding:30px 20px;
-                    background:rgba(255,255,255,0.05);
-                    border-radius:15px;
-                    backdrop-filter:blur(6px);
-                    transition:0.4s ease;
-                " 
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
-                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
-
-                    <p style="
-                        font-size:40px;
-                        font-weight:800;
-                        color:#fff;
-                        margin:0 0 8px 0;
-                    ">10,000</p>
-
-                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Project</h6>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="counter-stat-card">
+                    <p class="stat-number">10,000</p>
+                    <h6 class="stat-label">Project</h6>
                 </div>
             </div>
 
             <!-- Counter Box -->
-            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
-                <div style="
-                    text-align:center;
-                    padding:30px 20px;
-                    background:rgba(255,255,255,0.05);
-                    border-radius:15px;
-                    backdrop-filter:blur(6px);
-                    transition:0.4s ease;
-                " 
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
-                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
-
-                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">3,000</p>
-                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Products</h6>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="counter-stat-card">
+                    <p class="stat-number">3,000</p>
+                    <h6 class="stat-label">Products</h6>
                 </div>
             </div>
 
             <!-- Counter Box -->
-            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
-                <div style="
-                    text-align:center;
-                    padding:30px 20px;
-                    background:rgba(26, 0, 173, 0.05);
-                    border-radius:15px;
-                    backdrop-filter:blur(6px);
-                    transition:0.4s ease;
-                " 
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
-                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
-
-                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">1Lakh</p>
-                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Customers</h6>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="counter-stat-card">
+                    <p class="stat-number">1 Lakh</p>
+                    <h6 class="stat-label">Customers</h6>
                 </div>
             </div>
 
             <!-- Counter Box -->
-            <div class="col-lg-3 col-md-3 col-12" style="margin-bottom:25px;">
-                <div style="
-                    text-align:center;
-                    padding:30px 20px;
-                    background:rgba(255,255,255,0.05);
-                    border-radius:15px;
-                    backdrop-filter:blur(6px);
-                    transition:0.4s ease;
-                " 
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 20px rgba(255,255,255,0.15)';"
-                onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='none';">
-
-                    <p style="font-size:40px; font-weight:800; color:#fff; margin:0 0 8px 0;">11</p>
-                    <h6 style="color:#e6e6e6; font-size:18px; margin:0;">Experience</h6>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="counter-stat-card">
+                    <p class="stat-number">11</p>
+                    <h6 class="stat-label">Experience</h6>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
 
-
-
-
-
-    <div id="about-3" class="about-area section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                    <div class="info-content-area">
-                        <div class="section-title wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">
-                            <h6>Let's to Know Us</h6>
-                            <h2>We provides the best <b>service</b> for Industrial</h2>
-                        </div>
-                        <p>We are the leaders in the construction industries and factories. We’re world wide reknown for our dignity. We provide high quality service all time.
-                        </p>
+<div id="about-3" class="about-area section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInDown" data-wow-delay=".2s">
+                <div class="info-content-area">
+                    <div class="section-title">
+                        <h6>Let's to Know Us</h6>
+                        <h2>We provides the best <b>service</b> for Industrial</h2>
                     </div>
+                    <p>We are the leaders in the construction industries and factories. We’re world wide reknown for our dignity. We provide high quality service all time.</p>
+                </div>
+
+                <!-- Choose Us Section -->
+                <section class="choose-us-section">
+                    <div class="row g-4">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="choose-certify-card">
+                                <div class="icon">
+                                    <i class="la la-clipboard-check"></i>
+                                </div>
+                                <h5>Certified Company</h5>
+                                <p>We are a certified company, ensuring top-notch quality and professionalism in every project we deliver.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="choose-certify-card">
+                                <div class="icon">
+                                    <i class="la la-medal"></i>
+                                </div>
+                                <h5>Experienced Employees</h5>
+                                <p>Our skilled and experienced employees ensure flawless execution and satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
-                  <!-- Choose Us Section -->
-<section class="choose-us-section" style="padding: 60px 0; background-color: #f9f9f9;">
-  <div class="container">
-    <div class="row g-4">
-      <!-- Item 1 -->
-      <div class="col-lg-6 col-md-6 col-12">
-        <div class="choose-certify-card">
-          <div class="icon">
-            <i class="la la-clipboard-check"></i>
-          </div>
-          <h5>Certified Company</h5>
-          <p>We are a certified company, ensuring top-notch quality and professionalism in every project we deliver.</p>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="col-lg-6 col-md-6 col-12">
-        <div class="choose-certify-card">
-          <div class="icon">
-            <i class="la la-medal"></i>
-          </div>
-          <h5>Experienced Employees</h5>
-          <p>Our skilled and experienced employees ensure flawless execution and satisfaction </p>
-        </div>
-      </div>
-     
-    </div>
-  </div>
-</section>
-
-<!-- CSS -->
-<style>
-.choose-certify-card {
-  background: #fff;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.918);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.choose-certify-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.choose-certify-card .icon {
-  font-size: 40px;
-  color: #ff6b01;
-  margin-bottom: 20px;
-}
-
-.choose-certify-card h5 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.choose-certify-card p {
-  color: #555;
-  font-size: 15px;
-  line-height: 1.6;
-}
-</style>
 
                     <div class="row">
                         <div class="col-lg-11">
@@ -834,105 +673,73 @@ Ideal for residential, commercial, and industrial roofing needs with excellent d
    
 
     <!-- Footer Area -->
-
-    <!-- Footer Start -->
-     <footer>
-        <!-- Footer Start -->
-<div class="container-fluid  footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-  <div class="container py-5">
-    <div class="row g-5">
-
-      <!-- Our Office -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="text-white mb-4">Our Office</h5>
-        <p  style="color: #ffffff;"  class="mb-2">
-       <i style="color: #ffffff;" class="las la-map-marker"></i>
-
-         Sheet / pipe
-
-No. 76/3, Pondy - Mailam Main Road
-
-Sedarapet, Tamil Nadu 605111
-        </p>
-        <p   style="color: #ffffff;"class="mb-2">
-         <i class="las la-phone"></i>96263 25204 / 96555 51468
-        </p>
-        <p  style="color: #ffffff;" class="mb-2">
-      <i class="las la-phone"></i>0413-2980014
-        </p>
-        <p  style="color: #ffffff;"class="mb-2">
-              <i class="las la-envelope-open"></i>
-anbutraders1468@gmail.com
-        </p>
-        <div class="d-flex pt-3">
-          <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/anbutraders_py/"><i class="fab fa-instagram"></i></a>
-          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-youtube"></i></a>
-          <a class="btn btn-square btn-primary rounded-circle me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-lg-3 col-md-6">
-        <h5 class="text-white mb-4">Quick Links</h5>
-        <a class="btn btn-link" href="about.html">About Us</a>
-        <a class="btn btn-link" href="contact.html">Contact Us</a>
-        <a class="btn btn-link" href="service.html">Our Services</a>
-        <a class="btn btn-link" href="steel.html">steel</a>
-        <a class="btn btn-link" href="sheets.html">Sheets and Pipes</a>
-              <a class="btn btn-link" href="paints.html">paints</a>
-
-      </div>
-
-      <!-- Business Hours -->
-      <div class="col-lg-3 col-md-6">
-    <h5 class="text-white mb-4">Business Hours</h5>
-    <p style="color: #ffffff;" class="mb-1">Monday - Saturday</p>
-    <h6 class="text-light">08:00 am - 08:00 pm</h6>
-    <p  style="color: #ffffff;"class="mb-1">Sunday</p>
-    <h6 class="text-light">08:00 am - 02:30 pm</h6>
-</div>
-
-
-      <!-- Newsletter -->
-<div class="col-lg-3 col-md-6">
-    <h5 class="text-white mb-4">Leave a Google Review</h5>
-    <p  style="color: #ffffff;">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
-    <div class="position-relative w-100">
-        <!-- Google Review Button -->
-<button type="button" class="btn btn-review py-2 position-absolute top-0 end-0 mt-2 me-2" onclick="redirectToGoogleReview()">Leave a Review</button>
-
-    </div>
-</div>
-
-
-
-    </div>
-  </div>
-</div>
-
-    <!-- Footer End -->
-     </footer>
-
-
-    <!-- Footer End -->
-
-    <!-- Footer Bottom Area -->
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row justify-content-center align-items-center justify-content-center">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <p class="copyright-line">© 2023 anbutraders All rights reserved.</p>
+<footer class="asteel-unified-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Our Office -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Our Office</h5>
+                <p class="mb-2">
+                    <i class="las la-map-marker"></i>
+                    Sheet / Pipe<br>
+                    No. 76/3, Pondy - Mailam Main Road,<br>
+                    Sedarapet, Tamil Nadu 605111
+                </p>
+                <p class="mb-2">
+                    <i class="las la-phone"></i> 96263 25204 / 96555 51468
+                </p>
+                <p class="mb-2">
+                    <i class="las la-phone"></i> 0413-2980014
+                </p>
+                <p class="mb-3">
+                    <i class="las la-envelope-open"></i> anbutraders1468@gmail.com
+                </p>
+                <div class="d-flex align-items-center">
+                    <a class="asteel-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="lab la-instagram"></i></a>
+                    <a class="asteel-social-btn" href="#"><i class="lab la-facebook-f"></i></a>
+                    <a class="asteel-social-btn" href="#"><i class="lab la-youtube"></i></a>
+                    <a class="asteel-social-btn" href="#"><i class="lab la-linkedin-in"></i></a>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <p class="privacy">Privacy Policy | Terms &amp; Conditions</p>
-                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Quick Links</h5>
+                <a class="footer-link" href="about.html">About Us</a>
+                <a class="footer-link" href="contact.html">Contact Us</a>
+                <a class="footer-link" href="service.html">Our Services</a>
+                <a class="footer-link" href="steel.html">Steel</a>
+                <a class="footer-link" href="sheets.html">Sheets and Pipes</a>
+                <a class="footer-link" href="paints.html">Paints</a>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Business Hours</h5>
+                <p class="mb-1 text-light"><strong>Monday - Saturday</strong></p>
+                <p class="mb-3 text-white">08:00 am - 08:00 pm</p>
+                <p class="mb-1 text-light"><strong>Sunday</strong></p>
+                <p class="text-white">08:00 am - 02:30 pm</p>
+            </div>
+
+            <!-- Google Review -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5>Leave a Google Review</h5>
+                <p class="mb-3">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+                <button type="button" class="asteel-review-btn" onclick="redirectToGoogleReview()">Leave a Review</button>
             </div>
         </div>
     </div>
 
-    <!-- Off-canvas Area-->
+    <!-- Standardized single-row copyright -->
+    <div class="asteel-copyright-bar">
+        <div class="container">
+            Copyright © <span class="current-year">2026</span> <a href="index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Off-canvas Area-->
 
  	<div class="extra-info">
         <div class="close-icon menu-close">
@@ -1050,6 +857,17 @@ counters.forEach(counter => observer.observe(counter));
             <i class="las la-phone"></i>
         </a>
     </div>
+
+
+<script>
+function redirectToGoogleReview() {
+  window.open('https://www.google.com/maps/place/ANBU+TRADERS+-+PIPES+AND+SHEETS/@12.002837,79.762673,391m/data=!3m1!1e3!4m8!3m7!1s0x3a53670027dfb5a9:0x7a2309fe84b1a2d0!8m2!3d12.0022224!4d79.7647595!9m1!1b1!16s%2Fg%2F11l_954p8h?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D', '_blank');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var cy = document.querySelectorAll('.current-year');
+  cy.forEach(function(el) { el.textContent = new Date().getFullYear(); });
+});
+</script>
 
 </body>
 

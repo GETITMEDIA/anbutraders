@@ -4,6 +4,14 @@
 
 <!-- Mirrored from iideainformatics.it/html/devgalaxy/industrify/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 06:35:11 GMT -->
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">    
@@ -262,7 +270,7 @@
                                     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                                         <ul class="navbar-nav m-auto">
                                             <li class="nav-item">
-                                                <a class="nav-link active" href="index.html"  >HOME
+                                                <a class="nav-link" href="index.html"  >HOME
                                                     <span class="sub-nav-toggler"> </span>
                                                 </a>
                                             
@@ -282,7 +290,7 @@
                                      
                                                                                                                                     
                                             <li class="nav-item">
-                                                <a class="nav-link" href="gallery.html"  > PROJECTS
+                                                <a class="nav-link active" href="gallery.html"  > PROJECTS
                                                     <span class="sub-nav-toggler"> </span>
                                                 </a>
                                                

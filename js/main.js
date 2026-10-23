@@ -1,13 +1,31 @@
 (function ($) {
     "use strict";
 
-    // Spinner
+    // Spinner: Show only on initial site entry (first page in session)
     var spinner = function () {
-        setTimeout(function () {
+        var alreadyVisited = false;
+        try {
+            alreadyVisited = sessionStorage.getItem('anbu_site_loaded');
+        } catch (e) {
+            alreadyVisited = false;
+        }
+
+        if (alreadyVisited) {
+            // Already visited in this session: remove spinner immediately
             if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
+                $('#spinner').removeClass('show').css('display', 'none');
             }
-        }, 1);
+        } else {
+            // First time landing on the site: show briefly, then record in session
+            setTimeout(function () {
+                if ($('#spinner').length > 0) {
+                    $('#spinner').removeClass('show');
+                }
+                try {
+                    sessionStorage.setItem('anbu_site_loaded', 'true');
+                } catch (e) {}
+            }, 600);
+        }
     };
     spinner();
 
@@ -206,5 +224,50 @@ function redirectToGoogleReview() {
         var style = document.createElement('style');
         style.textContent = '.product.revealed, .brand-card.revealed { opacity: 1 !important; transform: translateY(0) !important; }';
         document.head.appendChild(style);
+    }
+})();
+
+// Automatic Dynamic Active Nav-Link Highlighter
+(function () {
+    function setActiveNavLink() {
+        var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        currentPath = currentPath.split('?')[0].split('#')[0].toLowerCase();
+        if (!currentPath || currentPath === '') currentPath = 'index.html';
+
+        var navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+
+        // First remove active from all
+        navLinks.forEach(function (link) {
+            link.classList.remove('active');
+        });
+
+        var matched = false;
+
+        navLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (!href) return;
+
+            // Skip internal anchor/section links like index.html#products
+            if (href.indexOf('#') !== -1) return;
+
+            var linkFile = href.split('/').pop().split('?')[0].toLowerCase();
+
+            if (linkFile && linkFile === currentPath && !matched) {
+                link.classList.add('active');
+                matched = true;
+            }
+        });
+
+        // Default to Home if root or index.html and no other match
+        if (!matched && (currentPath === 'index.html' || currentPath === '')) {
+            var homeLink = document.querySelector('.navbar-nav a[href="index.html"], .navbar-nav a[href="./index.html"]');
+            if (homeLink) homeLink.classList.add('active');
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setActiveNavLink);
+    } else {
+        setActiveNavLink();
     }
 })();

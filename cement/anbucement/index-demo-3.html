@@ -5,6 +5,14 @@
 <!-- Mirrored from conydor.netlify.app/index-demo-3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Sep 2025 09:38:33 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -264,26 +272,20 @@
         <div class="hero-section-content">
             
             <div class="container h-100">
-                <div class="row h-100 mb-50 align-items-center">
-<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" >
-                        <div class="welcome-content text-center">
-                            <div class="promo-section">
-<br>                            </div>
-                            <h1 class="w-text big-font wow fadeInUp" data-wow-delay="0.2s">Dedicated Cement Company, <span class="gradient-text cyan">Builders Know Our</span>  Product Well.</h1>
-                            <p class="g-text wow fadeInUp" data-wow-delay="0.3s">
-Steel is a strong, versatile alloy of iron and carbon used in construction for its high strength and durability.
-
-Cement is a fine powder that, when mixed with water, hardens into concrete, serving as a key binding agent in construction..</p>
-                            <div class="info-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                                <a href="#" class="btn more-btn orange mr-3">contact us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        
-                    </div>
-                   
-                </div>
+                <div class="row h-100 align-items-center justify-content-center">
+    <div class="col-lg-10 col-xl-9 wow fadeIn" data-wow-delay="0.2s">
+        <div class="welcome-content text-center">
+            <h1 class="w-text big-font wow fadeInUp" data-wow-delay="0.2s">Dedicated Cement Company, <span class="gradient-text cyan">Builders Know Our</span> Product Well.</h1>
+            <p class="g-text wow fadeInUp" data-wow-delay="0.3s">
+                Steel is a strong, versatile alloy of iron and carbon used in construction for its high strength and durability.
+                Cement is a fine powder that, when mixed with water, hardens into concrete, serving as a key binding agent in construction.
+            </p>
+            <div class="info-btn-group wow fadeInUp" data-wow-delay="0.4s">
+                <a href="contact-us.html" class="btn more-btn orange mr-3">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -298,8 +300,8 @@ Cement is a fine powder that, when mixed with water, hardens into concrete, serv
             <div class="more-dots justify-content-center fadeInUp" data-wow-delay="0.2s">
                 <span class="gradient-text blue">Our Services</span>
             </div>
-            <h2 style="color: #000;" class="fadeInUp" data-wow-delay="0.3s">What We Specialize In</h2>
-            <p class="fadeInUp" data-wow-delay="0.4s"  style="color: #000;">
+            <h2 class="fadeInUp" data-wow-delay="0.3s">What We Specialize In</h2>
+            <p class="fadeInUp" data-wow-delay="0.4s">
                 Anbu Traders is one of the best Cement & Steels Dealers in Pondicherry. They deliver the best quality cement for your projects. You can rely on one name for all your steel and cement requirements at the most competitive price.
             </p>
         </div>
@@ -307,35 +309,35 @@ Cement is a fine powder that, when mixed with water, hardens into concrete, serv
         <div class="row d-flex align-items-stretch">
             <div class="col-12 col-md-6 col-lg-4">
                 <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.2s">
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.2s">
                     <!-- Icon -->
                     <div class="service_icon">
                         <img src="img/icons/hos/s1.png" alt="" class="width-90">
                     </div>
-                    <h6 style="color: #000;">Cement Services</h6>
-                    <p style="color: rgb(0, 0, 0);">To deliver the best quality cement for your projects. Now you can rely on one name for all your steel and cement requirements .</p>
+                    <h6>Cement Services</h6>
+                    <p>To deliver the best quality cement for your projects. Now you can rely on one name for all your steel and cement requirements .</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.3s">
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.3s">
                     <!-- Icon -->
                     <div class="service_icon">
                         <img src="img/icons/hos/s2.png" alt="" class="width-90">
                     </div>
-                    <h6 style="color: #000;">Transport Services</h6>
-                    <p style="color: rgb(0, 0, 0);">We provide reliable transport services to ensure the timely delivery of high-quality cement to your project locations.</p>
+                    <h6>Transport Services</h6>
+                    <p>We provide reliable transport services to ensure the timely delivery of high-quality cement to your project locations.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <!-- Content -->
-                <div class="service_single_content text-center mb-100 fadeInUp" data-wow-delay="0.4s">
+                <div class="service_single_content text-center fadeInUp" data-wow-delay="0.4s">
                     <!-- Icon -->
                     <div class="service_icon">
                         <img src="img/icons/hos/s3.png" alt="" class="width-90">
                     </div>
-                    <h6 style="color: #000;">Construction Materials</h6>
-                    <p style="color: rgb(0, 0, 0);">We supply a wide range of construction materials, including steel, cement, aggregates, and more, for all types of building projects.</p>
+                    <h6>Construction Materials</h6>
+                    <p>We supply a wide range of construction materials, including steel, cement, aggregates, and more, for all types of building projects.</p>
                 </div>
             </div>
         </div>
@@ -348,31 +350,20 @@ Cement is a fine powder that, when mixed with water, hardens into concrete, serv
         
         <div class="container">
             <div class="call-us-sec">
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-9">
-                        <div class="quote-section" style="color:#000;">
-
-    <h3 class="quote-subtitle" data-wow-delay="0.3s" style="color:#000;">
-        Get Your Quote or Call: 9626325204
-    </h3>
-
-    <h2 class="quote-title" style="color:#000;">
-        Are You Ready? Book Appointment Now!
-    </h2>
-
-   
-
-</div>
-
-
-                    </div>
-                    <div class="col-12 col-lg-3">
-                        
-                    </div>
-                </div>
+    <div class="row align-items-center">
+        <div class="col-12 col-lg-9">
+            <div class="quote-section">
+                <h3 class="quote-subtitle" data-wow-delay="0.3s">Get Your Quote or Call: 9626325204</h3>
+                <h2 class="quote-title">Are You Ready? Book Appointment Now!</h2>
             </div>
-            
         </div>
+        <div class="col-12 col-lg-3 text-lg-right text-center mt-3 mt-lg-0">
+            <a href="tel:+919626325204" class="btn more-btn">Call Now</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
     </div>
 
     <!-- ##### About Us Area Start ##### -->
@@ -391,50 +382,50 @@ Cement is a fine powder that, when mixed with water, hardens into concrete, serv
                         <span class="gradient-text blue">Cement Company that provides the best quality</span>
                     </div>
                     <h4 class="fadeInUp bold" data-wow-delay="0.3s">Reliable and Dedicated Cement Company for Your Construction</h4>
-                    <p  style="color: #000;" class="fadeInUp" data-wow-delay="0.4s"  style="color: #000;">
+                    <p class="fadeInUp" data-wow-delay="0.4s">
                         Anbu Traders is one of the best Cement & Steels Dealers in Pondicherry. We deliver the best quality cement for your projects. With a focus on customer satisfaction, we provide the highest standard of cement and steel, making us your reliable partner for all construction requirements at the most competitive prices.
                     </p>
-                    <div class="list-wrap align-items-center"  style="color: #6d3603;">
+                    <div class="list-wrap align-items-center">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="side-feature-list-item"  style="color: #ff0303;">
+                                <div class="side-feature-list-item"  >
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div style="color: #6d3603;" class="foot-c-info">Best Quality Cement</div>
+                                    <div  class="foot-c-info">Best Quality Cement</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="side-feature-list-item">
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div  style="color: #6d3603;" class="foot-c-info">Competitive Pricing</div>
+                                    <div   class="foot-c-info">Competitive Pricing</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="side-feature-list-item">
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div  style="color: #6d3603;" class="foot-c-info">On-time Delivery</div>
+                                    <div   class="foot-c-info">On-time Delivery</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="side-feature-list-item">
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div  style="color: #6d3603;" class="foot-c-info">Reliable Customer Support</div>
+                                    <div   class="foot-c-info">Reliable Customer Support</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="side-feature-list-item">
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div  style="color: #6d3603;" class="foot-c-info">Wide Range of Products</div>
+                                    <div   class="foot-c-info">Wide Range of Products</div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="side-feature-list-item">
                                     <i class="fa fa-check-square-o check-mark-icon-font" aria-hidden="true"></i>
-                                    <div  style="color: #6d3603;" class="foot-c-info">24/7 Support Services</div>
+                                    <div   class="foot-c-info">24/7 Support Services</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="#">Read More</a>
+                    <a class="btn more-btn mt-30 fadeInUp" data-wow-delay="0.6s" href="about-us.html">Read More</a>
                 </div>
             </div>
         </div>
@@ -579,7 +570,7 @@ Year Established</div>
                         </div>
                         <div class="testimonial-description">
                             <div class="testimonial_text">
-                                <p style="color: #000;">Working with Anbu Steel & Cement has been seamless. Their delivery is always on time, and the material quality is unmatched. They’re our go-to supplier for all major projects.</p>
+                                <p>Working with Anbu Steel & Cement has been seamless. Their delivery is always on time, and the material quality is unmatched. They’re our go-to supplier for all major projects.</p>
                             </div>
                             <div class="admin_text">
                                 <h5>Rajesh Kumar</h5>
@@ -598,7 +589,7 @@ Year Established</div>
                         </div>
                         <div class="testimonial-description">
                             <div class="testimonial_text">
-                                <p style="color: #000;">Anbu Traders consistently exceeds expectations. Their customer support is responsive and the supply chain is well managed. Highly recommended for bulk cement and steel needs.</p>
+                                <p>Anbu Traders consistently exceeds expectations. Their customer support is responsive and the supply chain is well managed. Highly recommended for bulk cement and steel needs.</p>
                             </div>
                             <div class="admin_text">
                                 <h5>Meena S.</h5>
@@ -617,7 +608,7 @@ Year Established</div>
                         </div>
                         <div class="testimonial-description">
                             <div class="testimonial_text">
-                                <p style="color: #000;">From the first inquiry to final delivery, Anbu Steel & Cement provided outstanding service. Their quality products helped us complete our project on time and within budget.</p>
+                                <p>From the first inquiry to final delivery, Anbu Steel & Cement provided outstanding service. Their quality products helped us complete our project on time and within budget.</p>
                             </div>
                             <div class="admin_text">
                                 <h5>Arun Prakash</h5>
@@ -640,81 +631,67 @@ Year Established</div>
     <!-- ##### Blog Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
- <footer class="footer-area bg-img">
-    <div class="footer-content-area mt-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-4 col-md-6">
-                    <div class="footer-copywrite-info">
-                        <!-- Copywrite -->
-                        <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
-                            <div class="footer-logo">
-                            </div>
-                            <p style="font-size: 20px;">Welcome to Anbu Traders! Your trusted source for Steel Sheets, Pipes, and Paints. We offer quality materials at competitive prices with excellent customer service.</p>
-                        </div>
-                        <!-- Social Icon -->
-                        <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
+<footer class="cement-unified-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Brand / About -->
+            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                <h5>About Anbu Traders</h5>
+                <p class="mb-3">Welcome to Anbu Traders! Your trusted source for Steel Sheets, Pipes, and Paints. We offer quality materials at competitive prices with excellent customer service.</p>
+                <div class="d-flex align-items-center">
+                    <a class="cement-social-btn" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="cement-social-btn" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="cement-social-btn" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                    <a class="cement-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="cement-social-btn" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
+            </div>
 
-                <div class="col-12 col-lg-3 col-md-6">
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
-                        <div class="contact_info mt-x text-center fadeInUp" data-wow-delay="0.3s">
-                            <h5>PRIVACY & TOS</h5>
-                            <a href="#"><p>Advertiser Agreement</p></a>
-                            <a href="#"><p>Acceptable Use Policy</p></a>
-                            <a href="#"><p>Privacy Policy</p></a>
-                            <a href="#"><p>Technology Privacy</p></a>
-                            <a href="#"><p>Developer Agreement</p></a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Quick Links -->
+            <div class="col-12 col-lg-2 col-md-6 mb-4">
+                <h5>Navigate</h5>
+                <a class="footer-link" href="index-demo-3.html">Home</a>
+                <a class="footer-link" href="about-us.html">About Us</a>
+                <a class="footer-link" href="services.html">Services</a>
+                <a class="footer-link" href="ourprojectcement.html">Our Projects</a>
+                <a class="footer-link" href="contact-us.html">Contact Us</a>
+            </div>
 
-                <div class="col-12 col-lg-2 col-md-6">
-                    <!-- Content Info -->
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.2s">
-                            <h5>NAVIGATE</h5>
-                            <a href="#"><p>Advertisers</p></a>
-                            <a href="#"><p>Developers</p></a>
-                            <a href="#"><p>Resources</p></a>
-                            <a href="#"><p>Company</p></a>
-                            <a href="#"><p>Connect</p></a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Privacy & TOS -->
+            <div class="col-12 col-lg-3 col-md-6 mb-4">
+                <h5>Privacy & TOS</h5>
+                <a class="footer-link" href="#">Advertiser Agreement</a>
+                <a class="footer-link" href="#">Acceptable Use Policy</a>
+                <a class="footer-link" href="#">Privacy Policy</a>
+                <a class="footer-link" href="#">Technology Privacy</a>
+                <a class="footer-link" href="#">Developer Agreement</a>
+            </div>
 
-                <div class="col-12 col-lg-3 col-md-6">
-                    <div class="contact_info_area d-sm-flex justify-content-between">
-                        <!-- Content Info -->
-                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
-                            <h5>CONTACT US</h5>
-                            <p>Mailing Address:No. No. 4/5, Pondy – Mailam Main Road,
-
-Near Venkateswara Weighment,
-
-Thiruchitrambalam Kootroad, Vanur Taluk,
-
-Villupuram Dt. – 605111</p>
-                            <p>Phone: +91 96263 25204 /  9994011468</p>
-                            <p>Landline: 0413-2980014</p>
-                            <p>Email: <a href="mailto:info@anbutraders.com">anbutraders1468@gmail.com</a></p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Contact Info -->
+            <div class="col-12 col-lg-3 col-md-6 mb-4">
+                <h5>Contact Us</h5>
+                <p class="mb-2">
+                    <i class="fa fa-map-marker"></i>
+                    No. 4/5, Pondy – Mailam Main Road,<br>
+                    Near Venkateswara Weighment,<br>
+                    Thiruchitrambalam Kootroad, Vanur Taluk,<br>
+                    Villupuram Dt. – 605111
+                </p>
+                <p class="mb-2"><i class="fa fa-phone"></i> +91 96263 25204 / 9994011468</p>
+                <p class="mb-2"><i class="fa fa-phone"></i> Landline: 0413-2980014</p>
+                <p class="mb-3"><i class="fa fa-envelope"></i> anbutraders1468@gmail.com</p>
             </div>
         </div>
     </div>
-</footer>
 
-    <!-- ##### Footer Area End ##### -->
+    <!-- Standardized single-row copyright -->
+    <div class="cement-copyright-bar">
+        <div class="container">
+            Copyright © <span class="current-year">2026</span> <a href="../../index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
+        </div>
+    </div>
+</footer>
+<!-- ##### Footer Area End ##### -->
 
     <!-- ########## All JS ########## -->
     <!-- jQuery js -->
@@ -754,6 +731,14 @@ $(document).ready(function () {
             <i class="fa fa-phone"></i>
         </a>
     </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var cy = document.querySelectorAll('.current-year');
+  cy.forEach(function(el) { el.textContent = new Date().getFullYear(); });
+});
+</script>
 
 </body>
 

@@ -5,6 +5,14 @@
 
 <!-- Mirrored from kamleshyadav.com/templatemonster-html/penter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Aug 2025 05:08:43 GMT -->
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Anbu paints</title>
 
@@ -558,10 +566,10 @@
 					<div class="col-md-12">
 						<div class="p_banner_right">
 							<div class="animated fadeInUp">
-								<h1 class="" style="color: #c00202;">Painting <span>is silent poetry,</span> and poetry is painting.</h1>
+								<h1>Painting <span>is silent poetry,</span> and poetry is painting.</h1>
 								<p style="color: #ffffff;">Sometimes a game comes at just the right moment in your life. 'Flower' is beautiful,
 									serene, and a bit of sunshine in a gloomy world I remember. </p>
-								<a href="#" class="temp_btn">View more</a>
+								<a href="about.html" class="temp_btn">View more</a>
 							</div>
 						</div>
 					</div>
@@ -578,7 +586,7 @@
         using low-VOC paints can contribute to a healthier indoor environment by reducing airborne pollutants.
         Overall, painting is a valuable investment in both the aesthetics and longevity of a home.
     </p>
-    <button>Learn More</button>
+    <a href="about.html" class="btn-learn">Learn More</a>
 </div>
 
 	<!--section2 start-->
@@ -589,22 +597,16 @@
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-0 col-xs-offset-0 text-center">
 				<div class="heading_wrapper">
-					<h1 class="heading" style="color: rgb(255, 255, 255);">Why Choose Anbu Paints</h1>
+					<h1 class="heading">Why Choose Anbu Paints</h1>
 					<div class="clearfix"></div>
 				</div>
-				<p class="paragraph italic" style="color: rgb(0, 0, 0);">
-					 <strong></strong>
-				</p>
-				<p class="paragraph italic" style="color: rgb(0, 0, 0);">
-					 <strong></strong>
-				</p>
-				<p class="paragraph italic" style="color: rgb(0, 0, 0);">
-					 <strong></strong>
-				</p>
+				
+				
+				
 			</div>
 			<div class="temp_services wow fadeIn">
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-	<div class="service_section wow slideInUp" data-wow-delay="0.5s" style="background-color: #c9109e;">
+	<div class="service_section wow slideInUp" data-wow-delay="0.5s" >
 						<div class="bottompadder20">
 							<img src="assets/images/a1.png" alt="Window Washing">
 						</div>
@@ -617,7 +619,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-	<div class="service_section wow slideInUp" data-wow-delay="0.5s" style="background-color: #c91010;">
+	<div class="service_section wow slideInUp" data-wow-delay="0.5s" >
 		<div class="bottompadder20">
 			<img src="assets/images/a2.png" alt="Color Proof">
 		</div>
@@ -631,7 +633,7 @@
 </div>
 
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="service_section wow slideInUp" data-wow-delay="0.8s" style="background-color: #1016c9;">
+					<div class="service_section wow slideInUp" data-wow-delay="0.8s" >
 						<div class="bottompadder20">
 							<img src="assets/images/a3.png" alt="Mildew Removal">
 						</div>
@@ -644,7 +646,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="service_section service_boder1 service_boder6 wow slideInUp" data-wow-delay="1.3s" style="background-color: #5e4a4a;">
+					<div class="service_section service_boder1 service_boder6 wow slideInUp" data-wow-delay="1.3s" >
 						<div class="bottompadder20">
 							<img src="assets/images/a4.png" alt="Faux Finishes">
 						</div>
@@ -657,7 +659,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="service_section service_boder6 wow slideInUp" data-wow-delay="1.6s" style="background-color: #3c7102;">
+					<div class="service_section service_boder6 wow slideInUp" data-wow-delay="1.6s" >
 						<div class="bottompadder20">
 							<img src="assets/images/a5.png" alt="Water Proofing">
 						</div>
@@ -670,7 +672,7 @@
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<div class="service_section service_boder6 wow slideInUp" data-wow-delay="1.9s" style="background-color: #807a02;">
+					<div class="service_section service_boder6 wow slideInUp" data-wow-delay="1.9s" >
 						<div class="bottompadder20">
 							<img src="assets/images/a6.png" alt="Pre-Point Demo">
 						</div>
@@ -701,7 +703,7 @@
 					<div class="clearfix"></div>
 				</div>
 				<div>
-					<p class="paragraph italic" style="color: #0d5cd2;">
+					<p class="paragraph italic" >
 						At Anbu Paints, we specialize in a wide range of painting services that bring beauty, durability, and protection to your property. Whether it's interior, exterior, or specialty coatings, we ensure that every project is completed with the highest level of craftsmanship and professionalism.
 					</p>
 				</div>
@@ -714,8 +716,8 @@
 							<img src="assets/images/brush1.png" alt="Interior Painting">
 						</div>
 						<div class="service_right">
-							<h2 class="subheading subheading_hover"style="color: #1016c9;"><a href="#">Interior Painting</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+							<h2 class="subheading subheading_hover"><a href="#">Interior Painting</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Renovate your space with our expert Interior Painting Services. Quality and style guaranteed! Our trained and certified painters will add more life to your interiors.
 							</p>
 						</div>
@@ -729,8 +731,8 @@
 							<img src="paint/exterier.webp" alt="Exterior Painting">
 						</div>
 						<div class="service_right">
-						<h2 class="subheading subheading_hover" style="color: #1016c9;"><a href="#">Exterior Painting</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+						<h2 class="subheading subheading_hover" ><a href="#">Exterior Painting</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Safeguard your exterior walls from harsh climates and damage with our custom-curated services. Renew your exterior walls' strength and style with our professional painting services.
 							</p>
 						</div>
@@ -744,8 +746,8 @@
 							<img src="assets/images/brush5.png" alt="Waterproofing">
 						</div>
 						<div class="service_right">
-							<h2 class="subheading subheading_hover" style="color: #1016c9;"><a href="#">Waterproofing</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+							<h2 class="subheading subheading_hover" ><a href="#">Waterproofing</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Our experienced professionals will prevent wall leakages by using the Berger Moisture Meter. Berger Paints' Scientific Waterproofing ensures the durability of your walls.
 							</p>
 						</div>
@@ -759,8 +761,8 @@
 							<img src="assets/images/brush6.png" alt="Wall Textures & Designs">
 						</div>
 						<div class="service_right">
-						<h2 class="subheading subheading_hover" style="color: #1016c9;"><a href="#">Wall Textures & Designs</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+						<h2 class="subheading subheading_hover" ><a href="#">Wall Textures & Designs</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Choose our exquisite painting solutions for revamping your beloved walls. Our long-lasting designs will keep impressing guests for years! Our experienced Express Painting professionals will transform a dull wall into a masterpiece.
 							</p>
 						</div>
@@ -774,8 +776,8 @@
 							<img src="assets/images/a1.png" alt="Wood Coatings">
 						</div>
 						<div class="service_right">
-						<h2 class="subheading subheading_hover" style="color: #1016c9;"><a href="#">Wood Coatings</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+						<h2 class="subheading subheading_hover" ><a href="#">Wood Coatings</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Achieve perfectly textured wooden furniture through our professional wood coating services. Our products will add the perfect gloss, shine, and shade to your beloved wooden furniture.
 							</p>
 						</div>
@@ -789,8 +791,8 @@
 							<img src="assets/images/coat.png" alt="Metal Coatings">
 						</div>
 						<div class="service_right">
-						<h2 class="subheading subheading_hover" style="color: #1016c9;"><a href="#">Metal Coatings</a></h2>
-							<p class="paragraph paragraph_hover" style="color: #000;">
+						<h2 class="subheading subheading_hover" ><a href="#">Metal Coatings</a></h2>
+							<p class="paragraph paragraph_hover" >
 								Shield your metal fixtures from corrosion, weather damage, and rust through our quality metal coating painting services. Our certified team of painters will upgrade your fixtures with a new look!
 							</p>
 						</div>
@@ -903,84 +905,69 @@
 
 	<!--section9 start-->
     <!-- Footer Start -->
-
-<!-- Footer Start -->
-<div class="container-fluid" style="background-color: #043a6f; padding-top: 5rem; padding-bottom: 5rem; margin-top: 30px;">
-  <div class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
-    <div class="row" style="display: flex; flex-wrap: wrap; gap: 3rem;">
-      
+<footer class="paint-unified-footer">
+  <div class="container">
+    <div class="row">
       <!-- Our Office -->
-      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
-        <h5 style="color: white; margin-bottom: 1.5rem;">Our shop</h5>
-        <p style="margin-bottom: 0.5rem; color: white;">
-          <i class="fa fa-map-marker-alt" style="margin-right: 0.75rem; "></i>
-       No. 4/5, Pondy – Mailam Main Road,Opposite to Venkateswara Weighment,
-Thiruchitrambalam Kootroad, Vanur Taluk,
-Villupuram Dt. – 605111
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Our Shop</h5>
+        <p class="mb-2">
+          <i class="fa fa-map-marker-alt"></i>
+          No. 4/5, Pondy – Mailam Main Road,<br>
+          Opposite to Venkateswara Weighment,<br>
+          Thiruchitrambalam Kootroad, Vanur Taluk,<br>
+          Villupuram Dt. – 605111
         </p>
-        <p style="margin-bottom: 0.5rem;color: white;">
-          <i class="fa fa-phone-alt" style="margin-right: 0.75rem;color: white;"></i>
-
-
-9626325232 |9894011468 | 9626325204
-
+        <p class="mb-2">
+          <i class="fa fa-phone-alt"></i> 9626325232 | 9894011468 | 9626325204
         </p>
-
-
-        <p style="margin-bottom: 0.5rem;color: white;">
-          <i class="fa fa-phone-alt" style="margin-right: 0.75rem;"color: white;></i>
+        <p class="mb-3">
+          <i class="fa fa-envelope"></i> anbutraders1468@gmail.com
         </p>
-        <p style="margin-bottom: 0.5rem;color: white;">
-          <i class="fa fa-envelope" style="margin-right: 0.75rem;"></i>anbutraders1468@gmail.com
-        </p>
-        <div style="display: flex; margin-top: 1.5rem;">
-          <a href="https://www.instagram.com/anbutraders_py/" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
-            <i class="fab fa-instagram" style="color: white; font-size: 20px;"></i>
-          </a>
-          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
-            <i class="fab fa-facebook-f" style="color: white; font-size: 20px;"></i>
-          </a>
-          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
-            <i class="fab fa-youtube" style="color: white; font-size: 20px;"></i>
-          </a>
-          <a href="#" style="background-color: #3498db; border: none; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; border-radius: 50%; margin-right: 0.75rem; transition: background-color 0.3s;">
-            <i class="fab fa-linkedin-in" style="color: white; font-size: 20px;"></i>
-          </a>
+        <div class="d-flex align-items-center">
+          <a class="paint-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a class="paint-social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="paint-social-btn" href="#"><i class="fab fa-youtube"></i></a>
+          <a class="paint-social-btn" href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
-        <h5 style="color: white; margin-bottom: 1.5rem;">Quick Links</h5>
-        <a href="about.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">About Us</a>
-        <a href="contact.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Contact Us</a>
-        <a href="service.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Our Services</a>
-        <a href="steel.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Steel</a>
-        <a href="sheets.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Sheets and Pipes</a>
-        <a href="paints.html" style="color: white; text-decoration: none; display: block; margin-bottom: 0.5rem;">Paints</a>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Quick Links</h5>
+        <a class="footer-link" href="about.html">About Us</a>
+        <a class="footer-link" href="contact.html">Contact Us</a>
+        <a class="footer-link" href="service.html">Our Services</a>
+        <a class="footer-link" href="steel.html">Steel</a>
+        <a class="footer-link" href="sheets.html">Sheets and Pipes</a>
+        <a class="footer-link" href="paints.html">Paints</a>
       </div>
 
       <!-- Business Hours -->
-      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
-        <h5 style="color: white; margin-bottom: 1.5rem;">Business Hours</h5>
-        <p style="margin-bottom: 0.5rem;color: #fcfeff;">Monday - Saturday</p>
-        <h6 style="color: #fbfdff;">08:00 am - 08:00 pm</h6>
-        <p style="margin-bottom: 0.5rem;color: #fcfeff;">Sunday</p>
-        <h6 style="color: #fcfeff;">08:00 am - 02:30 pm</h6>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Business Hours</h5>
+        <p class="mb-1 text-light"><strong>Monday - Saturday</strong></p>
+        <p class="mb-3 text-white">08:00 am - 08:00 pm</p>
+        <p class="mb-1 text-light"><strong>Sunday</strong></p>
+        <p class="text-white">08:00 am - 02:30 pm</p>
       </div>
 
-      <!-- Newsletter -->
-      <div class="col-lg-3 col-md-6" style="flex: 1; min-width: 250px;">
-        <h5 style="color: white; margin-bottom: 1.5rem;">Leave a Google Review</h5>
-        <p style="color: #f8fcff; margin-bottom: 1rem;">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
-        <div style="position: relative; width: 100%;">
-          <button type="button" style="background-color: #3498db; border: none; padding: 0.75rem 1.5rem; color: white; font-size: 1rem; position: absolute; top: 0; right: 0; margin-top: 0.75rem; margin-right: 0.75rem;" onclick="redirectToGoogleReview()">Leave a Review</button>
-        </div>
+      <!-- Google Review -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5>Leave a Google Review</h5>
+        <p class="mb-3">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+        <button type="button" class="paint-review-btn" onclick="redirectToGoogleReview()">Leave a Review</button>
       </div>
-
     </div>
   </div>
-</div>
+
+  <!-- Standardized single-row copyright -->
+  <div class="paint-copyright-bar">
+    <div class="container">
+      Copyright © <span class="current-year">2026</span> <a href="index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
+    </div>
+  </div>
+</footer>
 <!-- Footer End -->
 
 	<!--section10 end-->
@@ -1048,6 +1035,17 @@ document.addEventListener('DOMContentLoaded', function() {
             <i class="fa fa-phone-alt"></i>
         </a>
     </div>
+
+
+<script>
+function redirectToGoogleReview() {
+  window.open('https://www.google.com/maps/place/ANBU+TRADERS+-+PIPES+AND+SHEETS/@12.002837,79.762673,391m/data=!3m1!1e3!4m8!3m7!1s0x3a53670027dfb5a9:0x7a2309fe84b1a2d0!8m2!3d12.0022224!4d79.7647595!9m1!1b1!16s%2Fg%2F11l_954p8h?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D', '_blank');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var cy = document.querySelectorAll('.current-year');
+  cy.forEach(function(el) { el.textContent = new Date().getFullYear(); });
+});
+</script>
 
 </body>
 

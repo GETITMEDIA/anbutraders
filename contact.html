@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Session check to avoid repeated spinner on every page navigation -->
+    <script>
+        try {
+            if (sessionStorage.getItem('anbu_site_loaded')) {
+                document.documentElement.classList.add('already-visited');
+            }
+        } catch (e) {}
+    </script>
     <meta charset="utf-8">
     <title>contact</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
