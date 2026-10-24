@@ -6,13 +6,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <!-- Session check to avoid repeated spinner on every page navigation -->
-    <script>
-        try {
-            if (sessionStorage.getItem('anbu_site_loaded')) {
-                document.documentElement.classList.add('already-visited');
-            }
-        } catch (e) {}
-    </script>
+    
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -206,14 +200,33 @@
 
 </style>
 
+    <link href="../../css/preloader.css" rel="stylesheet">
 </head>
 
 <body class="light-version">
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="preload-content">
-            <div id="dream-load"></div>
+        <!-- ==============================================
+         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Steel and Cement">
+        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
+        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
+            <video id="anbu-preloader-video" 
+                   class="anbu-preloader-video" 
+                   playsinline 
+                   muted 
+                   autoplay 
+                   preload="auto">
+                <source src="../../logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.mp4" type="video/mp4">
+            </video>
         </div>
+        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
+            <img id="anbu-flying-logo" class="anbu-flying-logo" src="../../img/ANUBU STEEL.png" alt="Anbu Traders Logo">
+            <img id="anbu-flying-logo-target" class="anbu-flying-logo anbu-flying-logo-target" src="img/Anbu-Steel-&-Cement--Logo1.png" alt="Anbu Steel & Cement Logo" style="display: none;">
+        </div>
+    </div>
+    <!-- ==============================================
+         ANBU TRADERS — PRELOADER END
+         ============================================== -->
     </div>
     <!-- ##### Header Area Start ##### -->
 <nav class="navbar navbar-expand-lg fixed-top" id="banner" style="background-color: white; color: #000;" >
@@ -223,7 +236,7 @@
             <!-- Brand -->
           <a class="navbar-brand" href="#" style="display: flex; align-items: center; font-family: Arial, sans-serif; font-size: 20px; color: #333; text-decoration: none;">
     <span style="margin-right: 10px;">
-        <img src="img/Anbu-Steel-&-Cement--Logo1.png" alt="logo" style="height: 100px; width: auto;">
+        <img id="anbu-navbar-logo" src="img/Anbu-Steel-&-Cement--Logo1.png" alt="logo" style="height: 100px; width: auto;">
     </span> 
     
 </a>
@@ -275,13 +288,18 @@
                 <div class="row h-100 align-items-center justify-content-center">
     <div class="col-lg-10 col-xl-9 wow fadeIn" data-wow-delay="0.2s">
         <div class="welcome-content text-center">
-            <h1 class="w-text big-font wow fadeInUp" data-wow-delay="0.2s">Dedicated Cement Company, <span class="gradient-text cyan">Builders Know Our</span> Product Well.</h1>
+            <div class="cement-hero-badge"><i class="fa fa-shield"></i> Authorized Fe-550D TMT & 53-Grade Cement Partner</div>
+            <h1 class="w-text big-font wow fadeInUp" data-wow-delay="0.2s">Build with Uncompromising Strength. <span>Engineered for Generations.</span></h1>
             <p class="g-text wow fadeInUp" data-wow-delay="0.3s">
-                Steel is a strong, versatile alloy of iron and carbon used in construction for its high strength and durability.
-                Cement is a fine powder that, when mixed with water, hardens into concrete, serving as a key binding agent in construction.
+                Premier direct wholesale & retail distributor for Ultratech Cement, Dalmia, JSW Cement, Priya Cement, and Agni 550D Billet TMT Steel. Guaranteed grade certification, seismic resistance, and direct-to-site lorry delivery.
             </p>
-            <div class="info-btn-group wow fadeInUp" data-wow-delay="0.4s">
-                <a href="contact-us.html" class="btn more-btn orange mr-3">Contact Us</a>
+            <div class="cement-hero-actions wow fadeInUp" data-wow-delay="0.4s">
+                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20want%20a%20wholesale%20price%20quote%20for%20Steel%20and%20Cement." class="cement-cta-primary" target="_blank">
+                    <i class="fa fa-whatsapp"></i> Instant Wholesale Quote
+                </a>
+                <a href="#services" class="cement-cta-glass">
+                    <i class="fa fa-cubes"></i> View Materials
+                </a>
             </div>
         </div>
     </div>
@@ -290,6 +308,51 @@
         </div>
     </section>
     <!-- ##### Welcome Area End ##### -->
+
+    <!-- Trust Highlights Strip -->
+    <div class="container">
+        <div class="cement-trust-strip">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="cement-trust-item">
+                        <div class="cement-trust-icon"><i class="fa fa-shield"></i></div>
+                        <div>
+                            <h5>Fe-550D Billet TMT</h5>
+                            <p>High ductility & earthquake resistant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="cement-trust-item">
+                        <div class="cement-trust-icon"><i class="fa fa-check-circle"></i></div>
+                        <div>
+                            <h5>53-Grade OPC / PPC</h5>
+                            <p>Ultratech, Dalmia & JSW Cement</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="cement-trust-item">
+                        <div class="cement-trust-icon"><i class="fa fa-balance-scale"></i></div>
+                        <div>
+                            <h5>Exact Weighbridge Billing</h5>
+                            <p>100% genuine weight & mill test reports</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="cement-trust-item">
+                        <div class="cement-trust-icon"><i class="fa fa-truck"></i></div>
+                        <div>
+                            <h5>Heavy Lorry Logistics</h5>
+                            <p>Prompt direct-to-site crane unloading</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="clearfix"></div>
 
@@ -740,6 +803,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+    <script src="../../js/preloader.js"></script>
 </body>
 
 

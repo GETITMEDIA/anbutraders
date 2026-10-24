@@ -5,13 +5,7 @@
 <!-- Mirrored from iideainformatics.it/html/devgalaxy/industrify/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Sep 2025 06:33:51 GMT -->
 <head>
     <!-- Session check to avoid repeated spinner on every page navigation -->
-    <script>
-        try {
-            if (sessionStorage.getItem('anbu_site_loaded')) {
-                document.documentElement.classList.add('already-visited');
-            }
-        } catch (e) {}
-    </script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">    
@@ -48,80 +42,11 @@
     <link href="assets/css/responsive.css" rel="stylesheet">
     <link href="assets/css/a-steel-2026.css" rel="stylesheet">
     
-<style>@media (max-width: 768px) {
 
-    .single-slide-item {
-        position: relative;
-        text-align: center;
-    }
-
-    .image-layer {
-        background-size: cover !important;
-        background-position: center !important;
-        height: 100px; /* Adjust if needed */
-    }
-
-    .hero-area-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        padding: 0 10px;
-    }
-
-    .section-title h1 {
-        font-size: 22px !important;
-        line-height: 28px;
-    }
-
-    .section-title h6 {
-        font-size: 14px;
-    }
-}/* Default image for desktop */
-.image-layer {
-    background-image: url("assets/img/slider/slidersheet.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Change image for mobile */
-@media (max-width: 768px) {
-    .image-layer {
-        height: 250px !important;   /* change height here */
-        background-size: cover;
-        background-position: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .hero-area-content {
-        position: absolute;
-        top: 55%;            /* move text vertically */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        text-align: center;
-        z-index: 5;
-    }
-
-    .single-slide-item {
-        position: relative;
-    }
-
-    .image-layer {
-        height: 280px !important; /* adjust image height */
-        position: relative;
-    }
-}
-
-
-</style>
     <!-- jquery -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     
+    <link href="../css/preloader.css" rel="stylesheet">
 </head>
 
 <body>
@@ -131,7 +56,29 @@
     <div class="mouseCursor cursor-inner"><span>Drag</span></div>
 
     <!-- Pre-Loader -->
-    <div id="loader"></div>
+        <!-- ==============================================
+         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Traders Sheets and Pipes">
+        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
+        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
+            <video id="anbu-preloader-video" 
+                   class="anbu-preloader-video" 
+                   playsinline 
+                   muted 
+                   autoplay 
+                   preload="auto">
+                <source src="../logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
+            <img id="anbu-flying-logo" class="anbu-flying-logo" src="../img/ANUBU STEEL.png" alt="Anbu Traders Logo">
+            <img id="anbu-flying-logo-target" class="anbu-flying-logo anbu-flying-logo-target" src="assets/img/logos11.png" alt="Anbu Traders Sheets and Pipe Logo" style="display: none;">
+        </div>
+    </div>
+    <!-- ==============================================
+         ANBU TRADERS — PRELOADER END
+         ============================================== -->
 
 <!-- Header Top Area -->
 
@@ -163,583 +110,442 @@
     <!-- Header Area -->
 
     <header class="header-area">
-        <div class="sticky-area">
-            <div class="navigation">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="logo">
-                                <a class="navbar-brand" href="index.html"><img src="assets/img/logos11.png" alt="" style="width: 120px;"></a>
-                            </div>
+        <div class="navigation">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <div class="logo">
+                            <a class="navbar-brand" href="index.html">
+                                <img id="anbu-navbar-logo" src="assets/img/logos11.png" alt="Anbu Traders Sheets and Pipe Logo">
+                            </a>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="main-menu">
-                                <nav class="navbar navbar-expand-lg">
-                                    <button class="navbar-toggler" style="color: #dc231b;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-toggler-icon"></span>
-                                        <span class="navbar-toggler-icon"></span>
-                                        <span class="navbar-toggler-icon"></span>
-                                    </button>
-    
-                                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                                        <ul class="navbar-nav m-auto">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" href="index.html"  >HOME
-                                                    <span class="sub-nav-toggler"> </span>
-                                                </a>
-                                            
-                                            </li>
-        
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#about"  >ABOUT 
-                                                    <span class="sub-nav-toggler"> </span>
-                                                </a>
-                                           
-                                            </li>
-
-                                            <li class="nav-item smooth-menu">
-                                                <a class="nav-link" href="#services"  >SERVICES</a>
-                                            </li>
-
-                                     
-                                                                                                                                    
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="gallery.html"  > PROJECTS
-                                                    <span class="sub-nav-toggler"> </span>
-                                                </a>
-                                               
-                                            </li>
-                                            
-                                            <li class="nav-item smooth-menu">
-                                                <a class="nav-link" href="contact.html"  >CONTACT</a>
-                                            </li>
-                                            <li class="nav-item d-flex align-items-center">
-                                                <a class="main-portal-pill" href="../index.html"><i class="las la-arrow-left"></i> Main Site</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 text-right">
-                            <div class="header-right-content">                                    
-                                <!-- <div class="header-icon">
-                                    <i class="las la-shopping-bag"></i>
-                                </div> -->
-                            
-                                <div class="header-icon search-trigger">                                        
-                                    <i class="las la-search"></i>                                        
-                                </div>
-                            
-                                <div class="header-icon menu-trigger">
-                                    <i class="las la-bars"></i>
-                                </div>                                
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-4 d-none d-lg-block text-center">
+                        <nav class="navbar navbar-expand-lg justify-content-center">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#services">Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#why-us">Why Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="gallery.html">Projects</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-md-8 col-6 text-end d-flex align-items-center justify-content-end">
+                        <a class="main-portal-pill" href="../index.html"><i class="las la-arrow-left"></i> Main Site</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Search Dropdown Area -->
-
-    <div class="search-popup">
-        <span class="search-back-drop"></span>
-
-        <div class="search-inner">
-            <div class="container">
-                <div class="upper-text">
-                    <div class="text">Search for anything.</div>
-                    <button class="close-search"><span class="la la-times"></span></button>
-                </div>
-
-                <form method="post" action="https://iideainformatics.it/html/devgalaxy/industrify/index.html">
-                    <div class="form-group">
-                        <input type="search" name="search-field" value="" placeholder="Search..." required="">
-                        <button type="submit"><i class="la la-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <!-- Hero Area -->
-<style>/* Default desktop look */
-.single-slide-item {
-    position: relative;
-    overflow: hidden;
-}
-
-.image-layer {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.hero-area-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-}
-
-
-/* ----------------------------
-    MOBILE FIX (100% WORKING)
------------------------------ */
-@media (max-width: 768px) {
-
-    .image-layer {
-        height: 320px !important;     /* change height if needed */
-        background-position: center !important;
-        background-size: cover !important;
-    }
-
-    .hero-area-content {
-        top: 55%;                    /* move text slightly lower */
-        transform: translate(-50%, -50%);
-        width: 90%;                  /* better fitting */
-        text-align: center;
-    }
-
-    .section-title h1 {
-        font-size: 22px !important;
-        line-height: 28px !important;
-    }
-.homepage-slides .single-slide-item{height: 400px;}
-    .section-title h6 {
-        font-size: 14px !important;
-    }
-}
-</style>
-    <div id="home-1" class="homepage-slides owl-carousel">
-        <div class="single-slide-item">
-            <div class="image-layer" style="background-image: url(assets/img/slider/slidersheet.png);">
-                <div class="overlay"></div>
-            </div>
-            <div class="hero-area-content">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".2s">
-                            <div class="section-title">
-                                <h6>We provide best satisfied work</h6>
-                                <h1>Top Quality Roof Sheets & MS Pipes – At the Best Prices!</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="hero-area-section">
+        <div class="image-layer" style="background-image: url(assets/img/slider/slidersheet.png);">
+            <div class="overlay"></div>
         </div>
-   
-    </div>
-
-    <!-- Promo Section -->
-
-    <div class="promo-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-12">
-                <div class="single-promo-item mb-50">
-                    <div class="promo-icon">
-                        <i class="flaticon-factory"></i>
-                    </div>
-                    <h5>Industrial Solution</h5>
-                    <p>Reliable industrial solutions for roofing, piping, and structural steel needs.</p>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-12">
-                <div class="single-promo-item mb-50 spro">
-                    <div class="promo-icon">
-                        <i class="flaticon-cogwheel"></i>
-                    </div>
-                    <h5>Eco Development</h5>
-                    <p>Promoting sustainable growth through eco-friendly development solutions.</p>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-12">
-                <div class="single-promo-item mb-50">
-                    <div class="promo-icon">
-                        <i class="flaticon-maintenance"></i>
-                    </div>
-                    <h5>Modern Technology </h5>
-                    <p>Empowering progress through cutting-edge modern technology.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <!-- About Section-->
-
- 	<div class="about-area section-padding" id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInRight" data-wow-delay=".6s">
-                    <div class="about-img">
-                        <img src="assets/img/service/roofsheethome.jpg" alt="">                        
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay=".2s">
-                    <div class="info-content-area">
+        <div class="hero-area-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
                         <div class="section-title">
-                            <h6>Welcome to Anbu </h6>
-                            <h2 style="font-size:29px;">Quality roof sheets and MS pipes.</h2>
+                            <h6><i class="las la-award"></i> Premier Industrial Materials</h6>
+                            <h1>High-Grade Roofing Sheets & Structural MS Pipes</h1>
+                            <p class="hero-subtext">Direct authorized distributor of premium color-coated roofing sheets, galvanized GI pipes, rectangular tubes, and structural steel profiles engineered for enduring strength.</p>
+                            <div class="hero-cta-group">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20want%20a%20price%20quote%20for%20Roofing%20Sheets%20and%20Pipes." class="btn-primary-orange" target="_blank">
+                                    <i class="lab la-whatsapp"></i> Get Instant Quote
+                                </a>
+                                <a href="#services" class="btn-glass-light">
+                                    <i class="las la-boxes"></i> Explore Products
+                                </a>
+                            </div>
                         </div>
-                        <p class="highlight">Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients. “Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.” We at Anbu Traders believe in building relationships and the testimony to this is that our customers continue to remain with us. We are one of the best dealers of steel and cement suppliers in Pondicherry.
-
-</p>
-                        <br>
-                        <p>We have a dedicated team working round the clock tirelessly to deliver materials on time. With our comprehensive facilities, we meet our customers’ demands with zero-hour precision. We offer wholesale supplies of steel and cement and are committed to extending our services further. Our infrastructure is equipped to handle large-scale wholesale orders and meet all our clients' needs.
-                            <br>
-
-
-                        </p>
-                 
-
                     </div>
-                    
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="container">
+        <div class="trust-strip">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon-box"><i class="las la-certificate"></i></div>
+                        <div>
+                            <h5>Certified Gauge & Quality</h5>
+                            <p>100% genuine standard thickness & mill tested</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon-box"><i class="las la-ruler-combined"></i></div>
+                        <div>
+                            <h5>Custom Length Cutting</h5>
+                            <p>Precision cut to exact blueprint requirements</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="trust-item">
+                        <div class="trust-icon-box"><i class="las la-shipping-fast"></i></div>
+                        <div>
+                            <h5>Direct Site Delivery</h5>
+                            <p>Prompt crane & transport logistics across regions</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-   
-  
 
-  <!-- Services Section -->
-
-    <div class="services-area service-two gray-bg section-padding pb-50" id="services">
+    <!-- About Section -->
+    <section class="about-luxury-section" id="about">
         <div class="container">
-            <div class="row">
-                <div class="offset-lg-2 col-lg-8 text-center">
-                    <div class="section-title">
-                        <h6>What We Offer</h6>
-                        <h2> Global <b>Industry Services</b></h2>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-img-showcase">
+                        <img src="assets/img/slider/pipiandsheet.jpg" alt="Anbu Traders Roofing Sheets and Pipes Yard">
+                        <div class="about-floating-badge">
+                            <div class="badge-icon"><i class="las la-award"></i></div>
+                            <div class="badge-text">
+                                <h4>12+ Years</h4>
+                                <p>Industrial Trust & Leadership</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="service-slider-two owl-carousel">
-                        
-                        <div class="single-service-area mb-50">
-                            <div class="service-img">
-                                <img src="assets/img/service/ms pipsss.jpg" alt="">
-                                <div class="service-icon">
-                                    <span><i class="flaticon-oil-industry"></i></span>
-                                </div>
-                            </div>
-                            <div class="service-content white-bg">
-                                <h5>Ms Pipes And Tubes</h5>
-                                <p>High-strength MS pipes and tubes designed for structural and industrial use.
-Reliable, durable, and available in various sizes to meet your project needs.</p>
-                                <hr>
-                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                <div class="col-lg-6 col-md-12">
+                    <span class="section-tag"><i class="las la-shield-alt"></i> Established 2014</span>
+                    <h2 class="section-heading-main">Architectural Roofing Sheets & Precision Structural Steel</h2>
+                    <p class="about-intro-p">Anbu Traders is Pondicherry and Tamil Nadu’s trusted authorized stockist of premium color-coated roofing sheets, galvanized GI pipes, hollow sections, and heavy structural tubes. We bridge the gap between steel manufacturers and job sites with certified gauges and zero-delay logistics.</p>
+                    
+                    <div class="about-feature-grid">
+                        <div class="about-feature-item">
+                            <div class="icon-circle"><i class="las la-check-circle"></i></div>
+                            <div>
+                                <h6>Certified Standard Gauges</h6>
+                                <p>100% verified sheet thickness and pipe schedules</p>
                             </div>
                         </div>
-
-                        <div class="single-service-area mb-50">
-                            <div class="service-img">
-                                <img src="assets/img/service/gi pipe.avif" alt="">
-                                <div class="service-icon">
-                                    <span><i class="flaticon-lab-tool"></i></span>
-                                </div>
-                            </div>
-                            <div class="service-content white-bg">
-                                <h5>Gi Pipes</h5>
-                                <p>Corrosion-resistant GI pipes ideal for plumbing, water supply, and structural applications.
-Strong, durable, and built to withstand harsh environmental conditions.</p>
-                                <hr>
-                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                        <div class="about-feature-item">
+                            <div class="icon-circle"><i class="las la-cut"></i></div>
+                            <div>
+                                <h6>Custom CNC Lengths</h6>
+                                <p>Precision cut-to-length to eliminate on-site scrap</p>
                             </div>
                         </div>
-
-                        <div class="single-service-area mb-50">
-                            <div class="service-img">
-                                <img src="assets/img/service/ms-ps.avif" alt="">
-                                <div class="service-icon">
-                                    <span><i class="flaticon-eco-factory"></i></span>
-                                </div>
-                            </div>
-                            <div class="service-content white-bg">
-                                <h5>Puf panel Sheet</h5>
-                                <p>Lightweight and insulated Puff Sheets perfect for roofing and cladding applications.
-Provides excellent thermal insulation, durability, and weather resistance.</p>
-                                <hr>
-                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                        <div class="about-feature-item">
+                            <div class="icon-circle"><i class="las la-tags"></i></div>
+                            <div>
+                                <h6>Direct Mill Pricing</h6>
+                                <p>Transparent wholesale prices with zero middlemen</p>
                             </div>
                         </div>
-
-                        <div class="single-service-area mb-50">
-                            <div class="service-img">
-                                <img src="assets/img/service/jsw-pragati-colour-coating.avif" alt="">
-                                <div class="service-icon">
-                                    <span><i class="flaticon-production"></i></span>
-                                </div>
-                            </div>
-                            <div class="service-content white-bg">
-                                <h5>Jsw Roofing Sheet</h5>
-                                <p>JSW Roofing Sheets offer superior strength and corrosion resistance for long-lasting protection.
-Ideal for residential, commercial, and industrial roofing needs with excellent durability.</p>
-                                <hr>
-                                <a href="single-service.html" class="read-more"><i class="las la-arrow-right"></i></a>
+                        <div class="about-feature-item">
+                            <div class="icon-circle"><i class="las la-truck-moving"></i></div>
+                            <div>
+                                <h6>Crane Logistics</h6>
+                                <p>Dedicated transport fleet for safe, same-day delivery</p>
                             </div>
                         </div>
+                    </div>
 
-
-                        
+                    <div>
+                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20want%20to%20consult%20about%20sheets%20and%20pipes." class="btn-primary-orange me-3" target="_blank">
+                            <i class="lab la-whatsapp"></i> Chat With Specialist
+                        </a>
+                        <a href="contact.html" class="btn-glass-light" style="color: var(--primary-navy) !important; border-color: rgba(6,43,91,0.2) !important;">
+                            <i class="las la-envelope"></i> Contact Us
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Services / Products Section -->
+    <section class="services-area gray-bg section-padding" id="services" style="background: #F8FAFC; padding: 80px 0;">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-tag"><i class="las la-boxes"></i> Inventory & Catalog</span>
+                    <h2 class="section-heading-main">Engineered Roofing & Piping Solutions</h2>
+                    <p class="text-muted" style="font-size: 16px;">Heavy-gauge piping, insulated roofing panels, and corrugated color sheets engineered for resilience.</p>
+                </div>
+            </div>
 
-   
-    
-   
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-service-area">
+                        <div class="service-img">
+                            <img src="assets/img/service/ms pipsss.jpg" alt="MS Pipes & Tubes">
+                        </div>
+                        <div class="service-content">
+                            <h5>MS Pipes & Tubes</h5>
+                            <p>High-strength Mild Steel circular, square, and rectangular hollow sections for structural framing.</p>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20am%20inquiring%20about%20MS%20Pipes%20and%20Tubes." class="btn-service-inquire" target="_blank">
+                                <i class="lab la-whatsapp"></i> Inquire Price
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-service-area">
+                        <div class="service-img">
+                            <img src="assets/img/service/gi pipe.avif" alt="GI Pipes">
+                        </div>
+                        <div class="service-content">
+                            <h5>GI Pipes & Scaffolding</h5>
+                            <p>Hot-dip and pre-galvanized corrosion-resistant pipes built for plumbing, irrigation, and scaffolding.</p>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20am%20inquiring%20about%20GI%20Pipes." class="btn-service-inquire" target="_blank">
+                                <i class="lab la-whatsapp"></i> Inquire Price
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-service-area">
+                        <div class="service-img">
+                            <img src="assets/img/service/ms-ps.avif" alt="PUF Insulated Panels">
+                        </div>
+                        <div class="service-content">
+                            <h5>PUF Insulated Panels</h5>
+                            <p>Lightweight sandwich panels providing superior thermal and acoustic insulation for factory sheds.</p>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20am%20inquiring%20about%20PUF%20Panels." class="btn-service-inquire" target="_blank">
+                                <i class="lab la-whatsapp"></i> Inquire Price
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-service-area">
+                        <div class="service-img">
+                            <img src="assets/img/service/jsw-pragati-colour-coating.avif" alt="JSW Roofing Sheets">
+                        </div>
+                        <div class="service-content">
+                            <h5>JSW & Color Sheets</h5>
+                            <p>Genuine JSW Pragati and Colouron+ profile sheets offering weatherproofing and long-lasting beauty.</p>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20am%20inquiring%20about%20JSW%20Roofing%20Sheets." class="btn-service-inquire" target="_blank">
+                                <i class="lab la-whatsapp"></i> Inquire Price
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Counter Section -->
-<div class="counter-area">
     <div class="container">
-        <div class="row">
-            <!-- Counter Box -->
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="counter-stat-card">
-                    <p class="stat-number">10,000</p>
-                    <h6 class="stat-label">Project</h6>
-                </div>
-            </div>
-
-            <!-- Counter Box -->
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="counter-stat-card">
-                    <p class="stat-number">3,000</p>
-                    <h6 class="stat-label">Products</h6>
-                </div>
-            </div>
-
-            <!-- Counter Box -->
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="counter-stat-card">
-                    <p class="stat-number">1 Lakh</p>
-                    <h6 class="stat-label">Customers</h6>
-                </div>
-            </div>
-
-            <!-- Counter Box -->
-            <div class="col-lg-3 col-md-6 col-12">
-                <div class="counter-stat-card">
-                    <p class="stat-number">11</p>
-                    <h6 class="stat-label">Experience</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="about-3" class="about-area section-padding">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInDown" data-wow-delay=".2s">
-                <div class="info-content-area">
-                    <div class="section-title">
-                        <h6>Let's to Know Us</h6>
-                        <h2>We provides the best <b>service</b> for Industrial</h2>
-                    </div>
-                    <p>We are the leaders in the construction industries and factories. We’re world wide reknown for our dignity. We provide high quality service all time.</p>
-                </div>
-
-                <!-- Choose Us Section -->
-                <section class="choose-us-section">
-                    <div class="row g-4">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="choose-certify-card">
-                                <div class="icon">
-                                    <i class="la la-clipboard-check"></i>
-                                </div>
-                                <h5>Certified Company</h5>
-                                <p>We are a certified company, ensuring top-notch quality and professionalism in every project we deliver.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="choose-certify-card">
-                                <div class="icon">
-                                    <i class="la la-medal"></i>
-                                </div>
-                                <h5>Experienced Employees</h5>
-                                <p>Our skilled and experienced employees ensure flawless execution and satisfaction</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-
-                    <div class="row">
-                        <div class="col-lg-11">
-                            <div class="progress-bar-area">
-                                <div class="single-bar-item">
-                                    <h4>Industrial</h4>
-                                    <div id="bar1" class="barfiller">
-                                        <span class="tip" style="left: 438.7px; transition: left 5s ease-in-out;">90%</span>
-                                        <span class="fill" data-percentage="90" style="background: rgb(255, 216, 87); width: 470.7px; transition: width 5s ease-in-out;"></span>
-                                    </div>
-                                </div>
-
-                                <div class="single-bar-item">
-                                    <h4>Construction</h4>
-                                    <div id="bar2" class="barfiller">
-                                        <span class="tip" style="left: 334.1px; transition: left 6s ease-in-out;">70%</span>
-                                        <span class="fill" data-percentage="70" style="background: rgb(255, 216, 87); width: 366.1px; transition: width 6s ease-in-out;"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="counter-area">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="counter-stat-card">
+                        <div class="counter-stat-icon"><i class="las la-building"></i></div>
+                        <p class="stat-number">10,000+</p>
+                        <h6 class="stat-label">Projects Supplied</h6>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                    <div class="about-bg text-end">
-                        <img src="assets/img/slider/pipiandsheet.jpg" alt="">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="counter-stat-card">
+                        <div class="counter-stat-icon"><i class="las la-warehouse"></i></div>
+                        <p class="stat-number">3,000+</p>
+                        <h6 class="stat-label">Tons In Stock</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="counter-stat-card">
+                        <div class="counter-stat-icon"><i class="las la-user-check"></i></div>
+                        <p class="stat-number">1 Lakh+</p>
+                        <h6 class="stat-label">Satisfied Clients</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="counter-stat-card">
+                        <div class="counter-stat-icon"><i class="las la-award"></i></div>
+                        <p class="stat-number">12+</p>
+                        <h6 class="stat-label">Years of Trust</h6>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="testimonial-area-2 section-padding">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="testimonial-carousel-two owl-carousel owl-loaded owl-drag">
-
-                    <div class="single-testimonial-wrap">
-                        <div class="testimonial-content">
-                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
-                            <p>Excellent quality sheets and pipes. Durable and worth every penny. Anbu Sheets and Pipes is my go-to supplier!</p>
-                        </div>
-                 
-                        <h4>Ravi Kumar <span>Contractor, Chennai</span></h4>
-                    </div>
-
-                    <div class="single-testimonial-wrap">
-                        <div class="testimonial-content">
-                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
-                            <p>Prompt delivery, great service, and unmatched quality. Highly recommend Anbu for all sheet and pipe needs!</p>
-                        </div>
-                     
-                        <h4>Sneha Raj <span>Architect</span></h4>
-                    </div>
-
-                    <div class="single-testimonial-wrap">
-                        <div class="testimonial-content">
-                            <div class="testimonial-icon-two"><i class="las la-quote-left"></i></div>
-                            <p>We’ve been sourcing from Anbu Sheets and Pipes for 3 years now. No complaints — just consistent quality and service.</p>
-                        </div>
-                      
-                        <h4>Manoj Pillai <span>Builder, Coimbatore</span></h4>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <!-- Blog Section  -->
-   
-
-    <!-- Footer Area -->
-<footer class="asteel-unified-footer">
-    <div class="container">
-        <div class="row">
-            <!-- Our Office -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Our Office</h5>
-                <p class="mb-2">
-                    <i class="las la-map-marker"></i>
-                    Sheet / Pipe<br>
-                    No. 76/3, Pondy - Mailam Main Road,<br>
-                    Sedarapet, Tamil Nadu 605111
-                </p>
-                <p class="mb-2">
-                    <i class="las la-phone"></i> 96263 25204 / 96555 51468
-                </p>
-                <p class="mb-2">
-                    <i class="las la-phone"></i> 0413-2980014
-                </p>
-                <p class="mb-3">
-                    <i class="las la-envelope-open"></i> anbutraders1468@gmail.com
-                </p>
-                <div class="d-flex align-items-center">
-                    <a class="asteel-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="lab la-instagram"></i></a>
-                    <a class="asteel-social-btn" href="#"><i class="lab la-facebook-f"></i></a>
-                    <a class="asteel-social-btn" href="#"><i class="lab la-youtube"></i></a>
-                    <a class="asteel-social-btn" href="#"><i class="lab la-linkedin-in"></i></a>
-                </div>
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Quick Links</h5>
-                <a class="footer-link" href="about.html">About Us</a>
-                <a class="footer-link" href="contact.html">Contact Us</a>
-                <a class="footer-link" href="service.html">Our Services</a>
-                <a class="footer-link" href="steel.html">Steel</a>
-                <a class="footer-link" href="sheets.html">Sheets and Pipes</a>
-                <a class="footer-link" href="paints.html">Paints</a>
-            </div>
-
-            <!-- Business Hours -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Business Hours</h5>
-                <p class="mb-1 text-light"><strong>Monday - Saturday</strong></p>
-                <p class="mb-3 text-white">08:00 am - 08:00 pm</p>
-                <p class="mb-1 text-light"><strong>Sunday</strong></p>
-                <p class="text-white">08:00 am - 02:30 pm</p>
-            </div>
-
-            <!-- Google Review -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5>Leave a Google Review</h5>
-                <p class="mb-3">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
-                <button type="button" class="asteel-review-btn" onclick="redirectToGoogleReview()">Leave a Review</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Standardized single-row copyright -->
-    <div class="asteel-copyright-bar">
+    <!-- Why Choose Us Section -->
+    <section class="why-us-luxury-section" id="why-us">
         <div class="container">
-            Copyright © <span class="current-year">2026</span> <a href="index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
-        </div>
-    </div>
-</footer>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 col-md-12">
+                    <span class="section-tag"><i class="las la-thumbs-up"></i> Why Choose Us</span>
+                    <h2 class="section-heading-main">Engineered For Heavy Industry, Trusted By Top Builders</h2>
+                    <p class="text-muted mb-4" style="font-size: 15.5px;">We provide uncompromising industrial materials backed by precision cutting, verified mill certificates, and dedicated logistical support.</p>
 
-<!-- Off-canvas Area-->
+                    <div class="why-feature-card">
+                        <div class="why-feature-icon"><i class="las la-balance-scale"></i></div>
+                        <div>
+                            <h5>Computerized Weighbridge Assurance</h5>
+                            <p>Complete transparency with certified digital weigh slips for every single pipe batch and sheet bundle dispatched.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-feature-card">
+                        <div class="why-feature-icon"><i class="las la-shield-alt"></i></div>
+                        <div>
+                            <h5>Mill Test & Quality Certification</h5>
+                            <p>Guaranteed yield strength, zinc coating GSM, and strict compliance with national BIS and ASTM industrial standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-feature-card">
+                        <div class="why-feature-icon"><i class="las la-hand-holding-usd"></i></div>
+                        <div>
+                            <h5>Direct Mill Wholesale Pricing</h5>
+                            <p>Eliminate intermediary margins. Get the most competitive commercial pricing directly from primary manufacturers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="why-img-frame">
+                        <img src="assets/img/service/roofsheethome.jpg" alt="Commercial Industrial Roofing">
+                        <div class="about-floating-badge" style="bottom: 24px; left: 24px;">
+                            <div class="badge-icon"><i class="las la-check-double"></i></div>
+                            <div class="badge-text">
+                                <h4>100% Genuine</h4>
+                                <p>Standard Mill Guaranteed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-area-2">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="section-tag" style="background: rgba(243,106,33,0.18); color: #FFA56E;"><i class="las la-comment-alt"></i> Client Reviews</span>
+                    <h2 class="section-heading-main" style="color: #FFFFFF !important;">What Industry Leaders Say About Us</h2>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-testimonial-wrap">
+                        <div class="star-rating">
+                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                        </div>
+                        <p>“Unmatched quality in color roofing sheets and MS tubes. Every piece arrives with precision cut lengths and zero transit damage.”</p>
+                        <h4>Ravi Kumar <span>Infrastructure Contractor, Chennai</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-testimonial-wrap">
+                        <div class="star-rating">
+                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                        </div>
+                        <p>“We’ve been sourcing from Anbu Traders for 4+ years. Their weighbridge billing and rapid crane dispatch save our project timelines.”</p>
+                        <h4>Manoj Pillai <span>Commercial Builder, Pondicherry</span></h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="single-testimonial-wrap">
+                        <div class="star-rating">
+                            <i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i><i class="las la-star"></i>
+                        </div>
+                        <p>“Genuine JSW Pragati sheets with manufacturer warranty. Best wholesale rates and very courteous technical guidance.”</p>
+                        <h4>Sneha Raj <span>Architect & Structural Planner</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Footer -->
+    <footer class="asteel-unified-footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Our Office -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Our Office</h5>
+                    <p class="mb-2">
+                        <i class="las la-map-marker text-warning me-2"></i>
+                        <strong>Anbu Traders (Sheets & Pipes)</strong><br>
+                        No. 76/3, Pondy - Mailam Main Road,<br>
+                        Sedarapet, Tamil Nadu 605111
+                    </p>
+                    <p class="mb-2">
+                        <i class="las la-phone text-warning me-2"></i>
+                        <a href="tel:+919626325204" class="text-white">96263 25204</a> / 
+                        <a href="tel:+919655551468" class="text-white">96555 51468</a>
+                    </p>
+                    <p class="mb-3">
+                        <i class="las la-envelope text-warning me-2"></i>
+                        <a href="mailto:anbutraders1468@gmail.com" class="text-white">anbutraders1468@gmail.com</a>
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <a class="asteel-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="lab la-instagram"></i></a>
+                        <a class="asteel-social-btn" href="https://wa.me/9626325204" target="_blank" rel="noopener noreferrer"><i class="lab la-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Quick Links</h5>
+                    <a class="footer-link" href="index.html"><i class="las la-angle-right me-1"></i> Home</a>
+                    <a class="footer-link" href="#about"><i class="las la-angle-right me-1"></i> About Us</a>
+                    <a class="footer-link" href="#services"><i class="las la-angle-right me-1"></i> Products & Inventory</a>
+                    <a class="footer-link" href="#why-us"><i class="las la-angle-right me-1"></i> Why Choose Us</a>
+                    <a class="footer-link" href="gallery.html"><i class="las la-angle-right me-1"></i> Project Gallery</a>
+                    <a class="footer-link" href="contact.html"><i class="las la-angle-right me-1"></i> Contact Us</a>
+                </div>
+
+                <!-- Category Portals -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Our Group Portals</h5>
+                    <a class="footer-link" href="../index.html"><i class="las la-external-link-alt me-1"></i> Anbu Traders Main Portal</a>
+                    <a class="footer-link" href="../cement/anbucement/index-demo-3.html"><i class="las la-external-link-alt me-1"></i> Steel & Cement Division</a>
+                    <a class="footer-link" href="../anbu-paint/index.html"><i class="las la-external-link-alt me-1"></i> Anbu Paints Division</a>
+                    <div class="mt-3">
+                        <p class="mb-1 text-light"><i class="las la-clock text-warning me-1"></i> <strong>Working Hours:</strong></p>
+                        <p class="mb-1 text-white" style="font-size: 13px;">Mon - Sat: 08:00 AM - 08:00 PM</p>
+                        <p class="text-white" style="font-size: 13px;">Sun: 08:00 AM - 02:30 PM</p>
+                    </div>
+                </div>
+
+                <!-- Google Review -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h5>Google Verified Reviews</h5>
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <span class="text-warning fs-5">★★★★★</span>
+                        <span class="text-white fw-bold">4.9 / 5.0 Rating</span>
+                    </div>
+                    <p class="mb-3" style="font-size: 13px;">Help fellow builders and contractors discover genuine materials with verified reviews.</p>
+                    <button type="button" class="asteel-review-btn" onclick="redirectToGoogleReview()">
+                        <i class="lab la-google"></i> Leave a Google Review
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="asteel-copyright-bar">
+            <div class="container">
+                Copyright © <span class="current-year">2026</span> <a href="index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Off-canvas Area-->
 
  	<div class="extra-info">
         <div class="close-icon menu-close">
@@ -869,6 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+    <script src="../js/preloader.js"></script>
 </body>
 
 

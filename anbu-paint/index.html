@@ -6,13 +6,7 @@
 <!-- Mirrored from kamleshyadav.com/templatemonster-html/penter/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Aug 2025 05:08:43 GMT -->
 <head>
     <!-- Session check to avoid repeated spinner on every page navigation -->
-    <script>
-        try {
-            if (sessionStorage.getItem('anbu_site_loaded')) {
-                document.documentElement.classList.add('already-visited');
-            }
-        } catch (e) {}
-    </script>
+    
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Anbu paints</title>
 
@@ -288,6 +282,7 @@
 }
 
 </style>
+    <link href="../css/preloader.css" rel="stylesheet">
 </head>
 
 
@@ -295,11 +290,29 @@
 
 
 <body>
-	<div class="temp_loader_wrapper">
-    <div class="temp_loader">
-        <img src="img/12345.gif" alt="painter-pre-loader">
+	    <!-- ==============================================
+         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Paints">
+        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
+        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
+            <video id="anbu-preloader-video" 
+                   class="anbu-preloader-video" 
+                   playsinline 
+                   muted 
+                   autoplay 
+                   preload="auto">
+                <source src="../logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
+            <img id="anbu-flying-logo" class="anbu-flying-logo" src="../img/ANUBU STEEL.png" alt="Anbu Traders Logo">
+            <img id="anbu-flying-logo-target" class="anbu-flying-logo anbu-flying-logo-target" src="img/paint logo.png" alt="Anbu Paints Logo" style="display: none;">
+        </div>
     </div>
-</div>
+    <!-- ==============================================
+         ANBU TRADERS — PRELOADER END
+         ============================================== -->
 <!-- Section1 Start -->
 <!-- ================= HEADER SECTION WITH HAMBURGER MENU ================= -->
 
@@ -487,7 +500,7 @@
         <!-- Logo -->
         <div class="header-logo">
             <a href="index.html">
-                <img src="img/paint logo.png" alt="Paint Logo">
+                <img id="anbu-navbar-logo" src="img/paint logo.png" alt="Paint Logo">
             </a>
         </div>
 
@@ -566,10 +579,17 @@
 					<div class="col-md-12">
 						<div class="p_banner_right">
 							<div class="animated fadeInUp">
-								<h1>Painting <span>is silent poetry,</span> and poetry is painting.</h1>
-								<p style="color: #ffffff;">Sometimes a game comes at just the right moment in your life. 'Flower' is beautiful,
-									serene, and a bit of sunshine in a gloomy world I remember. </p>
-								<a href="about.html" class="temp_btn">View more</a>
+								<div class="p_banner_badge"><i class="fa fa-paint-roller"></i> Authorized Paint Center</div>
+								<h1>Transform Every Wall with <span>Vibrant Luxury</span> & Protection.</h1>
+								<p>Official authorized distributor for Asian Paints, Berger Paints, JSW Paints & JK Wall Putty. Explore thousands of computerized designer shades, weather-shield exterior coatings, and silky interior emulsions.</p>
+								<div class="paint-hero-actions">
+									<a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20a%20colour%20catalogue%20and%20price%20quote." class="paint-cta-primary" target="_blank">
+										<i class="fa fa-whatsapp"></i> Instant Color Quote
+									</a>
+									<a href="about.html" class="paint-cta-glass">
+										<i class="fa fa-info-circle"></i> Explore Products
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -610,10 +630,10 @@
 						<div class="bottompadder20">
 							<img src="assets/images/a1.png" alt="Window Washing">
 						</div>
-						<h2 class="subheading subheading_1"><a href="#">Window Washing</a></h2>
+						<h2 class="subheading subheading_1"><a href="#">Interior Luxury Emulsions</a></h2>
 						<div>
 							<p class="paragraph paragraph_1">
-								At <strong>Anbu Paints</strong>, we take pride in making your windows gleam. Our window washing service uses eco-friendly, streak-free cleaning techniques to bring clear views and enhance your property’s curb appeal.
+								At <strong>Anbu Paints</strong>, we supply premium interior emulsions from Asian Paints & Berger featuring washable finishes, rich velvet sheens, and anti-bacterial formulations for healthy living spaces.
 							</p>
 						</div>
 					</div>
@@ -1047,6 +1067,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+    <script src="../js/preloader.js"></script>
 </body>
 
 <script>
