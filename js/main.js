@@ -1,30 +1,10 @@
 (function ($) {
     "use strict";
 
-    // Spinner: Show only on initial site entry (first page in session)
+    // Spinner
     var spinner = function () {
-        var alreadyVisited = false;
-        try {
-            alreadyVisited = sessionStorage.getItem('anbu_site_loaded');
-        } catch (e) {
-            alreadyVisited = false;
-        }
-
-        if (alreadyVisited) {
-            // Already visited in this session: remove spinner immediately
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show').css('display', 'none');
-            }
-        } else {
-            // First time landing on the site: show briefly, then record in session
-            setTimeout(function () {
-                if ($('#spinner').length > 0) {
-                    $('#spinner').removeClass('show');
-                }
-                try {
-                    sessionStorage.setItem('anbu_site_loaded', 'true');
-                } catch (e) {}
-            }, 600);
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show').css('display', 'none');
         }
     };
     spinner();

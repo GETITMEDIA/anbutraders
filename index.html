@@ -2,18 +2,6 @@
 <html lang="en">
 
 <head>
-        <!-- Session check to avoid repeated preloader on every page navigation, but allow on reload/entry -->
-    <script>
-        try {
-            var navEntries = performance.getEntriesByType('navigation');
-            var isReload = (navEntries && navEntries.length > 0 && navEntries[0].type === 'reload');
-            if (isReload) {
-                sessionStorage.removeItem('anbu_site_loaded');
-            } else if (sessionStorage.getItem('anbu_site_loaded')) {
-                document.documentElement.classList.add('already-visited');
-            }
-        } catch (e) {}
-    </script>
     <meta charset="utf-8">
     <title>Anbu Traders</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,39 +34,227 @@
 </head>
 
 <body>
-                        <!-- Heavy Industrial Steel Shutter Preloader Start -->
-    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true">
-        <!-- Left Industrial Steel Shutter Gate -->
-        <div class="anbu-shutter-gate anbu-shutter-left">
-            <div class="anbu-gate-edge-bar"></div>
+    <!-- ==============================================
+         ANBU TRADERS — PREMIUM FULL-SCREEN PRELOADER
+         Brand: Steel, Cement, Paints, Sheets & Pipes
+         Colors: Navy Blue #062B5B & Accent Orange #F36A21
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Traders">
+        <!-- Ambient Backdrop & Blueprint Grid -->
+        <div class="anbu-bg-layer">
+            <div class="anbu-bg-glow"></div>
+            <div class="anbu-blueprint-grid"></div>
         </div>
 
-        <!-- Right Industrial Steel Shutter Gate -->
-        <div class="anbu-shutter-gate anbu-shutter-right">
-            <div class="anbu-gate-edge-bar"></div>
-        </div>
+        <!-- Central Animation Stage -->
+        <div class="anbu-stage">
+            <!-- SVG Choreography Canvas: Steel Pipe, Roofing Sheet, Paint Stroke, Cement Blocks -->
+            <div class="anbu-canvas-wrap">
+                <svg class="anbu-canvas" viewBox="0 0 500 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Steel Pipe Metallic Linear Gradient -->
+                        <linearGradient id="pipeMetalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#7B8D9F"/>
+                            <stop offset="18%" stop-color="#E1ECF7"/>
+                            <stop offset="40%" stop-color="#FFFFFF"/>
+                            <stop offset="65%" stop-color="#A5B8CC"/>
+                            <stop offset="85%" stop-color="#556678"/>
+                            <stop offset="100%" stop-color="#333F4D"/>
+                        </linearGradient>
 
-        <!-- Full-Height Vertical Seam Laser Glow -->
-        <div class="anbu-seam-laser"></div>
+                        <linearGradient id="pipeCapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#F1F6FB"/>
+                            <stop offset="60%" stop-color="#889BB0"/>
+                            <stop offset="100%" stop-color="#3D4B59"/>
+                        </linearGradient>
 
-        <!-- Center Heavy Vault Badge -->
-        <div class="anbu-shutter-center">
-            <div class="anbu-vault-badge">
-                <img src="img/ANUBU STEEL.png" alt="Anbu Traders" class="anbu-vault-logo">
-                <h2 class="anbu-vault-title">ANBU <span>TRADERS</span></h2>
-                
-                <div class="anbu-vault-progress">
-                    <div class="anbu-vault-track">
-                        <div class="anbu-vault-fill"></div>
-                    </div>
-                    <div class="anbu-vault-percent">
-                        <span id="anbu-counter">0%</span>
-                    </div>
+                        <!-- Corrugated Sheet Gradient (Terracotta / Industrial Steel) -->
+                        <linearGradient id="sheetGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#9A3412"/>
+                            <stop offset="25%" stop-color="#EA580C"/>
+                            <stop offset="50%" stop-color="#FDBA74"/>
+                            <stop offset="75%" stop-color="#EA580C"/>
+                            <stop offset="100%" stop-color="#9A3412"/>
+                        </linearGradient>
+
+                        <!-- Radiant Orange Paint Stroke Gradient -->
+                        <linearGradient id="paintStrokeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#D84A05" stop-opacity="0.85"/>
+                            <stop offset="45%" stop-color="#F36A21" stop-opacity="0.95"/>
+                            <stop offset="100%" stop-color="#FFA066" stop-opacity="0.9"/>
+                        </linearGradient>
+
+                        <!-- Cement / Concrete Blocks Gradients -->
+                        <linearGradient id="cementTop" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#E2EBF4"/>
+                            <stop offset="100%" stop-color="#CDD9E5"/>
+                        </linearGradient>
+
+                        <linearGradient id="cementFront" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#C5CFDB"/>
+                            <stop offset="50%" stop-color="#9BAAB9"/>
+                            <stop offset="100%" stop-color="#707E8E"/>
+                        </linearGradient>
+
+                        <linearGradient id="cementSide" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#647180"/>
+                            <stop offset="100%" stop-color="#46515E"/>
+                        </linearGradient>
+
+                        <!-- Glow & Gleam Filters -->
+                        <filter id="orangeGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="4.5" result="blur"/>
+                            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                        </filter>
+
+                        <filter id="gleamFilter" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                        </filter>
+                    </defs>
+
+                    <!-- STEP 4: SMALL CEMENT / CONSTRUCTION BLOCKS ASSEMBLE -->
+                    <g class="anbu-cement-blocks-group">
+                        <!-- Left Cement Pillar -->
+                        <g class="anbu-block block-left">
+                            <polygon points="65,120 105,106 138,114 98,128" fill="url(#cementTop)"/>
+                            <polygon points="98,128 138,114 138,165 98,179" fill="url(#cementSide)"/>
+                            <polygon points="65,120 98,128 98,179 65,171" fill="url(#cementFront)"/>
+                            <polyline points="65,120 98,128 138,114" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+                        </g>
+
+                        <!-- Right Cement Pillar -->
+                        <g class="anbu-block block-right">
+                            <polygon points="362,114 395,106 435,120 402,128" fill="url(#cementTop)"/>
+                            <polygon points="362,114 402,128 402,179 362,165" fill="url(#cementFront)"/>
+                            <polygon points="402,128 435,120 435,171 402,179" fill="url(#cementSide)"/>
+                            <polyline points="362,114 402,128 435,120" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/>
+                        </g>
+
+                        <!-- Foundation Plinth Base -->
+                        <g class="anbu-block block-base">
+                            <polygon points="55,175 445,175 455,182 45,182" fill="url(#cementTop)"/>
+                            <polygon points="45,182 455,182 455,188 45,188" fill="url(#cementFront)"/>
+                        </g>
+
+                        <!-- Simple Building Outline Wireframe -->
+                        <path class="anbu-building-outline" 
+                              d="M 55,175 L 55,75 L 250,25 L 445,75 L 445,175 M 250,25 L 250,75 M 105,60 L 395,60" 
+                              stroke="#F36A21" 
+                              stroke-width="1.8" 
+                              stroke-linecap="round" 
+                              stroke-linejoin="round"
+                              opacity="0.95"
+                              filter="url(#orangeGlow)"/>
+                    </g>
+
+                    <!-- STEP 3: ORANGE PAINT STROKE SWEEPS ACROSS BENEATH -->
+                    <g class="anbu-paint-group">
+                        <path class="anbu-paint-sweep-path" 
+                              d="M 50,118 
+                                 C 118,85 185,42 265,38 
+                                 C 340,34 395,60 450,46 
+                                 C 425,68 360,82 290,85 
+                                 C 210,88 130,108 50,118 Z" 
+                              fill="url(#paintStrokeGrad)" 
+                              filter="url(#orangeGlow)"/>
+
+                        <path class="anbu-paint-accent-line"
+                              d="M 215,40 Q 270,34 325,40 Q 380,48 420,42"
+                              fill="none"
+                              stroke="#FFE4D1"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              opacity="0.85"/>
+                    </g>
+
+                    <!-- STEP 2: MINIMAL CORRUGATED ROOFING-SHEET LINE WITH GENTLE WAVE ANIMATION -->
+                    <g class="anbu-corrugated-group">
+                        <!-- Corrugated 3D Sheet Canopy -->
+                        <path class="anbu-sheet-canopy" 
+                              d="M 85,70 
+                                 L 415,70 
+                                 L 426,85 
+                                 Q 415,93 404,85 Q 393,77 382,85 Q 371,93 360,85 Q 349,77 338,85 Q 327,93 316,85 Q 305,77 294,85 Q 283,93 272,85 Q 261,77 250,85 Q 239,93 228,85 Q 217,77 206,85 Q 195,93 184,85 Q 173,77 162,85 Q 151,93 140,85 Q 129,77 118,85 Q 107,93 96,85 Q 85,77 74,85 
+                                 L 85,70 Z" 
+                              fill="url(#sheetGrad)" 
+                              opacity="0.95"/>
+
+                        <!-- Front Corrugated Wave Line -->
+                        <path class="anbu-sheet-edge" 
+                              d="M 74,85 
+                                 Q 85,77 96,85 Q 107,93 118,85 Q 129,77 140,85 Q 151,93 162,85 Q 173,77 184,85 Q 195,93 206,85 Q 217,77 228,85 Q 239,93 250,85 Q 261,77 272,85 Q 283,93 294,85 Q 305,77 316,85 Q 327,93 338,85 Q 349,77 360,85 Q 371,93 382,85 Q 393,77 404,85 Q 415,93 426,85" 
+                              fill="none" 
+                              stroke="#FFB580" 
+                              stroke-width="2.2" 
+                              stroke-linecap="round"/>
+
+                        <!-- Wave Ridges -->
+                        <line x1="130" y1="70" x2="140" y2="85" stroke="#7C2D12" stroke-width="1" opacity="0.6"/>
+                        <line x1="184" y1="70" x2="195" y2="85" stroke="#7C2D12" stroke-width="1" opacity="0.6"/>
+                        <line x1="239" y1="70" x2="250" y2="85" stroke="#7C2D12" stroke-width="1" opacity="0.6"/>
+                        <line x1="294" y1="70" x2="305" y2="85" stroke="#7C2D12" stroke-width="1" opacity="0.6"/>
+                        <line x1="349" y1="70" x2="360" y2="85" stroke="#7C2D12" stroke-width="1" opacity="0.6"/>
+                    </g>
+
+                    <!-- STEP 1: THIN METALLIC STEEL PIPE SLIDES LEFT TO RIGHT -->
+                    <g class="anbu-steel-pipe-group">
+                        <rect class="anbu-pipe-tube" x="35" y="38" width="430" height="15" rx="7.5" fill="url(#pipeMetalGrad)"/>
+                        <line class="anbu-pipe-specular" x1="42" y1="42.5" x2="458" y2="42.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.95"/>
+                        <line x1="42" y1="49" x2="458" y2="49" stroke="#1E293B" stroke-width="1.4" stroke-linecap="round" opacity="0.75"/>
+                        <ellipse cx="44" cy="45.5" rx="3.5" ry="7.5" fill="url(#pipeCapGrad)" stroke="#475569" stroke-width="0.8"/>
+                        <ellipse cx="456" cy="45.5" rx="3.5" ry="7.5" fill="url(#pipeCapGrad)" stroke="#475569" stroke-width="0.8"/>
+                        <circle class="anbu-pipe-spark" cx="250" cy="42.5" r="3" fill="#FFFFFF" filter="url(#gleamFilter)"/>
+                    </g>
+
+                    <!-- STEP 5: CENTER LOGO EMBLEM REVEAL -->
+                    <g class="anbu-center-logo-group">
+                        <image href="img/ANUBU STEEL.png" x="207" y="88" width="86" height="86" class="anbu-svg-logo-img"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- STEP 5: REVEAL ANBU TRADERS & TAGLINE -->
+            <div class="anbu-brand-reveal">
+                <h1 class="anbu-brand-name">
+                    <span class="anbu-text-light">ANBU</span>
+                    <span class="anbu-text-orange">TRADERS</span>
+                </h1>
+
+                <div class="anbu-tagline-wrap">
+                    <span class="anbu-tagline-line left"></span>
+                    <p class="anbu-brand-tagline">Building Strength. Adding Colour.</p>
+                    <span class="anbu-tagline-line right"></span>
+                </div>
+
+                <div class="anbu-domains-strip">
+                    <span class="domain-item">Steel</span>
+                    <span class="domain-dot">•</span>
+                    <span class="domain-item">Cement</span>
+                    <span class="domain-dot">•</span>
+                    <span class="domain-item">Paints</span>
+                    <span class="domain-dot">•</span>
+                    <span class="domain-item">Sheets</span>
+                    <span class="domain-dot">•</span>
+                    <span class="domain-item">Pipes</span>
+                </div>
+            </div>
+
+            <!-- Minimal Progress Meter Bar -->
+            <div class="anbu-loader-bottom">
+                <div class="anbu-meter-track">
+                    <div class="anbu-meter-fill"></div>
+                </div>
+                <div class="anbu-meter-status">
+                    <span class="anbu-status-label">LOADING</span>
+                    <span id="anbu-status-num" class="anbu-status-num">0%</span>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Heavy Industrial Steel Shutter Preloader End -->
+    <!-- ==============================================
+         ANBU TRADERS — PREMIUM PRELOADER END
+         ============================================== -->
 
 
     <!-- Topbar Start -->
@@ -1275,7 +1451,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-
     <script src="js/preloader.js"></script>
 </body>
 
