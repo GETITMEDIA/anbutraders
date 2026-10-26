@@ -620,6 +620,137 @@ html.already-visited #spinner {
   color: var(--white);
 }
 
+/* ── Dedicated Hero Banners (About, Services, Contact) ── */
+.page-header.about-page-header,
+.page-header.service-page-header,
+.page-header.contact-page-header {
+  min-height: 300px;
+  height: 300px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header.about-page-header {
+  background-image: url('../img/about-banner.png');
+}
+
+.page-header.service-page-header {
+  background-image: url('../img/services-banner.jpg');
+}
+
+.page-header.contact-page-header {
+  background-image: url('../img/contact-banner.jpg');
+}
+
+.page-header.about-page-header .container,
+.page-header.service-page-header .container,
+.page-header.contact-page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header.about-page-header h1,
+.page-header.service-page-header h1,
+.page-header.contact-page-header h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+.page-header.about-page-header .breadcrumb,
+.page-header.service-page-header .breadcrumb,
+.page-header.contact-page-header .breadcrumb {
+  margin-bottom: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-header.about-page-header .breadcrumb-item a,
+.page-header.service-page-header .breadcrumb-item a,
+.page-header.contact-page-header .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease;
+}
+
+.page-header.about-page-header .breadcrumb-item a:hover,
+.page-header.service-page-header .breadcrumb-item a:hover,
+.page-header.contact-page-header .breadcrumb-item a:hover {
+  color: var(--primary-orange, #ea5a06);
+}
+
+.page-header.about-page-header .breadcrumb-item.active,
+.page-header.service-page-header .breadcrumb-item.active,
+.page-header.contact-page-header .breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .page-header.about-page-header,
+  .page-header.service-page-header,
+  .page-header.contact-page-header {
+    height: 260px;
+    min-height: 260px;
+    background-size: cover;
+    background-position: center;
+  }
+  .page-header.about-page-header h1,
+  .page-header.service-page-header h1,
+  .page-header.contact-page-header h1 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-header.about-page-header,
+  .page-header.service-page-header,
+  .page-header.contact-page-header {
+    height: 220px;
+    min-height: 220px;
+    background-size: cover;
+    background-position: center;
+  }
+  .page-header.about-page-header::before,
+  .page-header.service-page-header::before,
+  .page-header.contact-page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(6, 43, 91, 0.88) 0%, rgba(6, 43, 91, 0.55) 55%, rgba(6, 43, 91, 0.2) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .page-header.about-page-header h1,
+  .page-header.service-page-header h1,
+  .page-header.contact-page-header h1 {
+    font-size: 2.15rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-header.about-page-header,
+  .page-header.service-page-header,
+  .page-header.contact-page-header {
+    height: 200px;
+    min-height: 200px;
+  }
+  .page-header.about-page-header h1,
+  .page-header.service-page-header h1,
+  .page-header.contact-page-header h1 {
+    font-size: 1.85rem;
+  }
+}
+
 /* ── About Section ── */
 .container-xxl {
   max-width: 1320px;
