@@ -108,14 +108,19 @@
     }
 
 
-    // Testimonials carousel (defensive)
+    // Testimonials carousel (defensive with robust autoplay & Read More toggle)
     if ($(".testimonial-carousel").length > 0 && typeof $.fn.owlCarousel !== 'undefined') {
-        $(".testimonial-carousel").owlCarousel({
+        var $testimonialCarousel = $(".testimonial-carousel");
+        $testimonialCarousel.owlCarousel({
             autoplay: true,
-            smartSpeed: 1000,
-            center: true,
-            dots: false,
+            autoplayTimeout: 3500,
+            autoplayHoverPause: true,
+            autoplaySpeed: 800,
+            smartSpeed: 800,
+            center: false,
+            dots: true,
             loop: true,
+            margin: 25,
             nav : true,
             navText : [
                 '<i class="bi bi-arrow-left"></i>',
@@ -123,11 +128,42 @@
             ],
             responsive: {
                 0:{
-                    items:1
+                    items: 1,
+                    margin: 15
                 },
                 768:{
-                    items:2
+                    items: 2,
+                    margin: 20
+                },
+                992:{
+                    items: 3,
+                    margin: 25
                 }
+            }
+        });
+
+        // Ensure autoplay continues when mouse leaves or touch ends
+        $testimonialCarousel.on('mouseleave touchend', function() {
+            $testimonialCarousel.trigger('play.owl.autoplay', [3500]);
+        });
+
+        // Testimonial Read More / Read Less toggle
+        $(document).on('click', '.testimonial-toggle-btn', function(e) {
+            e.preventDefault();
+            var $btn = $(this);
+            var $quote = $btn.siblings('.testimonial-quote');
+            var isCollapsed = $quote.hasClass('is-collapsed');
+
+            if (isCollapsed) {
+                $quote.removeClass('is-collapsed');
+                $btn.attr('aria-expanded', 'true');
+                $btn.find('.btn-text').text('Read Less');
+                $btn.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                $quote.addClass('is-collapsed');
+                $btn.attr('aria-expanded', 'false');
+                $btn.find('.btn-text').text('Read More');
+                $btn.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
             }
         });
     }
