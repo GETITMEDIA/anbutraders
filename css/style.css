@@ -143,7 +143,8 @@ html.already-visited #spinner {
 .back-to-top {
   position: fixed;
   display: none;
-  right: 24px;
+  left: 24px;
+  right: auto;
   bottom: 24px;
   z-index: 99;
   width: 48px;
@@ -2469,7 +2470,8 @@ button.btn-primary:hover {
 .floating-actions {
   position: fixed;
   bottom: 28px;
-  left: 28px;
+  right: 28px;
+  left: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -2484,7 +2486,7 @@ button.btn-primary:hover {
   align-items: center;
   justify-content: center;
   color: #fff !important;
-  font-size: 22px;
+  font-size: 24px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
@@ -2497,22 +2499,59 @@ button.btn-primary:hover {
 
 .floating-whatsapp {
   background: #25D366;
+  animation: whatsappBlinkPulse 2s infinite ease-in-out;
+}
+
+.floating-whatsapp:hover {
+  animation: none;
+  transform: scale(1.15);
 }
 
 .floating-call {
-  background: var(--primary-orange);
+  display: none !important;
+}
+
+/* ── WhatsApp Blinking Pulse Animation ── */
+@keyframes whatsappBlinkPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22), 0 0 0 0 rgba(37, 211, 102, 0.7);
+    filter: brightness(1);
+  }
+  25% {
+    transform: scale(1.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 0 14px rgba(37, 211, 102, 0.25);
+    filter: brightness(1.18);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.22), 0 0 0 22px rgba(37, 211, 102, 0);
+    filter: brightness(1);
+  }
+  75% {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.26), 0 0 0 10px rgba(37, 211, 102, 0.15);
+    filter: brightness(1.1);
+  }
 }
 
 @media (max-width: 576px) {
+  .back-to-top {
+    left: 18px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+  }
   .floating-actions {
     bottom: 20px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     gap: 10px;
   }
   .floating-btn {
     width: 46px;
     height: 46px;
-    font-size: 19px;
+    font-size: 20px;
   }
 }
 
