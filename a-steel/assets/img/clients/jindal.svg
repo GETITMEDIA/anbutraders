@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+  <!-- JINDAL STEEL & POWER Logo -->
+  <g transform="translate(6, 12)">
+    <path d="M4 18 C12 6, 20 22, 28 6 L28 12 C20 26, 12 12, 4 24 Z" fill="#E31837" />
+    <path d="M12 24 C18 16, 26 24, 34 14 L34 20 C26 28, 18 20, 12 28 Z" fill="#2E7D32" />
+  </g>
+  <text x="46" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="0.5" fill="#1C355E">JINDAL</text>
+  <text x="46" y="37" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="10" letter-spacing="1.5" fill="#475569">STEEL &amp; POWER</text>
+</svg>

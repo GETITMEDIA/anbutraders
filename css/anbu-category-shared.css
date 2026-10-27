@@ -1,0 +1,550 @@
+/* ==========================================================================
+   ANBU TRADERS — CATEGORY SITES UNIFIED DESIGN SYSTEM (2026)
+   Matches the Main Website UI: Navy Blue, Orange, White, Light Grey
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --anbu-navy: #062B5B;
+  --anbu-navy-dark: #03162F;
+  --anbu-navy-deep: #020D1D;
+  --anbu-orange: #EA5A06;
+  --anbu-orange-hover: #d34e04;
+  --anbu-orange-glow: rgba(234, 90, 6, 0.35);
+  --anbu-white: #FFFFFF;
+  --anbu-grey-bg: #F7F8FA;
+  --anbu-grey-light: #F1F5F9;
+  --anbu-border: #E4E7EC;
+  --anbu-border-dark: rgba(255, 255, 255, 0.12);
+  --anbu-text-dark: #1B1F24;
+  --anbu-text-muted: #667085;
+  --anbu-font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --anbu-font-body: 'Inter', system-ui, sans-serif;
+  --anbu-radius-card: 14px;
+  --anbu-radius-pill: 50px;
+  --anbu-shadow-sm: 0 2px 10px rgba(6, 43, 91, 0.05);
+  --anbu-shadow-md: 0 8px 24px rgba(6, 43, 91, 0.08);
+  --anbu-shadow-hover: 0 14px 36px rgba(6, 43, 91, 0.14);
+  --anbu-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Typography & Global Standards ── */
+body {
+  font-family: var(--anbu-font-body);
+  color: var(--anbu-text-muted);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.anbu-heading {
+  font-family: var(--anbu-font-heading) !important;
+  color: var(--anbu-navy);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ── Top Bar ── */
+.anbu-topbar {
+  background-color: var(--anbu-navy) !important;
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-body);
+  font-size: 13.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 1040;
+}
+
+.anbu-topbar .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: #FFFFFF;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: var(--anbu-transition);
+}
+
+.anbu-topbar .social-links a:hover {
+  background: var(--anbu-orange);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.anbu-topbar-right {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--anbu-orange);
+  color: #FFFFFF !important;
+  padding: 8px 36px 8px 24px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.anbu-topbar-right::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 100%;
+  top: 0;
+  left: -13px;
+  transform: skewX(-30deg);
+  background-color: var(--anbu-orange);
+}
+
+.anbu-topbar-right a {
+  color: #FFFFFF !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ── Header / Navbar ── */
+.anbu-navbar {
+  background: var(--anbu-white) !important;
+  box-shadow: var(--anbu-shadow-sm) !important;
+  border-bottom: 1px solid var(--anbu-border) !important;
+  padding: 0 1.5rem !important;
+  min-height: 82px;
+  position: sticky !important;
+  top: 0;
+  z-index: 1030;
+  transition: var(--anbu-transition);
+}
+
+.anbu-navbar .anbu-navbar-brand-wrap,
+.anbu-navbar-brand-wrap {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  height: 82px !important;
+  padding-right: 45px !important;
+  background: var(--anbu-white) !important;
+  text-decoration: none !important;
+}
+
+.anbu-navbar-brand-wrap::after {
+  position: absolute;
+  content: "";
+  width: 44px;
+  height: 100%;
+  top: 0;
+  right: -22px;
+  transform: skewX(-30deg);
+  background-color: var(--anbu-orange);
+  z-index: 1;
+}
+
+.anbu-navbar-brand-wrap img {
+  position: relative;
+  z-index: 2;
+  height: 62px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+/* Hide desktop navbar togglers and template progress-wrap */
+@media (min-width: 992px) {
+  .anbu-navbar .navbar-toggler,
+  .anbu-navbar .hamburger-btn {
+    display: none !important;
+  }
+}
+
+.progress-wrap {
+  display: none !important;
+}
+
+/* Reset bullets in navbar */
+.anbu-navbar ul,
+.anbu-navbar li,
+.anbu-navbar .navbar-nav,
+.anbu-navbar .navbar-nav li {
+  list-style: none !important;
+}
+
+.anbu-navbar .navbar-nav li::before {
+  display: none !important;
+  content: "" !important;
+}
+
+/* Nav links */
+.anbu-navbar .nav-link {
+  font-family: var(--anbu-font-heading) !important;
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
+  color: var(--anbu-text-dark) !important;
+  padding: 10px 16px !important;
+  margin: 0 2px;
+  position: relative;
+  text-decoration: none;
+  transition: var(--anbu-transition);
+}
+
+.anbu-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--anbu-orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform var(--anbu-transition);
+}
+
+.anbu-navbar .nav-link:hover::after,
+.anbu-navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.anbu-navbar .nav-link:hover,
+.anbu-navbar .nav-link.active {
+  color: var(--anbu-orange) !important;
+}
+
+/* Return to Main Site Portal Button */
+.anbu-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--anbu-navy) !important;
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-heading);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 9px 20px;
+  border-radius: var(--anbu-radius-pill);
+  text-decoration: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.2);
+  transition: var(--anbu-transition);
+  white-space: nowrap;
+}
+
+.anbu-portal-btn:hover {
+  background: var(--anbu-orange) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--anbu-orange-glow);
+}
+
+.anbu-portal-btn i {
+  transition: transform 0.2s ease;
+}
+
+.anbu-portal-btn:hover i {
+  transform: translateX(-3px);
+}
+
+/* Enquiry CTA Button */
+.anbu-enquiry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--anbu-orange) !important;
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-heading);
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 9px 22px;
+  border-radius: var(--anbu-radius-pill);
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px var(--anbu-orange-glow);
+  transition: var(--anbu-transition);
+  white-space: nowrap;
+}
+
+.anbu-enquiry-btn:hover {
+  background: var(--anbu-orange-hover) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 90, 6, 0.45);
+}
+
+/* Dropdown Menu */
+.anbu-navbar .dropdown-menu {
+  border: 1px solid var(--anbu-border);
+  border-radius: var(--anbu-radius-card);
+  box-shadow: var(--anbu-shadow-md);
+  padding: 8px;
+  min-width: 220px;
+  margin-top: 10px;
+}
+
+.anbu-navbar .dropdown-item {
+  font-family: var(--anbu-font-heading);
+  font-weight: 600;
+  font-size: 13.5px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: var(--anbu-text-dark);
+  transition: var(--anbu-transition);
+}
+
+.anbu-navbar .dropdown-item:hover {
+  background-color: var(--anbu-grey-bg);
+  color: var(--anbu-orange);
+}
+
+/* ── Section Eyebrow Badge ── */
+.anbu-badge-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--anbu-radius-pill);
+  background: rgba(234, 90, 6, 0.1);
+  color: var(--anbu-orange);
+  font-family: var(--anbu-font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ── Standardized Cards ── */
+.anbu-card {
+  background: #FFFFFF;
+  border: 1px solid var(--anbu-border);
+  border-radius: var(--anbu-radius-card);
+  box-shadow: var(--anbu-shadow-sm);
+  padding: 28px;
+  transition: var(--anbu-transition);
+}
+
+.anbu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--anbu-shadow-hover);
+  border-color: rgba(234, 90, 6, 0.35);
+}
+
+/* ── Footer ── */
+.anbu-footer {
+  background-color: var(--anbu-navy) !important;
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-body);
+  padding: 70px 0 40px;
+  border-top: 4px solid var(--anbu-orange);
+}
+
+.anbu-footer h5 {
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-heading) !important;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.anbu-footer h5::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 2.5px;
+  background: var(--anbu-orange);
+  border-radius: 2px;
+}
+
+.anbu-footer p,
+.anbu-footer a {
+  color: #CBD5E1 !important;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.anbu-footer a.footer-link {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: var(--anbu-transition);
+}
+
+.anbu-footer a.footer-link:hover {
+  color: var(--anbu-orange) !important;
+  transform: translateX(4px);
+}
+
+.anbu-footer .footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF !important;
+  margin-right: 8px;
+  text-decoration: none;
+  transition: var(--anbu-transition);
+}
+
+.anbu-footer .footer-social-btn:hover {
+  background: var(--anbu-orange);
+  color: #FFFFFF !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px var(--anbu-orange-glow);
+}
+
+.anbu-footer-review-btn {
+  display: inline-block;
+  background: var(--anbu-orange) !important;
+  color: #FFFFFF !important;
+  font-family: var(--anbu-font-heading);
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 10px 22px;
+  border-radius: var(--anbu-radius-pill);
+  text-decoration: none !important;
+  border: none;
+  box-shadow: 0 4px 14px var(--anbu-orange-glow);
+  transition: var(--anbu-transition);
+}
+
+.anbu-footer-review-btn:hover {
+  background: var(--anbu-orange-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(234, 90, 6, 0.45);
+}
+
+/* ── Copyright Bar ── */
+.anbu-copyright {
+  background-color: var(--anbu-navy-dark) !important;
+  color: #94A3B8 !important;
+  font-size: 13.5px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.anbu-copyright a {
+  color: var(--anbu-orange) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.anbu-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* ── Floating Action Buttons ── */
+/* WhatsApp FAB on Bottom-Right */
+.floating-actions {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-whatsapp {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: var(--anbu-transition);
+  animation: anbuWhatsappPulse 2s infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  background: #20ba5a;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
+}
+
+@keyframes anbuWhatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Back to Top on Bottom-Left */
+.back-to-top,
+.anbu-back-to-top {
+  position: fixed !important;
+  left: 25px !important;
+  right: auto !important;
+  bottom: 25px !important;
+  z-index: 9999 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: var(--anbu-orange) !important;
+  color: #FFFFFF !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 14px var(--anbu-orange-glow) !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: var(--anbu-transition) !important;
+}
+
+.back-to-top:hover,
+.anbu-back-to-top:hover {
+  background: var(--anbu-orange-hover) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(234, 90, 6, 0.45) !important;
+}
+
+/* Hide old template floating bars */
+.scrollup,
+.scroll-top,
+#scrollTop,
+#scrollUp {
+  display: none !important;
+}
+
+/* ── Mobile Responsiveness ── */
+@media (max-width: 991.98px) {
+  .anbu-topbar {
+    display: none !important;
+  }
+  .anbu-navbar {
+    min-height: 70px;
+    padding: 0.5rem 1rem !important;
+  }
+  .anbu-navbar-brand-wrap {
+    height: 60px;
+    padding-right: 25px;
+  }
+  .anbu-navbar-brand-wrap::after {
+    width: 25px;
+    right: -12px;
+  }
+  .anbu-navbar-brand-wrap img {
+    height: 50px;
+  }
+  .anbu-footer {
+    padding: 50px 0 30px;
+    text-align: left;
+  }
+}

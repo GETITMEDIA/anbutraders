@@ -22,183 +22,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cement-2026.css">
 
+        <!-- Category Shared Stylesheet (Matches Main Website) -->
+    <link rel="stylesheet" href="../../css/anbu-category-shared.css">
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="css/responsive.css">
-<style>/* Basic Reset for Navbar */
-.navbar {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-}
-
-/* Navbar Background and Text Color */
-.navbar#banner {
-    background-color: #fff; /* White background */
-    color: #333; /* Dark text */
-}
-
-/* Navbar brand styling */
-.navbar .navbar-brand {
-    display: flex;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    text-decoration: none;
-}
-
-/* Logo Styling */
-.navbar .navbar-brand img {
-    height: 50px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.navbar .navbar-brand:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Navbar Toggler Styling */
-.navbar-toggler {
-    border: none;
-    background-color: transparent;
-    outline: none;
-}
-
-.navbar-toggler-icon {
-    background-color: #333;
-    width: 30px;
-    height: 3px;
-    border-radius: 5px;
-}
-
-.navbar-toggler-icon:before,
-.navbar-toggler-icon:after {
-    content: "";
-    background-color: #333;
-    width: 30px;
-    height: 3px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Navbar links styling */
-.navbar-nav {
-    margin-left: auto;
-}
-
-.navbar-nav .nav-item {
-    margin-left: 20px;
-}
-
-.navbar-nav .nav-link {
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-item.active .nav-link {
-    color: #ff7b00; /* Highlight color on hover */
-}
-
-/* Dropdown Menu Styling */
-.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
-
-.navbar-nav .dropdown-menu {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    margin-top: 10px;
-    min-width: 200px;
-}
-
-/* Dropdown Item Styling */
-.navbar-nav .dropdown-item {
-    color: #333;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .dropdown-item:hover {
-    background-color: #f4f4f4;
-    color: #ff7b00;
-}
-
-/* Sticky Navbar Effect */
-.navbar.fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile view: Navbar Toggler */
-@media (max-width: 991px) {
-    .navbar-nav {
-        background-color: #ffffff;
-        position: absolute;
-        top: 120px;
-        left: 0;
-        right: 0;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-    }
-    
-    .navbar-nav .nav-item {
-        margin-left: 0;
-    }
-    
-    .navbar-nav .nav-link {
-        padding: 10px 15px;
-    }
-}
-
-/* Hover Animation for Navbar Items */
-.navbar-nav .nav-item:hover {
-    transform: translateY(-3px);
-    transition: all 0.2s ease-in-out;
-}
-.custom-toggler-icon {
-    display: inline-block;
-    width: 28px;
-    height: 3px;
-    background-color: #000;
-    position: relative;
-    transition: 0.3s;
-}
-
-.custom-toggler-icon::before,
-.custom-toggler-icon::after {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 3px;
-    background-color: #000;
-    left: 0;
-    transition: 0.3s;
-}
-
-.custom-toggler-icon::before {
-    top: -8px;
-}
-
-.custom-toggler-icon::after {
-    top: 8px;
-}
-
-</style>
 
     <link href="../../css/preloader.css" rel="stylesheet">
 </head>
@@ -228,57 +55,71 @@
     <!-- ==============================================
          ANBU TRADERS — PRELOADER END
          ============================================== -->
-    </div>
-    <!-- ##### Header Area Start ##### -->
-<nav class="navbar navbar-expand-lg fixed-top" id="banner" style="background-color: white; color: #000;" >
-    <!-- Your navbar content here -->
-
-        <div class="container">
-            <!-- Brand -->
-          <a class="navbar-brand" href="#" style="display: flex; align-items: center; font-family: Arial, sans-serif; font-size: 20px; color: #333; text-decoration: none;">
-    <span style="margin-right: 10px;">
-        <img id="anbu-navbar-logo" src="img/Anbu-Steel-&-Cement--Logo1.png" alt="logo" style="height: 100px; width: auto;">
-    </span> 
-    
-</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="menu-icon">☰</span>
-    <span class="close-icon" style="display:none;">✖</span>
-</button>
-
-
-
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                   
-                    <li class="nav-item">
-                        <a class='nav-link' href='index-demo-3.html'>HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href='about-us.html'>ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href='services.html'>SERVICES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href='ourprojectcement.html'>OUR PROJECTS</a>
-                    </li>
-                  
-                   
-                    <li class="nav-item">
-                        <a class='nav-link' href='contact-us.html'>CONTACT</a>
-                    </li>
-                    <li class='nav-item d-flex align-items-center'>
-                        <a class='cement-main-portal-pill' href='../../index.html'><i class='fa fa-arrow-left'></i> Main Site</a>
-                    </li>
-                   
-                </ul>
+    <!-- Topbar Start -->
+<div class="container-fluid anbu-topbar px-0">
+    <div class="row g-0 d-none d-lg-flex align-items-center">
+        <div class="col-lg-6 ps-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center text-white py-2">
+                <span>Follow Us:</span>
+                <div class="social-links ms-2">
+                    <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@anbutraders1353" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- ##### Header Area End ##### -->
+        <div class="col-lg-6 text-end">
+            <div class="anbu-topbar-right">
+                <span class="me-2"><i class="fa fa-phone me-2"></i>Call Us:</span>
+                <a href="tel:+919626325204" class="fw-bold">+919626325204</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg anbu-navbar" id="banner">
+    <div class="container-fluid px-lg-5">
+        <!-- Brand with signature orange slant -->
+        <a class="anbu-navbar-brand-wrap" href="index-demo-3.html">
+            <img id="anbu-navbar-logo" src="img/Anbu-Steel-&-Cement--Logo1.png" alt="Anbu Steel & Cement Logo">
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-icon" style="font-size: 24px; color: var(--anbu-navy);">&#9776;</span>
+            <span class="close-icon" style="display:none; font-size: 24px; color: var(--anbu-navy);">&times;</span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mx-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index-demo-3.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ourprojectcement.html">OUR PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">CONTACT</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                <a class="anbu-portal-btn me-2" href="../../index.html"><i class="fa fa-arrow-left"></i> Main Site</a>
+                <a class="anbu-enquiry-btn" href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Cement%20and%20Steel." target="_blank"><i class="fa fa-whatsapp"></i> Enquiry</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
 
     <!-- ##### Welcome Area Start ##### -->
     <section class="hero-section ico-bg2 relative section-padding" id="home">
@@ -427,7 +268,6 @@
     </div>
 </div>
 </div>
-</div>
     </div>
 
     <!-- ##### About Us Area Start ##### -->
@@ -499,21 +339,62 @@
 
     <!-- ##### About Us Area End ##### -->
 
-    <section class="creative-facts section-padding-100">
+    <section class="section-padding-100 clearfix" style="background: #F8FAFC; padding: 80px 0;">
     <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-8">
+                <span class="anbu-badge-eyebrow"><i class="fa fa-shield"></i> The Anbu Quality Edge</span>
+                <h2 class="anbu-heading mb-3" style="font-size: 2.2rem;">Why Choose Anbu Traders for Your Cement & Steel?</h2>
+                <p style="color: #64748B; font-size: 16px; line-height: 1.7;">
+                    From residential foundations to commercial infrastructure — we supply certified, mill-direct construction materials across Pondicherry and Tamil Nadu at competitive bulk prices.
+                </p>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-lg-6 offset-lg-7 col-sm-12">
-                <div class="who-we-contant contera">
-                    <h4 class="w-text bold fadeInUp" data-wow-delay="0.3s">Why Choose Anbu Traders for Your Cement Needs?</h4>
-                    <p class="w-text fadeInUp mb-0" data-wow-delay="0.4s">
-                        At Anbu Traders, we are committed to providing the best quality cement for all your construction projects. With years of experience in the industry, we offer a range of cement products that cater to every need — from residential buildings to massive infrastructure projects. Our products are not only durable but also highly affordable, making us the preferred choice for builders, contractors, and developers alike.
-                    </p>
-                    <p class="w-text fadeInUp mb-0" data-wow-delay="0.5s">
-                        What sets us apart is our relentless dedication to quality, timely delivery, and customer satisfaction. We use advanced manufacturing techniques and source premium raw materials to ensure that each batch of cement meets stringent quality standards. Whether you're working on a small-scale construction or a large-scale project, Anbu Traders ensures you get the best materials at the most competitive prices.
-                    </p>
-                    <a class='btn more-btn mt-30 fadeInUp' data-wow-delay='0.6s' href='services.html'>Explore Our Services</a>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="anbu-card text-center h-100">
+                    <div style="width: 58px; height: 58px; border-radius: 12px; background: rgba(234, 90, 6, 0.1); color: #EA5A06; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px;">
+                        <i class="fa fa-certificate"></i>
+                    </div>
+                    <h5 class="anbu-heading" style="font-size: 1.1rem; margin-bottom: 10px;">Authorized Distributor</h5>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 0;">Official direct partner for UltraTech, Dalmia, JSW Cement, Priya Cement & Agni 550D TMT.</p>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="anbu-card text-center h-100">
+                    <div style="width: 58px; height: 58px; border-radius: 12px; background: rgba(6, 43, 91, 0.08); color: #062B5B; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px;">
+                        <i class="fa fa-balance-scale"></i>
+                    </div>
+                    <h5 class="anbu-heading" style="font-size: 1.1rem; margin-bottom: 10px;">Digital Weighbridge</h5>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 0;">100% genuine weight guaranteed with computerized weighbridge slips & mill test certificates.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="anbu-card text-center h-100">
+                    <div style="width: 58px; height: 58px; border-radius: 12px; background: rgba(234, 90, 6, 0.1); color: #EA5A06; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px;">
+                        <i class="fa fa-truck"></i>
+                    </div>
+                    <h5 class="anbu-heading" style="font-size: 1.1rem; margin-bottom: 10px;">Direct Site Delivery</h5>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 0;">Heavy lorry logistics and prompt crane unloading directly at your project location.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="anbu-card text-center h-100">
+                    <div style="width: 58px; height: 58px; border-radius: 12px; background: rgba(6, 43, 91, 0.08); color: #062B5B; display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px;">
+                        <i class="fa fa-tag"></i>
+                    </div>
+                    <h5 class="anbu-heading" style="font-size: 1.1rem; margin-bottom: 10px;">Wholesale Pricing</h5>
+                    <p style="font-size: 13.5px; color: #64748B; margin-bottom: 0;">Competitive bulk rates for contractors, builders, and residential home construction.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20want%20a%20price%20quote%20for%20Cement%20and%20Steel." target="_blank" class="anbu-enquiry-btn me-2">
+                <i class="fa fa-whatsapp"></i> Get Wholesale Price Quote
+            </a>
+            <a href="services.html" class="anbu-portal-btn">
+                <i class="fa fa-cubes"></i> Explore Products
+            </a>
         </div>
     </div>
 </section>
@@ -694,68 +575,85 @@ Year Established</div>
 
     <!-- ##### Blog Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-<footer class="cement-unified-footer">
+    <!-- Footer Start -->
+<footer class="anbu-footer">
     <div class="container">
         <div class="row">
-            <!-- Brand / About -->
-            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                <h5>About Anbu Traders</h5>
-                <p class="mb-3">Welcome to Anbu Traders! Your trusted source for Steel Sheets, Pipes, and Paints. We offer quality materials at competitive prices with excellent customer service.</p>
+            <!-- Col 1: Office Info -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Our Office</h5>
+                <p class="mb-2">
+                    <i class="fa fa-map-marker me-2 text-warning"></i>
+                    No. 4/5, Pondy – Mailam Main Road,<br>
+                    Near Venkateswara Weighment,<br>
+                    Thiruchitrambalam Kootroad, Pondicherry - 605111
+                </p>
+                <p class="mb-2">
+                    <i class="fa fa-phone me-2 text-warning"></i> +91 96263 25204 / 99940 11468
+                </p>
+                <p class="mb-2">
+                    <i class="fa fa-phone me-2 text-warning"></i> 0413-2980014
+                </p>
+                <p class="mb-3">
+                    <i class="fa fa-envelope me-2 text-warning"></i> anbutraders1468@gmail.com
+                </p>
                 <div class="d-flex align-items-center">
-                    <a class="cement-social-btn" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a class="cement-social-btn" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a class="cement-social-btn" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                    <a class="cement-social-btn" href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a class="cement-social-btn" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="footer-social-btn" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a class="footer-social-btn" href="https://www.youtube.com/@anbutraders1353" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a class="footer-social-btn" href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div class="col-12 col-lg-2 col-md-6 mb-4">
-                <h5>Navigate</h5>
+            <!-- Col 2: Quick Links -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Links</h5>
                 <a class="footer-link" href="index-demo-3.html">Home</a>
                 <a class="footer-link" href="about-us.html">About Us</a>
-                <a class="footer-link" href="services.html">Services</a>
+                <a class="footer-link" href="services.html">Our Services</a>
                 <a class="footer-link" href="ourprojectcement.html">Our Projects</a>
                 <a class="footer-link" href="contact-us.html">Contact Us</a>
+                <a class="footer-link" href="../../index.html"><i class="fa fa-external-link me-1"></i> Main Portal</a>
             </div>
 
-            <!-- Privacy & TOS -->
-            <div class="col-12 col-lg-3 col-md-6 mb-4">
-                <h5>Privacy & TOS</h5>
-                <a class="footer-link" href="#">Advertiser Agreement</a>
-                <a class="footer-link" href="#">Acceptable Use Policy</a>
-                <a class="footer-link" href="#">Privacy Policy</a>
-                <a class="footer-link" href="#">Technology Privacy</a>
-                <a class="footer-link" href="#">Developer Agreement</a>
+            <!-- Col 3: Business Hours -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Business Hours</h5>
+                <p class="mb-1 text-light">Monday - Saturday</p>
+                <h6 class="text-white mb-3" style="font-weight: 700;">08:00 AM - 08:00 PM</h6>
+                <p class="mb-1 text-light">Sunday</p>
+                <h6 class="text-white mb-0" style="font-weight: 700;">08:00 AM - 02:30 PM</h6>
             </div>
 
-            <!-- Contact Info -->
-            <div class="col-12 col-lg-3 col-md-6 mb-4">
-                <h5>Contact Us</h5>
-                <p class="mb-2">
-                    <i class="fa fa-map-marker"></i>
-                    No. 4/5, Pondy – Mailam Main Road,<br>
-                    Near Venkateswara Weighment,<br>
-                    Thiruchitrambalam Kootroad, Vanur Taluk,<br>
-                    Villupuram Dt. – 605111
-                </p>
-                <p class="mb-2"><i class="fa fa-phone"></i> +91 96263 25204 / 9994011468</p>
-                <p class="mb-2"><i class="fa fa-phone"></i> Landline: 0413-2980014</p>
-                <p class="mb-3"><i class="fa fa-envelope"></i> anbutraders1468@gmail.com</p>
+            <!-- Col 4: Google Review -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Leave a Google Review</h5>
+                <p class="mb-3">We would love to hear your feedback! Help builders and homeowners choose genuine materials.</p>
+                <div class="mb-3 d-flex align-items-center gap-2">
+                    <span style="color: #FFC107; font-size: 1.2rem;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="text-white fw-bold">4.9 / 5.0 Rating</span>
+                </div>
+                <a href="https://www.google.com/maps/place/Anbu+Traders/@12.0011839,79.6992895,13z/data=!4m10!1m2!2m1!1sanbu+traders!3m6!1s0x3a53673c683b5d23:0xa33ec6770f905c31!8m2!3d12.0011839!4d79.7734468!15sCgxhbmJ1IHRyYWRlcnNaDiIMYW5idSB0cmFkZXJzkgEYYnVpbGRpbmdfbWF0ZXJpYWxzX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5mYWpGWk5XbFJSUkFC4AEA!16s%2Fg%2F11b6_csq4r?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="anbu-footer-review-btn">
+                    <i class="fa fa-google me-1"></i> Leave a Review
+                </a>
             </div>
-        </div>
-    </div>
-
-    <!-- Standardized single-row copyright -->
-    <div class="cement-copyright-bar">
-        <div class="container">
-            Copyright © <span class="current-year">2026</span> <a href="../../index.html">Anbu Traders</a>. All Rights Reserved. &nbsp;|&nbsp; Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a>
         </div>
     </div>
 </footer>
-<!-- ##### Footer Area End ##### -->
+
+<!-- Copyright Start -->
+<div class="anbu-copyright text-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                <p class="mb-0">Copyright &copy; 2026 <a href="../../index.html">Anbu Traders</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0">Proudly created with <a href="https://www.getitmediasolutions.com/" target="_blank">Getitmedia solutions</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
 
     <!-- ########## All JS ########## -->
     <!-- jQuery js -->
@@ -787,14 +685,7 @@ $(document).ready(function () {
 
 
     <!-- Floating Contact Actions -->
-    <div class="floating-actions">
-        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20cement%20and%20steel." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
-            <i class="fa fa-whatsapp"></i>
-        </a>
-        <a href="tel:+919626325204" class="floating-btn floating-call" title="Call Us" aria-label="Call Us">
-            <i class="fa fa-phone"></i>
-        </a>
-    </div>
+    
 
 
 <script>
@@ -804,6 +695,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+    <!-- Floating Contact Actions -->
+<div class="floating-actions">
+    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Cement%20and%20Steel." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Back to Top (Left side) -->
+<a href="#" class="back-to-top" id="backToTopBtn" aria-label="Back to Top"><i class="fa fa-arrow-up"></i></a>
+
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').css('display', 'flex').fadeIn();
+    } else {
+        $('.back-to-top').fadeOut();
+    }
+});
+$('.back-to-top').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0}, 600);
+});
+</script>
     <script src="../../js/preloader.js"></script>
 </body>
 

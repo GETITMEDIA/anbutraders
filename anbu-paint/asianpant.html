@@ -248,6 +248,7 @@
 }
 
 </style>
+    <link rel="stylesheet" href="../css/anbu-category-shared.css">
 </head>
 
 
@@ -261,72 +262,80 @@
     </div>
 </div>
 <!-- Section1 Start -->
-<header class="site-header">
-    <div class="header-container">
-        
-        <!-- Logo -->
-        <div class="header-logo">
-            <a href="index.html">
-                <img src="img/paint logo.png" alt="Paint Logo">
-            </a>
+<!-- Topbar Start -->
+<div class="container-fluid anbu-topbar px-0">
+    <div class="row g-0 d-none d-lg-flex align-items-center">
+        <div class="col-lg-6 ps-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center text-white py-2">
+                <span>Follow Us:</span>
+                <div class="social-links ms-2">
+                    <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@anbutraders1353" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
+        <div class="col-lg-6 text-end">
+            <div class="anbu-topbar-right">
+                <span class="me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                <a href="tel:+919626325204" class="fw-bold">+919626325204</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg anbu-navbar sticky-top">
+    <div class="container-fluid px-lg-5">
+        <!-- Brand Logo with signature orange slant -->
+        <a class="anbu-navbar-brand-wrap" href="index.html">
+            <img id="anbu-navbar-logo" src="img/paint logo.png" alt="Anbu Paints Division Logo">
+        </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="header-nav desktop-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#paintNavbar" aria-controls="paintNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars" style="font-size: 24px; color: var(--anbu-navy);"></span>
+        </button>
 
-                <li class="has-submenu">
-                    <a href="#">Products ▼</a>
-                   <ul class="submenu">
-                        <li><a href="jsw.html">JSW Paints</a></li>
-                        <li><a href="burger.html">Berger Paints</a></li>
-                        <li><a href="asianpant.html">Asian Paints</a></li>
-                        <li><a href="wallputty.html">Wallputty</a></li>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="paintNavbar">
+            <ul class="navbar-nav mx-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="paintProductsDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="paintProductsDrop">
+                        <li><a class="dropdown-item" href="jsw.html">JSW Paints</a></li>
+                        <li><a class="dropdown-item" href="burger.html">Berger Paints</a></li>
+                        <li><a class="dropdown-item" href="asianpant.html">Asian Paints</a></li>
+                        <li><a class="dropdown-item" href="wallputty.html">Wallputty</a></li>
                     </ul>
                 </li>
-
-                <li><a href="index.html#servicepaint">Service</a></li>
-                <li><a href="ourproject.html">Our Projects</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="paint-main-portal-pill" href="../index.html"><i class="fa fa-arrow-left"></i> Main Site</a></li>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html#servicepaint">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="ourproject.html">Our Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="contact.html">Contact</a>
+                </li>
             </ul>
-        </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="hamburger-btn" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                <a class="anbu-portal-btn me-2" href="../index.html"><i class="fa fa-arrow-left"></i> Main Site</a>
+                <a class="anbu-enquiry-btn" href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Paints%20and%20Color%20Mixing." target="_blank"><i class="fab fa-whatsapp"></i> Enquiry</a>
+            </div>
         </div>
-
     </div>
-
-    <!-- Slide-in Mobile Menu -->
-    <nav class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-
-            <li class="has-submenu">
-                <a href="#">Products ▼</a>
-                <ul class="submenu">
-                    <li><a href="jsw.html">JSW Paints</a></li>
-                    <li><a href="burger.html">Berger Paints</a></li>
-                    <li><a href="asianpant.html">Asian Paints</a></li>
-                </ul>
-            </li>
-
-            <li><a href="index.html#servicepaint">Service</a></li>
-            <li><a href="ourproject.html">Our Projects</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Background Overlay -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-</header>
+</nav>
+<!-- Navbar End -->
 
 
 
@@ -524,15 +533,47 @@ document.addEventListener('DOMContentLoaded', function() {
 	<script src="assets/js/custom.js" type="0f59a34417cdec26fd574fe2-text/javascript"></script>
 <script src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="0f59a34417cdec26fd574fe2-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b441ea1d243ffc',t:'MTc1NDU0MzMyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../../cdn-cgi/challenge-platform/h/b/scripts/jsd/8359bcf47b68/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
     <!-- Floating Contact Actions -->
-    <div class="floating-actions">
-        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20paints." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="tel:+919626325204" class="floating-btn floating-call" title="Call Us" aria-label="Call Us">
-            <i class="fa fa-phone-alt"></i>
-        </a>
-    </div>
 
+
+<!-- Back to Top (Left side) -->
+<a href="#" class="back-to-top" id="backToTopBtn" aria-label="Back to Top"><i class="fa fa-arrow-up"></i></a>
+
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').css('display', 'flex').fadeIn();
+    } else {
+        $('.back-to-top').fadeOut();
+    }
+});
+$('.back-to-top').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0}, 600);
+});
+</script>
+<!-- Floating Contact Actions -->
+<div class="floating-actions">
+    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Paints%20and%20Color%20Mixing." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<!-- Back to Top (Left side) -->
+<a href="#" class="back-to-top" id="backToTopBtn" aria-label="Back to Top"><i class="fa fa-arrow-up"></i></a>
+
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+        $('.back-to-top').css('display', 'flex').fadeIn();
+    } else {
+        $('.back-to-top').fadeOut();
+    }
+});
+$('.back-to-top').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop: 0}, 600);
+});
+</script>
 </body>
 
 <script>

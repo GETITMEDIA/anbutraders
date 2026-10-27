@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <!-- JSW Logo -->
+  <text x="10" y="38" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-style="italic" font-size="38" letter-spacing="-2" fill="#0A3A82">JSW</text>
+  <path d="M102 12 L116 12 L110 38 L96 38 Z" fill="#E31837" opacity="0.9"/>
+</svg>
