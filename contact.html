@@ -253,89 +253,293 @@
                 <!-- Form Column -->
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="contact-form-wrapper h-100">
-                        <p class="fw-bold text-uppercase text-primary mb-2">Send Us A Message</p>
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-2" style="background: rgba(243, 106, 33, 0.1); color: var(--primary-orange); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">
+                            <i class="fa fa-envelope-open-text"></i> Send Us A Message
+                        </div>
                         <h2 class="display-6 fw-bold text-dark mb-3">If You Have Any Queries, Please Feel Free To Contact Us</h2>
                         <p class="text-secondary mb-4">For any questions, feedback, or wholesale price quotes, reach out to us. Our team will get back to you immediately.</p>
                         
+                        <!-- Quick Contact Cards (Full Email, No Truncation) -->
                         <div class="row g-3 mb-4">
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center p-3 rounded" style="background: #F8FAFC; border: 1px solid var(--border-color);">
-                                    <div class="flex-shrink-0 btn-square bg-primary rounded-circle text-white me-3">
+                                <div class="contact-quick-card">
+                                    <div class="contact-quick-icon call-icon">
                                         <i class="fa fa-phone-alt"></i>
                                     </div>
-                                    <div>
-                                        <div class="text-muted small fw-bold">Call Us</div>
-                                        <a href="tel:+919626325204" class="text-dark fw-bold text-decoration-none small d-block">+91 96263 25204</a>
-                                        <a href="tel:+919655551468" class="text-dark fw-bold text-decoration-none small d-block">+91 96555 51468</a>
+                                    <div class="contact-quick-body">
+                                        <div class="contact-quick-label">Call Directly</div>
+                                        <a href="tel:+919626325204" class="contact-quick-link">+91 96263 25204</a>
+                                        <a href="tel:+919655551468" class="contact-quick-link">+91 96555 51468</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <div class="d-flex align-items-center p-3 rounded" style="background: #F8FAFC; border: 1px solid var(--border-color);">
-                                    <div class="flex-shrink-0 btn-square bg-primary rounded-circle text-white me-3">
+                                <div class="contact-quick-card">
+                                    <div class="contact-quick-icon mail-icon">
                                         <i class="fa fa-envelope"></i>
                                     </div>
-                                    <div>
-                                        <div class="text-muted small fw-bold">Mail Us</div>
-                                        <a href="mailto:anbutraders1468@gmail.com" class="text-dark fw-bold text-decoration-none small text-truncate d-block" style="max-width: 170px;">anbutraders1468@gmail.com</a>
+                                    <div class="contact-quick-body">
+                                        <div class="contact-quick-label">Mail Support</div>
+                                        <a href="mailto:anbutraders1468@gmail.com" class="contact-quick-link email-link" title="Click to email Anbu Traders">anbutraders1468@gmail.com</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 🌍 Contact Form with WhatsApp Integration -->
-                        <form id="whatsappForm">
+                        <!-- 🌍 Contact Form with WhatsApp Integration & Comprehensive Validation -->
+                        <form id="whatsappForm" novalidate>
+                            <!-- Alert Notification Container -->
+                            <div id="formAlert" class="alert d-none mb-3" role="alert"></div>
+
                             <div class="row g-3">
+                                <!-- Full Name -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" autocomplete="name" required>
+                                        <label for="name"><i class="fa fa-user text-primary me-2"></i>Full Name <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
                                     </div>
                                 </div>
+
+                                <!-- Mobile Number -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                        <label for="email">Your Email</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Mobile Number" autocomplete="tel" required>
+                                        <label for="phone"><i class="fa fa-phone-alt text-primary me-2"></i>Mobile Number <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">Please enter a valid 10-digit mobile number.</div>
                                     </div>
                                 </div>
+
+                                <!-- Email Address -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" autocomplete="email" required>
+                                        <label for="email"><i class="fa fa-envelope text-primary me-2"></i>Email Address <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Subject / Material Requirement with Suggestions -->
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" list="requirementSuggestions" placeholder="Requirement / Subject" required>
+                                        <datalist id="requirementSuggestions">
+                                            <option value="GI & MS Pipes Quote">
+                                            <option value="Roofing Sheets (JSW / Colour Coated)">
+                                            <option value="TMT Steel Bars (Agni / Tata / JSW)">
+                                            <option value="Ultratech / Dalmia Cement & AAC Blocks">
+                                            <option value="Asian Paints & Birla Wall Putty">
+                                            <option value="Wholesale Bulk Pricing Inquiry">
+                                            <option value="General Inquiry">
+                                        </datalist>
+                                        <label for="subject"><i class="fa fa-tag text-primary me-2"></i>Product / Subject <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">Please select or type your requirement.</div>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
-                                        <label for="subject">Subject</label>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 125px" required></textarea>
+                                        <label for="message"><i class="fa fa-comment-dots text-primary me-2"></i>Message / Quantity Details <span class="text-danger">*</span></label>
+                                        <div class="invalid-feedback">Please provide your message (at least 10 characters).</div>
                                     </div>
                                 </div>
+
+                                <!-- Submit Button -->
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 140px" required></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn-whatsapp-submit w-100" type="submit">
-                                        <i class="fab fa-whatsapp fs-5"></i> Send Message via WhatsApp
+                                    <button class="btn-whatsapp-submit w-100" type="submit" id="btnWhatsappSubmit">
+                                        <i class="fab fa-whatsapp fs-5"></i>
+                                        <span>Send Message via WhatsApp</span>
                                     </button>
+                                </div>
+
+                                <!-- Trust & Delivery Badges -->
+                                <div class="col-12">
+                                    <div class="contact-trust-badges">
+                                        <span class="trust-badge-item"><i class="fa fa-bolt text-warning"></i> Instant WhatsApp Reply</span>
+                                        <span class="trust-badge-item"><i class="fa fa-shield-alt text-primary"></i> 100% Genuine Materials</span>
+                                        <span class="trust-badge-item"><i class="fa fa-truck text-success"></i> Direct Yard Delivery</span>
+                                    </div>
                                 </div>
                             </div>
                         </form>
 
-                        <!-- 💬 WhatsApp Script -->
+                        <!-- 💬 WhatsApp Script with Real-time & Submit Validation -->
                         <script>
-                        document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-                          e.preventDefault();
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const form = document.getElementById("whatsappForm");
+                            if (!form) return;
 
-                          const phoneNumber = "919626325204";
+                            const nameInput = document.getElementById("name");
+                            const phoneInput = document.getElementById("phone");
+                            const emailInput = document.getElementById("email");
+                            const subjectInput = document.getElementById("subject");
+                            const messageInput = document.getElementById("message");
+                            const submitBtn = document.getElementById("btnWhatsappSubmit");
+                            const formAlert = document.getElementById("formAlert");
 
-                          const name = document.getElementById("name").value.trim();
-                          const email = document.getElementById("email").value.trim();
-                          const subject = document.getElementById("subject").value.trim();
-                          const message = document.getElementById("message").value.trim();
+                            // Field Validation Definitions
+                            const validators = {
+                                name: function(val) {
+                                    const v = val.trim();
+                                    if (!v) return "Please enter your full name.";
+                                    if (v.length < 3) return "Name must be at least 3 letters.";
+                                    if (!/^[a-zA-Z\s.'-]+$/.test(v)) return "Name can only contain letters and spaces.";
+                                    return null;
+                                },
+                                phone: function(val) {
+                                    const cleaned = val.replace(/[\s\-+]/g, '');
+                                    const tenDigit = cleaned.length === 12 && cleaned.startsWith('91') ? cleaned.slice(2) : cleaned;
+                                    if (!val.trim()) return "Please enter your 10-digit mobile number.";
+                                    if (!/^[6-9]\d{9}$/.test(tenDigit)) return "Please enter a valid 10-digit mobile number.";
+                                    return null;
+                                },
+                                email: function(val) {
+                                    const v = val.trim();
+                                    if (!v) return "Please enter your email address.";
+                                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                                    if (!emailRegex.test(v)) return "Please enter a valid email (e.g. name@domain.com).";
+                                    return null;
+                                },
+                                subject: function(val) {
+                                    const v = val.trim();
+                                    if (!v) return "Please specify your requirement or subject.";
+                                    if (v.length < 3) return "Subject must be at least 3 characters.";
+                                    return null;
+                                },
+                                message: function(val) {
+                                    const v = val.trim();
+                                    if (!v) return "Please describe your message or quantity.";
+                                    if (v.length < 10) return "Message must be at least 10 characters.";
+                                    return null;
+                                }
+                            };
 
-                          const whatsappMessage = `Hello 👋%0A\nName: ${name}%0A\nEmail: ${email}%0A\nSubject: ${subject}%0A\nMessage: ${message}`;
+                            function validateField(input, validatorName) {
+                                if (!input) return true;
+                                const error = validators[validatorName](input.value);
+                                const feedback = input.parentElement.querySelector(".invalid-feedback");
 
-                          const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-                          window.open(url, "_blank");
+                                if (error) {
+                                    input.classList.remove("is-valid");
+                                    input.classList.add("is-invalid");
+                                    if (feedback) feedback.textContent = error;
+                                    return false;
+                                } else {
+                                    input.classList.remove("is-invalid");
+                                    input.classList.add("is-valid");
+                                    if (feedback) feedback.textContent = "";
+                                    return true;
+                                }
+                            }
 
-                          document.getElementById("whatsappForm").reset();
+                            const fieldList = [
+                                { el: nameInput, name: "name" },
+                                { el: phoneInput, name: "phone" },
+                                { el: emailInput, name: "email" },
+                                { el: subjectInput, name: "subject" },
+                                { el: messageInput, name: "message" }
+                            ];
+
+                            // Real-time Listeners
+                            fieldList.forEach(function(item) {
+                                if (!item.el) return;
+                                item.el.addEventListener("blur", function() {
+                                    if (item.el.value.trim().length > 0) {
+                                        validateField(item.el, item.name);
+                                    }
+                                });
+                                item.el.addEventListener("input", function() {
+                                    if (item.el.classList.contains("is-invalid")) {
+                                        validateField(item.el, item.name);
+                                    }
+                                });
+                            });
+
+                            // Submit Handler
+                            form.addEventListener("submit", function(e) {
+                                e.preventDefault();
+
+                                let allValid = true;
+                                let firstInvalid = null;
+
+                                fieldList.forEach(function(item) {
+                                    const valid = validateField(item.el, item.name);
+                                    if (!valid) {
+                                        allValid = false;
+                                        if (!firstInvalid) firstInvalid = item.el;
+                                    }
+                                });
+
+                                if (!allValid) {
+                                    if (firstInvalid) {
+                                        firstInvalid.focus();
+                                        firstInvalid.classList.add("shake-animate");
+                                        setTimeout(function() {
+                                            firstInvalid.classList.remove("shake-animate");
+                                        }, 450);
+                                    }
+                                    if (formAlert) {
+                                        formAlert.className = "alert alert-danger d-flex align-items-center mb-3";
+                                        formAlert.innerHTML = '<i class="fa fa-exclamation-circle me-2 fs-5"></i> Please fill in all required fields correctly.';
+                                        formAlert.classList.remove("d-none");
+                                    }
+                                    return;
+                                }
+
+                                // If All Valid -> Send via WhatsApp
+                                const phoneNumber = "919626325204";
+                                const name = nameInput.value.trim();
+                                const phone = phoneInput.value.trim();
+                                const email = emailInput.value.trim();
+                                const subject = subjectInput.value.trim();
+                                const message = messageInput.value.trim();
+
+                                const formattedMsg = 
+`*NEW INQUIRY - ANBU TRADERS*
+──────────────────────
+👤 *Name:* ${name}
+📱 *Phone:* ${phone}
+✉️ *Email:* ${email}
+📦 *Requirement:* ${subject}
+📝 *Message:* ${message}
+──────────────────────
+_Sent from Anbu Traders Official Website_`;
+
+                                const encoded = encodeURIComponent(formattedMsg);
+                                const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
+
+                                // Show feedback and connecting state
+                                if (submitBtn) {
+                                    submitBtn.disabled = true;
+                                    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Connecting to WhatsApp...';
+                                }
+
+                                if (formAlert) {
+                                    formAlert.className = "alert alert-success d-flex align-items-center mb-3";
+                                    formAlert.innerHTML = `<i class="fa fa-check-circle me-2 fs-5"></i> Thank you <strong>${name}</strong>! Redirecting to WhatsApp...`;
+                                    formAlert.classList.remove("d-none");
+                                }
+
+                                setTimeout(function() {
+                                    window.open(url, "_blank");
+
+                                    // Reset UI
+                                    if (submitBtn) {
+                                        submitBtn.disabled = false;
+                                        submitBtn.innerHTML = '<i class="fab fa-whatsapp fs-5"></i> <span>Send Message via WhatsApp</span>';
+                                    }
+                                    form.reset();
+                                    fieldList.forEach(function(item) {
+                                        if (item.el) item.el.classList.remove("is-valid", "is-invalid");
+                                    });
+
+                                    setTimeout(function() {
+                                        if (formAlert) formAlert.classList.add("d-none");
+                                    }, 4000);
+                                }, 700);
+                            });
                         });
                         </script>
                     </div>
@@ -345,10 +549,17 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="map-card-container">
                         <div class="map-card-header">
-                            <h5><i class="fa fa-map-marked-alt text-primary"></i> Main Yard Location</h5>
-                            <a class="btn btn-sm btn-outline-primary rounded-pill px-3" href="https://maps.app.goo.gl/NRr4yAn8EpVjEPzx5" target="_blank">
+                            <div>
+                                <h5><i class="fa fa-map-marked-alt text-primary"></i> Main Yard Location</h5>
+                                <div class="text-muted small mt-1"><i class="fa fa-map-pin text-primary me-1"></i> Sedarapet Yard, Pondicherry</div>
+                            </div>
+                            <a class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-bold" href="https://maps.app.goo.gl/NRr4yAn8EpVjEPzx5" target="_blank">
                                 Open Map <i class="fa fa-external-link-alt ms-1"></i>
                             </a>
+                        </div>
+                        <div class="map-card-info-bar">
+                            <span class="info-badge-live"><i class="fa fa-circle"></i> Yard Open: 8:30 AM - 8:00 PM</span>
+                            <span class="text-muted"><i class="fa fa-truck-loading text-primary me-1"></i> Daily Loading & Dispatch</span>
                         </div>
                         <div class="map-iframe-container">
                             <iframe
