@@ -437,8 +437,257 @@ a {
 }
 
 /* ==============================================
-   HERO SECTION (BERGER WEATHERCOAT & 3D PAINT SWIRL)
+   HERO CAROUSEL SECTION (Light, Sunny & Minimal Aesthetic)
    ============================================== */
+.hero-paint-carousel-wrapper {
+  position: relative;
+  background-color: #F8FAFC;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+#heroPaintCarousel {
+  position: relative;
+  width: 100%;
+}
+
+.hero-carousel-slide {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background-color: #F8FAFC;
+}
+
+.hero-slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  transition: transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-carousel-slide.active .hero-slide-bg {
+  transform: scale(1.025);
+}
+
+/* Light, clear sunny scrim - NO heavy black darkness */
+.hero-slide-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.72) 0%, 
+    rgba(255, 255, 255, 0.45) 30%, 
+    rgba(255, 255, 255, 0.12) 52%, 
+    transparent 72%);
+  pointer-events: none;
+}
+
+.hero-slide-container {
+  position: relative;
+  z-index: 5;
+  padding-top: 85px;
+  padding-bottom: 95px;
+  width: 100%;
+}
+
+/* Clean, Minimalist Typography matching Reference Image */
+.hero-clean-title {
+  font-family: var(--font-heading);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-title-dark {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #0F1E36;
+  letter-spacing: -0.025em;
+}
+
+.hero-title-orange {
+  font-size: 58px;
+  line-height: 1.12;
+  font-weight: 800;
+  color: var(--primary-orange);
+  letter-spacing: -0.03em;
+}
+
+/* Orange Accent Line */
+.hero-accent-line {
+  width: 44px;
+  height: 3.5px;
+  background: var(--primary-orange);
+  border-radius: 2px;
+  margin: 18px 0 20px;
+}
+
+/* Clean 2-Line Subtitle */
+.hero-clean-subtitle {
+  font-family: var(--font-body);
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.6;
+  max-width: 440px;
+  margin-bottom: 28px;
+}
+
+/* Clean Hero CTA Container */
+.hero-clean-cta {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: visible !important;
+  min-height: 52px;
+  z-index: 10;
+}
+
+/* Single Pill CTA Button */
+.btn-hero-clean {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-orange);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 32px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.35);
+  border: none;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-hero-clean:hover {
+  background: var(--primary-orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(234, 88, 12, 0.45);
+  color: #FFFFFF !important;
+}
+
+.btn-hero-clean i {
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.btn-hero-clean:hover i {
+  transform: translateX(4px);
+}
+
+/* Slide Content Entrance Animation */
+.hero-carousel-slide.active .hero-clean-title {
+  animation: heroSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both 0.1s;
+}
+
+.hero-carousel-slide.active .hero-accent-line {
+  animation: heroSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both 0.18s;
+}
+
+.hero-carousel-slide.active .hero-clean-subtitle {
+  animation: heroSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both 0.25s;
+}
+
+.hero-carousel-slide.active .hero-clean-cta {
+  animation: heroSlideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both 0.35s;
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Carousel Modern Bottom Dots */
+.hero-carousel-dots {
+  position: absolute;
+  bottom: 24px !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 25 !important;
+  pointer-events: auto !important;
+}
+
+.hero-carousel-dots [data-bs-target] {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 9999px !important;
+  background-color: rgba(15, 30, 54, 0.3) !important;
+  border: 2px solid transparent !important;
+  opacity: 0.75 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-sizing: content-box !important;
+}
+
+.hero-carousel-dots [data-bs-target]:hover {
+  opacity: 1 !important;
+  background-color: var(--primary-orange) !important;
+  transform: scale(1.15);
+}
+
+.hero-carousel-dots .active {
+  width: 36px !important;
+  border-radius: 9999px !important;
+  background-color: var(--primary-orange) !important;
+  opacity: 1 !important;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.45) !important;
+}
+
+/* Sleek Carousel Prev/Next Controls (Daylight style) */
+.hero-carousel-btn {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 30, 54, 0.1);
+  backdrop-filter: blur(10px);
+  color: #0F1E36 !important;
+  font-size: 15px;
+  opacity: 0.85;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 20;
+}
+
+.hero-carousel-btn-prev {
+  left: 20px;
+}
+
+.hero-carousel-btn-next {
+  right: 20px;
+}
+
+.hero-carousel-btn:hover {
+  background: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: #FFFFFF !important;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45);
+}
+
 .hero-paint-section {
   position: relative;
   background-color: var(--primary-navy-deep);
@@ -475,21 +724,21 @@ a {
 }
 
 .hero-main-title {
-  font-size: 56px;
-  line-height: 1.15;
+  font-size: 48px;
+  line-height: 1.18;
   font-weight: 800;
   color: #FFFFFF;
   letter-spacing: -0.03em;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero-subtitle {
-  font-size: 17px;
+  font-size: 15.5px;
   color: #E2E8F0;
-  max-width: 540px;
-  line-height: 1.65;
-  margin-bottom: 32px;
+  max-width: 480px;
+  line-height: 1.55;
+  margin-bottom: 24px;
 }
 
 /* Hero Dual Buttons */
@@ -1508,45 +1757,293 @@ a {
 }
 
 .color-pills-nav {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 35px;
+  overflow: visible !important;
+}
+
+/* Floating Venom Stage for Color Filter Pills */
+.pill-venom-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none !important;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.25s ease, left 0.18s cubic-bezier(0.16, 1, 0.3, 1), top 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: visible !important;
+}
+
+.pill-venom-stage.active {
+  opacity: 1;
+}
+
+.pill-venom-dummy-btn {
+  width: 95px;
+  height: 38px;
+  border-radius: 9999px;
+  background: transparent;
+  pointer-events: none;
 }
 
 .color-filter-pill {
+  position: relative;
+  z-index: 5;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #FFFFFF;
-  border: 1px solid var(--border-light);
-  padding: 10px 20px;
+  padding: 9px 18px;
   border-radius: var(--radius-pill);
   font-family: var(--font-heading);
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--text-main);
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  border: 1.5px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
-}
-
-.color-filter-pill:hover,
-.color-filter-pill.active {
-  border-color: var(--primary-orange);
+  user-select: none;
   background: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.2);
-  color: var(--primary-orange);
 }
 
 .color-pill-dot {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.color-filter-pill:hover .color-pill-dot,
+.color-filter-pill.active .color-pill-dot {
+  transform: scale(1.15);
+}
+
+/* 1. Greys (Slate Grey) */
+.color-filter-pill.pill-grey {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+  color: #64748B;
+}
+.color-filter-pill.pill-grey:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+  color: #475569;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(100, 116, 139, 0.18);
+}
+.color-filter-pill.pill-grey.active {
+  background: #F1F5F9;
+  border-color: #64748B;
+  color: #334155;
+  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-grey.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.22);
+}
+
+/* 2. Browns (Earthy Warm Muted Brown) */
+.color-filter-pill.pill-brown {
+  background: #FAF7F2;
+  border-color: #EFE4D6;
+  color: #8C5329;
+}
+.color-filter-pill.pill-brown:hover {
+  background: #F5ECE0;
+  border-color: #B45309;
+  color: #78350F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(140, 83, 41, 0.18);
+}
+.color-filter-pill.pill-brown.active {
+  background: #F5ECE0;
+  border-color: #92400E;
+  color: #592505;
+  box-shadow: 0 6px 20px rgba(120, 53, 15, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-brown.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(120, 53, 15, 0.22);
+}
+
+/* 3. Blues (Oceanic Royal Blue) */
+.color-filter-pill.pill-blue {
+  background: #EFF6FF;
+  border-color: #DBEAFE;
+  color: #2563EB;
+}
+.color-filter-pill.pill-blue:hover {
+  background: #E0EDFF;
+  border-color: #60A5FA;
+  color: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.18);
+}
+.color-filter-pill.pill-blue.active {
+  background: #E0EDFF;
+  border-color: #2563EB;
+  color: #1E40AF;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-blue.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22);
+}
+
+/* 4. Reds (Velvet Red) */
+.color-filter-pill.pill-red {
+  background: #FEF2F2;
+  border-color: #FEE2E2;
+  color: #DC2626;
+}
+.color-filter-pill.pill-red:hover {
+  background: #FEE2E2;
+  border-color: #F87171;
+  color: #B91C1C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.18);
+}
+.color-filter-pill.pill-red.active {
+  background: #FEE2E2;
+  border-color: #DC2626;
+  color: #991B1B;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-red.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.22);
+}
+
+/* 5. Oranges (Sunset Vibrant Orange) */
+.color-filter-pill.pill-orange {
+  background: #FFF7ED;
+  border-color: #FFEDD5;
+  color: #EA580C;
+}
+.color-filter-pill.pill-orange:hover {
+  background: #FFEDD5;
+  border-color: #FB923C;
+  color: #C2410C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.18);
+}
+.color-filter-pill.pill-orange.active {
+  background: #FFEDD5;
+  border-color: #EA580C;
+  color: #9A3412;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-orange.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.22);
+}
+
+/* 6. Yellows (Sunshine Golden Yellow) */
+.color-filter-pill.pill-yellow {
+  background: #FFFBEB;
+  border-color: #FEF3C7;
+  color: #D97706;
+}
+.color-filter-pill.pill-yellow:hover {
+  background: #FEF3C7;
+  border-color: #FBBF24;
+  color: #B45309;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.18);
+}
+.color-filter-pill.pill-yellow.active {
+  background: #FEF3C7;
+  border-color: #D97706;
+  color: #92400E;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-yellow.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.22);
+}
+
+/* 7. Purples (Imperial Royal Purple) */
+.color-filter-pill.pill-purple {
+  background: #FAF5FF;
+  border-color: #F3E8FF;
+  color: #9333EA;
+}
+.color-filter-pill.pill-purple:hover {
+  background: #F3E8FF;
+  border-color: #C084FC;
+  color: #7E22CE;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(147, 51, 234, 0.18);
+}
+.color-filter-pill.pill-purple.active {
+  background: #F3E8FF;
+  border-color: #9333EA;
+  color: #6B21A8;
+  box-shadow: 0 6px 20px rgba(147, 51, 234, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-purple.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.22);
+}
+
+/* 8. Pink (Blush Elegant Pink) */
+.color-filter-pill.pill-pink {
+  background: #FDF2F8;
+  border-color: #FCE7F3;
+  color: #E11D48;
+}
+.color-filter-pill.pill-pink:hover {
+  background: #FCE7F3;
+  border-color: #F472B6;
+  color: #BE185D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.18);
+}
+.color-filter-pill.pill-pink.active {
+  background: #FCE7F3;
+  border-color: #E11D48;
+  color: #9D174D;
+  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-pink.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.22);
+}
+
+/* 9. Green (Meadow Fresh Green) */
+.color-filter-pill.pill-green {
+  background: #ECFDF5;
+  border-color: #D1FAE5;
+  color: #059669;
+}
+.color-filter-pill.pill-green:hover {
+  background: #D1FAE5;
+  border-color: #34D399;
+  color: #047857;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.18);
+}
+.color-filter-pill.pill-green.active {
+  background: #D1FAE5;
+  border-color: #059669;
+  color: #064E3B;
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.26);
+  font-weight: 700;
+}
+.color-filter-pill.pill-green.active .color-pill-dot {
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.22);
 }
 
 .interactive-room-stage {
@@ -1778,4 +2275,133 @@ a {
 
 .venom-pill-nav:hover i {
   transform: translateX(3px);
+}
+
+/* Generic Venom Button Wrapper for Hero & Page Sections */
+.venom-btn-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 225px;
+  height: 48px;
+  overflow: visible !important;
+}
+
+.hero-clean-cta .venom-btn-wrapper {
+  width: 225px;
+  height: 48px;
+  margin-top: 4px;
+}
+
+.venom-btn-about {
+  width: 235px !important;
+  height: 48px !important;
+}
+
+.venom-btn-shade {
+  width: 220px !important;
+  height: 48px !important;
+}
+
+.venom-btn-est {
+  width: 190px !important;
+  height: 48px !important;
+}
+
+.venom-stage-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 340px;
+  overflow: visible !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none !important;
+  background: transparent;
+  z-index: 15;
+}
+
+.venom-pill-hero {
+  pointer-events: auto !important;
+  height: 48px !important;
+  padding: 0 32px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  border-radius: var(--radius-pill) !important;
+  color: #FFFFFF !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+.venom-pill-hero i {
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.venom-pill-hero:hover i {
+  transform: translateX(4px);
+}
+
+
+/* ==============================================
+   RESPONSIVE HERO CAROUSEL MEDIA QUERIES
+   ============================================== */
+@media (max-width: 991.98px) {
+  .hero-paint-carousel-wrapper,
+  .hero-carousel-slide {
+    min-height: 540px;
+  }
+  .hero-slide-bg::after {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.88) 0%, 
+      rgba(255, 255, 255, 0.72) 55%, 
+      rgba(255, 255, 255, 0.25) 100%);
+  }
+  .hero-slide-bg {
+    background-position: 72% center;
+  }
+  .hero-title-dark {
+    font-size: 38px !important;
+  }
+  .hero-title-orange {
+    font-size: 42px !important;
+  }
+  .hero-carousel-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-paint-carousel-wrapper,
+  .hero-carousel-slide {
+    min-height: 480px;
+  }
+  .hero-slide-container {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+  .hero-title-dark {
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+  }
+  .hero-title-orange {
+    font-size: 32px !important;
+    line-height: 1.15 !important;
+  }
+  .hero-clean-subtitle {
+    font-size: 14.5px !important;
+    margin-bottom: 22px !important;
+  }
 }

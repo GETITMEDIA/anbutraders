@@ -179,65 +179,138 @@
          3. HERO SECTION: "Painting Is Silent Poetry, And Poetry Is Painting"
          (Poetic Legacy from Old Site Reimagined in 2026 3D Liquid Paint Aesthetic)
          ============================================== -->
-    <section class="hero-paint-section" id="heroSection">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="row align-items-center g-4">
-                <!-- Left Content Column -->
-                <div class="col-lg-8 hero-content-col">
-                    <div class="hero-eyebrow-tag">
-                        <i class="fa fa-palette text-warning"></i> AUTHORIZED ASIAN PAINTS, BERGER &amp; JSW DEALER
-                    </div>
-                    
-                    <h1 class="hero-main-title">
-                        Painting Is Silent Poetry,<br>
-                        And Poetry Is Painting.
-                    </h1>
+    <section class="hero-paint-carousel-wrapper" id="heroSection">
+        <div id="heroPaintCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <!-- Carousel Bottom Dots Indicators -->
+            <div class="carousel-indicators hero-carousel-dots">
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Berger Paints"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="1" aria-label="Slide 2 - JSW Paints"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Asian Paints"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="3" aria-label="Slide 4 - Wall Putty"></button>
+            </div>
 
-                    <p class="hero-subtitle">
-                        Transforming spaces with vibrant luxury emulsions, weather-shield protection, and artistic express finishes. Experience colors that speak to your soul.
-                    </p>
-
-                    <!-- Dual 2026 CTA Buttons -->
-                    <div class="hero-cta-group">
-                        <a href="#our-brands" class="btn-hero-explore">
-                            Explore Products <i class="fa fa-arrow-right ms-1"></i>
-                        </a>
-                        <button type="button" class="btn-hero-advice" data-bs-toggle="modal" data-bs-target="#estimatorModal">
-                            <i class="fa fa-calculator me-1"></i> Get Paint Estimate <i class="fa fa-arrow-right ms-1"></i>
-                        </button>
-                    </div>
-
-                    <!-- 4 Circular Feature Badges Bar (Single Row on Desktop) -->
-                    <div class="hero-feature-badges-bar">
-                        <div class="hero-badge-pill">
-                            <span class="hero-badge-circle"><i class="fa fa-shield-alt"></i></span>
-                            <span>10-Year Weather Warranty</span>
-                        </div>
-                        <div class="hero-badge-pill">
-                            <span class="hero-badge-circle"><i class="fa fa-palette"></i></span>
-                            <span>2200+ Designer Shades</span>
-                        </div>
-                        <div class="hero-badge-pill">
-                            <span class="hero-badge-circle"><i class="fa fa-tint"></i></span>
-                            <span>Scientific Waterproofing</span>
-                        </div>
-                        <div class="hero-badge-pill">
-                            <span class="hero-badge-circle"><i class="fa fa-leaf"></i></span>
-                            <span>100% Zero VOC Eco-Safe</span>
+            <div class="carousel-inner">
+                <!-- Slide 1: Berger Silk BreatheEasy -->
+                <div class="carousel-item active hero-carousel-slide hero-slide-1">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_1.png');"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Beautiful Homes</span>
+                                    <span class="hero-title-orange">Brighter Living</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Premium paints for long-lasting<br>
+                                    beauty and protection.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage1">
+                                            <canvas id="heroVenomHand1" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl1" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="burger.html" class="venom-pill venom-pill-hero" id="heroVenomBtn1">
+                                                Explore Berger <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Visual: 3D Bucket with Glossy Liquid Paint Swirls -->
-                <div class="col-lg-4 d-none d-lg-flex justify-content-center">
-                    <div class="hero-bucket-showcase">
-                        <div class="hero-bucket-glow"></div>
-                        <!-- Floating glossy 3D paint droplets -->
-                        <span class="hero-droplet droplet-orange-1"></span>
-                        <span class="hero-droplet droplet-blue-1"></span>
-                        <span class="hero-droplet droplet-cyan-1"></span>
-                        <!-- 3D Luxury Paint Bucket -->
-                        <img src="paint/Silk BreatheEasy can (1).webp" alt="Anbu Paints 3D Luxury Can with Flowing Paint Swirls" class="hero-3d-bucket-img">
+                <!-- Slide 2: JSW Paints Halo & Aurus -->
+                <div class="carousel-item hero-carousel-slide hero-slide-2">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_2.png');"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Any Colour, One Price</span>
+                                    <span class="hero-title-orange">Pure Vibrant Living</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    100% water-based luxury paints for<br>
+                                    stunning interior &amp; exterior walls.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage2">
+                                            <canvas id="heroVenomHand2" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl2" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="jsw.html" class="venom-pill venom-pill-hero" id="heroVenomBtn2">
+                                                Explore JSW Paints <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Asian Paints Royale & Apcolite -->
+                <div class="carousel-item hero-carousel-slide hero-slide-3">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_3.png');"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Royale Luxury Finishes</span>
+                                    <span class="hero-title-orange">Timeless Elegance</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Signature Teflon surface protection for<br>
+                                    radiant luster and lasting durability.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage3">
+                                            <canvas id="heroVenomHand3" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl3" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="asianpant.html" class="venom-pill venom-pill-hero" id="heroVenomBtn3">
+                                                Explore Asian Paints <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Premium Wall Putty (Asian Paints, JSW, Berger) -->
+                <div class="carousel-item hero-carousel-slide hero-slide-4">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_4.png');"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Smooth White Base</span>
+                                    <span class="hero-title-orange">Flawless Strength</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Superior adhesion white cement putty for<br>
+                                    mirror-smooth, damp-resistant walls.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage4">
+                                            <canvas id="heroVenomHand4" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl4" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="wallputty.html" class="venom-pill venom-pill-hero" id="heroVenomBtn4">
+                                                Explore Wall Putty <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,89 +357,21 @@
                         </div>
                     </div>
 
-                    <a href="#servicepaint" class="btn-get-quote">
-                        Explore Our Services <i class="fa fa-arrow-right"></i>
-                    </a>
+                    <div class="venom-btn-wrapper venom-btn-about mt-2">
+                        <div class="venom-stage venom-stage-hero" id="aboutVenomStage">
+                            <canvas id="aboutVenomHand" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="aboutVenomGl" class="venom-canvas venom-canvas-gl"></canvas>
+                            <a href="#servicepaint" class="venom-pill venom-pill-hero" id="aboutVenomBtn">
+                                Explore Our Services <i class="fa fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==============================================
-         5. WHY CHOOSE ANBU PAINTS (6 3D Cards from Old Site Matrix)
-         Window Washing | Color Proof | Mildew Removal | Faux Finishes | Water Proofing | Pre-Point Demo
-         ============================================== -->
-    <section class="why-choose-section" id="why-choose">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="text-center">
-                <span class="section-eyebrow" style="color: #FFA56E;">THE ANBU ADVANTAGE</span>
-                <h2 class="section-title text-white">Why Choose Anbu Paints</h2>
-                <p class="section-subtitle text-white-50">Six core pillars of excellence designed to give your property lasting protection and vibrant beauty.</p>
-            </div>
 
-            <div class="why-card-grid">
-                <!-- Card 1: Window Washing & Surface Preparation -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-magenta"></span>
-                    <div class="why-icon-box icon-magenta">
-                        <i class="fa fa-shower"></i>
-                    </div>
-                    <h4>Window Washing &amp; Prep</h4>
-                    <p>At Anbu Paints, we take pride in making your surfaces gleam. Our pre-wash and surface preparation removes dust and grime for optimal paint adhesion.</p>
-                </div>
-
-                <!-- Card 2: Color Proof & Computerized Tinting -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-red"></span>
-                    <div class="why-icon-box icon-red">
-                        <i class="fa fa-fill-drip"></i>
-                    </div>
-                    <h4>Color Proof</h4>
-                    <p>Choosing the right color can be tough, but at Anbu Paints, we provide expert computerized color proofing to ensure the shades match your vision perfectly.</p>
-                </div>
-
-                <!-- Card 3: Mildew Removal & Anti-Fungal Shield -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-blue"></span>
-                    <div class="why-icon-box icon-blue">
-                        <i class="fa fa-shield-virus"></i>
-                    </div>
-                    <h4>Mildew Removal</h4>
-                    <p>Protect your home with expert mildew and algal removal. We eliminate deep moisture bacteria using safe bio-pack formulas that restore surface health.</p>
-                </div>
-
-                <!-- Card 4: Faux Finishes & Designer Textures -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-bronze"></span>
-                    <div class="why-icon-box icon-bronze">
-                        <i class="fa fa-paint-roller"></i>
-                    </div>
-                    <h4>Faux Finishes</h4>
-                    <p>Transform your home with unique faux finishes by Anbu Paints. We offer tactile textures, metallic glazes, and stucco effects for stunning statement walls.</p>
-                </div>
-
-                <!-- Card 5: Scientific Waterproofing -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-green"></span>
-                    <div class="why-icon-box icon-green">
-                        <i class="fa fa-water"></i>
-                    </div>
-                    <h4>Water Proofing</h4>
-                    <p>Keep your property safe from tropical monsoon water damage. We offer top-notch elastomeric barrier coatings for terraces, basements, and exterior walls.</p>
-                </div>
-
-                <!-- Card 6: Pre - Point Demo & Moisture Metering -->
-                <div class="why-feature-card">
-                    <span class="why-card-bar bar-amber"></span>
-                    <div class="why-icon-box icon-amber">
-                        <i class="fa fa-search"></i>
-                    </div>
-                    <h4>Pre - Paint Demo</h4>
-                    <p>Clear communication is our promise. Our pre-paint demo service lets you inspect actual finish textures and test wall moisture levels before full execution.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ==============================================
          6. OUR PAINTING SERVICES (6 Services from Old Site with ID #servicepaint)
@@ -512,31 +517,38 @@
 
             <!-- 9 Interactive Color Filter Pills -->
             <div class="color-pills-nav" id="colorPillsNav">
-                <button type="button" class="color-filter-pill active" data-img="paint/gray.jpg" data-name="Modern Greys" data-hex="#707A8A" data-mood="Sophisticated, Minimalist &amp; Contemporary">
+                <!-- Floating Light Venom Symbiote Stage for Color Filter Pills -->
+                <div class="pill-venom-stage" id="pillVenomStage">
+                    <canvas id="pillVenomHand" class="venom-canvas venom-canvas-hand"></canvas>
+                    <canvas id="pillVenomGl" class="venom-canvas venom-canvas-gl"></canvas>
+                    <div class="pill-venom-dummy-btn" id="pillVenomDummyBtn"></div>
+                </div>
+
+                <button type="button" class="color-filter-pill pill-grey active" data-img="paint/gray.jpg" data-name="Modern Greys" data-hex="#707A8A" data-mood="Sophisticated, Minimalist &amp; Contemporary">
                     <span class="color-pill-dot" style="background: #707A8A;"></span> Greys
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/brawn.jpg" data-name="Earthy Browns" data-hex="#78350F" data-mood="Warm, Grounded &amp; Welcoming">
+                <button type="button" class="color-filter-pill pill-brown" data-img="paint/brawn.jpg" data-name="Earthy Browns" data-hex="#78350F" data-mood="Warm, Grounded &amp; Welcoming">
                     <span class="color-pill-dot" style="background: #78350F;"></span> Browns
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/BLUE.jpg" data-name="Oceanic Blues" data-hex="#1E40AF" data-mood="Serene, Royal &amp; Calming">
+                <button type="button" class="color-filter-pill pill-blue" data-img="paint/BLUE.jpg" data-name="Oceanic Blues" data-hex="#1E40AF" data-mood="Serene, Royal &amp; Calming">
                     <span class="color-pill-dot" style="background: #1E40AF;"></span> Blues
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/red.jpg" data-name="Velvet Reds" data-hex="#B91C1C" data-mood="Bold, Passionate &amp; Dramatic">
+                <button type="button" class="color-filter-pill pill-red" data-img="paint/red.jpg" data-name="Velvet Reds" data-hex="#B91C1C" data-mood="Bold, Passionate &amp; Dramatic">
                     <span class="color-pill-dot" style="background: #B91C1C;"></span> Reds
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/orange.jpg" data-name="Sunset Oranges" data-hex="#EA580C" data-mood="Energetic, Vibrant &amp; Inviting">
+                <button type="button" class="color-filter-pill pill-orange" data-img="paint/orange.jpg" data-name="Sunset Oranges" data-hex="#EA580C" data-mood="Energetic, Vibrant &amp; Inviting">
                     <span class="color-pill-dot" style="background: #EA580C;"></span> Oranges
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/yellow.jpg" data-name="Sunshine Yellows" data-hex="#F59E0B" data-mood="Bright, Cheerful &amp; Joyful">
+                <button type="button" class="color-filter-pill pill-yellow" data-img="paint/yellow.jpg" data-name="Sunshine Yellows" data-hex="#F59E0B" data-mood="Bright, Cheerful &amp; Joyful">
                     <span class="color-pill-dot" style="background: #F59E0B;"></span> Yellows
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/HERO1.jpg" data-name="Imperial Purples" data-hex="#7E22CE" data-mood="Noble, Artistic &amp; Luxurious">
+                <button type="button" class="color-filter-pill pill-purple" data-img="paint/HERO1.jpg" data-name="Imperial Purples" data-hex="#7E22CE" data-mood="Noble, Artistic &amp; Luxurious">
                     <span class="color-pill-dot" style="background: #7E22CE;"></span> Purples
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/pink.jpg" data-name="Blush Pinks" data-hex="#F43F5E" data-mood="Delicate, Dreamy &amp; Chic">
+                <button type="button" class="color-filter-pill pill-pink" data-img="paint/pink.jpg" data-name="Blush Pinks" data-hex="#F43F5E" data-mood="Delicate, Dreamy &amp; Chic">
                     <span class="color-pill-dot" style="background: #F43F5E;"></span> Pink
                 </button>
-                <button type="button" class="color-filter-pill" data-img="paint/green.jpg" data-name="Meadow Greens" data-hex="#059669" data-mood="Organic, Refreshing &amp; Balanced">
+                <button type="button" class="color-filter-pill pill-green" data-img="paint/green.jpg" data-name="Meadow Greens" data-hex="#059669" data-mood="Organic, Refreshing &amp; Balanced">
                     <span class="color-pill-dot" style="background: #059669;"></span> Green
                 </button>
             </div>
@@ -604,9 +616,15 @@
                     <div class="col-lg-3 col-12 text-lg-start text-center">
                         <h3 class="shade-mixing-cta-title">Bring Your Vision to Life with the Perfect Shade</h3>
                         <p class="shade-mixing-cta-desc">Visit our showroom or send us your sample swatch for exact matching.</p>
-                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20sample%20color%20code%20I%20want%20to%20mix." target="_blank" rel="noopener noreferrer" class="btn-get-quote">
-                            Consult Specialist <i class="fa fa-arrow-right"></i>
-                        </a>
+                        <div class="venom-btn-wrapper venom-btn-shade mt-2">
+                            <div class="venom-stage venom-stage-hero" id="shadeVenomStage">
+                                <canvas id="shadeVenomHand" class="venom-canvas venom-canvas-hand"></canvas>
+                                <canvas id="shadeVenomGl" class="venom-canvas venom-canvas-gl"></canvas>
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20sample%20color%20code%20I%20want%20to%20mix." target="_blank" rel="noopener noreferrer" class="venom-pill venom-pill-hero" id="shadeVenomBtn">
+                                    Consult Specialist <i class="fa fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -735,9 +753,15 @@
                             <div class="estimator-calc-info">
                                 <h5>Get Your Paint Estimate Now</h5>
                                 <p>Enter your area details and get an instant estimate for your painting project.</p>
-                                <button type="button" class="btn-get-quote" data-bs-toggle="modal" data-bs-target="#estimatorModal">
-                                    Calculate Now <i class="fa fa-arrow-right"></i>
-                                </button>
+                                <div class="venom-btn-wrapper venom-btn-est mt-2">
+                                    <div class="venom-stage venom-stage-hero" id="estVenomStage">
+                                        <canvas id="estVenomHand" class="venom-canvas venom-canvas-hand"></canvas>
+                                        <canvas id="estVenomGl" class="venom-canvas venom-canvas-gl"></canvas>
+                                        <button type="button" class="venom-pill venom-pill-hero" id="estVenomBtn" data-bs-toggle="modal" data-bs-target="#estimatorModal">
+                                            Calculate Now <i class="fa fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1205,44 +1229,300 @@
             }
 
             // -------------------------------------------------------------
-            // 6. Venom 3D Symbiote Liquid Paint Button: Navbar "Get a Quote"
-            // (Autoplay OFF, User's Original Cursor, Signature Liquid Orange)
+            // 5b. Hero Brand Carousel (Autoplay 5s, smooth crossfade)
+            // -------------------------------------------------------------
+            const heroCarouselEl = document.getElementById('heroPaintCarousel');
+            if (heroCarouselEl && window.bootstrap && window.bootstrap.Carousel) {
+                const carouselInstance = new bootstrap.Carousel(heroCarouselEl, {
+                    interval: 5000,
+                    ride: 'carousel',
+                    pause: 'hover',
+                    wrap: true
+                });
+                carouselInstance.cycle();
+            }
+
+            // -------------------------------------------------------------
+            // 6. Venom 3D Symbiote Liquid Paint Buttons
+            // (Autoplay OFF, User's Original Cursor, Hover 25%, Signature Liquid Orange)
+            // Applied to all signature orange CTA buttons across the website
             // -------------------------------------------------------------
             if (typeof initVenomButton === 'function') {
+                var sharedVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                // A. Navbar "Get a Quote"
                 initVenomButton({
                     stage: '#navVenomStage',
                     btn: '#navVenomBtn',
                     glCanvas: '#navVenomGlCanvas',
                     handCanvas: '#navVenomHandCanvas',
                     label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
-                    gooColor: '#EA580C', // Anbu Paints Signature Vibrant Liquid Orange
+                    gooColor: '#EA580C',
                     textColor: '#FFFFFF',
                     shine: '#FFF5EB',
                     size: 42,
-                    cursor: 'native', // User's real original mouse cursor!
-                    autoplay: false,  // Autoplay OFF! No ghost hand!
-                    hover: 25,        // Hover % set to 25
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
                     reach: 110,
-                    advanced: {
-                        hover: 25,
-                        sense: 180,
-                        release: 140,
-                        strandWidth: 90,
-                        glint: 120,
-                        rim: 100,
-                        recoil: 80,
-                        spikes: 80,
-                        drops: 30
-                    },
+                    advanced: sharedVenomAdv,
                     onClick: function () {
                         var modalEl = document.getElementById('quoteModal');
                         if (modalEl) {
-                            modalEl.style.display = 'block';
-                            modalEl.classList.add('show');
-                            document.body.classList.add('modal-open');
+                            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                            modal.show();
                         }
                     }
                 });
+
+                // B. Hero Carousel Brand CTA Buttons (Slides 1 to 4)
+                var heroVenomConfigs = [
+                    { stage: '#heroVenomStage1', btn: '#heroVenomBtn1', gl: '#heroVenomGl1', hand: '#heroVenomHand1', label: 'Explore Berger <i class="fa fa-arrow-right ms-1"></i>', href: 'burger.html' },
+                    { stage: '#heroVenomStage2', btn: '#heroVenomBtn2', gl: '#heroVenomGl2', hand: '#heroVenomHand2', label: 'Explore JSW Paints <i class="fa fa-arrow-right ms-1"></i>', href: 'jsw.html' },
+                    { stage: '#heroVenomStage3', btn: '#heroVenomBtn3', gl: '#heroVenomGl3', hand: '#heroVenomHand3', label: 'Explore Asian Paints <i class="fa fa-arrow-right ms-1"></i>', href: 'asianpant.html' },
+                    { stage: '#heroVenomStage4', btn: '#heroVenomBtn4', gl: '#heroVenomGl4', hand: '#heroVenomHand4', label: 'Explore Wall Putty <i class="fa fa-arrow-right ms-1"></i>', href: 'wallputty.html' }
+                ];
+
+                var heroVenomInstances = [];
+                heroVenomConfigs.forEach(function (cfg) {
+                    if (document.querySelector(cfg.stage)) {
+                        var inst = initVenomButton({
+                            stage: cfg.stage,
+                            btn: cfg.btn,
+                            glCanvas: cfg.gl,
+                            handCanvas: cfg.hand,
+                            label: cfg.label,
+                            gooColor: '#EA580C',
+                            textColor: '#FFFFFF',
+                            shine: '#FFF5EB',
+                            size: 48,
+                            cursor: 'native',
+                            autoplay: false,
+                            hover: 25,
+                            reach: 120,
+                            advanced: sharedVenomAdv,
+                            onClick: function () {
+                                window.location.href = cfg.href;
+                            }
+                        });
+                        heroVenomInstances.push(inst);
+                    }
+                });
+
+                // Sync initial active slide button wrapper width
+                var activePill = document.querySelector('#heroVenomBtn1');
+                if (activePill && activePill.offsetWidth > 50) {
+                    var wrap1 = activePill.closest('.venom-btn-wrapper');
+                    if (wrap1) wrap1.style.width = activePill.offsetWidth + 'px';
+                }
+
+                // Re-fit WebGL dimensions immediately when carousel slides
+                if (heroCarouselEl) {
+                    heroCarouselEl.addEventListener('slid.bs.carousel', function (e) {
+                        var idx = e.to;
+                        if (heroVenomConfigs[idx]) {
+                            var pill = document.querySelector(heroVenomConfigs[idx].btn);
+                            if (pill && pill.offsetWidth > 50) {
+                                var wrap = pill.closest('.venom-btn-wrapper');
+                                if (wrap) wrap.style.width = pill.offsetWidth + 'px';
+                            }
+                        }
+                        if (heroVenomInstances[idx] && typeof heroVenomInstances[idx].fit === 'function') {
+                            heroVenomInstances[idx].fit();
+                        }
+                    });
+                }
+
+                // C. About Us Section: "Explore Our Services"
+                if (document.querySelector('#aboutVenomStage')) {
+                    initVenomButton({
+                        stage: '#aboutVenomStage',
+                        btn: '#aboutVenomBtn',
+                        glCanvas: '#aboutVenomGl',
+                        handCanvas: '#aboutVenomHand',
+                        label: 'Explore Our Services <i class="fa fa-arrow-right ms-1"></i>',
+                        gooColor: '#EA580C',
+                        textColor: '#FFFFFF',
+                        shine: '#FFF5EB',
+                        size: 48,
+                        cursor: 'native',
+                        autoplay: false,
+                        hover: 25,
+                        reach: 120,
+                        advanced: sharedVenomAdv,
+                        onClick: function () {
+                            var target = document.querySelector('#servicepaint');
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }
+                    });
+                }
+
+                // D. Computerised Shade Mixing: "Consult Specialist"
+                if (document.querySelector('#shadeVenomStage')) {
+                    initVenomButton({
+                        stage: '#shadeVenomStage',
+                        btn: '#shadeVenomBtn',
+                        glCanvas: '#shadeVenomGl',
+                        handCanvas: '#shadeVenomHand',
+                        label: 'Consult Specialist <i class="fa fa-arrow-right ms-1"></i>',
+                        gooColor: '#EA580C',
+                        textColor: '#FFFFFF',
+                        shine: '#FFF5EB',
+                        size: 48,
+                        cursor: 'native',
+                        autoplay: false,
+                        hover: 25,
+                        reach: 120,
+                        advanced: sharedVenomAdv,
+                        onClick: function () {
+                            window.open('https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20sample%20color%20code%20I%20want%20to%20mix.', '_blank');
+                        }
+                    });
+                }
+
+                // E. Instant Paint Estimator: "Calculate Now"
+                if (document.querySelector('#estVenomStage')) {
+                    initVenomButton({
+                        stage: '#estVenomStage',
+                        btn: '#estVenomBtn',
+                        glCanvas: '#estVenomGl',
+                        handCanvas: '#estVenomHand',
+                        label: 'Calculate Now <i class="fa fa-arrow-right ms-1"></i>',
+                        gooColor: '#EA580C',
+                        textColor: '#FFFFFF',
+                        shine: '#FFF5EB',
+                        size: 48,
+                        cursor: 'native',
+                        autoplay: false,
+                        hover: 25,
+                        reach: 120,
+                        advanced: sharedVenomAdv,
+                        onClick: function () {
+                            var modalEl = document.getElementById('estimatorModal');
+                            if (modalEl) {
+                                var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                                modal.show();
+                            }
+                        }
+                    });
+                }
+
+                // F. Digital Colour Studio: Light Multi-Color Venom Effect
+                var pillsNav = document.getElementById('colorPillsNav');
+                var pillStage = document.getElementById('pillVenomStage');
+                var dummyBtn = document.getElementById('pillVenomDummyBtn');
+                var colorPillsList = document.querySelectorAll('.color-filter-pill');
+
+                if (pillsNav && pillStage && dummyBtn) {
+                    var colorVenomInst = initVenomButton({
+                        stage: '#pillVenomStage',
+                        btn: '#pillVenomDummyBtn',
+                        glCanvas: '#pillVenomGl',
+                        handCanvas: '#pillVenomHand',
+                        label: '',
+                        gooColor: '#64748B',
+                        textColor: 'transparent',
+                        shine: '#FFFFFF',
+                        size: 34,
+                        cursor: 'native',
+                        autoplay: false,
+                        hover: 20,
+                        reach: 65,
+                        advanced: {
+                            hover: 20,
+                            sense: 130,
+                            release: 95,
+                            strandWidth: 46, // Delicate light strands
+                            glint: 80,
+                            rim: 75,
+                            recoil: 50,
+                            spikes: 25,
+                            drops: 8,
+                            shadow: 0 // Clean, no heavy black shadow
+                        }
+                    });
+
+                    var pillColorMap = {
+                        'pill-grey': '#64748B',
+                        'pill-brown': '#8C5329',
+                        'pill-blue': '#2563EB',
+                        'pill-red': '#DC2626',
+                        'pill-orange': '#EA580C',
+                        'pill-yellow': '#D97706',
+                        'pill-purple': '#9333EA',
+                        'pill-pink': '#E11D48',
+                        'pill-green': '#059669'
+                    };
+
+                    function attachPillVenom(pillEl) {
+                        var navRect = pillsNav.getBoundingClientRect();
+                        var pillRect = pillEl.getBoundingClientRect();
+
+                        var cx = (pillRect.left + pillRect.width / 2) - navRect.left;
+                        var cy = (pillRect.top + pillRect.height / 2) - navRect.top;
+
+                        pillStage.style.left = cx + 'px';
+                        pillStage.style.top = cy + 'px';
+                        dummyBtn.style.width = pillRect.width + 'px';
+                        dummyBtn.style.height = pillRect.height + 'px';
+
+                        var color = '#64748B';
+                        for (var cls in pillColorMap) {
+                            if (pillEl.classList.contains(cls)) {
+                                color = pillColorMap[cls];
+                                break;
+                            }
+                        }
+                        colorVenomInst.setColor(color);
+                        colorVenomInst.fit();
+                        pillStage.classList.add('active');
+                    }
+
+                    colorPillsList.forEach(function (pill) {
+                        pill.addEventListener('mouseenter', function () {
+                            attachPillVenom(pill);
+                        });
+                    });
+
+                    pillsNav.addEventListener('mousemove', function (e) {
+                        var closest = null;
+                        var minD = Infinity;
+                        colorPillsList.forEach(function (p) {
+                            var r = p.getBoundingClientRect();
+                            var cx = r.left + r.width / 2;
+                            var cy = r.top + r.height / 2;
+                            var d = Math.hypot(e.clientX - cx, e.clientY - cy);
+                            if (d < minD) {
+                                minD = d;
+                                closest = p;
+                            }
+                        });
+                        if (closest && minD < 110) {
+                            attachPillVenom(closest);
+                        }
+                    });
+
+                    pillsNav.addEventListener('mouseleave', function () {
+                        pillStage.classList.remove('active');
+                    });
+
+                    var currActive = document.querySelector('.color-filter-pill.active');
+                    if (currActive) {
+                        attachPillVenom(currActive);
+                    }
+                }
             }
         });
     </script>

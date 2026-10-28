@@ -1140,6 +1140,22 @@ void main(){
       },
       setHover: (val) => {
         live.adv.hover = val;
+      },
+      fit: () => {
+        fit();
+      },
+      measure: () => {
+        measure();
+      },
+      setTarget: (newBtn, newColor) => {
+        if (newBtn) {
+          btn = newBtn;
+          measure();
+        }
+        if (newColor) {
+          live.gooColor = newColor;
+          lastGlKey = "";
+        }
       }
     };
   }
