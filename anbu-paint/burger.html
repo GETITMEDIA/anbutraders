@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
-    <title>Berger Paints Authorized Dealer Pondicherry | Anbu Paints | Express Painting &amp; Silk Luxury</title>
-    <meta name="description" content="Authorized Berger Paints dealer in Pondicherry. Discover Silk Breathe Easy, Silk Glamor, WeatherCoat Long Life, and Bison Glow. 100% computerized shade mixing at Anbu Paints.">
+    <title>Berger Paints Authorized Dealer Pondicherry | Anbu Paints | Express Painting &amp; Weather Defense</title>
+    <meta name="description" content="Authorized Berger Paints dealer in Pondicherry. Discover WeatherCoat Long Life, Silk Breathe Easy, Bison Glow, and Silk Glamor with 100% computerized shade mixing at Anbu Paints.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="../img/icon.png">
@@ -24,28 +24,1600 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Premium 2026 Paints Redesign CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.9">
+    <!-- React Bits SideRays CSS -->
+    <link rel="stylesheet" href="assets/css/side-rays.css">
 
     <style>
+        /* ==============================================================
+           BERGER PAINTS FULL MODERN REDESIGN (MATCHING JSW PAINTS SYSTEM)
+           NAVY BLUE, WHITE, AND ENERGETIC ORANGE PALETTE
+           ============================================================== */
+        :root {
+            --berger-navy-dark: #041731;
+            --berger-navy-primary: #071E3D;
+            --berger-navy-card: #0B254A;
+            --berger-orange: #FF5722;
+            --berger-orange-hover: #E64A19;
+            --berger-orange-light: #FFF0EB;
+            --berger-slate-bg: #F8FAFC;
+            --berger-card-border: #E2E8F0;
+            --berger-text-main: #0F172A;
+            --berger-text-muted: #64748B;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--berger-text-main);
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* 1. TOPBAR STYLING */
+        .anbu-topbar {
+            background-color: #051329;
+            padding: 8px 0;
+            font-size: 13px;
+            color: #94A3B8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .topbar-phone-item, .topbar-email-item {
+            color: #E2E8F0;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: color 0.2s ease;
+        }
+
+        .topbar-phone-item i, .topbar-email-item i {
+            color: var(--berger-orange);
+            font-size: 12px;
+        }
+
+        .topbar-phone-item:hover, .topbar-email-item:hover {
+            color: #FFFFFF;
+        }
+
+        .topbar-social-links a {
+            color: #CBD5E1;
+            font-size: 13px;
+            margin-left: 14px;
+            transition: all 0.25s ease;
+            display: inline-block;
+        }
+
+        .topbar-social-links a:hover {
+            color: var(--berger-orange);
+            transform: translateY(-2px);
+        }
+
+        /* 2. NAVBAR STYLING */
+        .anbu-navbar {
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .anbu-navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        .anbu-brand-logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .anbu-nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 32px;
+        }
+
+        .anbu-nav-link {
+            color: #1E293B;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .anbu-nav-link:hover, .anbu-nav-link.active {
+            color: var(--berger-orange);
+        }
+
+        .nav-item.dropdown .dropdown-menu {
+            border: 1px solid rgba(7, 30, 61, 0.08);
+            box-shadow: 0 16px 40px rgba(7, 30, 61, 0.12);
+            border-radius: 12px;
+            padding: 10px;
+            min-width: 210px;
+        }
+
+        .nav-item.dropdown .dropdown-item {
+            padding: 8px 14px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #334155;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item.dropdown .dropdown-item:hover, .nav-item.dropdown .dropdown-item.active {
+            background-color: var(--berger-orange-light);
+            color: var(--berger-orange);
+        }
+
+        .btn-quote-orange {
+            background: var(--berger-orange);
+            color: #FFFFFF !important;
+            font-weight: 700;
+            font-size: 14.5px;
+            padding: 11px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            box-shadow: 0 4px 16px rgba(255, 87, 34, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-quote-orange:hover {
+            background: var(--berger-orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(255, 87, 34, 0.5);
+        }
+
+        /* 3. CINEMATIC BERGER PAINTS LUXURY HERO (IMAGE 2 SPOTLIGHT STYLE)
+           DEEP DARK STUDIO + SIDERAYS VOLUMETRIC SPOTLIGHT + 4 BERGER PAINTS */
+        .berger-cinematic-hero {
+            position: relative;
+            width: 100%;
+            min-height: 660px;
+            height: auto;
+            background: radial-gradient(900px circle at 75% 25%, rgba(255, 196, 107, 0.22) 0%, rgba(150, 200, 255, 0.10) 35%, transparent 70%),
+                        radial-gradient(800px circle at 50% 100%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
+                        linear-gradient(180deg, #030712 0%, #060e1d 55%, #02050b 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: #FFFFFF;
+            padding: 24px 0 36px;
+        }
+
+        /* Animated SideRays Volumetric Light Beam (Top-Right Spotlight as in Image 2) */
+        .berger-hero-rays {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 1;
+        }
+
+        /* High-Definition Volumetric Light Beam Shaft from Top-Right (Matching Image 2 Reference) */
+        .berger-spotlight-cone {
+            position: absolute;
+            top: -50px;
+            right: 0%;
+            width: 720px;
+            height: 800px;
+            background: radial-gradient(ellipse at 92% 5%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 225, 175, 0.22) 28%, rgba(160, 210, 255, 0.12) 55%, transparent 75%);
+            clip-path: polygon(72% 0%, 100% 0%, 75% 100%, 15% 100%);
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: screen;
+            opacity: 1;
+            filter: blur(12px);
+        }
+
+        /* Dark Floor Vignette & Reflective Surface */
+        .berger-hero-floor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 240px;
+            background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 15, 0.6) 40%, rgba(2, 6, 15, 0.95) 85%, #020617 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .berger-hero-inner {
+            position: relative;
+            z-index: 4;
+            max-width: 1340px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 30px 0;
+        }
+
+        .berger-hero-copy {
+            position: relative;
+            z-index: 5;
+            max-width: 580px;
+        }
+
+        /* Pill Badge */
+        .berger-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #E2E8F0;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .berger-hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #FF5722;
+            box-shadow: 0 0 12px #FF5722, 0 0 24px #FF5722;
+            display: inline-block;
+            animation: bergerPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes bergerPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.35); opacity: 0.7; }
+        }
+
+        /* Title */
+        .berger-hero-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.4rem, 4vw, 3.8rem);
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.12;
+            margin-bottom: 18px;
+            letter-spacing: -0.03em;
+        }
+
+        .berger-hero-title-accent {
+            background: linear-gradient(135deg, #FF6B35 0%, #FFA726 45%, #FFD54F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline;
+        }
+
+        /* Subtext */
+        .berger-hero-text {
+            font-size: clamp(15px, 1.15vw, 16.5px);
+            line-height: 1.65;
+            color: #94A3B8;
+            margin-bottom: 24px;
+            max-width: 520px;
+        }
+
+        /* Feature Pills */
+        .berger-hero-features {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .berger-hero-feat {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 7px 16px;
+            border-radius: 50px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #E2E8F0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .berger-hero-feat i {
+            color: #FF7043;
+            font-size: 13px;
+        }
+
+        /* CTA Buttons */
+        .berger-hero-cta {
+            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+            color: #FFFFFF !important;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            box-shadow: 0 10px 28px rgba(255, 87, 34, 0.45);
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .berger-hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px rgba(255, 87, 34, 0.6);
+            background: linear-gradient(135deg, #F4511E 0%, #D84315 100%);
+        }
+
+        .berger-hero-link {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF !important;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 13px 26px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .berger-hero-link:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* -------------------------------------------------------------
+           RIGHT SIDE: CINEMATIC SPOTLIGHT STAGE (BERGER IMAGES 1 TO 4)
+           ------------------------------------------------------------- */
+        .berger-spotlight-stage {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Interactive 1-4 Paint Switcher Pill Bar */
+        .berger-paint-tabs {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            z-index: 6;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .berger-paint-tab {
+            background: transparent;
+            border: none;
+            color: #94A3B8;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .berger-paint-tab:hover {
+            color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .berger-paint-tab.active {
+            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.45);
+        }
+
+        /* Spotlight Pod (where the can sits with floor reflection) */
+        .berger-pod-wrap {
+            position: relative;
+            width: 100%;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 12px;
+        }
+
+        /* Studio Spotlight Radial Glow on Floor (Image 2 effect) */
+        .berger-spotlight-beam-glow {
+            position: absolute;
+            bottom: 58px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 520px;
+            height: 125px;
+            background: radial-gradient(ellipse at center, rgba(255, 196, 107, 0.45) 0%, rgba(150, 200, 255, 0.22) 40%, transparent 75%);
+            border-radius: 50%;
+            filter: blur(14px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Ambient Dark Floor Shadow directly under the can */
+        .berger-can-floor-shadow {
+            position: absolute;
+            bottom: 66px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 310px;
+            height: 46px;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.7) 45%, transparent 75%);
+            border-radius: 50%;
+            filter: blur(6px);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Can Item Container */
+        .berger-can-view {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .berger-can-view.d-none {
+            display: none !important;
+        }
+
+        /* Single Can Hero Display with Image 2 Reflection */
+        .berger-single-can-img {
+            max-width: 300px;
+            width: 78%;
+            height: auto;
+            max-height: 305px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 16px;
+            filter: drop-shadow(0 22px 32px rgba(0, 0, 0, 0.92)) brightness(1.06) contrast(1.05);
+            -webkit-box-reflect: below 2px linear-gradient(to bottom, transparent 48%, rgba(255, 255, 255, 0.28) 100%);
+            transition: transform 0.4s ease;
+        }
+
+        .berger-can-view:hover .berger-single-can-img {
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        /* All 4 Cans Lineup View */
+        .berger-lineup-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 16px;
+            width: 100%;
+            padding: 10px 0 20px;
+        }
+
+        .berger-lineup-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .berger-lineup-item:hover {
+            transform: translateY(-6px) scale(1.06);
+        }
+
+        .berger-lineup-item img {
+            max-width: 140px;
+            height: auto;
+            max-height: 220px;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.7));
+            -webkit-box-reflect: below 2px linear-gradient(to bottom, transparent 70%, rgba(255, 255, 255, 0.2) 100%);
+        }
+
+        .berger-lineup-item.featured img {
+            max-width: 175px;
+            max-height: 260px;
+            filter: drop-shadow(0 20px 30px rgba(255, 196, 107, 0.35)) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
+        }
+
+        .berger-lineup-title {
+            color: #E2E8F0;
+            font-size: 11.5px;
+            font-weight: 700;
+            margin-top: 10px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        /* Product Info Strip underneath active can */
+        .berger-can-info-badge {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 7px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+            z-index: 4;
+        }
+
+        .berger-info-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10B981;
+            box-shadow: 0 0 10px #10B981;
+        }
+
+        .berger-info-text {
+            color: #F1F5F9;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .berger-info-sub {
+            color: #94A3B8;
+            font-size: 11.5px;
+            font-weight: 500;
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 10px;
+        }
+
+        /* Entrance Animations */
+        .ap-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: apFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation-delay: var(--d, 0.1s);
+        }
+
+        @keyframes apFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .berger-cinematic-hero {
+                min-height: auto;
+                max-height: none;
+                height: auto;
+                padding: 48px 0 54px;
+            }
+
+            .berger-hero-copy {
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .berger-hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .berger-hero-features {
+                justify-content: center;
+            }
+
+            .berger-spotlight-stage {
+                margin-top: 10px;
+            }
+
+            .berger-pod-wrap {
+                min-height: 380px;
+            }
+
+            .berger-single-can-img {
+                max-width: 280px;
+                max-height: 320px;
+            }
+
+            .berger-lineup-item img {
+                max-width: 90px;
+                max-height: 150px;
+            }
+
+            .berger-lineup-item.featured img {
+                max-width: 110px;
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .berger-hero-title {
+                font-size: 2.2rem;
+            }
+
+            .berger-paint-tabs {
+                justify-content: flex-start;
+                padding: 4px;
+            }
+
+            .berger-paint-tab {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+
+            .berger-single-can-img {
+                max-width: 230px;
+                max-height: 270px;
+            }
+
+            .berger-hero-cta, .berger-hero-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* 4. SECTION HEADERS & EYEBROWS */
+        .berger-eyebrow {
+            display: inline-block;
+            color: var(--berger-orange);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .berger-section-title {
+            color: var(--berger-navy-primary);
+            font-size: clamp(2rem, 3.5vw, 2.7rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        /* 5. ABOUT BERGER PAINTS SECTION */
+        .berger-about-section {
+            padding: 70px 0 50px;
+            background: #FFFFFF;
+        }
+
+        .berger-about-text {
+            font-size: 1.08rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 28px;
+        }
+
+        .berger-about-card {
+            background: #F4F7FC;
+            border: 1px solid #E2EBF5;
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #1E293B;
+            transition: all 0.25s ease;
+        }
+
+        .berger-about-card:hover {
+            background: #EDF3FA;
+            transform: translateY(-2px);
+            border-color: #BFDBFE;
+        }
+
+        .berger-about-card i {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .berger-about-img-box {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(7, 30, 61, 0.08);
+            border: 1px solid rgba(7, 30, 61, 0.06);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .berger-about-img-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 48px rgba(7, 30, 61, 0.12);
+        }
+
+        .berger-about-img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* 6. OUR PRODUCT RANGE SHOWCASE CARD */
+        .berger-range-section {
+            padding: 20px 0 70px;
+        }
+
+        .berger-range-card {
+            background: #FFFFFF;
+            border: 1px solid var(--berger-card-border);
+            border-radius: 24px;
+            padding: clamp(30px, 4vw, 50px);
+            box-shadow: 0 12px 36px rgba(7, 30, 61, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .berger-range-card:hover {
+            box-shadow: 0 18px 45px rgba(7, 30, 61, 0.08);
+            border-color: #CBD5E1;
+        }
+
+        .berger-range-tagline {
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .berger-range-desc {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 26px;
+        }
+
+        .berger-btn-range-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFFFFF;
+            border: 1.5px solid var(--berger-orange);
+            color: var(--berger-orange) !important;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .berger-btn-range-outline:hover {
+            background: var(--berger-orange);
+            color: #FFFFFF !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(255, 87, 34, 0.35);
+        }
+
+        .berger-range-img-wrap {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(7, 30, 61, 0.06);
+            transition: transform 0.4s ease;
+        }
+
+        .berger-range-img-wrap:hover {
+            transform: scale(1.015);
+        }
+
+        .berger-range-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 7. APPLICATIONS SECTION WITH REACT BITS <CardSwap /> COMPONENT */
+        .berger-app-section {
+            padding: 60px 0 80px;
+            background: #FFFFFF;
+        }
+
+        .berger-app-info-panel {
+            padding-right: 15px;
+        }
+
+        .berger-app-lead {
+            font-size: 1.02rem;
+            color: #64748B;
+            line-height: 1.6;
+        }
+
+        /* Interactive Nav List Synced with CardSwap */
+        .berger-app-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .berger-app-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 16px;
+            border-radius: 14px;
+            background: #F8FAFC;
+            border: 1.5px solid #E2E8F0;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            user-select: none;
+        }
+
+        .berger-app-nav-item:hover {
+            background: #FFFFFF;
+            border-color: rgba(255, 87, 34, 0.4);
+            transform: translateX(4px);
+            box-shadow: 0 6px 18px rgba(7, 30, 61, 0.06);
+        }
+
+        .berger-app-nav-item.active {
+            background: #FFFFFF;
+            border-color: var(--berger-orange);
+            border-left: 4px solid var(--berger-orange);
+            box-shadow: 0 8px 24px rgba(255, 87, 34, 0.14);
+        }
+
+        .berger-app-nav-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--berger-navy-primary);
+            font-size: 15px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .berger-app-nav-item.active .berger-app-nav-icon {
+            background: var(--berger-orange);
+            color: #FFFFFF;
+            border-color: var(--berger-orange);
+        }
+
+        .berger-app-nav-content {
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .berger-app-nav-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--berger-navy-primary);
+            margin: 0 0 2px 0;
+            line-height: 1.25;
+            transition: color 0.25s ease;
+        }
+
+        .berger-app-nav-item.active .berger-app-nav-title {
+            color: var(--berger-orange);
+        }
+
+        .berger-app-nav-desc {
+            font-size: 12px;
+            color: #64748B;
+            margin: 0;
+            line-height: 1.35;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .berger-app-nav-arrow {
+            margin-left: auto;
+            color: #94A3B8;
+            font-size: 11px;
+            transition: transform 0.25s ease, color 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .berger-app-nav-item.active .berger-app-nav-arrow {
+            color: var(--berger-orange);
+            transform: translateX(3px);
+        }
+
+        /* Unified Action & Control Bar */
+        .berger-app-action-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 10px 14px;
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 50px;
+            box-shadow: 0 4px 18px rgba(7, 30, 61, 0.05);
+            margin-top: 14px;
+            flex-wrap: wrap;
+        }
+
+        .berger-app-whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+            color: #FFFFFF !important;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 13.5px;
+            font-weight: 700;
+            padding: 9px 18px;
+            border-radius: 50px;
+            text-decoration: none !important;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .berger-app-whatsapp-btn:hover {
+            background: linear-gradient(135deg, #1EBE5D 0%, #16A34A 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+            color: #FFFFFF !important;
+        }
+
+        .berger-btn-icon-bubble {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        /* Controls Capsule */
+        .berger-swap-control-capsule {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 4px 8px;
+        }
+
+        .berger-swap-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #E2E8F0;
+            background: #FFFFFF;
+            color: var(--berger-navy-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .berger-swap-btn:hover {
+            background: var(--berger-navy-primary);
+            color: #FFFFFF;
+            border-color: var(--berger-navy-primary);
+            transform: scale(1.08);
+        }
+
+        .berger-swap-counter-pill {
+            font-family: 'Plus Jakarta Sans', monospace;
+            font-size: 13px;
+            padding: 0 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            user-select: none;
+        }
+
+        /* CardSwap Stage Wrapper */
+        .berger-card-swap-wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            padding: 30px 0;
+        }
+
+        /* React Bits CardSwap Styles */
+        .card-swap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+            --swap-tile: #FFFFFF;
+            --swap-tile-edge: rgba(7, 30, 61, 0.08);
+            --swap-tile-highlight: rgba(255, 255, 255, 1);
+            --swap-shadow: 0 28px 56px -16px rgba(7, 30, 61, 0.25), 0 12px 24px -10px rgba(7, 30, 61, 0.14);
+            --swap-media-edge: rgba(7, 30, 61, 0.06);
+            --swap-ink: #071E3D;
+            --swap-badge: rgba(255, 87, 34, 0.12);
+            --swap-shade: #071E3D;
+            --swap-radius: 20px;
+        }
+
+        .card-swap-sizer {
+            max-height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .card-swap-sizer > span {
+            display: block;
+            width: 100%;
+            max-width: var(--swap-stage-w, 560px);
+            aspect-ratio: var(--swap-ratio, 560 / 420);
+        }
+
+        .card-swap-stage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: var(--swap-stage-w, 560px);
+            height: var(--swap-stage-h, 420px);
+            transform: translate(-50%, -50%);
+            perspective: var(--swap-perspective, 900px);
+            transform-style: preserve-3d;
+            contain: layout paint;
+            touch-action: none;
+        }
+
+        .card-swap-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: var(--swap-radius);
+            box-shadow: var(--swap-shadow);
+            outline: none;
+            overflow: hidden;
+            user-select: none;
+            background: var(--swap-tile);
+            will-change: transform;
+            cursor: grab;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card-swap-card:active {
+            cursor: grabbing;
+        }
+
+        .card-swap-card:focus-visible {
+            box-shadow: 0 0 0 3px var(--berger-orange), var(--swap-shadow);
+        }
+
+        .card-swap-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-radius: inherit;
+            background: var(--swap-tile);
+            padding: 14px 14px 16px;
+            box-sizing: border-box;
+        }
+
+        .card-swap-card-rim {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            border: 1px solid var(--swap-tile-edge);
+            box-shadow: inset 0 1px 1px 0 var(--swap-tile-highlight);
+        }
+
+        .card-swap-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 6px 12px;
+            flex-shrink: 0;
+        }
+
+        .card-swap-card-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--swap-ink);
+            margin: 0;
+            letter-spacing: -0.2px;
+        }
+
+        .card-swap-card-badge {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(7, 30, 61, 0.05);
+            color: #071E3D;
+            letter-spacing: 0.3px;
+        }
+
+        .card-swap-media {
+            position: relative;
+            flex: 1;
+            min-height: 0;
+            overflow: hidden;
+            border-radius: max(0px, calc(var(--swap-radius) - 6px));
+            background: #F1F5F9;
+        }
+
+        .card-swap-media img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .card-swap-media::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            box-shadow: inset 0 0 0 1px var(--swap-media-edge);
+            pointer-events: none;
+        }
+
+        .card-swap-drag-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(7, 30, 61, 0.85);
+            backdrop-filter: blur(6px);
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 8. BENEFITS SECTION (WHY CHOOSE BERGER PAINTS - MATCHING JSW) */
+        .berger-benefits-section {
+            padding: 30px 0 80px;
+            background: #FFFFFF;
+        }
+
+        .berger-benefits-img-box {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(7, 30, 61, 0.08);
+            border: 1px solid rgba(7, 30, 61, 0.06);
+            height: 100%;
+        }
+
+        .berger-benefits-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .berger-benefit-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
+        .berger-benefit-list-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .berger-benefit-icon-circle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--berger-orange-light);
+            border: 1px solid rgba(255, 87, 34, 0.2);
+            color: var(--berger-orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .berger-benefit-list-item:hover .berger-benefit-icon-circle {
+            background: var(--berger-orange);
+            color: #FFFFFF;
+            transform: scale(1.08);
+        }
+
+        .berger-benefit-item-title {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 4px;
+        }
+
+        .berger-benefit-item-desc {
+            font-size: 14px;
+            color: #475569;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* 9. PRODUCT CATALOG CARDS (AUTHENTIC BERGER CANS) */
+        .berger-product-card {
+            background: #FFFFFF;
+            border: 1px solid var(--berger-card-border);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 18px rgba(7, 30, 61, 0.04);
+        }
+
+        .berger-product-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--berger-orange);
+            box-shadow: 0 16px 36px rgba(7, 30, 61, 0.12);
+        }
+
+        .berger-product-img-box {
+            position: relative;
+            background: #F8FAFC;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .berger-product-img-box img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .berger-product-card:hover .berger-product-img-box img {
+            transform: scale(1.08);
+        }
+
+        .berger-product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .berger-product-title {
+            font-size: 1.18rem;
+            font-weight: 800;
+            color: var(--berger-navy-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .berger-product-desc {
+            font-size: 13.5px;
+            color: var(--berger-text-muted);
+            line-height: 1.55;
+            margin-bottom: 16px;
+        }
+
+        .berger-spec-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 20px;
+        }
+
+        .berger-spec-pill {
+            background: #F1F5F9;
+            color: #475569;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .berger-order-btn {
+            background: var(--berger-orange-light);
+            color: var(--berger-orange) !important;
+            font-weight: 700;
+            font-size: 13.5px;
+            padding: 10px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            width: 100%;
+        }
+
+        .berger-order-btn:hover {
+            background: var(--berger-orange);
+            color: #FFFFFF !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.35);
+        }
+
+        /* 10. CALL TO ACTION CARD (NAVY & ORANGE - MATCHING JSW) */
+        .berger-cta-card-modern {
+            background: linear-gradient(135deg, #071E3D 0%, #0B254A 100%);
+            border-radius: 22px;
+            padding: clamp(36px, 5vw, 48px);
+            color: #FFFFFF;
+            box-shadow: 0 18px 45px rgba(7, 30, 61, 0.22);
+            margin: 0 0 70px;
+        }
+
+        .berger-cta-heading {
+            font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+
+        .berger-cta-sub {
+            font-size: 15px;
+            color: #CBD5E1;
+            margin: 0;
+            line-height: 1.6;
+            max-width: 580px;
+        }
+
+        .berger-cta-btn-orange {
+            background: var(--berger-orange);
+            color: #FFFFFF !important;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 13px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 6px 18px rgba(255, 87, 34, 0.4);
+            border: none;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .berger-cta-btn-orange:hover {
+            background: var(--berger-orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(255, 87, 34, 0.55);
+        }
+
+        .berger-cta-btn-call {
+            background: transparent;
+            color: #FFFFFF !important;
+            border: 1.5px solid rgba(255, 255, 255, 0.65);
+            font-weight: 700;
+            font-size: 15px;
+            padding: 13px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .berger-cta-btn-call:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        /* 11. FOOTER STYLING (MATCHING JSW PAINTS) */
+        .anbu-footer {
+            background-color: #051329;
+            color: #CBD5E1;
+            padding: 60px 0 0;
+        }
+
+        .footer-desc {
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: #94A3B8;
+        }
+
+        .anbu-footer h6 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            letter-spacing: -0.2px;
+        }
+
+        .footer-link-item {
+            color: #94A3B8;
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 11px;
+            transition: all 0.2s ease;
+        }
+
+        .footer-link-item:hover {
+            color: var(--berger-orange);
+            transform: translateX(4px);
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #FFFFFF;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+
+        .social-btn:hover {
+            background: var(--berger-orange);
+            color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        .footer-copyright-bar {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 22px 0;
+            margin-top: 50px;
+            font-size: 13px;
+            color: #64748B;
+        }
+
+        /* FLOATING BUTTONS */
+        .floating-actions-wrap {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-floating-whatsapp {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-floating-whatsapp:hover {
+            background: #20BA5A;
+            color: #FFFFFF;
+            transform: scale(1.1);
+        }
+
+        .btn-floating-top {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--berger-navy-primary);
+            color: #FFFFFF;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 4px 16px rgba(7, 30, 61, 0.25);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-floating-top:hover {
+            background: var(--berger-orange);
+            color: #FFFFFF;
+            transform: translateY(-3px);
+        }
+
+        /* MODAL STYLES */
         .modal-blur-backdrop {
             backdrop-filter: blur(8px);
             background-color: rgba(2, 12, 27, 0.7);
         }
+
         .calc-result-pill {
-            background: rgba(220, 38, 38, 0.1);
-            border: 1px solid rgba(220, 38, 38, 0.3);
+            background: rgba(255, 87, 34, 0.08);
+            border: 1px solid rgba(255, 87, 34, 0.25);
             border-radius: 12px;
             padding: 14px;
             text-align: center;
         }
+
         .calc-result-pill h4 {
-            color: #DC2626;
+            color: var(--berger-orange);
             font-weight: 800;
             margin-bottom: 2px;
         }
+
         .calc-result-pill small {
-            color: var(--text-muted);
+            color: var(--berger-text-muted);
             font-weight: 600;
         }
     </style>
@@ -59,7 +1631,7 @@
     <div class="anbu-topbar">
         <div class="container-fluid px-lg-5 px-3">
             <div class="d-flex align-items-center justify-content-between">
-                <!-- Left: Verified Showroom Phone Numbers & Email -->
+                <!-- Left: Showroom Phone Numbers & Email -->
                 <div class="d-flex align-items-center flex-wrap gap-lg-4 gap-2">
                     <a href="tel:+919626325232" class="topbar-phone-item">
                         <i class="fa fa-phone-alt"></i>
@@ -127,10 +1699,10 @@
 
                 <!-- Right Action Button & Mobile Toggle -->
                 <div class="d-flex align-items-center gap-3">
-                    <button type="button" class="btn-get-quote d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    <button type="button" class="btn-quote-orange d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#quoteModal">
                         Get a Quote <i class="fa fa-arrow-right ms-1"></i>
                     </button>
-                    <a class="btn-get-quote d-sm-none" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Berger%20Paints." target="_blank">
+                    <a class="btn-quote-orange d-sm-none" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Berger%20Paints." target="_blank">
                         Enquire <i class="fab fa-whatsapp ms-1"></i>
                     </a>
                     <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -159,7 +1731,7 @@
                     <li class="py-2 border-bottom"><a class="text-dark text-decoration-none" href="gallery.html">Gallery</a></li>
                     <li class="py-2"><a class="text-dark text-decoration-none" href="contact.html">Contact Us</a></li>
                 </ul>
-                <button type="button" class="btn-get-quote w-100 justify-content-center py-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                <button type="button" class="btn-quote-orange w-100 justify-content-center py-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
                     Request Paint Quote <i class="fa fa-arrow-right ms-2"></i>
                 </button>
             </div>
@@ -167,202 +1739,154 @@
     </header>
 
     <!-- ==============================================
-         3. HERO SECTION (Berger Brand Authorized Portal)
+         3. CINEMATIC BERGER PAINTS LUXURY HERO (IMAGE 2 SPOTLIGHT STYLE)
+            Deep Dark Studio + Volumetric SideRays Spotlight + Berger Cans 1-4
          ============================================== -->
-    <section class="brand-hero-section brand-berger">
-        <div class="brand-hero-pattern"></div>
-        <div class="container-fluid px-lg-5 px-3 position-relative" style="z-index: 2;">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <div class="brand-badge text-white">
-                        <i class="fa fa-shield-alt text-danger"></i> AUTHORIZED DEALER • EXPRESS PAINTING &amp; SCIENTIFIC PROTECTION
+    <section class="berger-cinematic-hero" aria-labelledby="bergerHeroTitle">
+        <!-- React Bits SideRays Spotlight Beam (origin: top-right) -->
+        <div class="berger-hero-rays" id="apHeroRays" aria-hidden="true"></div>
+
+        <!-- High-Definition Volumetric Light Beam Shaft from Top-Right (Image 2 style) -->
+        <div class="berger-spotlight-cone" aria-hidden="true"></div>
+        <div class="berger-hero-floor" aria-hidden="true"></div>
+
+        <div class="container-fluid px-lg-5 px-3 berger-hero-inner">
+            <div class="row align-items-center g-4 g-lg-5">
+                <!-- Left: Headline, Value Proposition, Features, CTAs -->
+                <div class="col-lg-5 berger-hero-copy">
+                    <div class="berger-hero-badge ap-reveal" style="--d: 0.05s;">
+                        <span class="berger-hero-badge-dot"></span>
+                        Authorized Berger Dealer &bull; Anbu Paints
                     </div>
-                    <h1 class="brand-hero-title">
-                        Paint Your Imagination. <br>
-                        <span style="background: linear-gradient(90deg, #F87171, #FCA5A5); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Silk Luxury &amp; Weather Defense.</span>
+                    <h1 class="berger-hero-title ap-reveal" id="bergerHeroTitle" style="--d: 0.15s;">
+                        Berger Luxury Silk.<br>
+                        <span class="berger-hero-title-accent">Rich Colours.</span><br>
+                        Lasting Beauty.
                     </h1>
-                    <p class="brand-hero-lead">
-                        Transform your home with Berger Paints' anti-pollution, low-odor emulsion formulations and high-durability exterior coatings. Experience Silk Breathe Easy, WeatherCoat Long Life, and computerized color mixing with expert assistance at Anbu Paints, Pondicherry.
+                    <p class="berger-hero-text ap-reveal" style="--d: 0.25s;">
+                        Step into cinematic luxury with Berger Paints at Anbu Paints, Thiruchitrambalam. From BreatheEasy anti-pollution interior emulsions to Silk Glamor high-sheen finishes, computerised tinting with 2,000+ shades.
                     </p>
-                    <div class="d-flex flex-wrap gap-3 align-items-center">
-                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Berger%20Paints.%20Please%20share%20the%20catalogue%20and%20pricing." class="btn-get-quote" target="_blank" rel="noopener noreferrer">
-                            Enquire on WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
+                    <div class="berger-hero-features ap-reveal" style="--d: 0.3s;">
+                        <span class="berger-hero-feat"><i class="fa fa-shield-alt"></i> BreatheEasy Anti-Pollution</span>
+                        <span class="berger-hero-feat"><i class="fa fa-gem"></i> Silk &amp; Glamor Sheen</span>
+                        <span class="berger-hero-feat"><i class="fa fa-palette"></i> 2,000+ Shades</span>
+                        <span class="berger-hero-feat"><i class="fa fa-magic"></i> Computerised Tinting</span>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3 align-items-center ap-reveal" style="--d: 0.35s;">
+                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20pricing%20for%20Berger%20Silk%20BreatheEasy%20and%20Silk%20Glamor." class="berger-hero-cta" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> Get Berger Price Quote
+                            <i class="fa fa-arrow-right"></i>
                         </a>
-                        <button type="button" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold" data-bs-toggle="modal" data-bs-target="#estimatorModal">
-                            <i class="fa fa-calculator me-2"></i> Paint Calculator
-                        </button>
-                        <a href="#products-grid" class="text-white-50 text-decoration-none fw-semibold ms-lg-2">
-                            Explore Products <i class="fa fa-arrow-down ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="brand-hero-img-wrap">
-                        <img src="img/carosels_paints/hero_1.png" alt="Berger Paints Showcase at Anbu Paints" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         4. TRUST BADGES BAR
-         ============================================== -->
-    <section class="brand-trust-bar">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="brand-trust-item">
-                        <div class="brand-trust-icon bg-danger bg-opacity-10 text-danger">
-                            <i class="fa fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <div class="brand-trust-title">Silk Breathe Easy</div>
-                            <p class="brand-trust-sub">Formaldehyde-eating anti-pollution tech</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="brand-trust-item">
-                        <div class="brand-trust-icon bg-warning bg-opacity-10 text-warning">
-                            <i class="fa fa-paint-roller"></i>
-                        </div>
-                        <div>
-                            <div class="brand-trust-title">Express Painting Service</div>
-                            <p class="brand-trust-sub">Fast, mechanized, clean application</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="brand-trust-item">
-                        <div class="brand-trust-icon bg-primary bg-opacity-10 text-primary">
-                            <i class="fa fa-cloud-showers-heavy"></i>
-                        </div>
-                        <div>
-                            <div class="brand-trust-title">WeatherCoat Armor</div>
-                            <p class="brand-trust-sub">10-year PU rain &amp; algae barrier</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="brand-trust-item">
-                        <div class="brand-trust-icon bg-success bg-opacity-10 text-success">
-                            <i class="fa fa-palette"></i>
-                        </div>
-                        <div>
-                            <div class="brand-trust-title">ColorBank Tinter</div>
-                            <p class="brand-trust-sub">2,000+ computerized shades on-site</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         5. BERGER PRODUCT CATALOG GRID
-         ============================================== -->
-    <section class="py-5" id="products-grid" style="background-color: #F8FAFC;">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="text-center max-w-700 mx-auto mb-5">
-                <span class="section-eyebrow">ELITE BERGER RANGE</span>
-                <h2 class="section-title">Berger Paints Product Showcase</h2>
-                <p class="text-muted">Specially formulated for Indian environmental conditions with anti-microbial health protection and rich aesthetic appeal.</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Card 1: Silk Breathe Easy / Glamor -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="brand-product-card">
-                        <div>
-                            <div class="brand-product-img-box">
-                                <span class="brand-product-badge bg-danger text-white">Ultra Luxury Health</span>
-                                <img src="paint/Silk BreatheEasy can (1).webp" alt="Berger Silk Breathe Easy Luxury Interior Emulsion">
-                            </div>
-                            <h3 class="brand-product-title">Silk Breathe Easy Luxury</h3>
-                            <p class="brand-product-desc">India's premier health emulsion. Reduces indoor pollutants like formaldehyde, kills 99% bacteria, and provides an exquisite silk finish.</p>
-                            <div class="brand-spec-pills">
-                                <span class="brand-spec-pill"><i class="fa fa-award text-danger me-1"></i> Green Pro Certified</span>
-                                <span class="brand-spec-pill"><i class="fa fa-brush text-primary me-1"></i> 140-160 sq.ft/L</span>
-                                <span class="brand-spec-pill"><i class="fa fa-check text-success me-1"></i> Anti-Bacterial</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Berger%20Silk%20Breathe%20Easy.%20Please%20quote%20price." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                            </a>
-                        </div>
+                        <a href="#about" class="berger-hero-link">Explore Products</a>
                     </div>
                 </div>
 
-                <!-- Card 2: WeatherCoat Long Life 10 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="brand-product-card">
-                        <div>
-                            <div class="brand-product-img-box">
-                                <span class="brand-product-badge bg-primary text-white">Heavy Weather Defense</span>
-                                <img src="paint/burger-paint.jpg" alt="Berger WeatherCoat Long Life Exterior Paint">
-                            </div>
-                            <h3 class="brand-product-title">WeatherCoat Long Life</h3>
-                            <p class="brand-product-desc">Powered by PU and silicon technology. Heavy rain-barrier formula that keeps walls free from black algal stains and coastal dampness.</p>
-                            <div class="brand-spec-pills">
-                                <span class="brand-spec-pill"><i class="fa fa-shield-alt text-primary me-1"></i> 10-Yr Warranty</span>
-                                <span class="brand-spec-pill"><i class="fa fa-tint-slash text-info me-1"></i> Anti-Fungal PU</span>
-                                <span class="brand-spec-pill"><i class="fa fa-sun text-warning me-1"></i> Heat Reflective</span>
-                            </div>
+                <!-- Right: Cinematic Spotlight Stage with Berger Cans 1 to 4 -->
+                <div class="col-lg-7">
+                    <div class="berger-spotlight-stage ap-reveal" style="--d: 0.2s;">
+                        <!-- Interactive Berger Cans 1-4 Switcher Tabs -->
+                        <div class="berger-paint-tabs" role="tablist" aria-label="Berger Paint Can Switcher">
+                            <button type="button" class="berger-paint-tab active" id="tabBerger1" data-target="1" aria-selected="true">
+                                <i class="fa fa-check-circle"></i> 1. BreatheEasy
+                            </button>
+                            <button type="button" class="berger-paint-tab" id="tabBerger2" data-target="2" aria-selected="false">
+                                <i class="fa fa-paint-brush"></i> 2. Silk Glamor
+                            </button>
+                            <button type="button" class="berger-paint-tab" id="tabBerger3" data-target="3" aria-selected="false">
+                                <i class="fa fa-sun"></i> 3. Bison Glow
+                            </button>
+                            <button type="button" class="berger-paint-tab" id="tabBerger4" data-target="4" aria-selected="false">
+                                <i class="fa fa-gem"></i> 4. Silk Dazzle
+                            </button>
+                            <button type="button" class="berger-paint-tab" id="tabBergerAll" data-target="all" aria-selected="false">
+                                <i class="fa fa-layer-group"></i> All 4 Lineup
+                            </button>
                         </div>
-                        <div>
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20pricing%20for%20Berger%20WeatherCoat%20Long%20Life." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Card 3: Bison Glow Interior Emulsion -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="brand-product-card">
-                        <div>
-                            <div class="brand-product-img-box">
-                                <span class="brand-product-badge bg-warning text-dark">Pearl Glow Interior</span>
-                                <img src="paint/berger-bison-glow.webp" alt="Berger Bison Glow Acrylic Emulsion">
-                            </div>
-                            <h3 class="brand-product-title">Bison Glow Acrylic Emulsion</h3>
-                            <p class="brand-product-desc">Economy-plus emulsion offering rich pearl glow and smooth wall coverage at a fraction of the cost of standard luxury emulsions.</p>
-                            <div class="brand-spec-pills">
-                                <span class="brand-spec-pill"><i class="fa fa-star text-warning me-1"></i> Best Seller</span>
-                                <span class="brand-spec-pill"><i class="fa fa-expand me-1"></i> 135-150 sq.ft/L</span>
-                                <span class="brand-spec-pill"><i class="fa fa-tint text-primary me-1"></i> Low Odor</span>
-                            </div>
-                        </div>
-                        <div>
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20enquiring%20about%20Berger%20Bison%20Glow%20Emulsion." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                        <!-- Spotlight Pod (Stage with floor reflections matching Image 2) -->
+                        <div class="berger-pod-wrap">
+                            <!-- Soft floor spotlight pool & dark contact shadow under paint cans -->
+                            <div class="berger-spotlight-beam-glow" aria-hidden="true"></div>
+                            <div class="berger-can-floor-shadow" aria-hidden="true"></div>
 
-                <!-- Card 4: BP White Primer & Undercoat -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="brand-product-card">
-                        <div>
-                            <div class="brand-product-img-box">
-                                <span class="brand-product-badge bg-secondary text-white">Foundation Primer</span>
-                                <img src="paint/burger.jpg" alt="Berger BP White Primer">
+                            <!-- Can 1: Silk BreatheEasy (Default Active) -->
+                            <div class="berger-can-view" id="bergerView1">
+                                <img src="paint/Silk BreatheEasy can (1).webp"
+                                     alt="Berger Silk BreatheEasy luxury interior emulsion paint can under cinematic spotlight with floor reflection"
+                                     class="berger-single-can-img"
+                                     width="500" height="500" fetchpriority="high">
+                                <div class="berger-can-info-badge">
+                                    <span class="berger-info-dot"></span>
+                                    <span class="berger-info-text">Silk BreatheEasy &bull; Luxury Interior Emulsion</span>
+                                    <span class="berger-info-sub">Pollution &amp; Bacteria Resistant</span>
+                                </div>
                             </div>
-                            <h3 class="brand-product-title">BP White Acrylic Primer</h3>
-                            <p class="brand-product-desc">Water-thinnable white primer with superior alkali and efflorescence resistance. Primes newly plastered walls for superior paint adhesion.</p>
-                            <div class="brand-spec-pills">
-                                <span class="brand-spec-pill"><i class="fa fa-lock text-success me-1"></i> Alkali Resistance</span>
-                                <span class="brand-spec-pill"><i class="fa fa-layer-group text-secondary me-1"></i> High Opacity</span>
-                                <span class="brand-spec-pill"><i class="fa fa-check text-primary me-1"></i> Quick Drying</span>
+
+                            <!-- Can 2: Silk Glamor Soft Sheen -->
+                            <div class="berger-can-view d-none" id="bergerView2">
+                                <img src="paint/silk-glamor-soft-sheen-can.webp"
+                                     alt="Berger Silk Glamor Soft Sheen ultra luxury emulsion can"
+                                     class="berger-single-can-img"
+                                     width="500" height="500" loading="lazy">
+                                <div class="berger-can-info-badge">
+                                    <span class="berger-info-dot"></span>
+                                    <span class="berger-info-text">Silk Glamor &bull; Soft Sheen Ultra Luxury</span>
+                                    <span class="berger-info-sub">100% Acrylic Formula</span>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20rates%20for%20Berger%20BP%20White%20Primer." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                            </a>
+
+                            <!-- Can 3: Bison Glow -->
+                            <div class="berger-can-view d-none" id="bergerView3">
+                                <img src="paint/berger-bison-glow.webp"
+                                     alt="Berger Bison Glow acrylic interior emulsion can"
+                                     class="berger-single-can-img"
+                                     width="500" height="500" loading="lazy">
+                                <div class="berger-can-info-badge">
+                                    <span class="berger-info-dot"></span>
+                                    <span class="berger-info-text">Bison Glow &bull; Acrylic Interior Emulsion</span>
+                                    <span class="berger-info-sub">Enhanced Sheen &amp; Durability</span>
+                                </div>
+                            </div>
+
+                            <!-- Can 4: Silk Glamor Dazzle -->
+                            <div class="berger-can-view d-none" id="bergerView4">
+                                <img src="paint/silk-glamor-dazzle-can_0.webp"
+                                     alt="Berger Silk Glamor Dazzle metallic luxury finish can"
+                                     class="berger-single-can-img"
+                                     width="500" height="500" loading="lazy">
+                                <div class="berger-can-info-badge">
+                                    <span class="berger-info-dot"></span>
+                                    <span class="berger-info-text">Silk Glamor Dazzle &bull; Metallic Luxury Finish</span>
+                                    <span class="berger-info-sub">Special Effects &amp; Glitter Sheen</span>
+                                </div>
+                            </div>
+
+                            <!-- All 4 Lineup View -->
+                            <div class="berger-can-view d-none" id="bergerViewAll">
+                                <div class="berger-lineup-row">
+                                    <div class="berger-lineup-item" data-can-pick="1">
+                                        <img src="paint/Silk BreatheEasy can (1).webp" alt="Silk BreatheEasy" loading="lazy">
+                                        <span class="berger-lineup-title">1. BreatheEasy</span>
+                                    </div>
+                                    <div class="berger-lineup-item featured" data-can-pick="2">
+                                        <img src="paint/silk-glamor-soft-sheen-can.webp" alt="Silk Glamor" loading="lazy">
+                                        <span class="berger-lineup-title">2. Silk Glamor</span>
+                                    </div>
+                                    <div class="berger-lineup-item" data-can-pick="3">
+                                        <img src="paint/berger-bison-glow.webp" alt="Bison Glow" loading="lazy">
+                                        <span class="berger-lineup-title">3. Bison Glow</span>
+                                    </div>
+                                    <div class="berger-lineup-item" data-can-pick="4">
+                                        <img src="paint/silk-glamor-dazzle-can_0.webp" alt="Silk Dazzle" loading="lazy">
+                                        <span class="berger-lineup-title">4. Silk Dazzle</span>
+                                    </div>
+                                </div>
+                                <div class="berger-can-info-badge">
+                                    <span class="berger-info-dot"></span>
+                                    <span class="berger-info-text">Berger Complete Interior Luxury Range</span>
+                                    <span class="berger-info-sub">Click Any Can to Spotlight</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -370,176 +1894,479 @@
         </div>
     </section>
 
-    <!-- ==============================================
-         6. BERGER TRENDING SHADE PALETTE EXPLORER
-         ============================================== -->
-    <section class="py-5 bg-white">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4">
-                <div>
-                    <span class="section-eyebrow">SIGNATURE COLORBANK PALETTE</span>
-                    <h2 class="section-title mb-1">Trending Berger Colour Shades</h2>
-                    <p class="text-muted mb-0">Select your preferred shade for on-the-spot computerized dispensing at Anbu Paints.</p>
-                </div>
-                <div class="mt-3 mt-md-0">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20share%20the%20Berger%20ColorBank%20Shade%20Catalogue." class="btn btn-outline-danger rounded-pill fw-bold" target="_blank" rel="noopener noreferrer">
-                        <i class="fa fa-download me-1"></i> Download Berger Shade Card
-                    </a>
-                </div>
-            </div>
+    <!-- Main Container for Remaining Sections (Matching JSW Paints Structure) -->
+    <main class="container-fluid px-lg-5 px-3">
+        <div style="max-width: 1200px; margin: 0 auto;">
 
-            <div class="row g-3">
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Crimson%20Flame%20(1D0531).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #B91C1C;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Crimson Flame</div>
-                            <div class="brand-shade-code">1D0531 • Signature Red</div>
+            <!-- ==============================================
+                 4. ABOUT BERGER PAINTS SECTION (2-COLUMN DESIGN)
+                 ============================================== -->
+            <section id="about" class="berger-about-section">
+                <div class="row align-items-center g-5">
+                    <!-- Left: Text & 4 Clean Feature Cards -->
+                    <div class="col-lg-6">
+                        <span class="berger-eyebrow">— ABOUT BERGER PAINTS</span>
+                        <h2 class="berger-section-title">About Berger Paints</h2>
+                        <p class="berger-about-text">
+                            Berger has been able to provide environment-friendly paints. Rather than offer more breeding spaces for harmful air pollutants, like formaldehyde, these paints reduce their impacts to a great extent. Emulsion paints are water-based, making them almost odour-less and the most preferred choice for interior wall paint colours.
+                        </p>
+                        <!-- 4 Clean Feature Cards in 2x2 Grid -->
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="berger-about-card">
+                                    <i class="fa fa-leaf text-success"></i>
+                                    <span>Eco-Friendly Formulation</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="berger-about-card">
+                                    <i class="fa fa-tint text-primary"></i>
+                                    <span>Low Odour Water-Based</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="berger-about-card">
+                                    <i class="fa fa-paint-roller text-warning"></i>
+                                    <span>Express Painting Service</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="berger-about-card">
+                                    <i class="fa fa-shield-alt text-primary"></i>
+                                    <span>Durable Weather Shield</span>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Sunset%20Coral%20(2T0614).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #FB923C;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Sunset Coral</div>
-                            <div class="brand-shade-code">2T0614 • Vibrant Warmth</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Silk%20Ivory%20(7P0184).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #FFFBEB;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Silk Ivory</div>
-                            <div class="brand-shade-code">7P0184 • Elegant Calm</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Royal%20Sapphire%20(5D1092).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #1D4ED8;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Royal Sapphire</div>
-                            <div class="brand-shade-code">5D1092 • Deep Ocean</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Forest%20Emerald%20(4D0951).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #047857;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Forest Emerald</div>
-                            <div class="brand-shade-code">4D0951 • Natural Green</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Berger%20Lavender%20Mist%20(6T1280).%20Please%20quote." class="brand-shade-card" target="_blank">
-                        <div class="brand-shade-swatch" style="background-color: #C084FC;"></div>
-                        <div class="brand-shade-info">
-                            <div class="brand-shade-name">Lavender Mist</div>
-                            <div class="brand-shade-code">6T1280 • Subtle Luxury</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    </div>
 
-    <!-- ==============================================
-         7. BERGER ADVANTAGES SECTION
-         ============================================== -->
-    <section class="py-5" style="background: #F1F5F9;">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <span class="section-eyebrow text-danger">EXPRESS PAINTING ADVANTAGE</span>
-                    <h2 class="section-title">Why Homeowners Trust Berger Paints</h2>
-                    <p class="text-muted mb-4">Berger's specialized formulations deliver higher coverage and lower odor, keeping interior living environments healthy and welcoming for families.</p>
-                    
-                    <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-start gap-3 p-3 bg-white rounded-3 shadow-sm">
-                            <div class="p-2 bg-danger bg-opacity-10 text-danger rounded-2">
-                                <i class="fa fa-lungs fs-4"></i>
+                    <!-- Right: Authentic Berger Express Painting Technician Image -->
+                    <div class="col-lg-6">
+                        <div class="berger-about-img-box">
+                            <img src="paint/Interior.webp" alt="Berger Express Painting Service in Pondicherry by Anbu Paints">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 5. OUR PRODUCT RANGE SHOWCASE (STUDIO BERGER CANS LINEUP)
+                 ============================================== -->
+            <section class="berger-range-section">
+                <div class="berger-range-card">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-5">
+                            <span class="berger-eyebrow">— OUR PRODUCT RANGE</span>
+                            <h2 class="berger-section-title mb-2">BERGER PAINTS</h2>
+                            <div class="berger-range-tagline">
+                                <span style="color: var(--berger-navy-primary);">Weather</span>
+                                <span style="color: #0284C7;">Defense &amp;</span>
+                                <span style="color: var(--berger-orange);">Luxury Silk</span>
+                            </div>
+                            <p class="berger-range-desc">
+                                Vibrant shades, anti-bacterial indoor protection, and 10-year exterior weather defense for beautiful spaces. Choose from Silk Breathe Easy, WeatherCoat Long Life, Bison Glow, and Silk Glamor with computerized precision dispensing at Anbu Paints, Pondicherry.
+                            </p>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20the%20Berger%20Paints%20catalogue%20and%20pricing." class="berger-btn-range-outline" target="_blank" rel="noopener noreferrer">
+                                Explore Berger Range <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="berger-range-img-wrap">
+                                <img src="assets/img/brand-cluster-berger.jpg" alt="Berger Paints Lineup: Silk, WeatherCoat, Super Gloss, and Primer Cans">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 6. APPLICATIONS (REACT BITS <CardSwap /> COMPONENT INTEGRATION)
+                 ============================================== -->
+            <section class="berger-app-section" id="applications">
+                <div class="row align-items-center g-5">
+                    <!-- Left Column: Context, Interactive Category Navigator & WhatsApp CTA -->
+                    <div class="col-lg-5">
+                        <div class="berger-app-info-panel">
+                            <span class="berger-eyebrow">— APPLICATIONS &amp; USAGE</span>
+                            <h2 class="berger-section-title mb-2">Where Berger Paints Can Be Used</h2>
+                            <p class="berger-app-lead mb-4">
+                                Specialized high-performance coatings engineered with polymer chemistry and weather endurance across architectural and industrial surfaces.
+                            </p>
+
+                            <!-- Interactive Nav items synced bidirectionally with CardSwap -->
+                            <div class="berger-app-nav-list mb-4" id="bergerAppNavList">
+                                <div class="berger-app-nav-item active" data-app-index="0" title="Click to view Roofing and Villa Construction">
+                                    <div class="berger-app-nav-icon"><i class="fa fa-home"></i></div>
+                                    <div class="berger-app-nav-content">
+                                        <h3 class="berger-app-nav-title">Roofing &amp; Villa Exterior</h3>
+                                        <p class="berger-app-nav-desc">WeatherCoat 10-Yr protection against rain &amp; fungus</p>
+                                    </div>
+                                    <div class="berger-app-nav-arrow"><i class="fa fa-chevron-right"></i></div>
+                                </div>
+
+                                <div class="berger-app-nav-item" data-app-index="1" title="Click to view Infrastructure & Waterproofing">
+                                    <div class="berger-app-nav-icon"><i class="fa fa-industry"></i></div>
+                                    <div class="berger-app-nav-content">
+                                        <h3 class="berger-app-nav-title">Infrastructure &amp; Waterproofing</h3>
+                                        <p class="berger-app-nav-desc">Dampstop &amp; roof terrace heavy-duty waterproofing</p>
+                                    </div>
+                                    <div class="berger-app-nav-arrow"><i class="fa fa-chevron-right"></i></div>
+                                </div>
+
+                                <div class="berger-app-nav-item" data-app-index="2" title="Click to view Luxury Home Interiors">
+                                    <div class="berger-app-nav-icon"><i class="fa fa-couch"></i></div>
+                                    <div class="berger-app-nav-content">
+                                        <h3 class="berger-app-nav-title">Luxury Home Interiors</h3>
+                                        <p class="berger-app-nav-desc">Silk Breathe Easy &amp; Bison Glow pearl finish</p>
+                                    </div>
+                                    <div class="berger-app-nav-arrow"><i class="fa fa-chevron-right"></i></div>
+                                </div>
+
+                                <div class="berger-app-nav-item" data-app-index="3" title="Click to view Wood & Metal Enamels">
+                                    <div class="berger-app-nav-icon"><i class="fa fa-cogs"></i></div>
+                                    <div class="berger-app-nav-content">
+                                        <h3 class="berger-app-nav-title">Wood &amp; Metal Enamels</h3>
+                                        <p class="berger-app-nav-desc">Luxol high-gloss &amp; anti-rust protective coatings</p>
+                                    </div>
+                                    <div class="berger-app-nav-arrow"><i class="fa fa-chevron-right"></i></div>
+                                </div>
+                            </div>
+
+                            <!-- Unified Floating Action Bar with WhatsApp CTA & Control Capsule -->
+                            <div class="berger-app-action-bar">
+                                <a id="bergerAppWhatsAppBtn" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20enquiring%20about%20Berger%20Paints%20for%20Roofing%20and%20Villa%20Exterior." class="berger-app-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                                    <span class="berger-btn-icon-bubble"><i class="fab fa-whatsapp"></i></span>
+                                    <span>Enquire Specification</span>
+                                    <i class="fa fa-arrow-right ms-1" style="font-size: 11px; opacity: 0.85;"></i>
+                                </a>
+
+                                <div class="berger-swap-control-capsule">
+                                    <button type="button" id="cardSwapPrev" class="berger-swap-btn" title="Previous card" aria-label="Previous card">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </button>
+                                    <span class="berger-swap-counter-pill text-muted">
+                                        <strong id="cardSwapCurrent" class="text-dark">1</strong> / 4
+                                    </span>
+                                    <button type="button" id="cardSwapNext" class="berger-swap-btn" title="Next card" aria-label="Next card">
+                                        <i class="fa fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive 3D CardSwap Stage Component -->
+                    <div class="col-lg-7">
+                        <div class="berger-card-swap-wrapper">
+                            <div class="card-swap" id="bergerCardSwapRoot" tabindex="0" role="region" aria-label="Berger Paints Applications Deck">
+                                <div class="card-swap-sizer">
+                                    <span aria-hidden="true"></span>
+                                </div>
+                                <div class="card-swap-stage" id="bergerCardSwapStage">
+                                    <!-- Card 0: Roofing & Villa Exterior -->
+                                    <div class="card-swap-card" data-swap-index="0" style="width: 520px; height: 380px;">
+                                        <div class="card-swap-card-inner">
+                                            <div class="card-swap-card-header">
+                                                <h4 class="card-swap-card-title">Roofing &amp; Villa Exterior</h4>
+                                                <span class="card-swap-card-badge">WeatherCoat Long Life</span>
+                                            </div>
+                                            <div class="card-swap-media">
+                                                <img src="paint/Exterior02.webp" alt="Berger WeatherCoat Exterior Wall Painting">
+                                                <span class="card-swap-drag-hint"><i class="fa fa-hand-pointer"></i> Drag / Click</span>
+                                            </div>
+                                            <span class="card-swap-card-rim" aria-hidden="true"></span>
+                                        </div>
+                                        <span class="card-swap-shade" aria-hidden="true"></span>
+                                    </div>
+
+                                    <!-- Card 1: Infrastructure & Waterproofing -->
+                                    <div class="card-swap-card" data-swap-index="1" style="width: 520px; height: 380px;">
+                                        <div class="card-swap-card-inner">
+                                            <div class="card-swap-card-header">
+                                                <h4 class="card-swap-card-title">Infrastructure &amp; Waterproofing</h4>
+                                                <span class="card-swap-card-badge">Dampstop Terrace Shield</span>
+                                            </div>
+                                            <div class="card-swap-media">
+                                                <img src="paint/Waterproffing03.webp" alt="Berger Waterproofing Terrace Coating">
+                                                <span class="card-swap-drag-hint"><i class="fa fa-hand-pointer"></i> Drag / Click</span>
+                                            </div>
+                                            <span class="card-swap-card-rim" aria-hidden="true"></span>
+                                        </div>
+                                        <span class="card-swap-shade" aria-hidden="true"></span>
+                                    </div>
+
+                                    <!-- Card 2: Luxury Home Interiors -->
+                                    <div class="card-swap-card" data-swap-index="2" style="width: 520px; height: 380px;">
+                                        <div class="card-swap-card-inner">
+                                            <div class="card-swap-card-header">
+                                                <h4 class="card-swap-card-title">Luxury Home Interiors</h4>
+                                                <span class="card-swap-card-badge">Silk Breathe Easy</span>
+                                            </div>
+                                            <div class="card-swap-media">
+                                                <img src="paint/yellow.jpg" alt="Luxury Living Room Wall with Berger Silk Paint">
+                                                <span class="card-swap-drag-hint"><i class="fa fa-hand-pointer"></i> Drag / Click</span>
+                                            </div>
+                                            <span class="card-swap-card-rim" aria-hidden="true"></span>
+                                        </div>
+                                        <span class="card-swap-shade" aria-hidden="true"></span>
+                                    </div>
+
+                                    <!-- Card 3: Wood & Metal Enamels -->
+                                    <div class="card-swap-card" data-swap-index="3" style="width: 520px; height: 380px;">
+                                        <div class="card-swap-card-inner">
+                                            <div class="card-swap-card-header">
+                                                <h4 class="card-swap-card-title">Wood &amp; Metal Enamels</h4>
+                                                <span class="card-swap-card-badge">Luxol High Gloss</span>
+                                            </div>
+                                            <div class="card-swap-media">
+                                                <img src="paint/wood-coating.webp" alt="Berger Wood & Metal Varnish Coating">
+                                                <span class="card-swap-drag-hint"><i class="fa fa-hand-pointer"></i> Drag / Click</span>
+                                            </div>
+                                            <span class="card-swap-card-rim" aria-hidden="true"></span>
+                                        </div>
+                                        <span class="card-swap-shade" aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 7. BENEFITS OF BERGER PAINTS (WHY CHOOSE BERGER PAINTS - MATCHING JSW)
+                 ============================================== -->
+            <section class="berger-benefits-section">
+                <div class="mb-4">
+                    <span class="berger-eyebrow">— BENEFITS OF BERGER PAINTS</span>
+                    <h2 class="berger-section-title">Why Choose Berger Paints</h2>
+                </div>
+
+                <div class="row align-items-center g-5">
+                    <!-- Left: Modern Living Room Interior Photo -->
+                    <div class="col-lg-5">
+                        <div class="berger-benefits-img-box">
+                            <img src="paint/yellow.jpg" alt="Modern room interior with warm vibrant wall colors by Berger Paints">
+                        </div>
+                    </div>
+
+                    <!-- Right: 5 Benefits with Circular Soft Orange Icon Badges -->
+                    <div class="col-lg-7">
+                        <div class="d-flex flex-column gap-2">
+                            <!-- Benefit 1 -->
+                            <div class="berger-benefit-list-item">
+                                <div class="berger-benefit-icon-circle">
+                                    <i class="fa fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="berger-benefit-item-title">10-Year WeatherCoat Performance Warranty</h4>
+                                    <p class="berger-benefit-item-desc">Engineered with PU and silicon technology to resist extreme coastal heat, heavy monsoons, and fungal growth.</p>
+                                </div>
+                            </div>
+
+                            <!-- Benefit 2 -->
+                            <div class="berger-benefit-list-item">
+                                <div class="berger-benefit-icon-circle">
+                                    <i class="fa fa-leaf"></i>
+                                </div>
+                                <div>
+                                    <h4 class="berger-benefit-item-title">Eco-friendly &amp; reduces harmful air pollutants</h4>
+                                    <p class="berger-benefit-item-desc">Green Pro certified water-based formulas that actively neutralize indoor pollutants like formaldehyde.</p>
+                                </div>
+                            </div>
+
+                            <!-- Benefit 3 -->
+                            <div class="berger-benefit-list-item">
+                                <div class="berger-benefit-icon-circle">
+                                    <i class="fa fa-paint-roller"></i>
+                                </div>
+                                <div>
+                                    <h4 class="berger-benefit-item-title">Customer-friendly Express Painting service</h4>
+                                    <p class="berger-benefit-item-desc">Faster, cleaner automated painting experience with mechanized tools and trained painting experts.</p>
+                                </div>
+                            </div>
+
+                            <!-- Benefit 4 -->
+                            <div class="berger-benefit-list-item">
+                                <div class="berger-benefit-icon-circle">
+                                    <i class="fa fa-palette"></i>
+                                </div>
+                                <div>
+                                    <h4 class="berger-benefit-item-title">Transforms living spaces with vibrant colours</h4>
+                                    <p class="berger-benefit-item-desc">Over 2,000+ shades available with instant computerized precision shade mixing at Anbu Paints.</p>
+                                </div>
+                            </div>
+
+                            <!-- Benefit 5 -->
+                            <div class="berger-benefit-list-item">
+                                <div class="berger-benefit-icon-circle">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4 class="berger-benefit-item-title">Brings families together to create joyful memories</h4>
+                                    <p class="berger-benefit-item-desc">Virtually odorless, low-VOC formulations safe for children, seniors, and sensitive living environments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 8. ELITE BERGER PRODUCT SHOWCASE (AUTHENTIC PRODUCT CANS)
+                 ============================================== -->
+            <section class="py-5" id="products-showcase">
+                <div class="text-center max-w-700 mx-auto mb-5">
+                    <span class="berger-eyebrow">ELITE BERGER RANGE</span>
+                    <h2 class="berger-section-title">Berger Paints Product Showcase</h2>
+                    <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Specially formulated for Indian environmental conditions with anti-microbial health protection, heavy rain defense, and rich aesthetic finishes.</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Card 1: Silk Breathe Easy -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="berger-product-card">
+                            <div>
+                                <div class="berger-product-img-box">
+                                    <span class="berger-product-badge bg-danger text-white">Ultra Luxury Health</span>
+                                    <img src="paint/Silk BreatheEasy can (1).webp" alt="Berger Silk Breathe Easy Luxury Interior Emulsion">
+                                </div>
+                                <h3 class="berger-product-title">Silk Breathe Easy</h3>
+                                <p class="berger-product-desc">India's premier health emulsion. Reduces indoor pollutants like formaldehyde, kills 99% bacteria, and provides an exquisite silk finish.</p>
+                                <div class="berger-spec-pills">
+                                    <span class="berger-spec-pill"><i class="fa fa-award text-danger me-1"></i> Green Pro Certified</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-brush text-primary me-1"></i> 140-160 sq.ft/L</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-check text-success me-1"></i> Anti-Bacterial</span>
+                                </div>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">Formaldehyde Neutralizing Technology</h5>
-                                <p class="text-muted small mb-0">Absorbs and eliminates toxic airborne VOCs, keeping indoor bedrooms and nurseries truly fresh.</p>
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Berger%20Silk%20Breathe%20Easy.%20Please%20quote%20price." class="berger-order-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </a>
                             </div>
                         </div>
-                        <div class="d-flex align-items-start gap-3 p-3 bg-white rounded-3 shadow-sm">
-                            <div class="p-2 bg-danger bg-opacity-10 text-danger rounded-2">
-                                <i class="fa fa-tools fs-4"></i>
+                    </div>
+
+                    <!-- Card 2: Silk Glamor Soft Sheen -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="berger-product-card">
+                            <div>
+                                <div class="berger-product-img-box">
+                                    <span class="berger-product-badge bg-primary text-white">Soft Sheen Finish</span>
+                                    <img src="paint/silk-glamor-soft-sheen-can.webp" alt="Berger Silk Glamor Soft Sheen Emulsion">
+                                </div>
+                                <h3 class="berger-product-title">Silk Glamor Soft Sheen</h3>
+                                <p class="berger-product-desc">Formulated with Crystal Reflective Technology. Imparts ultra-smooth metallic sheen with high washability and stain-resistance.</p>
+                                <div class="berger-spec-pills">
+                                    <span class="berger-spec-pill"><i class="fa fa-star text-warning me-1"></i> Metallic Glow</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-tint-slash text-info me-1"></i> Washable</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-expand me-1"></i> 140-155 sq.ft/L</span>
+                                </div>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">Dust-Free Mechanized Tools</h5>
-                                <p class="text-muted small mb-0">Vacuum-attached sanders and auto-rollers make painting 40% faster with zero dust contamination.</p>
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20pricing%20for%20Berger%20Silk%20Glamor%20Soft%20Sheen." class="berger-order-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </a>
                             </div>
                         </div>
-                        <div class="d-flex align-items-start gap-3 p-3 bg-white rounded-3 shadow-sm">
-                            <div class="p-2 bg-danger bg-opacity-10 text-danger rounded-2">
-                                <i class="fa fa-check-double fs-4"></i>
+                    </div>
+
+                    <!-- Card 3: Bison Glow Interior Emulsion -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="berger-product-card">
+                            <div>
+                                <div class="berger-product-img-box">
+                                    <span class="berger-product-badge bg-warning text-dark">Pearl Glow Interior</span>
+                                    <img src="paint/berger-bison-glow.webp" alt="Berger Bison Glow Acrylic Emulsion">
+                                </div>
+                                <h3 class="berger-product-title">Bison Glow Acrylic Emulsion</h3>
+                                <p class="berger-product-desc">Economy-plus emulsion offering rich pearl glow and smooth wall coverage at a fraction of the cost of standard luxury emulsions.</p>
+                                <div class="berger-spec-pills">
+                                    <span class="berger-spec-pill"><i class="fa fa-star text-warning me-1"></i> Best Seller</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-expand me-1"></i> 135-150 sq.ft/L</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-tint text-primary me-1"></i> Low Odor</span>
+                                </div>
                             </div>
                             <div>
-                                <h5 class="fw-bold mb-1">10-Year Comprehensive Warranty</h5>
-                                <p class="text-muted small mb-0">WeatherCoat Long Life systems backed by official manufacturer warranties against peeling and color fading.</p>
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20enquiring%20about%20Berger%20Bison%20Glow%20Emulsion." class="berger-order-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Silk Glamor Dazzle Super Sheen -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="berger-product-card">
+                            <div>
+                                <div class="berger-product-img-box">
+                                    <span class="berger-product-badge bg-info text-white">Super Sheen Finish</span>
+                                    <img src="paint/silk-glamor-dazzle-can_0.webp" alt="Berger Silk Glamor Dazzle Super Sheen Emulsion">
+                                </div>
+                                <h3 class="berger-product-title">Silk Glamor Dazzle</h3>
+                                <p class="berger-product-desc">High glitz luxury interior emulsion that enhances illumination in living rooms with superior film strength and dirt-pick-up resistance.</p>
+                                <div class="berger-spec-pills">
+                                    <span class="berger-spec-pill"><i class="fa fa-gem text-info me-1"></i> High Glitz</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-shield-alt text-primary me-1"></i> Stain Guard</span>
+                                    <span class="berger-spec-pill"><i class="fa fa-brush me-1"></i> 140-160 sq.ft/L</span>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20rates%20for%20Berger%20Silk%20Glamor%20Dazzle." class="berger-order-btn" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="brand-hero-img-wrap">
-                        <img src="paint/Berger paint benfits.webp" alt="Berger Paints Benefits Showcase" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- ==============================================
-         8. CTA BANNER
-         ============================================== -->
-    <section class="py-5 bg-white">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="brand-cta-banner" style="background: linear-gradient(135deg, #7F1D1D 0%, #1E1B4B 100%);">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-8">
-                        <span class="badge bg-danger px-3 py-2 text-uppercase mb-3 fw-bold">Authorized Showroom Support</span>
-                        <h3 class="display-6 fw-bold mb-2 text-white">Get Wholesale Pricing on Berger Paints Today</h3>
-                        <p class="text-white-50 mb-0 fs-6">Visit Anbu Paints at Thiruchitrambalam Kootroad, Pondicherry. Get instant computer mixing, contractor bulk discounts, and prompt on-site delivery.</p>
+            <!-- ==============================================
+                 9. CALL TO ACTION (NEED GENUINE BERGER PAINTS IN PONDICHERRY?)
+                 ============================================== -->
+            <section class="berger-cta-card-modern">
+                <div class="row align-items-center justify-content-between g-4">
+                    <div class="col-lg-7">
+                        <h3 class="berger-cta-heading">
+                            Need Genuine Berger Paints in Pondicherry?
+                        </h3>
+                        <p class="berger-cta-sub">
+                            Visit Anbu Paints showroom at Thiruchitrambalam Kootroad or connect directly with our experts for instant computerized color mixing &amp; contractor pricing.
+                        </p>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-3">
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20looking%20for%20Berger%20Paints%20wholesale%20rates." class="btn btn-light rounded-pill px-4 py-3 fw-bold text-danger" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp me-2 fs-5"></i> WhatsApp Enquiry
+                    <div class="col-lg-5">
+                        <div class="d-flex flex-column gap-3 align-items-lg-end">
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Berger%20Paints%20pricing%20and%20availability." class="berger-cta-btn-orange w-100 text-center" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp fs-5"></i> Enquire on WhatsApp
                             </a>
-                            <a href="tel:+919626325204" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold">
-                                <i class="fa fa-phone-alt me-2"></i> Call Now
+                            <a href="tel:+919626325232" class="berger-cta-btn-call w-100 text-center">
+                                <i class="fa fa-phone-alt"></i> Call: +91 96263 25232
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
         </div>
-    </section>
+    </main>
 
     <!-- ==============================================
-         9. FOOTER SECTION
+         10. FOOTER SECTION (5-COLUMN DARK NAVY THEME - MATCHING JSW)
          ============================================== -->
     <footer class="anbu-footer">
         <div class="container-fluid px-lg-5 px-3">
-            <div class="row g-4 pb-5">
-                <!-- Column 1: Logo & Showroom Credo -->
+            <div class="row g-4 justify-content-between">
+                <!-- Column 1: Company Profile -->
                 <div class="col-lg-3 col-md-6 col-12">
-                    <div class="mb-3">
-                        <img src="img/paint logo.png" alt="AP Anbu Paints Logo" style="height: 52px; filter: brightness(0) invert(1);">
+                    <div class="footer-logo mb-3">
+                        <img src="img/paint logo.png" alt="AP Anbu Paints Logo" style="height: 50px; background: #fff; padding: 6px 12px; border-radius: 8px;">
                     </div>
-                    <p class="mb-4">Your one-stop destination for premium paints, coatings, waterproofing solutions and computerized shade mixing in Pondicherry.</p>
-                    <div class="footer-social-links">
-                        <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@anbutraders1353" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <p class="footer-desc mb-3">
+                        Premier destination for authentic architectural paints, computerized shade mixing, and industrial coatings in Pondicherry. Authorized dealers for JSW Paints, Berger Paints, Asian Paints &amp; Birla Wall Putty.
+                    </p>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@anbutraders1353" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -553,40 +2380,44 @@
                     <a href="contact.html" class="footer-link-item">Contact Us</a>
                 </div>
 
-                <!-- Column 3: Products -->
+                <!-- Column 3: Brand Lines -->
                 <div class="col-lg-2 col-md-3 col-6">
-                    <h6>Brand Portals</h6>
+                    <h6>Products</h6>
                     <a href="jsw.html" class="footer-link-item">JSW Paints</a>
-                    <a href="burger.html" class="footer-link-item text-danger fw-bold">Berger Paints</a>
+                    <a href="burger.html" class="footer-link-item active" style="color: var(--berger-orange); font-weight: 700;">Berger Paints</a>
                     <a href="asianpant.html" class="footer-link-item">Asian Paints</a>
                     <a href="wallputty.html" class="footer-link-item">Birla Wall Putty</a>
-                    <a href="index.html#shade-mixing" class="footer-link-item">Shade Mixing</a>
                 </div>
 
-                <!-- Column 4: Business Hours -->
+                <!-- Column 4: Hours of Operation -->
                 <div class="col-lg-2 col-md-4 col-6">
                     <h6>Business Hours</h6>
-                    <p class="mb-1 text-white">Monday - Saturday:</p>
-                    <p class="text-white-50 mb-3 small">08:00 AM - 08:00 PM</p>
-                    <p class="mb-1 text-white">Sunday:</p>
-                    <p class="text-white-50 mb-0 small">08:00 AM - 02:30 PM</p>
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <i class="far fa-clock text-warning"></i>
+                        <div>
+                            <p class="mb-0 text-white fw-semibold" style="font-size: 13.5px;">Monday - Saturday</p>
+                            <small class="text-white-50">08:00 AM - 08:00 PM</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-3">
+                        <i class="far fa-calendar-check text-warning"></i>
+                        <div>
+                            <p class="mb-0 text-white fw-semibold" style="font-size: 13.5px;">Sunday</p>
+                            <small class="text-white-50">08:00 AM - 02:30 PM</small>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Column 5: Showroom Location & Google Review -->
+                <!-- Column 5: Store Details -->
                 <div class="col-lg-3 col-md-8 col-12">
                     <h6>Our Shop</h6>
-                    <p class="mb-2 d-flex align-items-start gap-2">
+                    <p class="mb-2 d-flex align-items-start gap-2 text-white-50 small">
                         <i class="fa fa-map-marker-alt text-warning mt-1"></i>
                         <span>No. 4/5, Pondy – Mailam Main Road, Opposite to Venkateswara Weighment, Thiruchitrambalam Kootroad, Vanur Taluk, Villupuram Dt. – 605 111</span>
                     </p>
-                    <p class="mb-2 d-flex align-items-center gap-2">
-                        <i class="fa fa-phone-alt text-warning"></i>
-                        <a href="tel:+919626325232">+91 96263 25232</a> | <a href="tel:+919940917758">+91 99409 17758</a>
-                    </p>
-                    <p class="mb-3 d-flex align-items-center gap-2">
-                        <i class="fa fa-envelope text-warning"></i>
-                        <a href="mailto:anbutraders1468@gmail.com">anbutraders1468@gmail.com</a>
-                    </p>
+                    <p class="mb-1 text-white-50 small"><i class="fa fa-phone-alt text-warning me-2"></i> +91 96263 25232</p>
+                    <p class="mb-1 text-white-50 small"><i class="fa fa-phone-alt text-warning me-2"></i> +91 99409 17758</p>
+                    <p class="mb-3 text-white-50 small"><i class="fa fa-envelope text-warning me-2"></i> anbutraders1468@gmail.com</p>
                     <button type="button" class="btn btn-outline-warning btn-sm rounded-pill px-3" onclick="redirectToGoogleReview()">
                         <i class="fa fa-star text-warning me-1"></i> Leave a Google Review
                     </button>
@@ -602,11 +2433,17 @@
                         &copy; 2026 ANBU PAINTS (A Division of Anbu Traders). All rights reserved.
                     </div>
                     <div class="d-flex gap-3">
-                        <a href="contact.html">Privacy Policy</a>
+                        <a href="index.html" class="text-white-50 text-decoration-none small">Home</a>
                         <span class="text-white-50">|</span>
-                        <a href="contact.html">Terms &amp; Conditions</a>
+                        <a href="index.html#products" class="text-white-50 text-decoration-none small">Products</a>
                         <span class="text-white-50">|</span>
-                        <a href="contact.html">Sitemap</a>
+                        <a href="index.html#servicepaint" class="text-white-50 text-decoration-none small">Service</a>
+                        <span class="text-white-50">|</span>
+                        <a href="ourproject.html" class="text-white-50 text-decoration-none small">Projects</a>
+                        <span class="text-white-50">|</span>
+                        <a href="gallery.html" class="text-white-50 text-decoration-none small">Gallery</a>
+                        <span class="text-white-50">|</span>
+                        <a href="contact.html" class="text-white-50 text-decoration-none small">Contact</a>
                     </div>
                 </div>
             </div>
@@ -614,29 +2451,27 @@
     </footer>
 
     <!-- ==============================================
-         10. FLOATING ACTION BUTTONS
+         11. FLOATING ACTION BUTTONS
          ============================================== -->
     <div class="floating-actions-wrap">
-        <!-- Floating WhatsApp -->
         <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Berger%20Paints." class="btn-floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <!-- Floating Back to Top Button -->
         <a href="#" class="btn-floating-top" id="btnBackToTop" aria-label="Back to Top">
             <i class="fa fa-arrow-up"></i>
         </a>
     </div>
 
     <!-- ==============================================
-         11. MODAL: GET A QUOTE
+         12. MODAL: GET A QUOTE
          ============================================== -->
     <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 border-0 shadow-lg">
                 <div class="modal-header border-0 pb-0 pt-4 px-4">
                     <div>
-                        <span class="section-eyebrow mb-1">BERGER PAINTS</span>
-                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #062B5B;">Request a Berger Paint Quote</h4>
+                        <span class="berger-eyebrow mb-1">BERGER PAINTS</span>
+                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: var(--berger-navy-primary);">Request a Berger Paint Quote</h4>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -653,10 +2488,10 @@
                         <div class="mb-3">
                             <label class="form-label small fw-bold">Interested Berger Paint Solution</label>
                             <select id="quoteService" class="form-select rounded-3">
-                                <option value="Berger Silk Breathe Easy Luxury Health Emulsion">Berger Silk Breathe Easy Luxury Health Emulsion</option>
                                 <option value="Berger WeatherCoat Long Life 10">Berger WeatherCoat Long Life 10</option>
+                                <option value="Berger Silk Breathe Easy Luxury Health Emulsion">Berger Silk Breathe Easy Luxury Health Emulsion</option>
+                                <option value="Berger Silk Glamor Soft Sheen">Berger Silk Glamor Soft Sheen</option>
                                 <option value="Berger Bison Glow Acrylic Emulsion">Berger Bison Glow Acrylic Emulsion</option>
-                                <option value="Berger BP White Acrylic Primer">Berger BP White Acrylic Primer</option>
                                 <option value="Berger Express Painting Service Consultation">Berger Express Painting Service Consultation</option>
                             </select>
                         </div>
@@ -664,7 +2499,7 @@
                             <label class="form-label small fw-bold">Approx. Carpet Area (Optional)</label>
                             <input type="text" id="quoteArea" class="form-control rounded-3" placeholder="e.g. 1500 sq.ft or 3 BHK">
                         </div>
-                        <button type="submit" class="btn-get-quote w-100 justify-content-center py-3 fs-6">
+                        <button type="submit" class="btn-quote-orange w-100 justify-content-center py-3 fs-6">
                             Send via WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
                         </button>
                     </form>
@@ -674,91 +2509,7 @@
     </div>
 
     <!-- ==============================================
-         12. MODAL: LIVE PAINT ESTIMATOR
-         ============================================== -->
-    <div class="modal fade" id="estimatorModal" tabindex="-1" aria-labelledby="estimatorModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content rounded-4 border-0 shadow-lg">
-                <div class="modal-header border-0 pb-0 pt-4 px-4">
-                    <div>
-                        <span class="section-eyebrow mb-1">PAINT ESTIMATOR CALCULATOR</span>
-                        <h4 class="modal-title fw-bold" id="estimatorModalLabel" style="color: #062B5B;">Instant Paint Quantity Calculator</h4>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="row g-4">
-                        <div class="col-md-6 border-end">
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold">Carpet Area of House (Square Feet)</label>
-                                <input type="number" id="calcSqft" class="form-control rounded-3" value="1000" min="100" max="25000">
-                                <small class="text-muted">Total carpet floor area in sq.ft</small>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold">Type of Painting Project</label>
-                                <select id="calcType" class="form-select rounded-3">
-                                    <option value="interior">Interior Painting (Berger Silk / Bison)</option>
-                                    <option value="exterior">Exterior Weather Defense (WeatherCoat)</option>
-                                    <option value="both">Both Interior &amp; Exterior</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold">Number of Coats</label>
-                                <select id="calcCoats" class="form-select rounded-3">
-                                    <option value="2">2 Coats (Standard)</option>
-                                    <option value="3">3 Coats (Premium Deep Tone)</option>
-                                </select>
-                            </div>
-                            <button type="button" id="btnCalculate" class="btn-get-quote w-100 justify-content-center py-2 mt-2">
-                                Recalculate Requirement
-                            </button>
-                        </div>
-
-                        <div class="col-md-6 d-flex flex-column justify-content-between">
-                            <div>
-                                <h6 class="fw-bold mb-3" style="color: #062B5B;">Estimated Materials Required:</h6>
-                                <div class="row g-3">
-                                    <div class="col-6">
-                                        <div class="calc-result-pill">
-                                            <h4 id="resPaint">28 L</h4>
-                                            <small>Berger Topcoat Emulsion</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="calc-result-pill">
-                                            <h4 id="resPrimer">18 L</h4>
-                                            <small>Berger BP Primer</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="calc-result-pill">
-                                            <h4 id="resPutty">60 Kg</h4>
-                                            <small>Birla Wall Putty</small>
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="calc-result-pill">
-                                            <h4 id="resApprox">₹ 14,800</h4>
-                                            <small>Estimated Paint Cost</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 pt-3 border-top">
-                                <a id="btnEstimatorWhatsapp" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20my%20house%20is%201000%20sq.ft.%20Please%20quote%20for%20Berger%20Paints." class="btn-get-quote w-100 justify-content-center py-2" target="_blank" rel="noopener noreferrer">
-                                    Book Berger Order on WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==============================================
-         13. SCRIPTS
+         13. SCRIPTS & REACT BITS <CardSwap /> ENGINE
          ============================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
 
@@ -769,7 +2520,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            // Universal Vanilla Modal Controller
+            // Universal Modal Backdrop Handler
             function closeAllModals() {
                 document.querySelectorAll('.modal').forEach(function(m) {
                     m.classList.remove('show');
@@ -799,9 +2550,7 @@
                             bd.className = 'modal-backdrop fade show modal-blur-backdrop';
                             bd.id = 'vanillaBackdrop';
                             document.body.appendChild(bd);
-                            bd.addEventListener('click', function() {
-                                closeAllModals();
-                            });
+                            bd.addEventListener('click', closeAllModals);
                         }
                         document.body.classList.add('modal-open');
                     }
@@ -832,51 +2581,6 @@
                 });
             }
 
-            // Live Paint Estimator Calculator
-            function runPaintCalculation() {
-                var sqftInput = document.getElementById('calcSqft');
-                var typeSelect = document.getElementById('calcType');
-                var coatsSelect = document.getElementById('calcCoats');
-
-                var sqft = parseFloat(sqftInput ? sqftInput.value : 1000) || 1000;
-                var type = typeSelect ? typeSelect.value : 'interior';
-                var coats = parseInt(coatsSelect ? coatsSelect.value : 2, 10) || 2;
-
-                var wallAreaMultiplier = (type === 'both') ? 4.5 : (type === 'exterior') ? 1.8 : 2.5;
-                var totalWallArea = sqft * wallAreaMultiplier;
-
-                var coveragePerLiter = (coats === 3) ? 90 : 130;
-                var litersPaint = Math.round(totalWallArea / coveragePerLiter);
-                var litersPrimer = Math.round(totalWallArea / 180);
-                var kgPutty = Math.round(totalWallArea / 25);
-                var estCost = Math.round(litersPaint * 385 + litersPrimer * 165 + kgPutty * 45);
-
-                var resPaint = document.getElementById('resPaint');
-                var resPrimer = document.getElementById('resPrimer');
-                var resPutty = document.getElementById('resPutty');
-                var resApprox = document.getElementById('resApprox');
-                var btnEstWhatsapp = document.getElementById('btnEstimatorWhatsapp');
-
-                if (resPaint) resPaint.textContent = litersPaint + ' L';
-                if (resPrimer) resPrimer.textContent = litersPrimer + ' L';
-                if (resPutty) resPutty.textContent = kgPutty + ' Kg';
-                if (resApprox) resApprox.textContent = '₹ ' + estCost.toLocaleString('en-IN');
-
-                if (btnEstWhatsapp) {
-                    var msg = 'Hello Anbu Paints, my house is ' + sqft + ' sq.ft (' + type + '). Berger estimate: ' + litersPaint + 'L Emulsion, ' + litersPrimer + 'L Primer, ' + kgPutty + 'Kg Putty (~₹' + estCost.toLocaleString('en-IN') + '). Please provide wholesale pricing.';
-                    btnEstWhatsapp.href = 'https://wa.me/9626325204?text=' + encodeURIComponent(msg);
-                }
-            }
-
-            var btnCalc = document.getElementById('btnCalculate');
-            if (btnCalc) btnCalc.addEventListener('click', runPaintCalculation);
-            var calcSqft = document.getElementById('calcSqft');
-            if (calcSqft) calcSqft.addEventListener('input', runPaintCalculation);
-            var calcType = document.getElementById('calcType');
-            if (calcType) calcType.addEventListener('change', runPaintCalculation);
-            var calcCoats = document.getElementById('calcCoats');
-            if (calcCoats) calcCoats.addEventListener('change', runPaintCalculation);
-
             // WhatsApp Quote Form Handler
             var quoteForm = document.getElementById('quoteForm');
             if (quoteForm) {
@@ -899,6 +2603,525 @@
                     closeAllModals();
                 });
             }
+
+            // ==============================================================
+            // REACT BITS <CardSwap /> COMPONENT JAVASCRIPT ENGINE
+            // Bidirectional Synchronization with Applications Nav List
+            // ==============================================================
+            (function initCardSwap() {
+                var root = document.getElementById('bergerCardSwapRoot');
+                var stage = document.getElementById('bergerCardSwapStage');
+                if (!root || !stage) return;
+
+                var cardElements = Array.from(stage.querySelectorAll('.card-swap-card'));
+                var count = cardElements.length;
+                if (count === 0) return;
+
+                var appCategoryTitles = [
+                    'Roofing and Villa Exterior',
+                    'Infrastructure and Waterproofing',
+                    'Luxury Home Interiors',
+                    'Wood and Metal Enamels'
+                ];
+
+                var s0 = {
+                    width: 520,
+                    height: 380,
+                    bounds: { width: 560, height: 420 },
+                    dropoff: 0.9,
+                    speed: 1,
+                    delay: 4500,
+                    pauseOnHover: true,
+                    skew: 3.5,
+                    tilt: 4.5,
+                    elevation: 55,
+                    depth: 85,
+                    perspective: 900,
+                    scale: 0.92,
+                    spread: 22,
+                    fade: 0.28,
+                    parallax: 0.08,
+                    rotations: [0, -3.5, 4.2, -2.8],
+                    draggable: true
+                };
+
+                var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                var now = performance.now();
+
+                var state = {
+                    order: cardElements.map(function (_, i) { return i; }),
+                    animating: false,
+                    hovered: false,
+                    overCard: false,
+                    dragged: false,
+                    inView: true,
+                    drag: null,
+                    scale: 1,
+                    tx: 0,
+                    ty: 0,
+                    timer: null,
+                    raf: null
+                };
+
+                var deck = cardElements.map(function (el, i) {
+                    return {
+                        el: el,
+                        index: i,
+                        pos: i,
+                        x: 0, y: 0, z: 0, r: 0, p: 0,
+                        v: { x: 0, y: 0, z: 0, r: 0, p: 0 },
+                        phase: 'rest',
+                        nudge: 0,
+                        from: 0,
+                        hold: 0
+                    };
+                });
+
+                function clamp(v, min, max) {
+                    return Math.max(min, Math.min(max, v));
+                }
+
+                function slot(pos, s) {
+                    var total = Math.max(1, count - 1);
+                    var f = clamp(pos / total, 0, 1);
+                    var rot = s.rotations[pos % s.rotations.length] || 0;
+                    return {
+                        x: f * s.spread * 1.5,
+                        y: f * -s.elevation * 0.45,
+                        z: -f * s.depth,
+                        r: rot + (f * s.tilt * 0.4),
+                        p: f * -s.skew * 0.3
+                    };
+                }
+
+                function syncUI(activeIdx) {
+                    var counterEl = document.getElementById('cardSwapCurrent');
+                    if (counterEl) counterEl.textContent = (activeIdx + 1);
+
+                    var navItems = document.querySelectorAll('.berger-app-nav-item');
+                    navItems.forEach(function (item, idx) {
+                        if (idx === activeIdx) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    var waBtn = document.getElementById('bergerAppWhatsAppBtn');
+                    if (waBtn) {
+                        var catName = appCategoryTitles[activeIdx] || 'Berger Paints';
+                        var msg = 'Hello Anbu Paints, I am enquiring about Berger Paints for ' + catName + '.';
+                        waBtn.href = 'https://wa.me/9626325204?text=' + encodeURIComponent(msg);
+                    }
+                }
+
+                function writeStage(s) {
+                    stage.style.setProperty('--swap-stage-w', s.bounds.width + 'px');
+                    stage.style.setProperty('--swap-stage-h', s.bounds.height + 'px');
+                    stage.style.setProperty('--swap-perspective', s.perspective + 'px');
+                }
+
+                function write(card, s) {
+                    var x = (card.x + state.tx).toFixed(2);
+                    var y = (card.y + state.ty).toFixed(2);
+                    var z = card.z.toFixed(2);
+                    var r = card.r.toFixed(2);
+                    var p = card.p.toFixed(2);
+                    var sc = Math.pow(s.scale, card.pos).toFixed(4);
+
+                    card.el.style.transform =
+                        'translate3d(' + x + 'px, ' + y + 'px, ' + z + 'px) ' +
+                        'rotateZ(' + r + 'deg) rotateX(' + p + 'deg) scale(' + sc + ')';
+                    card.el.style.zIndex = String(count - card.pos);
+
+                    var shade = card.el.querySelector('.card-swap-shade');
+                    if (shade) {
+                        var opacity = (card.pos * s.fade).toFixed(3);
+                        shade.style.opacity = String(opacity);
+                    }
+                }
+
+                function shift(delta, fling) {
+                    if (count < 2) return;
+                    delta = (delta % count + count) % count;
+                    if (delta === 0) return;
+
+                    var s = s0;
+                    var topIndex = state.order[0];
+                    var topCard = deck[topIndex];
+
+                    var dir = fling && fling.dir ? fling.dir : { x: 1, y: -0.2 };
+                    var throwDist = Math.max(s.bounds.width, s.bounds.height) * 1.25;
+
+                    topCard.phase = 'fling';
+                    topCard.tx = dir.x * throwDist;
+                    topCard.ty = dir.y * throwDist;
+                    topCard.tr = fling && fling.tilt ? fling.tilt : 15;
+                    topCard.hold = performance.now() + 280;
+
+                    var newOrder = [];
+                    for (var i = delta; i < count; i++) newOrder.push(state.order[i]);
+                    for (var j = 0; j < delta; j++) newOrder.push(state.order[j]);
+                    state.order = newOrder;
+
+                    state.order.forEach(function (cardIdx, newPos) {
+                        var card = deck[cardIdx];
+                        card.pos = newPos;
+                        if (card !== topCard) {
+                            card.phase = 'return';
+                        }
+                    });
+
+                    syncUI(state.order[0]);
+                    wake();
+                    schedule();
+                }
+
+                function goTo(targetPos) {
+                    if (targetPos <= 0 || targetPos >= count) return;
+                    shift(targetPos);
+                }
+
+                function schedule() {
+                    clearTimeout(state.timer);
+                    if (s0.delay <= 0 || count < 2 || !state.inView) return;
+                    if (s0.pauseOnHover && (state.hovered || state.overCard)) return;
+                    if (state.drag && state.drag.active) return;
+
+                    state.timer = setTimeout(function () {
+                        shift(1);
+                    }, s0.delay);
+                }
+
+                function update(time) {
+                    var s = s0;
+                    var active = false;
+
+                    deck.forEach(function (card) {
+                        var target = slot(card.pos, s);
+
+                        if (card.phase === 'fling') {
+                            var fX = card.tx || 400;
+                            var fY = card.ty || -80;
+                            var fR = card.tr || 12;
+
+                            card.x += (fX - card.x) * 0.18;
+                            card.y += (fY - card.y) * 0.18;
+                            card.r += (fR - card.r) * 0.18;
+                            active = true;
+
+                            if (time >= card.hold) {
+                                card.phase = 'return';
+                                var back = slot(card.pos, s);
+                                card.x = back.x + (card.tx > 0 ? 80 : -80);
+                                card.y = back.y + 40;
+                                card.z = back.z;
+                                card.r = back.r;
+                            }
+                        } else if (card.phase === 'return' || card.phase === 'rest') {
+                            var diffX = target.x - card.x;
+                            var diffY = target.y - card.y;
+                            var diffZ = target.z - card.z;
+                            var diffR = target.r - card.r;
+                            var diffP = target.p - card.p;
+
+                            card.x += diffX * 0.14;
+                            card.y += diffY * 0.14;
+                            card.z += diffZ * 0.14;
+                            card.r += diffR * 0.14;
+                            card.p += diffP * 0.14;
+
+                            if (Math.abs(diffX) > 0.3 || Math.abs(diffY) > 0.3 || Math.abs(diffR) > 0.3) {
+                                active = true;
+                            } else {
+                                card.x = target.x;
+                                card.y = target.y;
+                                card.z = target.z;
+                                card.r = target.r;
+                                card.p = target.p;
+                                card.phase = 'rest';
+                            }
+                        }
+
+                        write(card, s);
+                    });
+
+                    if (active || (state.drag && state.drag.active)) {
+                        state.raf = requestAnimationFrame(update);
+                    } else {
+                        state.raf = null;
+                    }
+                }
+
+                function wake() {
+                    if (!state.raf) {
+                        state.raf = requestAnimationFrame(update);
+                    }
+                }
+
+                function fit() {
+                    var s = s0;
+                    var w = root.clientWidth;
+                    var h = root.clientHeight;
+                    var scale = Math.min(1, w / s.bounds.width, h > 0 ? h / s.bounds.height : 1);
+                    state.scale = scale > 0 ? scale : 1;
+                    stage.style.transform = 'translate(-50%, -50%) scale(' + state.scale.toFixed(4) + ')';
+                }
+
+                function local(event) {
+                    var box = root.getBoundingClientRect();
+                    return { x: event.clientX - box.left, y: event.clientY - box.top, w: box.width, h: box.height };
+                }
+
+                function onMove(event) {
+                    var s = s0;
+                    if (event.pointerType !== 'touch') {
+                        var point = local(event);
+                        var nx = clamp((point.x / Math.max(1, point.w)) * 2 - 1, -1, 1);
+                        var ny = clamp((point.y / Math.max(1, point.h)) * 2 - 1, -1, 1);
+                        state.tx = nx * s.parallax * 0.35 * s.bounds.width;
+                        state.ty = ny * s.parallax * 0.35 * s.bounds.height;
+                        state.hovered = true;
+                        var overCard = Boolean(event.target.closest && event.target.closest('[data-swap-index]'));
+                        if (overCard !== state.overCard) {
+                            state.overCard = overCard;
+                            schedule();
+                        }
+                        wake();
+                    }
+
+                    var drag = state.drag;
+                    if (!drag || drag.id !== event.pointerId) return;
+                    var dx = (event.clientX - drag.startX) / state.scale;
+                    var dy = (event.clientY - drag.startY) / state.scale;
+
+                    if (!drag.active) {
+                        if (Math.hypot(dx, dy) < 5) return;
+                        drag.active = true;
+                        state.dragged = true;
+                        var c = deck[drag.index];
+                        c.phase = 'drag';
+                        if (root.setPointerCapture) root.setPointerCapture(event.pointerId);
+                        root.style.cursor = 'grabbing';
+                    }
+
+                    var card = deck[drag.index];
+                    var base = slot(0, s);
+                    card.x = base.x + dx;
+                    card.y = base.y + dy;
+                    card.r = clamp(dx * 0.035, -9, 9);
+                    wake();
+                }
+
+                function onLeave(event) {
+                    if (event.pointerType === 'touch') return;
+                    if (state.drag && state.drag.active) return;
+                    state.hovered = false;
+                    state.overCard = false;
+                    state.tx = 0;
+                    state.ty = 0;
+                    schedule();
+                    wake();
+                }
+
+                function onDown(event) {
+                    var s = s0;
+                    state.dragged = false;
+                    if (!s.draggable || event.button > 0 || count < 2) return;
+                    var target = event.target.closest && event.target.closest('[data-swap-index]');
+                    if (!target || !root.contains(target)) return;
+                    var index = Number(target.getAttribute('data-swap-index'));
+                    if (index !== state.order[0] || deck[index].phase !== 'rest') return;
+
+                    state.drag = {
+                        id: event.pointerId,
+                        index: index,
+                        startX: event.clientX,
+                        startY: event.clientY,
+                        active: false,
+                        samples: []
+                    };
+                    schedule();
+                }
+
+                function onUp(event) {
+                    var drag = state.drag;
+                    if (!drag || drag.id !== event.pointerId) return;
+                    state.drag = null;
+                    root.style.cursor = '';
+                    if (!drag.active) {
+                        schedule();
+                        return;
+                    }
+                    if (root.releasePointerCapture) root.releasePointerCapture(event.pointerId);
+
+                    var s = s0;
+                    var card = deck[drag.index];
+                    var base = slot(0, s);
+                    var offset = { x: card.x - base.x, y: card.y - base.y };
+                    var distance = Math.hypot(offset.x, offset.y);
+
+                    if (distance > Math.min(s.width, s.height) * 0.28) {
+                        shift(1);
+                    } else {
+                        card.phase = 'rest';
+                        wake();
+                        schedule();
+                    }
+                }
+
+                function onClick(event) {
+                    if (state.dragged) {
+                        state.dragged = false;
+                        return;
+                    }
+                    var target = event.target.closest && event.target.closest('[data-swap-index]');
+                    if (!target || !root.contains(target)) return;
+                    var index = Number(target.getAttribute('data-swap-index'));
+                    var position = state.order.indexOf(index);
+                    if (position > 0) goTo(position);
+                }
+
+                function onKeyDown(event) {
+                    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                        event.preventDefault();
+                        shift(1);
+                    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                        event.preventDefault();
+                        shift(-1);
+                    }
+                }
+
+                // Initial deck layout
+                deck.forEach(function (card) {
+                    var sl = slot(card.pos, s0);
+                    card.x = sl.x; card.y = sl.y; card.z = sl.z; card.r = sl.r; card.p = sl.p;
+                });
+
+                fit();
+                writeStage(s0);
+                deck.forEach(function (card) { write(card, s0); });
+                wake();
+
+                var resizeObserver = new ResizeObserver(fit);
+                resizeObserver.observe(root);
+
+                var intersectionObserver = new IntersectionObserver(function (entries) {
+                    state.inView = entries[entries.length - 1] ? entries[entries.length - 1].isIntersecting : true;
+                    schedule();
+                });
+                intersectionObserver.observe(root);
+
+                root.addEventListener('pointermove', onMove);
+                root.addEventListener('pointerleave', onLeave);
+                root.addEventListener('pointerdown', onDown);
+                root.addEventListener('pointerup', onUp);
+                root.addEventListener('pointercancel', onUp);
+                root.addEventListener('click', onClick);
+                root.addEventListener('keydown', onKeyDown);
+                document.addEventListener('visibilitychange', function () { schedule(); });
+                schedule();
+
+                // Prev / Next Controls
+                var prevBtn = document.getElementById('cardSwapPrev');
+                var nextBtn = document.getElementById('cardSwapNext');
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        shift(-1);
+                    });
+                }
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        shift(1);
+                    });
+                }
+
+                // Left Nav Items
+                var navItems = document.querySelectorAll('.berger-app-nav-item');
+                navItems.forEach(function (item) {
+                    item.addEventListener('click', function () {
+                        var targetIdx = Number(this.getAttribute('data-app-index'));
+                        var pos = state.order.indexOf(targetIdx);
+                        if (pos > 0) {
+                            goTo(pos);
+                        }
+                    });
+                });
+            })();
+        });
+    </script>
+
+    <!-- React Bits SideRays (JS-CSS variant) -->
+    <script src="assets/js/side-rays.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mount SideRays as a Volumetric Spotlight from TOP-RIGHT (Matching Image 2 Reference)
+            var raysEl = document.getElementById('apHeroRays');
+            if (window.SideRays && raysEl) {
+                SideRays.mount(raysEl, {
+                    rayColor1: '#FFC46B',
+                    rayColor2: '#96c8ff',
+                    origin: 'top-right',
+                    speed: 2.2,
+                    intensity: 2.4,
+                    spread: 2.2,
+                    density: 5,
+                    followMouse: true
+                });
+            }
+
+            // Interactive Berger Cans 1 to 4 Switcher
+            var tabs = document.querySelectorAll('.berger-paint-tab');
+            var views = {
+                '1': document.getElementById('bergerView1'),
+                '2': document.getElementById('bergerView2'),
+                '3': document.getElementById('bergerView3'),
+                '4': document.getElementById('bergerView4'),
+                'all': document.getElementById('bergerViewAll')
+            };
+
+            function switchBergerCan(targetId) {
+                // Update tabs
+                tabs.forEach(function (tab) {
+                    var match = (tab.getAttribute('data-target') === targetId);
+                    tab.classList.toggle('active', match);
+                    tab.setAttribute('aria-selected', match ? 'true' : 'false');
+                });
+
+                // Update views
+                Object.keys(views).forEach(function (key) {
+                    var view = views[key];
+                    if (view) {
+                        if (key === targetId) {
+                            view.classList.remove('d-none');
+                        } else {
+                            view.classList.add('d-none');
+                        }
+                    }
+                });
+            }
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var target = this.getAttribute('data-target');
+                    if (target) {
+                        switchBergerCan(target);
+                    }
+                });
+            });
+
+            // Allow clicking individual items in the All 4 Lineup row
+            var lineupItems = document.querySelectorAll('[data-can-pick]');
+            lineupItems.forEach(function (item) {
+                item.addEventListener('click', function () {
+                    var pick = this.getAttribute('data-can-pick');
+                    if (pick) {
+                        switchBergerCan(pick);
+                    }
+                });
+            });
         });
     </script>
 </body>
