@@ -184,25 +184,27 @@
             box-shadow: 0 8px 22px rgba(255, 87, 34, 0.5);
         }
 
-        /* 3. CINEMATIC BERGER PAINTS LUXURY HERO (IMAGE 2 SPOTLIGHT STYLE)
-           DEEP DARK STUDIO + SIDERAYS VOLUMETRIC SPOTLIGHT + 4 BERGER PAINTS */
-        .berger-cinematic-hero {
+        /* ==============================================================
+           3. MINIMAL PREMIUM BERGER PAINTS HERO CAROUSEL
+           ONE DARK NAVY-BLACK CINEMATIC BACKGROUND FOR ALL SLIDES
+           ============================================================== */
+        .berger-minimal-hero {
             position: relative;
             width: 100%;
-            min-height: 660px;
-            height: auto;
-            background: radial-gradient(900px circle at 75% 25%, rgba(255, 196, 107, 0.22) 0%, rgba(150, 200, 255, 0.10) 35%, transparent 70%),
-                        radial-gradient(800px circle at 50% 100%, rgba(14, 165, 233, 0.08) 0%, transparent 60%),
-                        linear-gradient(180deg, #030712 0%, #060e1d 55%, #02050b 100%);
+            min-height: 560px;
+            height: clamp(560px, 72vh, 660px);
+            background:
+                radial-gradient(1100px 750px at 80% 20%, rgba(210, 235, 255, 0.20) 0%, rgba(30, 80, 160, 0.26) 35%, transparent 72%),
+                radial-gradient(900px 500px at 65% 95%, rgba(14, 165, 233, 0.12) 0%, transparent 60%),
+                linear-gradient(180deg, #020409 0%, #050e1f 52%, #010307 100%);
             display: flex;
             align-items: center;
             overflow: hidden;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             color: #FFFFFF;
-            padding: 24px 0 36px;
         }
 
-        /* Animated SideRays Volumetric Light Beam (Top-Right Spotlight as in Image 2) */
+        /* Animated SideRays Light Beam (Top-Right) */
         .berger-hero-rays {
             position: absolute;
             inset: 0;
@@ -210,405 +212,234 @@
             height: 100%;
             z-index: 1;
             pointer-events: none;
-            opacity: 1;
+            opacity: 0.95;
         }
 
-        /* High-Definition Volumetric Light Beam Shaft from Top-Right (Matching Image 2 Reference) */
-        .berger-spotlight-cone {
+        /* Powerful Diagonal Volumetric Light Beams from Top-Right (as in reference image) */
+        .berger-hero-shaft {
             position: absolute;
-            top: -50px;
+            top: -60px;
             right: 0%;
-            width: 720px;
-            height: 800px;
-            background: radial-gradient(ellipse at 92% 5%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 225, 175, 0.22) 28%, rgba(160, 210, 255, 0.12) 55%, transparent 75%);
-            clip-path: polygon(72% 0%, 100% 0%, 75% 100%, 15% 100%);
-            pointer-events: none;
-            z-index: 2;
+            width: 820px;
+            height: 900px;
+            background: linear-gradient(220deg, rgba(255, 255, 255, 0.46) 0%, rgba(210, 235, 255, 0.26) 22%, rgba(56, 189, 248, 0.14) 48%, transparent 72%);
+            clip-path: polygon(68% 0%, 100% 0%, 75% 100%, 8% 100%);
+            filter: blur(14px);
             mix-blend-mode: screen;
-            opacity: 1;
-            filter: blur(12px);
+            z-index: 2;
+            pointer-events: none;
         }
 
-        /* Dark Floor Vignette & Reflective Surface */
-        .berger-hero-floor {
+        .berger-hero-shaft-secondary {
+            position: absolute;
+            top: -40px;
+            right: 16%;
+            width: 580px;
+            height: 840px;
+            background: linear-gradient(225deg, rgba(255, 255, 255, 0.26) 0%, rgba(186, 230, 253, 0.15) 32%, transparent 68%);
+            clip-path: polygon(52% 0%, 86% 0%, 68% 100%, 18% 100%);
+            filter: blur(18px);
+            mix-blend-mode: screen;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Light Smoke & Atmospheric Haze Layer */
+        .berger-hero-smoke {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            height: 260px;
+            background:
+                radial-gradient(750px 140px at 72% 70%, rgba(186, 230, 253, 0.16) 0%, transparent 70%),
+                radial-gradient(1100px 190px at 45% 82%, rgba(56, 189, 248, 0.10) 0%, transparent 65%),
+                radial-gradient(900px 170px at 85% 85%, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            filter: blur(28px);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Dark Glossy Studio Floor */
+        .berger-hero-glossy-floor {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 240px;
-            background: linear-gradient(180deg, transparent 0%, rgba(2, 6, 15, 0.6) 40%, rgba(2, 6, 15, 0.95) 85%, #020617 100%);
-            z-index: 2;
+            height: 230px;
+            background: linear-gradient(180deg, transparent 0%, rgba(3, 8, 20, 0.65) 30%, rgba(2, 5, 14, 0.96) 80%, #010307 100%);
+            z-index: 3;
             pointer-events: none;
         }
 
-        .berger-hero-inner {
+        /* Floor Radial Spotlight Hotspot Under Bucket */
+        .berger-floor-hotspot {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 540px;
+            height: 120px;
+            background: radial-gradient(ellipse at center, rgba(220, 240, 255, 0.42) 0%, rgba(96, 165, 250, 0.22) 35%, rgba(14, 165, 233, 0.08) 60%, transparent 75%);
+            border-radius: 50%;
+            filter: blur(14px);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .berger-minimal-inner {
             position: relative;
-            z-index: 4;
+            z-index: 5;
             max-width: 1340px;
             margin: 0 auto;
             width: 100%;
-            padding: 30px 0;
+            padding: 20px 0;
         }
 
-        .berger-hero-copy {
+        /* Left Column: Heading + Subtext ONLY */
+        .berger-minimal-left {
             position: relative;
-            z-index: 5;
-            max-width: 580px;
-        }
-
-        /* Pill Badge */
-        .berger-hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 12.5px;
-            font-weight: 700;
-            color: #E2E8F0;
-            letter-spacing: 0.6px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .berger-hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #FF5722;
-            box-shadow: 0 0 12px #FF5722, 0 0 24px #FF5722;
-            display: inline-block;
-            animation: bergerPulse 2s infinite ease-in-out;
-        }
-
-        @keyframes bergerPulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.35); opacity: 0.7; }
-        }
-
-        /* Title */
-        .berger-hero-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(2.4rem, 4vw, 3.8rem);
-            font-weight: 800;
-            color: #FFFFFF;
-            line-height: 1.12;
-            margin-bottom: 18px;
-            letter-spacing: -0.03em;
-        }
-
-        .berger-hero-title-accent {
-            background: linear-gradient(135deg, #FF6B35 0%, #FFA726 45%, #FFD54F 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline;
-        }
-
-        /* Subtext */
-        .berger-hero-text {
-            font-size: clamp(15px, 1.15vw, 16.5px);
-            line-height: 1.65;
-            color: #94A3B8;
-            margin-bottom: 24px;
+            z-index: 6;
             max-width: 520px;
         }
 
-        /* Feature Pills */
-        .berger-hero-features {
+        .berger-minimal-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(3rem, 5.2vw, 4.4rem);
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            margin-bottom: 0;
+        }
+
+        /* Vibrant Orange Underline Bar Under "Berger" */
+        .berger-minimal-heading-bar {
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #FF5722 0%, #FF8A65 100%);
+            border-radius: 2px;
+            margin-top: 14px;
+            margin-bottom: 22px;
+        }
+
+        .berger-minimal-text {
+            font-size: clamp(16px, 1.35vw, 19px);
+            font-weight: 400;
+            color: #CBD5E1;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+
+        /* Right Column: Carousel Stage with Paint Bucket & Arrows */
+        .berger-carousel-stage {
+            position: relative;
+            z-index: 6;
             display: flex;
             align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+            justify-content: center;
+            width: 100%;
+            min-height: 480px;
         }
 
-        .berger-hero-feat {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 7px 16px;
-            border-radius: 50px;
-            font-size: 12.5px;
-            font-weight: 600;
-            color: #E2E8F0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .berger-hero-feat i {
-            color: #FF7043;
-            font-size: 13px;
-        }
-
-        /* CTA Buttons */
-        .berger-hero-cta {
-            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
-            color: #FFFFFF !important;
-            font-weight: 700;
-            font-size: 15px;
-            padding: 14px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: none;
-            box-shadow: 0 10px 28px rgba(255, 87, 34, 0.45);
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .berger-hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 34px rgba(255, 87, 34, 0.6);
-            background: linear-gradient(135deg, #F4511E 0%, #D84315 100%);
-        }
-
-        .berger-hero-link {
+        /* Carousel Navigation Arrows */
+        .berger-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
             background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(8px);
-            border: 1.5px solid rgba(255, 255, 255, 0.2);
-            color: #FFFFFF !important;
-            font-weight: 700;
-            font-size: 15px;
-            padding: 13px 26px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: #FFFFFF;
+            display: flex;
             align-items: center;
-            gap: 8px;
-            transition: all 0.25s ease;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+            z-index: 10;
         }
 
-        .berger-hero-link:hover {
-            border-color: rgba(255, 255, 255, 0.4);
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
+        .berger-carousel-btn:hover {
+            background: rgba(255, 255, 255, 0.20);
+            border-color: rgba(255, 255, 255, 0.50);
+            color: #FFFFFF;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
         }
 
-        /* -------------------------------------------------------------
-           RIGHT SIDE: CINEMATIC SPOTLIGHT STAGE (BERGER IMAGES 1 TO 4)
-           ------------------------------------------------------------- */
-        .berger-spotlight-stage {
+        .berger-carousel-btn.prev {
+            left: 20px;
+        }
+
+        .berger-carousel-btn.next {
+            right: 20px;
+        }
+
+        /* Bucket Display Wrapper */
+        .berger-bucket-container {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Product Contact Shadow directly under bucket */
+        .berger-bucket-shadow {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 330px;
+            height: 38px;
+            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.75) 45%, transparent 75%);
+            border-radius: 50%;
+            filter: blur(5px);
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        /* Bucket Slides */
+        .berger-bucket-slide {
+            display: none;
             position: relative;
             z-index: 5;
-            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
-        }
-
-        /* Interactive 1-4 Paint Switcher Pill Bar */
-        .berger-paint-tabs {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(14px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-            padding: 5px;
-            border-radius: 50px;
-            margin-bottom: 16px;
-            z-index: 6;
-            max-width: 100%;
-            overflow-x: auto;
-        }
-
-        .berger-paint-tab {
-            background: transparent;
-            border: none;
-            color: #94A3B8;
-            font-size: 12.5px;
-            font-weight: 700;
-            padding: 8px 16px;
-            border-radius: 50px;
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            white-space: nowrap;
-        }
-
-        .berger-paint-tab:hover {
-            color: #FFFFFF;
-            background: rgba(255, 255, 255, 0.08);
-        }
-
-        .berger-paint-tab.active {
-            background: linear-gradient(135deg, #FF5722 0%, #E64A19 100%);
-            color: #FFFFFF;
-            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.45);
-        }
-
-        /* Spotlight Pod (where the can sits with floor reflection) */
-        .berger-pod-wrap {
-            position: relative;
-            width: 100%;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-bottom: 12px;
-        }
-
-        /* Studio Spotlight Radial Glow on Floor (Image 2 effect) */
-        .berger-spotlight-beam-glow {
-            position: absolute;
-            bottom: 58px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 520px;
-            height: 125px;
-            background: radial-gradient(ellipse at center, rgba(255, 196, 107, 0.45) 0%, rgba(150, 200, 255, 0.22) 40%, transparent 75%);
-            border-radius: 50%;
-            filter: blur(14px);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Ambient Dark Floor Shadow directly under the can */
-        .berger-can-floor-shadow {
-            position: absolute;
-            bottom: 66px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 310px;
-            height: 46px;
-            background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.7) 45%, transparent 75%);
-            border-radius: 50%;
-            filter: blur(6px);
-            pointer-events: none;
-            z-index: 2;
-        }
-
-        /* Can Item Container */
-        .berger-can-view {
-            position: relative;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
+            opacity: 0;
+            transform: scale(0.96);
             transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
-        .berger-can-view.d-none {
-            display: none !important;
+        .berger-bucket-slide.active {
+            display: flex;
+            opacity: 1;
+            transform: scale(1);
         }
 
-        /* Single Can Hero Display with Image 2 Reflection */
-        .berger-single-can-img {
-            max-width: 300px;
-            width: 78%;
+        /* Paint Bucket Image with Soft Reflection */
+        .berger-bucket-img {
+            max-width: 340px;
+            width: 84%;
             height: auto;
-            max-height: 305px;
+            max-height: 370px;
             object-fit: contain;
             display: block;
-            margin: 0 auto 16px;
-            filter: drop-shadow(0 22px 32px rgba(0, 0, 0, 0.92)) brightness(1.06) contrast(1.05);
-            -webkit-box-reflect: below 2px linear-gradient(to bottom, transparent 48%, rgba(255, 255, 255, 0.28) 100%);
-            transition: transform 0.4s ease;
-        }
-
-        .berger-can-view:hover .berger-single-can-img {
-            transform: translateY(-4px) scale(1.03);
-        }
-
-        /* All 4 Cans Lineup View */
-        .berger-lineup-row {
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            gap: 16px;
-            width: 100%;
-            padding: 10px 0 20px;
-        }
-
-        .berger-lineup-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 0 auto 10px;
+            filter: drop-shadow(0 20px 32px rgba(0, 0, 0, 0.92)) brightness(1.06) contrast(1.04);
+            -webkit-box-reflect: below 2px linear-gradient(to bottom, transparent 45%, rgba(255, 255, 255, 0.26) 100%);
             transition: transform 0.3s ease;
-            cursor: pointer;
         }
 
-        .berger-lineup-item:hover {
-            transform: translateY(-6px) scale(1.06);
-        }
-
-        .berger-lineup-item img {
-            max-width: 140px;
-            height: auto;
-            max-height: 220px;
-            object-fit: contain;
-            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.7));
-            -webkit-box-reflect: below 2px linear-gradient(to bottom, transparent 70%, rgba(255, 255, 255, 0.2) 100%);
-        }
-
-        .berger-lineup-item.featured img {
-            max-width: 175px;
-            max-height: 260px;
-            filter: drop-shadow(0 20px 30px rgba(255, 196, 107, 0.35)) drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
-        }
-
-        .berger-lineup-title {
-            color: #E2E8F0;
-            font-size: 11.5px;
-            font-weight: 700;
-            margin-top: 10px;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        /* Product Info Strip underneath active can */
-        .berger-can-info-badge {
-            margin-top: 18px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 7px 18px;
-            border-radius: 50px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-            z-index: 4;
-        }
-
-        .berger-info-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #10B981;
-            box-shadow: 0 0 10px #10B981;
-        }
-
-        .berger-info-text {
-            color: #F1F5F9;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .berger-info-sub {
-            color: #94A3B8;
-            font-size: 11.5px;
-            font-weight: 500;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
-            padding-left: 10px;
-        }
-
-        /* Entrance Animations */
+        /* Entrance Animation */
         .ap-reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -623,77 +454,46 @@
             }
         }
 
-        /* Responsive */
         @media (max-width: 991.98px) {
-            .berger-cinematic-hero {
+            .berger-minimal-hero {
                 min-height: auto;
-                max-height: none;
                 height: auto;
-                padding: 48px 0 54px;
+                padding: 40px 0 50px;
             }
 
-            .berger-hero-copy {
+            .berger-minimal-left {
                 max-width: 100%;
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 24px;
             }
 
-            .berger-hero-text {
+            .berger-minimal-heading-bar {
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            .berger-hero-features {
-                justify-content: center;
+            .berger-carousel-btn.prev {
+                left: 0;
             }
 
-            .berger-spotlight-stage {
-                margin-top: 10px;
+            .berger-carousel-btn.next {
+                right: 0;
             }
 
-            .berger-pod-wrap {
-                min-height: 380px;
-            }
-
-            .berger-single-can-img {
-                max-width: 280px;
-                max-height: 320px;
-            }
-
-            .berger-lineup-item img {
-                max-width: 90px;
-                max-height: 150px;
-            }
-
-            .berger-lineup-item.featured img {
-                max-width: 110px;
-                max-height: 180px;
+            .berger-bucket-img {
+                max-width: 270px;
+                max-height: 310px;
             }
         }
 
         @media (max-width: 575.98px) {
-            .berger-hero-title {
-                font-size: 2.2rem;
+            .berger-minimal-heading {
+                font-size: 2.5rem;
             }
 
-            .berger-paint-tabs {
-                justify-content: flex-start;
-                padding: 4px;
-            }
-
-            .berger-paint-tab {
-                padding: 6px 12px;
-                font-size: 11px;
-            }
-
-            .berger-single-can-img {
+            .berger-bucket-img {
                 max-width: 230px;
                 max-height: 270px;
-            }
-
-            .berger-hero-cta, .berger-hero-link {
-                width: 100%;
-                justify-content: center;
             }
         }
 
@@ -1739,155 +1539,92 @@
     </header>
 
     <!-- ==============================================
-         3. CINEMATIC BERGER PAINTS LUXURY HERO (IMAGE 2 SPOTLIGHT STYLE)
-            Deep Dark Studio + Volumetric SideRays Spotlight + Berger Cans 1-4
+         3. MINIMAL PREMIUM BERGER PAINTS HERO CAROUSEL
+            Heading: "Berger Paints"
+            Text: "Premium finishes for every space."
+            One large paint bucket + simple left & right arrow buttons
          ============================================== -->
-    <section class="berger-cinematic-hero" aria-labelledby="bergerHeroTitle">
-        <!-- React Bits SideRays Spotlight Beam (origin: top-right) -->
+    <section class="berger-minimal-hero" aria-labelledby="bergerMinimalHeroTitle">
+        <!-- React Bits SideRays WebGL Light Rays (top-right) -->
         <div class="berger-hero-rays" id="apHeroRays" aria-hidden="true"></div>
 
-        <!-- High-Definition Volumetric Light Beam Shaft from Top-Right (Image 2 style) -->
-        <div class="berger-spotlight-cone" aria-hidden="true"></div>
-        <div class="berger-hero-floor" aria-hidden="true"></div>
+        <!-- Soft White & Blue Volumetric Light Rays from Top-Right -->
+        <div class="berger-hero-shaft" aria-hidden="true"></div>
+        <div class="berger-hero-shaft-secondary" aria-hidden="true"></div>
 
-        <div class="container-fluid px-lg-5 px-3 berger-hero-inner">
+        <!-- Light Smoke & Atmospheric Haze Layer -->
+        <div class="berger-hero-smoke" aria-hidden="true"></div>
+
+        <!-- Dark Glossy Studio Floor & Floor Hotspot -->
+        <div class="berger-hero-glossy-floor" aria-hidden="true"></div>
+        <div class="berger-floor-hotspot" aria-hidden="true"></div>
+
+        <div class="container-fluid px-lg-5 px-3 berger-minimal-inner">
             <div class="row align-items-center g-4 g-lg-5">
-                <!-- Left: Headline, Value Proposition, Features, CTAs -->
-                <div class="col-lg-5 berger-hero-copy">
-                    <div class="berger-hero-badge ap-reveal" style="--d: 0.05s;">
-                        <span class="berger-hero-badge-dot"></span>
-                        Authorized Berger Dealer &bull; Anbu Paints
-                    </div>
-                    <h1 class="berger-hero-title ap-reveal" id="bergerHeroTitle" style="--d: 0.15s;">
-                        Berger Luxury Silk.<br>
-                        <span class="berger-hero-title-accent">Rich Colours.</span><br>
-                        Lasting Beauty.
-                    </h1>
-                    <p class="berger-hero-text ap-reveal" style="--d: 0.25s;">
-                        Step into cinematic luxury with Berger Paints at Anbu Paints, Thiruchitrambalam. From BreatheEasy anti-pollution interior emulsions to Silk Glamor high-sheen finishes, computerised tinting with 2,000+ shades.
-                    </p>
-                    <div class="berger-hero-features ap-reveal" style="--d: 0.3s;">
-                        <span class="berger-hero-feat"><i class="fa fa-shield-alt"></i> BreatheEasy Anti-Pollution</span>
-                        <span class="berger-hero-feat"><i class="fa fa-gem"></i> Silk &amp; Glamor Sheen</span>
-                        <span class="berger-hero-feat"><i class="fa fa-palette"></i> 2,000+ Shades</span>
-                        <span class="berger-hero-feat"><i class="fa fa-magic"></i> Computerised Tinting</span>
-                    </div>
-                    <div class="d-flex flex-wrap gap-3 align-items-center ap-reveal" style="--d: 0.35s;">
-                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20pricing%20for%20Berger%20Silk%20BreatheEasy%20and%20Silk%20Glamor." class="berger-hero-cta" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i> Get Berger Price Quote
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                        <a href="#about" class="berger-hero-link">Explore Products</a>
-                    </div>
+                <!-- Left: Heading & Text ONLY -->
+                <div class="col-lg-5 col-xl-5 berger-minimal-left ap-reveal" style="--d: 0.1s;">
+                    <h1 class="berger-minimal-heading" id="bergerMinimalHeroTitle">Berger Paints</h1>
+                    <div class="berger-minimal-heading-bar" aria-hidden="true"></div>
+                    <p class="berger-minimal-text">Premium finishes for every space.</p>
                 </div>
 
-                <!-- Right: Cinematic Spotlight Stage with Berger Cans 1 to 4 -->
-                <div class="col-lg-7">
-                    <div class="berger-spotlight-stage ap-reveal" style="--d: 0.2s;">
-                        <!-- Interactive Berger Cans 1-4 Switcher Tabs -->
-                        <div class="berger-paint-tabs" role="tablist" aria-label="Berger Paint Can Switcher">
-                            <button type="button" class="berger-paint-tab active" id="tabBerger1" data-target="1" aria-selected="true">
-                                <i class="fa fa-check-circle"></i> 1. BreatheEasy
-                            </button>
-                            <button type="button" class="berger-paint-tab" id="tabBerger2" data-target="2" aria-selected="false">
-                                <i class="fa fa-paint-brush"></i> 2. Silk Glamor
-                            </button>
-                            <button type="button" class="berger-paint-tab" id="tabBerger3" data-target="3" aria-selected="false">
-                                <i class="fa fa-sun"></i> 3. Bison Glow
-                            </button>
-                            <button type="button" class="berger-paint-tab" id="tabBerger4" data-target="4" aria-selected="false">
-                                <i class="fa fa-gem"></i> 4. Silk Dazzle
-                            </button>
-                            <button type="button" class="berger-paint-tab" id="tabBergerAll" data-target="all" aria-selected="false">
-                                <i class="fa fa-layer-group"></i> All 4 Lineup
-                            </button>
-                        </div>
+                <!-- Right: One Large Paint Bucket with Left & Right Arrow Buttons -->
+                <div class="col-lg-7 col-xl-7">
+                    <div class="berger-carousel-stage ap-reveal" style="--d: 0.2s;">
+                        <!-- Left Carousel Arrow Button -->
+                        <button type="button" class="berger-carousel-btn prev" id="bergerCanPrev" aria-label="Previous Berger Paint">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
 
-                        <!-- Spotlight Pod (Stage with floor reflections matching Image 2) -->
-                        <div class="berger-pod-wrap">
-                            <!-- Soft floor spotlight pool & dark contact shadow under paint cans -->
-                            <div class="berger-spotlight-beam-glow" aria-hidden="true"></div>
-                            <div class="berger-can-floor-shadow" aria-hidden="true"></div>
+                        <!-- Bucket Container with Product Shadow & Soft Floor Reflection -->
+                        <div class="berger-bucket-container">
+                            <div class="berger-bucket-shadow" aria-hidden="true"></div>
 
-                            <!-- Can 1: Silk BreatheEasy (Default Active) -->
-                            <div class="berger-can-view" id="bergerView1">
-                                <img src="paint/Silk BreatheEasy can (1).webp"
-                                     alt="Berger Silk BreatheEasy luxury interior emulsion paint can under cinematic spotlight with floor reflection"
-                                     class="berger-single-can-img"
+                            <!-- Slide 1: Silk Glamor (Transparent PNG) -->
+                            <div class="berger-bucket-slide active">
+                                <img src="paint/berger-silk-glamor.png"
+                                     alt="Berger Silk Glamor"
+                                     class="berger-bucket-img"
                                      width="500" height="500" fetchpriority="high">
-                                <div class="berger-can-info-badge">
-                                    <span class="berger-info-dot"></span>
-                                    <span class="berger-info-text">Silk BreatheEasy &bull; Luxury Interior Emulsion</span>
-                                    <span class="berger-info-sub">Pollution &amp; Bacteria Resistant</span>
-                                </div>
                             </div>
 
-                            <!-- Can 2: Silk Glamor Soft Sheen -->
-                            <div class="berger-can-view d-none" id="bergerView2">
-                                <img src="paint/silk-glamor-soft-sheen-can.webp"
-                                     alt="Berger Silk Glamor Soft Sheen ultra luxury emulsion can"
-                                     class="berger-single-can-img"
+                            <!-- Slide 2: Weathercoat Long Life (Transparent PNG) -->
+                            <div class="berger-bucket-slide">
+                                <img src="paint/berger-weathercoat-long-life.png"
+                                     alt="Berger Weathercoat Long Life"
+                                     class="berger-bucket-img"
                                      width="500" height="500" loading="lazy">
-                                <div class="berger-can-info-badge">
-                                    <span class="berger-info-dot"></span>
-                                    <span class="berger-info-text">Silk Glamor &bull; Soft Sheen Ultra Luxury</span>
-                                    <span class="berger-info-sub">100% Acrylic Formula</span>
-                                </div>
                             </div>
 
-                            <!-- Can 3: Bison Glow -->
-                            <div class="berger-can-view d-none" id="bergerView3">
-                                <img src="paint/berger-bison-glow.webp"
-                                     alt="Berger Bison Glow acrylic interior emulsion can"
-                                     class="berger-single-can-img"
+                            <!-- Slide 3: Damstop Advanced (Transparent PNG) -->
+                            <div class="berger-bucket-slide">
+                                <img src="paint/berger-damstop-advanced.png"
+                                     alt="Berger Damstop Advanced"
+                                     class="berger-bucket-img"
                                      width="500" height="500" loading="lazy">
-                                <div class="berger-can-info-badge">
-                                    <span class="berger-info-dot"></span>
-                                    <span class="berger-info-text">Bison Glow &bull; Acrylic Interior Emulsion</span>
-                                    <span class="berger-info-sub">Enhanced Sheen &amp; Durability</span>
-                                </div>
                             </div>
 
-                            <!-- Can 4: Silk Glamor Dazzle -->
-                            <div class="berger-can-view d-none" id="bergerView4">
-                                <img src="paint/silk-glamor-dazzle-can_0.webp"
-                                     alt="Berger Silk Glamor Dazzle metallic luxury finish can"
-                                     class="berger-single-can-img"
+                            <!-- Slide 4: Easy Clean (Transparent PNG) -->
+                            <div class="berger-bucket-slide">
+                                <img src="paint/berger-easy-clean.png"
+                                     alt="Berger Easy Clean"
+                                     class="berger-bucket-img"
                                      width="500" height="500" loading="lazy">
-                                <div class="berger-can-info-badge">
-                                    <span class="berger-info-dot"></span>
-                                    <span class="berger-info-text">Silk Glamor Dazzle &bull; Metallic Luxury Finish</span>
-                                    <span class="berger-info-sub">Special Effects &amp; Glitter Sheen</span>
-                                </div>
                             </div>
 
-                            <!-- All 4 Lineup View -->
-                            <div class="berger-can-view d-none" id="bergerViewAll">
-                                <div class="berger-lineup-row">
-                                    <div class="berger-lineup-item" data-can-pick="1">
-                                        <img src="paint/Silk BreatheEasy can (1).webp" alt="Silk BreatheEasy" loading="lazy">
-                                        <span class="berger-lineup-title">1. BreatheEasy</span>
-                                    </div>
-                                    <div class="berger-lineup-item featured" data-can-pick="2">
-                                        <img src="paint/silk-glamor-soft-sheen-can.webp" alt="Silk Glamor" loading="lazy">
-                                        <span class="berger-lineup-title">2. Silk Glamor</span>
-                                    </div>
-                                    <div class="berger-lineup-item" data-can-pick="3">
-                                        <img src="paint/berger-bison-glow.webp" alt="Bison Glow" loading="lazy">
-                                        <span class="berger-lineup-title">3. Bison Glow</span>
-                                    </div>
-                                    <div class="berger-lineup-item" data-can-pick="4">
-                                        <img src="paint/silk-glamor-dazzle-can_0.webp" alt="Silk Dazzle" loading="lazy">
-                                        <span class="berger-lineup-title">4. Silk Dazzle</span>
-                                    </div>
-                                </div>
-                                <div class="berger-can-info-badge">
-                                    <span class="berger-info-dot"></span>
-                                    <span class="berger-info-text">Berger Complete Interior Luxury Range</span>
-                                    <span class="berger-info-sub">Click Any Can to Spotlight</span>
-                                </div>
+                            <!-- Slide 5: Luxol Satin (Transparent PNG) -->
+                            <div class="berger-bucket-slide">
+                                <img src="paint/berger-luxol-satin.png"
+                                     alt="Berger Luxol Satin"
+                                     class="berger-bucket-img"
+                                     width="500" height="500" loading="lazy">
                             </div>
                         </div>
+
+                        <!-- Right Carousel Arrow Button -->
+                        <button type="button" class="berger-carousel-btn next" id="bergerCanNext" aria-label="Next Berger Paint">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -3057,70 +2794,53 @@
     <script src="assets/js/side-rays.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Mount SideRays as a Volumetric Spotlight from TOP-RIGHT (Matching Image 2 Reference)
+            // Mount SideRays as a Volumetric Spotlight from TOP-RIGHT
             var raysEl = document.getElementById('apHeroRays');
             if (window.SideRays && raysEl) {
                 SideRays.mount(raysEl, {
-                    rayColor1: '#FFC46B',
+                    rayColor1: '#E2E8F0',
                     rayColor2: '#96c8ff',
                     origin: 'top-right',
                     speed: 2.2,
-                    intensity: 2.4,
-                    spread: 2.2,
+                    intensity: 2.2,
+                    spread: 2.0,
                     density: 5,
                     followMouse: true
                 });
             }
 
-            // Interactive Berger Cans 1 to 4 Switcher
-            var tabs = document.querySelectorAll('.berger-paint-tab');
-            var views = {
-                '1': document.getElementById('bergerView1'),
-                '2': document.getElementById('bergerView2'),
-                '3': document.getElementById('bergerView3'),
-                '4': document.getElementById('bergerView4'),
-                'all': document.getElementById('bergerViewAll')
-            };
+            // Simple Paint Bucket Carousel (Only Paint Bucket Changes)
+            var slides = document.querySelectorAll('.berger-bucket-slide');
+            var prevBtn = document.getElementById('bergerCanPrev');
+            var nextBtn = document.getElementById('bergerCanNext');
+            var currentIndex = 0;
 
-            function switchBergerCan(targetId) {
-                // Update tabs
-                tabs.forEach(function (tab) {
-                    var match = (tab.getAttribute('data-target') === targetId);
-                    tab.classList.toggle('active', match);
-                    tab.setAttribute('aria-selected', match ? 'true' : 'false');
+            function showSlide(index) {
+                if (!slides.length) return;
+                slides.forEach(function (slide, i) {
+                    slide.classList.toggle('active', i === index);
                 });
+                currentIndex = index;
+            }
 
-                // Update views
-                Object.keys(views).forEach(function (key) {
-                    var view = views[key];
-                    if (view) {
-                        if (key === targetId) {
-                            view.classList.remove('d-none');
-                        } else {
-                            view.classList.add('d-none');
-                        }
-                    }
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    var nextIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(nextIndex);
                 });
             }
 
-            tabs.forEach(function (tab) {
-                tab.addEventListener('click', function () {
-                    var target = this.getAttribute('data-target');
-                    if (target) {
-                        switchBergerCan(target);
-                    }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    var nextIndex = (currentIndex + 1) % slides.length;
+                    showSlide(nextIndex);
                 });
-            });
+            }
 
-            // Allow clicking individual items in the All 4 Lineup row
-            var lineupItems = document.querySelectorAll('[data-can-pick]');
-            lineupItems.forEach(function (item) {
-                item.addEventListener('click', function () {
-                    var pick = this.getAttribute('data-can-pick');
-                    if (pick) {
-                        switchBergerCan(pick);
-                    }
-                });
+            // Keyboard navigation
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft' && prevBtn) prevBtn.click();
+                if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
             });
         });
     </script>
