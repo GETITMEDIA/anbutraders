@@ -1,0 +1,449 @@
+/* ==========================================================================
+   ANBU TRADERS — WEBGL2 FLEX CAROUSEL FOR "OUR BRANDS"
+   Vanilla CSS companion for js/brand-flex-carousel.js
+   ========================================================================== */
+
+.brands-section {
+  overflow: hidden;
+}
+
+/* Hide static fallback grid when WebGL2 FlexCarousel is active */
+.brands-section.has-flex-carousel .brand-grid {
+  display: none !important;
+}
+
+.brands-section.no-flex-carousel .brand-flex-toolbar,
+.brands-section.no-flex-carousel .brand-flex-stage {
+  display: none !important;
+}
+
+/* ── Preset & Hint Toolbar ── */
+.brand-flex-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 0.5rem;
+  padding: 0 12px;
+}
+
+.brand-preset-group {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  background: var(--white, #ffffff);
+  padding: 5px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color, #E4E7EC);
+  box-shadow: 0 2px 10px rgba(6, 43, 91, 0.05);
+}
+
+.brand-preset-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--secondary-text, #667085);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.brand-preset-btn:hover {
+  color: var(--primary-navy, #062B5B);
+  background: rgba(6, 43, 91, 0.05);
+}
+
+.brand-preset-btn.is-active {
+  background: var(--primary-navy, #062B5B);
+  color: var(--white, #ffffff);
+  box-shadow: 0 3px 10px rgba(6, 43, 91, 0.2);
+}
+
+/* ── Stage Wrapper ── */
+.brand-flex-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+}
+
+/* Subtle left/right edge fade vignette so curved cards emerge smoothly */
+.brand-flex-stage::before,
+.brand-flex-stage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 5vw, 90px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.brand-flex-stage::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-grey, #F7F8FA) 0%, rgba(247, 248, 250, 0) 100%);
+}
+
+.brand-flex-stage::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-grey, #F7F8FA) 0%, rgba(247, 248, 250, 0) 100%);
+}
+
+/* ── Core FlexCarousel Container ── */
+.flex-carousel {
+  --flex-carousel-center-y: 46%;
+  --flex-carousel-half: 28%;
+  --flex-carousel-lift: 1;
+  position: relative;
+  width: 100%;
+  height: clamp(430px, 46vw, 520px);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  cursor: grab;
+  outline: none;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 52% 46% at 50% 46%, rgba(243, 106, 33, 0.06) 0%, rgba(6, 43, 91, 0.03) 45%, transparent 78%);
+}
+
+.flex-carousel:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--primary-orange, #F36A21);
+  border-radius: 12px;
+}
+
+.flex-carousel[data-dragging] {
+  cursor: grabbing;
+}
+
+.flex-carousel[data-hover="open"]:not([data-dragging]) {
+  cursor: pointer;
+}
+
+.flex-carousel[data-hover="close"]:not([data-dragging]) {
+  cursor: zoom-out;
+}
+
+.flex-carousel canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Floating Prev / Next Navigation Buttons ── */
+.flex-carousel__nav {
+  position: absolute;
+  top: var(--flex-carousel-center-y, 46%);
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(6, 43, 91, 0.14);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--primary-navy, #062B5B);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(6, 43, 91, 0.12);
+  transition: all 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flex-carousel__nav:hover {
+  background: var(--primary-orange, #F36A21);
+  border-color: var(--primary-orange, #F36A21);
+  color: var(--white, #ffffff);
+  transform: translateY(-50%) scale(1.07);
+  box-shadow: 0 8px 24px rgba(243, 106, 33, 0.3);
+}
+
+.flex-carousel__nav:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.flex-carousel__nav--prev {
+  left: clamp(12px, 3vw, 38px);
+}
+
+.flex-carousel__nav--next {
+  right: clamp(12px, 3vw, 38px);
+}
+
+.flex-carousel[data-focus-open] .flex-carousel__nav {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Caption, Odometer Counter & CTA Bar ── */
+.flex-carousel__caption {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--flex-carousel-center-y, 46%) + var(--flex-carousel-half, 28%) * var(--flex-carousel-lift, 1) + 18px);
+  transform: translateX(-50%);
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 2vw, 22px);
+  min-width: min(92vw, 460px);
+  max-width: 94vw;
+  padding: 10px 14px 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 43, 91, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 8px 28px rgba(6, 43, 91, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    top 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flex-carousel.is-revealed .flex-carousel__caption {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.flex-carousel[data-focus-open] .flex-carousel__caption {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flex-carousel__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
+}
+
+.flex-carousel__title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(0.9rem, 1.5vw, 1.02rem);
+  font-weight: 800;
+  color: var(--primary-navy, #062B5B);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 210px;
+  animation: flexTitleSlide 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flex-carousel__subtitle {
+  display: block;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-orange, #F36A21);
+  margin-top: 2px;
+}
+
+@keyframes flexTitleSlide {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flex-carousel__right {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Odometer Reel Counter (Digits) ── */
+.flex-carousel__count {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', monospace);
+  font-size: 0.84rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--secondary-text, #667085);
+  background: var(--bg-grey, #F7F8FA);
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color, #E4E7EC);
+  transition: opacity 0.25s ease;
+}
+
+.flex-carousel__count[data-hidden] {
+  opacity: 0;
+}
+
+.flex-carousel__digits {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary-navy, #062B5B);
+  font-weight: 800;
+}
+
+.flex-carousel__digit {
+  display: inline-block;
+  height: 1em;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.flex-carousel__reel {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.flex-carousel__reel > span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+.flex-carousel__slash {
+  opacity: 0.45;
+  margin: 0 1px;
+}
+
+/* ── "View Products" CTA Pill in Caption Bar ── */
+.flex-carousel__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--primary-navy, #062B5B);
+  color: var(--white, #ffffff) !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 3px 10px rgba(6, 43, 91, 0.18);
+}
+
+.flex-carousel__cta:hover {
+  background: var(--primary-orange, #F36A21);
+  color: var(--white, #ffffff) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(243, 106, 33, 0.3);
+}
+
+.flex-carousel__cta i {
+  font-size: 0.72rem;
+  transition: transform 0.2s ease;
+}
+
+.flex-carousel__cta:hover i {
+  transform: translateX(2px);
+}
+
+/* ── Screen Reader Live Region ── */
+.flex-carousel__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Responsive Breakpoints ── */
+@media (max-width: 991.98px) {
+  .flex-carousel {
+    height: 440px;
+  }
+
+  .flex-carousel__nav {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .flex-carousel {
+    height: 405px;
+  }
+
+  .brand-preset-btn {
+    font-size: 0.72rem;
+    padding: 5px 11px;
+  }
+
+  .flex-carousel__nav {
+    width: 36px;
+    height: 36px;
+    top: 45%;
+  }
+
+  .flex-carousel__nav--prev {
+    left: 8px;
+  }
+
+  .flex-carousel__nav--next {
+    right: 8px;
+  }
+
+  .flex-carousel__caption {
+    min-width: min(94vw, 350px);
+    padding: 8px 10px 8px 15px;
+    gap: 8px;
+    top: calc(46% + var(--flex-carousel-half, 28%) * var(--flex-carousel-lift, 1) + 12px);
+  }
+
+  .flex-carousel__title {
+    max-width: 135px;
+    font-size: 0.85rem;
+  }
+
+  .flex-carousel__subtitle {
+    font-size: 0.65rem;
+  }
+
+  .flex-carousel__count {
+    font-size: 0.76rem;
+    padding: 4px 8px;
+  }
+
+  .flex-carousel__cta {
+    padding: 7px 12px;
+    font-size: 0.74rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flex-carousel__reel,
+  .flex-carousel__caption,
+  .flex-carousel__nav,
+  .brand-preset-btn {
+    transition: none !important;
+  }
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -30,6 +30,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/preloader.css" rel="stylesheet">
+    <link href="css/brand-flex-carousel.css" rel="stylesheet">
 
 </head>
 
@@ -1303,7 +1304,7 @@
 </div>
 
     <!-- Features End -->
-<section class="brands-section">
+<section class="brands-section" id="brands">
   <div class="container">
     <div class="section-header text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 680px;">
       <span class="section-badge">
@@ -1313,6 +1314,16 @@
       <p class="section-subtitle">
         Direct wholesale dealerships of India's most trusted steel, cement, and building construction brands.
       </p>
+    </div>
+
+    <!-- Lens Effect Preset Switcher (Vanilla JS FlexCarousel) -->
+    <div class="brand-flex-toolbar wow fadeInUp" data-wow-delay="0.15s">
+      <div class="brand-preset-group" role="group" aria-label="Carousel lens style">
+        <button type="button" class="brand-preset-btn is-active" data-preset="liquid" aria-pressed="true">Liquid</button>
+        <button type="button" class="brand-preset-btn" data-preset="ribbon" aria-pressed="false">Ribbon</button>
+        <button type="button" class="brand-preset-btn" data-preset="vortex" aria-pressed="false">Vortex</button>
+        <button type="button" class="brand-preset-btn" data-preset="arch" aria-pressed="false">Arch</button>
+      </div>
     </div>
 
     <div class="brand-grid">
@@ -1473,6 +1484,18 @@
 
 
   </div>
+  </div>
+
+  <!-- WebGL2 Liquid Bend FlexCarousel Stage -->
+  <div class="brand-flex-stage">
+    <div
+      id="brandFlexCarousel"
+      class="flex-carousel brand-flex-carousel"
+      data-preset="liquid"
+      data-intro="rise"
+      data-autoplay="true"
+      data-interval="3.6"
+    ></div>
   </div>
 </section>
 
@@ -2294,6 +2317,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 })();
 </script>
+    <script src="js/brand-flex-carousel.js"></script>
 
 </body>
 
