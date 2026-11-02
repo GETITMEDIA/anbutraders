@@ -1877,14 +1877,20 @@
                     </ul>
                 </nav>
 
-                <!-- Right Action Button & Mobile Toggle -->
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
                 <div class="d-flex align-items-center gap-3">
-                    <button type="button" class="btn-quote-orange d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
                         Get a Quote <i class="fa fa-arrow-right ms-1"></i>
                     </button>
-                    <a class="btn-quote-orange d-sm-none" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Berger%20Paints." target="_blank">
-                        Enquire <i class="fab fa-whatsapp ms-1"></i>
-                    </a>
                     <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars fs-3 text-dark"></i>
                     </button>
@@ -1924,86 +1930,117 @@
             Text: "Premium finishes for every space."
             One large paint bucket + simple left & right arrow buttons
          ============================================== -->
-    <section class="berger-minimal-hero" aria-labelledby="bergerMinimalHeroTitle">
-        <!-- React Bits SideRays WebGL Light Rays (top-right) -->
-        <div class="berger-hero-rays" id="apHeroRays" aria-hidden="true"></div>
+    <section class="hero-paint-carousel-wrapper" id="heroSection">
+        <div id="heroPaintCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <!-- Carousel Bottom Dots Indicators (1 to 3 Slides) -->
+            <div class="carousel-indicators hero-carousel-dots">
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Berger Silk BreatheEasy"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="1" aria-label="Slide 2 - Berger WeatherCoat Anti-Dust"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Berger Silk Glamor"></button>
+            </div>
 
-        <!-- Light Smoke & Atmospheric Haze Layer -->
-        <div class="berger-hero-smoke" aria-hidden="true"></div>
-
-        <!-- Dark Glossy Studio Floor & Floor Hotspot -->
-        <div class="berger-hero-glossy-floor" aria-hidden="true"></div>
-        <div class="berger-floor-hotspot" aria-hidden="true"></div>
-
-        <div class="container-fluid px-lg-5 px-3 berger-minimal-inner">
-            <div class="row align-items-center g-4 g-lg-5">
-                <!-- Left: Heading & Text ONLY -->
-                <div class="col-lg-5 col-xl-5 berger-minimal-left ap-reveal" style="--d: 0.1s;">
-                    <h1 class="berger-minimal-heading" id="bergerMinimalHeroTitle">Berger Paints</h1>
-                    <div class="berger-minimal-heading-bar" aria-hidden="true"></div>
-                    <p class="berger-minimal-text">Premium finishes for every space.</p>
-                </div>
-
-                <!-- Right: One Large Paint Bucket with Left & Right Arrow Buttons -->
-                <div class="col-lg-7 col-xl-7">
-                    <div class="berger-carousel-stage ap-reveal" style="--d: 0.2s;">
-                        <!-- Left Carousel Arrow Button -->
-                        <button type="button" class="berger-carousel-btn prev" id="bergerCanPrev" aria-label="Previous Berger Paint">
-                            <i class="fa fa-chevron-left"></i>
-                        </button>
-
-                        <!-- Bucket Container with Product Shadow & Soft Floor Reflection -->
-                        <div class="berger-bucket-container">
-                            <div class="berger-bucket-shadow" aria-hidden="true"></div>
-
-                            <!-- Slide 1: Silk Glamor (Transparent PNG) -->
-                            <div class="berger-bucket-slide active">
-                                <img src="paint/berger-silk-glamor.png"
-                                     alt="Berger Silk Glamor"
-                                     class="berger-bucket-img"
-                                     width="500" height="500" fetchpriority="high">
-                            </div>
-
-                            <!-- Slide 2: Weathercoat Long Life (Transparent PNG) -->
-                            <div class="berger-bucket-slide">
-                                <img src="paint/berger-weathercoat-long-life.png"
-                                     alt="Berger Weathercoat Long Life"
-                                     class="berger-bucket-img"
-                                     width="500" height="500" loading="lazy">
-                            </div>
-
-                            <!-- Slide 3: Damstop Advanced (Transparent PNG) -->
-                            <div class="berger-bucket-slide">
-                                <img src="paint/berger-damstop-advanced.png"
-                                     alt="Berger Damstop Advanced"
-                                     class="berger-bucket-img"
-                                     width="500" height="500" loading="lazy">
-                            </div>
-
-                            <!-- Slide 4: Easy Clean (Transparent PNG) -->
-                            <div class="berger-bucket-slide">
-                                <img src="paint/berger-easy-clean.png"
-                                     alt="Berger Easy Clean"
-                                     class="berger-bucket-img"
-                                     width="500" height="500" loading="lazy">
-                            </div>
-
-                            <!-- Slide 5: Luxol Satin (Transparent PNG) -->
-                            <div class="berger-bucket-slide">
-                                <img src="paint/berger-luxol-satin.png"
-                                     alt="Berger Luxol Satin"
-                                     class="berger-bucket-img"
-                                     width="500" height="500" loading="lazy">
+            <div class="carousel-inner">
+                <!-- Slide 1: Berger Silk BreatheEasy (hero_1.png) -->
+                <div class="carousel-item active hero-carousel-slide hero-slide-1">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_1.png'); background-position: center right;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Beautiful Homes</span>
+                                    <span class="hero-title-orange">Brighter Living</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Premium paints for long-lasting<br>
+                                    beauty and protection.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage1">
+                                            <canvas id="heroVenomHand1" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl1" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn1">
+                                                Explore Berger <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Right Carousel Arrow Button -->
-                        <button type="button" class="berger-carousel-btn next" id="bergerCanNext" aria-label="Next Berger Paint">
-                            <i class="fa fa-chevron-right"></i>
-                        </button>
+                <!-- Slide 2: Berger WeatherCoat Anti-Dust (berger-weathercoat-hero.jpg) -->
+                <div class="carousel-item hero-carousel-slide hero-slide-2">
+                    <div class="hero-slide-bg hero-slide-2-bg" style="background-image: url('paint/berger-weathercoat-hero.jpg'); background-position: right center;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">WeatherCoat Anti-Dust</span>
+                                    <span class="hero-title-orange">Rain &amp; Heat Armor</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Dust Guard technology for enduring<br>
+                                    exterior beauty and coastal resilience.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage2">
+                                            <canvas id="heroVenomHand2" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl2" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn2">
+                                                View WeatherCoat <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Berger Silk Glamor Luxury (berger-hero-living.jpg) -->
+                <div class="carousel-item hero-carousel-slide hero-slide-3">
+                    <div class="hero-slide-bg hero-slide-3-bg" style="background-image: url('paint/berger-hero-living.jpg'); background-position: right center;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Silk Glamor Luxury</span>
+                                    <span class="hero-title-orange">Ultra Smooth Sheen</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Metallic luster and stain-resistant luxury<br>
+                                    emulsion for signature designer spaces.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage3">
+                                            <canvas id="heroVenomHand3" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl3" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn3">
+                                                Explore Silk Glamor <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel Prev/Next Buttons -->
+            <button class="carousel-control-prev hero-carousel-btn hero-carousel-btn-prev" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="prev" aria-label="Previous">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control-next hero-carousel-btn hero-carousel-btn-next" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="next" aria-label="Next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
@@ -2722,6 +2759,7 @@
          13. SCRIPTS & REACT BITS <CardSwap /> ENGINE
          ============================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/venom-button.js"></script>
 
     <script>
         function redirectToGoogleReview() {
@@ -2730,6 +2768,131 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl) {
+                            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
+            // Hero Carousel initialization with 5s cycle
+            var heroCarouselEl = document.getElementById('heroPaintCarousel');
+            if (heroCarouselEl && window.bootstrap) {
+                var heroCarousel = bootstrap.Carousel.getOrCreateInstance(heroCarouselEl, {
+                    interval: 5000,
+                    pause: 'hover',
+                    ride: 'carousel',
+                    wrap: true
+                });
+                heroCarousel.cycle();
+            }
+
+            // Venom 3D Symbiote Liquid Paint Buttons for Hero Carousel
+            if (typeof initVenomButton === 'function') {
+                var sharedVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                var heroVenomConfigs = [
+                    { stage: '#heroVenomStage1', btn: '#heroVenomBtn1', gl: '#heroVenomGl1', hand: '#heroVenomHand1', label: 'Explore Berger <i class="fa fa-arrow-right ms-1"></i>', href: '#about' },
+                    { stage: '#heroVenomStage2', btn: '#heroVenomBtn2', gl: '#heroVenomGl2', hand: '#heroVenomHand2', label: 'View WeatherCoat <i class="fa fa-arrow-right ms-1"></i>', href: '#about' },
+                    { stage: '#heroVenomStage3', btn: '#heroVenomBtn3', gl: '#heroVenomGl3', hand: '#heroVenomHand3', label: 'Explore Silk Glamor <i class="fa fa-arrow-right ms-1"></i>', href: '#about' }
+                ];
+
+                var heroVenomInstances = [];
+                heroVenomConfigs.forEach(function (cfg) {
+                    if (document.querySelector(cfg.stage)) {
+                        var inst = initVenomButton({
+                            stage: cfg.stage,
+                            btn: cfg.btn,
+                            glCanvas: cfg.gl,
+                            handCanvas: cfg.hand,
+                            label: cfg.label,
+                            gooColor: '#EA580C',
+                            textColor: '#FFFFFF',
+                            shine: '#FFF0EB',
+                            size: 48,
+                            cursor: 'native',
+                            autoplay: false,
+                            hover: 25,
+                            reach: 120,
+                            advanced: sharedVenomAdv,
+                            onClick: function () {
+                                if (cfg.href.startsWith('#')) {
+                                    var target = document.querySelector(cfg.href);
+                                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    window.open(cfg.href, '_blank');
+                                }
+                            }
+                        });
+                        heroVenomInstances.push(inst);
+                    }
+                });
+
+                var activePill = document.querySelector('#heroVenomBtn1');
+                if (activePill && activePill.offsetWidth > 50) {
+                    var wrap1 = activePill.closest('.venom-btn-wrapper');
+                    if (wrap1) wrap1.style.width = activePill.offsetWidth + 'px';
+                }
+
+                if (heroCarouselEl) {
+                    heroCarouselEl.addEventListener('slid.bs.carousel', function (e) {
+                        var idx = e.to;
+                        if (heroVenomConfigs[idx]) {
+                            var pill = document.querySelector(heroVenomConfigs[idx].btn);
+                            if (pill && pill.offsetWidth > 50) {
+                                var wrap = pill.closest('.venom-btn-wrapper');
+                                if (wrap) wrap.style.width = pill.offsetWidth + 'px';
+                            }
+                        }
+                        if (heroVenomInstances[idx] && typeof heroVenomInstances[idx].fit === 'function') {
+                            heroVenomInstances[idx].fit();
+                        }
+                    });
+                }
+            }
+
             // Universal Modal Backdrop Handler
             function closeAllModals() {
                 document.querySelectorAll('.modal').forEach(function(m) {

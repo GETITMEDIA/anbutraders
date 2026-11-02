@@ -1295,14 +1295,20 @@
                     </ul>
                 </nav>
 
-                <!-- Right Action Button & Mobile Toggle -->
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
                 <div class="d-flex align-items-center gap-3">
-                    <button type="button" class="btn-quote-orange d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                        Get a Quote <i class="fa fa-arrow-right"></i>
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
                     </button>
-                    <a class="btn-quote-orange d-sm-none" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20JSW%20Paints." target="_blank" rel="noopener noreferrer">
-                        Enquire <i class="fab fa-whatsapp"></i>
-                    </a>
                     <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars fs-3 text-dark"></i>
                     </button>
@@ -1346,7 +1352,7 @@
             <div class="carousel-indicators hero-carousel-dots">
                 <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Any Colour One Price"></button>
                 <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="1" aria-label="Slide 2 - Pixa &amp; Aurus Series"></button>
-                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Master Application"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Master Living Range"></button>
             </div>
 
             <div class="carousel-inner">
@@ -1356,26 +1362,24 @@
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
-                                <div class="jsw-badge-pill">
-                                    <span class="jsw-badge-dot"></span>
-                                    <span>AUTHORIZED JSW DEALER — ANBU PAINTS</span>
-                                </div>
                                 <h1 class="hero-clean-title">
                                     <span class="hero-title-dark">Any Colour, One Price</span>
                                     <span class="hero-title-orange">Pure Vibrant Living</span>
                                 </h1>
                                 <div class="hero-accent-line"></div>
                                 <p class="hero-clean-subtitle">
-                                    100% water-based luxury paints for stunning interior &amp; exterior walls. Any shade you choose, exactly the same price.
+                                    100% water-based luxury paints for<br>
+                                    stunning interior &amp; exterior walls.
                                 </p>
                                 <div class="hero-clean-cta">
-                                    <div class="d-flex flex-wrap gap-3 align-items-center">
-                                        <a href="#about" class="btn-quote-orange">
-                                            Explore JSW Range <i class="fa fa-arrow-right ms-1"></i>
-                                        </a>
-                                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20JSW%20Paints.%20Please%20share%20the%20pricing%20and%20catalogue." class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" target="_blank" rel="noopener noreferrer">
-                                            <i class="fab fa-whatsapp text-success me-1 fs-5"></i> WhatsApp Enquiry
-                                        </a>
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage1">
+                                            <canvas id="heroVenomHand1" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl1" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn1">
+                                                Explore JSW Paints <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1389,26 +1393,24 @@
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
-                                <div class="jsw-badge-pill">
-                                    <span class="jsw-badge-dot"></span>
-                                    <span>COLOURDUR COIL COATINGS TECHNOLOGY</span>
-                                </div>
                                 <h1 class="hero-clean-title">
                                     <span class="hero-title-dark">Pixa &amp; Aurus</span>
                                     <span class="hero-title-orange">Flawless Protection</span>
                                 </h1>
                                 <div class="hero-accent-line"></div>
                                 <p class="hero-clean-subtitle">
-                                    Advanced ColourDur coil technology with anti-bacterial defense and high washability for modern architectural spaces.
+                                    Advanced ColourDur coil technology with<br>
+                                    anti-bacterial defense &amp; high washability.
                                 </p>
                                 <div class="hero-clean-cta">
-                                    <div class="d-flex flex-wrap gap-3 align-items-center">
-                                        <a href="#about" class="btn-quote-orange">
-                                            View Products <i class="fa fa-arrow-right ms-1"></i>
-                                        </a>
-                                        <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                                            <i class="fa fa-calculator me-1"></i> Get a Quote
-                                        </button>
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage2">
+                                            <canvas id="heroVenomHand2" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl2" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn2">
+                                                View Pixa Range <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1416,32 +1418,30 @@
                     </div>
                 </div>
 
-                <!-- Slide 3: Expert Express Painting (jsw_painter_hero.jpg) -->
+                <!-- Slide 3: JSW Halo & Aurus Living Range (jsw_hero_living_cans.jpg) -->
                 <div class="carousel-item hero-carousel-slide hero-slide-3">
-                    <div class="hero-slide-bg" style="background-image: url('paint/jsw_painter_hero.jpg'); background-position: right center;"></div>
+                    <div class="hero-slide-bg" style="background-image: url('paint/jsw_hero_living_cans.jpg'); background-position: right center;"></div>
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
-                                <div class="jsw-badge-pill">
-                                    <span class="jsw-badge-dot"></span>
-                                    <span>EXPRESS APPLICATION &amp; COLOR MIXING</span>
-                                </div>
                                 <h1 class="hero-clean-title">
-                                    <span class="hero-title-dark">Master Craftsmanship</span>
-                                    <span class="hero-title-orange">Trained Professionals</span>
+                                    <span class="hero-title-dark">Halo Luxury Emulsions</span>
+                                    <span class="hero-title-orange">Zero Odour Living</span>
                                 </h1>
                                 <div class="hero-accent-line"></div>
                                 <p class="hero-clean-subtitle">
-                                    Computerized shade mixing with spectrophotometer accuracy and dust-free express painting by Anbu Paints, Pondicherry.
+                                    Eco-friendly, water-based finishes crafted<br>
+                                    for enduring brilliance and pure air.
                                 </p>
                                 <div class="hero-clean-cta">
-                                    <div class="d-flex flex-wrap gap-3 align-items-center">
-                                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20book%20an%20expert%20painter%20for%20JSW%20Paints." class="btn-quote-orange" target="_blank" rel="noopener noreferrer">
-                                            Book Expert Painter <i class="fa fa-arrow-right ms-1"></i>
-                                        </a>
-                                        <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                                            <i class="fa fa-phone-alt me-1"></i> Contact Us
-                                        </button>
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage3">
+                                            <canvas id="heroVenomHand3" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl3" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#about" class="venom-pill venom-pill-hero" id="heroVenomBtn3">
+                                                Explore Halo Range <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1460,7 +1460,7 @@
         </div>
     </section>
 
-<!-- Main Container for Remaining Sections -->
+    <!-- Main Container for Remaining Sections -->
     <main class="container-fluid px-lg-5 px-3">
         <div style="max-width: 1200px; margin: 0 auto;">
 
@@ -1991,9 +1991,49 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/venom-button.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl) {
+                            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
             // Initialize Hero Carousel with smooth 5s auto-cycle
             var heroCarouselEl = document.getElementById('heroPaintCarousel');
             if (heroCarouselEl && window.bootstrap) {
@@ -2004,6 +2044,80 @@
                     wrap: true
                 });
                 heroCarousel.cycle();
+            }
+
+            // Venom 3D Symbiote Liquid Paint Buttons for Hero Carousel
+            if (typeof initVenomButton === 'function') {
+                var sharedVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                var heroVenomConfigs = [
+                    { stage: '#heroVenomStage1', btn: '#heroVenomBtn1', gl: '#heroVenomGl1', hand: '#heroVenomHand1', label: 'Explore JSW Paints <i class="fa fa-arrow-right ms-1"></i>', href: '#about' },
+                    { stage: '#heroVenomStage2', btn: '#heroVenomBtn2', gl: '#heroVenomGl2', hand: '#heroVenomHand2', label: 'View Pixa Range <i class="fa fa-arrow-right ms-1"></i>', href: '#about' },
+                    { stage: '#heroVenomStage3', btn: '#heroVenomBtn3', gl: '#heroVenomGl3', hand: '#heroVenomHand3', label: 'Explore Halo Range <i class="fa fa-arrow-right ms-1"></i>', href: '#about' }
+                ];
+
+                var heroVenomInstances = [];
+                heroVenomConfigs.forEach(function (cfg) {
+                    if (document.querySelector(cfg.stage)) {
+                        var inst = initVenomButton({
+                            stage: cfg.stage,
+                            btn: cfg.btn,
+                            glCanvas: cfg.gl,
+                            handCanvas: cfg.hand,
+                            label: cfg.label,
+                            gooColor: '#EA580C',
+                            textColor: '#FFFFFF',
+                            shine: '#FFF0EB',
+                            size: 48,
+                            cursor: 'native',
+                            autoplay: false,
+                            hover: 25,
+                            reach: 120,
+                            advanced: sharedVenomAdv,
+                            onClick: function () {
+                                if (cfg.href.startsWith('#')) {
+                                    var target = document.querySelector(cfg.href);
+                                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    window.open(cfg.href, '_blank');
+                                }
+                            }
+                        });
+                        heroVenomInstances.push(inst);
+                    }
+                });
+
+                var activePill = document.querySelector('#heroVenomBtn1');
+                if (activePill && activePill.offsetWidth > 50) {
+                    var wrap1 = activePill.closest('.venom-btn-wrapper');
+                    if (wrap1) wrap1.style.width = activePill.offsetWidth + 'px';
+                }
+
+                if (heroCarouselEl) {
+                    heroCarouselEl.addEventListener('slid.bs.carousel', function (e) {
+                        var idx = e.to;
+                        if (heroVenomConfigs[idx]) {
+                            var pill = document.querySelector(heroVenomConfigs[idx].btn);
+                            if (pill && pill.offsetWidth > 50) {
+                                var wrap = pill.closest('.venom-btn-wrapper');
+                                if (wrap) wrap.style.width = pill.offsetWidth + 'px';
+                            }
+                        }
+                        if (heroVenomInstances[idx] && typeof heroVenomInstances[idx].fit === 'function') {
+                            heroVenomInstances[idx].fit();
+                        }
+                    });
+                }
             }
 
             // Universal Vanilla Modal Controller

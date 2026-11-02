@@ -125,14 +125,20 @@
                     </ul>
                 </nav>
 
-                <!-- Right Action Button & Mobile Toggle -->
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
                 <div class="d-flex align-items-center gap-3">
-                    <button type="button" class="btn-get-quote d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
                         Get a Quote <i class="fa fa-arrow-right ms-1"></i>
                     </button>
-                    <a class="btn-get-quote d-sm-none" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Birla%20Wall%20Putty." target="_blank">
-                        Enquire <i class="fab fa-whatsapp ms-1"></i>
-                    </a>
                     <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars fs-3 text-dark"></i>
                     </button>
@@ -733,6 +739,7 @@
          13. SCRIPTS
          ============================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/venom-button.js"></script>
 
     <script>
         function redirectToGoogleReview() {
@@ -741,6 +748,45 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl) {
+                            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
             // Universal Vanilla Modal Controller
             function closeAllModals() {
                 document.querySelectorAll('.modal').forEach(function(m) {
