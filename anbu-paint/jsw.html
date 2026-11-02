@@ -183,69 +183,127 @@
             box-shadow: 0 8px 22px rgba(255, 87, 34, 0.5);
         }
 
-        /* 3. HERO SECTION (NAVY BLUE THEME + REALISTIC LIVING ROOM & PAINT CANS) */
-        .jsw-hero-modern {
+        /* 3. HERO CAROUSEL SECTION (JSW PAINTS - LIGHT & CLEAN DESIGN MATCHING INDEX.HTML) */
+        .hero-paint-carousel-wrapper {
+            position: relative;
+            background-color: #F8FAFC;
+            min-height: 600px;
+            overflow: hidden;
+            width: 100% !important;
+        }
+
+        #heroPaintCarousel {
             position: relative;
             width: 100%;
-            min-height: 560px;
-            background-color: var(--jsw-navy-dark);
-            overflow: hidden;
+        }
+
+        .hero-carousel-slide {
+            position: relative;
+            min-height: 600px;
             display: flex;
             align-items: center;
+            background-color: #F8FAFC;
         }
 
-        .jsw-hero-bg-image {
+        .hero-slide-bg {
             position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 68%;
-            background-image: url('paint/jsw_hero_living_cans.jpg');
-            background-repeat: no-repeat;
-            background-position: right center;
+            inset: 0;
             background-size: cover;
-            z-index: 1;
+            background-position: center right;
+            background-repeat: no-repeat;
+            transition: transform 7s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .jsw-hero-navy-overlay {
+        .hero-carousel-slide.active .hero-slide-bg {
+            transform: scale(1.025);
+        }
+
+        /* Light sunny gradient scrim ensuring crisp left-side text contrast */
+        .hero-slide-bg::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(
-                90deg, 
-                #041731 0%, 
-                rgba(4, 23, 49, 0.98) 42%, 
-                rgba(4, 23, 49, 0.82) 58%, 
-                rgba(4, 23, 49, 0.3) 78%, 
-                transparent 100%
-            );
-            z-index: 2;
+            inset: 0;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0.90) 0%, 
+                rgba(255, 255, 255, 0.68) 32%, 
+                rgba(255, 255, 255, 0.22) 55%, 
+                transparent 78%);
+            pointer-events: none;
         }
 
-        .jsw-hero-content-wrap {
+        .hero-slide-container {
             position: relative;
-            z-index: 3;
-            padding: clamp(45px, 6vw, 75px) 0;
-            max-width: 600px;
+            z-index: 5;
+            padding-top: 85px;
+            padding-bottom: 95px;
+            width: 100%;
+        }
+
+        .hero-clean-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-title-dark {
+            font-size: clamp(34px, 4.2vw, 54px);
+            line-height: 1.15;
+            font-weight: 700;
+            color: #071E3D;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-title-orange {
+            font-size: clamp(38px, 4.8vw, 60px);
+            line-height: 1.12;
+            font-weight: 800;
+            color: var(--jsw-orange);
+            letter-spacing: -0.03em;
+        }
+
+        .hero-accent-line {
+            width: 44px;
+            height: 3.5px;
+            background: var(--jsw-orange);
+            border-radius: 2px;
+            margin: 18px 0 20px;
+        }
+
+        .hero-clean-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16.5px;
+            font-weight: 500;
+            color: #334155;
+            line-height: 1.6;
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+
+        .hero-clean-cta {
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 52px;
+            z-index: 10;
         }
 
         .jsw-badge-pill {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 87, 34, 0.08);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #FFFFFF;
+            border: 1px solid rgba(255, 87, 34, 0.25);
+            color: #071E3D;
             padding: 6px 16px;
             border-radius: 50px;
             font-size: 12px;
             font-weight: 700;
             letter-spacing: 0.8px;
             text-transform: uppercase;
-            margin-bottom: 22px;
+            margin-bottom: 16px;
         }
 
         .jsw-badge-dot {
@@ -256,122 +314,122 @@
             display: inline-block;
         }
 
-        .jsw-hero-main-title {
-            font-size: clamp(2.8rem, 5.2vw, 4.4rem);
-            font-weight: 800;
-            color: #FFFFFF;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-
-        .jsw-hero-main-title .orange-text {
-            color: var(--jsw-orange);
-        }
-
-        .jsw-hero-subtitle-text {
-            font-size: clamp(1.15rem, 1.8vw, 1.4rem);
-            color: #FFFFFF;
-            font-weight: 600;
-            margin-bottom: 30px;
-            line-height: 1.45;
-        }
-
-        /* 3 Feature Badges in Hero */
-        .jsw-hero-features-row {
-            display: flex;
-            align-items: center;
-            gap: clamp(14px, 2.5vw, 24px);
-            margin-bottom: 34px;
-            flex-wrap: wrap;
-        }
-
-        .jsw-hero-feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .jsw-hero-feature-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 1.5px solid rgba(255, 87, 34, 0.6);
-            background: rgba(255, 87, 34, 0.12);
-            display: flex;
-            align-items: center;
+        .hero-carousel-dots {
+            position: absolute;
+            bottom: 24px !important;
+            left: 0;
+            right: 0;
+            margin: 0 auto !important;
+            display: flex !important;
             justify-content: center;
-            color: var(--jsw-orange);
-            font-size: 14px;
-            flex-shrink: 0;
+            align-items: center;
+            gap: 10px;
+            z-index: 25 !important;
         }
 
-        .jsw-hero-feature-text {
-            color: #F1F5F9;
-            font-size: 12px;
-            font-weight: 600;
-            line-height: 1.25;
+        .hero-carousel-dots [data-bs-target] {
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 9999px !important;
+            background-color: rgba(7, 30, 61, 0.3) !important;
+            border: 2px solid transparent !important;
+            opacity: 0.75 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            cursor: pointer !important;
+            transition: all 0.35s ease !important;
+            box-sizing: content-box !important;
         }
 
-        /* Hero Action Buttons */
-        .jsw-btn-explore {
+        .hero-carousel-dots [data-bs-target]:hover {
+            opacity: 1 !important;
+            background-color: var(--jsw-orange) !important;
+            transform: scale(1.15);
+        }
+
+        .hero-carousel-dots .active {
+            width: 36px !important;
+            border-radius: 9999px !important;
+            background-color: var(--jsw-orange) !important;
+            opacity: 1 !important;
+            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.45) !important;
+        }
+
+        .hero-carousel-btn {
+            width: 48px;
+            height: 48px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(7, 30, 61, 0.1);
+            backdrop-filter: blur(10px);
+            color: #071E3D !important;
+            font-size: 15px;
+            opacity: 0.85;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+            transition: all 0.25s ease;
+            z-index: 20;
+        }
+
+        .hero-carousel-btn-prev { left: 24px; }
+        .hero-carousel-btn-next { right: 24px; }
+
+        .hero-carousel-btn:hover {
             background: var(--jsw-orange);
+            border-color: var(--jsw-orange);
             color: #FFFFFF !important;
-            font-weight: 700;
-            font-size: 15px;
-            padding: 13px 28px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: none;
-            box-shadow: 0 8px 22px rgba(255, 87, 34, 0.4);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 1;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 24px rgba(255, 87, 34, 0.45);
         }
 
-        .jsw-btn-explore:hover {
-            background: var(--jsw-orange-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(255, 87, 34, 0.55);
-        }
-
-        .jsw-btn-wa-outline {
-            background: rgba(4, 23, 49, 0.55);
-            backdrop-filter: blur(6px);
-            color: #FFFFFF !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.6);
-            font-weight: 700;
-            font-size: 15px;
-            padding: 13px 26px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .jsw-btn-wa-outline:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #FFFFFF;
-            transform: translateY(-2px);
+        /* Slide 2: JSW Paint Bucket Vertical Positioning (Ensures full visibility of the can) */
+        .hero-slide-2-bg {
+            background-position: right 90% !important;
         }
 
         @media (max-width: 991.98px) {
-            .jsw-hero-bg-image {
-                width: 100%;
-                opacity: 0.25;
+            .hero-paint-carousel-wrapper,
+            .hero-carousel-slide {
+                min-height: 520px;
             }
-            .jsw-hero-navy-overlay {
-                background: linear-gradient(180deg, #041731 0%, rgba(4, 23, 49, 0.92) 100%);
+            .hero-slide-bg::after {
+                background: linear-gradient(180deg, 
+                    rgba(255, 255, 255, 0.94) 0%, 
+                    rgba(255, 255, 255, 0.82) 55%, 
+                    rgba(255, 255, 255, 0.35) 100%);
             }
-            .jsw-hero-content-wrap {
-                max-width: 100%;
+            .hero-slide-bg {
+                background-position: 75% center;
+            }
+            .hero-slide-2-bg {
+                background-position: 82% 92% !important;
+            }
+            .hero-carousel-btn {
+                display: none !important;
             }
         }
 
-        /* 4. SECTION HEADERS & EYEBROWS */
+        @media (max-width: 575.98px) {
+            .hero-paint-carousel-wrapper,
+            .hero-carousel-slide {
+                min-height: 480px;
+            }
+            .hero-slide-container {
+                padding-top: 45px;
+                padding-bottom: 55px;
+            }
+            .hero-clean-subtitle {
+                font-size: 14.5px !important;
+                margin-bottom: 22px !important;
+            }
+            .hero-slide-2-bg {
+                background-position: 75% 95% !important;
+            }
+        }
+
+/* 4. SECTION HEADERS & EYEBROWS */
         .jsw-eyebrow {
             display: inline-block;
             color: var(--jsw-orange);
@@ -1279,77 +1337,130 @@
     </header>
 
     <!-- ==============================================
-         3. HERO SECTION (NAVY BLUE THEME + REALISTIC LIVING ROOM & PAINT CANS)
+         3. HERO CAROUSEL SECTION (1-3 SLIDES WITH JSW PAINTS IMAGES)
+         Matching the exact aesthetic and smooth motion of anbu-paint/index.html
          ============================================== -->
-    <section class="jsw-hero-modern">
-        <!-- Living Room Background with JSW Paint Cans -->
-        <div class="jsw-hero-bg-image"></div>
-        <!-- Navy Gradient Overlay -->
-        <div class="jsw-hero-navy-overlay"></div>
+    <section class="hero-paint-carousel-wrapper" id="heroSection">
+        <div id="heroPaintCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <!-- Carousel Bottom Dots Indicators (1 to 3 Slides) -->
+            <div class="carousel-indicators hero-carousel-dots">
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Any Colour One Price"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="1" aria-label="Slide 2 - Pixa &amp; Aurus Series"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Master Application"></button>
+            </div>
 
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="jsw-hero-content-wrap">
-                <!-- Authorized Dealer Pill Badge -->
-                <div class="jsw-badge-pill">
-                    <span class="jsw-badge-dot"></span>
-                    <span>AUTHORIZED DEALER — ANBU PAINTS</span>
-                </div>
-
-                <!-- Main Title: JSW in White + Paints in Orange -->
-                <h1 class="jsw-hero-main-title">
-                    JSW <span class="orange-text">Paints</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="jsw-hero-subtitle-text">
-                    ColourDur Coil Coatings – Durable,<br>
-                    Vibrant &amp; Eco-Friendly
-                </p>
-
-                <!-- 3 Feature Badges in a Row -->
-                <div class="jsw-hero-features-row">
-                    <div class="jsw-hero-feature-item">
-                        <div class="jsw-hero-feature-icon">
-                            <i class="fa fa-cog"></i>
-                        </div>
-                        <div class="jsw-hero-feature-text">
-                            Premium<br>Quality
-                        </div>
-                    </div>
-
-                    <div class="jsw-hero-feature-item">
-                        <div class="jsw-hero-feature-icon">
-                            <i class="fa fa-palette"></i>
-                        </div>
-                        <div class="jsw-hero-feature-text">
-                            Wide Range<br>of Colours
-                        </div>
-                    </div>
-
-                    <div class="jsw-hero-feature-item">
-                        <div class="jsw-hero-feature-icon">
-                            <i class="fa fa-shield-alt"></i>
-                        </div>
-                        <div class="jsw-hero-feature-text">
-                            Long-Lasting<br>Protection
+            <div class="carousel-inner">
+                <!-- Slide 1: JSW Paints Any Colour One Price (hero_2.png) -->
+                <div class="carousel-item active hero-carousel-slide hero-slide-1">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_2.png'); background-position: center right;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="jsw-badge-pill">
+                                    <span class="jsw-badge-dot"></span>
+                                    <span>AUTHORIZED JSW DEALER — ANBU PAINTS</span>
+                                </div>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Any Colour, One Price</span>
+                                    <span class="hero-title-orange">Pure Vibrant Living</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    100% water-based luxury paints for stunning interior &amp; exterior walls. Any shade you choose, exactly the same price.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                                        <a href="#about" class="btn-quote-orange">
+                                            Explore JSW Range <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20JSW%20Paints.%20Please%20share%20the%20pricing%20and%20catalogue." class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-whatsapp text-success me-1 fs-5"></i> WhatsApp Enquiry
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Action Buttons: Explore More & WhatsApp Enquiry -->
-                <div class="d-flex flex-wrap gap-3 align-items-center">
-                    <a href="#about" class="jsw-btn-explore">
-                        Explore More <i class="fa fa-arrow-right"></i>
-                    </a>
-                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20JSW%20Paints.%20Please%20share%20the%20pricing%20and%20catalogue." class="jsw-btn-wa-outline" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp text-success fs-5"></i> WhatsApp Enquiry
-                    </a>
+                <!-- Slide 2: JSW Pixa & Aurus Series (jsw_about_pixa_can.jpg) -->
+                <div class="carousel-item hero-carousel-slide hero-slide-2">
+                    <div class="hero-slide-bg hero-slide-2-bg" style="background-image: url('paint/jsw_about_pixa_can.jpg'); background-position: right 90%;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="jsw-badge-pill">
+                                    <span class="jsw-badge-dot"></span>
+                                    <span>COLOURDUR COIL COATINGS TECHNOLOGY</span>
+                                </div>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Pixa &amp; Aurus</span>
+                                    <span class="hero-title-orange">Flawless Protection</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Advanced ColourDur coil technology with anti-bacterial defense and high washability for modern architectural spaces.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                                        <a href="#about" class="btn-quote-orange">
+                                            View Products <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                            <i class="fa fa-calculator me-1"></i> Get a Quote
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Expert Express Painting (jsw_painter_hero.jpg) -->
+                <div class="carousel-item hero-carousel-slide hero-slide-3">
+                    <div class="hero-slide-bg" style="background-image: url('paint/jsw_painter_hero.jpg'); background-position: right center;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="jsw-badge-pill">
+                                    <span class="jsw-badge-dot"></span>
+                                    <span>EXPRESS APPLICATION &amp; COLOR MIXING</span>
+                                </div>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Master Craftsmanship</span>
+                                    <span class="hero-title-orange">Trained Professionals</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Computerized shade mixing with spectrophotometer accuracy and dust-free express painting by Anbu Paints, Pondicherry.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="d-flex flex-wrap gap-3 align-items-center">
+                                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20book%20an%20expert%20painter%20for%20JSW%20Paints." class="btn-quote-orange" target="_blank" rel="noopener noreferrer">
+                                            Book Expert Painter <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
+                                        <button type="button" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                            <i class="fa fa-phone-alt me-1"></i> Contact Us
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Carousel Prev/Next Buttons -->
+            <button class="carousel-control-prev hero-carousel-btn hero-carousel-btn-prev" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="prev" aria-label="Previous">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control-next hero-carousel-btn hero-carousel-btn-next" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="next" aria-label="Next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
-    <!-- Main Container for Remaining Sections -->
+<!-- Main Container for Remaining Sections -->
     <main class="container-fluid px-lg-5 px-3">
         <div style="max-width: 1200px; margin: 0 auto;">
 
@@ -1883,6 +1994,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Hero Carousel with smooth 5s auto-cycle
+            var heroCarouselEl = document.getElementById('heroPaintCarousel');
+            if (heroCarouselEl && window.bootstrap) {
+                var heroCarousel = bootstrap.Carousel.getOrCreateInstance(heroCarouselEl, {
+                    interval: 5000,
+                    pause: 'hover',
+                    ride: 'carousel',
+                    wrap: true
+                });
+                heroCarousel.cycle();
+            }
+
             // Universal Vanilla Modal Controller
             function closeAllModals() {
                 document.querySelectorAll('.modal').forEach(function(m) {

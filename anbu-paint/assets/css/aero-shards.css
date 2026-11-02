@@ -1,0 +1,68 @@
+/* React Bits AeroShards (Vanilla JS + CSS port) */
+.aero-shards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.aero-shards-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Scoped Asian Paints Hero Background & Readability Layering */
+.brand-hero-section.brand-asian {
+  position: relative;
+  overflow: hidden;
+  background: #080612;
+}
+
+.brand-asian > #hero-shards {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Subtle left-side dark vignette so hero heading & lead text remain crisp white */
+.brand-asian::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 6, 18, 0.58) 0%,
+    rgba(8, 6, 18, 0.28) 50%,
+    rgba(8, 6, 18, 0.05) 100%
+  );
+}
+
+.brand-asian > .brand-hero-pattern {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+.brand-asian > :not(#hero-shards):not(.brand-hero-pattern) {
+  position: relative;
+  z-index: 2;
+}
+
+.brand-asian .brand-hero-title {
+  color: #FFFFFF !important;
+}
+
+.brand-asian .brand-hero-lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
