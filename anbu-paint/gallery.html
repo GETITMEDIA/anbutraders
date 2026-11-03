@@ -25,7 +25,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Premium 2026 3D Paints Redesign CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.10">
+    <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.25">
 
     <style>
         :root {
@@ -33,590 +33,768 @@
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --primary-navy: #071E3D;
             --primary-orange: #EA580C;
-            --accent-cyan: #0284C7;
+            --primary-orange-hover: #C2410C;
+            --secondary-navy: #0B192C;
+            --accent-amber: #F59E0B;
         }
 
         body {
-            background: #F8FAFC;
+            background: #FFFFFF;
             font-family: var(--font-body);
             color: #0F172A;
+            overflow-x: hidden;
         }
 
         /* ==============================================================
-           SPLIT CLEAR-IMAGE GALLERY HERO
-           Image is 100% clearly visible, crisp, vibrant, un-obscured!
+           1. TOPBAR SECTION (Dark Navy with Verified Contacts)
            ============================================================== */
-        .gallery-split-section {
-            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-            padding: 60px 0 70px 0;
-            border-bottom: 1px solid #E2E8F0;
+        .anbu-topbar {
+            background: #071E3D;
+            padding: 9px 0;
+            font-size: 13px;
+            color: #E2E8F0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             position: relative;
+            z-index: 100;
         }
+        .topbar-phone-item, .topbar-email-item {
+            color: #E2E8F0;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        .topbar-phone-item:hover, .topbar-email-item:hover {
+            color: #F97316;
+        }
+        .topbar-phone-item i, .topbar-email-item i {
+            color: #F97316;
+            font-size: 12px;
+        }
+        /* Social links inherit from assets/css/anbu-paint-2026.css */
 
-        .gallery-badge-pill {
+        /* ==============================================================
+           2. MAIN NAVBAR SECTION
+           ============================================================== */
+        /* 2. NAVBAR STYLING INHERITED FROM assets/css/anbu-paint-2026.css */
+        .btn-get-quote {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #F0F9FF;
-            border: 1px solid rgba(2, 132, 199, 0.25);
-            color: #0284C7;
-            padding: 6px 16px;
+            background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+            color: #FFFFFF !important;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 9999px;
+            border: none;
+            text-decoration: none !important;
+            box-shadow: 0 4px 16px rgba(234, 88, 12, 0.3);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .btn-get-quote:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(234, 88, 12, 0.45);
+        }
+
+        /* ==============================================================
+           3. ARCHITECTURAL HERO SECTION
+           Exact reference layout: Left typography, right arch frame + 3D can
+           ============================================================== */
+        .hero-gallery-section {
+            background: #FFFFFF;
+            padding: 50px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #EFF6FF;
+            border: 1px solid rgba(30, 64, 175, 0.15);
+            color: #1E40AF;
+            padding: 7px 18px;
             border-radius: 9999px;
             font-family: var(--font-heading);
-            font-size: 11.5px;
+            font-size: 12px;
             font-weight: 800;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 22px;
+        }
+
+        .hero-main-title {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4.3vw, 56px);
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--primary-navy);
+            letter-spacing: -0.025em;
             margin-bottom: 18px;
         }
-
-        .pulse-dot-cyan {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #0284C7;
-            box-shadow: 0 0 8px #0284C7;
+        .hero-title-highlight {
+            color: var(--primary-orange);
             display: inline-block;
-            animation: pulseDotCyan 2s infinite;
         }
 
-        @keyframes pulseDotCyan {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(0.85); opacity: 0.5; }
-        }
-
-        .gallery-title-dark {
-            font-family: var(--font-heading);
-            font-size: clamp(32px, 3.8vw, 50px);
-            line-height: 1.15;
-            font-weight: 800;
-            color: #071E3D;
-            letter-spacing: -0.025em;
-            margin-bottom: 0;
-        }
-
-        .gallery-title-cyan {
-            font-family: var(--font-heading);
-            font-size: clamp(34px, 4.2vw, 54px);
-            line-height: 1.12;
-            font-weight: 800;
-            color: #0284C7;
-            letter-spacing: -0.03em;
-            display: block;
-            margin-bottom: 12px;
-        }
-
-        .gallery-accent-line {
-            width: 48px;
-            height: 3.5px;
-            background: #0284C7;
-            border-radius: 2px;
-            margin-bottom: 16px;
-        }
-
-        .gallery-clean-subtitle {
+        .hero-clean-subtitle {
             font-size: 15.5px;
             font-weight: 500;
             color: #475569;
-            line-height: 1.6;
-            max-width: 500px;
-            margin-bottom: 24px;
-        }
-
-        .gallery-chips-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            line-height: 1.65;
+            max-width: 530px;
             margin-bottom: 28px;
         }
 
-        .gallery-chip-item {
+        .hero-features-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .hero-feature-card {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: #FFFFFF;
-            border: 1px solid #E2E8F0;
-            padding: 6px 14px;
-            border-radius: 9999px;
-            font-size: 12.5px;
-            font-weight: 600;
-            color: #1E293B;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            gap: 12px;
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            padding: 9px 16px;
+            border-radius: 14px;
         }
-        .gallery-chip-item i {
-            color: #0284C7;
-            font-size: 12px;
+        .hero-feature-icon {
+            color: #EA580C;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-feature-num {
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.1;
+        }
+        .hero-feature-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748B;
         }
 
-        .gallery-cta-row {
+        .hero-cta-group {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 14px;
+            margin-bottom: 26px;
         }
-
-        .btn-gallery-primary {
+        .btn-hero-orange {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+            background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
             color: #FFFFFF !important;
             font-family: var(--font-heading);
-            font-size: 14px;
+            font-size: 14.5px;
             font-weight: 700;
             padding: 13px 28px;
             border-radius: 9999px;
             text-decoration: none !important;
-            box-shadow: 0 8px 24px rgba(2, 132, 199, 0.25);
+            box-shadow: 0 8px 24px rgba(234, 88, 12, 0.3);
             transition: all 0.3s ease;
         }
-        .btn-gallery-primary:hover {
-            background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+        .btn-hero-orange:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 28px rgba(234, 88, 12, 0.35);
+            box-shadow: 0 12px 28px rgba(234, 88, 12, 0.42);
         }
-
-        .btn-gallery-whatsapp {
+        .btn-hero-outline {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: #FFFFFF;
-            border: 1.5px solid #22C55E;
-            color: #15803D !important;
+            border: 1.5px solid #071E3D;
+            color: #071E3D !important;
+            font-family: var(--font-heading);
+            font-size: 14.5px;
+            font-weight: 700;
+            padding: 12px 26px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            transition: all 0.25s ease;
+        }
+        .btn-hero-outline:hover {
+            background: #071E3D;
+            color: #FFFFFF !important;
+            transform: translateY(-2px);
+        }
+
+        .hero-dots-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .hero-dot-active {
+            width: 24px;
+            height: 8px;
+            border-radius: 9999px;
+            background: #EA580C;
+        }
+        .hero-dot-inactive {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #CBD5E1;
+        }
+
+        /* Right Hero Arch Frame & Overlapping 3D Can */
+        .hero-arch-outer {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            margin-left: auto;
+            padding-right: 25px;
+            padding-bottom: 25px;
+        }
+        .hero-arch-underglow {
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            width: calc(100% + 15px);
+            height: calc(100% + 15px);
+            background: linear-gradient(135deg, rgba(254, 215, 170, 0.2) 0%, rgba(249, 115, 22, 0.22) 50%, rgba(234, 88, 12, 0.28) 100%);
+            border-radius: 230px 230px 60px 48px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero-arch-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            border-radius: 220px 220px 50px 40px;
+            overflow: hidden;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 25px 60px -15px rgba(7, 30, 61, 0.22);
+            background: #FFF7ED;
+            z-index: 3;
+        }
+        .hero-arch-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 50%;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-arch-container:hover .hero-arch-img {
+            transform: scale(1.04);
+        }
+        .hero-3d-paint-can {
+            position: absolute;
+            right: -10px;
+            bottom: -20px;
+            width: 225px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(0 20px 30px rgba(7, 30, 61, 0.38)) drop-shadow(0 8px 16px rgba(234, 88, 12, 0.25));
+            pointer-events: none;
+            animation: floatHeroCan 4.5s ease-in-out infinite;
+        }
+        @keyframes floatHeroCan {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-9px) rotate(1.2deg); }
+        }
+
+        /* ==============================================================
+           4. TRUST & STATISTICS STRIP (Four Cards)
+           ============================================================== */
+        .hero-trust-bar {
+            background: #FFFFFF;
+            border-top: 1px solid #F1F5F9;
+            border-bottom: 1px solid #F1F5F9;
+            padding: 26px 0;
+            position: relative;
+            z-index: 10;
+        }
+        .trust-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 6px 18px;
+            border-right: 1px solid #E2E8F0;
+        }
+        .trust-card.no-border {
+            border-right: none;
+        }
+        .trust-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            color: #EA580C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .trust-title {
+            font-family: var(--font-heading);
+            font-size: 14.5px;
+            font-weight: 800;
+            color: #071E3D;
+            margin-bottom: 2px;
+            line-height: 1.2;
+        }
+        .trust-desc {
+            font-size: 12px;
+            font-weight: 500;
+            color: #64748B;
+            line-height: 1.3;
+        }
+
+        /* ==============================================================
+           5. INTERACTIVE LIVE COLOR & ROOM VISUALIZER
+           ============================================================== */
+        .visualizer-section {
+            background: #FFFFFF;
+            padding: 70px 0 80px;
+            position: relative;
+        }
+        .section-eyebrow {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #EA580C;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .section-heading-dark {
+            font-family: var(--font-heading);
+            font-size: clamp(26px, 3.2vw, 40px);
+            font-weight: 800;
+            color: #071E3D;
+            letter-spacing: -0.02em;
+            margin-bottom: 10px;
+        }
+        .section-subtitle-gray {
+            font-size: 15px;
+            color: #64748B;
+            max-width: 650px;
+            margin: 0 auto 36px;
+        }
+
+        .swatches-scroll-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+        .swatch-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 18px;
+            border-radius: 9999px;
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 700;
+            color: #334155;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+        .swatch-pill:hover {
+            transform: translateY(-2px);
+            border-color: #CBD5E1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .swatch-pill.active {
+            background: #FFF7ED;
+            border-color: #EA580C;
+            color: #EA580C;
+            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.2);
+            transform: translateY(-2px);
+        }
+        .swatch-color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.8), 0 1px 3px rgba(0,0,0,0.25);
+        }
+
+        /* The Interactive Split Showcase Card */
+        .mood-split-card {
+            background: #FFFFFF;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(7, 30, 61, 0.16);
+            border: 1px solid #E2E8F0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .mood-color-pane {
+            padding: 44px 40px;
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+        }
+        .mood-badge-accent {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 5px 14px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: fit-content;
+        }
+        .mood-shade-title {
+            font-family: var(--font-heading);
+            font-size: clamp(28px, 3.2vw, 42px);
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.15;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .mood-shade-code {
+            font-size: 15px;
+            font-weight: 600;
+            color: #FED7AA;
+            margin-bottom: 18px;
+        }
+        .mood-shade-desc {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 26px;
+        }
+        .btn-mood-inquire {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #EA580C;
+            color: #FFFFFF !important;
             font-family: var(--font-heading);
             font-size: 14px;
             font-weight: 700;
-            padding: 12px 24px;
+            padding: 12px 26px;
             border-radius: 9999px;
             text-decoration: none !important;
-            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.12);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
             transition: all 0.25s ease;
+            width: fit-content;
         }
-        .btn-gallery-whatsapp:hover {
-            background: #22C55E;
-            color: #FFFFFF !important;
+        .btn-mood-inquire:hover {
+            background: #C2410C;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
         }
 
-        /* 100% CLEAR, VISIBLE, VIBRANT IMAGE SHOWCASE */
-        .gallery-clear-showcase {
+        .mood-photo-pane {
             position: relative;
-            width: 100%;
-            height: 460px;
-            border-radius: 26px;
+            height: 100%;
+            min-height: 420px;
             overflow: hidden;
-            border: 1px solid rgba(6, 43, 91, 0.1);
-            box-shadow: 0 25px 60px -15px rgba(6, 43, 91, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.04);
             background: #0B192C;
         }
-
-        .gallery-clear-img {
+        .mood-room-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center center;
             display: block;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.4s ease, transform 0.6s ease;
         }
-
-        .gallery-clear-showcase:hover .gallery-clear-img {
-            transform: scale(1.03);
-        }
-
-        .gallery-clear-caption {
-            position: absolute;
-            bottom: 0;
-            inset-inline: 0;
-            padding: 24px 24px 18px;
-            background: linear-gradient(180deg, transparent 0%, rgba(7, 30, 61, 0.85) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #FFFFFF;
-            pointer-events: none;
-        }
-
-        .gallery-caption-title {
-            font-family: var(--font-heading);
-            font-size: 15px;
-            font-weight: 800;
-            color: #FFFFFF;
-            line-height: 1.2;
-        }
-
-        .gallery-caption-sub {
-            font-size: 11.5px;
-            color: #7DD3FC;
-            font-weight: 600;
-        }
-
-        .gallery-caption-badge {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 5px 12px;
-            border-radius: 9999px;
-            font-size: 11.5px;
-            font-weight: 700;
-            color: #FFFFFF;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .gallery-top-badge {
-            position: absolute;
-            top: 18px;
-            right: 18px;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 8px 16px;
-            border-radius: 9999px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            font-family: var(--font-heading);
-            font-size: 12px;
-            font-weight: 800;
-            color: #071E3D;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        /* COLOR VISUALIZER SECTION */
-        .visualizer-section {
-            background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
-            padding: 80px 0;
-            border-bottom: 1px solid #E2E8F0;
-        }
-
-        .swatch-picker-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
-
-        .swatch-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            border-radius: 9999px;
-            background: #FFFFFF;
-            border: 2px solid #E2E8F0;
-            font-family: var(--font-heading);
-            font-size: 13.5px;
-            font-weight: 700;
-            color: #1E293B;
-            cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-        .swatch-btn:hover {
-            transform: translateY(-2px);
-            border-color: #CBD5E1;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-        }
-        .swatch-btn.active {
-            border-color: #EA580C;
-            background: #FFF7ED;
-            color: #EA580C;
-            box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
-            transform: translateY(-2px);
-        }
-        .swatch-dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7), 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: inline-block;
-        }
-
-        .preview-card {
-            background: #FFFFFF;
-            border-radius: 28px;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 25px 60px -15px rgba(6, 43, 91, 0.14);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .preview-wall-stage {
-            height: 420px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .preview-wall-vignette {
+        .mood-room-tint-overlay {
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.22) 0%, rgba(0, 0, 0, 0.42) 100%);
+            mix-blend-mode: multiply;
+            opacity: 0.35;
             pointer-events: none;
-        }
-        .preview-wall-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #FFFFFF;
-            padding: 30px;
-            max-width: 580px;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
-        }
-        .preview-wall-badge {
-            display: inline-block;
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: 6px 18px;
-            border-radius: 9999px;
-            font-size: 12.5px;
-            font-weight: 700;
-            letter-spacing: 0.6px;
-            margin-bottom: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-        #previewWallTitle,
-        .preview-wall-title,
-        .preview-wall-content h3 {
-            font-family: var(--font-heading) !important;
-            font-size: 38px;
-            font-weight: 800;
-            color: #FFFFFF !important;
-            margin-bottom: 8px;
-            line-height: 1.2;
-            letter-spacing: -0.015em;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        .preview-wall-code {
-            font-size: 16.5px;
-            font-weight: 600;
-            color: #FED7AA !important;
-            margin-bottom: 16px;
-            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-        }
-        .preview-wall-desc {
-            font-size: 15px;
-            line-height: 1.65;
-            color: #FFFFFF !important;
-            opacity: 0.95;
-            margin-bottom: 0;
-            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.5s ease;
         }
 
-        .preview-details-bar {
-            padding: 26px 36px;
+        .mood-meta-bar {
+            padding: 22px 36px;
             background: #FFFFFF;
+            border-top: 1px solid #F1F5F9;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
             gap: 20px;
         }
-        .preview-detail-item {
+        .mood-meta-item {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
-        .preview-detail-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: #FFF7ED;
+        .mood-meta-icon {
             color: #EA580C;
-            border: 1px solid rgba(234, 88, 12, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 19px;
+            font-size: 18px;
+        }
+        .mood-meta-label {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #64748B;
+            line-height: 1.2;
+        }
+        .mood-meta-val {
+            font-family: var(--font-heading);
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #071E3D;
         }
 
-        /* GALLERY FILTER & CARDS */
-        .gallery-filter-wrap {
+        /* ==============================================================
+           6. FINISHES, TEXTURES & BUILDING SOLUTIONS (16-Card Grid)
+           ============================================================== */
+        .solutions-section {
+            background: #FFFFFF;
+            padding: 70px 0 80px;
+            border-top: 1px solid #F1F5F9;
+        }
+        .solutions-filter-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 45px;
+            gap: 8px;
+            margin-bottom: 40px;
         }
-        .filter-pill {
+        .solution-filter-btn {
             background: #FFFFFF;
             border: 1.5px solid #E2E8F0;
             color: #475569;
             font-family: var(--font-heading);
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 700;
-            padding: 10px 22px;
+            padding: 9px 20px;
             border-radius: 9999px;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
         }
-        .filter-pill:hover {
+        .solution-filter-btn:hover {
             border-color: #CBD5E1;
-            color: #0F172A;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            color: #071E3D;
+            transform: translateY(-1px);
         }
-        .filter-pill.active {
-            background: linear-gradient(135deg, #071E3D 0%, #0F2E52 100%);
+        .solution-filter-btn.active {
+            background: #071E3D;
             border-color: #071E3D;
             color: #FFFFFF;
-            box-shadow: 0 6px 18px rgba(7, 30, 61, 0.25);
-            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(7, 30, 61, 0.25);
         }
 
-        .gallery-card {
+        .solution-card {
             background: #FFFFFF;
-            border-radius: 22px;
+            border-radius: 20px;
             overflow: hidden;
-            border: 1px solid rgba(6, 43, 91, 0.08);
-            box-shadow: 0 10px 25px -5px rgba(6, 43, 91, 0.06);
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 25px -5px rgba(7, 30, 61, 0.06);
             display: flex;
             flex-direction: column;
             height: 100%;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .gallery-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 24px 45px -10px rgba(6, 43, 91, 0.16);
-            border-color: rgba(2, 132, 199, 0.35);
+        .solution-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -10px rgba(7, 30, 61, 0.16);
+            border-color: #CBD5E1;
         }
-        .gallery-card-thumb {
-            height: 250px;
+        .solution-thumb-wrap {
+            height: 200px;
             position: relative;
             overflow: hidden;
             background: #0B192C;
             cursor: pointer;
         }
-        .gallery-card-thumb img {
+        .solution-thumb-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .gallery-card:hover .gallery-card-thumb img {
+        .solution-card:hover .solution-thumb-img {
             transform: scale(1.08);
         }
-
-        .gallery-brand-tag {
+        .solution-brand-tag {
             position: absolute;
-            top: 14px;
-            left: 14px;
-            padding: 6px 14px;
+            top: 12px;
+            left: 12px;
+            padding: 5px 12px;
             border-radius: 9999px;
-            font-size: 11px;
-            font-weight: 700;
+            font-size: 10.5px;
+            font-weight: 800;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             z-index: 2;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .tag-asian { background: rgba(225, 29, 72, 0.9); color: #FFFFFF; }
-        .tag-berger { background: rgba(217, 119, 6, 0.9); color: #FFFFFF; }
-        .tag-jsw { background: rgba(5, 150, 105, 0.9); color: #FFFFFF; }
-        .tag-birla { background: rgba(37, 99, 235, 0.9); color: #FFFFFF; }
-        .tag-depot { background: rgba(71, 85, 105, 0.9); color: #FFFFFF; }
+        .tag-asian { background: rgba(225, 29, 72, 0.92); }
+        .tag-berger { background: rgba(217, 119, 6, 0.92); }
+        .tag-jsw { background: rgba(5, 150, 105, 0.92); }
+        .tag-weather { background: rgba(2, 132, 199, 0.92); }
+        .tag-texture { background: rgba(126, 34, 206, 0.92); }
+        .tag-waterproof { background: rgba(30, 64, 175, 0.92); }
+        .tag-wood { background: rgba(120, 53, 15, 0.92); }
+        .tag-depot { background: rgba(51, 65, 85, 0.92); }
 
-        .gallery-card-body {
-            padding: 24px;
+        .solution-card-body {
+            padding: 20px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             justify-content: space-between;
         }
-        .gallery-card-title {
+        .solution-card-title {
             font-family: var(--font-heading);
-            font-size: 17.5px;
+            font-size: 15.5px;
             font-weight: 800;
-            color: #0F172A;
-            margin-bottom: 8px;
+            color: #071E3D;
             line-height: 1.35;
-            transition: color 0.25s ease;
+            margin-bottom: 6px;
         }
-        .gallery-card:hover .gallery-card-title {
-            color: #0284C7;
-        }
-        .gallery-card-desc {
-            font-size: 13.5px;
+        .solution-card-desc {
+            font-size: 12.5px;
             color: #64748B;
-            line-height: 1.55;
-            margin-bottom: 18px;
+            line-height: 1.5;
+            margin-bottom: 16px;
         }
-        .gallery-card-footer {
+        .solution-card-footer {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding-top: 16px;
+            justify-content: flex-end;
+            padding-top: 12px;
             border-top: 1px solid #F1F5F9;
         }
-
-        .dispenser-banner {
-            background: linear-gradient(135deg, #081E38 0%, #061528 100%);
-            border-radius: 28px;
-            padding: 55px 45px;
+        .btn-card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-family: var(--font-heading);
+            font-size: 12.5px;
+            font-weight: 700;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-action-preview {
+            background: #FFFFFF;
+            border: 1.5px solid #0284C7;
+            color: #0284C7;
+        }
+        .btn-action-preview:hover {
+            background: #0284C7;
             color: #FFFFFF;
-            position: relative;
-            overflow: hidden;
-            margin: 60px 0 20px 0;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 24px 50px -15px rgba(6, 43, 91, 0.35);
         }
-        .dispenser-banner::after {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
+        .btn-action-quote {
+            background: #FFFFFF;
+            border: 1.5px solid #16A34A;
+            color: #16A34A;
         }
-        .feature-box {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 18px;
-            padding: 24px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+        .btn-action-quote:hover {
+            background: #16A34A;
+            color: #FFFFFF;
         }
-        .feature-box:hover {
-            background: rgba(255, 255, 255, 0.11);
-            transform: translateY(-4px);
-            border-color: rgba(56, 189, 248, 0.4);
+        .btn-action-details {
+            background: #FFFFFF;
+            border: 1.5px solid #071E3D;
+            color: #071E3D;
+        }
+        .btn-action-details:hover {
+            background: #071E3D;
+            color: #FFFFFF;
+        }
+        .btn-action-order {
+            background: #EA580C;
+            border: 1.5px solid #EA580C;
+            color: #FFFFFF;
+        }
+        .btn-action-order:hover {
+            background: #C2410C;
         }
 
-        .lightbox-img {
-            max-height: 75vh;
-            width: 100%;
-            object-fit: contain;
-            background: #09131F;
-            border-radius: 14px;
+        /* ==============================================================
+           7. AUTHORIZED BRAND PARTNERS STRIP
+           ============================================================== */
+        .brands-partner-section {
+            background: #FFFFFF;
+            padding: 40px 0 60px;
+            border-top: 1px solid #F1F5F9;
+        }
+        .brand-logo-pill {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
+            height: 75px;
+        }
+        .brand-logo-pill:hover {
+            transform: translateY(-3px);
+            border-color: #EA580C;
+            box-shadow: 0 10px 20px rgba(234, 88, 12, 0.12);
+        }
+        .brand-pill-text {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 19px;
+            letter-spacing: -0.02em;
         }
 
+        /* Responsive Breakpoints */
         @media (max-width: 991px) {
-            .gallery-split-section {
-                padding: 40px 0 50px 0;
+            .hero-arch-outer {
+                margin: 40px auto 0;
+                max-width: 460px;
+                padding-right: 15px;
+                padding-bottom: 15px;
             }
-            .gallery-clear-showcase {
-                height: 280px;
-                margin-top: 30px;
+            .hero-arch-container {
+                height: 380px;
             }
-            .btn-gallery-primary, .btn-gallery-whatsapp {
-                width: 100%;
-                justify-content: center;
+            .hero-3d-paint-can {
+                width: 170px;
+                right: -5px;
+                bottom: -10px;
             }
-            .preview-wall-stage { height: 320px; }
-            .preview-details-bar { padding: 20px; }
-            .dispenser-banner { padding: 35px 22px; }
+            .trust-card {
+                border-right: none;
+                border-bottom: 1px solid #F1F5F9;
+                padding: 14px 6px;
+            }
+            .mood-color-pane {
+                padding: 30px 24px;
+            }
         }
     </style>
 </head>
@@ -690,25 +868,16 @@
                                 <li><a class="dropdown-item" href="index.html#products"><i class="fa fa-cubes text-secondary me-2"></i> All Brands &amp; Products</a></li>
                             </ul>
                         </li>
-                        <li><a class="anbu-nav-link" href="index.html#servicepaint">Service</a></li>
-                        <li><a class="anbu-nav-link " href="ourproject.html">Our Projects</a></li>
+                        <li><a class="anbu-nav-link" href="index.html#servicepaint">Services</a></li>
+                        <li><a class="anbu-nav-link" href="ourproject.html">Our Projects</a></li>
                         <li><a class="anbu-nav-link active" href="gallery.html">Gallery</a></li>
-                        <li><a class="anbu-nav-link " href="contact.html">Contact</a></li>
+                        <li><a class="anbu-nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
 
-                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
+                <!-- Right Action Button & Mobile Toggle -->
                 <div class="d-flex align-items-center gap-3">
-                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
-                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
-                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
-                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
-                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    <button type="button" class="btn-get-quote" data-bs-toggle="modal" data-bs-target="#quoteModal">
                         Get a Quote <i class="fa fa-arrow-right ms-1"></i>
                     </button>
                     <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -717,7 +886,7 @@
                 </div>
             </div>
 
-            <!-- Mobile Collapsible Menu matching index.html exactly -->
+            <!-- Mobile Collapsible Menu -->
             <div class="collapse navbar-collapse d-lg-none mt-3" id="anbuMobileNav">
                 <ul class="navbar-nav py-3 border-top">
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html">Home</a></li>
@@ -734,10 +903,10 @@
                             <li><a class="dropdown-item py-2" href="index.html#products"><i class="fa fa-cubes text-secondary me-2"></i> All Brands &amp; Products</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html#servicepaint">Service</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="ourproject.html">Our Projects</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html#servicepaint">Services</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="ourproject.html">Our Projects</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="contact.html">Contact</a></li>
                     <li class="nav-item pt-2">
                         <a class="btn btn-outline-primary w-100 mb-2" href="../index.html"><i class="fa fa-arrow-left me-1"></i> Back to Main Site</a>
                     </li>
@@ -747,74 +916,85 @@
     </header>
 
     <!-- ==============================================
-         3. SPLIT CLEAR-IMAGE GALLERY HERO
+         3. ARCHITECTURAL HERO SECTION
          ============================================== -->
-    <section class="gallery-split-section">
+    <section class="hero-gallery-section">
         <div class="container-fluid px-lg-5 px-3">
             <div class="row align-items-center g-4 g-lg-5">
                 
-                <!-- Left: Clean Luxury Copy -->
+                <!-- Left: Clean Luxury Copy & Features -->
                 <div class="col-lg-6 col-12">
-                    <div class="gallery-badge-pill">
-                        <span class="pulse-dot-cyan"></span>
+                    <div class="hero-badge-pill">
+                        <i class="fa fa-check-circle text-primary"></i>
                         <span>10,000+ COMPUTERISED SHADES &bull; PONDICHERRY</span>
                     </div>
 
-                    <h1 class="gallery-title-dark">Living Colour,</h1>
-                    <span class="gallery-title-cyan">Architectural Luxury</span>
+                    <h1 class="hero-main-title">
+                        Living Colour,<br>
+                        <span class="hero-title-highlight">Architectural Luxury</span>
+                    </h1>
 
-                    <div class="gallery-accent-line"></div>
-
-                    <p class="gallery-clean-subtitle">
-                        Explore 10,000+ computerized shades, Teflon-luster wall textures &amp; washable emulsions formulated with automated precision in 3 minutes.
+                    <p class="hero-clean-subtitle">
+                        Explore 10,000+ computerized shades, Teflon luster wall textures &amp; washable emulsions formulated with automated precision in 3 minutes.
                     </p>
 
-                    <div class="gallery-chips-row">
-                        <div class="gallery-chip-item">
-                            <i class="fa fa-palette"></i>
-                            <span>10,000+ Shade Library</span>
+                    <!-- 3 Feature Badges in a Row -->
+                    <div class="hero-features-row">
+                        <div class="hero-feature-card">
+                            <div class="hero-feature-icon"><i class="fa fa-palette"></i></div>
+                            <div>
+                                <div class="hero-feature-num">10,000+</div>
+                                <div class="hero-feature-label">Shade Library</div>
+                            </div>
                         </div>
-                        <div class="gallery-chip-item">
-                            <i class="fa fa-cogs"></i>
-                            <span>3-Min Automated Tinting</span>
+                        <div class="hero-feature-card">
+                            <div class="hero-feature-icon"><i class="fa fa-stopwatch"></i></div>
+                            <div>
+                                <div class="hero-feature-num">3-Min</div>
+                                <div class="hero-feature-label">Automated Tinting</div>
+                            </div>
                         </div>
-                        <div class="gallery-chip-item">
-                            <i class="fa fa-award"></i>
-                            <span>100% Genuine Brands</span>
+                        <div class="hero-feature-card">
+                            <div class="hero-feature-icon"><i class="fa fa-award"></i></div>
+                            <div>
+                                <div class="hero-feature-num">100%</div>
+                                <div class="hero-feature-label">Genuine Brands</div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="gallery-cta-row">
-                        <a href="#roomVisualizer" class="btn-gallery-primary">
+                    <!-- Two Action Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#roomVisualizer" class="btn-hero-orange">
                             <span>Launch Room Visualizer</span>
-                            <i class="fa fa-magic ms-1"></i>
+                            <i class="fa fa-arrow-right"></i>
                         </a>
-                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20request%20shade%20cards." target="_blank" rel="noopener noreferrer" class="btn-gallery-whatsapp">
-                            <i class="fab fa-whatsapp fs-5"></i>
+                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20request%20shade%20cards." target="_blank" rel="noopener noreferrer" class="btn-hero-outline">
+                            <i class="far fa-clone text-primary me-1"></i>
                             <span>Request Shade Card</span>
                         </a>
                     </div>
+
+                    <!-- Carousel / Pagination Dots -->
+                    <div class="hero-dots-row">
+                        <div class="hero-dot-active"></div>
+                        <div class="hero-dot-inactive"></div>
+                        <div class="hero-dot-inactive"></div>
+                    </div>
                 </div>
 
-                <!-- Right: 100% CLEAR, VISIBLE, VIBRANT IMAGE SHOWCASE -->
+                <!-- Right: Signature Arch Window & 3D Berger Silk Glamor Paint Bucket -->
                 <div class="col-lg-6 col-12">
-                    <div class="gallery-clear-showcase">
-                        <img src="img/service-interior.jpg" alt="Luxury Living Room Interior Finish" class="gallery-clear-img">
-                        
-                        <div class="gallery-top-badge">
-                            <i class="fa fa-gem text-primary"></i>
-                            <span>Teflon Luster &bull; Anti-Bacterial</span>
+                    <div class="hero-arch-outer">
+                        <div class="hero-arch-underglow"></div>
+
+                        <!-- Architectural Arch Frame -->
+                        <div class="hero-arch-container">
+                            <img src="img/room-vibrant-yellows.jpg" alt="Living Colour Architectural Luxury Interior" class="hero-arch-img">
                         </div>
 
-                        <div class="gallery-clear-caption">
-                            <div>
-                                <div class="gallery-caption-title">Designer Living Room Suite</div>
-                                <div class="gallery-caption-sub">Royale Glitz &bull; Velvety Ultra-Washable Emulsion</div>
-                            </div>
-                            <div class="gallery-caption-badge">
-                                <i class="fa fa-paint-roller me-1"></i> 100% Genuine
-                            </div>
-                        </div>
+                        <!-- Floating Overlapping 3D Berger Silk Glamor Paint Bucket (100% Transparent Cutout) -->
+                        <img src="paint/berger-silk-glamor.png" alt="Berger Silk Glamor Luxury Emulsion Can" class="hero-3d-paint-can">
                     </div>
                 </div>
 
@@ -823,613 +1003,159 @@
     </section>
 
     <!-- ==============================================
-         4. INTERACTIVE LIVE COLOR & ROOM VISUALIZER
+         4. TRUST & STATISTICS STRIP (Four Cards)
+         ============================================== -->
+    <div class="hero-trust-bar">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="row g-3">
+                <div class="col-lg-3 col-6">
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <i class="fa fa-cubes"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">Wide Product Range</div>
+                            <div class="trust-desc">Paints, Cement, TMT &amp; More</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <i class="fa fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">Trusted Quality</div>
+                            <div class="trust-desc">Genuine &amp; Branded Products</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <i class="fa fa-shipping-fast"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">On-Time Supply</div>
+                            <div class="trust-desc">For Homes &amp; Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="trust-card no-border">
+                        <div class="trust-icon-wrapper">
+                            <i class="fa fa-headset"></i>
+                        </div>
+                        <div>
+                            <div class="trust-title">Expert Support</div>
+                            <div class="trust-desc">Sales, Selection &amp; Execution</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         5. INTERACTIVE LIVE COLOR & ROOM VISUALIZER
          ============================================== -->
     <section class="visualizer-section" id="roomVisualizer">
         <div class="container-fluid px-lg-5 px-3">
-            <div class="text-center max-w-700 mx-auto mb-4">
-                <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
-                    <i class="fa fa-magic me-1"></i> INTERACTIVE SHADE VISUALIZER
-                </span>
-                <h2 class="fw-bold mb-2" style="font-family: var(--font-heading); color: #0F172A;">Pick a Color Family &amp; Preview the Mood</h2>
-                <p class="text-secondary" style="font-size: 15px;">Click any shade below to see how it looks on a luxury accent wall, along with shade code, recommended brand, and sheen level.</p>
+            <div class="text-center">
+                <span class="section-eyebrow">&mdash; EXPLORE COLOURS &mdash;</span>
+                <h2 class="section-heading-dark">Pick a Color Family &amp; Preview the Mood</h2>
+                <p class="section-subtitle-gray">Click any shade to see how it looks on a luxury accent wall, along with shade code, recommended trend, and sheen level.</p>
             </div>
 
-            <!-- Swatch Buttons -->
-            <div class="swatch-picker-container" id="swatchContainer">
-                <button type="button" class="swatch-btn active" onclick="selectColor(0)">
-                    <span class="swatch-dot" style="background-color: #B22222;"></span>
+            <!-- 9 Interactive Color Swatch Pills -->
+            <div class="swatches-scroll-row" id="swatchesBar">
+                <button type="button" class="swatch-pill active" onclick="pickColorMood(0)">
+                    <span class="swatch-color-dot" style="background-color: #B22222;"></span>
                     <span>Crimson Royale</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(1)">
-                    <span class="swatch-dot" style="background-color: #1E40AF;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(1)">
+                    <span class="swatch-color-dot" style="background-color: #1E40AF;"></span>
                     <span>Ocean Azure</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(2)">
-                    <span class="swatch-dot" style="background-color: #15803D;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(2)">
+                    <span class="swatch-color-dot" style="background-color: #15803D;"></span>
                     <span>Emerald Forest</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(3)">
-                    <span class="swatch-dot" style="background-color: #EAB308;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(3)">
+                    <span class="swatch-color-dot" style="background-color: #EAB308;"></span>
                     <span>Sunlight Amber</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(4)">
-                    <span class="swatch-dot" style="background-color: #C2410C;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(4)">
+                    <span class="swatch-color-dot" style="background-color: #C2410C;"></span>
                     <span>Terracotta Spice</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(5)">
-                    <span class="swatch-dot" style="background-color: #7E22CE;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(5)">
+                    <span class="swatch-color-dot" style="background-color: #7E22CE;"></span>
                     <span>Imperial Violet</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(6)">
-                    <span class="swatch-dot" style="background-color: #DB2777;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(6)">
+                    <span class="swatch-color-dot" style="background-color: #DB2777;"></span>
                     <span>Blush Rose</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(7)">
-                    <span class="swatch-dot" style="background-color: #475569;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(7)">
+                    <span class="swatch-color-dot" style="background-color: #475569;"></span>
                     <span>Nordic Platinum</span>
                 </button>
-                <button type="button" class="swatch-btn" onclick="selectColor(8)">
-                    <span class="swatch-dot" style="background-color: #78350F;"></span>
+                <button type="button" class="swatch-pill" onclick="pickColorMood(8)">
+                    <span class="swatch-color-dot" style="background-color: #78350F;"></span>
                     <span>Hazelnut Mocha</span>
                 </button>
             </div>
 
-            <!-- Visualizer Card -->
-            <div class="row justify-content-center">
-                <div class="col-xl-10 col-12">
-                    <div class="preview-card">
-                        <!-- Wall Stage -->
-                        <div class="preview-wall-stage" id="previewWallStage" style="background-color: #8B1A1A;">
-                            <div class="preview-wall-vignette"></div>
-                            <div class="preview-wall-content">
-                                <span class="preview-wall-badge" id="previewWallCategory"><i class="fa fa-sparkles me-1"></i> LUXURY INTERIOR ACCENT</span>
-                                <h3 class="preview-wall-title" id="previewWallTitle" style="color: #FFFFFF !important;">Crimson Royale</h3>
-                                <div class="preview-wall-code" id="previewWallCode">Asian Paints Royale Glitz &bull; Code: AP-8021</div>
-                                <p class="preview-wall-desc" id="previewWallDesc">A regal, warm statement hue that radiates luxury, warmth, and opulence. Formulated with Teflon surface protector for effortless stain resistance.</p>
-                            </div>
-                        </div>
-
-                        <!-- Details Bar -->
-                        <div class="preview-details-bar">
-                            <div class="d-flex align-items-center flex-wrap gap-4">
-                                <div class="preview-detail-item">
-                                    <div class="preview-detail-icon"><i class="fa fa-home"></i></div>
-                                    <div>
-                                        <div class="small text-secondary fw-semibold">Best Suited For</div>
-                                        <div class="fw-bold text-dark" id="previewSpace">Living Room Accent, Dining Wall</div>
-                                    </div>
-                                </div>
-                                <div class="preview-detail-item">
-                                    <div class="preview-detail-icon"><i class="fa fa-layer-group"></i></div>
-                                    <div>
-                                        <div class="small text-secondary fw-semibold">Sheen &amp; Finish</div>
-                                        <div class="fw-bold text-dark" id="previewSheen">Ultra-Sheen Matt / Silk Satin</div>
-                                    </div>
-                                </div>
-                                <div class="preview-detail-item">
-                                    <div class="preview-detail-icon"><i class="fa fa-award"></i></div>
-                                    <div>
-                                        <div class="small text-secondary fw-semibold">Recommended Brand</div>
-                                        <div class="fw-bold text-dark" id="previewBrand">Asian Paints Royale Glitz</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <a id="previewWhatsappBtn" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20the%20Crimson%20Royale%20shade%20(AP-8021)%20previewed%20on%20your%20website." target="_blank" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark">
-                                    <i class="fab fa-whatsapp me-2 text-success fs-5"></i> Inquire This Shade
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         5. GALLERY FILTER & ITEMS SECTION
-         ============================================== -->
-    <section class="py-5" style="background: #FFFFFF;">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-3">
-                <div>
-                    <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-1">
-                        <i class="fa fa-images me-1"></i> PHOTO PORTFOLIO
-                    </span>
-                    <h2 class="fw-bold mb-0" style="font-family: var(--font-heading); color: #0F172A;">Finishes, Textures &amp; Depot Stock</h2>
-                </div>
-                <div class="text-secondary small fw-semibold">
-                    <i class="fa fa-check-circle text-success me-1"></i> 100% Genuine Cans &bull; Computerized Tinting Depot
-                </div>
-            </div>
-
-            <!-- Filter Pills -->
-            <div class="gallery-filter-wrap">
-                <button type="button" class="filter-pill active" onclick="filterGallery('all')">
-                    All Items <span class="badge bg-dark bg-opacity-25 ms-1">18</span>
-                </button>
-                <button type="button" class="filter-pill" onclick="filterGallery('room')">
-                    Room Inspirations <span class="badge bg-dark bg-opacity-25 ms-1">4</span>
-                </button>
-                <button type="button" class="filter-pill" onclick="filterGallery('interior')">
-                    Luxury Interior <span class="badge bg-dark bg-opacity-25 ms-1">4</span>
-                </button>
-                <button type="button" class="filter-pill" onclick="filterGallery('exterior')">
-                    WeatherShield Exterior <span class="badge bg-dark bg-opacity-25 ms-1">3</span>
-                </button>
-                <button type="button" class="filter-pill" onclick="filterGallery('textures')">
-                    Textures &amp; Protection <span class="badge bg-dark bg-opacity-25 ms-1">4</span>
-                </button>
-                <button type="button" class="filter-pill" onclick="filterGallery('depot')">
-                    Depot &amp; Color Mixing <span class="badge bg-dark bg-opacity-25 ms-1">3</span>
-                </button>
-            </div>
-
-            <!-- Gallery Cards Grid -->
-            <div class="row g-4" id="galleryGrid">
-                
-                <!-- Item 1: Room Inspiration Blue -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="room">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/room-elegant-blues.jpg', 'Pacific Blue Luxury Bedroom', 'Asian Paints Royale Emulsion', 'A calming, deep aquatic palette designed for restorative bedroom spaces with subtle satin sheen reflection.')">
-                            <img src="img/room-elegant-blues.jpg" alt="Pacific Blue Luxury Bedroom" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Asian Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Pacific Blue Luxury Bedroom</h4>
-                                <p class="gallery-card-desc">Calming oceanic accent wall finished with Royale Luxury Emulsion for smooth velvety depth.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-tint me-1 text-primary"></i> Velvet Matt</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('img/room-elegant-blues.jpg', 'Pacific Blue Luxury Bedroom', 'Asian Paints Royale Emulsion', 'A calming, deep aquatic palette designed for restorative bedroom spaces with subtle satin sheen reflection.')">
-                                    <i class="fa fa-search-plus me-1"></i> Preview
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2: Room Inspiration Yellow -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="room">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/room-vibrant-yellows.jpg', 'Sunlit Amber Modern Living Area', 'Berger Silk Glamor Finish', 'Sun-drenched living room with high-washable Silk Glamor sheen, creating positive natural ambient lighting.')">
-                            <img src="img/room-vibrant-yellows.jpg" alt="Sunlit Amber Modern Living Area" loading="lazy">
-                            <span class="gallery-brand-tag tag-berger">Berger Silk</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Sunlit Amber Modern Living Area</h4>
-                                <p class="gallery-card-desc">Warm, uplifting amber tones with Berger Silk Glamor crystal sheen that bounces natural sunlight.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-sun me-1 text-warning"></i> High Sheen</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('img/room-vibrant-yellows.jpg', 'Sunlit Amber Modern Living Area', 'Berger Silk Glamor Finish', 'Sun-drenched living room with high-washable Silk Glamor sheen, creating positive natural ambient lighting.')">
-                                    <i class="fa fa-search-plus me-1"></i> Preview
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3: Room Inspiration Gray -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="room">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/room-modern-neutrals.jpg', 'Nordic Platinum Hall Scheme', 'JSW Halo Interior Emulsion', 'Understated minimalist platinum gray for architectural modern villa interiors and modular hall partitions.')">
-                            <img src="img/room-modern-neutrals.jpg" alt="Nordic Platinum Hall Scheme" loading="lazy">
-                            <span class="gallery-brand-tag tag-jsw">JSW Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Nordic Platinum Hall Scheme</h4>
-                                <p class="gallery-card-desc">Architectural minimalist gray scheme formulated with JSW Halo low-VOC eco-certified base.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-leaf me-1 text-success"></i> Eco Certified</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('img/room-modern-neutrals.jpg', 'Nordic Platinum Hall Scheme', 'JSW Halo Interior Emulsion', 'Understated minimalist platinum gray for architectural modern villa interiors and modular hall partitions.')">
-                                    <i class="fa fa-search-plus me-1"></i> Preview
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4: Room Inspiration Interior Velvet -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="room">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/service-interior.jpg', 'Master Suite Warm Terracotta', 'Asian Paints Royale Glitz', 'Designer bedroom finish showing flawless edge cutting, shadow gap illumination, and Teflon-protected durability.')">
-                            <img src="img/service-interior.jpg" alt="Master Suite Warm Terracotta" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Asian Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Master Suite Warm Terracotta</h4>
-                                <p class="gallery-card-desc">Flawless edge execution and smooth plaster finish using Birla White Putty undercoat and Royale Glitz.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-shield-alt me-1 text-danger"></i> Teflon Guard</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('img/service-interior.jpg', 'Master Suite Warm Terracotta', 'Asian Paints Royale Glitz', 'Designer bedroom finish showing flawless edge cutting, shadow gap illumination, and Teflon-protected durability.')">
-                                    <i class="fa fa-search-plus me-1"></i> Preview
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5: Luxury Interior Product 1 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="interior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/featured-product-royale-glitz-desk-updated.webp', 'Royale Glitz Luxury Interior Emulsion', 'Asian Paints Flagship', 'Ultra-luxury interior paint that combines Teflon stain repellent technology with rich designer sheen for elite homes.')">
-                            <img src="paint/featured-product-royale-glitz-desk-updated.webp" alt="Royale Glitz Luxury Interior Emulsion" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Asian Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Royale Glitz Ultra-Luxury Matt</h4>
-                                <p class="gallery-card-desc">Asian Paints crown jewel emulsion with Teflon stain surface protector. Washable and long-lasting.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-gem me-1 text-primary"></i> Luxury Matt</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20the%20dealer%20price%20for%20Asian%20Paints%20Royale%20Glitz." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 6: Luxury Interior Product 2 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="interior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/silk-glamor-dazzle-can_0.webp', 'Berger Silk Glamor Dazzle Sheen', 'Berger Paints Luxury Range', 'Crystal reflective finish with metallic micro-pearls that illuminate under warm chandelier lighting.')">
-                            <img src="paint/silk-glamor-dazzle-can_0.webp" alt="Berger Silk Glamor Dazzle Sheen" loading="lazy">
-                            <span class="gallery-brand-tag tag-berger">Berger Silk</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Berger Silk Glamor Dazzle Can</h4>
-                                <p class="gallery-card-desc">Formulated with micro-pigments and crystal sheen for radiant living rooms and hall focal walls.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-sparkles me-1 text-warning"></i> Crystal Pearl</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20the%20dealer%20price%20for%20Berger%20Silk%20Glamor%20Dazzle." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 7: Luxury Interior Product 3 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="interior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/Silk BreatheEasy can (1).webp', 'Berger Silk BreatheEasy Anti-Pollution', 'Berger Eco Health Range', 'Anti-bacterial, anti-fungal paint with zero VOC emissions designed for children rooms and nurseries.')">
-                            <img src="paint/Silk BreatheEasy can (1).webp" alt="Berger Silk BreatheEasy Anti-Pollution" loading="lazy">
-                            <span class="gallery-brand-tag tag-berger">Berger Health</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Silk BreatheEasy Anti-Pollution</h4>
-                                <p class="gallery-card-desc">Absorbs indoor VOCs and neutralizes bacteria. Approved for kids rooms, healthcare, and bedrooms.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-heartbeat me-1 text-danger"></i> Anti-Bacterial</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20the%20dealer%20price%20for%20Berger%20Silk%20BreatheEasy." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 8: Luxury Interior Product 4 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="interior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/asian-paints-royale-glitz-luxury-emulsion-500x500.webp', 'Royale Glitz Luxury 20L Base Can', 'Asian Paints Authorized Depot', 'Freshly sealed depot cans ready for computerized spectrophotometer tinting into any shade.')">
-                            <img src="paint/asian-paints-royale-glitz-luxury-emulsion-500x500.webp" alt="Royale Glitz Luxury 20L Base Can" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Asian Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Royale Glitz Depot 20L &amp; 10L</h4>
-                                <p class="gallery-card-desc">Wholesale certified stock ready for wholesale supply and direct site delivery across Pondicherry.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-cubes me-1 text-secondary"></i> Wholesale Pack</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20the%20wholesale%20price%20for%20Royale%20Glitz%2020L%20cans." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 9: WeatherShield Exterior 1 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="exterior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/Halo exceed-exterior-desktop.jpg', 'JSW Halo Exceed Extreme Weather Exterior', 'JSW Paints Exterior Protection', 'Engineered for coastal sea-breeze resistance, extreme sun UV radiation, and heavy monsoon rainfall.')">
-                            <img src="paint/Halo exceed-exterior-desktop.jpg" alt="JSW Halo Exceed Extreme Weather Exterior" loading="lazy">
-                            <span class="gallery-brand-tag tag-jsw">JSW Paints</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">JSW Halo Exceed All-Weather</h4>
-                                <p class="gallery-card-desc">Extreme weather exterior emulsion with anti-dirt pick-up and coastal salt-spray protection.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-cloud-sun-rain me-1 text-info"></i> Coastal Grade</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20JSW%20Halo%20Exceed%20Exterior%20for%20my%20building." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 10: WeatherShield Exterior 2 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="exterior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/Berger paint benbenefits.webp', 'Berger WeatherCoat Long Life Durability', 'Berger Paints 10-Yr Certified', 'Silicone infused exterior emulsion that repels algae, fungus, and monsoon rainwater.')">
-                            <img src="paint/Berger paint benfits.webp" alt="Berger WeatherCoat Long Life Durability" loading="lazy">
-                            <span class="gallery-brand-tag tag-berger">Berger Weather</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Berger WeatherCoat Long Life</h4>
-                                <p class="gallery-card-desc">Silicone additive prevents black spots and moisture penetration on exterior wall elevations.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-shield-alt me-1 text-warning"></i> 10-Yr Protection</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20details%20for%20Berger%20WeatherCoat%20exterior." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 11: WeatherShield Exterior 3 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="exterior">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/service-exterior.jpg', 'Modern Exterior Facade Coating Site', 'AP Complete Exterior System', 'Multi-coat exterior painting with crack-bridging primer, acrylic wall putty, and waterproof emulsion.')">
-                            <img src="img/service-exterior.jpg" alt="Modern Exterior Facade Coating Site" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Asian Apex</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Multi-Coat Exterior Elevation</h4>
-                                <p class="gallery-card-desc">Demonstration site in Pondicherry showcasing UV-fade resistant pigments and clean edges.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-check-circle me-1 text-success"></i> UV Resistant</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20a%20site%20visit%20for%20exterior%20painting." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 12: Textures & Protection 1 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="textures">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/wall-textures.webp', 'Designer 3D Wall Textures &amp; Stencils', 'Royale Play Designer Textures', 'Special effects wall textures including stucco, metallic swirls, canvas weave, and rustic concrete looks.')">
-                            <img src="paint/wall-textures.webp" alt="Designer 3D Wall Textures &amp; Stencils" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Royale Play</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Designer 3D Wall Textures</h4>
-                                <p class="gallery-card-desc">Artistic wall finishes for feature walls, TV units, and hotel lobbies created with specialized trowels.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-paint-roller me-1 text-primary"></i> Special Effects</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('paint/wall-textures.webp', 'Designer 3D Wall Textures &amp; Stencils', 'Royale Play Designer Textures', 'Special effects wall textures including stucco, metallic swirls, canvas weave, and rustic concrete looks.')">
-                                    <i class="fa fa-search-plus me-1"></i> Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 13: Textures & Protection 2 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="textures">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/Waterproffing03.webp', 'Advanced Terrace &amp; Wall Waterproofing', 'Dr. Fixit &amp; Asian SmartCare', 'Seamless elastomeric membrane coating that blocks terrace seepage, bathroom dampness, and efflorescence.')">
-                            <img src="paint/Waterproffing03.webp" alt="Advanced Terrace &amp; Wall Waterproofing" loading="lazy">
-                            <span class="gallery-brand-tag tag-birla">Waterproofing</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">SmartCare Terrace Waterproofing</h4>
-                                <p class="gallery-card-desc">Zero leakage elastomeric coatings with heat-reflective solar barrier for roof slabs and parapets.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-water me-1 text-info"></i> Zero Leakage</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20terrace%20leakage%20and%20need%20waterproofing%20chemicals." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 14: Textures & Protection 3 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="textures">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/wood-coating.webp', 'PU &amp; Italian Melamyne Wood Finishes', 'Asian Paints Acolook Woodtech', 'Scratch-proof polyurethane coatings for wooden doors, teak frames, dining tables, and modular cabinetry.')">
-                            <img src="paint/wood-coating.webp" alt="PU &amp; Italian Melamyne Wood Finishes" loading="lazy">
-                            <span class="gallery-brand-tag tag-asian">Woodtech</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Polyurethane Luxury Wood Finishes</h4>
-                                <p class="gallery-card-desc">Enhances natural wood grain with high-gloss or natural matt clear polish. Heat and scratch resistant.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-tree me-1 text-success"></i> Clear Gloss</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('paint/wood-coating.webp', 'PU &amp; Italian Melamyne Wood Finishes', 'Asian Paints Acolook Woodtech', 'Scratch-proof polyurethane coatings for wooden doors, teak frames, dining tables, and modular cabinetry.')">
-                                    <i class="fa fa-search-plus me-1"></i> Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 15: Textures & Protection 4 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="textures">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/metalcoating (1).webp', 'Rust-Shield Anti-Corrosive Metal Enamels', 'Berger &amp; Asian Paints Enamels', 'High-gloss anti-rust coatings for MS gates, window grills, structural steel rafters, and roofing frames.')">
-                            <img src="paint/metalcoating (1).webp" alt="Rust-Shield Anti-Corrosive Metal Enamels" loading="lazy">
-                            <span class="gallery-brand-tag tag-berger">Metal Guard</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Anti-Corrosive Metal &amp; Grill Enamels</h4>
-                                <p class="gallery-card-desc">Tough oil-based gloss enamels with zinc chromate primers that halt corrosion on metal structures.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-shield-virus me-1 text-danger"></i> Anti-Rust</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20anti-rust%20metal%20paint%20for%20gates." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 16: Depot & Mixing 1 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="depot">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('img/paintsssssss.jpg', 'AP Anbu Paints Authorized Depot Warehouse', 'Ready Stock Depots Pondicherry', 'Direct factory supplies in 1L, 4L, 10L, and 20L containers, ensuring zero lead time and wholesale dealer pricing.')">
-                            <img src="img/paintsssssss.jpg" alt="AP Anbu Paints Authorized Depot Warehouse" loading="lazy">
-                            <span class="gallery-brand-tag tag-depot">AP Depot</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Authorized Showroom Ready Stock</h4>
-                                <p class="gallery-card-desc">Huge warehouse depot with genuine factory-sealed cans of Asian Paints, Berger, JSW, and Birla Putty.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-warehouse me-1 text-secondary"></i> Ready Stock</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20visiting%20your%20depot%20for%20bulk%20purchase." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Visit
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 17: Depot & Mixing 2 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="depot">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/clr catlog.jpg', 'Official Color Fandecks &amp; Shade Swatches', '10,000+ Shade Library', 'Browse physical shade fandecks and digital spectrophotometer matching tools in our air-conditioned consultation zone.')">
-                            <img src="paint/clr catlog.jpg" alt="Official Color Fandecks &amp; Shade Swatches" loading="lazy">
-                            <span class="gallery-brand-tag tag-depot">Fandecks</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Physical Fandecks &amp; Shade Catalogs</h4>
-                                <p class="gallery-card-desc">Compare real painted swatch cards under 6500K daylight simulation to ensure perfect color match.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-book-open me-1 text-primary"></i> 10,000+ Shades</span>
-                                <button type="button" class="btn btn-sm btn-outline-primary rounded-pill px-3" onclick="openLightbox('paint/clr catlog.jpg', 'Official Color Fandecks &amp; Shade Swatches', '10,000+ Shade Library', 'Browse physical shade fandecks and digital spectrophotometer matching tools in our air-conditioned consultation zone.')">
-                                    <i class="fa fa-search-plus me-1"></i> Preview
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 18: Depot & Mixing 3 -->
-                <div class="col-lg-4 col-md-6 col-12 gallery-item-wrap" data-cat="depot">
-                    <div class="gallery-card">
-                        <div class="gallery-card-thumb" onclick="openLightbox('paint/color.jpg', 'Automated Spectrophotometer Tinting Depot', 'High-Precision Color Dispensers', 'Computerized automated color dispensers calculate colorant millilitres with 99.9% repeatability.')">
-                            <img src="paint/color.jpg" alt="Automated Spectrophotometer Tinting Depot" loading="lazy">
-                            <span class="gallery-brand-tag tag-depot">Tinting Depot</span>
-                        </div>
-                        <div class="gallery-card-body">
-                            <div>
-                                <h4 class="gallery-card-title">Automated Computerized Color Tinting</h4>
-                                <p class="gallery-card-desc">State of the art automated dispensers mix any custom shade in 3 minutes. Exact formula saved for future touch-ups.</p>
-                            </div>
-                            <div class="gallery-card-footer">
-                                <span class="small text-secondary fw-semibold"><i class="fa fa-cogs me-1 text-danger"></i> 3-Min Dispense</span>
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20shade%20code%20to%20mix%20on%20your%20computerized%20machine." target="_blank" class="btn btn-sm btn-success rounded-pill px-3 text-white">
-                                    <i class="fab fa-whatsapp me-1"></i> Order
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         6. IN-STORE AUTOMATED TINTING FEATURE BANNER
-         ============================================== -->
-    <section class="py-4" style="background: #F8FAFC;">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="dispenser-banner">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-7 col-12">
-                        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-3">
-                            <i class="fa fa-microchip me-1"></i> COMPUTERIZED TINTING TECHNOLOGY
-                        </span>
-                        <h2 class="display-6 fw-bold mb-3" style="font-family: var(--font-heading);">
-                            100% Exact Shade Repeatability in Under 3 Minutes
-                        </h2>
-                        <p class="text-white-50 lead mb-4" style="font-size: 16px;">
-                            Our showroom is equipped with official Asian Paints &amp; Berger computerized spectrophotometer tinting machines. Bring any swatch, sample, or shade code — our automated robotic dispenser creates your fresh batch with zero color deviation.
-                        </p>
-                        <div class="d-flex align-items-center flex-wrap gap-3">
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20to%20check%20if%20a%20specific%20paint%20shade%20can%20be%20mixed%20on%20your%20computerized%20machine." target="_blank" class="btn btn-warning rounded-pill px-4 py-3 fw-bold text-dark">
-                                <i class="fab fa-whatsapp me-2 text-success fs-5"></i> Check Custom Shade on WhatsApp
-                            </a>
-                            <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold">
-                                <i class="fa fa-map-marker-alt me-2 text-warning"></i> Visit Showroom
-                            </a>
-                        </div>
-                    </div>
+            <!-- The Split Showcase Card -->
+            <div class="mood-split-card">
+                <div class="row g-0 align-items-stretch">
+                    <!-- Left: Deep Rich Matching Color Pane -->
                     <div class="col-lg-5 col-12">
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <div class="feature-box">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="fs-2 text-warning"><i class="fa fa-tint"></i></div>
-                                        <div>
-                                            <h5 class="fw-bold mb-1 text-white">10,000+ Shades on Demand</h5>
-                                            <p class="text-white-50 small mb-0">From subtle off-whites to dramatic jewel tones, mixed fresh instantly.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="feature-box">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="fs-2 text-warning"><i class="fa fa-calculator"></i></div>
-                                        <div>
-                                            <h5 class="fw-bold mb-1 text-white">Micro-Millilitre Precision</h5>
-                                            <p class="text-white-50 small mb-0">Automated colorant injection guarantees exact identical shade across all 20L cans.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="feature-box">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <div class="fs-2 text-warning"><i class="fa fa-history"></i></div>
-                                        <div>
-                                            <h5 class="fw-bold mb-1 text-white">Digital Formula Archive</h5>
-                                            <p class="text-white-50 small mb-0">Your batch formula is saved on our server so you can re-order anytime.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="mood-color-pane" id="moodColorPane" style="background-color: #8B1A1A;">
+                            <span class="mood-badge-accent" id="moodBadgeText">LUXURY INTERIOR ACCENT</span>
+                            <h3 class="mood-shade-title" id="moodTitle">Crimson Royale</h3>
+                            <div class="mood-shade-code" id="moodCode">Asian Paints Royale Extra &bull; Code: AP-5027</div>
+                            <p class="mood-shade-desc" id="moodDesc">
+                                A regal, warm statement hue that radiates luxury, warmth, and grandeur. Formulated with Teflon surface protector for effortless stain resistance.
+                            </p>
+                            <a id="moodWhatsappBtn" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20the%20Crimson%20Royale%20shade%20(AP-5027)%20previewed%20on%20your%20website." target="_blank" class="btn-mood-inquire">
+                                <span>Inquire This Shade</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Luxury Room Accent Wall Photo -->
+                    <div class="col-lg-7 col-12">
+                        <div class="mood-photo-pane">
+                            <img src="img/service-interior.jpg" alt="Luxury Room Accent Wall Mood Preview" class="mood-room-img" id="moodRoomImg">
+                            <div class="mood-room-tint-overlay" id="moodTintOverlay" style="background-color: #8B1A1A;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Meta Bar -->
+                <div class="mood-meta-bar">
+                    <div class="mood-meta-item">
+                        <i class="far fa-star mood-meta-icon"></i>
+                        <div>
+                            <div class="mood-meta-label">Best Suited For</div>
+                            <div class="mood-meta-val" id="moodSuitedFor">Living Room, Accent, Dining Wall</div>
+                        </div>
+                    </div>
+                    <div class="mood-meta-item">
+                        <i class="fa fa-layer-group mood-meta-icon"></i>
+                        <div>
+                            <div class="mood-meta-label">Sheen &amp; Finish</div>
+                            <div class="mood-meta-val" id="moodSheenVal">Ultra-Sheen Matt / Silk Satin</div>
+                        </div>
+                    </div>
+                    <div class="mood-meta-item">
+                        <i class="fa fa-award mood-meta-icon"></i>
+                        <div>
+                            <div class="mood-meta-label">Recommended Brand</div>
+                            <div class="mood-meta-val" id="moodBrandVal">Asian Paints Royale Glitz</div>
                         </div>
                     </div>
                 </div>
@@ -1438,7 +1164,414 @@
     </section>
 
     <!-- ==============================================
-         7. LIGHTBOX MODAL
+         6. FINISHES, TEXTURES & BUILDING SOLUTIONS (16-Card Grid)
+         ============================================== -->
+    <section class="solutions-section" id="products">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between mb-4 gap-2">
+                <div>
+                    <span class="section-eyebrow">&mdash; OUR PRODUCT RANGE</span>
+                    <h2 class="section-heading-dark mb-0">Finishes, Textures &amp; Building Solutions</h2>
+                </div>
+                <div class="d-inline-flex align-items-center gap-2 text-success fw-bold small">
+                    <i class="fa fa-check-circle"></i> 100% Genuine Cans &bull; Computerized Tinting Depot
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="solutions-filter-row">
+                <button type="button" class="solution-filter-btn active" onclick="filterSolutions('all')">All Items (16)</button>
+                <button type="button" class="solution-filter-btn" onclick="filterSolutions('rooms')">Room Inspirations</button>
+                <button type="button" class="solution-filter-btn" onclick="filterSolutions('interior')">Luxury Interior</button>
+                <button type="button" class="solution-filter-btn" onclick="filterSolutions('exterior')">WeatherShield Exterior</button>
+                <button type="button" class="solution-filter-btn" onclick="filterSolutions('textures')">Textures &amp; Protection</button>
+                <button type="button" class="solution-filter-btn" onclick="filterSolutions('depot')">Depot &amp; Color Mixing</button>
+            </div>
+
+            <!-- 16-Card Responsive Grid -->
+            <div class="row g-4" id="solutionsGrid">
+
+                <!-- 1. Pacific Blue Luxury Bedroom -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="rooms">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/room-elegant-blues.jpg', 'Pacific Blue Luxury Bedroom', 'Asian Paints', 'Calming ceramic accents and velvety matt wall for a luxury finish.')">
+                            <span class="solution-brand-tag tag-asian">Asian Paints</span>
+                            <img src="img/room-elegant-blues.jpg" alt="Pacific Blue Luxury Bedroom" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Pacific Blue Luxury Bedroom</h4>
+                                <p class="solution-card-desc">Calming ceramic accents and velvety matt wall for a luxury finish.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-preview" onclick="openLightbox('img/room-elegant-blues.jpg', 'Pacific Blue Luxury Bedroom', 'Asian Paints', 'Calming ceramic accents and velvety matt wall for a luxury finish.')">
+                                    <i class="far fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Sunlit Amber Modern Living Area -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="rooms">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/room-vibrant-yellows.jpg', 'Sunlit Amber Modern Living Area', 'Berger Silk', 'Warm, uplifting coastal tones with crystal pearl finish for a luxurious feel.')">
+                            <span class="solution-brand-tag tag-berger">Berger Silk</span>
+                            <img src="img/room-vibrant-yellows.jpg" alt="Sunlit Amber Modern Living Area" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Sunlit Amber Modern Living Area</h4>
+                                <p class="solution-card-desc">Warm, uplifting coastal tones with crystal pearl finish for a luxurious feel.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-preview" onclick="openLightbox('img/room-vibrant-yellows.jpg', 'Sunlit Amber Modern Living Area', 'Berger Silk', 'Warm, uplifting coastal tones with crystal pearl finish for a luxurious feel.')">
+                                    <i class="far fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Nordic Platinum Hall Scheme -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="rooms">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/room-modern-neutrals.jpg', 'Nordic Platinum Hall Scheme', 'JSW Paints', 'A timeless and modern palette for spacious, airy living interiors.')">
+                            <span class="solution-brand-tag tag-jsw">JSW Paints</span>
+                            <img src="img/room-modern-neutrals.jpg" alt="Nordic Platinum Hall Scheme" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Nordic Platinum Hall Scheme</h4>
+                                <p class="solution-card-desc">A timeless and modern palette for spacious, airy living interiors.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-preview" onclick="openLightbox('img/room-modern-neutrals.jpg', 'Nordic Platinum Hall Scheme', 'JSW Paints', 'A timeless and modern palette for spacious, airy living interiors.')">
+                                    <i class="far fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Master Suite Warm Terracotta -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="rooms">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/service-interior.jpg', 'Master Suite Warm Terracotta', 'Asian Paints', 'Rich country earth tones with soft textures for opulent living bedrooms.')">
+                            <span class="solution-brand-tag tag-asian">Asian Paints</span>
+                            <img src="img/service-interior.jpg" alt="Master Suite Warm Terracotta" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Master Suite Warm Terracotta</h4>
+                                <p class="solution-card-desc">Rich country earth tones with soft textures for opulent living bedrooms.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-preview" onclick="openLightbox('img/service-interior.jpg', 'Master Suite Warm Terracotta', 'Asian Paints', 'Rich country earth tones with soft textures for opulent living bedrooms.')">
+                                    <i class="far fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Royale Glitz Glamor Dazzle Can -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="interior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/silk-glamor-dazzle-can_0.webp', 'Royale Glitz Glamor Dazzle Can', 'Berger', 'High-gloss premium emulsion for vibrant, long-lasting wall sheen.')">
+                            <span class="solution-brand-tag tag-berger">Berger</span>
+                            <img src="paint/silk-glamor-dazzle-can_0.webp" alt="Royale Glitz Glamor Dazzle Can" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Royale Glitz Glamor Dazzle Can</h4>
+                                <p class="solution-card-desc">High-gloss premium emulsion for vibrant, long-lasting wall sheen.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20price%20quote%20for%20Berger%20Silk%20Glamor%20Dazzle." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Royale Glitz - Luxury Matt -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="interior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/featured-product-royale-glitz-desk-updated.webp', 'Royale Glitz - Luxury Matt', 'Asian Paints', 'Ultra luxury finish with smooth washability and long durability.')">
+                            <span class="solution-brand-tag tag-asian">Asian Paints</span>
+                            <img src="paint/featured-product-royale-glitz-desk-updated.webp" alt="Royale Glitz Luxury Matt" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Royale Glitz - Luxury Matt</h4>
+                                <p class="solution-card-desc">Ultra luxury finish with smooth washability and long durability.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20price%20quote%20for%20Asian%20Paints%20Royale%20Glitz." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. JSW Halo Exceed All-Weather -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="exterior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/Halo exceed-exterior-desktop.jpg', 'JSW Halo Exceed All-Weather', 'JSW Paints', 'Exterior supreme emulsion with anti-dust & UV protection.')">
+                            <span class="solution-brand-tag tag-jsw">JSW Paints</span>
+                            <img src="paint/Halo exceed-exterior-desktop.jpg" alt="JSW Halo Exceed All-Weather" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">JSW Halo Exceed All-Weather</h4>
+                                <p class="solution-card-desc">Exterior supreme emulsion with anti-dust &amp; UV protection.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20price%20quote%20for%20JSW%20Halo%20Exceed." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Silk BreatheEasy Anti-Pollution -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="interior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/Silk BreatheEasy can (1).webp', 'Silk BreatheEasy Anti-Pollution', 'Berger', 'Advanced indoor paint with anti-microbial and low VOC formula.')">
+                            <span class="solution-brand-tag tag-berger">Berger</span>
+                            <img src="paint/Silk BreatheEasy can (1).webp" alt="Silk BreatheEasy Anti-Pollution" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Silk BreatheEasy Anti-Pollution</h4>
+                                <p class="solution-card-desc">Advanced indoor paint with anti-microbial and low VOC formula.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20quote%20for%20Berger%20Silk%20BreatheEasy." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Berger Weather Coat Long Life -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="exterior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/Berger paint benfits.webp', 'Berger Weather Coat Long Life', 'WeatherCoat', 'All-weather exterior protection with 10-year durability warranty.')">
+                            <span class="solution-brand-tag tag-weather">WeatherCoat</span>
+                            <img src="paint/Berger paint benfits.webp" alt="Berger Weather Coat Long Life" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Berger Weather Coat Long Life</h4>
+                                <p class="solution-card-desc">All-weather exterior protection with 10-year durability warranty.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20quote%20for%20Berger%20WeatherCoat%20Long%20Life." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Multi-Coat Exterior Elevation -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="exterior">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/service-exterior.jpg', 'Multi-Coat Exterior Elevation', 'Asian Paints', 'Weatherproof exterior masonry and architectural coating.')">
+                            <span class="solution-brand-tag tag-asian">Asian Paints</span>
+                            <img src="img/service-exterior.jpg" alt="Multi-Coat Exterior Elevation" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Multi-Coat Exterior Elevation</h4>
+                                <p class="solution-card-desc">Weatherproof exterior masonry and architectural coating.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Multi-Coat%20Exterior%20Elevation%20work." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Designer 3D Wall Textures -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="textures">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/wall-textures.webp', 'Designer 3D Wall Textures', 'Royale Glitz', 'Dramatic 3D wall feature with metallic and textured designer patterns.')">
+                            <span class="solution-brand-tag tag-texture">Royale Glitz</span>
+                            <img src="paint/wall-textures.webp" alt="Designer 3D Wall Textures" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Designer 3D Wall Textures</h4>
+                                <p class="solution-card-desc">Dramatic 3D wall feature with metallic and textured designer patterns.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-details" onclick="openLightbox('paint/wall-textures.webp', 'Designer 3D Wall Textures', 'Royale Glitz', 'Dramatic 3D wall feature with metallic and textured designer patterns.')">
+                                    <i class="fa fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. SmartCare Terrace Waterproofing -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="textures">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/Waterproffing03.webp', 'SmartCare Terrace Waterproofing', 'Waterproofing', 'High-performance water resistance for roof terraces, podiums, and basements.')">
+                            <span class="solution-brand-tag tag-waterproof">Waterproofing</span>
+                            <img src="paint/Waterproffing03.webp" alt="SmartCare Terrace Waterproofing" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">SmartCare Terrace Waterproofing</h4>
+                                <p class="solution-card-desc">High-performance water resistance for roof terraces, podiums, and basements.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-details" onclick="openLightbox('paint/Waterproffing03.webp', 'SmartCare Terrace Waterproofing', 'Waterproofing', 'High-performance water resistance for roof terraces, podiums, and basements.')">
+                                    <i class="fa fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. Polyurethane Luxury Wood Finishes -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="textures">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/wood-coating.webp', 'Polyurethane Luxury Wood Finishes', 'Wood Finish', 'Rich wood finish with long-lasting luster and smooth grain protection.')">
+                            <span class="solution-brand-tag tag-wood">Wood Finish</span>
+                            <img src="paint/wood-coating.webp" alt="Polyurethane Luxury Wood Finishes" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Polyurethane Luxury Wood Finishes</h4>
+                                <p class="solution-card-desc">Rich wood finish with long-lasting luster and smooth grain protection.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <button type="button" class="btn-card-action btn-action-details" onclick="openLightbox('paint/wood-coating.webp', 'Polyurethane Luxury Wood Finishes', 'Wood Finish', 'Rich wood finish with long-lasting luster and smooth grain protection.')">
+                                    <i class="fa fa-info-circle"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. Anti-Corrosive Metal & Grill Enamels -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="textures">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/metalcoating (1).webp', 'Anti-Corrosive Metal & Grill Enamels', 'Metal Enamel', 'Durable enamel for metals, gates, grills, and architectural fabrication.')">
+                            <span class="solution-brand-tag tag-berger">Metal Enamel</span>
+                            <img src="paint/metalcoating (1).webp" alt="Anti-Corrosive Metal & Grill Enamels" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Anti-Corrosive Metal &amp; Grill Enamels</h4>
+                                <p class="solution-card-desc">Durable enamel for metals, gates, grills, and architectural fabrication.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20a%20quote%20for%20Anti-Corrosive%20Metal%20Enamel." target="_blank" class="btn-card-action btn-action-quote">
+                                    <i class="fab fa-whatsapp"></i> Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15. Authorized Showroom Ready Stock -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="depot">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('img/paintsssssss.jpg', 'Authorized Showroom Ready Stock', 'Ready Depot', 'Wide range of branded paints, primers, rollers, and accessories always in stock.')">
+                            <span class="solution-brand-tag tag-depot">Ready Depot</span>
+                            <img src="img/paintsssssss.jpg" alt="Authorized Showroom Ready Stock" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Authorized Showroom Ready Stock</h4>
+                                <p class="solution-card-desc">Wide range of branded paints, primers, rollers, and accessories always in stock.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="contact.html" class="btn-card-action btn-action-preview">
+                                    <i class="fa fa-map-marker-alt"></i> Visit
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 16. Automated Computerized Color Tinting -->
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12 solution-item" data-cat="depot">
+                    <div class="solution-card">
+                        <div class="solution-thumb-wrap" onclick="openLightbox('paint/clr catlog.jpg', 'Automated Computerized Color Tinting', 'Tinting Depot', 'Get your exact custom shade in just 3 minutes with advanced automated tinting.')">
+                            <span class="solution-brand-tag tag-texture">Tinting Depot</span>
+                            <img src="paint/clr catlog.jpg" alt="Automated Computerized Color Tinting" class="solution-thumb-img" loading="lazy">
+                        </div>
+                        <div class="solution-card-body">
+                            <div>
+                                <h4 class="solution-card-title">Automated Computerized Color Tinting</h4>
+                                <p class="solution-card-desc">Get your exact custom shade in just 3 minutes with advanced automated tinting.</p>
+                            </div>
+                            <div class="solution-card-footer">
+                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20shade%20code%20to%20mix%20on%20your%20computerized%20machine." target="_blank" class="btn-card-action btn-action-order">
+                                    <i class="fab fa-whatsapp"></i> Order
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         7. AUTHORIZED BRAND PARTNERS STRIP
+         ============================================== -->
+    <section class="brands-partner-section">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="text-center mb-4">
+                <span class="section-eyebrow">&mdash; OUR AUTHORISED BRANDS &mdash;</span>
+                <h3 class="section-heading-dark" style="font-size: 26px;">Genuine Products from Trusted Brands</h3>
+            </div>
+
+            <div class="row g-3 justify-content-center">
+                <!-- 1. Asian Paints -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <a href="asianpant.html" class="brand-logo-pill text-decoration-none">
+                        <span class="brand-pill-text" style="color: #EA580C;"><span style="color: #E11D48;">ap</span> asianpaints</span>
+                    </a>
+                </div>
+                <!-- 2. Berger -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <a href="burger.html" class="brand-logo-pill text-decoration-none">
+                        <span class="brand-pill-text" style="color: #071E3D;"><span style="color: #E11D48;"><i class="fa fa-shield-alt me-1"></i></span>Berger</span>
+                    </a>
+                </div>
+                <!-- 3. JSW Paints -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <a href="jsw.html" class="brand-logo-pill text-decoration-none">
+                        <span class="brand-pill-text" style="color: #059669;"><i class="fa fa-leaf me-1"></i>JSW PAINTS</span>
+                    </a>
+                </div>
+                <!-- 4. Birla White -->
+                <div class="col-lg-3 col-md-6 col-6">
+                    <a href="wallputty.html" class="brand-logo-pill text-decoration-none">
+                        <span class="brand-pill-text" style="color: #0284C7;"><i class="fa fa-layer-group me-1"></i>Birla White</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         8. LIGHTBOX MODAL
          ============================================== -->
     <div class="modal fade" id="galleryLightboxModal" tabindex="-1" aria-labelledby="lightboxTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -1451,7 +1584,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-0 bg-dark text-center">
-                    <img id="lightboxImg" src="" alt="Finish Preview" class="lightbox-img">
+                    <img id="lightboxImg" src="" alt="Finish Preview" style="max-height: 75vh; width: 100%; object-fit: contain;">
                 </div>
                 <div class="modal-footer bg-white border-0 px-4 py-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
                     <p class="text-secondary small mb-0" id="lightboxDesc" style="max-width: 480px;"></p>
@@ -1464,12 +1597,7 @@
     </div>
 
     <!-- ==============================================
-         8. FOOTER SECTION
-         ============================================== -->
-    <!-- Footer Start -->
-
-    <!-- ==============================================
-         QUOTATION MODAL (Get a Quote)
+         9. QUOTATION MODAL (Get a Quote)
          ============================================== -->
     <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -1477,7 +1605,7 @@
                 <div class="modal-header border-0 pb-0 pt-4 px-4">
                     <div>
                         <span class="section-eyebrow mb-1">ANBU PAINTS</span>
-                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #062B5B;">Request a Free Paint Quote</h4>
+                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #071E3D;">Request a Free Paint Quote</h4>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -1516,242 +1644,263 @@
         </div>
     </div>
 
-<footer class="anbu-unified-footer">
-    <div class="anbu-footer-container">
-        <div class="anbu-footer-grid">
-            <!-- Brand & Site Logo Column -->
-            <div class="anbu-footer-col anbu-footer-brand-col">
-                <a href="index.html" class="anbu-footer-logo-badge" aria-label="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo">
-                    <img src="img/paint logo.png" alt="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo" class="anbu-footer-logo-img" loading="lazy">
-                </a>
-                <p class="anbu-footer-brand-desc">Authorized dealer for Asian Paints, Berger, JSW, Nippon & JK Wall Putty with computerized color mixing.</p>
-                <div class="anbu-footer-socials">
-                    <a class="anbu-footer-social-link" href="https://www.instagram.com/anbu_traders_pondicherry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    <!-- ==============================================
+         10. FOOTER SECTION
+         ============================================== -->
+    <footer class="anbu-unified-footer">
+        <div class="anbu-footer-container">
+            <div class="anbu-footer-grid">
+                <!-- Brand & Site Logo Column -->
+                <div class="anbu-footer-col anbu-footer-brand-col">
+                    <a href="index.html" class="anbu-footer-logo-badge" aria-label="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo">
+                        <img src="img/paint logo.png" alt="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo" class="anbu-footer-logo-img" loading="lazy">
                     </a>
-                    <a class="anbu-footer-social-link" href="https://www.facebook.com/profile.php?id=61580211641539" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-                    </a>
-                    <a class="anbu-footer-social-link" href="https://www.youtube.com/@AnbuTraders-t8r" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
+                    <p class="anbu-footer-brand-desc">Authorized dealer for Asian Paints, Berger, JSW, Nippon &amp; JK Wall Putty with computerized color mixing.</p>
+                    <div class="anbu-footer-socials">
+                        <a class="anbu-footer-social-link" href="https://www.instagram.com/anbu_traders_pondicherry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a class="anbu-footer-social-link" href="https://www.facebook.com/profile.php?id=61580211641539" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a class="anbu-footer-social-link" href="https://www.youtube.com/@AnbuTraders-t8r" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Our Office Column -->
+                <div class="anbu-footer-col">
+                    <h5 class="anbu-footer-title">Our Office</h5>
+                    <div class="anbu-footer-info-item">
+                        <span class="anbu-footer-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        </span>
+                        <span>No.76/3, Pondy - Mailam Main Road, Main Road, next to Sri Sathya Saw Mill, Sedarapet, Tamil Nadu 605111</span>
+                    </div>
+                    <div class="anbu-footer-info-item">
+                        <span class="anbu-footer-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </span>
+                        <span><a href="tel:+919626325204">96263 25204</a> / <a href="tel:+919655551468">96555 51468</a></span>
+                    </div>
+                    <div class="anbu-footer-info-item">
+                        <span class="anbu-footer-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        </span>
+                        <span><a href="tel:04132980014">0413-2980014</a></span>
+                    </div>
+                    <div class="anbu-footer-info-item" style="margin-bottom: 0 !important;">
+                        <span class="anbu-footer-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </span>
+                        <span><a href="mailto:anbutraders1468@gmail.com">anbutraders1468@gmail.com</a></span>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="anbu-footer-col">
+                    <h5 class="anbu-footer-title">Quick Links</h5>
+                    <div class="anbu-footer-links">
+                        <a class="anbu-footer-link" href="../index.html">Main Home</a>
+                        <a class="anbu-footer-link" href="index.html">Paints Home</a>
+                        <a class="anbu-footer-link" href="asianpant.html">Asian Paints</a>
+                        <a class="anbu-footer-link" href="burger.html">Berger Paints</a>
+                        <a class="anbu-footer-link" href="jsw.html">JSW Paints</a>
+                        <a class="anbu-footer-link" href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Business Hours Column -->
+                <div class="anbu-footer-col">
+                    <h5 class="anbu-footer-title">Business Hours</h5>
+                    <p class="anbu-footer-hours-day">Monday - Saturday</p>
+                    <p class="anbu-footer-hours-time">08:00 am - 08:00 pm</p>
+                    <p class="anbu-footer-hours-day">Sunday</p>
+                    <p class="anbu-footer-hours-time" style="margin-bottom: 0 !important;">08:00 am - 02:30 pm</p>
+                </div>
+
+                <!-- Leave a Google Review Column -->
+                <div class="anbu-footer-col">
+                    <h5 class="anbu-footer-title">Leave a Google Review</h5>
+                    <p class="anbu-footer-review-text">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+                    <a href="https://www.google.com/maps/place/Anbu+Traders/@12.0011839,79.6992895,13z/data=!4m10!1m2!2m1!1sanbu+traders!3m6!1s0x3a53673c683b5d23:0xa33ec6770f905c31!8m2!3d12.0011839!4d79.7734468!15sCgxhbmJ1IHRyYWRlcnNaDiIMYW5idSB0cmFkZXJzkgEYYnVpbGRpbmdfbWF0ZXJpYWxzX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5mYWpGWk5XbFJSUkFC4AEA!16s%2Fg%2F11b6_csq4r?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="anbu-footer-review-cta">Leave a Review</a>
                 </div>
             </div>
+        </div>
+    </footer>
 
-            <!-- Our Office Column -->
-            <div class="anbu-footer-col">
-                <h5 class="anbu-footer-title">Our Office</h5>
-                <div class="anbu-footer-info-item">
-                    <span class="anbu-footer-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    </span>
-                    <span>No.76/3, Pondy - Mailam Main Road, Main Road, next to Sri Sathya Saw Mill, Sedarapet, Tamil Nadu 605111</span>
-                </div>
-                <div class="anbu-footer-info-item">
-                    <span class="anbu-footer-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    </span>
-                    <span><a href="tel:+919626325204">96263 25204</a> / <a href="tel:+919655551468">96555 51468</a></span>
-                </div>
-                <div class="anbu-footer-info-item">
-                    <span class="anbu-footer-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    </span>
-                    <span><a href="tel:04132980014">0413-2980014</a></span>
-                </div>
-                <div class="anbu-footer-info-item" style="margin-bottom: 0 !important;">
-                    <span class="anbu-footer-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </span>
-                    <span><a href="mailto:anbutraders1468@gmail.com">anbutraders1468@gmail.com</a></span>
-                </div>
-            </div>
-
-            <!-- Quick Links Column -->
-            <div class="anbu-footer-col">
-                <h5 class="anbu-footer-title">Quick Links</h5>
-                <div class="anbu-footer-links">
-                <a class="anbu-footer-link" href="../index.html">Main Home</a>
-                <a class="anbu-footer-link" href="index.html">Paints Home</a>
-                <a class="anbu-footer-link" href="asianpant.html">Asian Paints</a>
-                <a class="anbu-footer-link" href="burger.html">Berger Paints</a>
-                <a class="anbu-footer-link" href="jsw.html">JSW Paints</a>
-                <a class="anbu-footer-link" href="contact.html">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Business Hours Column -->
-            <div class="anbu-footer-col">
-                <h5 class="anbu-footer-title">Business Hours</h5>
-                <p class="anbu-footer-hours-day">Monday - Saturday</p>
-                <p class="anbu-footer-hours-time">08:00 am - 08:00 pm</p>
-                <p class="anbu-footer-hours-day">Sunday</p>
-                <p class="anbu-footer-hours-time" style="margin-bottom: 0 !important;">08:00 am - 02:30 pm</p>
-            </div>
-
-            <!-- Leave a Google Review Column -->
-            <div class="anbu-footer-col">
-                <h5 class="anbu-footer-title">Leave a Google Review</h5>
-                <p class="anbu-footer-review-text">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
-                <a href="https://www.google.com/maps/place/Anbu+Traders/@12.0011839,79.6992895,13z/data=!4m10!1m2!2m1!1sanbu+traders!3m6!1s0x3a53673c683b5d23:0xa33ec6770f905c31!8m2!3d12.0011839!4d79.7734468!15sCgxhbmJ1IHRyYWRlcnNaDiIMYW5idSB0cmFkZXJzkgEYYnVpbGRpbmdfbWF0ZXJpYWxzX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5mYWpGWk5XbFJSUkFC4AEA!16s%2Fg%2F11b6_csq4r?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="anbu-footer-review-cta">Leave a Review</a>
+    <!-- Copyright -->
+    <div class="anbu-unified-copyright">
+        <div class="anbu-footer-container">
+            <div class="anbu-copyright-inner">
+                <p>Copyright &copy; 2026 <a class="anbu-copyright-highlight" href="../index.html">Anbu Traders</a>. All Rights Reserved.</p>
+                <p>Proudly created with <a class="anbu-copyright-highlight" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a></p>
             </div>
         </div>
     </div>
-</footer>
-<!-- Footer End -->
-
-<!-- Copyright Start -->
-<div class="anbu-unified-copyright">
-    <div class="anbu-footer-container">
-        <div class="anbu-copyright-inner">
-            <p>Copyright &copy; 2026 <a class="anbu-copyright-highlight" href="../index.html">Anbu Traders</a>. All Rights Reserved.</p>
-            <p>Proudly created with <a class="anbu-copyright-highlight" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a></p>
-        </div>
-    </div>
-</div>
-<!-- Copyright End -->
 
     <!-- Bootstrap 5 Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Interactive Visualizer & Filter Script -->
+    <!-- Interactive Color Palette & Room Visualizer Script -->
     <script>
-        // Swatch Data
         const colorPalette = [
             {
                 name: "Crimson Royale",
-                code: "AP-8021 &bull; Asian Paints Royale Glitz",
+                code: "Asian Paints Royale Extra &bull; Code: AP-5027",
                 bg: "#8B1A1A",
-                desc: "A regal, warm statement hue that radiates luxury and opulence. Teflon surface protector shields against household stains.",
-                space: "Living Room Accent, Dining Wall",
+                desc: "A regal, warm statement hue that radiates luxury, warmth, and grandeur. Formulated with Teflon surface protector for effortless stain resistance.",
+                space: "Living Room, Accent, Dining Wall",
                 sheen: "Ultra-Sheen Matt / Silk Satin",
                 brand: "Asian Paints Royale Glitz",
-                tag: "LUXURY INTERIOR ACCENT"
+                tag: "LUXURY INTERIOR ACCENT",
+                img: "img/service-interior.jpg"
             },
             {
                 name: "Ocean Azure",
-                code: "BG-2045 &bull; Berger Silk Glamor",
+                code: "Berger Silk Glamor &bull; Code: BG-2045",
                 bg: "#10376B",
                 desc: "A deep nautical blue that promotes calm serenity and sophisticated architectural depth. Crystal pearl sheen bounces ambient lighting.",
                 space: "Master Bedroom, Study &amp; Library",
                 sheen: "Crystal Silk Sheen",
                 brand: "Berger Silk Glamor",
-                tag: "SERENE BEDROOM RETREAT"
+                tag: "SERENE BEDROOM RETREAT",
+                img: "img/room-elegant-blues.jpg"
             },
             {
                 name: "Emerald Forest",
-                code: "JSW-1048 &bull; JSW Halo Exceed",
+                code: "JSW Halo Exceed &bull; Code: JSW-1048",
                 bg: "#165B33",
                 desc: "Rich botanical green evoking lush natural sanctuary. Certified zero-VOC base ensures superior indoor air purity.",
                 space: "Balcony Lounge, Entry Foyer",
                 sheen: "Soft Eggshell Smooth",
                 brand: "JSW Halo Interior",
-                tag: "BOTANICAL LIVING"
+                tag: "BOTANICAL LIVING",
+                img: "paint/wall-textures.webp"
             },
             {
                 name: "Sunlight Amber",
-                code: "AP-7914 &bull; Asian Paints Royale",
+                code: "Asian Paints Royale &bull; Code: AP-7914",
                 bg: "#C47C06",
                 desc: "An invigorating golden hue reflecting Pondicherry's coastal morning sun. Creates a welcoming, energetic living space.",
                 space: "Living Hall, Kitchen Accent",
                 sheen: "Silken Glow",
                 brand: "Asian Paints Royale",
-                tag: "VIBRANT SOCIAL SPACES"
+                tag: "VIBRANT SOCIAL SPACES",
+                img: "img/room-vibrant-yellows.jpg"
             },
             {
                 name: "Terracotta Spice",
-                code: "BG-3120 &bull; Berger Luxol Gold",
+                code: "Berger Luxol Gold &bull; Code: BG-3120",
                 bg: "#9A3412",
                 desc: "Earthy artisan warmth inspired by traditional French quarter terracotta roof tiles and organic clay pottery.",
                 space: "Dining Area, Courtyard Corridor",
                 sheen: "Velvet Matt Finish",
                 brand: "Berger Silk Luxury",
-                tag: "EARTHY HERITAGE ACCENT"
+                tag: "EARTHY HERITAGE ACCENT",
+                img: "img/service-interior.jpg"
             },
             {
                 name: "Imperial Violet",
-                code: "JSW-9022 &bull; JSW Aurus Luxury",
+                code: "JSW Aurus Luxury &bull; Code: JSW-9022",
                 bg: "#581C87",
                 desc: "Dramatic deep amethyst tone with high light-absorption properties, creating an intimate, dramatic entertainment room.",
                 space: "Home Theatre, Master Headboard",
                 sheen: "Rich Satin Sheen",
                 brand: "JSW Aurus Luxury",
-                tag: "THEATRE &amp; LOUNGE ACCENT"
+                tag: "THEATRE &amp; LOUNGE ACCENT",
+                img: "paint/wall-textures.webp"
             },
             {
                 name: "Blush Rose",
-                code: "AP-5104 &bull; Asian Paints Tractor",
+                code: "Asian Paints Tractor &bull; Code: AP-5104",
                 bg: "#9D174D",
                 desc: "Delicate floral pink with subtle powdery undertones. Highly washable and child-friendly for playful interior bedrooms.",
                 space: "Daughter Bedroom, Powder Room",
                 sheen: "Soft Matt Washable",
                 brand: "Asian Paints Tractor Emulsion",
-                tag: "SOFT FLORAL NURSERY"
+                tag: "SOFT FLORAL NURSERY",
+                img: "img/service-interior.jpg"
             },
             {
                 name: "Nordic Platinum",
-                code: "BG-9100 &bull; Berger WeatherCoat",
+                code: "Berger WeatherCoat &bull; Code: BG-9100",
                 bg: "#334155",
                 desc: "Refined architectural steel gray for contemporary villas. Provides a neutral backdrop that highlights artwork and woodwork.",
                 space: "Exterior Facade, Modern Hall",
                 sheen: "All-Weather Matt",
                 brand: "Berger WeatherCoat LongLife",
-                tag: "MINIMALIST CONTEMPORARY"
+                tag: "MINIMALIST CONTEMPORARY",
+                img: "img/room-modern-neutrals.jpg"
             },
             {
                 name: "Hazelnut Mocha",
-                code: "BW-4011 &bull; Birla Wall Putty Base",
+                code: "Birla Wall Putty Base &bull; Code: BW-4011",
                 bg: "#542508",
                 desc: "Deep espresso warmth with organic grounding appeal. Pairs beautifully with teak woodwork and warm LED cove lights.",
                 space: "Executive Office, Dining Room",
                 sheen: "Deep Suede Matt",
                 brand: "Birla Putty &amp; Primer Base",
-                tag: "WARM EXECUTIVE SUITE"
+                tag: "WARM EXECUTIVE SUITE",
+                img: "img/service-interior.jpg"
             }
         ];
 
-        function selectColor(index) {
+        function pickColorMood(index) {
             const data = colorPalette[index];
             if (!data) return;
 
             // Highlight button
-            const buttons = document.querySelectorAll('.swatch-btn');
-            buttons.forEach((b, i) => {
-                if (i === index) b.classList.add('active');
-                else b.classList.remove('active');
+            const pills = document.querySelectorAll('.swatch-pill');
+            pills.forEach((p, i) => {
+                if (i === index) p.classList.add('active');
+                else p.classList.remove('active');
             });
 
-            // Update preview wall
-            const stage = document.getElementById('previewWallStage');
-            stage.style.backgroundColor = data.bg;
+            // Update Left Pane
+            const colorPane = document.getElementById('moodColorPane');
+            colorPane.style.backgroundColor = data.bg;
 
-            document.getElementById('previewWallCategory').innerHTML = '<i class="fa fa-sparkles me-1"></i> ' + data.tag;
-            document.getElementById('previewWallTitle').textContent = data.name;
-            document.getElementById('previewWallCode').innerHTML = data.code;
-            document.getElementById('previewWallDesc').textContent = data.desc;
+            document.getElementById('moodBadgeText').textContent = data.tag;
+            document.getElementById('moodTitle').textContent = data.name;
+            document.getElementById('moodCode').innerHTML = data.code;
+            document.getElementById('moodDesc').textContent = data.desc;
 
-            document.getElementById('previewSpace').textContent = data.space;
-            document.getElementById('previewSheen').textContent = data.sheen;
-            document.getElementById('previewBrand').textContent = data.brand;
+            // Update Right Pane Image & Tint
+            const roomImg = document.getElementById('moodRoomImg');
+            const tintOverlay = document.getElementById('moodTintOverlay');
+            roomImg.style.opacity = '0.3';
+            setTimeout(() => {
+                roomImg.src = data.img;
+                roomImg.style.opacity = '1';
+            }, 150);
+            tintOverlay.style.backgroundColor = data.bg;
 
+            // Update Bottom Meta Bar
+            document.getElementById('moodSuitedFor').innerHTML = data.space;
+            document.getElementById('moodSheenVal').innerHTML = data.sheen;
+            document.getElementById('moodBrandVal').innerHTML = data.brand;
+
+            // Update WhatsApp CTA URL
             const cleanName = encodeURIComponent(data.name);
             const cleanCode = encodeURIComponent(data.code.replace(/&bull;/g, '-'));
-            document.getElementById('previewWhatsappBtn').href = 'https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20the%20' + cleanName + '%20shade%20(' + cleanCode + ')%20previewed%20on%20your%20website.';
+            document.getElementById('moodWhatsappBtn').href = 'https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20the%20' + cleanName + '%20shade%20(' + cleanCode + ')%20previewed%20on%20your%20website.';
         }
 
-        // Gallery Filter
-        function filterGallery(category) {
-            const pills = document.querySelectorAll('.filter-pill');
-            pills.forEach(p => p.classList.remove('active'));
-            event.target.closest('.filter-pill').classList.add('active');
+        // Solutions Category Filter
+        function filterSolutions(cat) {
+            const btns = document.querySelectorAll('.solution-filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
 
-            const items = document.querySelectorAll('.gallery-item-wrap');
+            const items = document.querySelectorAll('.solution-item');
             items.forEach(item => {
-                if (category === 'all' || item.getAttribute('data-cat') === category) {
+                if (cat === 'all' || item.getAttribute('data-cat') === cat) {
                     item.style.display = 'block';
                     item.style.opacity = '0';
                     setTimeout(() => {
-                        item.style.transition = 'opacity 0.4s ease';
+                        item.style.transition = 'opacity 0.35s ease';
                         item.style.opacity = '1';
                     }, 20);
                 } else {
@@ -1760,7 +1909,7 @@
             });
         }
 
-        // Lightbox Modal
+        // Lightbox Modal Opener
         function openLightbox(imgSrc, title, tag, desc) {
             document.getElementById('lightboxImg').src = imgSrc;
             document.getElementById('lightboxTitle').textContent = title;
@@ -1773,52 +1922,9 @@
             const modal = new bootstrap.Modal(document.getElementById('galleryLightboxModal'));
             modal.show();
         }
-    </script>
 
-    <!-- Venom 3D Symbiote Liquid Button & Quote Form Script -->
-    <script src="assets/js/venom-button.js"></script>
-    <script>
+        // WhatsApp Quote Form Handler
         document.addEventListener('DOMContentLoaded', function () {
-            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
-            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
-                var sharedNavVenomAdv = {
-                    hover: 25,
-                    sense: 180,
-                    release: 140,
-                    strandWidth: 90,
-                    glint: 120,
-                    rim: 100,
-                    recoil: 80,
-                    spikes: 80,
-                    drops: 30
-                };
-
-                initVenomButton({
-                    stage: '#navVenomStage',
-                    btn: '#navVenomBtn',
-                    glCanvas: '#navVenomGlCanvas',
-                    handCanvas: '#navVenomHandCanvas',
-                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
-                    gooColor: '#EA580C',
-                    textColor: '#FFFFFF',
-                    shine: '#FFF5EB',
-                    size: 42,
-                    cursor: 'native',
-                    autoplay: false,
-                    hover: 25,
-                    reach: 110,
-                    advanced: sharedNavVenomAdv,
-                    onClick: function () {
-                        var modalEl = document.getElementById('quoteModal');
-                        if (modalEl && window.bootstrap && bootstrap.Modal) {
-                            var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-                            modal.show();
-                        }
-                    }
-                });
-            }
-
-            // WhatsApp Quote Form Handler
             var quoteForm = document.getElementById('quoteForm');
             if (quoteForm) {
                 quoteForm.addEventListener('submit', function (e) {

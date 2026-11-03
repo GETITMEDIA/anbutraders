@@ -135,18 +135,19 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: #FFFFFF !important;
-  margin-left: 8px;
-  font-size: 11px;
-  transition: var(--transition);
+  color: #CBD5E1 !important;
+  font-size: 14px;
+  margin-left: 14px;
+  background: transparent !important;
+  border-radius: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
 }
 
 .topbar-social-links a:hover {
-  background: var(--primary-orange);
+  color: var(--primary-orange) !important;
   transform: translateY(-2px);
 }
 
@@ -159,7 +160,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1030;
-  padding: 10px 0 !important;
+  padding: 8px 0 !important;
   overflow: visible !important;
   transition: var(--transition);
 }
@@ -180,32 +181,45 @@ a {
 }
 
 .anbu-brand-logo-img {
-  height: 52px;
+  height: 70px !important;
+  max-height: 72px;
   width: auto;
   object-fit: contain;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anbu-brand-logo-img:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 991px) {
+  .anbu-brand-logo-img {
+    height: 56px !important;
+  }
 }
 
 /* Navigation Links */
 .anbu-nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 6px !important;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .anbu-nav-link {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 14.5px;
+  font-family: var(--font-heading) !important;
+  font-weight: 600 !important;
+  font-size: 14.5px !important;
   color: var(--text-main) !important;
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  transition: var(--transition);
+  padding: 8px 16px !important;
+  border-radius: var(--radius-pill) !important;
+  transition: var(--transition) !important;
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  text-decoration: none !important;
 }
 
 .anbu-nav-link:hover,
