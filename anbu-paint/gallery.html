@@ -28,53 +28,291 @@
     <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.10">
 
     <style>
-        /* Hero Banner */
-        .gallery-hero-banner {
-            background: linear-gradient(135deg, #062B5B 0%, #0F172A 100%);
-            padding: 70px 0 60px 0;
-            color: #FFFFFF;
-            position: relative;
-            overflow: hidden;
+        :root {
+            --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --primary-navy: #071E3D;
+            --primary-orange: #EA580C;
+            --accent-cyan: #0284C7;
         }
-        .gallery-hero-banner::after {
-            content: '';
-            position: absolute;
-            bottom: -60px;
-            right: -60px;
-            width: 320px;
-            height: 320px;
-            background: radial-gradient(circle, rgba(234, 88, 12, 0.28) 0%, transparent 70%);
+
+        body {
+            background: #F8FAFC;
+            font-family: var(--font-body);
+            color: #0F172A;
+        }
+
+        /* ==============================================================
+           SPLIT CLEAR-IMAGE GALLERY HERO
+           Image is 100% clearly visible, crisp, vibrant, un-obscured!
+           ============================================================== */
+        .gallery-split-section {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+            padding: 60px 0 70px 0;
+            border-bottom: 1px solid #E2E8F0;
+            position: relative;
+        }
+
+        .gallery-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F0F9FF;
+            border: 1px solid rgba(2, 132, 199, 0.25);
+            color: #0284C7;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-family: var(--font-heading);
+            font-size: 11.5px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .pulse-dot-cyan {
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
+            background: #0284C7;
+            box-shadow: 0 0 8px #0284C7;
+            display: inline-block;
+            animation: pulseDotCyan 2s infinite;
+        }
+
+        @keyframes pulseDotCyan {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(0.85); opacity: 0.5; }
+        }
+
+        .gallery-title-dark {
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 3.8vw, 50px);
+            line-height: 1.15;
+            font-weight: 800;
+            color: #071E3D;
+            letter-spacing: -0.025em;
+            margin-bottom: 0;
+        }
+
+        .gallery-title-cyan {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4.2vw, 54px);
+            line-height: 1.12;
+            font-weight: 800;
+            color: #0284C7;
+            letter-spacing: -0.03em;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .gallery-accent-line {
+            width: 48px;
+            height: 3.5px;
+            background: #0284C7;
+            border-radius: 2px;
+            margin-bottom: 16px;
+        }
+
+        .gallery-clean-subtitle {
+            font-size: 15.5px;
+            font-weight: 500;
+            color: #475569;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-bottom: 24px;
+        }
+
+        .gallery-chips-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .gallery-chip-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #1E293B;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+        .gallery-chip-item i {
+            color: #0284C7;
+            font-size: 12px;
+        }
+
+        .gallery-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-gallery-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+            color: #FFFFFF !important;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 13px 28px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            box-shadow: 0 8px 24px rgba(2, 132, 199, 0.25);
+            transition: all 0.3s ease;
+        }
+        .btn-gallery-primary:hover {
+            background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(234, 88, 12, 0.35);
+        }
+
+        .btn-gallery-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFFFFF;
+            border: 1.5px solid #22C55E;
+            color: #15803D !important;
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.12);
+            transition: all 0.25s ease;
+        }
+        .btn-gallery-whatsapp:hover {
+            background: #22C55E;
+            color: #FFFFFF !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
+        }
+
+        /* 100% CLEAR, VISIBLE, VIBRANT IMAGE SHOWCASE */
+        .gallery-clear-showcase {
+            position: relative;
+            width: 100%;
+            height: 460px;
+            border-radius: 26px;
+            overflow: hidden;
+            border: 1px solid rgba(6, 43, 91, 0.1);
+            box-shadow: 0 25px 60px -15px rgba(6, 43, 91, 0.18), 0 0 0 1px rgba(0, 0, 0, 0.04);
+            background: #0B192C;
+        }
+
+        .gallery-clear-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .gallery-clear-showcase:hover .gallery-clear-img {
+            transform: scale(1.03);
+        }
+
+        .gallery-clear-caption {
+            position: absolute;
+            bottom: 0;
+            inset-inline: 0;
+            padding: 24px 24px 18px;
+            background: linear-gradient(180deg, transparent 0%, rgba(7, 30, 61, 0.85) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #FFFFFF;
             pointer-events: none;
         }
 
-        /* Color Visualizer Section */
+        .gallery-caption-title {
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 800;
+            color: #FFFFFF;
+            line-height: 1.2;
+        }
+
+        .gallery-caption-sub {
+            font-size: 11.5px;
+            color: #7DD3FC;
+            font-weight: 600;
+        }
+
+        .gallery-caption-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 5px 12px;
+            border-radius: 9999px;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .gallery-top-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 8px 16px;
+            border-radius: 9999px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 800;
+            color: #071E3D;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        /* COLOR VISUALIZER SECTION */
         .visualizer-section {
-            background: #F8FAFC;
-            padding: 70px 0;
+            background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+            padding: 80px 0;
             border-bottom: 1px solid #E2E8F0;
         }
+
         .swatch-picker-container {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             justify-content: center;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
+
         .swatch-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 10px 18px;
+            padding: 10px 20px;
             border-radius: 9999px;
             background: #FFFFFF;
             border: 2px solid #E2E8F0;
-            font-size: 14px;
+            font-family: var(--font-heading);
+            font-size: 13.5px;
             font-weight: 700;
             color: #1E293B;
             cursor: pointer;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         .swatch-btn:hover {
             transform: translateY(-2px);
@@ -92,21 +330,20 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.15);
+            box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7), 0 2px 5px rgba(0, 0, 0, 0.2);
             display: inline-block;
         }
 
-        /* Visualizer Room Preview Card */
         .preview-card {
             background: #FFFFFF;
-            border-radius: 24px;
+            border-radius: 28px;
             border: 1px solid #E2E8F0;
-            box-shadow: 0 20px 45px -15px rgba(6, 43, 91, 0.12);
+            box-shadow: 0 25px 60px -15px rgba(6, 43, 91, 0.14);
             overflow: hidden;
             transition: all 0.3s ease;
         }
         .preview-wall-stage {
-            height: 380px;
+            height: 420px;
             position: relative;
             display: flex;
             align-items: center;
@@ -117,7 +354,7 @@
         .preview-wall-vignette {
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.25) 0%, rgba(0, 0, 0, 0.38) 100%);
+            background: radial-gradient(circle at 50% 30%, rgba(255, 255, 255, 0.22) 0%, rgba(0, 0, 0, 0.42) 100%);
             pointer-events: none;
         }
         .preview-wall-content {
@@ -126,42 +363,52 @@
             text-align: center;
             color: #FFFFFF;
             padding: 30px;
-            max-width: 520px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            max-width: 580px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
         }
         .preview-wall-badge {
             display: inline-block;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(8px);
-            padding: 6px 16px;
+            -webkit-backdrop-filter: blur(8px);
+            padding: 6px 18px;
             border-radius: 9999px;
-            font-size: 13px;
+            font-size: 12.5px;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.6px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
-        .preview-wall-title {
-            font-family: var(--font-heading);
-            font-size: 34px;
+        #previewWallTitle,
+        .preview-wall-title,
+        .preview-wall-content h3 {
+            font-family: var(--font-heading) !important;
+            font-size: 38px;
             font-weight: 800;
+            color: #FFFFFF !important;
             margin-bottom: 8px;
             line-height: 1.2;
+            letter-spacing: -0.015em;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         .preview-wall-code {
-            font-size: 17px;
+            font-size: 16.5px;
             font-weight: 600;
-            opacity: 0.95;
-            margin-bottom: 14px;
+            color: #FED7AA !important;
+            margin-bottom: 16px;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
         }
         .preview-wall-desc {
-            font-size: 14.5px;
-            line-height: 1.6;
-            opacity: 0.9;
+            font-size: 15px;
+            line-height: 1.65;
+            color: #FFFFFF !important;
+            opacity: 0.95;
             margin-bottom: 0;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
         }
+
         .preview-details-bar {
-            padding: 24px 30px;
+            padding: 26px 36px;
             background: #FFFFFF;
             display: flex;
             flex-wrap: wrap;
@@ -172,103 +419,113 @@
         .preview-detail-item {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
         }
         .preview-detail-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: #F1F5F9;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: #FFF7ED;
             color: #EA580C;
+            border: 1px solid rgba(234, 88, 12, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 19px;
         }
 
-        /* Gallery Filter Pills */
+        /* GALLERY FILTER & CARDS */
         .gallery-filter-wrap {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
         .filter-pill {
-            background: #F1F5F9;
-            border: 1px solid #E2E8F0;
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
             color: #475569;
-            font-size: 14px;
+            font-family: var(--font-heading);
+            font-size: 13.5px;
             font-weight: 700;
             padding: 10px 22px;
             border-radius: 9999px;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
         }
         .filter-pill:hover {
-            background: #E2E8F0;
+            border-color: #CBD5E1;
             color: #0F172A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
         }
         .filter-pill.active {
-            background: #EA580C;
+            background: linear-gradient(135deg, #071E3D 0%, #0F2E52 100%);
+            border-color: #071E3D;
             color: #FFFFFF;
-            border-color: #EA580C;
-            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+            box-shadow: 0 6px 18px rgba(7, 30, 61, 0.25);
+            transform: translateY(-2px);
         }
 
-        /* Gallery Card */
         .gallery-card {
             background: #FFFFFF;
-            border-radius: 20px;
+            border-radius: 22px;
             overflow: hidden;
-            border: 1px solid #E2E8F0;
-            box-shadow: 0 10px 25px -5px rgba(6, 43, 91, 0.08);
+            border: 1px solid rgba(6, 43, 91, 0.08);
+            box-shadow: 0 10px 25px -5px rgba(6, 43, 91, 0.06);
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
         }
         .gallery-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 35px -10px rgba(6, 43, 91, 0.16);
-            border-color: #CBD5E1;
+            transform: translateY(-7px);
+            box-shadow: 0 24px 45px -10px rgba(6, 43, 91, 0.16);
+            border-color: rgba(2, 132, 199, 0.35);
         }
         .gallery-card-thumb {
-            height: 240px;
+            height: 250px;
             position: relative;
             overflow: hidden;
-            background: #0F172A;
+            background: #0B192C;
             cursor: pointer;
         }
         .gallery-card-thumb img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .gallery-card:hover .gallery-card-thumb img {
             transform: scale(1.08);
         }
+
         .gallery-brand-tag {
             position: absolute;
             top: 14px;
             left: 14px;
             padding: 6px 14px;
             border-radius: 9999px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             z-index: 2;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
-        .tag-asian { background: #E11D48; color: #FFFFFF; }
-        .tag-berger { background: #D97706; color: #FFFFFF; }
-        .tag-jsw { background: #059669; color: #FFFFFF; }
-        .tag-birla { background: #2563EB; color: #FFFFFF; }
-        .tag-depot { background: #475569; color: #FFFFFF; }
+        .tag-asian { background: rgba(225, 29, 72, 0.9); color: #FFFFFF; }
+        .tag-berger { background: rgba(217, 119, 6, 0.9); color: #FFFFFF; }
+        .tag-jsw { background: rgba(5, 150, 105, 0.9); color: #FFFFFF; }
+        .tag-birla { background: rgba(37, 99, 235, 0.9); color: #FFFFFF; }
+        .tag-depot { background: rgba(71, 85, 105, 0.9); color: #FFFFFF; }
 
         .gallery-card-body {
-            padding: 20px 22px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -276,69 +533,90 @@
         }
         .gallery-card-title {
             font-family: var(--font-heading);
-            font-size: 17px;
+            font-size: 17.5px;
             font-weight: 800;
             color: #0F172A;
-            margin-bottom: 6px;
-            line-height: 1.3;
+            margin-bottom: 8px;
+            line-height: 1.35;
+            transition: color 0.25s ease;
+        }
+        .gallery-card:hover .gallery-card-title {
+            color: #0284C7;
         }
         .gallery-card-desc {
             font-size: 13.5px;
             color: #64748B;
-            line-height: 1.5;
-            margin-bottom: 16px;
+            line-height: 1.55;
+            margin-bottom: 18px;
         }
         .gallery-card-footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-top: 14px;
+            padding-top: 16px;
             border-top: 1px solid #F1F5F9;
         }
 
-        /* Automated Tinting Dispenser Banner */
         .dispenser-banner {
-            background: linear-gradient(135deg, #0A2540 0%, #061B2E 100%);
-            border-radius: 24px;
-            padding: 50px 40px;
+            background: linear-gradient(135deg, #081E38 0%, #061528 100%);
+            border-radius: 28px;
+            padding: 55px 45px;
             color: #FFFFFF;
             position: relative;
             overflow: hidden;
             margin: 60px 0 20px 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 24px 50px -15px rgba(6, 43, 91, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 24px 50px -15px rgba(6, 43, 91, 0.35);
         }
         .dispenser-banner::after {
             content: '';
             position: absolute;
             top: -50px;
             right: -50px;
-            width: 260px;
-            height: 260px;
-            background: radial-gradient(circle, rgba(234, 88, 12, 0.35) 0%, transparent 70%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.28) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
         .feature-box {
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
-            padding: 22px;
-            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 18px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
         .feature-box:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.11);
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
         }
 
-        /* Lightbox modal */
         .lightbox-img {
             max-height: 75vh;
             width: 100%;
             object-fit: contain;
             background: #09131F;
-            border-radius: 12px;
+            border-radius: 14px;
+        }
+
+        @media (max-width: 991px) {
+            .gallery-split-section {
+                padding: 40px 0 50px 0;
+            }
+            .gallery-clear-showcase {
+                height: 280px;
+                margin-top: 30px;
+            }
+            .btn-gallery-primary, .btn-gallery-whatsapp {
+                width: 100%;
+                justify-content: center;
+            }
+            .preview-wall-stage { height: 320px; }
+            .preview-details-bar { padding: 20px; }
+            .dispenser-banner { padding: 35px 22px; }
         }
     </style>
 </head>
@@ -395,7 +673,7 @@
                     <img id="anbu-navbar-logo" src="img/paint logo.png" alt="AP Anbu Paints Logo" class="anbu-brand-logo-img">
                 </a>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links matching index.html exactly -->
                 <nav class="d-none d-lg-block" aria-label="Main Navigation">
                     <ul class="anbu-nav-links">
                         <li><a class="anbu-nav-link" href="index.html">Home</a></li>
@@ -413,27 +691,33 @@
                             </ul>
                         </li>
                         <li><a class="anbu-nav-link" href="index.html#servicepaint">Service</a></li>
-                        <li><a class="anbu-nav-link" href="ourproject.html">Our Projects</a></li>
+                        <li><a class="anbu-nav-link " href="ourproject.html">Our Projects</a></li>
                         <li><a class="anbu-nav-link active" href="gallery.html">Gallery</a></li>
-                        <li><a class="anbu-nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="anbu-nav-link " href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
 
-                <!-- Right Action Buttons -->
-                <div class="d-flex align-items-center gap-2">
-                    <a class="btn btn-outline-primary rounded-pill px-3 py-2 fw-bold d-none d-sm-inline-flex align-items-center" href="../index.html">
-                        <i class="fa fa-arrow-left me-1"></i> Main Site
-                    </a>
-                    <a class="btn btn-warning rounded-pill px-3 py-2 fw-bold d-inline-flex align-items-center text-dark" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20paint%20colors%20and%20finishes." target="_blank">
-                        <i class="fab fa-whatsapp me-1 text-success fs-5"></i> Enquiry
-                    </a>
-                    <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                    </button>
+                    <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars fs-3 text-dark"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Mobile Collapsible Menu -->
+            <!-- Mobile Collapsible Menu matching index.html exactly -->
             <div class="collapse navbar-collapse d-lg-none mt-3" id="anbuMobileNav">
                 <ul class="navbar-nav py-3 border-top">
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html">Home</a></li>
@@ -451,9 +735,9 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html#servicepaint">Service</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="ourproject.html">Our Projects</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="ourproject.html">Our Projects</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="contact.html">Contact</a></li>
                     <li class="nav-item pt-2">
                         <a class="btn btn-outline-primary w-100 mb-2" href="../index.html"><i class="fa fa-arrow-left me-1"></i> Back to Main Site</a>
                     </li>
@@ -463,26 +747,77 @@
     </header>
 
     <!-- ==============================================
-         3. HERO BANNER
+         3. SPLIT CLEAR-IMAGE GALLERY HERO
          ============================================== -->
-    <section class="gallery-hero-banner">
+    <section class="gallery-split-section">
         <div class="container-fluid px-lg-5 px-3">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-12">
-                    <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">
-                        <i class="fa fa-palette me-1"></i> COLOR &amp; FINISH VISUALIZER DEPOT
-                    </span>
-                    <h1 class="display-5 fw-bold mb-2">Paints, Finishes &amp; Color Gallery</h1>
-                    <p class="lead text-white-50 mb-0">Explore 10,000+ computerized color palettes, luxury wall finishes, weather-guard exterior emulsions, and authentic paint depot stock in Pondicherry.</p>
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <!-- Left: Clean Luxury Copy -->
+                <div class="col-lg-6 col-12">
+                    <div class="gallery-badge-pill">
+                        <span class="pulse-dot-cyan"></span>
+                        <span>10,000+ COMPUTERISED SHADES &bull; PONDICHERRY</span>
+                    </div>
+
+                    <h1 class="gallery-title-dark">Living Colour,</h1>
+                    <span class="gallery-title-cyan">Architectural Luxury</span>
+
+                    <div class="gallery-accent-line"></div>
+
+                    <p class="gallery-clean-subtitle">
+                        Explore 10,000+ computerized shades, Teflon-luster wall textures &amp; washable emulsions formulated with automated precision in 3 minutes.
+                    </p>
+
+                    <div class="gallery-chips-row">
+                        <div class="gallery-chip-item">
+                            <i class="fa fa-palette"></i>
+                            <span>10,000+ Shade Library</span>
+                        </div>
+                        <div class="gallery-chip-item">
+                            <i class="fa fa-cogs"></i>
+                            <span>3-Min Automated Tinting</span>
+                        </div>
+                        <div class="gallery-chip-item">
+                            <i class="fa fa-award"></i>
+                            <span>100% Genuine Brands</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-cta-row">
+                        <a href="#roomVisualizer" class="btn-gallery-primary">
+                            <span>Launch Room Visualizer</span>
+                            <i class="fa fa-magic ms-1"></i>
+                        </a>
+                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20request%20shade%20cards." target="_blank" rel="noopener noreferrer" class="btn-gallery-whatsapp">
+                            <i class="fab fa-whatsapp fs-5"></i>
+                            <span>Request Shade Card</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-lg-end mb-0">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
-                            <li class="breadcrumb-item active text-warning" aria-current="page">Gallery</li>
-                        </ol>
-                    </nav>
+
+                <!-- Right: 100% CLEAR, VISIBLE, VIBRANT IMAGE SHOWCASE -->
+                <div class="col-lg-6 col-12">
+                    <div class="gallery-clear-showcase">
+                        <img src="img/service-interior.jpg" alt="Luxury Living Room Interior Finish" class="gallery-clear-img">
+                        
+                        <div class="gallery-top-badge">
+                            <i class="fa fa-gem text-primary"></i>
+                            <span>Teflon Luster &bull; Anti-Bacterial</span>
+                        </div>
+
+                        <div class="gallery-clear-caption">
+                            <div>
+                                <div class="gallery-caption-title">Designer Living Room Suite</div>
+                                <div class="gallery-caption-sub">Royale Glitz &bull; Velvety Ultra-Washable Emulsion</div>
+                            </div>
+                            <div class="gallery-caption-badge">
+                                <i class="fa fa-paint-roller me-1"></i> 100% Genuine
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -490,7 +825,7 @@
     <!-- ==============================================
          4. INTERACTIVE LIVE COLOR & ROOM VISUALIZER
          ============================================== -->
-    <section class="visualizer-section">
+    <section class="visualizer-section" id="roomVisualizer">
         <div class="container-fluid px-lg-5 px-3">
             <div class="text-center max-w-700 mx-auto mb-4">
                 <span class="badge bg-primary bg-opacity-10 text-primary fw-bold px-3 py-1 rounded-pill mb-2">
@@ -549,7 +884,7 @@
                             <div class="preview-wall-vignette"></div>
                             <div class="preview-wall-content">
                                 <span class="preview-wall-badge" id="previewWallCategory"><i class="fa fa-sparkles me-1"></i> LUXURY INTERIOR ACCENT</span>
-                                <h3 class="preview-wall-title" id="previewWallTitle">Crimson Royale</h3>
+                                <h3 class="preview-wall-title" id="previewWallTitle" style="color: #FFFFFF !important;">Crimson Royale</h3>
                                 <div class="preview-wall-code" id="previewWallCode">Asian Paints Royale Glitz &bull; Code: AP-8021</div>
                                 <p class="preview-wall-desc" id="previewWallDesc">A regal, warm statement hue that radiates luxury, warmth, and opulence. Formulated with Teflon surface protector for effortless stain resistance.</p>
                             </div>
@@ -1132,6 +1467,55 @@
          8. FOOTER SECTION
          ============================================== -->
     <!-- Footer Start -->
+
+    <!-- ==============================================
+         QUOTATION MODAL (Get a Quote)
+         ============================================== -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0 pt-4 px-4">
+                    <div>
+                        <span class="section-eyebrow mb-1">ANBU PAINTS</span>
+                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #062B5B;">Request a Free Paint Quote</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Your Full Name</label>
+                            <input type="text" id="quoteName" class="form-control rounded-3" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Phone Number</label>
+                            <input type="tel" id="quotePhone" class="form-control rounded-3" placeholder="+91 96263 XXXXX" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Interested Paint Solution</label>
+                            <select id="quoteService" class="form-select rounded-3">
+                                <option value="Asian Paints Royale Luxury Emulsion">Asian Paints Royale Luxury Emulsion</option>
+                                <option value="Berger WeatherCoat Exterior Defense">Berger WeatherCoat Moisture Shield</option>
+                                <option value="JSW Pure Paints Zero VOC">JSW Pure Paints 100% Water Based</option>
+                                <option value="Scientific Waterproofing Solutions">Scientific Roof/Wall Waterproofing</option>
+                                <option value="Wall Textures &amp; Express Finishes">Designer Wall Textures &amp; Designs</option>
+                                <option value="Computerised Shade Mixing Consultation">Computerised Custom Shade Mixing</option>
+                                <option value="Wood Coating &amp; Metal Paints">Wood PU Polish &amp; Metal Coating</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Approx. Carpet Area (Optional)</label>
+                            <input type="text" id="quoteArea" class="form-control rounded-3" placeholder="e.g. 1200 sq.ft or 2 BHK">
+                        </div>
+                        <button type="submit" class="btn-get-quote w-100 justify-content-center py-3 fs-6">
+                            Send via WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <footer class="anbu-unified-footer">
     <div class="anbu-footer-container">
         <div class="anbu-footer-grid">
@@ -1390,6 +1774,81 @@
             modal.show();
         }
     </script>
+
+    <!-- Venom 3D Symbiote Liquid Button & Quote Form Script -->
+    <script src="assets/js/venom-button.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl && window.bootstrap && bootstrap.Modal) {
+                            var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
+            // WhatsApp Quote Form Handler
+            var quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = document.getElementById('quoteName').value.trim();
+                    var phone = document.getElementById('quotePhone').value.trim();
+                    var service = document.getElementById('quoteService').value;
+                    var area = document.getElementById('quoteArea') ? document.getElementById('quoteArea').value.trim() : '';
+
+                    var text = 'Hello Anbu Paints,\n\n' +
+                        'I would like to request a quotation:\n' +
+                        '- Name: ' + name + '\n' +
+                        '- Phone: ' + phone + '\n' +
+                        '- Service/Product: ' + service + '\n' +
+                        (area ? ('- Carpet Area: ' + area + '\n') : '') +
+                        '\nPlease share details and pricing estimate.';
+
+                    var waUrl = 'https://wa.me/9626325204?text=' + encodeURIComponent(text);
+                    window.open(waUrl, '_blank');
+
+                    var modalEl = document.getElementById('quoteModal');
+                    if (modalEl && window.bootstrap && bootstrap.Modal) {
+                        var modal = bootstrap.Modal.getInstance(modalEl);
+                        if (modal) modal.hide();
+                    }
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

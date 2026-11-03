@@ -381,20 +381,6 @@
          2-by-2 Grid • Expansive 62% Photo Area • Dynamic Curved Brush Stroke Cut
          ============================================== -->
     
-<!-- ==============================================
-     SVG MASK DEFS FOR EXPANSIVE ORGANIC BRUSH CURVE (92% PHOTO VISIBLE)
-     ============================================== -->
-<svg width="0" height="0" class="position-absolute" style="pointer-events: none;">
-  <defs>
-    <clipPath id="brushOrganicCurveWide" clipPathUnits="objectBoundingBox">
-      <path d="M 0.08,0 
-               C 0.02,0.18 0.01,0.42 0.06,0.68 
-               C 0.09,0.84 0.03,0.95 0.07,1 
-               L 1,1 L 1,0 Z" />
-    </clipPath>
-  </defs>
-</svg>
-
     <section class="services-section" id="servicepaint">
         <div class="container-fluid px-lg-5 px-3 position-relative" style="z-index: 2;">
             
@@ -409,329 +395,149 @@
                 </p>
             </div>
 
-            <!-- 2-by-2 Grid (col-lg-6) - Wide Photo Visibility & Refined Brush Curve -->
-            <div class="row g-4">
+            <!-- 2-by-2 Grid (col-6 on mobile, col-md-6 on desktop) -->
+            <div class="row services-grid-row">
                 
-                <!-- Card 01: Luxury Interior Painting (Orange Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-orange">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">01</div>
-                                <div class="ref-category">INTERIOR PAINTING</div>
-                                <h3 class="ref-title">Luxury Interior Painting</h3>
-                                <p class="ref-desc">
-                                    Give your interiors a premium look with smooth finishes and wide range of colour options.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-sparkles"></i> Smooth Finish</span>
-                                    <span class="ref-chip-item"><i class="fa fa-tint"></i> Low Odour</span>
-                                    <span class="ref-chip-item"><i class="fa fa-palette"></i> Wide Colour Range</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Luxury%20Interior%20Painting." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Get Free Estimate <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="gallery.html" class="ref-btn-circle" title="View Gallery">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 01: Luxury Interior -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-interior">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="img/service-interior.jpg" alt="Luxury Interior Painting" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#FF5A00" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#FF5A00" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#FFA000" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#FF5A00" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#FF5A00" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#FFA000" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#FF5A00" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#FF5A00" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#FF5A00" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#FFA000" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#FF5A00" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#FFA000" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#FF5A00" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="img/service-interior.jpg" alt="Luxury Interior Painting" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 01 &bull; INTERIORS
+                                </div>
+                                <h3 class="service-card-title">Luxury Interior</h3>
+                                <p class="service-card-desc">
+                                    Flawless dust-free finishes with velvety low-odour shades.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Luxury%20Interior%20Painting." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Get Estimate</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 02: Exterior Façade Painting (Navy Blue Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-blue">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">02</div>
-                                <div class="ref-category">EXTERIOR PAINTING</div>
-                                <h3 class="ref-title">Exterior Façade Painting</h3>
-                                <p class="ref-desc">
-                                    Long lasting protection against sun, rain and harsh weather conditions.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-sun"></i> UV Resistant</span>
-                                    <span class="ref-chip-item"><i class="fa fa-cloud-showers-heavy"></i> Weather Proof</span>
-                                    <span class="ref-chip-item"><i class="fa fa-shield-alt"></i> Long Life</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Exterior%20Facade%20Painting%20quote." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Get Free Estimate <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="ourproject.html" class="ref-btn-circle" title="View Completed Facades">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 02: Exterior Façade -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-exterior">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="img/service-exterior.jpg" alt="Exterior Façade Villa Painting" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#0052CC" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#0052CC" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#0052CC" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#0052CC" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#38BDF8" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#0052CC" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#0052CC" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#0052CC" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#38BDF8" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#0052CC" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#38BDF8" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#0052CC" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="img/service-exterior.jpg" alt="Exterior Façade Villa Painting" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 02 &bull; EXTERIORS
+                                </div>
+                                <h3 class="service-card-title">Exterior Façade</h3>
+                                <p class="service-card-desc">
+                                    All-weather UV shield resistant to sun, heavy rain &amp; fungus.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Exterior%20Facade%20Painting%20quote." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Get Estimate</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 03: Scientific Waterproofing (Green/Orange Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-green">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">03</div>
-                                <div class="ref-category">WATERPROOFING</div>
-                                <h3 class="ref-title">Scientific Waterproofing</h3>
-                                <p class="ref-desc">
-                                    Advanced 3-coat system to prevent leakage and protect your building for years.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-tint-slash"></i> 0% Leakage</span>
-                                    <span class="ref-chip-item"><i class="fa fa-temperature-high"></i> Heat Resistant</span>
-                                    <span class="ref-chip-item"><i class="fa fa-link"></i> Strong Bonding</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20wall%20dampness%20or%20leakage%20and%20need%20waterproofing." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Book a Site Check <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="contact.html" class="ref-btn-circle" title="Contact Us">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 03: Scientific Waterproofing -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-waterproofing">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="img/service-waterproofing.jpg" alt="Scientific Waterproofing" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#16A34A" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#16A34A" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#4ADE80" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#16A34A" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#4ADE80" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#16A34A" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#16A34A" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#16A34A" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#4ADE80" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#16A34A" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#4ADE80" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#16A34A" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="img/service-waterproofing.jpg" alt="Scientific Waterproofing" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 03 &bull; WATERPROOF
+                                </div>
+                                <h3 class="service-card-title">Waterproofing</h3>
+                                <p class="service-card-desc">
+                                    100% leak-proof multi-coat elastomeric seal with warranty.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20wall%20dampness%20or%20leakage%20and%20need%20waterproofing." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Site Check</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 04: Wall Textures & Stencils (Purple Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-purple">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">04</div>
-                                <div class="ref-category">DECORATIVE FINISHES</div>
-                                <h3 class="ref-title">Wall Textures &amp; Stencils</h3>
-                                <p class="ref-desc">
-                                    Transform your walls with premium textures, designer finishes and custom patterns.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-gem"></i> Premium Textures</span>
-                                    <span class="ref-chip-item"><i class="fa fa-magic"></i> Stylish Look</span>
-                                    <span class="ref-chip-item"><i class="fa fa-th-large"></i> Custom Designs</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Wall%20Textures%20and%20Stencils." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Explore Designs <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="gallery.html" class="ref-btn-circle" title="View Texture Gallery">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 04: Wall Textures & Stencils -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-textures">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="img/service-texture.jpg" alt="Wall Textures & Stencils" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#8B00CC" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#8B00CC" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#C084FC" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#8B00CC" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#8B00CC" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#C084FC" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#8B00CC" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#8B00CC" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#8B00CC" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#C084FC" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#8B00CC" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#C084FC" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#8B00CC" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="img/service-texture.jpg" alt="Wall Textures & Stencils" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 04 &bull; DECORATIVE
+                                </div>
+                                <h3 class="service-card-title">Wall Textures</h3>
+                                <p class="service-card-desc">
+                                    Designer metallic sheens, Venetian plaster &amp; custom art.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Wall%20Textures%20and%20Stencils." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Designs</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 05: Wood PU & Melamine Painting (Brown/Teak Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-brown">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">05</div>
-                                <div class="ref-category">WOOD COATINGS</div>
-                                <h3 class="ref-title">Wood PU &amp; Melamine Painting</h3>
-                                <p class="ref-desc">
-                                    Enhance wood surfaces with rich finish, long life and excellent scratch resistance.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-gem"></i> Rich Finish</span>
-                                    <span class="ref-chip-item"><i class="fa fa-shield-alt"></i> Scratch Resistant</span>
-                                    <span class="ref-chip-item"><i class="fa fa-clock"></i> Long Lasting</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Wood%20PU%20and%20Melamine%20Painting%20quote." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Get Quote <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="gallery.html" class="ref-btn-circle" title="View Wood Finishes">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 05: Wood PU & Melamine Painting -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-wood">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="paint/wood-coating.webp" alt="Wood PU & Melamine Painting" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#9A3412" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#9A3412" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#9A3412" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#9A3412" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#F59E0B" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#9A3412" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#9A3412" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#9A3412" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#F59E0B" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#9A3412" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#F59E0B" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#9A3412" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="paint/wood-coating.webp" alt="Wood PU & Melamine Painting" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 05 &bull; WOOD CRAFT
+                                </div>
+                                <h3 class="service-card-title">Wood PU Polish</h3>
+                                <p class="service-card-desc">
+                                    Scratch-resistant mirror finish enhancing timber grains.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Wood%20PU%20and%20Melamine%20Painting%20quote." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Get Quote</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 06: Zinc Chromate Primers & Coatings (Red Theme) -->
-                <div class="col-lg-6 col-12">
-                    <div class="ref-service-card card-theme-red">
-                        <div class="ref-card-left">
-                            <div>
-                                <div class="ref-num-badge">06</div>
-                                <div class="ref-category">METAL PROTECTION</div>
-                                <h3 class="ref-title">Zinc Chromate Primers &amp; Coatings</h3>
-                                <p class="ref-desc">
-                                    High performance coatings for metal surfaces with superior rust protection.
-                                </p>
-                                <div class="ref-chips-row">
-                                    <span class="ref-chip-item"><i class="fa fa-shield-virus"></i> Rust Proof</span>
-                                    <span class="ref-chip-item"><i class="fa fa-link"></i> Strong Adhesion</span>
-                                    <span class="ref-chip-item"><i class="fa fa-clock"></i> Long Life</span>
-                                </div>
-                            </div>
-                            <div class="ref-action-row">
-                                <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Zinc%20Chromate%20Primers%20and%20Coatings." target="_blank" rel="noopener noreferrer" class="ref-btn-primary">
-                                    Request Service <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="contact.html" class="ref-btn-circle" title="Contact Us">
-                                    <i class="fa fa-chevron-right"></i>
-                                </a>
-                            </div>
+                <!-- Card 06: Zinc Chromate Primers & Coatings -->
+                <div class="col-6 col-md-6 mb-2 mb-md-4">
+                    <div class="service-fade-card theme-metal">
+                        <div class="service-card-aura"></div>
+                        <div class="service-card-visual">
+                            <img src="paint/metalcoating (1).webp" alt="Zinc Chromate Primers & Coatings" class="service-card-img" loading="lazy">
                         </div>
-                        <div class="ref-card-right">
-                            <div class="ref-card-splash-aura"></div>
-                            <svg class="ref-brush-svg-overlay" viewBox="0 0 80 360" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <!-- Soft Paint Stroke Ribbon -->
-    <path d="M 18,0 C 8,45 4,110 12,185 C 20,260 10,315 16,360 L 32,360 C 26,315 36,260 28,185 C 20,110 24,45 32,0 Z" fill="#DC2626" fill-opacity="0.22"/>
-    <!-- Textured Dry Brush Lines -->
-    <path d="M 14,-5 C 5,50 2,115 10,190 C 18,255 7,318 14,365" stroke="#DC2626" stroke-width="5" stroke-linecap="round" stroke-dasharray="16 5 30 8 14 10" opacity="0.88"/>
-    <path d="M 18,-2 C 10,55 5,120 14,195 C 22,265 11,324 18,362" stroke="#F87171" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="24 10 18 8" opacity="0.9"/>
-    <path d="M 23,5 C 15,62 10,128 18,202 C 26,272 16,330 22,358" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="10 8 26 5" opacity="0.75"/>
-    <path d="M 10,25 C 3,75 0,135 7,208 C 14,278 4,335 11,350" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-dasharray="14 14" opacity="0.6"/>
-    <!-- Organic Paint Droplets -->
-    <circle cx="5" cy="48" r="2.8" fill="#DC2626" opacity="0.9"/>
-    <circle cx="2" cy="65" r="1.8" fill="#F87171" opacity="0.8"/>
-    <circle cx="8" cy="92" r="3.2" fill="#DC2626" opacity="0.85"/>
-    <circle cx="1" cy="115" r="1.5" fill="#DC2626" opacity="0.7"/>
-    <circle cx="9" cy="215" r="3" fill="#DC2626" opacity="0.85"/>
-    <circle cx="4" cy="240" r="2" fill="#F87171" opacity="0.9"/>
-    <circle cx="7" cy="285" r="2.5" fill="#DC2626" opacity="0.8"/>
-    <circle cx="2" cy="310" r="1.4" fill="#F87171" opacity="0.75"/>
-    <circle cx="8" cy="340" r="3" fill="#DC2626" opacity="0.85"/>
-  </svg>
-                            <div class="ref-card-photo-box">
-                                <img src="paint/metalcoating (1).webp" alt="Zinc Chromate Primers & Coatings" class="ref-card-photo" loading="lazy">
+                        <div class="service-card-body">
+                            <div>
+                                <div class="service-badge-pill">
+                                    <span class="service-badge-dot"></span> 06 &bull; METAL
+                                </div>
+                                <h3 class="service-card-title">Zinc Primers</h3>
+                                <p class="service-card-desc">
+                                    Anti-corrosive heavy-duty rust protection for gates &amp; grills.
+                                </p>
                             </div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20Zinc%20Chromate%20Primers%20and%20Coatings." target="_blank" rel="noopener noreferrer" class="service-card-cta">
+                                <span>Request</span> <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

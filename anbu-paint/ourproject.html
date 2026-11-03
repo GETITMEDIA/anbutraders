@@ -28,62 +28,827 @@
     <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.10">
 
     <style>
-        .projects-hero-banner {
-            background: linear-gradient(135deg, #062B5B 0%, #0F172A 100%);
-            padding: 70px 0 60px 0;
-            color: #FFFFFF;
+        :root {
+            --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --primary-navy: #071E3D;
+            --primary-orange: #EA580C;
+        }
+
+        body {
+            background: #F8FAFC;
+            font-family: var(--font-body);
+            color: #0F172A;
+        }
+
+                /* ==============================================================
+           EXACT REFERENCE ARCHITECTURAL HERO SECTION
+           Clean, Luxury, Two-Column, Dynamic Slanted Villa Frame & Badges
+           ============================================================== */
+        .hero-architectural-section {
             position: relative;
+            background: #FFFFFF;
+            padding: 55px 0 50px 0;
             overflow: hidden;
         }
-        .projects-hero-banner::after {
-            content: '';
+
+        /* Ambient Fluid Warm Glows (matching reference background) */
+        .hero-bg-fluid-left {
             position: absolute;
-            bottom: -60px;
-            right: -60px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(234, 88, 12, 0.28) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            left: 22%;
+            width: 600px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(254, 215, 170, 0.45) 0%, rgba(255, 247, 237, 0.2) 55%, transparent 75%);
+            filter: blur(55px);
             pointer-events: none;
+            z-index: 1;
         }
-        .stats-counter-strip {
-            background: #FFFFFF;
-            border-radius: 20px;
-            padding: 24px 30px;
-            box-shadow: 0 16px 40px -10px rgba(6, 43, 91, 0.12);
-            border: 1px solid rgba(6, 43, 91, 0.08);
-            margin-top: -35px;
-            position: relative;
-            z-index: 10;
+
+        .hero-bg-fluid-topright {
+            position: absolute;
+            top: -15%;
+            right: 2%;
+            width: 550px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(254, 215, 170, 0.38) 0%, transparent 70%);
+            filter: blur(65px);
+            pointer-events: none;
+            z-index: 1;
         }
-        .stat-item {
-            text-align: center;
-            border-right: 1px solid #E2E8F0;
+
+        .hero-bg-fluid-bottom {
+            position: absolute;
+            bottom: -20%;
+            right: 22%;
+            width: 650px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(254, 215, 170, 0.42) 0%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: 1;
         }
-        .stat-item:last-child {
-            border-right: none;
-        }
-        .stat-number {
+
+        /* Left Column Styles */
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            color: var(--primary-orange);
+            padding: 6px 16px;
+            border-radius: 9999px;
             font-family: var(--font-heading);
-            font-size: 32px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+        .hero-badge-check {
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .hero-title-dark {
+            font-family: var(--font-heading);
+            font-size: clamp(34px, 4.2vw, 54px);
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.12;
+            letter-spacing: -0.03em;
+            margin: 0;
+        }
+
+        .hero-title-orange {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 4.4vw, 56px);
             font-weight: 800;
             color: var(--primary-orange);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .hero-accent-bar {
+            width: 52px;
+            height: 3.5px;
+            background: var(--primary-orange);
+            border-radius: 2px;
+            margin: 16px 0 20px 0;
+        }
+
+        .hero-description {
+            font-size: 15px;
+            font-weight: 500;
+            color: #475569;
+            line-height: 1.6;
+            max-width: 480px;
+            margin-bottom: 26px;
+        }
+
+        /* Feature Highlight Cards (3-in-a-row) */
+        .hero-features-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .hero-feature-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFFFFF;
+            border: 1px solid #FFEDD5;
+            padding: 8px 14px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(234, 88, 12, 0.04);
+        }
+
+        .feature-icon-box {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-title {
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--primary-navy);
+            line-height: 1.15;
+        }
+
+        .feature-sub {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748B;
+            line-height: 1.15;
+            margin-top: 2px;
+        }
+
+        /* CTA Buttons */
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-explore-projects {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+            color: #FFFFFF !important;
+            font-family: var(--font-heading);
+            font-size: 14.5px;
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            box-shadow: 0 10px 24px rgba(234, 88, 12, 0.35);
+            transition: all 0.25s ease;
+        }
+        .btn-explore-projects:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(234, 88, 12, 0.45);
+        }
+
+        .btn-inspection-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #FFFFFF;
+            border: 1.5px solid #22C55E;
+            color: #071E3D !important;
+            font-family: var(--font-heading);
+            font-size: 14.5px;
+            font-weight: 700;
+            padding: 13px 26px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.12);
+            transition: all 0.25s ease;
+        }
+        .btn-inspection-whatsapp:hover {
+            background: #F0FDF4;
+            border-color: #16A34A;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
+        }
+
+        /* ==============================================================
+           RIGHT COLUMN: ARCHITECTURAL VILLA FRAME WITH ORANGE CONTOURS
+           Exact concentric alignment - no detached or skewed lines
+           ============================================================== */
+        .hero-villa-outer {
+            position: relative;
+            width: 100%;
+            max-width: 630px;
+            margin-left: auto;
+            padding: 10px 0 16px 16px;
+        }
+
+        /* The primary orange ribbon contour hugging the container */
+        .villa-ribbon-underlay {
+            position: absolute;
+            top: 4px;
+            bottom: 10px;
+            left: 10px;
+            width: 160px;
+            border-top: 5px solid #F97316;
+            border-left: 5px solid #F97316;
+            border-bottom: 5px solid #F97316;
+            border-right: none;
+            border-radius: 42px 0 0 42px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Secondary outer orange accent crescent hugging bottom-left */
+        .villa-ribbon-outer {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 120px;
+            height: 80px;
+            border-left: 5px solid #EA580C;
+            border-bottom: 5px solid #EA580C;
+            border-top: none;
+            border-right: none;
+            border-radius: 0 0 0 52px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Main Image Container with Seamless Concentric Rounded Corners */
+        .villa-frame-container {
+            position: relative;
+            width: 100%;
+            height: 510px;
+            border-radius: 36px 16px 16px 36px;
+            overflow: hidden;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 25px 60px -15px rgba(7, 30, 61, 0.22);
+            background: #0B192C;
+            z-index: 5;
+        }
+
+        /* Villa Images with 100% Crisp Architectural Presentation - Zero Ghosting */
+        .villa-frame-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            display: block;
+            transform: translateX(100%);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+            z-index: 1;
+        }
+
+        .villa-frame-img[data-index="0"] {
+            object-position: center 60%;
+        }
+
+        .villa-frame-img[data-index="1"] {
+            object-position: center center;
+        }
+
+        .villa-frame-img[data-index="2"] {
+            object-position: center 35%;
+        }
+
+        .villa-frame-img.active {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 2;
+        }
+
+        .villa-frame-img.prev {
+            transform: translateX(-100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        /* Prev / Next Navigation Arrows */
+        .villa-arrow-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            color: #071E3D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 8;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            opacity: 0.88;
+        }
+
+        .villa-arrow-btn:hover {
+            opacity: 1 !important;
+            background: #FFFFFF;
+            color: #EA580C;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 20px rgba(234, 88, 12, 0.25);
+        }
+
+        .villa-arrow-prev {
+            left: 20px;
+        }
+
+        .villa-arrow-next {
+            right: 20px;
+        }
+
+        /* 3-Image Interactive Thumbnail Switcher Dock (Clean Visual Dots - Zero Text) */
+        .hero-thumbs-dock {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(7, 30, 61, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            z-index: 12;
+            transition: all 0.3s ease;
+        }
+
+        .hero-thumb-dot {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            padding: 0;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            outline: none;
+        }
+
+        .hero-thumb-dot:hover:not(.active) {
+            transform: scale(1.1);
+            border-color: #FFFFFF;
+        }
+
+        .hero-thumb-dot.active {
+            border-color: #F97316;
+            transform: scale(1.18);
+            box-shadow: 0 0 14px rgba(249, 115, 22, 0.75);
+        }
+
+        .hero-thumb-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
+        /* ==============================================================
+           BOTTOM STATISTICS STRIP (Four Cards)
+           ============================================================== */
+        .hero-stats-bar {
+            background: #FFFFFF;
+            border-top: 1px solid #F1F5F9;
+            border-bottom: 1px solid #F1F5F9;
+            padding: 34px 0;
+            position: relative;
+            z-index: 20;
+        }
+
+        .stat-box-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 6px 20px;
+            border-right: 1px solid #E2E8F0;
+        }
+        .stat-box-card.no-border {
+            border-right: none;
+        }
+
+        .stat-icon-wrapper {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: #FFF7ED;
+            border: 1px solid #FFEDD5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .stat-number-text {
+            font-family: var(--font-heading);
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--primary-navy);
             line-height: 1;
             margin-bottom: 4px;
+            letter-spacing: -0.02em;
         }
-        .stat-label {
+
+        .stat-label-text {
             font-size: 13px;
-            color: #64748B;
             font-weight: 600;
+            color: #64748B;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 991px) {
+            .hero-architectural-section {
+                padding: 35px 0 40px;
+            }
+            .hero-villa-outer {
+                max-width: 100%;
+                margin-top: 25px;
+                padding: 8px 0 12px 10px;
+            }
+            .villa-frame-container {
+                height: 340px;
+                border-radius: 28px 12px 12px 28px;
+            }
+            .villa-ribbon-underlay {
+                top: 3px;
+                bottom: 8px;
+                left: 6px;
+                width: 130px;
+                border-radius: 34px 0 0 34px;
+            }
+            .villa-ribbon-outer {
+                width: 95px;
+                height: 60px;
+                border-radius: 0 0 0 42px;
+            }
+            .villa-arrow-btn {
+                opacity: 0.9;
+                width: 34px;
+                height: 34px;
+                transform: translateY(-50%);
+            }
+            .villa-arrow-prev {
+                left: 12px;
+            }
+            .villa-arrow-next {
+                right: 12px;
+            }
+            .hero-thumbs-dock {
+                bottom: 14px;
+                padding: 5px 12px;
+                gap: 8px;
+            }
+            .hero-thumb-dot {
+                width: 30px;
+                height: 30px;
+            }
+            .stat-box-card {
+                border-right: none;
+                padding: 10px 8px;
+            }
+            .stat-number-text {
+                font-size: 24px;
+            }
+            .stat-icon-wrapper {
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-thumbs-dock {
+                gap: 6px;
+                bottom: 12px;
+                padding: 4px 10px;
+            }
+            .hero-thumb-dot {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        /* PROJECTS SECTION & CARDS */
+        .projects-section {
+            padding: 70px 0;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: var(--primary-orange);
+            background: #FFF7ED;
+            border: 1px solid rgba(234, 88, 12, 0.2);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 34px;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: #64748B;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .project-filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 35px 0 45px 0;
+        }
+
+        .project-filter-btn {
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            color: #475569;
+            font-family: var(--font-heading);
+            font-size: 13.5px;
+            font-weight: 700;
+            padding: 10px 22px;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .project-filter-btn:hover {
+            border-color: #CBD5E1;
+            color: #0F172A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .project-filter-btn.active {
+            background: linear-gradient(135deg, #071E3D 0%, #0F2E52 100%);
+            border-color: #071E3D;
+            color: #FFFFFF;
+            box-shadow: 0 6px 18px rgba(7, 30, 61, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .project-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #E8EEF5;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 36px -8px rgba(7, 30, 61, 0.1);
+            border-color: #FDBA74;
+        }
+
+        .project-card-img-wrap {
+            position: relative;
+            width: 100%;
+            height: 255px;
+            overflow: hidden;
+            background: #F8FAFC;
+            cursor: pointer;
+        }
+
+        .project-card-img-wrap::after {
+            content: '\f00e';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #071E3D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .project-card:hover .project-card-img-wrap::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .project-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .project-card:hover .project-card-img {
+            transform: scale(1.06);
+        }
+
+        .project-card-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #071E3D;
+            padding: 5px 13px;
+            border-radius: 9999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .project-card-badge::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #EA580C;
+        }
+
+        .project-card-body {
+            padding: 18px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-card-category {
+            display: none;
+        }
+
+        .project-card-title {
+            font-family: var(--font-heading);
+            font-size: 16.5px;
+            font-weight: 700;
+            color: #071E3D;
+            margin-bottom: 6px;
+            line-height: 1.35;
+            transition: color 0.25s ease;
+        }
+
+        .project-card:hover .project-card-title {
+            color: #EA580C;
+        }
+
+        .project-card-loc {
+            font-size: 12.5px;
+            color: #64748B;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .project-card-footer {
+            margin-top: auto;
+            padding-top: 14px;
+            border-top: 1px solid #F1F5F9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .project-card-btn {
+            order: 2;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 700;
+            color: #16A34A;
+            background: #F0FDF4;
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .project-card-btn:hover {
+            background: #16A34A;
+            color: #FFFFFF;
+            border-color: #16A34A;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .brand-chip-pill {
+            order: 1;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            background: #F8FAFC;
+            color: #475569;
+            border: 1px solid #E2E8F0;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Project Modal Lightbox */
+        .project-modal-dialog {
+            max-width: 850px;
+        }
+        .project-modal-content {
+            background: #0B192C;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+            color: #FFFFFF;
         }
         .project-modal-img {
             width: 100%;
-            max-height: 75vh;
+            max-height: 65vh;
             object-fit: contain;
-            background: #0B192C;
-            border-radius: 12px;
+            background: #06111E;
+        }
+
+        @media (max-width: 991px) {
+            .hero-split-section {
+                padding: 40px 0 50px 0;
+            }
+            .hero-clear-showcase {
+                height: 280px;
+                margin-top: 30px;
+            }
+            .btn-hero-primary, .btn-hero-whatsapp {
+                width: 100%;
+                justify-content: center;
+            }
+            .stat-integrated-item {
+                border-right: none;
+            }
         }
     </style>
 </head>
@@ -137,7 +902,7 @@
                     <img id="anbu-navbar-logo" src="img/paint logo.png" alt="AP Anbu Paints Logo" class="anbu-brand-logo-img">
                 </a>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links matching index.html exactly -->
                 <nav class="d-none d-lg-block" aria-label="Main Navigation">
                     <ul class="anbu-nav-links">
                         <li><a class="anbu-nav-link" href="index.html">Home</a></li>
@@ -156,26 +921,32 @@
                         </li>
                         <li><a class="anbu-nav-link" href="index.html#servicepaint">Service</a></li>
                         <li><a class="anbu-nav-link active" href="ourproject.html">Our Projects</a></li>
-                        <li><a class="anbu-nav-link" href="gallery.html">Gallery</a></li>
-                        <li><a class="anbu-nav-link" href="contact.html">Contact</a></li>
+                        <li><a class="anbu-nav-link " href="gallery.html">Gallery</a></li>
+                        <li><a class="anbu-nav-link " href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
 
-                <!-- Right Action Buttons -->
-                <div class="d-flex align-items-center gap-2">
-                    <a class="btn btn-outline-primary rounded-pill px-3 py-2 fw-bold d-none d-sm-inline-flex align-items-center" href="../index.html">
-                        <i class="fa fa-arrow-left me-1"></i> Main Site
-                    </a>
-                    <a class="btn btn-warning rounded-pill px-3 py-2 fw-bold d-inline-flex align-items-center text-dark" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Paints." target="_blank">
-                        <i class="fab fa-whatsapp me-1 text-success fs-5"></i> Enquiry
-                    </a>
-                    <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                    </button>
+                    <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars fs-3 text-dark"></i>
                     </button>
                 </div>
             </div>
 
-            <!-- Mobile Collapsible Menu -->
+            <!-- Mobile Collapsible Menu matching index.html exactly -->
             <div class="collapse navbar-collapse d-lg-none mt-3" id="anbuMobileNav">
                 <ul class="navbar-nav py-3 border-top">
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html">Home</a></li>
@@ -194,8 +965,8 @@
                     </li>
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="index.html#servicepaint">Service</a></li>
                     <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 active" href="ourproject.html">Our Projects</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark py-2 " href="contact.html">Contact</a></li>
                     <li class="nav-item pt-2">
                         <a class="btn btn-outline-primary w-100 mb-2" href="../index.html"><i class="fa fa-arrow-left me-1"></i> Back to Main Site</a>
                     </li>
@@ -204,58 +975,227 @@
         </div>
     </header>
 
-    <!-- ==============================================
-         3. HERO BANNER
+        <!-- ==============================================
+         3. EXACT REFERENCE ARCHITECTURAL HERO
          ============================================== -->
-    <section class="projects-hero-banner">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-12">
-                    <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">
-                        <i class="fa fa-award me-1"></i> PORTFOLIO OF EXCELLENCE
-                    </span>
-                    <h1 class="display-5 fw-bold mb-2">Our Completed Projects</h1>
-                    <p class="lead text-white-50 mb-0">Discover landmark residential villas, high-rise facades, luxury interior spaces, and commercial buildings executed with genuine certified paints across Pondicherry &amp; Tamil Nadu.</p>
+    <section class="hero-architectural-section">
+        <!-- Ambient Fluid Warm Glows -->
+        <div class="hero-bg-fluid-left"></div>
+        <div class="hero-bg-fluid-topright"></div>
+        <div class="hero-bg-fluid-bottom"></div>
+
+        <div class="container-fluid px-lg-5 px-3 position-relative" style="z-index: 10;">
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <!-- Left Column: Copy, Features & CTAs -->
+                <div class="col-lg-6 col-12">
+                    <!-- Pill Badge -->
+                    <div class="hero-badge-pill">
+                        <span class="hero-badge-check">✓</span>
+                        <span>Verified Portfolio &bull; Pondicherry</span>
+                    </div>
+
+                    <!-- Grand Heading -->
+                    <h1 class="hero-title-dark">Crafted Spaces,</h1>
+                    <span class="hero-title-orange">Flawless Finishes</span>
+
+                    <!-- Orange Accent Bar -->
+                    <div class="hero-accent-bar"></div>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        Over 500+ landmark residential villas, high-rise facades &amp; luxury interior spaces completed with factory-genuine paints, sheets, pipes, cement and steel.
+                    </p>
+
+                    <!-- Feature Highlights (3 Cards) -->
+                    <div class="hero-features-row">
+                        <!-- Card 1 -->
+                        <div class="hero-feature-card">
+                            <div class="feature-icon-box">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="M9 12l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="feature-title">10-Yr</div>
+                                <div class="feature-sub">Weather Warranty</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="hero-feature-card">
+                            <div class="feature-icon-box">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="feature-title">Mechanized</div>
+                                <div class="feature-sub">Prep</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="hero-feature-card">
+                            <div class="feature-icon-box">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="feature-title">100%</div>
+                                <div class="feature-sub">Factory Direct</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#projectsGrid" class="btn-explore-projects">
+                            <span>Explore 15+ Projects</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20book%20a%20site%20inspection." target="_blank" rel="noopener noreferrer" class="btn-inspection-whatsapp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            <span>Book Site Inspection</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-12 mt-3 mt-lg-0 text-lg-end">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-lg-end mb-0">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
-                            <li class="breadcrumb-item active text-warning" aria-current="page">Our Projects</li>
-                        </ol>
-                    </nav>
+
+                <!-- Right Column: Luxury Architectural Villa Showcase -->
+                <div class="col-lg-6 col-12">
+                    <div class="hero-villa-outer">
+                        <!-- Double-Layer Decorative Orange Ribbon Contour -->
+                        <div class="villa-ribbon-outer"></div>
+                        <div class="villa-ribbon-underlay"></div>
+
+                        <!-- Main Image Container: 3-Image Showcase Slider -->
+                        <div class="villa-frame-container" id="heroVillaFrame">
+                            <!-- Slide 1: Villa Architecture Exterior -->
+                            <img src="img/service-exterior.jpg" alt="Luxury Architectural Villa Exterior" class="villa-frame-img active" data-index="0">
+                            <!-- Slide 2: Luxury Interior Showcase -->
+                            <img src="img/service-interior.jpg" alt="Luxury Heritage Living Suite Interior" class="villa-frame-img" data-index="1">
+                            <!-- Slide 3: Coastal Landmark Facade -->
+                            <img src="../completed sites/Paints/3.jpg" alt="Coastal WeatherProof Landmark Residence" class="villa-frame-img" data-index="2">
+
+                            <!-- Prev & Next Arrow Controls -->
+                            <button type="button" class="villa-arrow-btn villa-arrow-prev" onclick="prevHeroSlide()" aria-label="Previous Project Photo">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                            </button>
+                            <button type="button" class="villa-arrow-btn villa-arrow-next" onclick="nextHeroSlide()" aria-label="Next Project Photo">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                            </button>
+                        </div>
+
+                        <!-- 3-Image Interactive Visual Switcher Dock (Clean Visual Dots - Zero Text) -->
+                        <div class="hero-thumbs-dock" id="heroThumbsDock">
+                            <button type="button" class="hero-thumb-dot active" onclick="selectHeroSlide(0)" title="Villa Exterior Showcase" aria-label="Villa Exterior Photo">
+                                <img src="img/service-exterior.jpg" alt="Villa Exterior" class="hero-thumb-img">
+                            </button>
+                            <button type="button" class="hero-thumb-dot" onclick="selectHeroSlide(1)" title="Luxury Interior Showcase" aria-label="Luxury Interior Photo">
+                                <img src="img/service-interior.jpg" alt="Interior Luxury" class="hero-thumb-img">
+                            </button>
+                            <button type="button" class="hero-thumb-dot" onclick="selectHeroSlide(2)" title="Coastal Facade Showcase" aria-label="Coastal Facade Photo">
+                                <img src="../completed sites/Paints/3.jpg" alt="Coastal Facade" class="hero-thumb-img">
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- ==============================================
-         4. STATS COUNTER STRIP
+         4. BOTTOM STATISTICS STRIP (Four Cards)
          ============================================== -->
-    <div class="container-fluid px-lg-5 px-3">
-        <div class="stats-counter-strip">
+    <div class="hero-stats-bar">
+        <div class="container-fluid px-lg-5 px-3">
             <div class="row g-3 align-items-center">
-                <div class="col-md-3 col-6 stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Sites Completed</div>
+                <!-- Stat 1 -->
+                <div class="col-lg-3 col-6">
+                    <div class="stat-box-card">
+                        <div class="stat-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                                <line x1="15" y1="6" x2="15" y2="6.01"></line>
+                                <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                                <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                                <line x1="9" y1="14" x2="9" y2="14.01"></line>
+                                <line x1="15" y1="14" x2="15" y2="14.01"></line>
+                                <line x1="9" y1="18" x2="15" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number-text">500+</div>
+                            <div class="stat-label-text">Sites Completed</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6 stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Genuine Paint Brands</div>
+
+                <!-- Stat 2 -->
+                <div class="col-lg-3 col-6">
+                    <div class="stat-box-card">
+                        <div class="stat-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number-text">100%</div>
+                            <div class="stat-label-text">Genuine Factory Paints</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6 stat-item">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Expert Painting Crew</div>
+
+                <!-- Stat 3 -->
+                <div class="col-lg-3 col-6">
+                    <div class="stat-box-card">
+                        <div class="stat-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number-text">15+</div>
+                            <div class="stat-label-text">Master Craftsmen</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-6 stat-item">
-                    <div class="stat-number">11+</div>
-                    <div class="stat-label">Years of Trust</div>
+
+                <!-- Stat 4 -->
+                <div class="col-lg-3 col-6">
+                    <div class="stat-box-card no-border">
+                        <div class="stat-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="stat-number-text">11+</div>
+                            <div class="stat-label-text">Years of Trust</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ==============================================
+<!-- ==============================================
          5. PROJECTS PORTFOLIO SECTION
          ============================================== -->
     <section class="projects-section" style="padding-top: 60px;">
@@ -281,7 +1221,7 @@
                 <!-- Project 1 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Interior Luxury</span>
                             <img src="../completed sites/Paints/2.jpg" alt="White Town Heritage Villa Interior" class="project-card-img" loading="lazy">
                         </div>
@@ -293,9 +1233,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Interior%20Painting%20similar%20to%20your%20White%20Town%20Villa%20project." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Asian Paints</span>
+                                <span class="brand-chip-pill">Asian Paints</span>
                             </div>
                         </div>
                     </div>
@@ -304,7 +1244,7 @@
                 <!-- Project 2 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Exterior Protection</span>
                             <img src="../completed sites/Paints/3.jpg" alt="Coastal WeatherShield Residence" class="project-card-img" loading="lazy">
                         </div>
@@ -316,9 +1256,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20exterior%20weatherproof%20painting%20similar%20to%20your%20Kootroad%20project." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Berger Paints</span>
+                                <span class="brand-chip-pill">Berger Paints</span>
                             </div>
                         </div>
                     </div>
@@ -327,7 +1267,7 @@
                 <!-- Project 3 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="exterior commercial">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Commercial Facade</span>
                             <img src="../completed sites/Paints/4.jpg" alt="Modern Commercial Complex Facade" class="project-card-img" loading="lazy">
                         </div>
@@ -339,9 +1279,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20commercial%20building%20painting%20quote." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">JSW Pixa</span>
+                                <span class="brand-chip-pill">JSW Pixa</span>
                             </div>
                         </div>
                     </div>
@@ -350,7 +1290,7 @@
                 <!-- Project 4 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Luxury Sheen</span>
                             <img src="../completed sites/Paints/5.jpg" alt="Showroom High Sheen Paint Finish" class="project-card-img" loading="lazy">
                         </div>
@@ -362,9 +1302,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20High%20Sheen%20interior%20finishes." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Silk Glamor</span>
+                                <span class="brand-chip-pill">Silk Glamor</span>
                             </div>
                         </div>
                     </div>
@@ -373,7 +1313,7 @@
                 <!-- Project 5 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="berger exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Berger Specialist</span>
                             <img src="../completed sites/Paints/berger 1.jpg" alt="Berger WeatherShield Residence" class="project-card-img" loading="lazy">
                         </div>
@@ -385,9 +1325,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20Berger%20paints%20for%20my%20bungalow%20repainting." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Berger Exclusive</span>
+                                <span class="brand-chip-pill">Berger Exclusive</span>
                             </div>
                         </div>
                     </div>
@@ -396,7 +1336,7 @@
                 <!-- Project 6 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Computerized Tinting</span>
                             <img src="../completed sites/Paints/j 11.jpg" alt="Custom Accent Wall Finish" class="project-card-img" loading="lazy">
                         </div>
@@ -408,9 +1348,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20custom%20shade%20tinting%20for%20my%20living%20room." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Custom Tint</span>
+                                <span class="brand-chip-pill">Custom Tint</span>
                             </div>
                         </div>
                     </div>
@@ -419,7 +1359,7 @@
                 <!-- Project 7 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Interior Elegance</span>
                             <img src="../completed sites/Paints/j 2.jpg" alt="Living Hall Modern Finish" class="project-card-img" loading="lazy">
                         </div>
@@ -431,9 +1371,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20living%20room%20painting." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Asian Paints</span>
+                                <span class="brand-chip-pill">Asian Paints</span>
                             </div>
                         </div>
                     </div>
@@ -442,7 +1382,7 @@
                 <!-- Project 8 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Exterior Protection</span>
                             <img src="../completed sites/Paints/j 3.jpg" alt="Apartment Multi-Tier Exterior" class="project-card-img" loading="lazy">
                         </div>
@@ -454,9 +1394,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20exterior%20painting%20for%20multi-story%20building." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Berger WeatherCoat</span>
+                                <span class="brand-chip-pill">Berger WeatherCoat</span>
                             </div>
                         </div>
                     </div>
@@ -465,7 +1405,7 @@
                 <!-- Project 9 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="commercial">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Commercial</span>
                             <img src="../completed sites/Paints/j 4.jpg" alt="Commercial Corporate Building" class="project-card-img" loading="lazy">
                         </div>
@@ -477,9 +1417,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20corporate%20facility%20painting%20quote." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">High Durability</span>
+                                <span class="brand-chip-pill">High Durability</span>
                             </div>
                         </div>
                     </div>
@@ -488,7 +1428,7 @@
                 <!-- Project 10 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Restoration</span>
                             <img src="../completed sites/Paints/j 5.jpg" alt="Heritage Home Painting" class="project-card-img" loading="lazy">
                         </div>
@@ -500,9 +1440,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20have%20a%20renovation%20painting%20project." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Birla Putty + Apex</span>
+                                <span class="brand-chip-pill">Birla Putty + Apex</span>
                             </div>
                         </div>
                     </div>
@@ -511,7 +1451,7 @@
                 <!-- Project 11 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="commercial">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Showroom</span>
                             <img src="../completed sites/Paints/j 6.jpg" alt="Retail Showroom Painting" class="project-card-img" loading="lazy">
                         </div>
@@ -523,9 +1463,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20retail%20showroom%20painting." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">High Reflectance</span>
+                                <span class="brand-chip-pill">High Reflectance</span>
                             </div>
                         </div>
                     </div>
@@ -534,7 +1474,7 @@
                 <!-- Project 12 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Hospitality</span>
                             <img src="../completed sites/Paints/j 7.jpg" alt="Boutique Hotel Exterior" class="project-card-img" loading="lazy">
                         </div>
@@ -546,9 +1486,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20looking%20for%20hotel/resort%20painting." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">JSW Halo</span>
+                                <span class="brand-chip-pill">JSW Halo</span>
                             </div>
                         </div>
                     </div>
@@ -557,7 +1497,7 @@
                 <!-- Project 13 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Protective</span>
                             <img src="../completed sites/Paints/j 8.jpg" alt="Compound Wall & Gate Coating" class="project-card-img" loading="lazy">
                         </div>
@@ -569,9 +1509,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20crack-bridging%20exterior%20paint." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Elastomeric</span>
+                                <span class="brand-chip-pill">Elastomeric</span>
                             </div>
                         </div>
                     </div>
@@ -580,7 +1520,7 @@
                 <!-- Project 14 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="jsw exterior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">JSW Green Certified</span>
                             <img src="../completed sites/Paints/jsw.jpg" alt="JSW Eco-Friendly Villa Project" class="project-card-img" loading="lazy">
                         </div>
@@ -592,9 +1532,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20want%20JSW%20paints%20for%20my%20villa." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">JSW Exclusive</span>
+                                <span class="brand-chip-pill">JSW Exclusive</span>
                             </div>
                         </div>
                     </div>
@@ -603,7 +1543,7 @@
                 <!-- Project 15 -->
                 <div class="col-lg-4 col-md-6 col-12 project-item" data-category="interior">
                     <div class="project-card">
-                        <div class="project-card-img-wrap">
+                        <div class="project-card-img-wrap" onclick="handleCardClick(this)">
                             <span class="project-card-badge">Duplex Finish</span>
                             <img src="../completed sites/Paints/j 10.jpg" alt="Modern Duplex Residence" class="project-card-img" loading="lazy">
                         </div>
@@ -615,9 +1555,9 @@
                             </div>
                             <div class="project-card-footer">
                                 <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20duplex%20home%20painting." target="_blank" rel="noopener noreferrer" class="project-card-btn">
-                                    Enquire This Look <i class="fa fa-arrow-right"></i>
+                                    <i class="fab fa-whatsapp"></i> Enquire
                                 </a>
-                                <span class="badge bg-light text-secondary">Asian Paints</span>
+                                <span class="brand-chip-pill">Asian Paints</span>
                             </div>
                         </div>
                     </div>
@@ -626,39 +1566,60 @@
         </div>
     </section>
 
-    <!-- ==============================================
-         6. CONSULTATION CALL TO ACTION BANNER
-         ============================================== -->
-    <section class="py-5 bg-white">
-        <div class="container-fluid px-lg-5 px-3">
-            <div class="brand-cta-banner">
-                <div class="row align-items-center g-4">
-                    <div class="col-lg-8 col-12">
-                        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill mb-2">
-                            <i class="fa fa-paint-roller me-1"></i> FREE SITE ESTIMATE
-                        </span>
-                        <h2 class="display-6 fw-bold text-white mb-2">Plan Your Painting Project with Experts</h2>
-                        <p class="text-white-50 mb-0">Get computerized shade visualizer simulation, accurate paint liter calculation, and wholesale dealer rates for your upcoming project.</p>
-                    </div>
-                    <div class="col-lg-4 col-12 text-lg-end">
-                        <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-3">
-                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20a%20site%20visit%20and%20paint%20estimate." target="_blank" rel="noopener noreferrer" class="btn btn-warning fw-bold px-4 py-3 rounded-pill text-dark">
-                                <i class="fab fa-whatsapp me-1 text-success fs-5"></i> Chat on WhatsApp
-                            </a>
-                            <a href="tel:+919626325232" class="btn btn-outline-light fw-bold px-4 py-3 rounded-pill">
-                                <i class="fa fa-phone-alt me-1"></i> Call Specialist
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ==============================================
          7. UNIFIED FOOTER
          ============================================== -->
     <!-- Footer Start -->
+
+    <!-- ==============================================
+         QUOTATION MODAL (Get a Quote)
+         ============================================== -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0 pt-4 px-4">
+                    <div>
+                        <span class="section-eyebrow mb-1">ANBU PAINTS</span>
+                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #062B5B;">Request a Free Paint Quote</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Your Full Name</label>
+                            <input type="text" id="quoteName" class="form-control rounded-3" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Phone Number</label>
+                            <input type="tel" id="quotePhone" class="form-control rounded-3" placeholder="+91 96263 XXXXX" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Interested Paint Solution</label>
+                            <select id="quoteService" class="form-select rounded-3">
+                                <option value="Asian Paints Royale Luxury Emulsion">Asian Paints Royale Luxury Emulsion</option>
+                                <option value="Berger WeatherCoat Exterior Defense">Berger WeatherCoat Moisture Shield</option>
+                                <option value="JSW Pure Paints Zero VOC">JSW Pure Paints 100% Water Based</option>
+                                <option value="Scientific Waterproofing Solutions">Scientific Roof/Wall Waterproofing</option>
+                                <option value="Wall Textures &amp; Express Finishes">Designer Wall Textures &amp; Designs</option>
+                                <option value="Computerised Shade Mixing Consultation">Computerised Custom Shade Mixing</option>
+                                <option value="Wood Coating &amp; Metal Paints">Wood PU Polish &amp; Metal Coating</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Approx. Carpet Area (Optional)</label>
+                            <input type="text" id="quoteArea" class="form-control rounded-3" placeholder="e.g. 1200 sq.ft or 2 BHK">
+                        </div>
+                        <button type="submit" class="btn-get-quote w-100 justify-content-center py-3 fs-6">
+                            Send via WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <footer class="anbu-unified-footer">
     <div class="anbu-footer-container">
         <div class="anbu-footer-grid">
@@ -754,6 +1715,42 @@
 </div>
 <!-- Copyright End -->
 
+    
+    <!-- ==============================================
+         PROJECT LIGHTBOX MODAL
+         ============================================== -->
+    <div class="modal fade" id="projectLightboxModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered project-modal-dialog">
+            <div class="modal-content project-modal-content">
+                <div class="modal-header border-bottom border-secondary border-opacity-25 py-3 px-4">
+                    <div>
+                        <span class="badge bg-warning text-dark fw-bold px-3 py-1 rounded-pill mb-1" id="projectModalCategory">PORTFOLIO</span>
+                        <h4 class="modal-title fw-bold text-white mb-0" id="projectModalTitle" style="font-family: var(--font-heading);">Project Preview</h4>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="projectModalImg" src="" alt="Project Preview" class="project-modal-img">
+                    <div class="p-4" style="background: #081525;">
+                        <div class="d-flex align-items-center gap-2 text-warning mb-2" style="font-size: 13.5px;">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span id="projectModalLoc" class="text-white-50">Pondicherry</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-2 border-top border-secondary border-opacity-25">
+                            <div>
+                                <small class="text-white-50 d-block">Paint Specification</small>
+                                <span id="projectModalSpec" class="fw-bold text-white">Factory Genuine Emulsion</span>
+                            </div>
+                            <a id="projectModalWhatsappBtn" href="#" target="_blank" class="btn btn-warning rounded-pill px-4 py-2 fw-bold text-dark">
+                                <i class="fab fa-whatsapp me-1 text-success fs-5"></i> Inquire This Look
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Bootstrap 5 JS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script>
@@ -780,7 +1777,170 @@
                 });
             });
         });
-    </script>
-</body>
 
+        // Click handler to open HD project preview
+        function handleCardClick(elem) {
+            var card = elem.closest('.project-card');
+            if (!card) return;
+
+            var img = card.querySelector('.project-card-img');
+            var title = card.querySelector('.project-card-title');
+            var cat = card.querySelector('.project-card-category');
+            var loc = card.querySelector('.project-card-loc');
+            var brand = card.querySelector('.brand-chip-pill');
+
+            var imgSrc = img ? img.getAttribute('src') : '';
+            var titleText = title ? title.textContent.trim() : 'Completed Project';
+            var catText = cat ? cat.textContent.trim() : 'Project Showcase';
+            var locText = loc ? loc.textContent.trim() : 'Pondicherry';
+            var brandText = brand ? brand.textContent.trim() : 'Factory Genuine Paints';
+
+            document.getElementById('projectModalImg').src = imgSrc;
+            document.getElementById('projectModalTitle').textContent = titleText;
+            document.getElementById('projectModalCategory').textContent = catText;
+            document.getElementById('projectModalLoc').textContent = locText;
+            document.getElementById('projectModalSpec').textContent = brandText;
+
+            var waText = encodeURIComponent('Hello Anbu Paints, I saw your project "' + titleText + '" (' + locText + ') on your website and would like a quote for a similar painting work.');
+            document.getElementById('projectModalWhatsappBtn').href = 'https://wa.me/9626325204?text=' + waText;
+
+            var modal = new bootstrap.Modal(document.getElementById('projectLightboxModal'));
+            modal.show();
+        }
+
+        // Hero Villa 3-Image Showcase Slider
+        var heroSlideIndex = 0;
+        var heroSlideTimer = null;
+
+        function showHeroSlide(n) {
+            var slides = document.querySelectorAll('.villa-frame-container .villa-frame-img');
+            var thumbs = document.querySelectorAll('.hero-thumb-dot');
+            if (!slides.length) return;
+            var prevIndex = heroSlideIndex;
+            heroSlideIndex = (n + slides.length) % slides.length;
+            slides.forEach(function (slide, idx) {
+                slide.classList.remove('active', 'prev');
+                if (idx === heroSlideIndex) {
+                    slide.classList.add('active');
+                } else if (idx === prevIndex) {
+                    slide.classList.add('prev');
+                }
+            });
+            thumbs.forEach(function (thumb, idx) {
+                if (idx === heroSlideIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+
+        function nextHeroSlide() {
+            showHeroSlide(heroSlideIndex + 1);
+        }
+
+        function prevHeroSlide() {
+            showHeroSlide(heroSlideIndex - 1);
+        }
+
+        function selectHeroSlide(n) {
+            showHeroSlide(n);
+            restartHeroTimer();
+        }
+
+        function restartHeroTimer() {
+            if (heroSlideTimer) clearInterval(heroSlideTimer);
+            heroSlideTimer = setInterval(nextHeroSlide, 4500);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            restartHeroTimer();
+
+            var heroOuter = document.querySelector('.hero-villa-outer');
+            if (heroOuter) {
+                heroOuter.addEventListener('mouseenter', function () {
+                    if (heroSlideTimer) clearInterval(heroSlideTimer);
+                });
+                heroOuter.addEventListener('mouseleave', function () {
+                    restartHeroTimer();
+                });
+            }
+        });
+    </script>
+
+    <!-- Venom 3D Symbiote Liquid Button & Quote Form Script -->
+    <script src="assets/js/venom-button.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl && window.bootstrap && bootstrap.Modal) {
+                            var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
+            // WhatsApp Quote Form Handler
+            var quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = document.getElementById('quoteName').value.trim();
+                    var phone = document.getElementById('quotePhone').value.trim();
+                    var service = document.getElementById('quoteService').value;
+                    var area = document.getElementById('quoteArea') ? document.getElementById('quoteArea').value.trim() : '';
+
+                    var text = 'Hello Anbu Paints,\n\n' +
+                        'I would like to request a quotation:\n' +
+                        '- Name: ' + name + '\n' +
+                        '- Phone: ' + phone + '\n' +
+                        '- Service/Product: ' + service + '\n' +
+                        (area ? ('- Carpet Area: ' + area + '\n') : '') +
+                        '\nPlease share details and pricing estimate.';
+
+                    var waUrl = 'https://wa.me/9626325204?text=' + encodeURIComponent(text);
+                    window.open(waUrl, '_blank');
+
+                    var modalEl = document.getElementById('quoteModal');
+                    if (modalEl && window.bootstrap && bootstrap.Modal) {
+                        var modal = bootstrap.Modal.getInstance(modalEl);
+                        if (modal) modal.hide();
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
 </html>
