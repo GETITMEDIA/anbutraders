@@ -1,0 +1,1630 @@
+/* ==========================================================================
+   ANBU STEEL & CEMENT — PREMIUM 2026 REDESIGN SYSTEM
+   Preserves All Original Content with Elite Modern Industrial Design
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap');
+
+:root {
+  --c-navy-dark: #04142b;
+  --c-navy-main: #062b5b;
+  --c-navy-light: #0d3b75;
+  --c-navy-box: #062349;
+  --c-orange: #f36a21;
+  --c-orange-light: #ff7d3b;
+  --c-orange-glow: rgba(243, 106, 33, 0.4);
+  --c-bg: #f8fafc;
+  --c-surface: #ffffff;
+  --c-text-dark: #0f172a;
+  --c-text-muted: #64748b;
+  --c-border: #e2e8f0;
+
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --r-card: 20px;
+  --r-pill: 9999px;
+  --shadow-card: 0 10px 30px rgba(6, 43, 91, 0.08);
+  --shadow-hover: 0 20px 45px rgba(6, 43, 91, 0.16);
+  --t-normal: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Base Styling & Typography ── */
+body.light-version {
+  font-family: var(--font-body) !important;
+  color: var(--c-text-muted) !important;
+  background-color: var(--c-bg) !important;
+  line-height: 1.7 !important;
+  overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--c-navy-main) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* ── Top Bar (Signature Angled Style) ── */
+.anbu-topbar {
+  background: #02142b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13.5px;
+  color: #94a3b8;
+  padding: 0;
+  position: relative;
+  z-index: 1040;
+}
+
+.topbar-follow-label {
+  font-weight: 600;
+  color: #cbd5e1;
+  font-size: 13.5px;
+}
+
+.topbar-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  margin-left: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.topbar-social-links a:hover {
+  background: var(--c-orange);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.topbar-right {
+  position: relative;
+  background: var(--c-orange);
+  padding: 8px 36px 8px 28px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar-right::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 100%;
+  top: 0;
+  left: -16px;
+  transform: skewX(-30deg);
+  background-color: var(--c-orange);
+}
+
+.topbar-call-link {
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  transition: opacity 0.2s ease;
+}
+
+.topbar-call-link:hover {
+  opacity: 0.92;
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.topbar-call-link i {
+  animation: phoneRingPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes phoneRingPulse {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(-15deg); }
+  20%, 40% { transform: rotate(15deg); }
+  50% { transform: rotate(0deg); }
+}
+
+/* ── 1. Navbar Redesign (Signature Angled Brand Logo + Sleek Underline) ── */
+.navbar#banner {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(6, 43, 91, 0.08) !important;
+  padding: 0 !important;
+  min-height: 76px;
+  transition: all 0.3s ease !important;
+  z-index: 1030 !important;
+}
+
+.navbar#banner .navbar-brand {
+  position: relative;
+  padding-right: 50px;
+  padding-left: 15px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.navbar#banner .navbar-brand::after {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 100%;
+  top: 0;
+  right: -23px;
+  transform: skewX(-30deg);
+  background-color: var(--c-orange);
+  z-index: 1;
+}
+
+.navbar#banner .navbar-brand img.anbu-navbar-logo {
+  height: 64px !important;
+  width: auto !important;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.navbar#banner .navbar-brand:hover img.anbu-navbar-logo {
+  transform: scale(1.03);
+}
+
+/* Nav Links with Underline Indicator (Clean, No clumsy bubble) */
+.navbar-nav .nav-link {
+  font-family: var(--font-heading) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--c-navy-dark) !important;
+  padding: 26px 16px !important;
+  position: relative;
+  background: transparent !important;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  letter-spacing: 0.2px;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  height: 2.5px;
+  background: var(--c-orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--c-orange) !important;
+  background: transparent !important;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-item.active .nav-link::after {
+  transform: scaleX(1);
+}
+
+/* Call Button in Navbar */
+.btn-call-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--c-orange);
+  color: var(--c-orange) !important;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 8px 18px;
+  background: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-call-nav:hover {
+  background: var(--c-orange);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(243, 106, 33, 0.35);
+  text-decoration: none;
+}
+
+.btn-call-nav i {
+  animation: phoneRingPulse 2.8s infinite ease-in-out;
+}
+
+/* Portal Button (Back to Main Site) */
+.anbu-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: var(--c-navy-main);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.anbu-portal-btn:hover {
+  background: var(--c-navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(6, 43, 91, 0.25);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* WhatsApp Enquiry Button */
+.anbu-enquiry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 22px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--c-orange) 0%, var(--c-orange-light) 100%);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.38);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.anbu-enquiry-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(243, 106, 33, 0.55);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+/* Mobile Quick Call Button */
+.btn-call-mobile {
+  width: 40px;
+  height: 40px;
+  background: var(--c-orange);
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(243, 106, 33, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn-call-mobile:hover {
+  color: #ffffff !important;
+}
+
+/* ── 2. Hero Section (Bright Cinematic Daylight Depot + White Card) ── */
+.hero-section {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background: #f1f5f9 url('../img/cement_hero_cinematic.jpg') no-repeat center center / cover !important;
+  padding: 120px 0 80px !important;
+  overflow: hidden;
+}
+
+/* Subtle, soft natural gradient so image remains bright, crisp and visible */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  ) !important;
+  z-index: 1;
+}
+
+.hero-section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* White Hero Content Card (Loved by User) */
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 40px 42px;
+  box-shadow: 0 25px 60px rgba(4, 20, 43, 0.18), 0 0 0 1px rgba(226, 232, 240, 0.8);
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff4ec;
+  border: 1px solid #ffd8bf;
+  color: #d45209;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+  margin-bottom: 20px;
+}
+
+.hero-glass-card h1 {
+  font-size: clamp(2rem, 3.2vw, 2.85rem) !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-dark) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.03em !important;
+  margin-bottom: 18px !important;
+}
+
+.hero-glass-card h1 span.highlight-orange {
+  color: var(--c-orange) !important;
+  position: relative;
+}
+
+.hero-glass-card p.g-text {
+  font-size: 15px !important;
+  color: #475569 !important;
+  line-height: 1.7 !important;
+  margin-bottom: 24px !important;
+}
+
+/* Authorized Brand Chips */
+.hero-brand-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.hero-brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--r-pill);
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--c-navy-main);
+}
+
+.hero-brand-chip i {
+  color: var(--c-orange);
+  font-size: 10px;
+}
+
+/* CTA buttons inside Hero */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-hero-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--c-orange), var(--c-orange-light));
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0 8px 24px rgba(243, 106, 33, 0.35);
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.btn-hero-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(243, 106, 33, 0.45);
+  color: #fff !important;
+}
+
+.btn-hero-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: var(--r-pill);
+  background: #25d366;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.btn-hero-whatsapp:hover {
+  background: #20ba59;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.42);
+  color: #fff !important;
+}
+
+.btn-hero-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--r-pill);
+  background: #ffffff;
+  color: var(--c-navy-main) !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  border: 1.5px solid var(--c-border);
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.btn-hero-phone:hover {
+  border-color: var(--c-navy-main);
+  background: var(--c-navy-main);
+  color: #ffffff !important;
+}
+
+/* Floating Quality Badge on the Hero right */
+.hero-floating-spec {
+  background: rgba(4, 20, 43, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 24px;
+  color: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.hero-floating-spec h4 {
+  color: #ffffff !important;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.hero-floating-spec p {
+  color: #cbd5e1;
+  font-size: 13.5px;
+  margin-bottom: 16px;
+}
+
+/* ── 3. Our Services Area ── */
+.our_services_area {
+  padding: 90px 0 70px !important;
+  background: #ffffff;
+}
+
+.section-heading .more-dots .gradient-text.blue {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1 !important;
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  margin-bottom: 16px !important;
+}
+
+.section-heading p {
+  max-width: 780px;
+  margin: 0 auto 50px !important;
+  font-size: 16px !important;
+  color: var(--c-text-muted) !important;
+  line-height: 1.7 !important;
+}
+
+.service_single_content {
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 42px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: var(--t-normal);
+}
+
+.service_single_content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--c-orange), var(--c-navy-main));
+  opacity: 0;
+  transition: var(--t-normal);
+}
+
+.service_single_content:hover::before {
+  opacity: 1;
+}
+
+.service_single_content:hover {
+  transform: translateY(-8px);
+  border-color: rgba(243, 106, 33, 0.4);
+  box-shadow: var(--shadow-hover);
+}
+
+.service_icon {
+  width: 82px;
+  height: 82px;
+  border-radius: 20px;
+  background: #fff4ec;
+  border: 1px solid #ffd8bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--t-normal);
+}
+
+.service_single_content:hover .service_icon {
+  background: linear-gradient(135deg, var(--c-orange), var(--c-orange-light));
+  transform: scale(1.08) rotate(4deg);
+}
+
+.service_icon img {
+  width: 44px;
+  height: auto;
+  transition: var(--t-normal);
+}
+
+.service_single_content:hover .service_icon img {
+  filter: brightness(0) invert(1);
+}
+
+.service_single_content h6 {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  margin-bottom: 14px !important;
+}
+
+.service_single_content p {
+  font-size: 14.5px !important;
+  color: var(--c-text-muted) !important;
+  line-height: 1.65 !important;
+  margin-bottom: 20px !important;
+}
+
+.service_action_btn {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--c-orange);
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.service_action_btn:hover {
+  color: var(--c-navy-dark);
+  gap: 10px;
+}
+
+/* ── 4. Call Us / Quote Strip ── */
+.con-info {
+  padding: 30px 0 70px !important;
+  background: #ffffff;
+}
+
+.call-us-sec {
+  background: linear-gradient(135deg, #04142b 0%, #062b5b 100%) !important;
+  border-radius: 24px;
+  padding: 45px 50px !important;
+  box-shadow: 0 20px 45px rgba(4, 20, 43, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.call-us-sec::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(243, 106, 33, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.quote-subtitle {
+  color: #ffa56e !important;
+  font-family: var(--font-heading) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px !important;
+}
+
+.quote-title {
+  color: #ffffff !important;
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem) !important;
+  font-weight: 800 !important;
+  margin-bottom: 0 !important;
+}
+
+.call-us-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.call-us-sec .btn.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--c-orange), var(--c-orange-light));
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.4);
+  transition: var(--t-normal);
+}
+
+.call-us-sec .btn.more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 106, 33, 0.55);
+}
+
+.call-us-sec .btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--r-pill);
+  background: #25d366;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.call-us-sec .btn-wa:hover {
+  background: #20ba59;
+  transform: translateY(-2px);
+}
+
+/* ── 5. About Us Area ── */
+.about-us-area {
+  padding: 90px 0 !important;
+  background: #f8fafc;
+}
+
+.about-img-wrapper {
+  position: relative;
+}
+
+.about-img-wrapper img {
+  border-radius: var(--r-card);
+  box-shadow: 0 20px 45px rgba(6, 43, 91, 0.14);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  border-radius: 18px;
+  padding: 16px 22px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.about-floating-badge .badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff4ec;
+  color: var(--c-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.about-floating-badge .badge-num {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--c-navy-main);
+  line-height: 1.1;
+}
+
+.about-floating-badge .badge-lbl {
+  font-size: 12px;
+  color: var(--c-text-muted);
+  font-weight: 600;
+}
+
+.who-we-contant .more-dots .gradient-text.blue {
+  display: inline-block;
+  background: #fff4ec;
+  color: var(--c-orange) !important;
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: var(--r-pill);
+  margin-bottom: 12px;
+}
+
+.who-we-contant h4.bold {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem) !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 18px !important;
+}
+
+.who-we-contant p {
+  color: var(--c-text-muted) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  margin-bottom: 24px !important;
+}
+
+.side-feature-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: var(--t-normal);
+}
+
+.side-feature-list-item:hover {
+  transform: translateX(4px);
+  border-color: var(--c-orange);
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.12);
+}
+
+.side-feature-list-item i.check-mark-icon-font {
+  color: var(--c-orange) !important;
+  font-size: 16px !important;
+}
+
+.foot-c-info {
+  font-family: var(--font-heading);
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: var(--c-navy-dark) !important;
+}
+
+.who-we-contant .btn.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--r-pill);
+  background: var(--c-navy-main);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.who-we-contant .btn.more-btn:hover {
+  background: var(--c-orange);
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+/* ── 6. Creative Facts (Why Choose Anbu Traders) ── */
+.creative-facts {
+  padding: 100px 0 !important;
+  background: #04142b url('../img/tmt_steel_closeup.jpg') no-repeat center center / cover !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-facts::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(4, 20, 43, 0.94) 0%,
+    rgba(6, 43, 91, 0.9) 60%,
+    rgba(4, 20, 43, 0.94) 100%
+  ) !important;
+  z-index: 1;
+}
+
+.creative-facts .container {
+  position: relative;
+  z-index: 2;
+}
+
+.creative-facts-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.creative-facts .who-we-contant.contera h4.w-text {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin-bottom: 20px !important;
+}
+
+.creative-facts .who-we-contant.contera p.w-text {
+  color: #cbd5e1 !important;
+  font-size: 15.5px !important;
+  line-height: 1.75 !important;
+  margin-bottom: 18px !important;
+}
+
+.creative-facts .btn.more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--c-orange), var(--c-orange-light));
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.4);
+  transition: var(--t-normal);
+}
+
+.creative-facts .btn.more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 106, 33, 0.55);
+}
+
+/* ── 7. Fun Facts / Our Numbers (Beloved Floating Glowing Navy Box) ── */
+.about-us-area.features.hos-sec-1 {
+  padding: 90px 0 !important;
+  background: #ffffff !important;
+}
+
+.hos-sec-1 .section-heading h2.w-text {
+  color: var(--c-navy-main) !important;
+}
+
+.hos-sec-1 .section-heading p.g-text {
+  color: var(--c-text-muted) !important;
+}
+
+/* Unified floating dark-navy container with glowing border (As praised by user) */
+.anbu-stats-container {
+  background: var(--c-navy-box);
+  border: 1.5px solid rgba(243, 106, 33, 0.45);
+  border-radius: 24px;
+  padding: 38px 24px;
+  box-shadow: 0 10px 40px rgba(243, 106, 33, 0.25), 0 20px 50px rgba(4, 20, 43, 0.35);
+  margin-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 10px;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.stat-icon {
+  font-size: 24px;
+  color: var(--c-orange);
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── 8. Clients Testimonials Area ── */
+.clients_testimonials_area {
+  padding: 80px 0 100px !important;
+  background: #f8fafc !important;
+}
+
+.single-testimonial {
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 34px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transition: var(--t-normal);
+}
+
+.single-testimonial:hover {
+  transform: translateY(-6px);
+  border-color: rgba(243, 106, 33, 0.4);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial-rating {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.testimonial_text p {
+  font-size: 15px !important;
+  color: #334155 !important;
+  line-height: 1.7 !important;
+  font-style: normal;
+  margin-bottom: 24px !important;
+}
+
+.testimonial-client {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial_image img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--c-orange);
+}
+
+.admin_text h5 {
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  margin-bottom: 2px !important;
+}
+
+.admin_text p {
+  font-size: 13px !important;
+  color: var(--c-text-muted) !important;
+  margin-bottom: 0 !important;
+}
+
+/* ── 9. Curved Footer Transition & Footer Area ── */
+.footer-curved-transition {
+  line-height: 0;
+  background: #f8fafc;
+}
+
+.footer-curved-transition svg {
+  display: block;
+  width: 100%;
+  height: 55px;
+}
+
+footer.footer-area {
+  background: #020c1a !important;
+  color: #94a3b8 !important;
+  padding: 50px 0 25px !important;
+  border-top: none;
+}
+
+footer.footer-area .footer-logo-box {
+  background: #ffffff;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+footer.footer-area .footer-logo-box img {
+  height: 48px;
+  width: auto;
+}
+
+footer.footer-area h5 {
+  color: #ffffff !important;
+  font-size: 0.98rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 18px !important;
+  letter-spacing: 0.5px;
+}
+
+footer.footer-area p {
+  color: #94a3b8 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.65 !important;
+}
+
+footer.footer-area a {
+  color: #cbd5e1 !important;
+  text-decoration: none;
+  transition: var(--t-normal);
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+}
+
+footer.footer-area a:hover {
+  color: var(--c-orange) !important;
+  transform: translateX(3px);
+}
+
+.footer-social-info {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.footer-social-info a {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  margin-bottom: 0 !important;
+  transition: var(--t-normal);
+}
+
+.footer-social-info a:hover {
+  background: var(--c-orange);
+  transform: translateY(-3px);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.footer-bottom-bar a {
+  color: var(--c-orange);
+  display: inline;
+}
+
+/* ── 10. Floating Actions (WhatsApp & Back to Top) ── */
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floating-whatsapp {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  color: #ffffff;
+}
+
+.back-to-top {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-orange);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.4);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: var(--t-normal);
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* ── Responsive Refinements ── */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 110px 0 60px !important;
+  }
+  .hero-glass-card {
+    padding: 28px 24px;
+  }
+  .navbar-nav {
+    padding: 16px 0;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px 14px !important;
+  }
+  .anbu-nav-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+  .stat-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+  }
+  .call-us-sec {
+    padding: 30px 24px !important;
+  }
+  .call-us-actions {
+    margin-top: 18px;
+  }
+  .about-floating-badge {
+    position: static;
+    margin-top: 18px;
+  }
+}
+
+/* ==========================================================================
+   INNER PAGES DESIGN SYSTEM (About, Services, Projects, Contact)
+   ========================================================================== */
+
+/* ── Inner Page Hero Banner ── */
+.anbu-page-hero {
+  position: relative;
+  background: #04142b url('../img/tmt_steel_closeup.jpg') no-repeat center center / cover;
+  padding: 95px 0 65px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.anbu-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(4, 20, 43, 0.94) 0%,
+    rgba(6, 43, 91, 0.9) 50%,
+    rgba(4, 20, 43, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+.anbu-page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.anbu-page-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(243, 106, 33, 0.18);
+  border: 1px solid rgba(243, 106, 33, 0.45);
+  color: #ffa56e;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 16px;
+  border-radius: var(--r-pill);
+  margin-bottom: 16px;
+}
+
+.anbu-page-hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem) !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+  margin-bottom: 14px !important;
+  letter-spacing: -0.025em;
+}
+
+.anbu-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 18px;
+  border-radius: var(--r-pill);
+  font-size: 13.5px;
+  color: #cbd5e1;
+}
+
+.anbu-breadcrumb a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: var(--t-normal);
+}
+
+.anbu-breadcrumb a:hover {
+  color: var(--c-orange);
+}
+
+.anbu-breadcrumb .sep {
+  color: var(--c-orange);
+}
+
+.anbu-breadcrumb .current {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ── Project Gallery (ourprojectcement.html) ── */
+.anbu-gallery-section {
+  padding: 85px 0 100px;
+  background: #f8fafc;
+}
+
+.anbu-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.anbu-gallery-card {
+  position: relative;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  transition: var(--t-normal);
+}
+
+.anbu-gallery-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(243, 106, 33, 0.45);
+  box-shadow: var(--shadow-hover);
+}
+
+.anbu-gallery-img-box {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.anbu-gallery-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anbu-gallery-card:hover .anbu-gallery-img-box img {
+  transform: scale(1.08);
+}
+
+.anbu-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 20, 43, 0.1) 0%,
+    rgba(4, 20, 43, 0.85) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+.anbu-gallery-badge {
+  align-self: flex-start;
+  background: var(--c-orange);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  margin-bottom: 8px;
+}
+
+.anbu-gallery-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.anbu-gallery-desc {
+  color: #cbd5e1;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+/* ── Contact Us Section (contact-us.html) ── */
+.anbu-contact-section {
+  padding: 85px 0 100px;
+  background: #ffffff;
+}
+
+.anbu-contact-info-card {
+  background: #f8fafc;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--shadow-card);
+  transition: var(--t-normal);
+}
+
+.anbu-contact-info-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(243, 106, 33, 0.4);
+  box-shadow: var(--shadow-hover);
+  background: #ffffff;
+}
+
+.anbu-contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #fff4ec;
+  border: 1px solid #ffd8bf;
+  color: var(--c-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  transition: var(--t-normal);
+}
+
+.anbu-contact-info-card:hover .anbu-contact-icon {
+  background: var(--c-orange);
+  color: #ffffff;
+  transform: scale(1.08) rotate(4deg);
+}
+
+.anbu-contact-info-card h5 {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  margin-bottom: 6px !important;
+}
+
+.anbu-contact-info-card p {
+  color: var(--c-text-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+.anbu-contact-info-card a {
+  color: var(--c-navy-main);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.anbu-contact-info-card a:hover {
+  color: var(--c-orange);
+}
+
+/* Form Card */
+.anbu-form-card {
+  background: #ffffff;
+  border: 1.5px solid var(--c-border);
+  border-radius: 24px;
+  padding: 44px;
+  box-shadow: 0 15px 40px rgba(6, 43, 91, 0.08);
+}
+
+.anbu-form-card h3 {
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  color: var(--c-navy-main) !important;
+  margin-bottom: 8px !important;
+}
+
+.anbu-form-card p.subtitle {
+  color: var(--c-text-muted);
+  font-size: 14.5px;
+  margin-bottom: 28px;
+}
+
+.anbu-form-group {
+  margin-bottom: 20px;
+}
+
+.anbu-form-group label {
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--c-navy-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.anbu-form-group .form-control {
+  height: 50px;
+  border-radius: 12px;
+  border: 1.5px solid var(--c-border);
+  padding: 10px 18px;
+  font-size: 14.5px;
+  color: var(--c-navy-dark);
+  background: #f8fafc;
+  transition: var(--t-normal);
+}
+
+.anbu-form-group textarea.form-control {
+  height: 130px;
+  resize: vertical;
+}
+
+.anbu-form-group .form-control:focus {
+  background: #ffffff;
+  border-color: var(--c-orange);
+  box-shadow: 0 0 0 4px rgba(243, 106, 33, 0.15);
+  outline: none;
+}
+
+.btn-send-message {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 28px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--c-orange) 0%, var(--c-orange-light) 100%);
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  box-shadow: 0 6px 20px rgba(243, 106, 33, 0.4);
+  transition: var(--t-normal);
+  cursor: pointer;
+}
+
+.btn-send-message:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(243, 106, 33, 0.55);
+}
+
+/* Map Embed */
+.anbu-map-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid var(--c-border);
+  box-shadow: var(--shadow-card);
+  margin-top: 50px;
+}
+
+.anbu-map-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
