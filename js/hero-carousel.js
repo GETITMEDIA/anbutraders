@@ -103,18 +103,20 @@
         // Click-to-switch interactions on bottom category containers
         tabs.forEach(function (tab) {
             tab.addEventListener('click', function (e) {
-                // If the user clicked specifically on the direct link icon, let normal navigation happen
-                if (e.target.closest('.tab-direct-link')) {
+                var targetIdx = parseInt(this.getAttribute('data-target-index'), 10);
+                var href = this.getAttribute('data-href');
+
+                // If user clicked specifically on the chevron/action indicator, navigate directly
+                if (e.target.closest('.tab-action-indicator') && href) {
+                    window.location.href = href;
                     return;
                 }
 
-                var targetIdx = parseInt(this.getAttribute('data-target-index'), 10);
                 if (!isNaN(targetIdx)) {
                     if (targetIdx === currentIndex) {
                         // If already active container is clicked, navigate to its page
-                        var link = this.querySelector('.tab-direct-link');
-                        if (link && link.href) {
-                            window.location.href = link.href;
+                        if (href) {
+                            window.location.href = href;
                         }
                     } else {
                         // Switch immediately and restart the 5-second timer
