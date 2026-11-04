@@ -19,23 +19,25 @@
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /**
-   * 1. SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+   * 1. SCROLL REVEAL ANIMATIONS (Dual-Layer: Native IntersectionObserver + WOW.js Bridge)
    */
   function initScrollReveal() {
     if (prefersReducedMotion) {
-      document.querySelectorAll('.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale').forEach(function (el) {
-        el.classList.add('is-revealed');
+      document.querySelectorAll('.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale, .wow').forEach(function (el) {
+        el.classList.add('is-revealed', 'animated');
+        el.style.visibility = 'visible';
       });
       return;
     }
 
     var revealElements = document.querySelectorAll(
-      '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale, [data-reveal]'
+      '.reveal-fade-up, .reveal-slide-left, .reveal-slide-right, .reveal-scale, [data-reveal], .wow'
     );
 
     if (!('IntersectionObserver' in window)) {
       revealElements.forEach(function (el) {
-        el.classList.add('is-revealed');
+        el.classList.add('is-revealed', 'animated');
+        el.style.visibility = 'visible';
       });
       return;
     }
@@ -45,14 +47,32 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var target = entry.target;
-            var delay = target.getAttribute('data-reveal-delay') || 0;
-
-            if (delay > 0) {
-              setTimeout(function () {
-                target.classList.add('is-revealed');
-              }, parseInt(delay, 10));
+            var delayRaw = target.getAttribute('data-wow-delay') || target.getAttribute('data-reveal-delay') || '0';
+            var delayMs = 0;
+            if (delayRaw.indexOf('ms') !== -1) {
+              delayMs = parseFloat(delayRaw);
+            } else if (delayRaw.indexOf('s') !== -1) {
+              delayMs = parseFloat(delayRaw) * 1000;
             } else {
-              target.classList.add('is-revealed');
+              delayMs = parseFloat(delayRaw) || 0;
+            }
+
+            function triggerReveal() {
+              target.classList.add('is-revealed', 'animated');
+              target.style.visibility = 'visible';
+              if (target.classList.contains('fadeInUp')) {
+                target.classList.add('fadeInUp');
+              } else if (target.classList.contains('fadeIn')) {
+                target.classList.add('fadeIn');
+              } else if (target.classList.contains('wow')) {
+                target.classList.add('fadeInUp');
+              }
+            }
+
+            if (delayMs > 0) {
+              setTimeout(triggerReveal, delayMs);
+            } else {
+              triggerReveal();
             }
 
             obs.unobserve(target);
@@ -60,8 +80,8 @@
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
       }
     );
 

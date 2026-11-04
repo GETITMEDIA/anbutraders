@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>abouts</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <title>About Us - Anbu Traders | Steel, Cement & Paints Depot Pondicherry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Anbu Traders, founded in 2014 in Pondicherry. Authorized stockist and wholesale distributor of premium steel, cement, roofing sheets, pipes, and paints.">
+    <meta name="keywords" content="About Anbu Traders, steel stockist Pondicherry, cement wholesale dealer, building materials distributor, Sedarapet, Vanur, construction supply">
 
     <!-- Favicon -->
-   <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +29,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/brand-flex-carousel.css" rel="stylesheet">
 </head>
 
 <body>
-
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-0">
@@ -40,278 +40,286 @@
             <div class="col-lg-6 ps-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-white">
                     <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href="https://www.youtube.com/@anbutraders1353"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-link text-light" href="https://www.instagram.com/anbutraders_py/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-link text-light" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href="https://www.youtube.com/@anbutraders1353" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-link text-light" href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 text-end">
                 <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold"> +919626325204</span>
+                    <a href="tel:+919626325204" class="topbar-call-link d-inline-flex align-items-center text-white text-decoration-none fw-bold fs-5" title="Click to Call Anbu Traders directly">
+                        <i class="fa fa-phone-alt me-2 text-white"></i>
+                        <span>Call Us: +91 96263 25204</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center">
-        <img src="img/ANUBU STEEL.png" alt="Industro Logo" style="height: 90px;width: 90px;">
-    </a>
-    
-    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link active">About</a>
-            <div class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
-                <div class="dropdown-menu bg-light m-0">
-                                        <a href="./a-steel/index.html" class="dropdown-item">Sheets and Pipes</a>
-
-                    <a href="./anbu-paint/index.html" class="dropdown-item">paints</a>
-                                        <a href="cement/anbucement/index-demo-3.html" class="dropdown-item">Steels &Cement</a>
-
-                </div>
-            </div>
-            <a href="index.html#products" class="nav-item nav-link">products</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center">
+            <img id="anbu-navbar-logo" src="img/ANUBU STEEL.png" alt="Anbu Traders Logo" style="height: 90px;width: 90px;">
+        </a>
+        
+        <div class="d-flex align-items-center ms-auto me-2 d-lg-none gap-2">
+            <a href="tel:+919626325204" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Call +91 96263 25204" aria-label="Call Now">
+                <i class="fa fa-phone-alt text-white"></i>
+            </a>
         </div>
-<a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary px-3 d-none d-lg-block" target="_blank">
-  Enquiry
-</a>
-    </div>
-</nav>
-
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
+                    <div class="dropdown-menu bg-light m-0 shadow-sm">
+                        <a href="./a-steel/index.html" class="dropdown-item">Sheets and Pipes</a>
+                        <a href="./anbu-paint/index.html" class="dropdown-item">Paints</a>
+                        <a href="cement/anbucement/index-demo-3.html" class="dropdown-item">Steels &amp; Cement</a>
+                    </div>
+                </div>
+                <a href="index.html#products" class="nav-item nav-link">Products</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                    <div class="dropdown-menu bg-light m-0 shadow-sm">
+                        <a href="project.html" class="dropdown-item">Projects</a>
+                        <a href="feature.html" class="dropdown-item">Why Choose Us</a>
+                        <a href="team.html" class="dropdown-item">Our Organization</a>
+                        <a href="testimonial.html" class="dropdown-item">Client Reviews</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="tel:+919626325204" class="nav-item nav-link d-lg-none text-brand-orange fw-bold">
+                    <i class="fa fa-phone-alt me-2"></i>Call: +91 96263 25204
+                </a>
+            </div>
+            <div class="d-none d-lg-flex align-items-center">
+                <a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary btn-glow btn-ripple px-4 py-2" target="_blank" rel="noopener">
+                    Enquiry
+                </a>
+            </div>
+        </div>
+    </nav>
     <!-- Navbar End -->
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header about-page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+
+    <!-- Page Hero Banner -->
+    <section class="anbu-page-hero hero-about">
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <h1 class="hero-title-main">About Us</h1>
+            <ul class="hero-breadcrumb-trail">
+                <li><a href="index.html">Home</a></li>
+                <li class="sep"><i class="fa fa-chevron-right fa-xs"></i></li>
+                <li class="current">About Us</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Main About Showcase Section -->
+    <section class="container-xxl py-5">
         <div class="container">
-            <h1 class="display-3 text-white animated slideInRight">About Us</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- About Start -->
-<!-- About Start -->
-<!-- About Start -->
-<div class="container-xxl pt-5 pb-2">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            
-            <!-- Images Column -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="about-hero-showcase">
-                    <!-- Main Primary Image -->
-                    <div class="about-main-frame">
-                        <img src="img/anbu-main-shop.jpg" alt="Anbu Traders Main Branch - Steel & Cement Depot" class="about-primary-img">
-                    </div>
-
-                    <!-- Overlapping Secondary Visual (Paints Division Showroom) -->
-                    <div class="about-overlap-frame d-none d-sm-block">
-                        <img src="paintshop.jpg" alt="Anbu Paints Division Showroom" class="about-sub-img">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Text Column -->
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="color: black;">
-                <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
-                <h1 class="display-5 mb-4">Welcome to Anbu Traders</h1>
-
-                <p class="mb-4">
-                    Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients.
-                    “Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.”
-                    We at Anbu Traders believe in building relationships and the testimony to this is that our customers continue to remain with us.
-                    We are one of the best dealers of steel and cement suppliers in Pondicherry.
-                </p>
-
-                <p class="mb-4">
-                    We have a dedicated team working round the clock tirelessly to deliver materials on time. 
-                    With our comprehensive facilities, we meet our customers’ demands with zero-hour precision. 
-                    We offer wholesale supplies of steel and cement and are committed to extending our services further. 
-                    Our infrastructure is equipped to handle large-scale wholesale orders and meet all our clients' needs.
-                </p>
-
-                <div class="row g-3 pt-2 align-items-center about-contact-strip">
-                    <div class="col-12 col-sm-auto me-sm-4">
-                        <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
-                                <i class="fa fa-envelope-open"></i>
-                            </div>
-                            <div class="ms-3">
-                                <span class="d-block text-muted text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.5px;">Email us</span>
-                                <a href="mailto:anbutraders1468@gmail.com" class="fw-bold text-dark text-decoration-none email-link" style="font-size: 0.95rem; white-space: nowrap;">anbutraders1468@gmail.com</a>
-                            </div>
+            <div class="row g-5 align-items-center">
+                <!-- Images Column with Modern Floating Frames -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-hero-showcase position-relative">
+                        <div class="about-main-frame shadow-lg rounded-3 overflow-hidden border">
+                            <img src="img/anbu-main-shop.jpg" alt="Anbu Traders Main Branch - Steel & Cement Depot" class="about-primary-img img-fluid w-100">
                         </div>
-                    </div>
-
-                    <div class="col-12 col-sm-auto">
-                        <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="ms-3">
-                                <span class="d-block text-muted text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.5px;">Call us</span>
-                                <a href="tel:+919626325204" class="fw-bold text-dark text-decoration-none phone-link" style="font-size: 1rem; white-space: nowrap;">+91 96263 25204</a>
-                            </div>
+                        <div class="about-overlap-frame d-none d-sm-block shadow-lg rounded-3 overflow-hidden border position-absolute" style="bottom: -25px; right: -25px; width: 62%; z-index: 2;">
+                            <img src="img/paintshop.jpg" alt="Anbu Paints Division Showroom" class="about-sub-img img-fluid w-100">
                         </div>
                     </div>
                 </div>
 
+                <!-- Content Column -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="section-badge-pill mb-2">
+                        <i class="fa fa-award me-2 text-primary"></i> CERTIFIED WHOLESALE STOCKIST
+                    </div>
+                    <h2 class="display-6 fw-bold mb-4 text-navy">Welcome to Anbu Traders</h2>
+                    <p class="lead text-secondary mb-3">
+                        Founded in 2014 as a proprietary enterprise in Pondicherry, Anbu Traders has steadily evolved into one of the region's most reputable wholesale and retail distributors of heavy structural building supplies.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        Over more than a decade of dedicated service, our unwavering commitment to factory-direct genuine materials, certified BIS standards, and computerized weighment has earned accolades from major infrastructure corporations, developers, civil contractors, and thousands of private homeowners.
+                    </p>
+
+                    <!-- Trust Checklist -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary fs-5 me-2"></i>
+                                <span class="fw-semibold text-dark">Authorized Mill Distributor</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary fs-5 me-2"></i>
+                                <span class="fw-semibold text-dark">100-Ton Electronic Weighbridge</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary fs-5 me-2"></i>
+                                <span class="fw-semibold text-dark">Zero Stale Cement Rake Supply</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fa fa-check-circle text-primary fs-5 me-2"></i>
+                                <span class="fw-semibold text-dark">Own Heavy Delivery Fleet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact Strip -->
+                    <div class="row g-3 pt-2 align-items-center about-contact-strip border-top">
+                        <div class="col-12 col-sm-auto me-sm-4">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                    <i class="fa fa-envelope-open"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <span class="d-block text-muted text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.5px;">Email us</span>
+                                    <a href="mailto:anbutraders1468@gmail.com" class="fw-bold text-dark text-decoration-none email-link" style="font-size: 0.95rem;">anbutraders1468@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-auto">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                                    <i class="fa fa-phone-alt"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <span class="d-block text-muted text-uppercase fw-semibold" style="font-size: 0.75rem; letter-spacing: 0.5px;">Call us</span>
+                                    <a href="tel:+919626325204" class="fw-bold text-dark text-decoration-none phone-link" style="font-size: 1rem;">+91 96263 25204</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-    </div>
-</div>
-<!-- About End -->
+    </section>
 
-
-        <!-- Clean & Simple Stats Strip (No Cards) Start -->
-    <div class="container facts-simple-wrapper">
-        <div class="facts-simple-bar">
+    <!-- Clean & Simple Stats Strip (Elevated 2026 Floating Card) -->
+    <div class="container facts-simple-wrapper wow fadeInUp" data-wow-delay="0.2s">
+        <div class="facts-simple-bar shadow-sm rounded-4 border bg-white p-4">
             <div class="row align-items-center g-0">
                 <!-- Stat 1: 11+ Years Experience -->
-                <div class="col-6 col-lg-3 stat-item-simple">
-                    <div class="stat-simple-icon">
+                <div class="col-6 col-lg-3 stat-item-simple text-center p-3">
+                    <div class="stat-simple-icon text-primary fs-2 mb-2">
                         <i class="fa fa-award"></i>
                     </div>
-                    <div class="stat-simple-number">
-                        <span data-toggle="counter-up">11</span><span class="stat-simple-plus">+</span>
+                    <div class="stat-simple-number display-6 fw-bold text-navy">
+                        <span data-toggle="counter-up">11</span><span class="stat-simple-plus text-primary">+</span>
                     </div>
-                    <div class="stat-simple-label">Years Experience</div>
+                    <div class="stat-simple-label text-muted fw-semibold">Years Experience</div>
                 </div>
 
                 <!-- Stat 2: 3000+ Products -->
-                <div class="col-6 col-lg-3 stat-item-simple stat-divider">
-                    <div class="stat-simple-icon">
+                <div class="col-6 col-lg-3 stat-item-simple stat-divider text-center p-3 border-start">
+                    <div class="stat-simple-icon text-primary fs-2 mb-2">
                         <i class="fa fa-cubes"></i>
                     </div>
-                    <div class="stat-simple-number">
-                        <span data-toggle="counter-up">3000</span><span class="stat-simple-plus">+</span>
+                    <div class="stat-simple-number display-6 fw-bold text-navy">
+                        <span data-toggle="counter-up">3000</span><span class="stat-simple-plus text-primary">+</span>
                     </div>
-                    <div class="stat-simple-label">Numbers of Products</div>
+                    <div class="stat-simple-label text-muted fw-semibold">Product Range</div>
                 </div>
 
                 <!-- Stat 3: 1 Lakh+ Happy Clients -->
-                <div class="col-6 col-lg-3 stat-item-simple stat-divider">
-                    <div class="stat-simple-icon">
+                <div class="col-6 col-lg-3 stat-item-simple stat-divider text-center p-3 border-start">
+                    <div class="stat-simple-icon text-primary fs-2 mb-2">
                         <i class="fa fa-users"></i>
                     </div>
-                    <div class="stat-simple-number">
-                        <span data-toggle="counter-up">1</span><span class="stat-simple-unit">Lakh</span><span class="stat-simple-plus">+</span>
+                    <div class="stat-simple-number display-6 fw-bold text-navy">
+                        <span data-toggle="counter-up">1</span><span class="stat-simple-unit fs-4 text-navy"> Lakh</span><span class="stat-simple-plus text-primary">+</span>
                     </div>
-                    <div class="stat-simple-label">Happy Clients</div>
+                    <div class="stat-simple-label text-muted fw-semibold">Happy Clients</div>
                 </div>
 
                 <!-- Stat 4: 10,000+ Projects Done -->
-                <div class="col-6 col-lg-3 stat-item-simple stat-divider">
-                    <div class="stat-simple-icon">
+                <div class="col-6 col-lg-3 stat-item-simple stat-divider text-center p-3 border-start">
+                    <div class="stat-simple-icon text-primary fs-2 mb-2">
                         <i class="fa fa-check-double"></i>
                     </div>
-                    <div class="stat-simple-number">
-                        <span data-toggle="counter-up">10000</span><span class="stat-simple-plus">+</span>
+                    <div class="stat-simple-number display-6 fw-bold text-navy">
+                        <span data-toggle="counter-up">10000</span><span class="stat-simple-plus text-primary">+</span>
                     </div>
-                    <div class="stat-simple-label">Projects Done</div>
+                    <div class="stat-simple-label text-muted fw-semibold">Deliveries Fulfilled</div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Clean & Simple Stats Strip End -->
 
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
+    <!-- 4 Operational Pillars Grid -->
+    <section class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Our Team</p>
-                <h1 class="display-5 mb-5">Dedicated Team Members</h1>
+            <div class="text-center mx-auto mb-5" style="max-width: 650px;">
+                <span class="hero-badge-pill" style="color: var(--primary-orange); border-color: rgba(243, 106, 33, 0.3); background: rgba(243, 106, 33, 0.08);">
+                    OUR OPERATIONAL EXCELLENCE
+                </span>
+                <h2 class="display-6 fw-bold text-navy mt-2 mb-2">Why Anbu Traders Stands Apart</h2>
+                <p class="text-muted">Built on rigorous standards of quality, transparency, and client satisfaction.</p>
             </div>
+
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                                <i class="fa fa-2x fa-share text-white"></i>
-                            </div>
-                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                                <h5>Rob Miller</h5>
-                                <span class="text-primary">CEO & Founder</span>
-                                <div class="team-social">
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>                                                              
-                            </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white text-center">
+                        <div class="feature-icon-wrapper icon-orange mx-auto mb-3">
+                            <i class="fa fa-shield-alt"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-navy mb-2">100% BIS Certified</h4>
+                        <p class="text-secondary small mb-0">Every batch of TMT steel and cement comes with original manufacturer test certificates guaranteeing strength specifications.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                                <i class="fa fa-2x fa-share text-white"></i>
-                            </div>
-                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                                <h5>Adam Crew</h5>
-                                <span class="text-primary">Project Manager</span>
-                                <div class="team-social">
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white text-center">
+                        <div class="feature-icon-wrapper icon-blue mx-auto mb-3">
+                            <i class="fa fa-balance-scale"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-navy mb-2">100-Ton Weighbridge</h4>
+                        <p class="text-secondary small mb-0">Our dedicated digital weighbridge delivers transparent computerized weight slips with zero human calculation error.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
-                                <i class="fa fa-2x fa-share text-white"></i>
-                            </div>
-                            <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                                <h5>Peter Farel</h5>
-                                <span class="text-primary">Engineer</span>
-                                <div class="team-social">
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white text-center">
+                        <div class="feature-icon-wrapper icon-green mx-auto mb-3">
+                            <i class="fa fa-truck-moving"></i>
                         </div>
+                        <h4 class="h5 fw-bold text-navy mb-2">Dedicated Fleet</h4>
+                        <p class="text-secondary small mb-0">Heavy vehicle fleet with crane offloading ensures rapid, safe, and undamaged direct-to-site delivery across the state.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white text-center">
+                        <div class="feature-icon-wrapper icon-navy mx-auto mb-3">
+                            <i class="fa fa-tags"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-navy mb-2">Factory Direct Rates</h4>
+                        <p class="text-secondary small mb-0">Direct distributor tier agreements eliminate intermediaries, providing the most competitive wholesale rates in the market.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Team End -->
+    </section>
 
+    <!-- Curved Transition to Footer -->
+<div class="svg-wave-divider wave-footer-top" style="background:transparent; margin-bottom:-1px;">
+    <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:50px;display:block;">
+        <path d="M0 25C360 50 720 10 1080 38C1260 52 1380 28 1440 20V50H0V25Z" fill="#062B5B"/>
+    </svg>
+</div>
 
-    <!-- Video Modal Start -->
- 
-    <!-- Video Modal End -->
-        
-
-    <!-- Footer Start -->
+<!-- Footer Start -->
 <footer class="anbu-unified-footer">
     <div class="anbu-footer-container">
         <div class="anbu-footer-grid">
@@ -408,16 +416,15 @@
 <!-- Copyright End -->
 
 
-        <!-- Floating Contact Actions -->
+    <!-- Floating Contact Actions -->
     <div class="floating-actions">
         <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20your%20products." class="floating-btn floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-<!-- Back to Top -->
+    <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -428,7 +435,8 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!-- Template Javascript & 2026 Interaction Engine -->
+    <script src="js/anbu-interactions.js"></script>
     <script src="js/main.js"></script>
 </body>
 

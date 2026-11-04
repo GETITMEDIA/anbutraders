@@ -15,11 +15,14 @@
 
     
     
-    // Initiate the wowjs
+    // Initiate the wowjs (active across all screens, mobile & desktop)
     if (typeof WOW !== 'undefined') {
         new WOW({
-            offset: 80,
-            mobile: false
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 20,
+            mobile: true,
+            live: true
         }).init();
     }
 
