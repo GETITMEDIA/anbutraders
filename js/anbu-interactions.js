@@ -259,6 +259,56 @@
   }
 
   /**
+   * 6. OUR BUSINESSES BENTO SHOWCASE (Category Filter + 3D Tilt Dynamics)
+   */
+  function initBusinessesBento() {
+    var filterBtns = document.querySelectorAll('.biz-filter-btn');
+    var cards = document.querySelectorAll('.biz-bento-card');
+    if (!filterBtns.length || !cards.length) return;
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        cards.forEach(function (card) {
+          var category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.classList.remove('filtered-out');
+            card.classList.add('filtered-in');
+          } else {
+            card.classList.add('filtered-out');
+            card.classList.remove('filtered-in');
+          }
+        });
+      });
+    });
+
+    // 3D Perspective Mouse Tilt (Disabled on mobile / touch or prefers-reduced-motion)
+    if (!prefersReducedMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      cards.forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = e.clientX - rect.left;
+          var y = e.clientY - rect.top;
+          var centerX = rect.width / 2;
+          var centerY = rect.height / 2;
+          var deltaX = (x - centerX) / centerX;
+          var deltaY = (y - centerY) / centerY;
+          var rotateX = deltaY * -4.5;
+          var rotateY = deltaX * 4.5;
+          card.style.transform = 'perspective(1000px) rotateX(' + rotateX.toFixed(2) + 'deg) rotateY(' + rotateY.toFixed(2) + 'deg) translateY(-8px)';
+        });
+
+        card.addEventListener('mouseleave', function () {
+          card.style.transform = '';
+        });
+      });
+    }
+  }
+
+  /**
    * INITIALIZE ALL ON DOM READY
    */
   function initAll() {
@@ -267,6 +317,7 @@
     initButtonRipple();
     initHeroParallax();
     initBrandMarquee();
+    initBusinessesBento();
   }
 
   if (document.readyState === 'loading') {
