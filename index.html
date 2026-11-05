@@ -29,42 +29,44 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/preloader.css" rel="stylesheet">
-    <link href="css/brand-flex-carousel.css" rel="stylesheet">
+    <link rel="preload" as="image" href="img/opt/hero-materials-composite.jpg">
 
+    <!-- Schema.org LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeGoodsStore",
+      "name": "Anbu Traders",
+      "image": "img/ANUBU STEEL.png",
+      "description": "Puducherry & Tamil Nadu's Premier Wholesale & Retail Supplier of Tata Tiscon, JSW Steel, UltraTech Cement, Dalmia, Roofing Sheets, and Asian Paints.",
+      "telephone": "+919626325204",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No.76/3, Pondy - Mailam Main Road, Sedarapet",
+        "addressLocality": "Puducherry",
+        "postalCode": "605111",
+        "addressRegion": "Tamil Nadu / Puducherry",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "08:00",
+          "closes": "14:30"
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
-        <!-- ==============================================
-         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
-         ============================================== -->
-    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Traders">
-        <!-- Clean Black Backdrop Layer -->
-        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
-
-        <!-- Video Player Layer -->
-        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
-            <video id="anbu-preloader-video" 
-                   class="anbu-preloader-video" 
-                   playsinline 
-                   muted 
-                   autoplay 
-                   preload="auto">
-                <source src="logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.webm" type="video/webm">
-                <source src="logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <!-- Flying Transition Logo (Pixel-perfect hand-off element) -->
-        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
-            <img id="anbu-flying-logo" class="anbu-flying-logo" src="img/ANUBU STEEL.png" alt="Anbu Traders Logo">
-        </div>
-    </div>
-    <!-- ==============================================
-         ANBU TRADERS — PRELOADER END
-         ============================================== -->
-
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-0">
         <div class="row g-0 d-none d-lg-flex">
@@ -127,7 +129,7 @@
         </div>
         <div class="d-none d-lg-flex align-items-center">
                 <a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary btn-glow btn-ripple px-4 py-2" target="_blank" rel="noopener">
-                Enquiry
+                <i class="fa fa-paper-plane me-2"></i> Enquiry
             </a>
             </div>
     </div>
@@ -135,261 +137,208 @@
 
     <!-- Navbar End -->
 
-
-        <!-- ==============================================
-         HERO SECTION START (2026 3-Category Autoplay Carousel - JSW White Card & Raw Bright Visuals)
+    <!-- ==============================================
+         2026 HERO SECTION START (Reference Split Layout: Bold Left + Angled Visual Right)
          ============================================== -->
-    <section id="anbu-hero-carousel-section" class="anbu-hero-carousel" aria-label="Product Categories Hero Carousel">
-        
-        <!-- Hero Slides Container (One 100% Raw Bright Daylight Image per category) -->
-        <div class="hero-slides-wrapper">
-            
-            <!-- Slide 1: Sheets & Pipes -->
-            <div class="hero-slide active" data-index="0" data-category="sheets-pipes">
-                <div class="hero-slide-bg" style="background-image: url('img/hero/sheets-pipes-hero.jpg');"></div>
-                <div class="container h-100">
-                    <div class="hero-content-container">
-                        <div class="hero-content-card jsw-reference-card">
-                            <div class="card-ref-header">
-                                <span class="card-ref-brand">
-                                    <span class="card-ref-dot"></span>
-                                    ANBU TRADERS
-                                    <span class="card-brand-sep">&bull;</span>
-                                    <span class="card-brand-slogan">STEEL DIVISION</span>
-                                </span>
-                                <span class="card-ref-badge">
-                                    <i class="fa fa-shield-alt"></i> Factory-Direct Stockist
-                                </span>
+    <section id="hero" class="anbu-reference-hero-section" aria-label="Anbu Traders Building Materials Showcase">
+        <div class="hero-subtle-pattern" aria-hidden="true"></div>
+
+        <div class="container-fluid hero-fluid-wrapper px-0">
+            <div class="hero-split-grid">
+                
+                <!-- LEFT EDITORIAL COLUMN -->
+                <div class="hero-content-col">
+                    <div class="hero-content-inner">
+                        
+                        <!-- Eyebrow Pill -->
+                        <div class="hero-ref-eyebrow">
+                            <span class="ref-dot"></span>
+                            <span>Puducherry &amp; Tamil Nadu's Premier Industrial Materials Partner</span>
+                        </div>
+
+                        <!-- Main Bold H1 -->
+                        <h1 class="hero-ref-h1">
+                            <span class="ref-h1-navy d-block">Building Materials.</span>
+                            <span class="ref-h1-orange d-block">Delivered with</span>
+                            <span class="ref-h1-navy d-block">Confidence.</span>
+                        </h1>
+
+                        <!-- Description Lead Paragraph -->
+                        <p class="hero-ref-lead">
+                            Authorized primary mill stockist of Tata Tiscon, JSW Steel, UltraTech, Dalmia, APL Apollo and Asian Paints. Verified with 100-ton digital electronic weighbridge, certified mill reports and rapid site delivery.
+                        </p>
+
+                        <!-- Dual Action CTA Buttons -->
+                        <div class="hero-ref-ctas">
+                            <a href="https://wa.me/919626325204?text=Hello%20Anbu%20Traders%2C%20I%20would%20like%20to%20get%20today%27s%20live%20material%20rates%20for%20my%20project." 
+                               class="btn-ref-primary btn-ripple" 
+                               target="_blank" 
+                               rel="noopener">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                <span>Get Instant WhatsApp Quote</span>
+                                <i class="fa fa-arrow-right ms-2 ref-cta-arrow"></i>
+                            </a>
+
+                            <a href="#products" class="btn-ref-secondary btn-ripple">
+                                <i class="fa fa-cube me-2"></i>
+                                <span>Explore Products</span>
+                                <i class="fa fa-arrow-right ms-2 ref-cta-arrow"></i>
+                            </a>
+                        </div>
+
+                        <!-- Statistics Strip -->
+                        <div class="hero-ref-stats-strip">
+                            <div class="ref-stat-box">
+                                <span class="ref-stat-num text-orange" data-counter-target="11" data-counter-suffix="+">11+</span>
+                                <span class="ref-stat-lbl">YEARS ESTABLISHED</span>
                             </div>
-                            <div class="card-ref-stat-block">
-                                <div class="card-ref-stat-number">
-                                    <span class="stat-prefix">~</span>
-                                    <span class="stat-value">100</span>
-                                    <span class="stat-unit">%</span>
-                                    <span class="stat-text">GENUINE BIS QUALITY</span>
-                                </div>
-                                <div class="card-ref-slider-track">
-                                    <div class="card-ref-slider-fill" style="width: 58%; background: linear-gradient(90deg, #3b82f6, #1d4ed8);">
-                                        <span class="slider-thumb" style="border-color: #3b82f6;"></span>
-                                    </div>
-                                </div>
+                            <div class="ref-stat-divider"></div>
+                            <div class="ref-stat-box">
+                                <span class="ref-stat-num text-orange" data-counter-target="100" data-counter-suffix="-Ton">100-Ton</span>
+                                <span class="ref-stat-lbl">ELECTRONIC WEIGHBRIDGE</span>
                             </div>
-                            <div class="card-ref-statement">
-                                <p class="statement-main">
-                                    Certified weather-proof durability with <span class="jsw-pill-badge" style="background:#0284c7; color:#fff; padding:2px 10px; border-radius:6px; font-weight:700;">Color Sheets &amp; Pipes.*</span>
-                                </p>
-                                <p class="statement-sub">
-                                    *Authorised stockist for <strong>APL Apollo, JSW Pragati &amp; Tata Structura</strong>.
-                                </p>
-                            </div>
-                            <div class="card-ref-actions">
-                                <a href="a-steel/index.html" class="btn-card-explore" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
-                                    <span>Explore Sheets &amp; Pipes</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="tel:+919626325204" class="btn-card-call">
-                                    <i class="fa fa-phone-alt"></i>
-                                    <span>Order Now</span>
-                                </a>
+                            <div class="ref-stat-divider"></div>
+                            <div class="ref-stat-box">
+                                <span class="ref-stat-num text-orange" data-counter-target="10000" data-counter-suffix="+">10,000+</span>
+                                <span class="ref-stat-lbl">DELIVERIES COMPLETED</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 2: Paints Division -->
-            <div class="hero-slide" data-index="1" data-category="paints">
-                <div class="hero-slide-bg" style="background-image: url('img/hero/paints-hero.jpg');"></div>
-                <div class="container h-100">
-                    <div class="hero-content-container">
-                        <div class="hero-content-card jsw-reference-card">
-                            <div class="card-ref-header">
-                                <span class="card-ref-brand">
-                                    <span class="card-ref-dot" style="background:#e85a19;"></span>
-                                    ANBU PAINTS
-                                    <span class="card-brand-sep">&bull;</span>
-                                    <span class="card-brand-slogan">SHOWROOM</span>
-                                </span>
-                                <span class="card-ref-badge" style="background:#fff7ed; border-color:#fed7aa; color:#9a3412;">
-                                    <i class="fa fa-palette" style="color:#ea580c;"></i> Flagship Colour Centre
-                                </span>
-                            </div>
-                            <div class="card-ref-stat-block">
-                                <div class="card-ref-stat-number">
-                                    <span class="stat-prefix">~</span>
-                                    <span class="stat-value">2,000</span>
-                                    <span class="stat-unit">+</span>
-                                    <span class="stat-text">COMPUTERIZED SHADES</span>
+                <!-- RIGHT ANGLED VISUAL COLUMN -->
+                <div class="hero-visual-col">
+                    <!-- Angled Orange Accent Divider Ribbon -->
+                    <div class="hero-angled-accent" aria-hidden="true"></div>
+
+                    <!-- Visual Container with Clip-Path & Backgrounds -->
+                    <div class="hero-visual-container">
+                        
+                        <!-- Background Layers for Smooth Category Crossfade -->
+                        <div class="hero-bg-layer is-active" id="heroBgComposite" style="background-image: url('img/opt/hero-materials-composite.jpg');"></div>
+                        <div class="hero-bg-layer" id="heroBgCement" style="background-image: url('img/opt/cement-1200.jpg');"></div>
+                        <div class="hero-bg-layer" id="heroBgSheets" style="background-image: url('img/opt/sheets-pipes-1200.jpg');"></div>
+                        
+                        <!-- Gradient Scrim for Bottom Pill Legibility -->
+                        <div class="hero-visual-scrim"></div>
+
+                        <!-- Floating Category Pills Docked at Bottom -->
+                        <div class="hero-docked-pills-bar">
+                            
+                            <!-- Pill 1: Steel & TMT -->
+                            <button type="button" class="ref-dock-pill is-active" data-target-bg="heroBgComposite" data-link="cement/anbucement/index-demo-3.html#products">
+                                <div class="dock-pill-header">
+                                    <span class="dock-pill-icon"><i class="fa fa-layer-group"></i></span>
+                                    <span class="dock-pill-text">Steel &amp; TMT</span>
                                 </div>
-                                <div class="card-ref-slider-track">
-                                    <div class="card-ref-slider-fill" style="width: 72%; background: linear-gradient(90deg, #f97316, #ea580c);">
-                                        <span class="slider-thumb" style="border-color: #f97316;"></span>
-                                    </div>
+                                <span class="dock-pill-indicator"></span>
+                            </button>
+
+                            <!-- Pill 2: Cement -->
+                            <button type="button" class="ref-dock-pill" data-target-bg="heroBgCement" data-link="cement/anbucement/index-demo-3.html">
+                                <div class="dock-pill-header">
+                                    <span class="dock-pill-icon"><i class="fa fa-cube"></i></span>
+                                    <span class="dock-pill-text">Cement</span>
                                 </div>
-                            </div>
-                            <div class="card-ref-statement">
-                                <p class="statement-main">
-                                    Instant automated color dispensing in <span class="jsw-pill-badge" style="background:#ea580c; color:#fff; padding:2px 10px; border-radius:6px; font-weight:700;">Luxury Emulsions.*</span>
-                                </p>
-                                <p class="statement-sub">
-                                    *Authorised flagship dealer for <strong>Asian Paints, JSW Paints &amp; Berger</strong>.
-                                </p>
-                            </div>
-                            <div class="card-ref-actions">
-                                <a href="anbu-paint/index.html" class="btn-card-explore">
-                                    <span>Explore Paints Division</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="tel:+919626325204" class="btn-card-call">
-                                    <i class="fa fa-phone-alt"></i>
-                                    <span>Call Colour Lab</span>
-                                </a>
-                            </div>
+                                <span class="dock-pill-indicator"></span>
+                            </button>
+
+                            <!-- Pill 3: Sheets & Pipes -->
+                            <button type="button" class="ref-dock-pill" data-target-bg="heroBgSheets" data-link="a-steel/index.html">
+                                <div class="dock-pill-header">
+                                    <span class="dock-pill-icon"><i class="fa fa-warehouse"></i></span>
+                                    <span class="dock-pill-text">Sheets &amp; Pipes</span>
+                                </div>
+                                <span class="dock-pill-indicator"></span>
+                            </button>
+
                         </div>
+
                     </div>
                 </div>
-            </div>
 
-            <!-- Slide 3: Steels & Cement -->
-            <div class="hero-slide" data-index="2" data-category="steels-cement">
-                <div class="hero-slide-bg" style="background-image: url('img/hero/steels-cement-hero.jpg');"></div>
-                <div class="container h-100">
-                    <div class="hero-content-container">
-                        <div class="hero-content-card jsw-reference-card">
-                            <div class="card-ref-header">
-                                <span class="card-ref-brand">
-                                    <span class="card-ref-dot" style="background:#16a34a;"></span>
-                                    ANBU TRADERS
-                                    <span class="card-brand-sep">&bull;</span>
-                                    <span class="card-brand-slogan" style="color:#16a34a;">DEPOT</span>
-                                </span>
-                                <span class="card-ref-badge">
-                                    <i class="fa fa-certificate"></i> Certified Mill Stockist
-                                </span>
-                            </div>
-                            <div class="card-ref-stat-block">
-                                <div class="card-ref-stat-number">
-                                    <span class="stat-prefix">~</span>
-                                    <span class="stat-value">100</span>
-                                    <span class="stat-unit">%</span>
-                                    <span class="stat-text">CERTIFIED FOUNDATIONS</span>
-                                </div>
-                                <div class="card-ref-slider-track">
-                                    <div class="card-ref-slider-fill" style="width: 85%; background: linear-gradient(90deg, #10b981, #059669);">
-                                        <span class="slider-thumb" style="border-color: #10b981;"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-ref-statement">
-                                <p class="statement-main">
-                                    Foundations of strength with certified <span class="jsw-pill-badge" style="background:#059669; color:#fff; padding:2px 10px; border-radius:6px; font-weight:700;">Steels &amp; Cements.*</span>
-                                </p>
-                                <p class="statement-sub">
-                                    *Direct distributor for <strong>UltraTech, JSW Cement &amp; Dalmia</strong> - Fe-550D &amp; Grade-53.
-                                </p>
-                            </div>
-                            <div class="card-ref-actions">
-                                <a href="cement/anbucement/index-demo-3.html" class="btn-card-explore" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
-                                    <span>Explore Steel &amp; Cement</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
-                                <a href="tel:+919626325204" class="btn-card-call">
-                                    <i class="fa fa-phone-alt"></i>
-                                    <span>Instant Quote</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- 3 Sleek Bottom Category Containers (Reference Inspired with 5s Progress Line) -->
-        <div class="hero-bottom-nav">
-            <div class="container-fluid px-lg-4 px-md-3 px-2">
-                <div class="row g-2 g-md-3 hero-nav-tabs">
-                    
-                    <!-- Category Tab 1: Sheets & Pipes -->
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="hero-category-tab active" data-target-index="0" data-href="a-steel/index.html" role="button" tabindex="0" aria-label="Sheets &amp; Pipes Category">
-                            <div class="tab-bg-thumb" style="background-image: url('img/hero/sheets-pipes-hero.jpg');"></div>
-                            <div class="tab-overlay"></div>
-                            <div class="tab-inner">
-                                <div class="tab-meta">
-                                    <span class="tab-num">01</span>
-                                    <div class="tab-titles">
-                                        <h4 class="tab-main-title">Sheets &amp; Pipes</h4>
-                                        <span class="tab-subtitle">Roofing Sheets &bull; Structural Tubes</span>
-                                    </div>
-                                </div>
-                                <div class="tab-action-indicator">
-                                    <i class="fa fa-chevron-right tab-arrow"></i>
-                                </div>
-                            </div>
-                            <!-- 5-Second Progress Line -->
-                            <div class="tab-progress-track">
-                                <div class="tab-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category Tab 2: Paints -->
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="hero-category-tab" data-target-index="1" data-href="anbu-paint/index.html" role="button" tabindex="0" aria-label="Paints Category">
-                            <div class="tab-bg-thumb" style="background-image: url('img/hero/paints-hero.jpg');"></div>
-                            <div class="tab-overlay"></div>
-                            <div class="tab-inner">
-                                <div class="tab-meta">
-                                    <span class="tab-num">02</span>
-                                    <div class="tab-titles">
-                                        <h4 class="tab-main-title">Paints Division</h4>
-                                        <span class="tab-subtitle">Asian Paints &bull; JSW &bull; Berger</span>
-                                    </div>
-                                </div>
-                                <div class="tab-action-indicator">
-                                    <i class="fa fa-chevron-right tab-arrow"></i>
-                                </div>
-                            </div>
-                            <!-- 5-Second Progress Line -->
-                            <div class="tab-progress-track">
-                                <div class="tab-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category Tab 3: Steels & Cement -->
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="hero-category-tab" data-target-index="2" data-href="cement/anbucement/index-demo-3.html" role="button" tabindex="0" aria-label="Steels &amp; Cement Category">
-                            <div class="tab-bg-thumb" style="background-image: url('img/hero/steels-cement-hero.jpg');"></div>
-                            <div class="tab-overlay"></div>
-                            <div class="tab-inner">
-                                <div class="tab-meta">
-                                    <span class="tab-num">03</span>
-                                    <div class="tab-titles">
-                                        <h4 class="tab-main-title">Steel &amp; Cement</h4>
-                                        <span class="tab-subtitle">UltraTech &bull; JSW Cement &bull; Dalmia</span>
-                                    </div>
-                                </div>
-                                <div class="tab-action-indicator">
-                                    <i class="fa fa-chevron-right tab-arrow"></i>
-                                </div>
-                            </div>
-                            <!-- 5-Second Progress Line -->
-                            <div class="tab-progress-track">
-                                <div class="tab-progress-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
-
     </section>
     <!-- ==============================================
          HERO SECTION END
          ============================================== -->
+
+    <!-- ==============================================
+         AUTHORIZED BRANDS INFINITE LOGO MARQUEE
+         ============================================== -->
+    <section class="brand-marquee-section" id="brands-strip" aria-label="Authorized Mill Brands">
+        <div class="container text-center mb-3">
+            <span class="hero-eyebrow-badge">
+                <span class="hero-pulse-dot"></span> DIRECT MILL DISTRIBUTOR &bull; AUTHORIZED WHOLESALE DEALER
+            </span>
+        </div>
+        <div class="brand-marquee-container" tabindex="0" role="region" aria-label="Authorized Brands Carousel">
+            <div class="brand-marquee-track">
+                <div class="brand-marquee-item">
+                    <img src="img/tata-tiscon-logo.png" alt="Tata Tiscon" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Tata Tiscon</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/jsw-steel-logo.jpg" alt="JSW Steel" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">JSW Steel</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/brands/2.png" alt="UltraTech Cement" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">UltraTech</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/dalmiabrand.jpg" alt="Dalmia Cement" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Dalmia DSP</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/ramcobrand.jpg" alt="Ramco Cements" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Ramco Super</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/agni-tmt-logo.png" alt="Agni TMT" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Agni 550D</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/apl-apollo-logo.jpg" alt="APL Apollo Pipes" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">APL Apollo</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/brands/5.png" alt="Asian Paints" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Asian Paints</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/brands/6.png" alt="Berger Paints" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Berger Paints</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/jsw-paints-logo.jpg" alt="JSW Paints" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">JSW Paints</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/brands/1.png" alt="Birla Aerocon" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Birla Aerocon</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/Coromandellogo.png" alt="Coromandel King" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Coromandel</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/cube-logo.jpg" alt="Cubecrete" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Cubecrete</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/maha-cement-opc-53-1000x1000-removebg-preview.png" alt="Maha Cement" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Maha Cement</span>
+                </div>
+                <div class="brand-marquee-item">
+                    <img src="img/priyacement-redlogo.svg" alt="Priya Cement" width="70" height="40" loading="lazy">
+                    <span class="brand-name-tag">Priya Cement</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Curved Section Transition: Hero to About -->
     <div class="svg-wave-divider wave-light" style="background:#f8fafc;">
@@ -397,7 +346,6 @@
             <path d="M0 0C320 38 640 48 960 24C1200 4 1360 36 1440 28V48H0V0Z" fill="#F8FAFC"/>
         </svg>
     </div>
-
 
 <!-- About Start -->
 <!-- About Start -->
@@ -410,20 +358,24 @@
                 <div class="about-hero-showcase">
                     <!-- Main Primary Image -->
                     <div class="about-main-frame">
-                        <img src="img/anbu-main-shop.jpg" alt="Anbu Traders Main Branch - Steel & Cement Depot" class="about-primary-img">
+                        <img src="img/opt/main-shop-1200.jpg" width="600" height="450" loading="lazy" alt="Anbu Traders Main Branch - Steel & Cement Depot" class="about-primary-img">
                     </div>
 
                     <!-- Overlapping Secondary Visual (Paints Division Showroom) -->
                     <div class="about-overlap-frame d-none d-sm-block">
-                        <img src="paintshop.jpg" alt="Anbu Paints Division Showroom" class="about-sub-img">
+                        <img src="img/opt/paintshop-900.jpg" width="300" height="200" loading="lazy" alt="Anbu Paints Division Showroom" class="about-sub-img">
                     </div>
                 </div>
             </div>
 
             <!-- Text Column -->
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="color: black;">
-                <p class="fw-medium text-uppercase text-primary mb-2">About Us</p>
-                <h1 class="display-5 mb-4">Welcome to Anbu Traders</h1>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="unified-section-eyebrow text-start mb-2">
+                    <span class="unified-pulse-dot"></span>
+                    <span>ABOUT ANBU TRADERS</span>
+                </div>
+                <h2 class="unified-section-title text-start mb-2">Welcome to Anbu Traders</h2>
+                <div class="unified-title-bar left-aligned mb-4"></div>
 
                 <p class="mb-4">
                     Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients.
@@ -471,6 +423,7 @@
     </div>
 </section>
 <!-- About End -->
+
 
 
         <!-- Clean & Simple Stats Strip (Elevated 2026 Floating Card with Animated Color Effect) Start -->
@@ -532,22 +485,21 @@
         </svg>
     </div>
 
+
         <!-- ==============================================
          ANBU TRADERS — OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
          ============================================== -->
     <section class="businesses-section" id="businesses">
         <div class="container">
             <!-- Section Header -->
-            <div class="biz-showcase-header text-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="biz-eyebrow-pill">
-                    <span class="biz-pulsing-dot"></span>
+            <div class="unified-section-header text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="unified-section-eyebrow mb-2">
+                    <span class="unified-pulse-dot"></span>
                     <span>OUR 4 SPECIALIZED DIVISIONS</span>
                 </div>
-                <h2 class="biz-main-title">
-                    Core Wholesale &amp; <span class="biz-heading-accent">Retail Businesses</span>
-                </h2>
-                <div class="biz-title-bar"></div>
-                <p class="biz-lead-text">
+                <h2 class="unified-section-title mb-2">Core Wholesale &amp; Retail Businesses</h2>
+                <div class="unified-title-bar mb-3"></div>
+                <p class="unified-lead-text">
                     From foundation steel and certified cement to industrial roofing and computerized paint mixing — certified primary materials delivered direct to site.
                 </p>
             </div>
@@ -559,7 +511,7 @@
                 <div class="biz-card-col wow fadeInUp" data-wow-delay="0.1s">
                     <div class="biz-clean-card card-cement">
                         <div class="biz-clean-visual">
-                            <img src="cement/anbucement/img/cement_hero_cinematic.jpg" alt="Certified Construction Cements" class="biz-clean-img" loading="lazy">
+                            <img src="img/opt/cement-1200.jpg" width="600" height="335" loading="lazy" alt="Certified Construction Cements" class="biz-clean-img" loading="lazy">
                             <div class="biz-clean-overlay"></div>
                             <span class="biz-clean-badge"><i class="fa fa-cube"></i> Cements</span>
                             <span class="biz-clean-tag">OPC 53 &bull; PPC</span>
@@ -587,7 +539,7 @@
                 <div class="biz-card-col wow fadeInUp" data-wow-delay="0.15s">
                     <div class="biz-clean-card card-steel">
                         <div class="biz-clean-visual">
-                            <img src="img/hero/steels-cement-hero.jpg" alt="Primary TMT Steel Rebars" class="biz-clean-img" loading="lazy">
+                            <img src="img/opt/steels-cement-1600.jpg" width="600" height="335" loading="lazy" alt="Primary TMT Steel Rebars" class="biz-clean-img" loading="lazy">
                             <div class="biz-clean-overlay"></div>
                             <span class="biz-clean-badge"><i class="fa fa-layer-group"></i> TMT Steel</span>
                             <span class="biz-clean-tag">Fe 550D Billet</span>
@@ -615,7 +567,7 @@
                 <div class="biz-card-col wow fadeInUp" data-wow-delay="0.2s">
                     <div class="biz-clean-card card-sheets">
                         <div class="biz-clean-visual">
-                            <img src="img/hero/sheets-pipes-hero.jpg" alt="Colour-Coated Roofing Sheets & Hollow Pipes" class="biz-clean-img" loading="lazy">
+                            <img src="img/opt/sheets-pipes-1200.jpg" width="600" height="335" loading="lazy" alt="Colour-Coated Roofing Sheets & Hollow Pipes" class="biz-clean-img" loading="lazy">
                             <div class="biz-clean-overlay"></div>
                             <span class="biz-clean-badge"><i class="fa fa-warehouse"></i> Sheets &amp; Pipes</span>
                             <span class="biz-clean-tag">Galvalume &bull; GI</span>
@@ -643,7 +595,7 @@
                 <div class="biz-card-col wow fadeInUp" data-wow-delay="0.25s">
                     <div class="biz-clean-card card-paints">
                         <div class="biz-clean-visual">
-                            <img src="anbu-paint/img/brand-cluster-asian.jpg" alt="Paints & Computerized Shade Mixing" class="biz-clean-img" loading="lazy">
+                            <img src="img/opt/paints-cans-1000.jpg" width="600" height="335" loading="lazy" alt="Paints & Computerized Shade Mixing" class="biz-clean-img" loading="lazy">
                             <div class="biz-clean-overlay"></div>
                             <span class="biz-clean-badge"><i class="fa fa-paint-roller"></i> Paints &amp; Mixing</span>
                             <span class="biz-clean-tag">2,000+ Shades</span>
@@ -672,17 +624,20 @@
     </section>
     <!-- Businesses Section End -->
 
+
 <!-- ==============================================
      ANBU TRADERS — FEATURED PRODUCTS CATALOG (2026 PREMIUM REDESIGN)
      ============================================== -->
 <section class="products-catalog-section" id="products">
     <div class="container">
         <!-- Section Header -->
-        <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 720px;">
-            <span class="catalog-eyebrow">
-                <i class="fa fa-boxes"></i> EXTENSIVE INVENTORY
-            </span>
-            <h2 class="catalog-main-title mt-2 mb-3">Our Featured Products</h2>
+        <div class="unified-section-header text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 720px;">
+            <div class="unified-section-eyebrow mb-2">
+                <span class="unified-pulse-dot"></span>
+                <span>EXTENSIVE INVENTORY &bull; 3,000+ PRODUCTS</span>
+            </div>
+            <h2 class="unified-section-title mb-2">Our Featured Products</h2>
+            <div class="unified-title-bar mb-3"></div>
             <div class="catalog-title-bar"></div>
             <p class="catalog-subtext">
                 Direct wholesale and retail supplies of certified cement, Fe 550D TMT rods, colour roofing sheets, hollow pipes, branded paints &amp; smooth wall putty.
@@ -1207,6 +1162,7 @@
         <!-- ==============================================
          ANBU TRADERS — WHY CHOOSE US (2026 ARCHITECTURAL REDESIGN)
          ============================================== -->
+
     <section class="why-choose-section" id="why-choose-us">
         <div class="container">
             <div class="row g-5 align-items-center">
@@ -1216,7 +1172,7 @@
                     <div class="why-visual-wrapper">
                         <!-- Main Frame -->
                         <div class="why-image-frame">
-                            <img src="ssss.jpg" alt="Anbu Traders Sedarapet Main Yard & Showroom" class="why-main-img" loading="lazy">
+                            <img src="img/opt/storefront-1200.jpg" width="600" height="885" loading="lazy" alt="Anbu Traders Sedarapet Main Yard & Showroom" class="why-main-img" loading="lazy">
                             <div class="why-image-scrim"></div>
                             
                             <!-- Location & Facility Tag at Bottom -->
@@ -1254,14 +1210,12 @@
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="why-content-wrapper">
                         <!-- Header -->
-                        <div class="why-eyebrow-pill">
-                            <span class="why-pulsing-dot"></span>
+                        <div class="unified-section-eyebrow text-start mb-2">
+                            <span class="unified-pulse-dot"></span>
                             <span>WHY CHOOSE ANBU TRADERS</span>
                         </div>
-                        <h2 class="why-main-title">
-                            Built on <span class="why-heading-accent">Trust, Quality &amp; Precision</span>
-                        </h2>
-                        <div class="why-title-bar"></div>
+                        <h2 class="unified-section-title text-start mb-2">Built on Trust, Quality &amp; Precision</h2>
+                        <div class="unified-title-bar left-aligned mb-3"></div>
                         <p class="why-lead-text">
                             We’re committed to providing certified primary mill materials, prompt site deliveries, and absolute weight transparency for both builders and wholesale dealers.
                         </p>
@@ -1351,235 +1305,74 @@
         </div>
     </section>
     <!-- Why Choose Us End -->
-<section class="brands-section" id="brands">
-  <div class="container">
-    <div class="section-header text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 680px;">
-      <span class="section-badge">
-        <i class="fa fa-handshake me-1"></i> Authorized Partners
-      </span>
-      <h2>OUR BRANDS</h2>
-      <p class="section-subtitle">
-        Direct wholesale dealerships of India's most trusted steel, cement, and building construction brands.
-      </p>
-    </div>
 
-    <!-- Lens Effect Preset Switcher (Vanilla JS FlexCarousel) -->
-    <div class="brand-flex-toolbar wow fadeInUp" data-wow-delay="0.15s">
-      <div class="brand-preset-group" role="group" aria-label="Carousel lens style">
-        <button type="button" class="brand-preset-btn is-active" data-preset="liquid" aria-pressed="true">Liquid</button>
-        <button type="button" class="brand-preset-btn" data-preset="ribbon" aria-pressed="false">Ribbon</button>
-        <button type="button" class="brand-preset-btn" data-preset="vortex" aria-pressed="false">Vortex</button>
-        <button type="button" class="brand-preset-btn" data-preset="arch" aria-pressed="false">Arch</button>
-      </div>
-    </div>
-
-    <div class="brand-grid">
-
-    <div class="brand-card">
-      <img src="img/agni-tmt-logo.png" alt="Agni">
-      <h3>Agni TMT</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-  <div class="brand-card">
-      <img src="img/brands/1.png" alt="Birla Aerocon">
-      <h3>Birla Aerocon</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/ARS_logo.webp" alt="ARS">-->
-    <!--  <h3>ARS Steel</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-    <div class="brand-card">
-      <img src="img/jsw-steel-logo.jpg" alt="JSW Steel">
-      <h3>JSW Steel</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <div class="brand-card">
-      <img src="img/tata-tiscon-logo.png" alt="TATA Tiscon">
-      <h3>TATA Tiscon</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <div class="brand-card">
-      <img src="img/suryadevbrand.png" alt="Suryadev">
-      <h3>Suryadev</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
- <div class="brand-card">
-      <img src="img/brands/6.png" alt="Renacon Wall Panel">
-      <h3>Renacon Wall Panel</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/pulkit_logo.jpg" alt="Pulkit">-->
-    <!--  <h3>Pulkit Steel</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-    <div class="brand-card">
-      <img src="img/sumangalalogo.jpg" alt="Sumangala">
-      <h3>Sumangala</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-    
-    <div class="brand-card">
-      <img src="img/brands/3.png" alt="DURASTRONG TMT BARS">
-      <h3>Durastrong TMT Bars</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/DURGA.brand.webp" alt="Durga">-->
-    <!--  <h3>Durga Steel</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-    <div class="brand-card">
-      <img src="newbrand.jpg" alt="Cubecrete">
-      <h3>Isteel XLS Tmt Bars</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-    <div class="brand-card">
-      <img src="img/jswbrand.jpg" alt="JSW Cement">
-      <h3>JSW Cement</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <div class="brand-card">
-      <img src="img/ultratechlogo.png" alt="Ultratech">
-      <h3>Ultratech Cement</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <div class="brand-card">
-      <img src="img/ramcobrand.jpg" alt="Ramco">
-      <h3>Ramco</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/coramandalbrand.jpg" alt="Coramandel">-->
-    <!--  <h3>Coramandel Cement</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-
- <div class="brand-card">
-      <img src="img/brands/4.png" alt=" Shyam steel ">
-      <h3> Shyam steel </h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-    <div class="brand-card">
-      <img src="img/zuari-cement-logo-vector.png" alt="Zuari">
-      <h3>Zuari Cement</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
- <div class="brand-card">
-      <img src="img/brands/2.png" alt=" JSW Waterguard Cement">
-      <h3> JSW Waterguard Cement</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/priyacement-redlogo.svg" alt="Priya">-->
-    <!--  <h3>Priya Cement</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-    <!--<div class="brand-card">-->
-    <!--  <img src="img/maha-cement-opc-53-1000x1000-removebg-preview.png" alt="Maha">-->
-    <!--  <h3>Maha Cement</h3>-->
-    <!--  <a href="#" class="btn">View Products</a>-->
-    <!--</div>-->
-
-<div class="brand-card">
-      <img src="img/brands/5.png" alt=" priya cement">
-      <h3> priya cement</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-    <div class="brand-card">
-      <img src="img/blocks.png" alt="Renacon">
-      <h3>Renacon Blocks</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-    <div class="brand-card">
-      <img src="img/cube-logo.jpg" alt="Cubecrete">
-      <h3>Cubecrete</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-    <div class="brand-card">
-      <img src="img/dalmiabrand.jpg" alt="Cubecrete">
-      <h3>Dalmia</h3>
-      <a href="#" class="btn">View Products</a>
-    </div>
-
-
-  </div>
-  </div>
-
-  <!-- WebGL2 Liquid Bend FlexCarousel Stage -->
-  <div class="brand-flex-stage">
-    <div
-      id="brandFlexCarousel"
-      class="flex-carousel brand-flex-carousel"
-      data-preset="liquid"
-      data-intro="rise"
-      data-autoplay="true"
-      data-interval="3.6"
-    ></div>
-  </div>
-</section>
-
-    <!-- Video Modal Start -->
-    <!-- <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- ==============================================
+         4-STEP LOGISTICS WORKFLOW TIMELINE
+         ============================================== -->
+    <section class="how-we-deliver-section site-section" id="workflow">
+        <div class="container">
+            <div class="unified-section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 680px;">
+                <div class="unified-section-eyebrow mb-2">
+                    <span class="unified-pulse-dot"></span>
+                    <span>TRANSPARENT 4-STEP LOGISTICS</span>
                 </div>
-                <div class="modal-body">
-                    <! 16:9 aspect ratio -->
-                    <!-- <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
+                <h2 class="unified-section-title mb-2">How We Deliver to Your Site</h2>
+                <div class="unified-title-bar mb-3"></div>
+                <p class="unified-lead-text">A streamlined, transparent supply process from initial BOQ estimation to certified mechanical crane unloading.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="deliver-step-card">
+                        <div class="deliver-step-badge">STEP 01</div>
+                        <div class="deliver-step-icon icon-orange"><i class="fa fa-calculator"></i></div>
+                        <h4 class="deliver-step-title">Estimation &amp; BOQ</h4>
+                        <p class="deliver-step-desc">Share your material requirements or Bill of Quantities (BOQ). Our technical experts calculate optimal grades and best wholesale prices.</p>
+                        <span class="deliver-step-tag">Instant Quote Desk</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="deliver-step-card">
+                        <div class="deliver-step-badge">STEP 02</div>
+                        <div class="deliver-step-icon icon-emerald"><i class="fa fa-balance-scale"></i></div>
+                        <h4 class="deliver-step-title">100-Ton Weighment</h4>
+                        <p class="deliver-step-desc">Vehicle loads are weighed on our calibrated 100-Ton digital electronic weighbridge. A computer-generated weight ticket is printed.</p>
+                        <span class="deliver-step-tag">Zero Shortage</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="deliver-step-card">
+                        <div class="deliver-step-badge">STEP 03</div>
+                        <div class="deliver-step-icon icon-blue"><i class="fa fa-truck-moving"></i></div>
+                        <h4 class="deliver-step-title">Fleet Site Dispatch</h4>
+                        <p class="deliver-step-desc">Our dedicated transport fleet departs immediately for your project site, keeping your site engineering schedule uninterrupted.</p>
+                        <span class="deliver-step-tag">Pondy &amp; TN Rapid Fleet</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="deliver-step-card">
+                        <div class="deliver-step-badge">STEP 04</div>
+                        <div class="deliver-step-icon icon-purple"><i class="fa fa-clipboard-check"></i></div>
+                        <h4 class="deliver-step-title">Crane Offloading</h4>
+                        <p class="deliver-step-desc">Materials are safely mechanically offloaded directly at your designated storage bay with invoice and mill test certificate handoff.</p>
+                        <span class="deliver-step-tag">Mill Test Certified</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Video Modal End -->
+    </section>
 
-
-    <!-- Obsolete template placeholder sections removed for 2026 clean production -->
-
-
-    <!-- Testimonial Start -->
 <!-- Testimonials Section Start -->
 <section class="testimonial-section site-section">
   <div class="container">
-    <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 650px;">
-      <span class="testimonial-section-badge">
-        <i class="fab fa-google text-primary me-1"></i> 4.9 ★ GOOGLE VERIFIED REVIEWS
-      </span>
-      <h2 class="display-5 fw-bold text-navy mt-2 mb-3">Real Reviews from Real Clients</h2>
-      <p class="text-muted">
+    <div class="unified-section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 680px;">
+      <div class="unified-section-eyebrow mb-2">
+        <span class="unified-pulse-dot"></span>
+        <span>4.9 ★ GOOGLE VERIFIED CLIENT REVIEWS</span>
+      </div>
+      <h2 class="unified-section-title mb-2">Real Reviews from Real Clients</h2>
+      <div class="unified-title-bar mb-3"></div>
+      <p class="unified-lead-text">
         Direct feedback from verified engineers, builders, contractors, and homeowners on Google Reviews.
       </p>
     </div>
@@ -1921,8 +1714,7 @@
 
     <!-- Testimonial End -->
 
-
-    <!-- Curved Transition to Footer -->
+<!-- Curved Transition to Footer -->
 <div class="svg-wave-divider wave-footer-top" style="background:transparent; margin-bottom:-1px;">
     <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:50px;display:block;">
         <path d="M0 25C360 50 720 10 1080 38C1260 52 1380 28 1440 20V50H0V25Z" fill="#062B5B"/>
@@ -2084,6 +1876,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -2094,139 +1887,132 @@ document.addEventListener('DOMContentLoaded', function () {
     <script src="lib/counterup/counterup.min.js"></script>
 
     <!-- Template Javascript -->
-    <!-- Hero Category Carousel (2026 3-Category Autoplay Controller) -->
-    <script src="js/hero-carousel.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- WhatsApp Quick Order Modal Script -->
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const popup = document.getElementById("popupForm");
-  const closeBtn = document.querySelector(".close-btn");
-  const productInput = document.getElementById("product");
-  const form = document.getElementById("orderForm");
+    document.addEventListener("DOMContentLoaded", function() {
+      const popup = document.getElementById("popupForm");
+      const closeBtn = document.querySelector(".close-btn");
+      const productInput = document.getElementById("product");
+      const form = document.getElementById("orderForm");
 
-  // Open popup when "Buy Now" clicked
-  document.querySelectorAll(".buy-btn").forEach(button => {
-    button.addEventListener("click", function() {
-      const productName = this.getAttribute("data-product");
-      if (productInput) productInput.value = productName;
-      if (popup) popup.style.display = "block";
-    });
-  });
-
-  // Close popup
-  if (closeBtn && popup) {
-    closeBtn.addEventListener("click", () => popup.style.display = "none");
-    window.addEventListener("click", e => {
-      if (e.target === popup) popup.style.display = "none";
-    });
-  }
-
-  // Submit form (send to WhatsApp)
-  if (form) {
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name") ? document.getElementById("name").value : '';
-      const phone = document.getElementById("phone") ? document.getElementById("phone").value : '';
-      const address = document.getElementById("address") ? document.getElementById("address").value : '';
-      const product = document.getElementById("product") ? document.getElementById("product").value : '';
-
-      const message = `Name: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProduct: ${product}`;
-      const whatsappURL = `https://wa.me/+919994011468?text=${message}`;
-      
-      window.open(whatsappURL, "_blank");
-      if (popup) popup.style.display = "none";
-      form.reset();
-    });
-  }
-});
-</script>
-    <script src="js/preloader.js"></script>
-
-<script>
-// ==============================================
-// FEATURED PRODUCTS INSTANT FILTER & SEARCH LOGIC
-// ==============================================
-(function() {
-  function initProductsCatalog() {
-    const filterBtns = document.querySelectorAll('.cat-filter-btn');
-    const searchInput = document.getElementById('catalogSearch');
-    const clearBtn = document.getElementById('catalogSearchClear');
-    const resetBtn = document.getElementById('resetCatalogFilter');
-    const products = document.querySelectorAll('#featuredProductsGrid .product');
-    const noResults = document.getElementById('catalogNoResults');
-    let currentFilter = 'all';
-
-    function applyFilter() {
-      const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
-      if (clearBtn) {
-        clearBtn.style.display = query.length > 0 ? 'inline-flex' : 'none';
-      }
-
-      let visibleCount = 0;
-      products.forEach(function(card) {
-        const cat = card.getAttribute('data-category') || '';
-        const titleEl = card.querySelector('.product-title');
-        const descEl = card.querySelector('.product-desc');
-        const text = ((titleEl ? titleEl.textContent : '') + ' ' + (descEl ? descEl.textContent : '')).toLowerCase();
-
-        const matchCat = (currentFilter === 'all') || (cat === currentFilter);
-        const matchSearch = !query || text.indexOf(query) !== -1;
-
-        if (matchCat && matchSearch) {
-          card.classList.remove('is-hidden');
-          visibleCount++;
-        } else {
-          card.classList.add('is-hidden');
-        }
-      });
-
-      if (noResults) {
-        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-      }
-    }
-
-    filterBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        filterBtns.forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-        currentFilter = this.getAttribute('data-filter') || 'all';
-        applyFilter();
-      });
-    });
-
-    if (searchInput) {
-      searchInput.addEventListener('input', applyFilter);
-    }
-
-    if (clearBtn) {
-      clearBtn.addEventListener('click', function() {
-        if (searchInput) searchInput.value = '';
-        applyFilter();
-      });
-    }
-
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function() {
-        if (searchInput) searchInput.value = '';
-        currentFilter = 'all';
-        filterBtns.forEach(function(b) {
-          b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+      document.querySelectorAll(".buy-btn").forEach(button => {
+        button.addEventListener("click", function() {
+          const productName = this.getAttribute("data-product");
+          if (productInput) productInput.value = productName;
+          if (popup) popup.style.display = "block";
         });
-        applyFilter();
       });
-    }
-  }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initProductsCatalog);
-  } else {
-    initProductsCatalog();
-  }
-})();
-</script>
-    <script src="js/brand-flex-carousel.js"></script>
+      if (closeBtn && popup) {
+        closeBtn.addEventListener("click", () => popup.style.display = "none");
+        window.addEventListener("click", e => {
+          if (e.target === popup) popup.style.display = "none";
+        });
+      }
 
-    <!-- 2026 Interaction Engine (Reveal, Counters, Ripple, Parallax, Marquee) -->
+      if (form) {
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const name = document.getElementById("name") ? document.getElementById("name").value : '';
+          const phone = document.getElementById("phone") ? document.getElementById("phone").value : '';
+          const address = document.getElementById("address") ? document.getElementById("address").value : '';
+          const product = document.getElementById("product") ? document.getElementById("product").value : '';
+
+          const message = `Name: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AProduct: ${product}`;
+          const whatsappURL = `https://wa.me/+919994011468?text=${message}`;
+          
+          window.open(whatsappURL, "_blank");
+          if (popup) popup.style.display = "none";
+          form.reset();
+        });
+      }
+    });
+    </script>
+
+    <!-- Featured Products Filter & Search Logic -->
+    <script>
+    (function() {
+      function initProductsCatalog() {
+        const filterBtns = document.querySelectorAll('.cat-filter-btn');
+        const searchInput = document.getElementById('catalogSearch');
+        const clearBtn = document.getElementById('catalogSearchClear');
+        const resetBtn = document.getElementById('resetCatalogFilter');
+        const products = document.querySelectorAll('#featuredProductsGrid .product');
+        const noResults = document.getElementById('catalogNoResults');
+        let currentFilter = 'all';
+
+        function applyFilter() {
+          const query = (searchInput ? searchInput.value : '').trim().toLowerCase();
+          if (clearBtn) {
+            clearBtn.style.display = query.length > 0 ? 'inline-flex' : 'none';
+          }
+
+          let visibleCount = 0;
+          products.forEach(function(card) {
+            const cat = card.getAttribute('data-category') || '';
+            const titleEl = card.querySelector('.product-title');
+            const descEl = card.querySelector('.product-desc');
+            const text = ((titleEl ? titleEl.textContent : '') + ' ' + (descEl ? descEl.textContent : '')).toLowerCase();
+
+            const matchCat = (currentFilter === 'all') || (cat === currentFilter);
+            const matchSearch = !query || text.indexOf(query) !== -1;
+
+            if (matchCat && matchSearch) {
+              card.classList.remove('is-hidden');
+              visibleCount++;
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+
+          if (noResults) {
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+          }
+        }
+
+        filterBtns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            filterBtns.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+            currentFilter = this.getAttribute('data-filter') || 'all';
+            applyFilter();
+          });
+        });
+
+        if (searchInput) {
+          searchInput.addEventListener('input', applyFilter);
+        }
+
+        if (clearBtn) {
+          clearBtn.addEventListener('click', function() {
+            if (searchInput) searchInput.value = '';
+            applyFilter();
+          });
+        }
+
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function() {
+            if (searchInput) searchInput.value = '';
+            currentFilter = 'all';
+            filterBtns.forEach(function(b) {
+              b.classList.toggle('active', b.getAttribute('data-filter') === 'all');
+            });
+            applyFilter();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProductsCatalog);
+      } else {
+        initProductsCatalog();
+      }
+    })();
+    </script>
+
+    <!-- 2026 Interaction Engine (Reveal, Counters, Ripple, Parallax, Marquee, Shrinking Navbar) -->
     <script src="js/anbu-interactions.js"></script>
 </body>
 

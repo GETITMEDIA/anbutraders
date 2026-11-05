@@ -309,6 +309,56 @@
   }
 
   /**
+   * 7. NAVBAR SHRINK & GLASSMORPHISM ON SCROLL
+   */
+  function initNavbarShrink() {
+    var navbar = document.querySelector('.navbar.sticky-top');
+    if (!navbar) return;
+
+    var handleScroll = function () {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  /**
+   * 8. HERO REFERENCE INTERACTIVE DOCKED PILLS
+   */
+  function initHeroReferencePills() {
+    var pills = document.querySelectorAll('.ref-dock-pill');
+    var bgLayers = document.querySelectorAll('.hero-bg-layer');
+    if (!pills.length || !bgLayers.length) return;
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target-bg');
+        pills.forEach(function (p) { p.classList.remove('is-active'); });
+        this.classList.add('is-active');
+
+        bgLayers.forEach(function (layer) {
+          if (layer.id === targetId) {
+            layer.classList.add('is-active');
+          } else {
+            layer.classList.remove('is-active');
+          }
+        });
+      });
+
+      pill.addEventListener('dblclick', function () {
+        var link = this.getAttribute('data-link');
+        if (link) window.location.href = link;
+      });
+    });
+  }
+
+  /**
    * INITIALIZE ALL ON DOM READY
    */
   function initAll() {
@@ -318,6 +368,8 @@
     initHeroParallax();
     initBrandMarquee();
     initBusinessesBento();
+    initNavbarShrink();
+    initHeroReferencePills();
   }
 
   if (document.readyState === 'loading') {
