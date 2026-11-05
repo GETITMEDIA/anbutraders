@@ -472,12 +472,21 @@ a {
   width: 100%;
 }
 
-.hero-carousel-slide {
+.hero-paint-carousel-wrapper .carousel-item {
   position: relative;
   min-height: 600px;
-  display: flex;
-  align-items: center;
+  display: none;
   background-color: #F8FAFC;
+  width: 100%;
+  margin-right: -100%;
+  float: left;
+}
+
+.hero-paint-carousel-wrapper .carousel-item.active,
+.hero-paint-carousel-wrapper .carousel-item-next,
+.hero-paint-carousel-wrapper .carousel-item-prev {
+  display: flex !important;
+  align-items: center;
 }
 
 .hero-slide-bg {
@@ -1145,11 +1154,11 @@ a {
 .container-fluid.px-lg-5,
 .container-fluid.px-md-5 {
   width: 100% !important;
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(20px, 4vw, 48px) !important;
-  padding-right: clamp(20px, 4vw, 48px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
   box-sizing: border-box !important;
 }
 
@@ -1157,20 +1166,20 @@ a {
 .anbu-topbar .container-fluid,
 .anbu-navbar .container-fluid,
 .anbu-footer .container-fluid {
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(20px, 4vw, 48px) !important;
-  padding-right: clamp(20px, 4vw, 48px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
 }
 
 /* Hero container alignment */
 .hero-slide-container {
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(20px, 4vw, 48px) !important;
-  padding-right: clamp(20px, 4vw, 48px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
 }
 
 /* ==========================================================================
@@ -3303,13 +3312,46 @@ a {
 .anbu-topbar .container-fluid,
 .anbu-navbar .container-fluid,
 .anbu-footer .container-fluid {
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(20px, 4vw, 48px) !important;
-  padding-right: clamp(20px, 4vw, 48px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container,
+  .container-fluid,
+  .container-fluid.px-lg-5,
+  .hero-slide-container {
+    max-width: 1180px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container,
+  .container-fluid,
+  .container-fluid.px-lg-5,
+  .hero-slide-container {
+    max-width: 720px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container,
+  .container-fluid,
+  .container-fluid.px-lg-5,
+  .hero-slide-container {
+    max-width: 100% !important;
+    padding-left: clamp(16px, 4vw, 20px) !important;
+    padding-right: clamp(16px, 4vw, 20px) !important;
+  }
 }
 
 /* Ensure outer sections have full 100% background width while inner stays centered */
@@ -4803,13 +4845,29 @@ section,
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(18px, 3.5vw, 36px) !important;
-  padding-right: clamp(18px, 3.5vw, 36px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+@media (max-width: 991.98px) {
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    padding-left: clamp(16px, 4vw, 20px) !important;
+    padding-right: clamp(16px, 4vw, 20px) !important;
+  }
 }
 
 .anbu-footer-grid {
@@ -5121,5 +5179,90 @@ section,
     flex-direction: column;
     text-align: center;
     justify-content: center;
+  }
+}
+
+/* ========================================================
+   2026 UNIFIED SECTION VERTICAL SPACING (PAINT)
+   ======================================================== */
+:root {
+  --section-spacing-y: clamp(80px, 7.5vw, 104px);
+  --section-spacing-tablet: clamp(60px, 6.5vw, 76px);
+  --section-spacing-mobile: clamp(40px, 5.5vw, 56px);
+}
+
+.services-section,
+.get-to-know-section,
+.shade-mixing-section,
+.branches-showcase-section,
+.contact-interactive-section,
+.visualizer-section,
+.solutions-section,
+.projects-section,
+.berger-about-section,
+.berger-range-section,
+.berger-app-section,
+.berger-benefits-section,
+.jsw-about-section,
+.jsw-range-section,
+.jsw-app-section,
+.jsw-benefits-section,
+.birla-about-section,
+.birla-range-section,
+.birla-app-section,
+.birla-benefits-section {
+  padding-top: var(--section-spacing-y) !important;
+  padding-bottom: var(--section-spacing-y) !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .services-section,
+  .get-to-know-section,
+  .shade-mixing-section,
+  .branches-showcase-section,
+  .contact-interactive-section,
+  .visualizer-section,
+  .solutions-section,
+  .projects-section,
+  .berger-about-section,
+  .berger-range-section,
+  .berger-app-section,
+  .berger-benefits-section,
+  .jsw-about-section,
+  .jsw-range-section,
+  .jsw-app-section,
+  .jsw-benefits-section,
+  .birla-about-section,
+  .birla-range-section,
+  .birla-app-section,
+  .birla-benefits-section {
+    padding-top: var(--section-spacing-tablet) !important;
+    padding-bottom: var(--section-spacing-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-section,
+  .get-to-know-section,
+  .shade-mixing-section,
+  .branches-showcase-section,
+  .contact-interactive-section,
+  .visualizer-section,
+  .solutions-section,
+  .projects-section,
+  .berger-about-section,
+  .berger-range-section,
+  .berger-app-section,
+  .berger-benefits-section,
+  .jsw-about-section,
+  .jsw-range-section,
+  .jsw-app-section,
+  .jsw-benefits-section,
+  .birla-about-section,
+  .birla-range-section,
+  .birla-app-section,
+  .birla-benefits-section {
+    padding-top: var(--section-spacing-mobile) !important;
+    padding-bottom: var(--section-spacing-mobile) !important;
   }
 }

@@ -1,28 +1,30 @@
 const fs = require('fs');
 
-const pages = ['index.html', 'about.html', 'contact.html', 'service.html', 'project.html', 'team.html', 'testimonial.html', 'feature.html', '404.html'];
+const cssFiles = [
+  'css/style.css',
+  'css/anbu-category-shared.css',
+  'a-steel/assets/css/a-steel-2026.css',
+  'anbu-paint/assets/css/anbu-paint-2026.css',
+  'cement/anbucement/css/cement-redesign.css'
+];
 
-console.log('=== CHECKING POTENTIAL OVERFLOW RISKS IN HTML FILES ===');
-
-pages.forEach(p => {
-  const html = fs.readFileSync(p, 'utf8');
-  console.log(`\n--- ${p} ---`);
-  
-  // 1. Rows not inside containers
-  const rowMatches = [...html.matchAll(/<div[^>]*class=["'][^"']*\brow\b[^"']*["']/g)];
-  console.log(`  Total .row elements: ${rowMatches.length}`);
-  
-  // 2. Inline widths
-  const inlineWidths = [...html.matchAll(/style=["'][^"']*width:\s*([^;]+)/g)].map(m => m[1].trim());
-  const largeWidths = inlineWidths.filter(w => !w.includes('%') && !w.includes('auto') && parseInt(w) > 300);
-  if (largeWidths.length > 0) {
-    console.log(`  Large inline widths: ${largeWidths.join(', ')}`);
-  }
-
-  // 3. Elements with px-5 or pe-5 or ps-5 on mobile
-  const p5Matches = [...html.matchAll(/class=["'][^"']*\b(p[xse]-[45])\b[^"']*["']/g)].map(m => m[1]);
-  if (p5Matches.length > 0) {
-    console.log(`  Large padding utilities (p-4/p-5): ${[...new Set(p5Matches)].join(', ')}`);
-  }
+cssFiles.forEach(file => {
+  if (!fs.existsSync(file)) return;
+  const content = fs.readFileSync(file, 'utf8');
+  console.log(`\n=== Scanning ${file} for potential overflow rules ===`);
+  const lines = content.split('\n');
+  lines.forEach((line, idx) => {
+    // Check fixed widths in px > 400
+    if (/width:\s*[4-9]\d{2,}px|width:\s*[1-9]\d{3,}px/.test(line) && !line.includes('max-width')) {
+      if (!line.includes('@media') && !line.includes('translate')) {
+        console.log(`  Line ${idx+1} [Fixed width]: ${line.trim()}`);
+      }
+    }
+    // Check negative margins
+    if (/margin(?:-left|-right)?:\s*-\d{2,}px/.test(line)) {
+      if (!line.includes('row') && !line.includes('divider') && !line.includes('skew')) {
+        console.log(`  Line ${idx+1} [Negative margin]: ${line.trim()}`);
+      }
+    }
+  });
 });
-

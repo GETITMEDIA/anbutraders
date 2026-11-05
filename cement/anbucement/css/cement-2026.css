@@ -1698,3 +1698,77 @@ img {
     animation: none !important;
   }
 }
+
+/* ========================================================
+   2026 UNIFIED SYSTEMIC SPACING & CONTAINER SYSTEM (CEMENT 2026)
+   ======================================================== */
+:root {
+  --site-container-max: 1260px;
+  --container-px: clamp(24px, 2.8vw, 36px);
+  --container-px-tablet: 24px;
+  --container-px-mobile: clamp(16px, 4vw, 20px);
+  --section-spacing-y: clamp(80px, 7.5vw, 104px);
+  --section-spacing-tablet: clamp(60px, 6.5vw, 76px);
+  --section-spacing-mobile: clamp(40px, 5.5vw, 56px);
+}
+
+.container,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.site-container {
+  width: 100% !important;
+  max-width: var(--site-container-max, 1260px) !important;
+  padding-right: var(--container-px) !important;
+  padding-left: var(--container-px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container {
+    max-width: 1260px !important;
+    padding-right: clamp(28px, 2.5vw, 36px) !important;
+    padding-left: clamp(28px, 2.5vw, 36px) !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container {
+    max-width: 1180px !important;
+    padding-right: 28px !important;
+    padding-left: 28px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container {
+    max-width: 960px !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container {
+    max-width: 720px !important;
+    padding-right: var(--container-px-tablet) !important;
+    padding-left: var(--container-px-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container {
+    max-width: 100% !important;
+    padding-right: var(--container-px-mobile) !important;
+    padding-left: var(--container-px-mobile) !important;
+  }
+}

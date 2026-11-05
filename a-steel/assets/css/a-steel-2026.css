@@ -2532,13 +2532,29 @@ a {
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: 1320px !important;
+  max-width: 1260px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(18px, 3.5vw, 36px) !important;
-  padding-right: clamp(18px, 3.5vw, 36px) !important;
+  padding-left: clamp(24px, 2.8vw, 36px) !important;
+  padding-right: clamp(24px, 2.8vw, 36px) !important;
   width: 100% !important;
   box-sizing: border-box !important;
+}
+
+@media (max-width: 991.98px) {
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    padding-left: clamp(16px, 4vw, 20px) !important;
+    padding-right: clamp(16px, 4vw, 20px) !important;
+  }
 }
 
 .anbu-footer-grid {
@@ -2850,5 +2866,450 @@ a {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+  }
+}
+
+/* ========================================================
+   2026 UNIFIED SYSTEMIC SPACING & CONTAINER SYSTEM (STEEL)
+   ======================================================== */
+:root {
+  --site-container-max: 1260px;
+  --container-px: clamp(24px, 2.8vw, 36px);
+  --container-px-tablet: 24px;
+  --container-px-mobile: clamp(16px, 4vw, 20px);
+  --section-spacing-y: clamp(80px, 7.5vw, 104px);
+  --section-spacing-tablet: clamp(60px, 6.5vw, 76px);
+  --section-spacing-mobile: clamp(40px, 5.5vw, 56px);
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+.container,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.site-container,
+.anbu-hero-container,
+.anbu-trust-wrapper {
+  width: 100% !important;
+  max-width: var(--site-container-max, 1260px) !important;
+  padding-right: var(--container-px) !important;
+  padding-left: var(--container-px) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container, .anbu-hero-container, .anbu-trust-wrapper {
+    max-width: 1260px !important;
+    padding-right: clamp(28px, 2.5vw, 36px) !important;
+    padding-left: clamp(28px, 2.5vw, 36px) !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container, .anbu-hero-container, .anbu-trust-wrapper {
+    max-width: 1180px !important;
+    padding-right: 28px !important;
+    padding-left: 28px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container, .anbu-hero-container, .anbu-trust-wrapper {
+    max-width: 960px !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container, .anbu-hero-container, .anbu-trust-wrapper {
+    max-width: 720px !important;
+    padding-right: var(--container-px-tablet) !important;
+    padding-left: var(--container-px-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
+  .site-container, .anbu-hero-container, .anbu-trust-wrapper {
+    max-width: 100% !important;
+    padding-right: var(--container-px-mobile) !important;
+    padding-left: var(--container-px-mobile) !important;
+  }
+}
+
+/* Guard against nested container double padding */
+.container .container,
+.container-fluid .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Section Vertical Spacing */
+.anbu-about-section,
+.anbu-products-section,
+.anbu-why-section,
+.anbu-projects-section,
+.anbu-gallery-section,
+.contact-section {
+  padding-top: var(--section-spacing-y) !important;
+  padding-bottom: var(--section-spacing-y) !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .anbu-about-section,
+  .anbu-products-section,
+  .anbu-why-section,
+  .anbu-projects-section,
+  .anbu-gallery-section,
+  .contact-section {
+    padding-top: var(--section-spacing-tablet) !important;
+    padding-bottom: var(--section-spacing-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anbu-about-section,
+  .anbu-products-section,
+  .anbu-why-section,
+  .anbu-projects-section,
+  .anbu-gallery-section,
+  .contact-section {
+    padding-top: var(--section-spacing-mobile) !important;
+    padding-bottom: var(--section-spacing-mobile) !important;
+  }
+}
+
+
+/* ==============================================
+   2026 HERO CAROUSEL SECTION (Matches anbu-paint Luxury Architectural Feel)
+   ============================================== */
+.hero-paint-carousel-wrapper.anbu-steel-hero-wrapper {
+  position: relative;
+  background-color: #F8FAFC;
+  min-height: 600px;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+#anbuHeroCarousel {
+  position: relative;
+  width: 100%;
+}
+
+.anbu-steel-hero-wrapper .carousel-item {
+  display: none;
+  position: relative;
+  min-height: 600px;
+  background-color: #F8FAFC;
+  width: 100%;
+  margin-right: -100%;
+  float: left;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active,
+.anbu-steel-hero-wrapper .carousel-item-next,
+.anbu-steel-hero-wrapper .carousel-item-prev {
+  display: flex !important;
+  align-items: center;
+}
+
+.anbu-steel-hero-wrapper .hero-slide-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  transition: transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active .hero-slide-bg {
+  transform: scale(1.028);
+}
+
+/* Luxury Light & Sunny Gradient - Soft, natural transition */
+.anbu-steel-hero-wrapper .hero-slide-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    #FFFFFF 0%, 
+    #FFFFFF 30%, 
+    rgba(255, 255, 255, 0.94) 44%, 
+    rgba(255, 255, 255, 0.40) 60%, 
+    transparent 76%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.anbu-steel-hero-wrapper .hero-slide-container {
+  position: relative;
+  z-index: 5;
+  padding-top: 85px;
+  padding-bottom: 95px;
+  width: 100%;
+}
+
+/* Eyebrow Pill Badge */
+.anbu-steel-hero-wrapper .hero-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 101, 0, 0.08);
+  border: 1px solid rgba(255, 101, 0, 0.22);
+  color: var(--primary-orange);
+  font-family: var(--font-heading);
+  font-size: 0.781rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.anbu-steel-hero-wrapper .hero-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary-orange);
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(255, 101, 0, 0.6);
+  animation: steelPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes steelPulseDot {
+  0% { box-shadow: 0 0 0 0 rgba(255, 101, 0, 0.6); }
+  70% { box-shadow: 0 0 0 7px rgba(255, 101, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 101, 0, 0); }
+}
+
+/* Clean, Minimalist Typography matching anbu-paint Reference */
+.anbu-steel-hero-wrapper .hero-clean-title {
+  font-family: var(--font-heading);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.anbu-steel-hero-wrapper .hero-title-dark {
+  font-size: clamp(34px, 3.6vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+  color: #0F1E36;
+  letter-spacing: -0.025em;
+  white-space: nowrap;
+}
+
+.anbu-steel-hero-wrapper .hero-title-orange {
+  font-size: clamp(38px, 4.2vw, 54px);
+  line-height: 1.12;
+  font-weight: 800;
+  color: var(--primary-orange);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+/* Orange Accent Line */
+.anbu-steel-hero-wrapper .hero-accent-line {
+  width: 44px;
+  height: 3.5px;
+  background: var(--primary-orange);
+  border-radius: 2px;
+  margin: 16px 0 18px;
+}
+
+/* Clean 2-Line Subtitle */
+.anbu-steel-hero-wrapper .hero-clean-subtitle {
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.62;
+  max-width: 480px;
+  margin-bottom: 26px;
+}
+
+/* Clean Hero CTA Container */
+.anbu-steel-hero-wrapper .hero-clean-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  position: relative;
+  overflow: visible !important;
+  min-height: 52px;
+  z-index: 10;
+}
+
+/* Single Pill CTA Button */
+.anbu-steel-hero-wrapper .btn-hero-clean {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-orange);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 13px 30px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 22px rgba(255, 101, 0, 0.35);
+  border: none;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anbu-steel-hero-wrapper .btn-hero-clean:hover {
+  background: var(--primary-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 101, 0, 0.45);
+  color: #FFFFFF !important;
+}
+
+.anbu-steel-hero-wrapper .btn-hero-clean i {
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.anbu-steel-hero-wrapper .btn-hero-clean:hover i {
+  transform: translateX(4px);
+}
+
+.anbu-steel-hero-wrapper .btn-hero-clean-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  color: #0F1E36 !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #0F1E36;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.anbu-steel-hero-wrapper .btn-hero-clean-outline:hover {
+  background: #0F1E36;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 30, 54, 0.2);
+}
+
+/* Slide Content Entrance Animation */
+.anbu-steel-hero-wrapper .carousel-item.active .hero-eyebrow-pill {
+  animation: steelHeroSlideUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) both 0.05s;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active .hero-clean-title {
+  animation: steelHeroSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both 0.12s;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active .hero-accent-line {
+  animation: steelHeroSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both 0.20s;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active .hero-clean-subtitle {
+  animation: steelHeroSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both 0.28s;
+}
+
+.anbu-steel-hero-wrapper .carousel-item.active .hero-clean-cta {
+  animation: steelHeroSlideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both 0.36s;
+}
+
+@keyframes steelHeroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modern Bottom Dots Indicators */
+.anbu-steel-hero-wrapper .hero-carousel-dots {
+  position: absolute;
+  bottom: 24px !important;
+  left: 0;
+  right: 0;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center;
+  gap: 10px;
+  z-index: 12;
+}
+
+.anbu-steel-hero-wrapper .hero-carousel-dots button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: rgba(15, 30, 54, 0.35) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.anbu-steel-hero-wrapper .hero-carousel-dots button.active {
+  width: 28px !important;
+  border-radius: 5px !important;
+  background-color: var(--primary-orange) !important;
+}
+
+@media (max-width: 991.98px) {
+  .anbu-steel-hero-wrapper .hero-slide-bg::after {
+    background: linear-gradient(180deg, 
+      rgba(255, 255, 255, 0.94) 0%, 
+      rgba(255, 255, 255, 0.85) 55%, 
+      rgba(255, 255, 255, 0.40) 100%);
+  }
+  .anbu-steel-hero-wrapper .hero-title-dark,
+  .anbu-steel-hero-wrapper .hero-title-orange {
+    white-space: normal;
+  }
+  .anbu-steel-hero-wrapper .carousel-item {
+    min-height: 520px;
+  }
+  .anbu-steel-hero-wrapper .hero-slide-container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .anbu-steel-hero-wrapper .hero-clean-subtitle {
+    font-size: 14px;
+  }
+  .anbu-steel-hero-wrapper .carousel-item {
+    min-height: 480px;
   }
 }

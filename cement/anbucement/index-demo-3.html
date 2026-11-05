@@ -13,6 +13,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="../../img/icon.png">
 
+        <!-- Google Web Fonts (Matches anbu-paint Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome & Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -150,68 +155,103 @@
         </div>
     </nav>
 
-    <!-- ==============================================
-         3. HERO SECTION (Bright Daylight Depot + White Card)
+        <!-- ==============================================
+         3. HERO SECTION (Light, Sunny & Minimal Aesthetic - Matches anbu-paint Feel)
          ============================================== -->
-    <section class="hero-section relative" id="home">
-        <div class="hero-section-content">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Left: Modern White Hero Card -->
-                    <div class="col-lg-7 col-md-12">
-                        <div class="hero-glass-card">
-                            <div class="hero-badge-pill">
-                                <i class="fa fa-certificate" style="color: var(--c-orange);"></i> ANBU TRADERS • STEEL & CEMENT DIVISION
-                            </div>
-                            <h1>Dedicated Cement Company, <span class="highlight-orange">Builders Know Our</span> Product Well.</h1>
-                            <p class="g-text">
-                                Steel is a strong, versatile alloy of iron and carbon used in construction for its high strength and durability. Cement is a fine powder that, when mixed with water, hardens into concrete, serving as a key binding agent in construction.
-                            </p>
+    <section class="hero-paint-carousel-wrapper anbu-cement-hero-wrapper" id="home">
+        <div id="anbuCementHeroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-pause="hover">
+            <!-- Carousel Bottom Dots Indicators -->
+            <ol class="carousel-indicators hero-carousel-dots">
+                <li data-target="#anbuCementHeroCarousel" data-slide-to="0" class="active" aria-label="Slide 1 - Primary TMT Steel Rebars"></li>
+                <li data-target="#anbuCementHeroCarousel" data-slide-to="1" aria-label="Slide 2 - Certified Construction Cements"></li>
+                <li data-target="#anbuCementHeroCarousel" data-slide-to="2" aria-label="Slide 3 - Civil Foundation Materials"></li>
+            </ol>
 
-                            <!-- Authorized Brand Chips -->
-                            <div class="hero-brand-chips">
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> UltraTech</span>
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> JSW Cement</span>
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> Dalmia</span>
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> Tata Tiscon</span>
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> Ramco</span>
-                                <span class="hero-brand-chip"><i class="fa fa-shield"></i> Fe-550D TMT</span>
-                            </div>
-
-                            <!-- CTA Button Group -->
-                            <div class="hero-actions">
-                                <a href="contact-us.html" class="btn-hero-orange">
-                                    <i class="fa fa-paper-plane"></i> Contact Us
-                                </a>
-                                <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20a%20price%20quote%20for%20Steel%20and%20Cement." target="_blank" rel="noopener noreferrer" class="btn-hero-whatsapp">
-                                    <i class="fa fa-whatsapp"></i> Price Quote
-                                </a>
-                                <a href="tel:+919626325204" class="btn-hero-phone">
-                                    <i class="fa fa-phone"></i> Call: 9626325204
-                                </a>
+            <div class="carousel-inner">
+                <!-- Slide 1: Primary TMT Steel Rebars -->
+                <div class="carousel-item active hero-carousel-slide anbu-cement-slide-1">
+                    <div class="hero-slide-bg" style="background-image: url('img/slider/hero_steel_1.jpg');"></div>
+                    <div class="container hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="hero-eyebrow-pill">
+                                    <span class="hero-pulse-dot"></span> DIRECT MILL DISTRIBUTOR
+                                </div>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Primary Mill TMT</span>
+                                    <span class="hero-title-orange">Fe-550D Steel Rebars</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Authorized primary stockist of Tata Tiscon 550D, JSW Neosteel, and Agni TMT with 100-ton computerized digital weighbridge accuracy.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20a%20price%20quote%20for%20TMT%20Steel%20Rebars." class="btn-hero-clean" target="_blank" rel="noopener noreferrer">
+                                        Get Instant Quote <i class="fa fa-arrow-right ml-1"></i>
+                                    </a>
+                                    <a href="#services" class="btn-hero-clean-outline">
+                                        Explore Products <i class="fa fa-shield ml-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Right: Floating Mill Distributor Badge -->
-                    <div class="col-lg-5 d-none d-lg-block">
-                        <div class="hero-floating-spec ml-lg-4">
-                            <span class="badge badge-warning text-uppercase px-3 py-2 mb-3" style="font-weight: 800; font-size: 11px; letter-spacing: 1px;">DIRECT MILL DISTRIBUTOR</span>
-                            <h4>Pondicherry's Premier Construction Supplier</h4>
-                            <p>Direct wholesale supply for Grade-53 cements and BIS-certified high-tensile TMT steel bars with accurate weighbridge billing.</p>
-                            <hr style="border-color: rgba(255, 255, 255, 0.15);">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <div style="font-size: 20px; font-weight: 800; color: var(--c-orange);">11+ Years</div>
-                                    <small style="color: #cbd5e1;">Industry Trust</small>
+                <!-- Slide 2: Certified Construction Cements -->
+                <div class="carousel-item hero-carousel-slide anbu-cement-slide-2">
+                    <div class="hero-slide-bg" style="background-image: url('img/slider/hero_cement_2.jpg');"></div>
+                    <div class="container hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="hero-eyebrow-pill">
+                                    <span class="hero-pulse-dot"></span> AUTHORIZED WHOLESALE DEPOT
                                 </div>
-                                <div>
-                                    <div style="font-size: 20px; font-weight: 800; color: #38bdf8;">100% Genuine</div>
-                                    <small style="color: #cbd5e1;">Factory Certified</small>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Grade-53 Cement</span>
+                                    <span class="hero-title-orange">Bulk Project Supply</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Direct wholesale distributor for UltraTech, Dalmia DSP, Ramco Super, and Coromandel cements with zero-hour rapid site dispatch.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20a%20price%20quote%20for%20Cement." class="btn-hero-clean" target="_blank" rel="noopener noreferrer">
+                                        Get Cement Rates <i class="fa fa-arrow-right ml-1"></i>
+                                    </a>
+                                    <a href="#services" class="btn-hero-clean-outline">
+                                        View Brands <i class="fa fa-shield ml-1"></i>
+                                    </a>
                                 </div>
-                                <div>
-                                    <div style="font-size: 20px; font-weight: 800; color: #4ade80;">Direct-to-Site</div>
-                                    <small style="color: #cbd5e1;">Fleet Transport</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Civil Foundation Materials -->
+                <div class="carousel-item hero-carousel-slide anbu-cement-slide-3">
+                    <div class="hero-slide-bg" style="background-image: url('img/slider/hero_foundation_3.jpg');"></div>
+                    <div class="container hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <div class="hero-eyebrow-pill">
+                                    <span class="hero-pulse-dot"></span> COMPLETE STRUCTURAL STRENGTH
+                                </div>
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Foundation to Roof</span>
+                                    <span class="hero-title-orange">Civil Strength</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    11+ years of trusted building material supply in Pondicherry and Tamil Nadu with guaranteed mill certification and direct fleet transport.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Steel%20and%20Cement." class="btn-hero-clean" target="_blank" rel="noopener noreferrer">
+                                        Instant Price Quote <i class="fa fa-arrow-right ml-1"></i>
+                                    </a>
+                                    <a href="#services" class="btn-hero-clean-outline">
+                                        Our Services <i class="fa fa-building ml-1"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -1,8 +1,8 @@
 /* =============================================
-   ANBU TRADERS — 2026 UNIFIED DESIGN SYSTEM
+   ANBU TRADERS â€” 2026 UNIFIED DESIGN SYSTEM
    ============================================= */
 
-/* ── Design Tokens ── */
+/* â”€â”€ Design Tokens â”€â”€ */
 :root {
   /* Brand Colours */
   --primary-navy: #062B5B;
@@ -50,7 +50,7 @@
   --dark: #062B5B;
 }
 
-/* ── Reset & Foundations ── */
+/* â”€â”€ Reset & Foundations â”€â”€ */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -74,7 +74,7 @@ img {
   height: auto;
 }
 
-/* ── Typography ── */
+/* â”€â”€ Typography â”€â”€ */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading);
@@ -112,7 +112,7 @@ a {
   background-color: var(--primary-orange) !important;
 }
 
-/* ── Spinner ── */
+/* â”€â”€ Spinner â”€â”€ */
 /* Hide spinner immediately if user has already entered the site */
 html.already-visited #spinner {
   display: none !important;
@@ -139,7 +139,7 @@ html.already-visited #spinner {
   border-right-color: transparent;
 }
 
-/* ── Back to Top ── */
+/* â”€â”€ Back to Top â”€â”€ */
 .back-to-top {
   position: fixed;
   display: none;
@@ -163,7 +163,7 @@ html.already-visited #spinner {
   box-shadow: 0 6px 20px rgba(243,106,33,0.45);
 }
 
-/* ── Buttons ── */
+/* â”€â”€ Buttons â”€â”€ */
 .btn {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -228,8 +228,8 @@ html.already-visited #spinner {
   font-weight: normal;
 }
 
-/* ── Topbar ── */
-/* ── Topbar & Call Buttons ── */
+/* â”€â”€ Topbar â”€â”€ */
+/* â”€â”€ Topbar & Call Buttons â”€â”€ */
 .topbar-call-link {
   color: #ffffff !important;
   font-family: var(--font-heading);
@@ -299,7 +299,7 @@ html.already-visited #spinner {
   background-color: var(--primary-orange);
 }
 
-/* ── Navbar ── */
+/* â”€â”€ Navbar â”€â”€ */
 .navbar.sticky-top {
   top: -100px;
   transition: all var(--transition-slow);
@@ -317,7 +317,7 @@ html.already-visited #spinner {
 
 .navbar .navbar-brand {
   position: relative;
-  padding-right: 50px;
+  padding-right: 20px;
   height: 75px;
   display: flex;
   align-items: center;
@@ -325,14 +325,7 @@ html.already-visited #spinner {
 }
 
 .navbar .navbar-brand::after {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 100%;
-  top: 0;
-  right: -25px;
-  transform: skewX(-30deg);
-  background-color: var(--primary-orange);
+  display: none !important;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -465,7 +458,7 @@ html.already-visited #spinner {
 
 
 /* ========================================================
-   ANBU TRADERS — 2026 HERO 3-CATEGORY CAROUSEL (JSW STYLE)
+   ANBU TRADERS â€” 2026 HERO 3-CATEGORY CAROUSEL (JSW STYLE)
    ======================================================== */
 
 .anbu-integrated-navbar {
@@ -477,7 +470,7 @@ html.already-visited #spinner {
   transition: all var(--transition-normal);
 }
 
-/* ── Hero Carousel Outer Container (2026 JSW White Card & Raw Bright Daylight) ── */
+/* â”€â”€ Hero Carousel Outer Container (2026 JSW White Card & Raw Bright Daylight) â”€â”€ */
 .anbu-hero-carousel {
   position: relative;
   width: 100%;
@@ -492,7 +485,7 @@ html.already-visited #spinner {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* ── Slides Container & Slides ── */
+/* â”€â”€ Slides Container & Slides â”€â”€ */
 .hero-slides-wrapper {
   position: absolute;
   inset: 0;
@@ -541,7 +534,7 @@ html.already-visited #spinner {
   display: none !important;
 }
 
-/* ── Hero Foreground Content ── */
+/* â”€â”€ Hero Foreground Content â”€â”€ */
 .hero-content-container {
   position: relative;
   z-index: 3;
@@ -803,7 +796,7 @@ html.already-visited #spinner {
   font-size: 0.8rem;
 }
 
-/* ── Sleek JSW-Style Bottom Category Tabs ── */
+/* â”€â”€ Sleek JSW-Style Bottom Category Tabs â”€â”€ */
 .hero-bottom-nav {
   position: absolute;
   bottom: 0;
@@ -987,7 +980,7 @@ html.already-visited #spinner {
   overflow: hidden;
 }
 
-/* ── Responsive Adaptations ── */
+/* â”€â”€ Responsive Adaptations â”€â”€ */
 @media (max-width: 991.98px) {
   .anbu-hero-carousel {
     height: auto;
@@ -1060,7 +1053,7 @@ html.already-visited #spinner {
   }
 }
 
-/* ── Page Header ── */
+/* â”€â”€ Page Header â”€â”€ */
 .page-header {
   background: linear-gradient(135deg, rgba(6,43,91,0.9) 0%, rgba(6,43,91,0.6) 100%), url('../pipiandsheet.jpg') center center no-repeat;
   background-size: cover;
@@ -1082,7 +1075,7 @@ html.already-visited #spinner {
   color: var(--white);
 }
 
-/* ── Dedicated Hero Banners (About, Services, Contact) ── */
+/* â”€â”€ Dedicated Hero Banners (About, Services, Contact) â”€â”€ */
 .page-header.about-page-header,
 .page-header.service-page-header,
 .page-header.contact-page-header {
@@ -1213,12 +1206,12 @@ html.already-visited #spinner {
   }
 }
 
-/* ── About Section ── */
+/* â”€â”€ About Section â”€â”€ */
 .container-xxl {
-  max-width: 1320px;
+  max-width: var(--site-container-max, 1260px);
 }
 
-/* ── Facts / Statistics ── */
+/* â”€â”€ Facts / Statistics â”€â”€ */
 .facts {
   position: relative;
   margin: 0;
@@ -1264,7 +1257,7 @@ html.already-visited #spinner {
   font-size: 0.95rem;
 }
 
-/* ── Section Title ── */
+/* â”€â”€ Section Title â”€â”€ */
 .section-title {
   text-align: center;
   padding: var(--section-padding) var(--sp-4) var(--sp-8);
@@ -1287,7 +1280,7 @@ html.already-visited #spinner {
 }
 
 /* ==============================================
-   ANBU TRADERS — OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
+   ANBU TRADERS â€” OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
    ============================================== */
 .businesses-section {
   padding: clamp(3rem, 5vw, 4.5rem) 0;
@@ -1631,7 +1624,7 @@ html.already-visited #spinner {
   }
 }
 
-/* ── Products Section (2026 Premium Architectural Redesign) ── */
+/* â”€â”€ Products Section (2026 Premium Architectural Redesign) â”€â”€ */
 .products-catalog-section {
   width: 100%;
   margin: 0 auto;
@@ -1680,7 +1673,7 @@ html.already-visited #spinner {
   line-height: 1.6;
 }
 
-/* ── Filter Pills & Search Control Panel ── */
+/* â”€â”€ Filter Pills & Search Control Panel â”€â”€ */
 .catalog-control-panel {
   display: flex;
   flex-wrap: wrap;
@@ -1802,7 +1795,7 @@ html.already-visited #spinner {
   color: var(--primary-orange);
 }
 
-/* ── Modern Product Cards Grid ── */
+/* â”€â”€ Modern Product Cards Grid â”€â”€ */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2048,7 +2041,7 @@ html.already-visited #spinner {
 }
 
 /* ==============================================
-   ANBU TRADERS — WHY CHOOSE US (2026 ARCHITECTURAL REDESIGN)
+   ANBU TRADERS â€” WHY CHOOSE US (2026 ARCHITECTURAL REDESIGN)
    ============================================== */
 .why-choose-section {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
@@ -2496,7 +2489,7 @@ html.already-visited #spinner {
   }
 }
 
-/* ── Service Cards ── */
+/* â”€â”€ Service Cards â”€â”€ */
 .service-item {
   position: relative;
   margin: 65px 0 25px 0;
@@ -2608,7 +2601,7 @@ html.already-visited #spinner {
   border-color: var(--primary-orange);
 }
 
-/* ── Projects ── */
+/* â”€â”€ Projects â”€â”€ */
 .project-carousel {
   position: relative;
   background: var(--primary-navy);
@@ -2693,7 +2686,7 @@ html.already-visited #spinner {
   transition: var(--transition-fast);
 }
 
-/* ── Team ── */
+/* â”€â”€ Team â”€â”€ */
 .team-item .team-social {
   position: absolute;
   width: 100%;
@@ -2708,7 +2701,7 @@ html.already-visited #spinner {
 
 .team-item:hover .team-social { left: 0; }
 
-/* ── Testimonials Redesign (2026 Premium Card System) ── */
+/* â”€â”€ Testimonials Redesign (2026 Premium Card System) â”€â”€ */
 .testimonial-section {
   position: relative;
   background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
@@ -3002,7 +2995,7 @@ html.already-visited #spinner {
   border-radius: 12px;
 }
 
-/* ── Brands Section (Fully Responsive for All Screen Sizes) ── */
+/* â”€â”€ Brands Section (Fully Responsive for All Screen Sizes) â”€â”€ */
 .brands-section {
   background-color: var(--bg-grey);
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
@@ -3155,7 +3148,7 @@ html.already-visited #spinner {
   transform: scale(1.03);
 }
 
-/* ── Footer ── */
+/* â”€â”€ Footer â”€â”€ */
 .footer {
   color: rgba(255,255,255,0.65);
   background: var(--primary-navy) !important;
@@ -3243,7 +3236,7 @@ html.already-visited #spinner {
   color: var(--primary-orange);
 }
 
-/* ── Popup Form ── */
+/* â”€â”€ Popup Form â”€â”€ */
 .popup-form {
   display: none;
   position: fixed;
@@ -3340,7 +3333,7 @@ html.already-visited #spinner {
   transform: translateY(-1px);
 }
 
-/* ── Tab old selectors compatibility ── */
+/* â”€â”€ Tab old selectors compatibility â”€â”€ */
 .tabs {
   display: flex;
   justify-content: center;
@@ -3371,7 +3364,7 @@ html.already-visited #spinner {
   border-radius: 3px;
 }
 
-/* ── Overlay for tabs old ── */
+/* â”€â”€ Overlay for tabs old â”€â”€ */
 .overlay {
   background: var(--white);
   padding: var(--sp-16);
@@ -3393,7 +3386,7 @@ html.already-visited #spinner {
   color: var(--primary-orange-hover);
 }
 
-/* ── Review form compatibility ── */
+/* â”€â”€ Review form compatibility â”€â”€ */
 #reviewName, #reviewEmail, #reviewRating, #reviewText {
   font-size: 0.938rem;
   color: var(--white);
@@ -3418,7 +3411,7 @@ button.btn-primary:hover {
   border-color: var(--primary-orange-hover);
 }
 
-/* ── Contact Info Cards in About Section ── */
+/* â”€â”€ Contact Info Cards in About Section â”€â”€ */
 .custom-margin { margin-left: 0 !important; }
 
 .d-flex.align-items-center h5 {
@@ -3426,7 +3419,7 @@ button.btn-primary:hover {
   word-break: break-word;
 }
 
-/* ── Floating Contact Actions ── */
+/* â”€â”€ Floating Contact Actions â”€â”€ */
 .floating-actions {
   position: fixed;
   bottom: 28px;
@@ -3471,7 +3464,7 @@ button.btn-primary:hover {
   display: none !important;
 }
 
-/* ── WhatsApp Blinking Pulse Animation ── */
+/* â”€â”€ WhatsApp Blinking Pulse Animation â”€â”€ */
 @keyframes whatsappBlinkPulse {
   0%, 100% {
     transform: scale(1);
@@ -3515,7 +3508,7 @@ button.btn-primary:hover {
   }
 }
 
-/* ── Mobile carousel text ── */
+/* â”€â”€ Mobile carousel text â”€â”€ */
 @media (max-width: 768px) {
   .carousel-caption h1 {
     font-size: 1.5rem !important;
@@ -3535,7 +3528,7 @@ button.btn-primary:hover {
   }
 }
 
-/* ── Viewport reveal animations ── */
+/* â”€â”€ Viewport reveal animations â”€â”€ */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -3581,7 +3574,7 @@ button.btn-primary:hover {
   }
 }
 
-/* ── Focus visible states ── */
+/* â”€â”€ Focus visible states â”€â”€ */
 :focus-visible {
   outline: 2px solid var(--primary-orange);
   outline-offset: 2px;
@@ -3596,7 +3589,7 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
-/* ── Responsive Brand Grid & Section Margins across all screen sizes ── */
+/* â”€â”€ Responsive Brand Grid & Section Margins across all screen sizes â”€â”€ */
 @media (min-width: 1440px) {
   /* .container-xxl unified to 1320px */
   .brands-section {
@@ -4389,7 +4382,7 @@ select:focus-visible {
   }
 }
 
-/* ── About Section Contact Strip ── */
+/* â”€â”€ About Section Contact Strip â”€â”€ */
 .about-contact-strip {
   display: flex;
   flex-wrap: wrap;
@@ -4412,10 +4405,10 @@ select:focus-visible {
 
 
 /* ==========================================================================
-   ANBU TRADERS — SUPER SERVICE PAGE STYLES (2026)
+   ANBU TRADERS â€” SUPER SERVICE PAGE STYLES (2026)
    ========================================================================== */
 
-/* ── Service Section Title ── */
+/* â”€â”€ Service Section Title â”€â”€ */
 .service-section-tag {
   display: inline-block;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -4444,7 +4437,7 @@ select:focus-visible {
   margin: 0 auto 40px;
 }
 
-/* ── Super Service Cards ── */
+/* â”€â”€ Super Service Cards â”€â”€ */
 .super-service-card {
   background: #ffffff;
   border-radius: 20px;
@@ -4643,7 +4636,7 @@ select:focus-visible {
   box-shadow: 0 6px 14px rgba(243, 106, 33, 0.35);
 }
 
-/* ── Service Trust Ribbon ── */
+/* â”€â”€ Service Trust Ribbon â”€â”€ */
 .super-service-ribbon {
   background: #ffffff;
   border-radius: 18px;
@@ -4688,7 +4681,7 @@ select:focus-visible {
   line-height: 1.35;
 }
 
-/* ── Service Process Flow ── */
+/* â”€â”€ Service Process Flow â”€â”€ */
 .super-process-card {
   background: #ffffff;
   border-radius: 16px;
@@ -4750,7 +4743,7 @@ select:focus-visible {
   margin-bottom: 0;
 }
 
-/* ── Quick CTA Banner ── */
+/* â”€â”€ Quick CTA Banner â”€â”€ */
 .super-service-cta {
   background: linear-gradient(135deg, #03152e 0%, #062B5B 60%, #0b3a75 100%);
   border-radius: 20px;
@@ -4786,7 +4779,7 @@ select:focus-visible {
 }
 
 /* ==========================================================================
-   ANBU TRADERS — MODERN ABOUT SHOWCASE STYLES (CLEAN NO-TEXT)
+   ANBU TRADERS â€” MODERN ABOUT SHOWCASE STYLES (CLEAN NO-TEXT)
    ========================================================================== */
 .about-hero-showcase {
   position: relative;
@@ -4874,11 +4867,11 @@ select:focus-visible {
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: 1320px !important;
+  max-width: var(--site-container-max, 1260px) !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(18px, 3.5vw, 36px) !important;
-  padding-right: clamp(18px, 3.5vw, 36px) !important;
+  padding-left: var(--container-px, clamp(24px, 2.8vw, 36px)) !important;
+  padding-right: var(--container-px, clamp(24px, 2.8vw, 36px)) !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -5197,7 +5190,7 @@ select:focus-visible {
 
 
 /* ========================================================
-   ANBU TRADERS — 2026 PREMIUM ANIMATIONS, SVG WAVES & CARDS
+   ANBU TRADERS â€” 2026 PREMIUM ANIMATIONS, SVG WAVES & CARDS
    ======================================================== */
 
 :root {
@@ -5208,7 +5201,7 @@ select:focus-visible {
   --transition-reveal: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── 1. Scroll Reveal Animations (IntersectionObserver) ── */
+/* â”€â”€ 1. Scroll Reveal Animations (IntersectionObserver) â”€â”€ */
 .reveal-fade-up {
   opacity: 0;
   transform: translateY(32px);
@@ -5257,7 +5250,7 @@ select:focus-visible {
   transform: scale(1);
 }
 
-/* ── 2. Card Hover Lift & Image Zoom Effects ── */
+/* â”€â”€ 2. Card Hover Lift & Image Zoom Effects â”€â”€ */
 .hover-lift {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
@@ -5279,7 +5272,7 @@ select:focus-visible {
   transform: scale(1.08);
 }
 
-/* ── 3. Animated Gradient Border ── */
+/* â”€â”€ 3. Animated Gradient Border â”€â”€ */
 .gradient-border-card {
   position: relative;
   background: #FFFFFF;
@@ -5305,7 +5298,7 @@ select:focus-visible {
   100% { background-position: 0% 50%; }
 }
 
-/* ── 4. Soft Glow CTA Buttons ── */
+/* â”€â”€ 4. Soft Glow CTA Buttons â”€â”€ */
 .btn-glow {
   position: relative;
   box-shadow: 0 8px 24px rgba(243, 106, 33, 0.35);
@@ -5339,7 +5332,7 @@ select:focus-visible {
   }
 }
 
-/* ── 5. Curved Section Transitions (SVG Waves) ── */
+/* â”€â”€ 5. Curved Section Transitions (SVG Waves) â”€â”€ */
 .svg-wave-divider {
   display: block;
   width: 100%;
@@ -5380,7 +5373,7 @@ select:focus-visible {
   vertical-align: bottom;
 }
 
-/* ── 6. Decorative Ambient Shapes & Blobs ── */
+/* â”€â”€ 6. Decorative Ambient Shapes & Blobs â”€â”€ */
 .section-ambient-wrap {
   position: relative;
   overflow: hidden;
@@ -5411,7 +5404,7 @@ select:focus-visible {
   left: -100px;
 }
 
-/* ── 7. Enhanced 20px Rounded Product Cards (Consistent Ratios & Hover Overlay) ── */
+/* â”€â”€ 7. Enhanced 20px Rounded Product Cards (Consistent Ratios & Hover Overlay) â”€â”€ */
 .products-catalog-section {
   padding: 60px 0 80px 0;
   background: #F8FAFC;
@@ -5599,7 +5592,7 @@ select:focus-visible {
   transform: translateY(-1px);
 }
 
-/* ── 8. Infinite Horizontal Brand Marquee ── */
+/* â”€â”€ 8. Infinite Horizontal Brand Marquee â”€â”€ */
 .brand-marquee-section {
   padding: 50px 0;
   background: #FFFFFF;
@@ -5676,7 +5669,7 @@ select:focus-visible {
   white-space: nowrap;
 }
 
-/* ── 9. Responsive Adaptations for Grids ── */
+/* â”€â”€ 9. Responsive Adaptations for Grids â”€â”€ */
 @media (max-width: 1200px) {
   .products-catalog-section .products {
     grid-template-columns: repeat(3, 1fr);
@@ -5700,7 +5693,7 @@ select:focus-visible {
   }
 }
 
-/* ── 10. prefers-reduced-motion Accessibility Support ── */
+/* â”€â”€ 10. prefers-reduced-motion Accessibility Support â”€â”€ */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -5723,10 +5716,10 @@ select:focus-visible {
 
 
 /* ========================================================
-   ANBU TRADERS — 2026 UI/UX PRO MAX SUITE ENHANCEMENTS
+   ANBU TRADERS â€” 2026 UI/UX PRO MAX SUITE ENHANCEMENTS
    ======================================================== */
 
-/* ── 1. Unified Page Hero Component with Clear Photographic Banners ── */
+/* â”€â”€ 1. Unified Page Hero Component with Clear Photographic Banners â”€â”€ */
 .anbu-page-hero {
   position: relative;
   background-color: #031836;
@@ -5761,7 +5754,7 @@ select:focus-visible {
 .anbu-page-hero .container {
   position: relative;
   z-index: 2;
-  max-width: 1320px;
+  max-width: var(--site-container-max, 1260px);
 }
 
 /* Page-specific photographic banners */
@@ -5861,7 +5854,7 @@ select:focus-visible {
   font-weight: 600;
 }
 
-/* ── 2. Modern 2026 Bento Projects ── */
+/* â”€â”€ 2. Modern 2026 Bento Projects â”€â”€ */
 .project-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -6025,7 +6018,7 @@ select:focus-visible {
   padding-right: 4px;
 }
 
-/* ── 3. High-Impact Value Pillars & Features ── */
+/* â”€â”€ 3. High-Impact Value Pillars & Features â”€â”€ */
 .anbu-features-section {
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
@@ -6108,7 +6101,7 @@ select:focus-visible {
   flex-shrink: 0;
 }
 
-/* ── 4. Organization & Dedicated Team ── */
+/* â”€â”€ 4. Organization & Dedicated Team â”€â”€ */
 .anbu-team-section {
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
   background: #FFFFFF;
@@ -6215,7 +6208,7 @@ select:focus-visible {
   border-color: var(--primary-navy);
 }
 
-/* ── 5. Modern 404 Error Component ── */
+/* â”€â”€ 5. Modern 404 Error Component â”€â”€ */
 .anbu-404-container {
   padding: clamp(3.5rem, 6vw, 5rem) 0;
   text-align: center;
@@ -6288,7 +6281,7 @@ select:focus-visible {
   color: var(--text-muted, #64748B);
 }
 
-/* ── 6. Testimonial Card Polish ── */
+/* â”€â”€ 6. Testimonial Card Polish â”€â”€ */
 .anbu-testi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -6370,7 +6363,7 @@ select:focus-visible {
   color: var(--text-muted, #64748B);
 }
 
-/* ── 7. Unified Pre-Footer CTA Banner Section Spacing ── */
+/* â”€â”€ 7. Unified Pre-Footer CTA Banner Section Spacing â”€â”€ */
 .anbu-cta-banner-section {
   margin-top: clamp(1rem, 2.5vw, 1.75rem);
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
@@ -6387,12 +6380,44 @@ select:focus-visible {
 
 /* ========================================================
    2026 UNIFIED SYSTEMIC SPACING, CONTAINER & MARGIN SYSTEM
+   Engineered for Perfect Visual Grid Alignment & Rhythm
    ======================================================== */
 :root {
-  --site-container-max: 1320px;
-  --container-gutter-x: clamp(16px, 2.5vw, 24px);
-  --section-spacing-y: clamp(3.25rem, 5vw, 4.75rem);
-  --section-spacing-sm: clamp(2rem, 3.2vw, 2.75rem);
+  /* 1. Production Content Max-Width (1200pxâ€“1280px Standard) */
+  --site-container-max: 1260px;
+  --content-max-width: 1260px;
+
+  /* 2. Page & Container Horizontal Padding */
+  /* Desktop: 24pxâ€“40px | Tablet: 24px | Mobile: 16pxâ€“20px */
+  --container-px: clamp(24px, 2.8vw, 36px);
+  --container-px-desktop: clamp(24px, 2.8vw, 36px);
+  --container-px-tablet: 24px;
+  --container-px-mobile: clamp(16px, 4vw, 20px);
+  --page-px: var(--container-px);
+  --container-gutter-x: var(--container-px);
+
+  /* 3. Section Vertical Spacing */
+  /* Desktop: 80pxâ€“110px | Tablet: 60pxâ€“80px | Mobile: 40pxâ€“60px */
+  --section-spacing-y: clamp(80px, 7.5vw, 104px);
+  --section-spacing-tablet: clamp(60px, 6.5vw, 76px);
+  --section-spacing-mobile: clamp(40px, 5.5vw, 56px);
+  --section-spacing-sm: clamp(40px, 4.2vw, 60px);
+
+  /* 4. Consistent Gap Rhythm Scale */
+  --gap-16: 16px;
+  --gap-24: 24px;
+  --gap-32: 32px;
+  --gap-48: 48px;
+
+  /* 5. Card Spacing Tokens */
+  --card-padding: clamp(20px, 2.5vw, 28px);
+  --card-gap: clamp(16px, 2vw, 24px);
+
+  /* 6. Typography & Heading Hierarchy */
+  --heading-gap-eyebrow: 12px;
+  --heading-gap-title: 10px;
+  --heading-gap-bar: 16px;
+  --paragraph-mb: 1rem;
 }
 
 /* 1. Viewport & Universal Horizontal Overflow Prevention */
@@ -6408,73 +6433,90 @@ html, body {
   box-sizing: border-box;
 }
 
-/* 2. Global Container Alignment — 100% Consistent Left/Right on Every Page & Section */
+img, video, canvas, svg {
+  max-width: 100%;
+}
+
+/* 2. Global Container Alignment â€” 100% Consistent Left/Right on Every Page & Section */
 .container,
 .container-xxl,
 .container-xl,
 .container-lg,
 .container-md,
 .container-sm,
+.site-container,
 .anbu-page-hero .container,
 .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
   width: 100% !important;
   max-width: var(--site-container-max) !important;
-  padding-right: var(--container-gutter-x) !important;
-  padding-left: var(--container-gutter-x) !important;
+  padding-right: var(--container-px) !important;
+  padding-left: var(--container-px) !important;
   margin-right: auto !important;
   margin-left: auto !important;
   box-sizing: border-box !important;
 }
 
-/* Strict Breakpoint Max-Widths — Synchronized Across Entire Project */
+/* Strict Breakpoint Max-Widths â€” Synchronized Across Entire Project */
 @media (min-width: 1400px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
-    max-width: 1320px !important;
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+    max-width: 1260px !important;
+    padding-right: clamp(28px, 2.5vw, 36px) !important;
+    padding-left: clamp(28px, 2.5vw, 36px) !important;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
-    max-width: 1140px !important;
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+    max-width: 1180px !important;
+    padding-right: 28px !important;
+    padding-left: 28px !important;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 960px !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 720px !important;
+    padding-right: var(--container-px-tablet) !important;
+    padding-left: var(--container-px-tablet) !important;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 540px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
   }
 }
 
 @media (max-width: 575.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
-  .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
+  .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 100% !important;
-    padding-right: 16px !important;
-    padding-left: 16px !important;
+    padding-right: var(--container-px-mobile) !important;
+    padding-left: var(--container-px-mobile) !important;
   }
 }
 
 /* Guard against nested container double indentation */
 .container .container,
 .container-xxl .container,
+.container-xl .container,
+.container-lg .container,
 .container-fluid .container,
 .site-section .container .container {
   padding-left: 0 !important;
@@ -6489,12 +6531,50 @@ html, body {
 .why-choose-section,
 .anbu-features-section,
 .anbu-team-section,
-.testimonial-section {
+.testimonial-section,
+.contact-section,
+.service-section,
+.about-section,
+.project-section {
   padding-top: var(--section-spacing-y) !important;
   padding-bottom: var(--section-spacing-y) !important;
   position: relative;
   width: 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .site-section,
+  .businesses-section,
+  .products-catalog-section,
+  .why-choose-section,
+  .anbu-features-section,
+  .anbu-team-section,
+  .testimonial-section,
+  .contact-section,
+  .service-section,
+  .about-section,
+  .project-section {
+    padding-top: var(--section-spacing-tablet) !important;
+    padding-bottom: var(--section-spacing-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .site-section,
+  .businesses-section,
+  .products-catalog-section,
+  .why-choose-section,
+  .anbu-features-section,
+  .anbu-team-section,
+  .testimonial-section,
+  .contact-section,
+  .service-section,
+  .about-section,
+  .project-section {
+    padding-top: var(--section-spacing-mobile) !important;
+    padding-bottom: var(--section-spacing-mobile) !important;
+  }
 }
 
 .site-section-sm {
@@ -6516,36 +6596,43 @@ html, body {
 /* 4. Global Navbar & Topbar Alignment on Mobile & Desktop */
 @media (max-width: 991.98px) {
   .navbar {
-    padding-right: var(--container-gutter-x) !important;
-    padding-left: var(--container-gutter-x) !important;
+    padding-right: var(--container-px-tablet) !important;
+    padding-left: var(--container-px-tablet) !important;
   }
   .navbar .navbar-brand {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
   .topbar-right {
-    padding-left: var(--container-gutter-x) !important;
-    padding-right: var(--container-gutter-x) !important;
+    padding-left: var(--container-px-tablet) !important;
+    padding-right: var(--container-px-tablet) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    padding-right: var(--container-px-mobile) !important;
+    padding-left: var(--container-px-mobile) !important;
+  }
+  .topbar-right {
+    padding-left: var(--container-px-mobile) !important;
+    padding-right: var(--container-px-mobile) !important;
   }
 }
 
 /* 5. Global Row & Column Gutter Harmonization */
 .row {
-  margin-right: calc(-1 * var(--container-gutter-x));
-  margin-left: calc(-1 * var(--container-gutter-x));
+  --bs-gutter-x: 1.5rem;
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
-  padding-right: var(--container-gutter-x);
-  padding-left: var(--container-gutter-x);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .row {
-    margin-right: -10px;
-    margin-left: -10px;
-  }
-  .row > * {
-    padding-right: 10px;
-    padding-left: 10px;
+    --bs-gutter-x: 1rem;
   }
 }
 
@@ -6582,7 +6669,7 @@ html, body {
 
 
 /* ========================================================
-   ANBU TRADERS — 2026 SPLIT HERO & 3-DIVISION BENTO SHOWCASE
+   ANBU TRADERS â€” 2026 SPLIT HERO & 3-DIVISION BENTO SHOWCASE
    Industrial Swiss Minimalist Architecture
    ======================================================== */
 
@@ -6939,7 +7026,7 @@ html, body {
 }
 
 /* ========================================================
-   HOW WE DELIVER — 4-STEP LOGISTICS TIMELINE
+   HOW WE DELIVER â€” 4-STEP LOGISTICS TIMELINE
    ======================================================== */
 .how-we-deliver-section {
   padding: clamp(3rem, 5vw, 4.5rem) 0;
@@ -7195,7 +7282,7 @@ html, body {
   position: relative;
 }
 
-/* ── LEFT CONTENT COLUMN ── */
+/* â”€â”€ LEFT CONTENT COLUMN â”€â”€ */
 .hero-content-col {
   display: flex;
   align-items: center;
@@ -7376,25 +7463,24 @@ html, body {
   background: rgba(6, 43, 91, 0.12);
 }
 
-/* ── RIGHT VISUAL COLUMN & ANGLED SLICE ── */
+/* â”€â”€ RIGHT VISUAL COLUMN & ANGLED SLICE â”€â”€ */
 .hero-visual-col {
   position: relative;
   min-height: 560px;
   overflow: hidden;
 }
 
-/* Diagonal orange divider slash */
+/* Diagonal orange divider slash - Pixel-Perfect Slant Boundary */
 .hero-angled-accent {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 22px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(180deg, #F36A21 0%, #EA580C 100%);
   z-index: 5;
-  box-shadow: 0 0 16px rgba(243, 106, 33, 0.4);
-  transform: skewX(-14deg);
-  transform-origin: top left;
+  pointer-events: none;
+  clip-path: polygon(92px 0, 110px 0, 18px 100%, 0 100%);
+  filter: drop-shadow(-4px 0 14px rgba(243, 106, 33, 0.45));
 }
 
 .hero-visual-container {
@@ -7403,7 +7489,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  clip-path: polygon(72px 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(110px 0, 100% 0, 100% 100%, 18px 100%);
 }
 
 .hero-bg-layer {
@@ -7514,7 +7600,7 @@ html, body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* ── "OUR TRUSTED BRANDS" STRIP ── */
+/* â”€â”€ "OUR TRUSTED BRANDS" STRIP â”€â”€ */
 .trusted-brands-strip-section {
   padding: 16px 0 32px;
   background: #FFFFFF;
@@ -7587,7 +7673,7 @@ html, body {
   transform: scale(1.06);
 }
 
-/* ── RESPONSIVE RULES ── */
+/* â”€â”€ RESPONSIVE RULES â”€â”€ */
 @media (max-width: 1199.98px) {
   .hero-ref-h1 {
     font-size: 2.85rem;
@@ -7738,4 +7824,222 @@ html, body {
   color: #64748B;
   margin: 0 auto;
   max-width: 680px;
+}
+
+/* ========================================================
+   PREMIUM HERO + TRUST PANEL â€” HOMEPAGE 2026
+   Purpose: concise content, strong visual hierarchy, responsive layout
+   ======================================================== */
+.anbu-premium-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(40px, 6vw, 88px) 0 clamp(54px, 7vw, 104px);
+  background: linear-gradient(120deg, #f8fafc 0%, #ffffff 56%, #fff8f3 100%);
+}
+.anbu-premium-hero::before {
+  content: "";
+  position: absolute;
+  width: min(42vw, 600px);
+  height: min(42vw, 600px);
+  right: -16%; top: -38%;
+  border: 1px solid rgba(243, 106, 33, .14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 48px rgba(243, 106, 33, .035), 0 0 0 96px rgba(6, 43, 91, .025);
+  pointer-events: none;
+}
+.anbu-premium-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(430px, 1.08fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 80px);
+}
+.anbu-premium-hero__content { max-width: 560px; }
+.anbu-premium-hero__eyebrow,
+.anbu-trust-panel__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  color: #f36a21;
+  font-size: .72rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.anbu-premium-hero__eyebrow span {
+  width: 8px; height: 8px; border-radius: 50%; background: #f36a21;
+  box-shadow: 0 0 0 5px rgba(243, 106, 33, .12);
+}
+.anbu-premium-hero h1,
+.anbu-trust-panel h2 {
+  margin: 0;
+  color: #062b5b;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2.35rem, 4.35vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.055em;
+}
+.anbu-premium-hero h1 em,
+.anbu-trust-panel h2 em { color: #f36a21; font-style: normal; }
+.anbu-premium-hero__lead {
+  max-width: 500px;
+  margin: 24px 0 0;
+  color: #475569;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.7;
+}
+.anbu-premium-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.anbu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 50px;
+  padding: 0 21px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: .9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.anbu-btn:hover { transform: translateY(-2px); text-decoration: none; }
+.anbu-btn--orange { color: #fff; background: #f36a21; box-shadow: 0 12px 24px rgba(243, 106, 33, .24); }
+.anbu-btn--orange:hover { color: #fff; background: #d9500c; box-shadow: 0 16px 30px rgba(243, 106, 33, .32); }
+.anbu-btn--outline { color: #062b5b; border-color: #062b5b; background: #fff; }
+.anbu-btn--outline:hover { color: #062b5b; background: #f1f5f9; }
+.anbu-premium-hero__proof { display: flex; flex-wrap: wrap; gap: 16px 22px; margin-top: 28px; color: #334155; font-size: .8rem; font-weight: 700; }
+.anbu-premium-hero__proof i { color: #059669; margin-right: 5px; }
+.anbu-premium-hero__visual {
+  position: relative;
+  min-height: 510px;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 26px 54px rgba(6, 43, 91, .18);
+  background: #062b5b;
+}
+.anbu-premium-hero__visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 43, 91, .02) 30%, rgba(3, 24, 54, .88) 100%); pointer-events: none; }
+.anbu-premium-hero__visual img,
+.anbu-premium-hero__visual video { width: 100%; height: 100%; min-height: 510px; object-fit: cover; object-position: center; display: block; }
+.anbu-premium-hero__visual-label { position: absolute; z-index: 1; top: 24px; left: 24px; padding: 12px 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 10px; background: rgba(3,24,54,.72); backdrop-filter: blur(8px); color: #fff; }
+.anbu-premium-hero__visual-label span { display: block; margin-bottom: 3px; color: #f8b68e; font-size: .67rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.anbu-premium-hero__visual-label strong { font-size: .88rem; }
+.anbu-premium-hero__categories { position: absolute; z-index: 1; right: 18px; bottom: 18px; left: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.anbu-premium-hero__categories a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 48px; padding: 8px; border: 1px solid rgba(255,255,255,.21); border-radius: 10px; background: rgba(3,24,54,.86); color: #fff; font-size: .78rem; font-weight: 800; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+.anbu-premium-hero__categories a:hover { color: #fff; background: #f36a21; transform: translateY(-2px); }
+.anbu-premium-hero__categories i { color: #f8b68e; }
+.anbu-premium-hero__categories a:hover i { color: #fff; }
+
+.anbu-trust-section { padding: clamp(56px, 7vw, 104px) 0; background: #fff; }
+.anbu-trust-panel { display: grid; grid-template-columns: .85fr 1.05fr .95fr; overflow: hidden; border-radius: 22px; background: #062b5b; box-shadow: 0 24px 52px rgba(6,43,91,.15); }
+.anbu-trust-panel__intro { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(32px, 4vw, 56px); color: #dbeafe; }
+.anbu-trust-panel__eyebrow { margin-bottom: 16px; color: #f8b68e; }
+.anbu-trust-panel h2 { color: #fff; font-size: clamp(2rem, 3.4vw, 3.35rem); }
+.anbu-trust-panel h2 em { color: #f8b68e; }
+.anbu-trust-panel__intro > p:not(.anbu-trust-panel__eyebrow) { margin: 20px 0 0; color: #cbd5e1; font-size: 1rem; line-height: 1.65; }
+.anbu-trust-panel__link { display: inline-flex; align-items: center; gap: 9px; margin-top: 28px; color: #fff; font-size: .86rem; font-weight: 800; text-decoration: none; }
+.anbu-trust-panel__link i { color: #f36a21; transition: transform .2s ease; }
+.anbu-trust-panel__link:hover { color: #fff; text-decoration: none; }
+.anbu-trust-panel__link:hover i { transform: translateX(4px); }
+.anbu-trust-panel__image { position: relative; min-height: 480px; margin: 0; overflow: hidden; }
+.anbu-trust-panel__image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 52%, rgba(3,24,54,.78)); }
+.anbu-trust-panel__image img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.anbu-trust-panel__image figcaption { position: absolute; z-index: 1; bottom: 22px; left: 22px; color: #fff; font-size: .78rem; font-weight: 800; }
+.anbu-trust-panel__image figcaption i { margin-right: 6px; color: #f36a21; }
+.anbu-trust-panel__points { display: flex; flex-direction: column; justify-content: center; gap: 0; padding: 28px clamp(24px, 3vw, 42px); background: #f8fafc; }
+.anbu-trust-panel__points article { display: flex; gap: 14px; padding: 21px 0; border-bottom: 1px solid #e2e8f0; }
+.anbu-trust-panel__points article:last-child { border-bottom: 0; }
+.anbu-trust-panel__icon { display: inline-flex; flex: 0 0 42px; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 10px; background: #fff1e8; color: #f36a21; }
+.anbu-trust-panel__points h3 { margin: 0; color: #062b5b; font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif); font-size: 1rem; font-weight: 800; }
+.anbu-trust-panel__points p { margin: 5px 0 0; color: #64748b; font-size: .82rem; line-height: 1.5; }
+.anbu-trust-panel__stats { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); background: #031836; color: #fff; }
+.anbu-trust-panel__stats div { display: flex; align-items: baseline; justify-content: center; gap: 10px; min-height: 92px; padding: 16px; border-right: 1px solid rgba(255,255,255,.12); }
+.anbu-trust-panel__stats div:last-child { border-right: 0; }
+.anbu-trust-panel__stats strong { color: #f36a21; font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif); font-size: clamp(1.35rem, 2vw, 1.8rem); font-weight: 800; letter-spacing: -.04em; }
+.anbu-trust-panel__stats span { color: #cbd5e1; font-size: .73rem; font-weight: 700; }
+@media (max-width: 991.98px) {
+  .anbu-premium-hero__grid { grid-template-columns: 1fr; }
+  .anbu-premium-hero__content { max-width: 650px; }
+  .anbu-premium-hero__visual { min-height: 470px; }
+  .anbu-premium-hero__visual img,
+  .anbu-premium-hero__visual video { min-height: 470px; }
+  .anbu-trust-panel { grid-template-columns: 1fr 1fr; }
+  .anbu-trust-panel__intro { grid-column: 1 / -1; padding-bottom: 38px; }
+  .anbu-trust-panel__image { min-height: 410px; }
+}
+@media (max-width: 575.98px) {
+  .anbu-premium-hero { padding-top: 34px; }
+  .anbu-premium-hero h1 { font-size: clamp(2.2rem, 12vw, 3.05rem); }
+  .anbu-premium-hero__actions { display: grid; grid-template-columns: 1fr; }
+  .anbu-btn { width: 100%; }
+  .anbu-premium-hero__proof { display: grid; gap: 9px; }
+  .anbu-premium-hero__visual { min-height: 390px; border-radius: 17px; }
+  .anbu-premium-hero__visual img,
+  .anbu-premium-hero__visual video { min-height: 390px; }
+  .anbu-premium-hero__visual-label { top: 14px; left: 14px; }
+  .anbu-premium-hero__categories { right: 10px; bottom: 10px; left: 10px; grid-template-columns: 1fr; gap: 6px; }
+  .anbu-premium-hero__categories a { min-height: 39px; justify-content: flex-start; padding-left: 14px; }
+  .anbu-trust-panel { grid-template-columns: 1fr; border-radius: 17px; }
+  .anbu-trust-panel__intro { grid-column: auto; padding: 36px 26px; }
+  .anbu-trust-panel__image { min-height: 300px; }
+  .anbu-trust-panel__points { padding: 13px 26px; }
+  .anbu-trust-panel__stats { grid-template-columns: 1fr; }
+  .anbu-trust-panel__stats div { min-height: 67px; justify-content: flex-start; padding: 15px 26px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .anbu-trust-panel__stats div:last-child { border-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anbu-btn, .anbu-premium-hero__categories a, .anbu-trust-panel__link i { transition: none; }
+}
+
+/* Homepage video hero: video stays visible while overlays keep controls readable. */
+.hero-banner-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  background: #062b5b;
+}
+.hero-video-status {
+  position: absolute;
+  z-index: 4;
+  top: 24px;
+  right: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  background: rgba(3,24,54,.72);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.hero-video-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #33d17a;
+  box-shadow: 0 0 0 4px rgba(51,209,122,.18);
+}
+@media (max-width: 991.98px) {
+  .hero-video-status { top: 16px; right: 24px; }
+}
+@media (max-width: 575.98px) {
+  .hero-video-status { top: 14px; right: 14px; font-size: .6rem; }
+}.hero-docked-pills-bar a.ref-dock-pill,
+.hero-docked-pills-bar a.ref-dock-pill:hover {
+  color: #FFFFFF;
+  text-decoration: none;
 }

@@ -57,10 +57,19 @@
   - Body Strong: 600, line-height: 1.5
   - Captions / Meta: 500, font-size: 0.85rem, letter-spacing: 0.02em
 
-### 1.3 Spacing Rhythm (8px Basis)
-- Component Gap: 8px, 12px, 16px, 20px, 24px
-- Section Padding: clamp(3rem, 6vw, 6rem) top & bottom
-- Container Max-Width: 1320px
+### 1.3 Spacing Rhythm (8px Basis & Standard 1260px Content System)
+- **Container Max-Width:** 1260px (Standard range: 1200px–1280px)
+- **Horizontal Container Padding:**
+  - Desktop (>=1024px): `clamp(24px, 2.8vw, 36px)` (24px–40px standard)
+  - Tablet (768px–1023px): `24px`
+  - Mobile (320px–767px): `clamp(16px, 4vw, 20px)` (16px–20px standard)
+- **Section Vertical Padding:**
+  - Desktop: `clamp(80px, 7.5vw, 104px)` (80px–110px standard)
+  - Tablet: `clamp(60px, 6.5vw, 76px)` (60px–80px standard)
+  - Mobile: `clamp(40px, 5.5vw, 56px)` (40px–60px standard)
+  - Compact Sections: `clamp(40px, 4vw, 60px)`
+- **Consistent Grid Gap Rhythm:** 16px, 24px, 32px, 48px
+- **Card Spacing:** Padding `clamp(20px, 2.5vw, 28px)`, Gap `clamp(16px, 2vw, 24px)`
 
 ---
 

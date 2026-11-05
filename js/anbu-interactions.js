@@ -336,24 +336,39 @@
     var bgLayers = document.querySelectorAll('.hero-bg-layer');
     if (!pills.length || !bgLayers.length) return;
 
-    pills.forEach(function (pill) {
-      pill.addEventListener('click', function () {
-        var targetId = this.getAttribute('data-target-bg');
-        pills.forEach(function (p) { p.classList.remove('is-active'); });
-        this.classList.add('is-active');
+    function activatePill(pill) {
+      var targetId = pill.getAttribute('data-target-bg');
+      pills.forEach(function (p) { p.classList.remove('is-active'); });
+      pill.classList.add('is-active');
 
-        bgLayers.forEach(function (layer) {
-          if (layer.id === targetId) {
-            layer.classList.add('is-active');
-          } else {
-            layer.classList.remove('is-active');
-          }
-        });
+      bgLayers.forEach(function (layer) {
+        if (layer.id === targetId) {
+          layer.classList.add('is-active');
+        } else {
+          layer.classList.remove('is-active');
+        }
+      });
+    }
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('mouseenter', function () {
+        activatePill(this);
       });
 
-      pill.addEventListener('dblclick', function () {
+      pill.addEventListener('click', function () {
+        var isAlreadyActive = this.classList.contains('is-active');
         var link = this.getAttribute('data-link');
-        if (link) window.location.href = link;
+        if (isAlreadyActive && link && !link.startsWith('#')) {
+          window.location.href = link;
+        } else {
+          activatePill(this);
+          if (link && link.startsWith('#')) {
+            var targetElem = document.querySelector(link);
+            if (targetElem) {
+              targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }
       });
     });
   }
