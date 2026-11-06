@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" as="image" href="img/main_herosec/hero2.png">
     <link rel="preload" as="image" href="img/opt/hero-materials-composite.jpg">
 
     <!-- Schema.org LocalBusiness Structured Data -->
@@ -64,14 +65,15 @@
       ]
     }
     </script>
+
+
 </head>
 
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-0">
-        <div class="container">
-            <div class="row g-0 d-none d-lg-flex align-items-center">
-            <div class="col-lg-6 text-start">
+        <div class="row g-0 d-none d-lg-flex align-items-center w-100 m-0">
+            <div class="col-lg-6 ps-4 ps-xl-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-white">
                     <span>Follow Us:</span>
                     <a class="btn btn-link text-light" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/"><i class="fab fa-facebook-f"></i></a>
@@ -79,14 +81,13 @@
                     <a class="btn btn-link text-light" href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+            <div class="col-lg-6 text-end pe-0">
+                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-4 px-xl-5">
                     <a href="tel:+919626325204" class="topbar-call-link d-inline-flex align-items-center text-white text-decoration-none fw-bold fs-5" title="Click to Call Anbu Traders directly">
                         <i class="fa fa-phone-alt me-2 text-white"></i>
                         <span>Call Us: +91 96263 25204</span>
                     </a>
                 </div>
-            </div>
             </div>
         </div>
     </div>
@@ -94,156 +95,389 @@
 
 
     <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 shadow-sm">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 shadow-sm px-0">
+        <div class="container-fluid px-4 px-xl-5">
             <a href="index.html" class="navbar-brand me-0 d-flex align-items-center">
-        <img id="anbu-navbar-logo" src="img/ANUBU TRADERS new logo.png" alt="Anbu Traders Logo" style="height: 60px; width: auto; object-fit: contain;">
-    </a>
-    
-    <div class="d-flex align-items-center ms-auto me-2 d-lg-none gap-2">
-        <a href="tel:+919626325204" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Call +91 96263 25204" aria-label="Call Now">
-            <i class="fa fa-phone-alt text-white"></i>
-        </a>
-    </div>
-    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <div class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
-                <div class="dropdown-menu bg-light m-0">
-                                        <a href="./a-steel/index.html" class="dropdown-item">Sheets and Pipes</a>
-
-                    <a href="./anbu-paint/index.html" class="dropdown-item">paints</a>
-                                        <a href="cement/anbucement/index-demo-3.html" class="dropdown-item">Steels &Cement</a>
-
+                <img id="anbu-navbar-logo" src="img/ANUBU STEEL.png" alt="Anbu Steel Logo" style="height: 76px; width: auto; object-fit: contain;">
+            </a>
+            
+            <div class="d-flex align-items-center ms-auto me-2 d-lg-none gap-2">
+                <a href="tel:+919626325204" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Call +91 96263 25204" aria-label="Call Now">
+                    <i class="fa fa-phone-alt text-white"></i>
+                </a>
+            </div>
+            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Businesses</a>
+                        <div class="dropdown-menu bg-light m-0">
+                            <a href="./a-steel/index.html" class="dropdown-item">Sheets and Pipes</a>
+                            <a href="./anbu-paint/index.html" class="dropdown-item">paints</a>
+                            <a href="cement/anbucement/index-demo-3.html" class="dropdown-item">Steels &Cement</a>
+                        </div>
+                    </div>
+                    <a href="index.html#products" class="nav-item nav-link">products</a>
+                    <a href="service.html" class="nav-item nav-link">Services</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="tel:+919626325204" class="nav-item nav-link d-lg-none text-brand-orange fw-bold">
+                        <i class="fa fa-phone-alt me-2"></i>Call: +91 96263 25204
+                    </a>
+                </div>
+                <div class="d-none d-lg-flex align-items-center ms-lg-3">
+                    <a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary btn-glow btn-ripple px-4 py-2" target="_blank" rel="noopener">
+                        <i class="fa fa-paper-plane me-2"></i> Enquiry
+                    </a>
                 </div>
             </div>
-            <a href="index.html#products" class="nav-item nav-link">products</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-            <a href="tel:+919626325204" class="nav-item nav-link d-lg-none text-brand-orange fw-bold">
-                <i class="fa fa-phone-alt me-2"></i>Call: +91 96263 25204
-            </a>
-        </div>
-        <div class="d-none d-lg-flex align-items-center ms-lg-3">
-                <a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary btn-glow btn-ripple px-4 py-2" target="_blank" rel="noopener">
-                <i class="fa fa-paper-plane me-2"></i> Enquiry
-            </a>
-            </div>
-    </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
         <!-- ==============================================
-         2026 HERO REFERENCE DESIGN (SPLIT INDUSTRIAL ARCHITECTURE)
-         Matches Reference Mockup (1e13236a)
+         2026 ARCHITECTURAL HERO (PIXEL-PERFECT RECREATION)
+         Exact recreation of reference design (Spaces That Inspire)
+         Assets: img/main_herosec (hero1.png, hero2.png, hero3.png)
          ============================================== -->
-    <section id="hero" class="anbu-reference-hero-section" aria-label="Anbu Traders Building Materials Showcase">
-        <div class="hero-subtle-pattern"></div>
-        <div class="hero-fluid-wrapper">
-            <div class="hero-split-grid">
-                
-                <!-- LEFT CONTENT COLUMN -->
-                <div class="hero-content-col">
-                    <div class="hero-content-inner">
-                        <!-- Eyebrow Pill -->
-                        <div class="hero-ref-eyebrow">
-                            <span class="ref-dot"></span>
-                            <span>Puducherry &amp; Tamil Nadu's Premier Industrial Materials Partner</span>
+    <section id="hero" class="anbu-reference-hero-section" aria-label="Spaces That Inspire - Architectural Excellence">
+        <!-- Full-Width Visual Scene (100% Edge-to-Edge Background Image) -->
+        <div class="hero-visual-scene" id="heroVisualScene">
+            <!-- Ambient lighting scrim for crystal-clear typography legibility -->
+            <div class="hero-scene-scrim" aria-hidden="true"></div>
+
+            <!-- Standardized 1180px Container for Exact Grid & Card Alignment -->
+            <div class="container hero-container-1180">
+                <div class="hero-alignment-wrapper">
+
+                    <!-- Top-Left Editorial Content Block (Aligned with Container Left Line) -->
+                    <div class="hero-intro-block">
+                        <!-- Eyebrow -->
+                        <div class="hero-eyebrow-tracking" id="heroEyebrow">
+                            ARCHITECTURE &mdash; INTERIORS &mdash; LANDSCAPES
                         </div>
 
-                        <!-- Bold Display Headline -->
-                        <h1 class="hero-ref-h1">
-                            <span class="ref-h1-navy">Building Materials.</span><br>
-                            <span class="ref-h1-orange">Delivered with Confidence.</span>
+                        <!-- Editorial Luxury Display Headline -->
+                        <h1 class="hero-display-serif-title" id="heroHeadline">
+                            <span class="hero-title-line-1">Spaces</span>
+                            <span class="hero-title-line-2">That Inspire</span>
                         </h1>
 
-                        <!-- Lead Paragraph -->
-                        <p class="hero-ref-lead">
-                            Authorized primary mill stockist of Tata Tiscon, JSW Steel, UltraTech, Dalmia, APL Apollo and Asian Paints. Verified with 100-ton digital electronic weighbridge, certified mill test reports, and rapid site delivery.
+                        <!-- Lead Description -->
+                        <p class="hero-display-lead" id="heroLeadText">
+                            We design meaningful spaces that blend architecture, nature and modern living.
                         </p>
 
-                        <!-- Action CTAs -->
-                        <div class="hero-ref-ctas">
-                            <a href="https://wa.me/919626325204?text=Hello%20Anbu%20Traders%2C%20I%20would%20like%20to%20get%20an%20instant%20WhatsApp%20quote." class="btn-ref-primary" target="_blank" rel="noopener">
-                                <i class="fab fa-whatsapp me-2" aria-hidden="true"></i> Get Instant WhatsApp Quote <i class="fa fa-arrow-right ms-2 ref-cta-arrow" aria-hidden="true"></i>
-                            </a>
-                            <a href="#products" class="btn-ref-secondary">
-                                <i class="fa fa-cubes me-2" aria-hidden="true"></i> Explore Products <i class="fa fa-arrow-right ms-2 ref-cta-arrow" aria-hidden="true"></i>
+                        <!-- CTA Actions Group -->
+                        <div class="hero-action-buttons">
+                            <a href="project.html" class="hero-btn-pill-primary" aria-label="Explore Our Work - View Supplied Projects">
+                                <span>Explore Our Work</span>
+                                <svg class="hero-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
                             </a>
                         </div>
+                    </div>
 
-                        <!-- Credentials Statistics Strip -->
-                        <div class="hero-ref-stats-strip" aria-label="Anbu Traders Key Statistics">
-                            <div class="ref-stat-box">
-                                <span class="ref-stat-num">11+</span>
-                                <span class="ref-stat-lbl">Years Established</span>
+                    <!-- Bottom Floating Shelf Tray (Left Card Perfectly Aligned with Headline Above) -->
+                    <div class="hero-bottom-shelf">
+                        <!-- Left: Featured Project Capsule Card (Aligined with Content Left) -->
+                        <div class="hero-featured-project-card" id="heroFeaturedCard">
+                            <div class="featured-card-grid">
+                                <!-- Left Column: Eyebrow + Thumbnail -->
+                                <div class="featured-media-col">
+                                    <span class="featured-eyebrow-label">FEATURED PROJECT</span>
+                                    <div class="featured-thumb-frame">
+                                        <img src="img/main_herosec/hero2.png" alt="The Horizon Villa" id="featuredProjectThumb" class="featured-thumb-img" loading="eager">
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Details + Controls -->
+                                <div class="featured-info-col">
+                                    <div class="featured-top-row">
+                                        <h3 class="featured-project-title" id="featuredProjectTitle">The Horizon Villa</h3>
+                                    </div>
+
+                                    <p class="featured-project-desc" id="featuredProjectDesc">
+                                        A modern villa that blends natural surroundings with contemporary design.
+                                    </p>
+
+                                    <div class="featured-action-row">
+                                        <a href="project.html" class="featured-view-link" id="featuredViewLink">
+                                            <span>View Project</span>
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                                    <!-- Pagination Dots & Arrow Controls Row (3 Slides) -->
+                                    <div class="featured-nav-row">
+                                        <div class="featured-pagination-dots" id="featuredDots" role="tablist" aria-label="Project slide navigation">
+                                            <button class="feat-dot active" data-slide="0" aria-label="Slide 1 - The Horizon Villa" role="tab" aria-selected="true"></button>
+                                            <button class="feat-dot" data-slide="1" aria-label="Slide 2 - Coastal Steel Residence" role="tab" aria-selected="false"></button>
+                                            <button class="feat-dot" data-slide="2" aria-label="Slide 3 - Cliffside Structural Frame" role="tab" aria-selected="false"></button>
+                                        </div>
+
+                                        <div class="featured-arrow-btns">
+                                            <button class="feat-arrow-btn feat-arrow-prev" id="featArrowPrev" aria-label="Previous project" type="button">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                                </svg>
+                                            </button>
+                                            <button class="feat-arrow-btn feat-arrow-next" id="featArrowNext" aria-label="Next project" type="button">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <span class="ref-stat-divider"></span>
-                            <div class="ref-stat-box">
-                                <span class="ref-stat-num">100-Ton</span>
-                                <span class="ref-stat-lbl">Electronic Weighbridge</span>
+                        </div>
+
+                        <!-- Right: Statistics Showcase Card -->
+                        <div class="hero-stats-showcase-card">
+                            <!-- Stat 1: Projects Completed -->
+                            <div class="hero-stat-col">
+                                <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                                        <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
+                                        <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
+                                        <path d="M10 6h4"></path>
+                                        <path d="M10 10h4"></path>
+                                        <path d="M10 14h4"></path>
+                                        <path d="M10 18h4"></path>
+                                    </svg>
+                                </div>
+                                <div class="hero-stat-number" id="heroStat1Num">250+</div>
+                                <div class="hero-stat-label" id="heroStat1Lbl">Projects Completed</div>
                             </div>
-                            <span class="ref-stat-divider"></span>
-                            <div class="ref-stat-box">
-                                <span class="ref-stat-num">10,000+</span>
-                                <span class="ref-stat-lbl">Deliveries Completed</span>
+
+                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+
+                            <!-- Stat 2: Happy Clients -->
+                            <div class="hero-stat-col">
+                                <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="hero-stat-number" id="heroStat2Num">120+</div>
+                                <div class="hero-stat-label" id="heroStat2Lbl">Happy Clients</div>
+                            </div>
+
+                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+
+                            <!-- Stat 3: Countries Worldwide -->
+                            <div class="hero-stat-col">
+                                <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2l2.3 2.4 3.3-.2 1.3 3.1 3.1 1.3-.2 3.4 2.4 2.4-2.4 2.4.2 3.4-3.1 1.3-1.3 3.1-3.3-.2-2.3 2.4-2.3-2.4-3.3.2-1.3-3.1-3.1-1.3.2-3.4-2.4-2.4 2.4-2.4-.2-3.4 3.1-1.3 1.3-3.1 3.3.2L12 2z"></path>
+                                        <polygon points="12 8 13.2 10.8 16.2 11.1 13.9 13.1 14.6 16 12 14.4 9.4 16 10.1 13.1 7.8 11.1 10.8 10.8 12 8" fill="none" stroke="currentColor" stroke-width="1.5"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="hero-stat-number" id="heroStat3Num">15+</div>
+                                <div class="hero-stat-label" id="heroStat3Lbl">Countries Worldwide</div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+            </div>
+        </div>
 
-                <!-- RIGHT VISUAL COLUMN (ANGLED INDUSTRIAL MATERIALS SHOWCASE) -->
-                <div class="hero-visual-col">
-                    <!-- Diagonal Orange Accent Slicing into Hero -->
-                    <div class="hero-angled-accent"></div>
-
-                    <!-- Visual Media Container with Polygon Clip Path -->
-                    <div class="hero-visual-container">
-                        <!-- Primary hero video: muted autoplay is required by browser autoplay policies -->
-                        <video class="hero-banner-video" autoplay muted loop playsinline preload="metadata" poster="img/hero/hero-yard-industrial.jpg" aria-label="Anbu Traders industrial material yard video">
+        <!-- Architectural Video Showcase Lightbox Modal -->
+        <div id="heroShowcaseModal" class="hero-showcase-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="showcaseModalTitle">
+            <div class="hero-modal-backdrop" id="modalBackdrop"></div>
+            <div class="hero-modal-dialog">
+                <button class="hero-modal-close" id="modalCloseBtn" aria-label="Close Showcase Modal" type="button">&times;</button>
+                <div class="hero-modal-content">
+                    <div class="hero-modal-badge">ARCHITECTURAL SHOWCASE</div>
+                    <h3 id="showcaseModalTitle" class="hero-modal-title">Spaces That Inspire &bull; The Horizon Villa</h3>
+                    <div class="hero-modal-media-wrap">
+                        <video id="heroShowcaseVideo" controls playsinline poster="img/main_herosec/hero2.png">
                             <source src="banner.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
-                        <script>
-                          document.addEventListener('DOMContentLoaded', function () {
-                            var heroVideo = document.querySelector('.hero-banner-video');
-                            if (!heroVideo) return;
-                            heroVideo.muted = true;
-                            var playAttempt = heroVideo.play();
-                            if (playAttempt) playAttempt.catch(function () {});
-                          });
-                        </script>
-                        <div class="hero-video-status" aria-hidden="true"><span></span> Material yard overview</div>
-                        <!-- Scrim Overlay for Contrast -->
-                        <div class="hero-visual-scrim"></div>
-
-                        <!-- Direct category links keep the video visible and take visitors to each division -->
-                        <nav class="hero-docked-pills-bar" aria-label="Core industrial divisions">
-                            <a class="ref-dock-pill is-active" href="#products">
-                                <span class="dock-pill-header"><i class="fa fa-layer-group dock-pill-icon" aria-hidden="true"></i><span class="dock-pill-text">Steel &amp; TMT</span></span>
-                                <span class="dock-pill-indicator"></span>
-                            </a>
-                            <a class="ref-dock-pill" href="cement/anbucement/index-demo-3.html">
-                                <span class="dock-pill-header"><i class="fa fa-cubes dock-pill-icon" aria-hidden="true"></i><span class="dock-pill-text">Cement</span></span>
-                                <span class="dock-pill-indicator"></span>
-                            </a>
-                            <a class="ref-dock-pill" href="a-steel/index.html">
-                                <span class="dock-pill-header"><i class="fa fa-warehouse dock-pill-icon" aria-hidden="true"></i><span class="dock-pill-text">Sheets &amp; Pipes</span></span>
-                                <span class="dock-pill-indicator"></span>
-                            </a>
-                        </nav>
                     </div>
+                    <p class="hero-modal-caption">
+                        A modern villa that blends natural surroundings with contemporary design. Built with certified structural steel, reinforced foundations, and climate-resilient architectural finishes.
+                    </p>
                 </div>
-
             </div>
         </div>
+
+        <!-- Interactive Slide Controller Script -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var slides = [
+                {
+                    bg: 'img/main_herosec/hero2.png',
+                    thumb: 'img/main_herosec/hero2.png',
+                    eyebrow: 'ARCHITECTURE â€” INTERIORS â€” LANDSCAPES',
+                    line1: 'Spaces',
+                    line2: 'That Inspire',
+                    lead: 'We design meaningful spaces that blend architecture, nature and modern living.',
+                    title: 'The Horizon Villa',
+                    desc: 'A modern villa that blends natural surroundings with contemporary design.',
+                    stat1: '250+', stat1Lbl: 'Projects Completed',
+                    stat2: '120+', stat2Lbl: 'Happy Clients',
+                    stat3: '15+', stat3Lbl: 'Countries Worldwide'
+                },
+                {
+                    bg: 'img/main_herosec/hero3.png',
+                    thumb: 'img/main_herosec/hero3.png',
+                    eyebrow: 'STRUCTURAL STEEL â€” INDUSTRIAL ROOFING',
+                    line1: 'Crafted',
+                    line2: 'To Last',
+                    lead: 'Engineered steel structures and precision roofing engineered for generational strength.',
+                    title: 'The Coastal Residence',
+                    desc: 'Modern industrial architecture with premium JSW coastal roofing installation.',
+                    stat1: '380+', stat1Lbl: 'Projects Completed',
+                    stat2: '190+', stat2Lbl: 'Happy Clients',
+                    stat3: '18+', stat3Lbl: 'Countries Worldwide'
+                },
+                {
+                    bg: 'img/main_herosec/hero1.png',
+                    thumb: 'img/main_herosec/hero1.png',
+                    eyebrow: 'CIVIL WORKS â€” REBAR FOUNDATIONS',
+                    line1: 'Built',
+                    line2: 'From Core',
+                    lead: 'Strong foundations built with primary mill TMT rebars, certified aggregates and cement.',
+                    title: 'The Cliffside Villa',
+                    desc: 'Reinforced concrete frame engineered to withstand coastal elevation and seismic loads.',
+                    stat1: '100T', stat1Lbl: 'Projects Completed',
+                    stat2: '10,000+', stat2Lbl: 'Happy Clients',
+                    stat3: '11+', stat3Lbl: 'Countries Worldwide'
+                }
+            ];
+
+            var currentSlide = 0;
+            var sceneEl = document.getElementById('heroVisualScene');
+            var thumbEl = document.getElementById('featuredProjectThumb');
+            var eyebrowEl = document.getElementById('heroEyebrow');
+            var line1El = document.querySelector('.hero-title-line-1');
+            var line2El = document.querySelector('.hero-title-line-2');
+            var leadEl = document.getElementById('heroLeadText');
+            var titleEl = document.getElementById('featuredProjectTitle');
+            var descEl = document.getElementById('featuredProjectDesc');
+            var stat1El = document.getElementById('heroStat1Num');
+            var stat1LblEl = document.getElementById('heroStat1Lbl');
+            var stat2El = document.getElementById('heroStat2Num');
+            var stat2LblEl = document.getElementById('heroStat2Lbl');
+            var stat3El = document.getElementById('heroStat3Num');
+            var stat3LblEl = document.getElementById('heroStat3Lbl');
+            var dots = document.querySelectorAll('.feat-dot');
+            var prevBtn = document.getElementById('featArrowPrev');
+            var nextBtn = document.getElementById('featArrowNext');
+
+            function applySlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+                currentSlide = index;
+
+                var data = slides[currentSlide];
+                if (sceneEl) sceneEl.style.backgroundImage = "url('" + data.bg + "')";
+                if (thumbEl) {
+                    thumbEl.style.opacity = '0.4';
+                    setTimeout(function() {
+                        thumbEl.src = data.thumb;
+                        thumbEl.style.opacity = '1';
+                    }, 150);
+                }
+                if (eyebrowEl) eyebrowEl.textContent = data.eyebrow;
+                if (line1El) line1El.textContent = data.line1;
+                if (line2El) line2El.textContent = data.line2;
+                if (leadEl) leadEl.textContent = data.lead;
+                if (titleEl) titleEl.textContent = data.title;
+                if (descEl) descEl.textContent = data.desc;
+                if (stat1El) stat1El.textContent = data.stat1;
+                if (stat1LblEl) stat1LblEl.textContent = data.stat1Lbl;
+                if (stat2El) stat2El.textContent = data.stat2;
+                if (stat2LblEl) stat2LblEl.textContent = data.stat2Lbl;
+                if (stat3El) stat3El.textContent = data.stat3;
+                if (stat3LblEl) stat3LblEl.textContent = data.stat3Lbl;
+
+                dots.forEach(function(dot, i) {
+                    if (i === currentSlide) {
+                        dot.classList.add('active');
+                        dot.setAttribute('aria-selected', 'true');
+                    } else {
+                        dot.classList.remove('active');
+                        dot.setAttribute('aria-selected', 'false');
+                    }
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    applySlide(currentSlide - 1);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    applySlide(currentSlide + 1);
+                });
+            }
+
+            dots.forEach(function(dot) {
+                dot.addEventListener('click', function () {
+                    var idx = parseInt(this.getAttribute('data-slide'), 10);
+                    if (!isNaN(idx)) applySlide(idx);
+                });
+            });
+
+            // Modal Controls
+            var modal = document.getElementById('heroShowcaseModal');
+            var openBtn = document.getElementById('heroWatchShowcaseBtn');
+            var closeBtn = document.getElementById('modalCloseBtn');
+            var backdrop = document.getElementById('modalBackdrop');
+            var video = document.getElementById('heroShowcaseVideo');
+
+            function openModal() {
+                if (!modal) return;
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                if (video) {
+                    video.currentTime = 0;
+                    video.play().catch(function() {});
+                }
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+                if (video) video.pause();
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (backdrop) backdrop.addEventListener('click', closeModal);
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+                    closeModal();
+                }
+            });
+        });
+        </script>
     </section>
 
     <!-- ==============================================
@@ -360,7 +594,7 @@
 
                 <p class="mb-4">
                     Started in 2014 as a proprietary company with the name of Anbu Traders, the company slowly and diligently built up a repertoire of blue-chip clients.
-                    &ldquo;Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.&rdquo;Ãƒâ€šÃ‚Â
+                    &ldquo;Our service and product quality standards have won us accolades from various esteemed customers, including major infrastructure companies, builders, and architects.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
                     We at Anbu Traders believe in building relationships and the testimony to this is that our customers continue to remain with us.
                     We are one of the best dealers of steel and cement suppliers in Pondicherry.
                 </p>
@@ -468,7 +702,7 @@
 
 
         <!-- ==============================================
-         ANBU TRADERS &mdash;Ãƒâ€šÃ‚Â OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
+         ANBU TRADERS &mdash;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
          ============================================== -->
     <section class="businesses-section" id="businesses">
         <div class="container">
@@ -481,7 +715,7 @@
                 <h2 class="unified-section-title mb-2">Core Wholesale &amp; Retail Businesses</h2>
                 <div class="unified-title-bar mb-3"></div>
                 <p class="unified-lead-text">
-                    From foundation steel and certified cement to industrial roofing and computerized paint mixing &mdash;Ãƒâ€šÃ‚Â certified primary materials delivered direct to site.
+                    From foundation steel and certified cement to industrial roofing and computerized paint mixing &mdash;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â certified primary materials delivered direct to site.
                 </p>
             </div>
 
@@ -607,7 +841,7 @@
 
 
 <!-- ==============================================
-     ANBU TRADERS &mdash;Ãƒâ€šÃ‚Â FEATURED PRODUCTS CATALOG (2026 PREMIUM REDESIGN)
+     ANBU TRADERS &mdash;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â FEATURED PRODUCTS CATALOG (2026 PREMIUM REDESIGN)
      ============================================== -->
 <section class="products-catalog-section" id="products">
     <div class="container">
@@ -1418,7 +1652,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Anbu Steels and Cements (Vanur/Pondy) - we are fully satisfied with your material supply for the past 2 years. Very good and consistent quality materials. The sales executive explained the cement grades thoroughly and guided our site team. Excellent service!&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Anbu Steels and Cements (Vanur/Pondy) - we are fully satisfied with your material supply for the past 2 years. Very good and consistent quality materials. The sales executive explained the cement grades thoroughly and guided our site team. Excellent service!&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1459,7 +1693,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Great customer support and high quality steel and construction materials. Tata Tiscon and JSW rebars are delivered with 100% weighbridge accuracy and test certificates. Highly recommended for all residential and commercial site works.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Great customer support and high quality steel and construction materials. Tata Tiscon and JSW rebars are delivered with 100% weighbridge accuracy and test certificates. Highly recommended for all residential and commercial site works.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1500,7 +1734,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Good place to purchase AAC Blocks and wall putty. The blocks were strong, uniform, lightweight, and delivered on time directly to our project. Very happy with the overall buying experience and polite service.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Good place to purchase AAC Blocks and wall putty. The blocks were strong, uniform, lightweight, and delivered on time directly to our project. Very happy with the overall buying experience and polite service.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1541,7 +1775,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Best quality building materials at reasonable wholesale prices. Their service team is very responsive and courteous. Unbeatable pricing for UltraTech and JSW Cement with prompt delivery across Pondicherry.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Best quality building materials at reasonable wholesale prices. Their service team is very responsive and courteous. Unbeatable pricing for UltraTech and JSW Cement with prompt delivery across Pondicherry.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1582,7 +1816,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Really happy for the service and follow up done by the staff member, with humble and polite attitude. Clear computer billing, genuine test certificates, and transparent pricing. Kindly continue this great service, Team Anbu Traders!&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Really happy for the service and follow up done by the staff member, with humble and polite attitude. Clear computer billing, genuine test certificates, and transparent pricing. Kindly continue this great service, Team Anbu Traders!&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1623,7 +1857,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Trusted shop for cement, steel rebars, MS pipes, and roofing sheets. Prompt vehicle dispatch and very good response every time we order. Best wholesale pricing in the Villupuram-Pondy region.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Trusted shop for cement, steel rebars, MS pipes, and roofing sheets. Prompt vehicle dispatch and very good response every time we order. Best wholesale pricing in the Villupuram-Pondy region.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1664,7 +1898,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Very good coordination and timely delivery of materials directly to our construction site. Their crane unloading and flexible dispatch schedules saved us crucial hours during the roof slab casting.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Very good coordination and timely delivery of materials directly to our construction site. Their crane unloading and flexible dispatch schedules saved us crucial hours during the roof slab casting.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -1705,7 +1939,7 @@
         </div>
         <div class="testimonial-quote-wrap">
           <p class="testimonial-quote is-collapsed">
-            &ldquo;Best wholesale dealer for building materials on the Pondicherry - Mailam / Vanur main road. Top quality branded products with quick billing, verified weighbridge, and fast truck loading.&rdquo;Ãƒâ€šÃ‚Â
+            &ldquo;Best wholesale dealer for building materials on the Pondicherry - Mailam / Vanur main road. Top quality branded products with quick billing, verified weighbridge, and fast truck loading.&rdquo;ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â
           </p>
           <button type="button" class="testimonial-toggle-btn" aria-expanded="false">
             <span class="btn-text">Read More</span> <i class="fas fa-chevron-down ms-1"></i>
@@ -2034,3 +2268,4 @@ document.addEventListener('DOMContentLoaded', function () {
 </body>
 
 </html>
+

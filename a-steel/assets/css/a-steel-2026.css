@@ -3313,3 +3313,20 @@ html, body {
     min-height: 480px;
   }
 }
+
+/* Full-bleed hero finish */
+.anbu-steel-hero-wrapper { width: 100%; margin: 0; background: #d8cdbd; }
+.anbu-steel-hero-wrapper .carousel-inner,
+.anbu-steel-hero-wrapper .carousel-item { width: 100%; }
+.anbu-steel-hero-wrapper .hero-slide-bg { inset: 0; background-size: cover; background-position: center center; }
+.anbu-steel-hero-wrapper .hero-slide-container { max-width: none; padding-left: clamp(24px, 8vw, 116px); padding-right: clamp(24px, 8vw, 116px); }
+@media (min-width: 992px) {
+  .anbu-steel-hero-wrapper .carousel-item,
+  .anbu-steel-hero-wrapper .hero-slide-container { min-height: min(690px, calc(100vh - 84px)); }
+  .anbu-steel-hero-wrapper .hero-slide-container { display: flex; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+  .anbu-steel-hero-wrapper .hero-slide-container > .row { width: 100%; }
+}
+@media (max-width: 767.98px) {
+  .anbu-steel-hero-wrapper .hero-slide-bg { background-position: 62% center; }
+  .anbu-steel-hero-wrapper .hero-slide-container { padding-left: 22px; padding-right: 22px; }
+}
