@@ -1633,7 +1633,7 @@ footer.footer-area a:hover {
    2026 UNIFIED SYSTEMIC SPACING & CONTAINER SYSTEM (CEMENT)
    ======================================================== */
 :root {
-  --site-container-max: 1260px;
+  --site-container-max: 1180px;
   --container-px: clamp(24px, 2.8vw, 36px);
   --container-px-tablet: 24px;
   --container-px-mobile: clamp(16px, 4vw, 20px);
@@ -1657,7 +1657,7 @@ html, body {
 .anbu-page-hero .container,
 .anbu-stats-container {
   width: 100% !important;
-  max-width: var(--site-container-max, 1260px) !important;
+  max-width: var(--site-container-max, 1180px) !important;
   padding-right: var(--container-px) !important;
   padding-left: var(--container-px) !important;
   margin-right: auto !important;
@@ -1668,7 +1668,7 @@ html, body {
 @media (min-width: 1400px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-stats-container {
-    max-width: 1260px !important;
+    max-width: 1180px !important;
     padding-right: clamp(28px, 2.5vw, 36px) !important;
     padding-left: clamp(28px, 2.5vw, 36px) !important;
   }

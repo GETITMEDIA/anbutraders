@@ -1154,7 +1154,7 @@ a {
 .container-fluid.px-lg-5,
 .container-fluid.px-md-5 {
   width: 100% !important;
-  max-width: 1260px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(24px, 2.8vw, 36px) !important;
@@ -1166,7 +1166,7 @@ a {
 .anbu-topbar .container-fluid,
 .anbu-navbar .container-fluid,
 .anbu-footer .container-fluid {
-  max-width: 1260px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(24px, 2.8vw, 36px) !important;
@@ -1175,7 +1175,7 @@ a {
 
 /* Hero container alignment */
 .hero-slide-container {
-  max-width: 1260px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(24px, 2.8vw, 36px) !important;
@@ -3312,7 +3312,7 @@ a {
 .anbu-topbar .container-fluid,
 .anbu-navbar .container-fluid,
 .anbu-footer .container-fluid {
-  max-width: 1260px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(24px, 2.8vw, 36px) !important;
@@ -4845,7 +4845,7 @@ section,
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: 1260px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(24px, 2.8vw, 36px) !important;

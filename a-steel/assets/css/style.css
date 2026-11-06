@@ -154,7 +154,7 @@ hr {
 
 .auto-container {
   position: static;
-  max-width: 1200px;
+  max-width: 1180px;
   padding: 0 80px;
   margin: 0 auto;
 }
@@ -685,7 +685,7 @@ input.form-control {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1180px;
   padding-left: 15px;
   padding-right: 15px;
 }

@@ -69,8 +69,9 @@
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
+        <div class="container">
+            <div class="row g-0 d-none d-lg-flex align-items-center">
+            <div class="col-lg-6 text-start">
                 <div class="h-100 d-inline-flex align-items-center text-white">
                     <span>Follow Us:</span>
                     <a class="btn btn-link text-light" href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/"><i class="fab fa-facebook-f"></i></a>
@@ -86,14 +87,16 @@
                     </a>
                 </div>
             </div>
+            </div>
         </div>
     </div>
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-    <a href="index.html" class="navbar-brand ps-5 me-0 d-flex align-items-center">
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 shadow-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand me-0 d-flex align-items-center">
         <img id="anbu-navbar-logo" src="img/ANUBU TRADERS new logo.png" alt="Anbu Traders Logo" style="height: 60px; width: auto; object-fit: contain;">
     </a>
     
@@ -127,14 +130,14 @@
                 <i class="fa fa-phone-alt me-2"></i>Call: +91 96263 25204
             </a>
         </div>
-        <div class="d-none d-lg-flex align-items-center">
+        <div class="d-none d-lg-flex align-items-center ms-lg-3">
                 <a href="https://wa.me/9626325204?text=Hello, I would like to enquire about your cement, steel, and pipes prices and availability." class="btn btn-primary btn-glow btn-ripple px-4 py-2" target="_blank" rel="noopener">
                 <i class="fa fa-paper-plane me-2"></i> Enquiry
             </a>
             </div>
     </div>
-</nav>
-
+        </div>
+    </nav>
     <!-- Navbar End -->
 
         <!-- ==============================================
@@ -1139,27 +1142,183 @@
 
             <section class="anbu-trust-section" id="why-choose-us" aria-labelledby="trust-title">
         <div class="container">
-            <div class="anbu-trust-panel">
-                <div class="anbu-trust-panel__intro">
-                    <p class="anbu-trust-panel__eyebrow">Why Anbu Traders</p>
-                    <h2 id="trust-title">Reliable supply,<br><em>without the guesswork.</em></h2>
-                    <p>Good material, right weight, quick dispatch.</p>
-                    <a href="tel:+919626325204" class="anbu-trust-panel__link">Talk to our team <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="anbu-trust-bento-card wow fadeInUp" data-wow-delay="0.1s">
+                <div class="anbu-trust-grid">
+                    
+                    <!-- 1. LEFT COLUMN: Intro & Values -->
+                    <div class="trust-col trust-intro-col">
+                        <div class="trust-ambient-orb"></div>
+                        
+                        <div>
+                            <!-- Eyebrow Pill with Pulsing Radar Beacon -->
+                            <div class="trust-eyebrow-pill">
+                                <span class="trust-pulse-beacon"></span>
+                                <span>WHY ANBU TRADERS</span>
+                            </div>
+
+                            <!-- Modern Headline with High-Impact Gradient Accent -->
+                            <h2 id="trust-title" class="trust-title">
+                                Reliable supply,<br>
+                                <span class="trust-title-gradient">without the guesswork.</span>
+                            </h2>
+
+                            <!-- Lead text -->
+                            <p class="trust-lead">
+                                Good material, right weight, quick dispatch. Direct factory cement, primary TMT steel, and roofing sheets.
+                            </p>
+
+                            <!-- Key Trust Badges Strip (Micro-Pills) -->
+                            <div class="trust-perks-list">
+                                <div class="trust-perk-item">
+                                    <span class="perk-check"><i class="fa fa-check"></i></span>
+                                    <span>Direct Mill Wholesale Pricing</span>
+                                </div>
+                                <div class="trust-perk-item">
+                                    <span class="perk-check"><i class="fa fa-check"></i></span>
+                                    <span>100% Tested Prime Grade Fe550D &amp; OPC/PPC</span>
+                                </div>
+                                <div class="trust-perk-item">
+                                    <span class="perk-check"><i class="fa fa-check"></i></span>
+                                    <span>Same-Day Fleet Transport &amp; Offloading</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons with Ripple & Glow -->
+                        <div class="trust-action-row">
+                            <a href="tel:+919626325204" class="trust-btn-primary btn-ripple">
+                                <i class="fa fa-phone-alt trust-btn-icon"></i>
+                                <span>Talk to our team</span>
+                                <i class="fa fa-arrow-right ms-2 trust-btn-arrow"></i>
+                            </a>
+                            <a href="https://wa.me/919626325204?text=Hello%20Anbu%20Traders%2C%20I%20would%20like%20to%20know%20more%20about%20your%20materials%20and%20pricing." class="trust-btn-whatsapp btn-ripple" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2. MIDDLE COLUMN: Real Depot Showcase with Interactive Hotspots -->
+                    <div class="trust-col trust-visual-col">
+                        <div class="trust-image-wrapper">
+                            <img src="img/opt/storefront-1200.jpg" width="1200" height="885" loading="lazy" alt="Anbu Traders material yard and storefront in Sedarapet, Pondicherry" class="trust-storefront-img">
+                            <div class="trust-image-overlay"></div>
+
+                            <!-- Top Live Depot Status Tag -->
+                            <div class="trust-badge-live">
+                                <span class="live-dot-pulse"></span>
+                                <span>Live Depot &bull; Open 8 AM - 8 PM</span>
+                            </div>
+
+                            <!-- Interactive Hotspot 1: Steel Stock -->
+                            <div class="trust-hotspot hotspot-steel" tabindex="0" role="button" aria-label="Primary Rebar Stock info">
+                                <span class="hotspot-pulse"></span>
+                                <span class="hotspot-pin"><i class="fa fa-cubes"></i></span>
+                                <div class="hotspot-card">
+                                    <strong>Primary Rebar Stock</strong>
+                                    <small>Tata Tiscon &amp; JSW Neosteel Ready</small>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Hotspot 2: Depot Weighbridge -->
+                            <div class="trust-hotspot hotspot-depot" tabindex="0" role="button" aria-label="Weighbridge Station info">
+                                <span class="hotspot-pulse"></span>
+                                <span class="hotspot-pin"><i class="fa fa-balance-scale"></i></span>
+                                <div class="hotspot-card">
+                                    <strong>100-Ton Weighbridge</strong>
+                                    <small>Calibrated Computerized Slips</small>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Location Chip -->
+                            <div class="trust-location-chip">
+                                <i class="fa fa-map-marker-alt text-orange"></i>
+                                <span>Sedarapet, Pondicherry</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. RIGHT COLUMN: 3 Interactive Feature Cards -->
+                    <div class="trust-features-col">
+                        
+                        <!-- Card 1 -->
+                        <div class="trust-feature-card">
+                            <div class="trust-feature-icon icon-orange">
+                                <i class="fa fa-certificate"></i>
+                            </div>
+                            <div class="trust-feature-content">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <h3 class="trust-feature-title">Mill-certified stock</h3>
+                                    <span class="trust-feature-tag tag-orange">100% Genuine</span>
+                                </div>
+                                <p class="trust-feature-desc">Genuine materials from trusted brands with official test certificates.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="trust-feature-card">
+                            <div class="trust-feature-icon icon-blue">
+                                <i class="fa fa-balance-scale"></i>
+                            </div>
+                            <div class="trust-feature-content">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <h3 class="trust-feature-title">Exact weight</h3>
+                                    <span class="trust-feature-tag tag-blue">Zero Shortage</span>
+                                </div>
+                                <p class="trust-feature-desc">Digital slips for every load from our on-site 100-ton computerized weighbridge.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="trust-feature-card">
+                            <div class="trust-feature-icon icon-emerald">
+                                <i class="fa fa-truck"></i>
+                            </div>
+                            <div class="trust-feature-content">
+                                <div class="d-flex align-items-center justify-content-between mb-1">
+                                    <h3 class="trust-feature-title">Quick dispatch</h3>
+                                    <span class="trust-feature-tag tag-emerald">Own Fleet</span>
+                                </div>
+                                <p class="trust-feature-desc">Ready to reach your site with company-owned crane unloading vehicles.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <figure class="anbu-trust-panel__image">
-                    <img src="img/opt/storefront-1200.jpg" width="1200" height="885" loading="lazy" alt="Anbu Traders main material yard in Sedarapet, Pondicherry">
-                    <figcaption><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Sedarapet, Pondicherry</figcaption>
-                </figure>
-                <div class="anbu-trust-panel__points">
-                    <article><span class="anbu-trust-panel__icon"><i class="fa fa-certificate" aria-hidden="true"></i></span><div><h3>Mill-certified stock</h3><p>Genuine materials from trusted brands.</p></div></article>
-                    <article><span class="anbu-trust-panel__icon"><i class="fa fa-balance-scale" aria-hidden="true"></i></span><div><h3>Exact weight</h3><p>Digital slips for every load.</p></div></article>
-                    <article><span class="anbu-trust-panel__icon"><i class="fa fa-truck" aria-hidden="true"></i></span><div><h3>Quick dispatch</h3><p>Ready to reach your site.</p></div></article>
+
+                <!-- 4. BOTTOM CREDENTIALS STRIP WITH LIVE ANIMATED COUNTERS -->
+                <div class="anbu-trust-stats-bar" aria-label="Anbu Traders Key Verification Figures">
+                    <div class="trust-stat-box">
+                        <div class="stat-number-wrap">
+                            <span class="stat-num" data-counter-target="11" data-counter-suffix="+">11+</span>
+                        </div>
+                        <div class="stat-info">
+                            <strong class="stat-label">Years of trust</strong>
+                            <span class="stat-sub">Est. 2013 &bull; Authorized Dealer</span>
+                        </div>
+                    </div>
+
+                    <div class="trust-stat-box">
+                        <div class="stat-number-wrap">
+                            <span class="stat-num" data-counter-target="100" data-counter-suffix="-Ton">100-Ton</span>
+                        </div>
+                        <div class="stat-info">
+                            <strong class="stat-label">Digital weighbridge</strong>
+                            <span class="stat-sub">Computerized Weight Slips</span>
+                        </div>
+                    </div>
+
+                    <div class="trust-stat-box">
+                        <div class="stat-number-wrap">
+                            <span class="stat-num" data-counter-target="10000" data-counter-suffix="+">10,000+</span>
+                        </div>
+                        <div class="stat-info">
+                            <strong class="stat-label">Deliveries completed</strong>
+                            <span class="stat-sub">Across Pondicherry &amp; Tamil Nadu</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="anbu-trust-panel__stats" aria-label="Anbu Traders key numbers">
-                    <div><strong>11+</strong><span>Years of trust</span></div>
-                    <div><strong>100-Ton</strong><span>Digital weighbridge</span></div>
-                    <div><strong>10,000+</strong><span>Deliveries completed</span></div>
-                </div>
+
             </div>
         </div>
     </section>

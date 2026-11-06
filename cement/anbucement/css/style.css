@@ -7562,7 +7562,7 @@ body.light-version {
         font-weight: bold;
     }
 	.demo .container {
-	    max-width: 1280px;
+	    max-width: 1180px;
 	}
     .hero-section img{
         max-width: 100%;
@@ -7645,7 +7645,7 @@ body.light-version {
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: 1320px !important;
+  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: clamp(18px, 3.5vw, 36px) !important;
