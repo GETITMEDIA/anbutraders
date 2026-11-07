@@ -748,23 +748,46 @@
             pointer-events: none;
         }
 
+        .birla-card-swap-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
         /* Responsive tweaks */
         @media (max-width: 991px) {
             .birla-app-info-panel {
                 padding-right: 0;
             }
+            .birla-card-swap-wrapper {
+                overflow: hidden;
+                max-width: 100%;
+            }
+            .card-swap {
+                max-width: 100%;
+                overflow: hidden;
+            }
             .card-swap-stage {
                 width: 100% !important;
+                max-width: 100% !important;
                 height: 340px !important;
             }
             .card-swap-slot {
-                width: 340px !important;
+                width: min(340px, 88vw) !important;
                 height: 250px !important;
-                margin: -125px 0 0 -170px !important;
+                margin: -125px 0 0 calc(-1 * min(170px, 44vw)) !important;
             }
             .birla-floating-badge {
                 position: static;
                 margin-top: 12px;
+            }
+        }
+        @media (max-width: 576px) {
+            .card-swap-slot {
+                width: min(290px, 86vw) !important;
+                height: 220px !important;
+                margin: -110px 0 0 calc(-1 * min(145px, 43vw)) !important;
             }
         }
     </style>
@@ -909,7 +932,7 @@
             <div class="carousel-inner">
                 <!-- Slide 1: Birla White WallCare Putty (hero_4.png) -->
                 <div class="carousel-item active hero-carousel-slide hero-slide-1">
-                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_4.png'); background-position: center right;"></div>
+                    <div class="hero-slide-bg" style="background-image: url('../img/carosels_paints/hero_4.png'); background-position: center right;"></div>
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
@@ -940,7 +963,7 @@
 
                 <!-- Slide 2: Birla White Waterproof Wall Putty (birla-waterproof-putty-hero.jpg) -->
                 <div class="carousel-item hero-carousel-slide hero-slide-2">
-                    <div class="hero-slide-bg hero-slide-2-bg" style="background-image: url('paint/birla-waterproof-putty-hero.jpg'); background-position: right center;"></div>
+                    <div class="hero-slide-bg hero-slide-2-bg" style="background-image: url('../paint/birla-waterproof-putty-hero.jpg'); background-position: right center;"></div>
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
@@ -971,7 +994,7 @@
 
                 <!-- Slide 3: Contractor Bulk Sacks & Wholesale Supply (birla-putty-contractor-hero.jpg) -->
                 <div class="carousel-item hero-carousel-slide hero-slide-3">
-                    <div class="hero-slide-bg hero-slide-3-bg" style="background-image: url('paint/birla-putty-contractor-hero.jpg'); background-position: right center;"></div>
+                    <div class="hero-slide-bg hero-slide-3-bg" style="background-image: url('../paint/birla-putty-contractor-hero.jpg'); background-position: right center;"></div>
                     <div class="container-fluid px-lg-5 px-3 hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">

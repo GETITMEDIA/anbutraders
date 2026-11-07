@@ -2536,10 +2536,12 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  right: auto;
   transform: translate(-50%, -50%);
-  width: 520px;
-  height: 340px;
-  overflow: visible !important;
+  width: min(360px, calc(100vw - 40px));
+  max-width: calc(100vw - 20px);
+  height: 240px;
+  overflow: clip !important;
   display: flex;
   align-items: center;
   justify-content: center;
