@@ -539,6 +539,8 @@
             position: relative;
             padding-top: 24px;
             padding-left: 20px;
+            overflow: hidden;
+            max-width: 100%;
         }
 
         /* Translucent Warm Golden/Cream Organic Flowing Wave matching reference */
@@ -546,8 +548,8 @@
             position: absolute;
             top: -14px;
             left: -15px;
-            width: 330px;
-            height: 330px;
+            width: min(330px, 90vw);
+            height: min(330px, 90vw);
             background: radial-gradient(ellipse at 85% 20%, rgba(254, 240, 138, 0.55) 0%, rgba(254, 215, 170, 0.40) 45%, rgba(255, 247, 237, 0) 72%);
             border-radius: 65% 35% 55% 45% / 40% 60% 40% 60%;
             pointer-events: none;

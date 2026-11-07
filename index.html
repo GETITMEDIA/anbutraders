@@ -324,189 +324,245 @@
 
         <!-- Interactive Slide Controller Script -->
         <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var slides = [
-                {
-                    bg: 'img/main_herosec/hero2.png',
-                    thumb: 'img/main_herosec/hero2.png',
-                    eyebrow: 'ARCHITECTURE — INTERIORS — LANDSCAPES',
-                    line1: 'Spaces',
-                    line2: 'That Inspire',
-                    lead: 'We design meaningful spaces that blend architecture, nature and modern living.',
-                    title: 'The Horizon Villa',
-                    desc: 'A modern villa that blends natural surroundings with contemporary design.',
-                    stat1: '250+', stat1Lbl: 'Projects Completed',
-                    stat2: '120+', stat2Lbl: 'Happy Clients',
-                    stat3: '15+', stat3Lbl: 'Countries Worldwide'
-                },
-                {
-                    bg: 'img/main_herosec/hero3.png',
-                    thumb: 'img/main_herosec/hero3.png',
-                    eyebrow: 'STRUCTURAL STEEL — INDUSTRIAL ROOFING',
-                    line1: 'Crafted',
-                    line2: 'To Last',
-                    lead: 'Engineered steel structures and precision roofing engineered for generational strength.',
-                    title: 'The Coastal Residence',
-                    desc: 'Modern industrial architecture with premium JSW coastal roofing installation.',
-                    stat1: '380+', stat1Lbl: 'Projects Completed',
-                    stat2: '190+', stat2Lbl: 'Happy Clients',
-                    stat3: '18+', stat3Lbl: 'Countries Worldwide'
-                },
-                {
-                    bg: 'img/main_herosec/hero1.png',
-                    thumb: 'img/main_herosec/hero1.png',
-                    eyebrow: 'CIVIL WORKS — REBAR FOUNDATIONS',
-                    line1: 'Built',
-                    line2: 'From Core',
-                    lead: 'Strong foundations built with primary mill TMT rebars, certified aggregates and cement.',
-                    title: 'The Cliffside Villa',
-                    desc: 'Reinforced concrete frame engineered to withstand coastal elevation and seismic loads.',
-                    stat1: '100T', stat1Lbl: 'Projects Completed',
-                    stat2: '10,000+', stat2Lbl: 'Happy Clients',
-                    stat3: '11+', stat3Lbl: 'Countries Worldwide'
-                }
-            ];
-
-            var currentSlide = 0;
-            var sceneEl = document.getElementById('heroVisualScene');
-            var thumbEl = document.getElementById('featuredProjectThumb');
-            var eyebrowEl = document.getElementById('heroEyebrow');
-            var line1El = document.querySelector('.hero-title-line-1');
-            var line2El = document.querySelector('.hero-title-line-2');
-            var leadEl = document.getElementById('heroLeadText');
-            var titleEl = document.getElementById('featuredProjectTitle');
-            var descEl = document.getElementById('featuredProjectDesc');
-            var stat1El = document.getElementById('heroStat1Num');
-            var stat1LblEl = document.getElementById('heroStat1Lbl');
-            var stat2El = document.getElementById('heroStat2Num');
-            var stat2LblEl = document.getElementById('heroStat2Lbl');
-            var stat3El = document.getElementById('heroStat3Num');
-            var stat3LblEl = document.getElementById('heroStat3Lbl');
-            var dots = document.querySelectorAll('.feat-dot');
-            var prevBtn = document.getElementById('featArrowPrev');
-            var nextBtn = document.getElementById('featArrowNext');
-            var exploreBtn = document.getElementById('heroExploreBtn');
-
-            if (exploreBtn) {
-                exploreBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    var target = document.getElementById('businesses') || document.getElementById('products');
-                    if (target) {
-                        var nav = document.querySelector('.navbar');
-                        var navH = nav ? nav.offsetHeight : 84;
-                        var topPos = target.getBoundingClientRect().top + window.pageYOffset - navH;
-                        window.scrollTo({ top: topPos, behavior: 'smooth' });
+        (function () {
+            function initHeroSlider() {
+                var slides = [
+                    {
+                        bg: 'img/main_herosec/hero2.png',
+                        thumb: 'img/main_herosec/hero2.png',
+                        eyebrow: 'ARCHITECTURE — INTERIORS — LANDSCAPES',
+                        line1: 'Spaces',
+                        line2: 'That Inspire',
+                        lead: 'We design meaningful spaces that blend architecture, nature and modern living.',
+                        title: 'The Horizon Villa',
+                        desc: 'A modern villa that blends natural surroundings with contemporary design.',
+                        stat1: '250+', stat1Lbl: 'Projects Completed',
+                        stat2: '120+', stat2Lbl: 'Happy Clients',
+                        stat3: '15+', stat3Lbl: 'Countries Worldwide'
+                    },
+                    {
+                        bg: 'img/main_herosec/hero3.png',
+                        thumb: 'img/main_herosec/hero3.png',
+                        eyebrow: 'STRUCTURAL STEEL — INDUSTRIAL ROOFING',
+                        line1: 'Crafted',
+                        line2: 'To Last',
+                        lead: 'Engineered steel structures and precision roofing engineered for generational strength.',
+                        title: 'The Coastal Residence',
+                        desc: 'Modern industrial architecture with premium JSW coastal roofing installation.',
+                        stat1: '380+', stat1Lbl: 'Projects Completed',
+                        stat2: '190+', stat2Lbl: 'Happy Clients',
+                        stat3: '18+', stat3Lbl: 'Countries Worldwide'
+                    },
+                    {
+                        bg: 'img/main_herosec/hero1.png',
+                        thumb: 'img/main_herosec/hero1.png',
+                        eyebrow: 'CIVIL WORKS — REBAR FOUNDATIONS',
+                        line1: 'Built',
+                        line2: 'From Core',
+                        lead: 'Strong foundations built with primary mill TMT rebars, certified aggregates and cement.',
+                        title: 'The Cliffside Villa',
+                        desc: 'Reinforced concrete frame engineered to withstand coastal elevation and seismic loads.',
+                        stat1: '100T', stat1Lbl: 'Projects Completed',
+                        stat2: '10,000+', stat2Lbl: 'Happy Clients',
+                        stat3: '11+', stat3Lbl: 'Countries Worldwide'
                     }
+                ];
+
+                var currentSlide = 0;
+                var sceneEl = document.getElementById('heroVisualScene');
+                var thumbEl = document.getElementById('featuredProjectThumb');
+                var eyebrowEl = document.getElementById('heroEyebrow');
+                var line1El = document.querySelector('.hero-title-line-1');
+                var line2El = document.querySelector('.hero-title-line-2');
+                var leadEl = document.getElementById('heroLeadText');
+                var titleEl = document.getElementById('featuredProjectTitle');
+                var descEl = document.getElementById('featuredProjectDesc');
+                var stat1El = document.getElementById('heroStat1Num');
+                var stat1LblEl = document.getElementById('heroStat1Lbl');
+                var stat2El = document.getElementById('heroStat2Num');
+                var stat2LblEl = document.getElementById('heroStat2Lbl');
+                var stat3El = document.getElementById('heroStat3Num');
+                var stat3LblEl = document.getElementById('heroStat3Lbl');
+                var dots = document.querySelectorAll('.feat-dot');
+                var prevBtn = document.getElementById('featArrowPrev');
+                var nextBtn = document.getElementById('featArrowNext');
+                var exploreBtn = document.getElementById('heroExploreBtn');
+
+                // Preload slide background assets
+                slides.forEach(function (s) {
+                    var img = new Image();
+                    img.src = s.bg;
                 });
-            }
 
-            var viewLink = document.getElementById('featuredViewLink');
-            if (viewLink) {
-                viewLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    var target = document.getElementById('businesses') || document.getElementById('products');
-                    if (target) {
-                        var nav = document.querySelector('.navbar');
-                        var navH = nav ? nav.offsetHeight : 84;
-                        var topPos = target.getBoundingClientRect().top + window.pageYOffset - navH;
-                        window.scrollTo({ top: topPos, behavior: 'smooth' });
-                    }
-                });
-            }
-
-            function applySlide(index) {
-                if (index < 0) index = slides.length - 1;
-                if (index >= slides.length) index = 0;
-                currentSlide = index;
-
-                var data = slides[currentSlide];
-                if (sceneEl) sceneEl.style.backgroundImage = "url('" + data.bg + "')";
-                if (thumbEl) {
-                    thumbEl.style.opacity = '0.4';
-                    setTimeout(function() {
-                        thumbEl.src = data.thumb;
-                        thumbEl.style.opacity = '1';
-                    }, 150);
+                if (exploreBtn) {
+                    exploreBtn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var target = document.getElementById('businesses') || document.getElementById('products');
+                        if (target) {
+                            var nav = document.querySelector('.navbar');
+                            var navH = nav ? nav.offsetHeight : 84;
+                            var topPos = target.getBoundingClientRect().top + window.pageYOffset - navH;
+                            window.scrollTo({ top: topPos, behavior: 'smooth' });
+                        }
+                    });
                 }
-                if (eyebrowEl) eyebrowEl.textContent = data.eyebrow;
-                if (line1El) line1El.textContent = data.line1;
-                if (line2El) line2El.textContent = data.line2;
-                if (leadEl) leadEl.textContent = data.lead;
-                if (titleEl) titleEl.textContent = data.title;
-                if (descEl) descEl.textContent = data.desc;
-                if (stat1El) stat1El.textContent = data.stat1;
-                if (stat1LblEl) stat1LblEl.textContent = data.stat1Lbl;
-                if (stat2El) stat2El.textContent = data.stat2;
-                if (stat2LblEl) stat2LblEl.textContent = data.stat2Lbl;
-                if (stat3El) stat3El.textContent = data.stat3;
-                if (stat3LblEl) stat3LblEl.textContent = data.stat3Lbl;
 
-                dots.forEach(function(dot, i) {
-                    if (i === currentSlide) {
-                        dot.classList.add('active');
-                        dot.setAttribute('aria-selected', 'true');
+                var viewLink = document.getElementById('featuredViewLink');
+                if (viewLink) {
+                    viewLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var target = document.getElementById('businesses') || document.getElementById('products');
+                        if (target) {
+                            var nav = document.querySelector('.navbar');
+                            var navH = nav ? nav.offsetHeight : 84;
+                            var topPos = target.getBoundingClientRect().top + window.pageYOffset - navH;
+                            window.scrollTo({ top: topPos, behavior: 'smooth' });
+                        }
+                    });
+                }
+
+                function applySlide(index) {
+                    if (index < 0) index = slides.length - 1;
+                    if (index >= slides.length) index = 0;
+                    currentSlide = index;
+
+                    var data = slides[currentSlide];
+                    if (sceneEl) sceneEl.style.backgroundImage = "url('" + data.bg + "')";
+                    if (thumbEl) {
+                        thumbEl.style.opacity = '0.4';
+                        setTimeout(function() {
+                            thumbEl.src = data.thumb;
+                            thumbEl.style.opacity = '1';
+                        }, 150);
+                    }
+                    if (eyebrowEl) eyebrowEl.textContent = data.eyebrow;
+                    if (line1El) line1El.textContent = data.line1;
+                    if (line2El) line2El.textContent = data.line2;
+                    if (leadEl) leadEl.textContent = data.lead;
+                    if (titleEl) titleEl.textContent = data.title;
+                    if (descEl) descEl.textContent = data.desc;
+                    if (stat1El) stat1El.textContent = data.stat1;
+                    if (stat1LblEl) stat1LblEl.textContent = data.stat1Lbl;
+                    if (stat2El) stat2El.textContent = data.stat2;
+                    if (stat2LblEl) stat2LblEl.textContent = data.stat2Lbl;
+                    if (stat3El) stat3El.textContent = data.stat3;
+                    if (stat3LblEl) stat3LblEl.textContent = data.stat3Lbl;
+
+                    dots.forEach(function(dot, i) {
+                        if (i === currentSlide) {
+                            dot.classList.add('active');
+                            dot.setAttribute('aria-selected', 'true');
+                        } else {
+                            dot.classList.remove('active');
+                            dot.setAttribute('aria-selected', 'false');
+                        }
+                    });
+                }
+
+                // Autoplay 5-second interval
+                var AUTOPLAY_DELAY = 5000;
+                var autoplayTimer = null;
+
+                function startAutoplay() {
+                    stopAutoplay();
+                    autoplayTimer = setInterval(function () {
+                        applySlide(currentSlide + 1);
+                    }, AUTOPLAY_DELAY);
+                }
+
+                function stopAutoplay() {
+                    if (autoplayTimer) {
+                        clearInterval(autoplayTimer);
+                        autoplayTimer = null;
+                    }
+                }
+
+                function resetAutoplay() {
+                    startAutoplay();
+                }
+
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', function () {
+                        applySlide(currentSlide - 1);
+                        resetAutoplay();
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', function () {
+                        applySlide(currentSlide + 1);
+                        resetAutoplay();
+                    });
+                }
+
+                dots.forEach(function(dot) {
+                    dot.addEventListener('click', function () {
+                        var idx = parseInt(this.getAttribute('data-slide'), 10);
+                        if (!isNaN(idx)) {
+                            applySlide(idx);
+                            resetAutoplay();
+                        }
+                    });
+                });
+
+                // Tab visibility pause & resume
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        stopAutoplay();
                     } else {
-                        dot.classList.remove('active');
-                        dot.setAttribute('aria-selected', 'false');
+                        startAutoplay();
+                    }
+                });
+
+                // Initialize first slide and start 5-second autoplay immediately
+                applySlide(0);
+                startAutoplay();
+
+                // Modal Controls
+                var modal = document.getElementById('heroShowcaseModal');
+                var openBtn = document.getElementById('heroWatchShowcaseBtn');
+                var closeBtn = document.getElementById('modalCloseBtn');
+                var backdrop = document.getElementById('modalBackdrop');
+                var video = document.getElementById('heroShowcaseVideo');
+
+                function openModal() {
+                    if (!modal) return;
+                    stopAutoplay();
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    if (video) {
+                        video.currentTime = 0;
+                        video.play().catch(function() {});
+                    }
+                }
+
+                function closeModal() {
+                    if (!modal) return;
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                    if (video) video.pause();
+                    startAutoplay();
+                }
+
+                if (openBtn) openBtn.addEventListener('click', openModal);
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                if (backdrop) backdrop.addEventListener('click', closeModal);
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+                        closeModal();
                     }
                 });
             }
 
-            if (prevBtn) {
-                prevBtn.addEventListener('click', function () {
-                    applySlide(currentSlide - 1);
-                });
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initHeroSlider);
+            } else {
+                initHeroSlider();
             }
-
-            if (nextBtn) {
-                nextBtn.addEventListener('click', function () {
-                    applySlide(currentSlide + 1);
-                });
-            }
-
-            dots.forEach(function(dot) {
-                dot.addEventListener('click', function () {
-                    var idx = parseInt(this.getAttribute('data-slide'), 10);
-                    if (!isNaN(idx)) applySlide(idx);
-                });
-            });
-
-            // Modal Controls
-            var modal = document.getElementById('heroShowcaseModal');
-            var openBtn = document.getElementById('heroWatchShowcaseBtn');
-            var closeBtn = document.getElementById('modalCloseBtn');
-            var backdrop = document.getElementById('modalBackdrop');
-            var video = document.getElementById('heroShowcaseVideo');
-
-            function openModal() {
-                if (!modal) return;
-                modal.classList.add('is-open');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-                if (video) {
-                    video.currentTime = 0;
-                    video.play().catch(function() {});
-                }
-            }
-
-            function closeModal() {
-                if (!modal) return;
-                modal.classList.remove('is-open');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-                if (video) video.pause();
-            }
-
-            if (openBtn) openBtn.addEventListener('click', openModal);
-            if (closeBtn) closeBtn.addEventListener('click', closeModal);
-            if (backdrop) backdrop.addEventListener('click', closeModal);
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
-                    closeModal();
-                }
-            });
-        });
+        })();
         </script>
     </section>
 
