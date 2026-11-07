@@ -9166,3 +9166,9 @@ html, body { overflow-x: hidden; }
 @media (max-width: 575.98px) {
   :root { --global-content-gutter: 16px; }
 }
+
+/* Safety: Never allow wow animation classes to keep content stuck hidden */
+.wow {
+  visibility: visible !important;
+}
+
