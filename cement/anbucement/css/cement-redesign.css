@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
   box-shadow: 0 4px 20px rgba(6, 43, 91, 0.08) !important;
   padding: 0 !important;
-  min-height: 76px;
+  min-height: 94px;
   transition: all 0.3s ease !important;
   z-index: 1030 !important;
 }
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-right: 50px;
   padding-left: 15px;
-  height: 76px;
+  height: 94px;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -167,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar#banner .navbar-brand img.anbu-navbar-logo {
-  height: 64px !important;
+  height: 68px !important;
+  max-height: 72px;
   width: auto !important;
   object-fit: contain;
   position: relative;
@@ -177,6 +178,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar#banner .navbar-brand:hover img.anbu-navbar-logo {
   transform: scale(1.03);
+}
+
+@media (max-width: 991.98px) {
+  .navbar#banner { min-height: 82px; }
+  .navbar#banner .navbar-brand { height: 82px; }
+  .navbar#banner .navbar-brand img.anbu-navbar-logo {
+    height: 58px !important;
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar#banner { min-height: 72px; }
+  .navbar#banner .navbar-brand { height: 72px; }
+  .navbar#banner .navbar-brand img.anbu-navbar-logo {
+    height: 48px !important;
+    max-height: 50px;
+  }
 }
 
 /* Nav Links with Underline Indicator (Clean, No clumsy bubble) */

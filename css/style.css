@@ -1,8 +1,8 @@
 /* =============================================
-   ANBU TRADERS â€” 2026 UNIFIED DESIGN SYSTEM
+   ANBU TRADERS — 2026 UNIFIED DESIGN SYSTEM
    ============================================= */
 
-/* â”€â”€ Design Tokens â”€â”€ */
+/* ──── Design Tokens ──── */
 :root {
   /* Brand Colours */
   --primary-navy: #062B5B;
@@ -50,7 +50,7 @@
   --dark: #062B5B;
 }
 
-/* â”€â”€ Reset & Foundations â”€â”€ */
+/* ──── Reset & Foundations ──── */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -74,7 +74,7 @@ img {
   height: auto;
 }
 
-/* â”€â”€ Typography â”€â”€ */
+/* ──── Typography ──── */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading);
@@ -112,7 +112,7 @@ a {
   background-color: var(--primary-orange) !important;
 }
 
-/* â”€â”€ Spinner â”€â”€ */
+/* ──── Spinner ──── */
 /* Hide spinner immediately if user has already entered the site */
 html.already-visited #spinner {
   display: none !important;
@@ -139,7 +139,7 @@ html.already-visited #spinner {
   border-right-color: transparent;
 }
 
-/* â”€â”€ Back to Top â”€â”€ */
+/* ──── Back to Top ──── */
 .back-to-top {
   position: fixed;
   display: none;
@@ -163,7 +163,7 @@ html.already-visited #spinner {
   box-shadow: 0 6px 20px rgba(243,106,33,0.45);
 }
 
-/* â”€â”€ Buttons â”€â”€ */
+/* ──── Buttons ──── */
 .btn {
   font-family: var(--font-heading);
   font-weight: 600;
@@ -228,8 +228,8 @@ html.already-visited #spinner {
   font-weight: normal;
 }
 
-/* â”€â”€ Topbar â”€â”€ */
-/* â”€â”€ Topbar & Call Buttons â”€â”€ */
+/* ──── Topbar ──── */
+/* ──── Topbar & Call Buttons ──── */
 .topbar-call-link {
   color: #ffffff !important;
   font-family: var(--font-heading);
@@ -300,7 +300,7 @@ html.already-visited #spinner {
   background-color: var(--primary-orange);
 }
 
-/* â”€â”€ Navbar â”€â”€ */
+/* ──── Navbar ──── */
 .navbar.sticky-top {
   top: -100px;
   transition: all var(--transition-slow);
@@ -319,7 +319,7 @@ html.already-visited #spinner {
 .navbar .navbar-brand {
   position: relative;
   padding-right: 20px;
-  height: 86px;
+  height: 94px;
   display: flex;
   align-items: center;
   background: var(--white);
@@ -459,7 +459,7 @@ html.already-visited #spinner {
 
 
 /* ========================================================
-   ANBU TRADERS â€” 2026 HERO 3-CATEGORY CAROUSEL (JSW STYLE)
+   ANBU TRADERS — 2026 HERO 3-CATEGORY CAROUSEL (JSW STYLE)
    ======================================================== */
 
 .anbu-integrated-navbar {
@@ -471,7 +471,7 @@ html.already-visited #spinner {
   transition: all var(--transition-normal);
 }
 
-/* â”€â”€ Hero Carousel Outer Container (2026 JSW White Card & Raw Bright Daylight) â”€â”€ */
+/* ──── Hero Carousel Outer Container (2026 JSW White Card & Raw Bright Daylight) ──── */
 .anbu-hero-carousel {
   position: relative;
   width: 100%;
@@ -486,7 +486,7 @@ html.already-visited #spinner {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* â”€â”€ Slides Container & Slides â”€â”€ */
+/* ──── Slides Container & Slides ──── */
 .hero-slides-wrapper {
   position: absolute;
   inset: 0;
@@ -535,7 +535,7 @@ html.already-visited #spinner {
   display: none !important;
 }
 
-/* â”€â”€ Hero Foreground Content â”€â”€ */
+/* ──── Hero Foreground Content ──── */
 .hero-content-container {
   position: relative;
   z-index: 3;
@@ -797,7 +797,7 @@ html.already-visited #spinner {
   font-size: 0.8rem;
 }
 
-/* â”€â”€ Sleek JSW-Style Bottom Category Tabs â”€â”€ */
+/* ──── Sleek JSW-Style Bottom Category Tabs ──── */
 .hero-bottom-nav {
   position: absolute;
   bottom: 0;
@@ -981,7 +981,7 @@ html.already-visited #spinner {
   overflow: hidden;
 }
 
-/* â”€â”€ Responsive Adaptations â”€â”€ */
+/* ──── Responsive Adaptations ──── */
 @media (max-width: 991.98px) {
   .anbu-hero-carousel {
     height: auto;
@@ -1054,7 +1054,7 @@ html.already-visited #spinner {
   }
 }
 
-/* â”€â”€ Page Header â”€â”€ */
+/* ──── Page Header ──── */
 .page-header {
   background: linear-gradient(135deg, rgba(6,43,91,0.9) 0%, rgba(6,43,91,0.6) 100%), url('../pipiandsheet.jpg') center center no-repeat;
   background-size: cover;
@@ -1076,7 +1076,7 @@ html.already-visited #spinner {
   color: var(--white);
 }
 
-/* â”€â”€ Dedicated Hero Banners (About, Services, Contact) â”€â”€ */
+/* ──── Dedicated Hero Banners (About, Services, Contact) ──── */
 .page-header.about-page-header,
 .page-header.service-page-header,
 .page-header.contact-page-header {
@@ -1207,12 +1207,12 @@ html.already-visited #spinner {
   }
 }
 
-/* â”€â”€ About Section â”€â”€ */
+/* ──── About Section ──── */
 .container-xxl {
   max-width: var(--site-container-max, 1180px);
 }
 
-/* â”€â”€ Facts / Statistics â”€â”€ */
+/* ──── Facts / Statistics ──── */
 .facts {
   position: relative;
   margin: 0;
@@ -1258,7 +1258,7 @@ html.already-visited #spinner {
   font-size: 0.95rem;
 }
 
-/* â”€â”€ Section Title â”€â”€ */
+/* ──── Section Title ──── */
 .section-title {
   text-align: center;
   padding: var(--section-padding) var(--sp-4) var(--sp-8);
@@ -1281,7 +1281,7 @@ html.already-visited #spinner {
 }
 
 /* ==============================================
-   ANBU TRADERS â€” OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
+   ANBU TRADERS — OUR BUSINESSES SECTION (CLEAN 4-VERTICAL SHOWCASE)
    ============================================== */
 .businesses-section {
   padding: clamp(3rem, 5vw, 4.5rem) 0;
@@ -1625,7 +1625,7 @@ html.already-visited #spinner {
   }
 }
 
-/* â”€â”€ Products Section (2026 Premium Architectural Redesign) â”€â”€ */
+/* ──── Products Section (2026 Premium Architectural Redesign) ──── */
 .products-catalog-section {
   width: 100%;
   margin: 0 auto;
@@ -1674,7 +1674,7 @@ html.already-visited #spinner {
   line-height: 1.6;
 }
 
-/* â”€â”€ Filter Pills & Search Control Panel â”€â”€ */
+/* ──── Filter Pills & Search Control Panel ──── */
 .catalog-control-panel {
   display: flex;
   flex-wrap: wrap;
@@ -1796,7 +1796,7 @@ html.already-visited #spinner {
   color: var(--primary-orange);
 }
 
-/* â”€â”€ Modern Product Cards Grid â”€â”€ */
+/* ──── Modern Product Cards Grid ──── */
 .products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2042,7 +2042,7 @@ html.already-visited #spinner {
 }
 
 /* ==============================================
-   ANBU TRADERS â€” WHY CHOOSE US (2026 ARCHITECTURAL REDESIGN)
+   ANBU TRADERS — WHY CHOOSE US (2026 ARCHITECTURAL REDESIGN)
    ============================================== */
 .why-choose-section {
   padding: clamp(3.5rem, 6vw, 5.5rem) 0;
@@ -2490,7 +2490,7 @@ html.already-visited #spinner {
   }
 }
 
-/* â”€â”€ Service Cards â”€â”€ */
+/* ──── Service Cards ──── */
 .service-item {
   position: relative;
   margin: 65px 0 25px 0;
@@ -2602,7 +2602,7 @@ html.already-visited #spinner {
   border-color: var(--primary-orange);
 }
 
-/* â”€â”€ Projects â”€â”€ */
+/* ──── Projects ──── */
 .project-carousel {
   position: relative;
   background: var(--primary-navy);
@@ -2687,7 +2687,7 @@ html.already-visited #spinner {
   transition: var(--transition-fast);
 }
 
-/* â”€â”€ Team â”€â”€ */
+/* ──── Team ──── */
 .team-item .team-social {
   position: absolute;
   width: 100%;
@@ -2702,7 +2702,7 @@ html.already-visited #spinner {
 
 .team-item:hover .team-social { left: 0; }
 
-/* â”€â”€ Testimonials Redesign (2026 Premium Card System) â”€â”€ */
+/* ──── Testimonials Redesign (2026 Premium Card System) ──── */
 .testimonial-section {
   position: relative;
   background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
@@ -2996,7 +2996,7 @@ html.already-visited #spinner {
   border-radius: 12px;
 }
 
-/* â”€â”€ Brands Section (Fully Responsive for All Screen Sizes) â”€â”€ */
+/* ──── Brands Section (Fully Responsive for All Screen Sizes) ──── */
 .brands-section {
   background-color: var(--bg-grey);
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
@@ -3149,7 +3149,7 @@ html.already-visited #spinner {
   transform: scale(1.03);
 }
 
-/* â”€â”€ Footer â”€â”€ */
+/* ──── Footer ──── */
 .footer {
   color: rgba(255,255,255,0.65);
   background: var(--primary-navy) !important;
@@ -3237,7 +3237,7 @@ html.already-visited #spinner {
   color: var(--primary-orange);
 }
 
-/* â”€â”€ Popup Form â”€â”€ */
+/* ──── Popup Form ──── */
 .popup-form {
   display: none;
   position: fixed;
@@ -3334,7 +3334,7 @@ html.already-visited #spinner {
   transform: translateY(-1px);
 }
 
-/* â”€â”€ Tab old selectors compatibility â”€â”€ */
+/* ──── Tab old selectors compatibility ──── */
 .tabs {
   display: flex;
   justify-content: center;
@@ -3365,7 +3365,7 @@ html.already-visited #spinner {
   border-radius: 3px;
 }
 
-/* â”€â”€ Overlay for tabs old â”€â”€ */
+/* ──── Overlay for tabs old ──── */
 .overlay {
   background: var(--white);
   padding: var(--sp-16);
@@ -3387,7 +3387,7 @@ html.already-visited #spinner {
   color: var(--primary-orange-hover);
 }
 
-/* â”€â”€ Review form compatibility â”€â”€ */
+/* ──── Review form compatibility ──── */
 #reviewName, #reviewEmail, #reviewRating, #reviewText {
   font-size: 0.938rem;
   color: var(--white);
@@ -3412,7 +3412,7 @@ button.btn-primary:hover {
   border-color: var(--primary-orange-hover);
 }
 
-/* â”€â”€ Contact Info Cards in About Section â”€â”€ */
+/* ──── Contact Info Cards in About Section ──── */
 .custom-margin { margin-left: 0 !important; }
 
 .d-flex.align-items-center h5 {
@@ -3420,7 +3420,7 @@ button.btn-primary:hover {
   word-break: break-word;
 }
 
-/* â”€â”€ Floating Contact Actions â”€â”€ */
+/* ──── Floating Contact Actions ──── */
 .floating-actions {
   position: fixed;
   bottom: 28px;
@@ -3465,7 +3465,7 @@ button.btn-primary:hover {
   display: none !important;
 }
 
-/* â”€â”€ WhatsApp Blinking Pulse Animation â”€â”€ */
+/* ──── WhatsApp Blinking Pulse Animation ──── */
 @keyframes whatsappBlinkPulse {
   0%, 100% {
     transform: scale(1);
@@ -3509,7 +3509,7 @@ button.btn-primary:hover {
   }
 }
 
-/* â”€â”€ Mobile carousel text â”€â”€ */
+/* ──── Mobile carousel text ──── */
 @media (max-width: 768px) {
   .carousel-caption h1 {
     font-size: 1.5rem !important;
@@ -3529,7 +3529,7 @@ button.btn-primary:hover {
   }
 }
 
-/* â”€â”€ Viewport reveal animations â”€â”€ */
+/* ──── Viewport reveal animations ──── */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -3575,7 +3575,7 @@ button.btn-primary:hover {
   }
 }
 
-/* â”€â”€ Focus visible states â”€â”€ */
+/* ──── Focus visible states ──── */
 :focus-visible {
   outline: 2px solid var(--primary-orange);
   outline-offset: 2px;
@@ -3590,7 +3590,7 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
-/* â”€â”€ Responsive Brand Grid & Section Margins across all screen sizes â”€â”€ */
+/* ──── Responsive Brand Grid & Section Margins across all screen sizes ──── */
 @media (min-width: 1440px) {
   /* .container-xxl unified to 1180px */
   .brands-section {
@@ -4383,7 +4383,7 @@ select:focus-visible {
   }
 }
 
-/* â”€â”€ About Section Contact Strip â”€â”€ */
+/* ──── About Section Contact Strip ──── */
 .about-contact-strip {
   display: flex;
   flex-wrap: wrap;
@@ -4406,10 +4406,10 @@ select:focus-visible {
 
 
 /* ==========================================================================
-   ANBU TRADERS â€” SUPER SERVICE PAGE STYLES (2026)
+   ANBU TRADERS — SUPER SERVICE PAGE STYLES (2026)
    ========================================================================== */
 
-/* â”€â”€ Service Section Title â”€â”€ */
+/* ──── Service Section Title ──── */
 .service-section-tag {
   display: inline-block;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -4438,7 +4438,7 @@ select:focus-visible {
   margin: 0 auto 40px;
 }
 
-/* â”€â”€ Super Service Cards â”€â”€ */
+/* ──── Super Service Cards ──── */
 .super-service-card {
   background: #ffffff;
   border-radius: 20px;
@@ -4637,7 +4637,7 @@ select:focus-visible {
   box-shadow: 0 6px 14px rgba(243, 106, 33, 0.35);
 }
 
-/* â”€â”€ Service Trust Ribbon â”€â”€ */
+/* ──── Service Trust Ribbon ──── */
 .super-service-ribbon {
   background: #ffffff;
   border-radius: 18px;
@@ -4682,7 +4682,7 @@ select:focus-visible {
   line-height: 1.35;
 }
 
-/* â”€â”€ Service Process Flow â”€â”€ */
+/* ──── Service Process Flow ──── */
 .super-process-card {
   background: #ffffff;
   border-radius: 16px;
@@ -4744,7 +4744,7 @@ select:focus-visible {
   margin-bottom: 0;
 }
 
-/* â”€â”€ Quick CTA Banner â”€â”€ */
+/* ──── Quick CTA Banner ──── */
 .super-service-cta {
   background: linear-gradient(135deg, #03152e 0%, #062B5B 60%, #0b3a75 100%);
   border-radius: 20px;
@@ -4780,7 +4780,7 @@ select:focus-visible {
 }
 
 /* ==========================================================================
-   ANBU TRADERS â€” MODERN ABOUT SHOWCASE STYLES (CLEAN NO-TEXT)
+   ANBU TRADERS — MODERN ABOUT SHOWCASE STYLES (CLEAN NO-TEXT)
    ========================================================================== */
 .about-hero-showcase {
   position: relative;
@@ -5191,7 +5191,7 @@ select:focus-visible {
 
 
 /* ========================================================
-   ANBU TRADERS â€” 2026 PREMIUM ANIMATIONS, SVG WAVES & CARDS
+   ANBU TRADERS — 2026 PREMIUM ANIMATIONS, SVG WAVES & CARDS
    ======================================================== */
 
 :root {
@@ -5202,7 +5202,7 @@ select:focus-visible {
   --transition-reveal: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* â”€â”€ 1. Scroll Reveal Animations (IntersectionObserver) â”€â”€ */
+/* ──── 1. Scroll Reveal Animations (IntersectionObserver) ──── */
 .reveal-fade-up {
   opacity: 0;
   transform: translateY(32px);
@@ -5251,7 +5251,7 @@ select:focus-visible {
   transform: scale(1);
 }
 
-/* â”€â”€ 2. Card Hover Lift & Image Zoom Effects â”€â”€ */
+/* ──── 2. Card Hover Lift & Image Zoom Effects ──── */
 .hover-lift {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
@@ -5273,7 +5273,7 @@ select:focus-visible {
   transform: scale(1.08);
 }
 
-/* â”€â”€ 3. Animated Gradient Border â”€â”€ */
+/* ──── 3. Animated Gradient Border ──── */
 .gradient-border-card {
   position: relative;
   background: #FFFFFF;
@@ -5299,7 +5299,7 @@ select:focus-visible {
   100% { background-position: 0% 50%; }
 }
 
-/* â”€â”€ 4. Soft Glow CTA Buttons â”€â”€ */
+/* ──── 4. Soft Glow CTA Buttons ──── */
 .btn-glow {
   position: relative;
   box-shadow: 0 8px 24px rgba(243, 106, 33, 0.35);
@@ -5333,7 +5333,7 @@ select:focus-visible {
   }
 }
 
-/* â”€â”€ 5. Curved Section Transitions (SVG Waves) â”€â”€ */
+/* ──── 5. Curved Section Transitions (SVG Waves) ──── */
 .svg-wave-divider {
   display: block;
   width: 100%;
@@ -5374,7 +5374,7 @@ select:focus-visible {
   vertical-align: bottom;
 }
 
-/* â”€â”€ 6. Decorative Ambient Shapes & Blobs â”€â”€ */
+/* ──── 6. Decorative Ambient Shapes & Blobs ──── */
 .section-ambient-wrap {
   position: relative;
   overflow: hidden;
@@ -5405,7 +5405,7 @@ select:focus-visible {
   left: -100px;
 }
 
-/* â”€â”€ 7. Enhanced 20px Rounded Product Cards (Consistent Ratios & Hover Overlay) â”€â”€ */
+/* ──── 7. Enhanced 20px Rounded Product Cards (Consistent Ratios & Hover Overlay) ──── */
 .products-catalog-section {
   padding: 60px 0 80px 0;
   background: #F8FAFC;
@@ -5593,7 +5593,7 @@ select:focus-visible {
   transform: translateY(-1px);
 }
 
-/* â”€â”€ 8. Infinite Horizontal Brand Marquee â”€â”€ */
+/* ──── 8. Infinite Horizontal Brand Marquee ──── */
 .brand-marquee-section {
   padding: 50px 0;
   background: #FFFFFF;
@@ -5670,7 +5670,7 @@ select:focus-visible {
   white-space: nowrap;
 }
 
-/* â”€â”€ 9. Responsive Adaptations for Grids â”€â”€ */
+/* ──── 9. Responsive Adaptations for Grids ──── */
 @media (max-width: 1200px) {
   .products-catalog-section .products {
     grid-template-columns: repeat(3, 1fr);
@@ -5694,7 +5694,7 @@ select:focus-visible {
   }
 }
 
-/* â”€â”€ 10. prefers-reduced-motion Accessibility Support â”€â”€ */
+/* ──── 10. prefers-reduced-motion Accessibility Support ──── */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
@@ -5717,10 +5717,10 @@ select:focus-visible {
 
 
 /* ========================================================
-   ANBU TRADERS â€” 2026 UI/UX PRO MAX SUITE ENHANCEMENTS
+   ANBU TRADERS — 2026 UI/UX PRO MAX SUITE ENHANCEMENTS
    ======================================================== */
 
-/* â”€â”€ 1. Unified Page Hero Component with Clear Photographic Banners â”€â”€ */
+/* ──── 1. Unified Page Hero Component with Clear Photographic Banners ──── */
 .anbu-page-hero {
   position: relative;
   background-color: #031836;
@@ -5855,7 +5855,7 @@ select:focus-visible {
   font-weight: 600;
 }
 
-/* â”€â”€ 2. Modern 2026 Bento Projects â”€â”€ */
+/* ──── 2. Modern 2026 Bento Projects ──── */
 .project-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -6019,7 +6019,7 @@ select:focus-visible {
   padding-right: 4px;
 }
 
-/* â”€â”€ 3. High-Impact Value Pillars & Features â”€â”€ */
+/* ──── 3. High-Impact Value Pillars & Features ──── */
 .anbu-features-section {
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
   background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
@@ -6102,7 +6102,7 @@ select:focus-visible {
   flex-shrink: 0;
 }
 
-/* â”€â”€ 4. Organization & Dedicated Team â”€â”€ */
+/* ──── 4. Organization & Dedicated Team ──── */
 .anbu-team-section {
   padding: clamp(3.25rem, 5vw, 4.5rem) 0;
   background: #FFFFFF;
@@ -6209,7 +6209,7 @@ select:focus-visible {
   border-color: var(--primary-navy);
 }
 
-/* â”€â”€ 5. Modern 404 Error Component â”€â”€ */
+/* ──── 5. Modern 404 Error Component ──── */
 .anbu-404-container {
   padding: clamp(3.5rem, 6vw, 5rem) 0;
   text-align: center;
@@ -6282,7 +6282,7 @@ select:focus-visible {
   color: var(--text-muted, #64748B);
 }
 
-/* â”€â”€ 6. Testimonial Card Polish â”€â”€ */
+/* ──── 6. Testimonial Card Polish ──── */
 .anbu-testi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -6364,7 +6364,7 @@ select:focus-visible {
   color: var(--text-muted, #64748B);
 }
 
-/* â”€â”€ 7. Unified Pre-Footer CTA Banner Section Spacing â”€â”€ */
+/* ──── 7. Unified Pre-Footer CTA Banner Section Spacing ──── */
 .anbu-cta-banner-section {
   margin-top: clamp(1rem, 2.5vw, 1.75rem);
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
@@ -6384,12 +6384,12 @@ select:focus-visible {
    Engineered for Perfect Visual Grid Alignment & Rhythm
    ======================================================== */
 :root {
-  /* 1. Production Content Max-Width (1200pxâ€“1280px Standard) */
+  /* 1. Production Content Max-Width (1200px–1280px Standard) */
   --site-container-max: 1180px;
   --content-max-width: 1180px;
 
   /* 2. Page & Container Horizontal Padding */
-  /* Desktop: 24pxâ€“40px | Tablet: 24px | Mobile: 16pxâ€“20px */
+  /* Desktop: 24px–40px | Tablet: 24px | Mobile: 16px–20px */
   --container-px: clamp(24px, 2.8vw, 36px);
   --container-px-desktop: clamp(24px, 2.8vw, 36px);
   --container-px-tablet: 24px;
@@ -6398,7 +6398,7 @@ select:focus-visible {
   --container-gutter-x: var(--container-px);
 
   /* 3. Section Vertical Spacing */
-  /* Desktop: 80pxâ€“110px | Tablet: 60pxâ€“80px | Mobile: 40pxâ€“60px */
+  /* Desktop: 80px–110px | Tablet: 60px–80px | Mobile: 40px–60px */
   --section-spacing-y: clamp(80px, 7.5vw, 104px);
   --section-spacing-tablet: clamp(60px, 6.5vw, 76px);
   --section-spacing-mobile: clamp(40px, 5.5vw, 56px);
@@ -6438,7 +6438,7 @@ img, video, canvas, svg {
   max-width: 100%;
 }
 
-/* 2. Global Container Alignment â€” 100% Consistent Left/Right on Every Page & Section */
+/* 2. Global Container Alignment — 100% Consistent Left/Right on Every Page & Section */
 .container,
 .container-xxl,
 .container-xl,
@@ -6458,7 +6458,7 @@ img, video, canvas, svg {
   box-sizing: border-box !important;
 }
 
-/* Strict Breakpoint Max-Widths â€” Synchronized Across Entire Project */
+/* Strict Breakpoint Max-Widths — Synchronized Across Entire Project */
 @media (min-width: 1400px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
@@ -6670,7 +6670,7 @@ img, video, canvas, svg {
 
 
 /* ========================================================
-   ANBU TRADERS â€” 2026 SPLIT HERO & 3-DIVISION BENTO SHOWCASE
+   ANBU TRADERS — 2026 SPLIT HERO & 3-DIVISION BENTO SHOWCASE
    Industrial Swiss Minimalist Architecture
    ======================================================== */
 
@@ -7027,7 +7027,7 @@ img, video, canvas, svg {
 }
 
 /* ========================================================
-   HOW WE DELIVER â€” 4-STEP LOGISTICS TIMELINE
+   HOW WE DELIVER — 4-STEP LOGISTICS TIMELINE
    ======================================================== */
 .how-we-deliver-section {
   padding: clamp(3rem, 5vw, 4.5rem) 0;
@@ -8053,7 +8053,7 @@ img, video, canvas, svg {
 }
 
 /* ========================================================
-   PREMIUM HERO + TRUST PANEL â€” HOMEPAGE 2026
+   PREMIUM HERO + TRUST PANEL — HOMEPAGE 2026
    Purpose: concise content, strong visual hierarchy, responsive layout
    ======================================================== */
 .anbu-premium-hero {
@@ -8892,54 +8892,187 @@ img, video, canvas, svg {
 /* Global spacing normalization */
 :root { --site-gutter: clamp(1rem, 3.2vw, 3rem); --site-content-max: 1180px; }
 html, body { overflow-x: hidden; }
-.navbar.sticky-top { top: 0; padding-left: 0 !important; padding-right: 0 !important; width: 100% !important; background: var(--white) !important; }
-.navbar > .container, .navbar.sticky-top > .container,
-.navbar > .container-fluid, .navbar.sticky-top > .container-fluid {
+
+/* Sticky Navbar shell */
+.navbar.sticky-top {
+  top: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+  background: var(--white) !important;
+  min-height: 94px;
+}
+
+/* Ensure navbar inner container matches site container width and auto-centering exactly */
+.navbar > .container,
+.navbar.sticky-top > .container {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: clamp(1.25rem, 3.5vw, 3.5rem) !important;
-  padding-right: clamp(1.25rem, 3.5vw, 3.5rem) !important;
-  box-sizing: border-box !important;
-}
-.container-fluid.bg-dark {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-}
-.container-fluid.bg-dark > .container,
-.container-fluid.bg-dark > .container-fluid,
-.container-fluid.bg-dark > .row {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
+  max-width: var(--site-content-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
   box-sizing: border-box !important;
 }
-.navbar .navbar-brand { height: 116px; padding-left: 38px !important; padding-right: clamp(1rem, 2vw, 2rem); flex: 0 0 auto; display: flex; align-items: center; }
-.navbar .navbar-brand img { max-width: 260px; height: 136px !important; object-fit: contain; }
-.navbar .navbar-nav { align-items: center; gap: clamp(.15rem, .6vw, .55rem); }
-.navbar .navbar-nav .nav-link { margin-right: 0; padding: 22px clamp(.55rem, 1vw, .95rem); white-space: nowrap; }
-.navbar .navbar-nav .nav-link::after { left: clamp(.55rem, 1vw, .95rem); right: clamp(.55rem, 1vw, .95rem); }
-.site-section > .container, .site-section > .container-xxl, .site-section-sm > .container, .page-header > .container, .anbu-page-hero > .container, .anbu-cta-banner-section { width: min(100% - (2 * var(--site-gutter)), var(--site-content-max)); max-width: var(--site-content-max); margin-left: auto; margin-right: auto; }
-.site-section, .site-section-sm { scroll-margin-top: 80px; }
-@media (max-width: 991.98px) {
-  .navbar.sticky-top { padding-left: 0 !important; padding-right: 0 !important; }
-  .navbar > .container, .navbar.sticky-top > .container,
-  .navbar > .container-fluid, .navbar.sticky-top > .container-fluid { width: 100% !important; padding-left: 1rem !important; padding-right: 1rem !important; }
-  .navbar .navbar-brand { height: 76px; }
-  .navbar .navbar-brand img { max-width: 200px; height: 64px !important; }
-  .navbar .navbar-nav { align-items: stretch; gap: 0; padding: .5rem 0 1rem; }
-  .navbar .navbar-nav .nav-link { padding: .75rem 0; }
-  .navbar .navbar-nav .nav-link::after { left: 0; right: auto; }
+
+/* Fallback for pages that might use container-fluid */
+.navbar > .container-fluid,
+.navbar.sticky-top > .container-fluid {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
+  max-width: var(--site-content-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
 }
-@media (max-width: 575.98px) { :root { --site-gutter: 1rem; } .navbar .navbar-brand img { max-width: 145px; height: 52px !important; } }
+
+/* Topbar container normalization matching navbar & hero container */
+.container-fluid.bg-dark {
+  width: 100% !important;
+  background: #062B5B !important;
+  padding: 0 !important;
+}
+.container-fluid.bg-dark > .container {
+  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
+  max-width: var(--site-content-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+.container-fluid.bg-dark > .container-fluid,
+.container-fluid.bg-dark > .row {
+  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
+  max-width: var(--site-content-max, 1180px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* Navbar Brand & Logo Alignment - Flush with Container Left Edge */
+.navbar .navbar-brand {
+  height: 94px;
+  padding-left: 0 !important;
+  padding-right: clamp(1rem, 2vw, 2rem);
+  margin-left: 0 !important;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand img,
+.anbu-navbar-logo-img {
+  max-width: 240px;
+  height: 72px !important;
+  max-height: 74px !important;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.navbar .navbar-nav {
+  align-items: center;
+  gap: clamp(.15rem, .6vw, .55rem);
+}
+.navbar .navbar-nav .nav-link {
+  margin-right: 0;
+  padding: 26px clamp(.55rem, 1vw, .95rem);
+  white-space: nowrap;
+}
+.navbar .navbar-nav .nav-link::after {
+  left: clamp(.55rem, 1vw, .95rem);
+  right: clamp(.55rem, 1vw, .95rem);
+  bottom: 18px;
+}
+.site-section > .container,
+.site-section > .container-xxl,
+.site-section-sm > .container,
+.page-header > .container,
+.anbu-page-hero > .container,
+.anbu-cta-banner-section {
+  width: min(100% - (2 * var(--site-gutter)), var(--site-content-max));
+  max-width: var(--site-content-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-section,
+.site-section-sm {
+  scroll-margin-top: 94px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar.sticky-top {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    min-height: 82px;
+  }
+  .navbar > .container,
+  .navbar.sticky-top > .container,
+  .navbar > .container-fluid,
+  .navbar.sticky-top > .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .container-fluid.bg-dark > .container,
+  .container-fluid.bg-dark > .container-fluid,
+  .container-fluid.bg-dark > .row {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .navbar .navbar-brand {
+    height: 82px;
+    padding-left: 0 !important;
+  }
+  .navbar .navbar-brand img,
+  .anbu-navbar-logo-img {
+    max-width: 200px;
+    height: 62px !important;
+    max-height: 64px !important;
+  }
+  .navbar .navbar-nav {
+    align-items: stretch;
+    gap: 0;
+    padding: .5rem 0 1rem;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding: .75rem 0;
+  }
+  .navbar .navbar-nav .nav-link::after {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --site-gutter: 1rem;
+  }
+  .navbar.sticky-top {
+    min-height: 72px;
+  }
+  .navbar .navbar-brand {
+    height: 72px;
+    padding-left: 0 !important;
+  }
+  .navbar .navbar-brand img,
+  .anbu-navbar-logo-img {
+    max-width: 170px;
+    height: 52px !important;
+    max-height: 54px !important;
+  }
+}
 /* Unified section treatment: every content section follows the Welcome block rhythm. */
 .site-section, .businesses-section, .products-catalog-section, .why-choose-section, .anbu-features-section, .anbu-team-section, .testimonial-section, .contact-section, .service-section, .about-section, .project-section, .process-section, .brands-section, .how-we-deliver-section {
   padding-block: clamp(56px, 7vw, 104px) !important;

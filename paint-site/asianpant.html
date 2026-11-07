@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+
+    <title>Asian Paints Authorized Dealer Pondicherry | Anbu Paints | Royale Luxury &amp; Apex Ultima</title>
+    <meta name="description" content="Authorized Asian Paints dealer in Pondicherry. Discover Royale Luxury Emulsion, Apex Ultima, Tractor Emulsion, and TruCare Primers with computerized shade mixing at Anbu Paints.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/icon.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Premium 2026 Paints Redesign CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.25">
+    <style>
+        .modal-blur-backdrop {
+            backdrop-filter: blur(8px);
+            background-color: rgba(2, 12, 27, 0.7);
+        }
+        .calc-result-pill {
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+        }
+        .calc-result-pill h4 {
+            color: #2563EB;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+        .calc-result-pill small {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+            /* ==============================================================
+           HERO CAROUSEL SECTION (1-3 SLIDES WITH ASIAN PAINTS IMAGES)
+           Light & sunny 2026 aesthetic matching anbu-paint/index.html & jsw.html
+           ============================================================== */
+        .hero-paint-carousel-wrapper {
+            position: relative;
+            background-color: #F8FAFC;
+            min-height: 600px;
+            overflow: hidden;
+            width: 100% !important;
+        }
+
+        #heroPaintCarousel {
+            position: relative;
+            width: 100%;
+        }
+
+        .hero-carousel-slide {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background-color: #F8FAFC;
+        }
+
+        .hero-slide-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+            transition: transform 7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-carousel-slide.active .hero-slide-bg {
+            transform: scale(1.025);
+        }
+
+        /* Light sunny gradient scrim ensuring crisp left-side text contrast */
+        .hero-slide-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0.92) 0%, 
+                rgba(255, 255, 255, 0.70) 35%, 
+                rgba(255, 255, 255, 0.20) 58%, 
+                transparent 80%);
+            pointer-events: none;
+        }
+
+        .hero-slide-container {
+            position: relative;
+            z-index: 5;
+            padding-top: 85px;
+            padding-bottom: 95px;
+            width: 100%;
+        }
+
+        .hero-clean-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-title-dark {
+            font-size: clamp(34px, 4.2vw, 54px);
+            line-height: 1.15;
+            font-weight: 700;
+            color: #071E3D;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-title-orange {
+            font-size: clamp(38px, 4.8vw, 60px);
+            line-height: 1.12;
+            font-weight: 800;
+            color: #D7263D;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-accent-line {
+            width: 44px;
+            height: 3.5px;
+            background: #D7263D;
+            border-radius: 2px;
+            margin: 18px 0 20px;
+        }
+
+        .hero-clean-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 16.5px;
+            font-weight: 500;
+            color: #334155;
+            line-height: 1.6;
+            max-width: 480px;
+            margin-bottom: 28px;
+        }
+
+        .hero-clean-cta {
+            display: flex;
+            align-items: center;
+            position: relative;
+            min-height: 52px;
+            z-index: 10;
+        }
+
+        .asian-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(215, 38, 61, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(215, 38, 61, 0.25);
+            color: #071E3D;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .asian-badge-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #D7263D;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .btn-asian-red {
+            background: #D7263D;
+            color: #FFFFFF !important;
+            font-weight: 700;
+            font-size: 14.5px;
+            padding: 11px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            box-shadow: 0 4px 16px rgba(215, 38, 61, 0.35);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .btn-asian-red:hover {
+            background: #B91C1C;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(215, 38, 61, 0.5);
+        }
+
+        .hero-carousel-dots {
+            position: absolute;
+            bottom: 24px !important;
+            left: 0;
+            right: 0;
+            margin: 0 auto !important;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 25 !important;
+        }
+
+        .hero-carousel-dots [data-bs-target] {
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 9999px !important;
+            background-color: rgba(7, 30, 61, 0.3) !important;
+            border: 2px solid transparent !important;
+            opacity: 0.75 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            cursor: pointer !important;
+            transition: all 0.35s ease !important;
+            box-sizing: content-box !important;
+        }
+
+        .hero-carousel-dots [data-bs-target]:hover {
+            opacity: 1 !important;
+            background-color: #D7263D !important;
+            transform: scale(1.15);
+        }
+
+        .hero-carousel-dots .active {
+            width: 36px !important;
+            border-radius: 9999px !important;
+            background-color: #D7263D !important;
+            opacity: 1 !important;
+            box-shadow: 0 4px 14px rgba(215, 38, 61, 0.45) !important;
+        }
+
+        .hero-carousel-btn {
+            width: 48px;
+            height: 48px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(7, 30, 61, 0.1);
+            backdrop-filter: blur(10px);
+            color: #071E3D !important;
+            font-size: 15px;
+            opacity: 0.85;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+            transition: all 0.25s ease;
+            z-index: 20;
+        }
+
+        .hero-carousel-btn-prev { left: 24px; }
+        .hero-carousel-btn-next { right: 24px; }
+
+        .hero-carousel-btn:hover {
+            background: #D7263D;
+            border-color: #D7263D;
+            color: #FFFFFF !important;
+            opacity: 1;
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 24px rgba(215, 38, 61, 0.45);
+        }
+
+        /* Slide specific positioning for Asian Paints images */
+        .asian-slide-1 .hero-slide-bg {
+            background-position: center right;
+        }
+
+        .asian-slide-2 .hero-slide-bg {
+            background-position: right center;
+        }
+
+        .asian-slide-3 .hero-slide-bg {
+            background-position: right center;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-paint-carousel-wrapper,
+            .hero-carousel-slide {
+                min-height: 520px;
+            }
+            .hero-slide-bg::after {
+                background: linear-gradient(180deg, 
+                    rgba(255, 255, 255, 0.94) 0%, 
+                    rgba(255, 255, 255, 0.82) 55%, 
+                    rgba(255, 255, 255, 0.35) 100%);
+            }
+            .hero-slide-bg {
+                background-position: 75% center;
+            }
+            .hero-carousel-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-paint-carousel-wrapper,
+            .hero-carousel-slide {
+                min-height: 480px;
+            }
+            .hero-slide-container {
+                padding-top: 45px;
+                padding-bottom: 55px;
+            }
+            .hero-clean-subtitle {
+                font-size: 14.5px !important;
+                margin-bottom: 22px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==============================================
+         1. TOPBAR SECTION (Verified Contacts & Business Hours)
+         ============================================== -->
+    <div class="anbu-topbar">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Left: Verified Showroom Phone Numbers & Email -->
+                <div class="d-flex align-items-center flex-wrap gap-lg-4 gap-2">
+                    <a href="tel:+919626325232" class="topbar-phone-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <span>+91 96263 25232</span>
+                    </a>
+                    <a href="tel:+919940917758" class="topbar-phone-item">
+                        <i class="fa fa-phone-alt"></i>
+                        <span>+91 99409 17758</span>
+                    </a>
+                    <span class="d-none d-md-inline text-white-50">|</span>
+                    <a href="mailto:anbutraders1468@gmail.com" class="topbar-email-item d-none d-sm-inline-flex">
+                        <i class="fa fa-envelope"></i>
+                        <span>anbutraders1468@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Right: Business Hours & Social Links -->
+                <div class="d-flex align-items-center gap-3">
+                    <span class="d-none d-lg-inline text-white-50" style="font-size: 12.5px;">
+                        <i class="far fa-clock text-warning me-1"></i> Mon - Sat: 8:00 AM - 8:00 PM
+                    </span>
+                    <span class="d-none d-lg-inline text-white-50">|</span>
+                    <div class="topbar-social-links d-inline-flex align-items-center">
+                        <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/anbutraders_py/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@anbutraders1353" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         2. MAIN NAVBAR SECTION
+         ============================================== -->
+    <header class="anbu-navbar">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="anbu-navbar-inner">
+                <!-- Logo: AP ANBU PAINTS -->
+                <a class="anbu-brand-group" href="index.html" aria-label="Anbu Paints Home">
+                    <img id="anbu-navbar-logo" src="img/paint logo.png" alt="AP Anbu Paints Logo" class="anbu-brand-logo-img">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="d-none d-lg-block" aria-label="Main Navigation">
+                    <ul class="anbu-nav-links">
+                        <li><a class="anbu-nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown has-submenu">
+                            <a class="anbu-nav-link dropdown-toggle active" href="index.html#products" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products <i class="fa fa-chevron-down anbu-chevron"></i>
+                            </a>
+                            <ul class="dropdown-menu submenu" aria-labelledby="productsDropdown">
+                                <li><a class="dropdown-item" href="jsw.html"><i class="fa fa-leaf text-success me-2"></i> JSW Paints</a></li>
+                                <li><a class="dropdown-item" href="burger.html"><i class="fa fa-shield-alt text-danger me-2"></i> Berger Paints</a></li>
+                                <li><a class="dropdown-item active" href="asianpant.html"><i class="fa fa-paint-brush text-primary me-2"></i> Asian Paints</a></li>
+                                <li><a class="dropdown-item" href="wallputty.html"><i class="fa fa-layer-group text-warning me-2"></i> Birla Wall Putty</a></li>
+                                <li><hr class="dropdown-divider my-1"></li>
+                                <li><a class="dropdown-item" href="index.html#products"><i class="fa fa-cubes text-secondary me-2"></i> All Brands &amp; Products</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="anbu-nav-link" href="index.html#servicepaint">Service</a></li>
+                        <li><a class="anbu-nav-link" href="ourproject.html">Our Projects</a></li>
+                        <li><a class="anbu-nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="anbu-nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Right Action Button (Venom Liquid Paint Button) & Mobile Toggle -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="venom-nav-wrapper d-none d-sm-inline-flex" id="venomNavWrapper">
+                        <div class="venom-stage venom-stage-nav" id="navVenomStage">
+                            <canvas id="navVenomHandCanvas" class="venom-canvas venom-canvas-hand"></canvas>
+                            <canvas id="navVenomGlCanvas" class="venom-canvas venom-canvas-gl"></canvas>
+                            <button type="button" class="venom-pill venom-pill-nav" id="navVenomBtn" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                                Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-get-quote d-sm-none" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                        Get a Quote <i class="fa fa-arrow-right ms-1"></i>
+                    </button>
+                    <button class="navbar-toggler d-lg-none border-0 bg-transparent p-0" type="button" data-bs-toggle="collapse" data-bs-target="#anbuMobileNav" aria-controls="anbuMobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars fs-3 text-dark"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="collapse d-lg-none" id="anbuMobileNav">
+            <div class="bg-white border-top p-4 shadow-sm">
+                <ul class="list-unstyled mb-3">
+                    <li class="py-2 border-bottom"><a class="text-dark fw-bold text-decoration-none" href="index.html">Home</a></li>
+                    <li class="py-2 border-bottom">
+                        <span class="text-primary fw-bold">Products:</span>
+                        <div class="ps-3 mt-2 d-flex flex-column gap-2">
+                            <a class="text-success text-decoration-none" href="jsw.html"><i class="fa fa-leaf me-2"></i> JSW Paints</a>
+                            <a class="text-danger text-decoration-none" href="burger.html"><i class="fa fa-shield-alt me-2"></i> Berger Paints</a>
+                            <a class="text-primary fw-bold text-decoration-none" href="asianpant.html"><i class="fa fa-paint-brush me-2"></i> Asian Paints</a>
+                            <a class="text-warning text-decoration-none" href="wallputty.html"><i class="fa fa-layer-group me-2"></i> Birla Wall Putty</a>
+                        </div>
+                    </li>
+                    <li class="py-2 border-bottom"><a class="text-dark text-decoration-none" href="index.html#servicepaint">Service</a></li>
+                    <li class="py-2 border-bottom"><a class="text-dark text-decoration-none" href="ourproject.html">Our Projects</a></li>
+                    <li class="py-2 border-bottom"><a class="text-dark text-decoration-none" href="gallery.html">Gallery</a></li>
+                    <li class="py-2"><a class="text-dark text-decoration-none" href="contact.html">Contact Us</a></li>
+                </ul>
+                <button type="button" class="btn-get-quote w-100 justify-content-center py-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                    Request Paint Quote <i class="fa fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+        <!-- ==============================================
+         3. HERO CAROUSEL SECTION (1-3 SLIDES WITH ASIAN PAINTS IMAGES)
+         Matching the exact aesthetic and smooth motion of anbu-paint/index.html & jsw.html
+         ============================================== -->
+    <section class="hero-paint-carousel-wrapper" id="heroSection">
+        <div id="heroPaintCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+            <!-- Carousel Bottom Dots Indicators (1 to 3 Slides) -->
+            <div class="carousel-indicators hero-carousel-dots">
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1 - Asian Paints Royale Luxury"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="1" aria-label="Slide 2 - Asian Paints Apex Ultima Protek"></button>
+                <button type="button" data-bs-target="#heroPaintCarousel" data-bs-slide-to="2" aria-label="Slide 3 - Asian Paints Royale Glitz"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1: Asian Paints Royale Luxury & Apcolite (hero_3.png) -->
+                <div class="carousel-item active hero-carousel-slide asian-slide-1">
+                    <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_3.png'); background-position: center right;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Royale Luxury Finishes</span>
+                                    <span class="hero-title-orange">Timeless Elegance</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Signature Teflon surface protection for<br>
+                                    radiant luster and lasting durability.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage1">
+                                            <canvas id="heroVenomHand1" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl1" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#products-grid" class="venom-pill venom-pill-hero" id="heroVenomBtn1">
+                                                Explore Asian Paints <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Asian Paints Apex Ultima Protek Weather Defense (asian paints hd.jpg) -->
+                <div class="carousel-item hero-carousel-slide asian-slide-2">
+                    <div class="hero-slide-bg" style="background-image: url('paint/asian paints hd.jpg'); background-position: right center;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Apex Ultima Protek</span>
+                                    <span class="hero-title-orange">Silicon Weather Armor</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Fibre-reinforced silicone protection for<br>
+                                    extreme weather &amp; coastal resistance.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage2">
+                                            <canvas id="heroVenomHand2" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl2" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#products-grid" class="venom-pill venom-pill-hero" id="heroVenomBtn2">
+                                                View Apex Products <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Asian Paints Royale Glitz & Health Shield (asian-paints-hero-living.jpg) -->
+                <div class="carousel-item hero-carousel-slide asian-slide-3">
+                    <div class="hero-slide-bg" style="background-image: url('paint/asian-paints-hero-living.jpg'); background-position: right center;"></div>
+                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-xl-6 hero-content-col">
+                                <h1 class="hero-clean-title">
+                                    <span class="hero-title-dark">Royale Glitz Luxury</span>
+                                    <span class="hero-title-orange">Anti-Bacterial Defense</span>
+                                </h1>
+                                <div class="hero-accent-line"></div>
+                                <p class="hero-clean-subtitle">
+                                    Ultra-luxurious Teflon finish with<br>
+                                    active silver-ion antibacterial shield.
+                                </p>
+                                <div class="hero-clean-cta">
+                                    <div class="venom-btn-wrapper">
+                                        <div class="venom-stage venom-stage-hero" id="heroVenomStage3">
+                                            <canvas id="heroVenomHand3" class="venom-canvas venom-canvas-hand"></canvas>
+                                            <canvas id="heroVenomGl3" class="venom-canvas venom-canvas-gl"></canvas>
+                                            <a href="#products-grid" class="venom-pill venom-pill-hero" id="heroVenomBtn3">
+                                                Explore Royale Range <i class="fa fa-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Prev/Next Buttons -->
+            <button class="carousel-control-prev hero-carousel-btn hero-carousel-btn-prev" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="prev" aria-label="Previous">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control-next hero-carousel-btn hero-carousel-btn-next" type="button" data-bs-target="#heroPaintCarousel" data-bs-slide="next" aria-label="Next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="brand-trust-bar">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="brand-trust-item">
+                        <div class="brand-trust-icon bg-primary bg-opacity-10 text-primary">
+                            <i class="fa fa-crown"></i>
+                        </div>
+                        <div>
+                            <div class="brand-trust-title">Royale Luxury Finish</div>
+                            <p class="brand-trust-sub">Teflon surface protector with 100% washability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="brand-trust-item">
+                        <div class="brand-trust-icon bg-info bg-opacity-10 text-info">
+                            <i class="fa fa-cloud-sun-rain"></i>
+                        </div>
+                        <div>
+                            <div class="brand-trust-title">Apex Ultima WeatherShield</div>
+                            <p class="brand-trust-sub">Silicon-enhanced 10-year coastal defense</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="brand-trust-item">
+                        <div class="brand-trust-icon bg-success bg-opacity-10 text-success">
+                            <i class="fa fa-shield-virus"></i>
+                        </div>
+                        <div>
+                            <div class="brand-trust-title">Health Shield Silver Ion</div>
+                            <p class="brand-trust-sub">Kills 99% bacteria on painted interior walls</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="brand-trust-item">
+                        <div class="brand-trust-icon bg-warning bg-opacity-10 text-warning">
+                            <i class="fa fa-palette"></i>
+                        </div>
+                        <div>
+                            <div class="brand-trust-title">2,200+ Asian Shades</div>
+                            <p class="brand-trust-sub">Authorized computerized dispenser on-site</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         5. ASIAN PAINTS PRODUCT CATALOG GRID
+         ============================================== -->
+    <section class="py-5" id="products-grid" style="background-color: #F8FAFC;">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="section-eyebrow">SIGNATURE ASIAN PAINTS RANGE</span>
+                <h2 class="section-title">Asian Paints Flagship Solutions</h2>
+                <p class="text-muted">India's benchmark in paint innovation, durability, and vibrant decorative elegance for modern homes and commercial projects.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1: Royale Glitz / Luxury Emulsion -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="brand-product-card">
+                        <div>
+                            <div class="brand-product-img-box">
+                                <span class="brand-product-badge bg-primary text-white">Ultra Luxury Living</span>
+                                <img src="paint/asian-paints-royale-glitz-luxury-emulsion-500x500.webp" alt="Asian Paints Royale Glitz Luxury Emulsion">
+                            </div>
+                            <h3 class="brand-product-title">Royale Glitz Luxury Emulsion</h3>
+                            <p class="brand-product-desc">The ultimate ultra-sheen luxury emulsion with Teflon surface protector. Resists stubborn stains like tea, coffee, and crayon marks with zero paint peel.</p>
+                            <div class="brand-spec-pills">
+                                <span class="brand-spec-pill"><i class="fa fa-crown text-warning me-1"></i> Ultra Luster Sheen</span>
+                                <span class="brand-spec-pill"><i class="fa fa-shield-alt text-primary me-1"></i> Teflon Shield</span>
+                                <span class="brand-spec-pill"><i class="fa fa-brush me-1"></i> 140-160 sq.ft/L</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20interested%20in%20Asian%20Paints%20Royale%20Glitz.%20Please%20quote%20price." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Apex Ultima Exterior Emulsion -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="brand-product-card">
+                        <div>
+                            <div class="brand-product-img-box">
+                                <span class="brand-product-badge bg-info text-dark">Exterior 10-Yr Armor</span>
+                                <img src="paint/asian paints hd.jpg" alt="Asian Paints Apex Ultima Exterior Weather Protection">
+                            </div>
+                            <h3 class="brand-product-title">Apex Ultima WeatherProof</h3>
+                            <p class="brand-product-desc">Silicon-fortified exterior emulsion with Colour Stay technology. Resists tropical sun, saline coastal sea breeze, and heavy monsoon rains.</p>
+                            <div class="brand-spec-pills">
+                                <span class="brand-spec-pill"><i class="fa fa-shield-alt text-info me-1"></i> 10-Yr Performance</span>
+                                <span class="brand-spec-pill"><i class="fa fa-tint-slash text-primary me-1"></i> Anti-Algae</span>
+                                <span class="brand-spec-pill"><i class="fa fa-sun text-warning me-1"></i> UV Barrier</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20need%20pricing%20for%20Asian%20Paints%20Apex%20Ultima." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tractor Emulsion Smart Choice -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="brand-product-card">
+                        <div>
+                            <div class="brand-product-img-box">
+                                <span class="brand-product-badge bg-success text-white">Best Selling Value</span>
+                                <img src="paint/asian-paints-all-product-500x500.webp" alt="Asian Paints Tractor Emulsion Range">
+                            </div>
+                            <h3 class="brand-product-title">Tractor Acrylic Emulsion</h3>
+                            <p class="brand-product-desc">The smart upgrade from lime wash and distemper. Provides a smooth, matte finish that lasts 3 times longer than ordinary distempers.</p>
+                            <div class="brand-spec-pills">
+                                <span class="brand-spec-pill"><i class="fa fa-check text-success me-1"></i> 3x Longer than Distemper</span>
+                                <span class="brand-spec-pill"><i class="fa fa-expand me-1"></i> 140-150 sq.ft/L</span>
+                                <span class="brand-spec-pill"><i class="fa fa-wallet text-secondary me-1"></i> High Economy</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20am%20enquiring%20about%20Asian%20Paints%20Tractor%20Emulsion." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: TruCare Primers & Undercoats -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="brand-product-card">
+                        <div>
+                            <div class="brand-product-img-box">
+                                <span class="brand-product-badge bg-secondary text-white">Undercoat &amp; Sealer</span>
+                                <img src="paint/featured-product-royale-glitz-desk-updated.webp" alt="Asian Paints TruCare Wall Primer">
+                            </div>
+                            <h3 class="brand-product-title">TruCare Wall Primer &amp; Sealer</h3>
+                            <p class="brand-product-desc">Superior penetrating acrylic primer that neutralizes wall alkalinity and locks in the masonry surface for uniform topcoat sheen.</p>
+                            <div class="brand-spec-pills">
+                                <span class="brand-spec-pill"><i class="fa fa-lock text-primary me-1"></i> Alkali Resistance</span>
+                                <span class="brand-spec-pill"><i class="fa fa-layer-group text-dark me-1"></i> High Bonding</span>
+                                <span class="brand-spec-pill"><i class="fa fa-check text-success me-1"></i> 180 sq.ft/L</span>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20send%20rates%20for%20Asian%20Paints%20TruCare%20Primer." class="brand-order-btn" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         6. ASIAN PAINTS TRENDING SHADE PALETTE EXPLORER
+         ============================================== -->
+    <section class="py-5 bg-white">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-4">
+                <div>
+                    <span class="section-eyebrow">2,200+ COLOUR SPECTRA</span>
+                    <h2 class="section-title mb-1">Trending Asian Paints Shades</h2>
+                    <p class="text-muted mb-0">Discover India's most popular wall colors, computer-tinted with zero shade variance at Anbu Paints.</p>
+                </div>
+                <div class="mt-3 mt-md-0">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20please%20share%20the%20Asian%20Paints%20Colour%20Spectra%20Catalogue." class="btn btn-outline-primary rounded-pill fw-bold" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-download me-1"></i> Download Shade Card PDF
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Royal%20Blue%20(7244).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #1E3A8A;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Royal Blue</div>
+                            <div class="brand-shade-code">AP 7244 • Regal Living</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Morning%20Glory%20(7934).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #FDE047;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Morning Glory</div>
+                            <div class="brand-shade-code">AP 7934 • Sunlit Glow</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Rose%20Blush%20(8086).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #F472B6;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Rose Blush</div>
+                            <div class="brand-shade-code">AP 8086 • Soft Romance</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Tranquil%20Green%20(7511).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #059669;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Tranquil Green</div>
+                            <div class="brand-shade-code">AP 7511 • Calm Haven</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Imperial%20Velvet%20(7150).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #7E22CE;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Imperial Velvet</div>
+                            <div class="brand-shade-code">AP 7150 • Royal Statement</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20like%20Asian%20Paints%20Warm%20Cashmere%20(L124).%20Please%20quote." class="brand-shade-card" target="_blank">
+                        <div class="brand-shade-swatch" style="background-color: #E2E8F0;"></div>
+                        <div class="brand-shade-info">
+                            <div class="brand-shade-name">Warm Cashmere</div>
+                            <div class="brand-shade-code">AP L124 • Minimal Neutral</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         7. ROYALE APPLICATION SPECIFICATION
+         ============================================== -->
+    <section class="py-5" style="background: #F1F5F9;">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="text-center max-w-700 mx-auto mb-5">
+                <span class="section-eyebrow text-primary">PROFESSIONAL WORKMANSHIP</span>
+                <h2 class="section-title">The Master Asian Paints Royale System</h2>
+                <p class="text-muted">Follow Asian Paints' recommended multi-layer system to guarantee Teflon stain washability and maximum sheen longevity.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="process-step-card">
+                        <div class="process-step-num" style="background: #2563EB;">01</div>
+                        <h4 class="fw-bold mb-2">TruCare Primer Coat</h4>
+                        <p class="text-muted small mb-0">Apply 1 coat of TruCare Interior Wall Primer diluted with water. Fills microscopic plaster cavities and locks in loose chalking particles.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step-card">
+                        <div class="process-step-num" style="background: #2563EB;">02</div>
+                        <h4 class="fw-bold mb-2">2 Coats Wall Putty</h4>
+                        <p class="text-muted small mb-0">Apply 2 coats of Birla White Putty using a steel blade. Sand gently with 180-grit paper, then finish with 320-grit for an ultra-flat satin foundation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step-card">
+                        <div class="process-step-num" style="background: #2563EB;">03</div>
+                        <h4 class="fw-bold mb-2">2 Coats Royale Glitz</h4>
+                        <p class="text-muted small mb-0">Dilute 1 liter Royale with 400ml clean water. Apply 2 coats with a lambwool roller with 4 to 6 hours drying time between coats for luxurious reflection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         8. CTA BANNER
+         ============================================== -->
+    <section class="py-5 bg-white">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="brand-cta-banner" style="background: linear-gradient(135deg, #1E3A8A 0%, #0F172A 100%);">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <span class="badge bg-primary px-3 py-2 text-uppercase mb-3 fw-bold">Authorized Asian Paints Counter</span>
+                        <h3 class="display-6 fw-bold mb-2 text-white">Genuine Asian Paints at Best Pondicherry Prices</h3>
+                        <p class="text-white-50 mb-0 fs-6">Stocked with the latest batches directly from Asian Paints. Instant computerized color tinting, contractor rates, and free delivery in Pondicherry &amp; Villupuram.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-3">
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20order%20Asian%20Paints%20products." class="btn btn-light rounded-pill px-4 py-3 fw-bold text-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp me-2 fs-5"></i> Order via WhatsApp
+                            </a>
+                            <a href="tel:+919626325204" class="btn btn-outline-light rounded-pill px-4 py-3 fw-bold">
+                                <i class="fa fa-phone-alt me-2"></i> Call Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         9. FOOTER SECTION
+         ============================================== -->
+    <!-- Footer Start -->
+<footer class="anbu-unified-footer">
+    <div class="anbu-footer-container">
+        <div class="anbu-footer-grid">
+            <!-- Brand & Site Logo Column -->
+            <div class="anbu-footer-col anbu-footer-brand-col">
+                <a href="index.html" class="anbu-footer-logo-badge" aria-label="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo">
+                    <img src="img/paint logo.png" alt="Anbu Paints - JSW, Berger, Asian & JK Wall Putty Logo" class="anbu-footer-logo-img" loading="lazy">
+                </a>
+                <p class="anbu-footer-brand-desc">Authorized dealer for Asian Paints, Berger, JSW, Nippon & JK Wall Putty with computerized color mixing.</p>
+                <div class="anbu-footer-socials">
+                    <a class="anbu-footer-social-link" href="https://www.instagram.com/anbu_traders_pondicherry/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a class="anbu-footer-social-link" href="https://www.facebook.com/profile.php?id=61580211641539" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <a class="anbu-footer-social-link" href="https://www.youtube.com/@AnbuTraders-t8r" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Our Office Column -->
+            <div class="anbu-footer-col">
+                <h5 class="anbu-footer-title">Our Office</h5>
+                <div class="anbu-footer-info-item">
+                    <span class="anbu-footer-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </span>
+                    <span>No.76/3, Pondy - Mailam Main Road, Main Road, next to Sri Sathya Saw Mill, Sedarapet, Tamil Nadu 605111</span>
+                </div>
+                <div class="anbu-footer-info-item">
+                    <span class="anbu-footer-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    <span><a href="tel:+919626325204">96263 25204</a> / <a href="tel:+919655551468">96555 51468</a></span>
+                </div>
+                <div class="anbu-footer-info-item">
+                    <span class="anbu-footer-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </span>
+                    <span><a href="tel:04132980014">0413-2980014</a></span>
+                </div>
+                <div class="anbu-footer-info-item" style="margin-bottom: 0 !important;">
+                    <span class="anbu-footer-icon">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </span>
+                    <span><a href="mailto:anbutraders1468@gmail.com">anbutraders1468@gmail.com</a></span>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="anbu-footer-col">
+                <h5 class="anbu-footer-title">Quick Links</h5>
+                <div class="anbu-footer-links">
+                <a class="anbu-footer-link" href="../index.html">Main Home</a>
+                <a class="anbu-footer-link" href="index.html">Paints Home</a>
+                <a class="anbu-footer-link" href="asianpant.html">Asian Paints</a>
+                <a class="anbu-footer-link" href="burger.html">Berger Paints</a>
+                <a class="anbu-footer-link" href="jsw.html">JSW Paints</a>
+                <a class="anbu-footer-link" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Business Hours Column -->
+            <div class="anbu-footer-col">
+                <h5 class="anbu-footer-title">Business Hours</h5>
+                <p class="anbu-footer-hours-day">Monday - Saturday</p>
+                <p class="anbu-footer-hours-time">08:00 am - 08:00 pm</p>
+                <p class="anbu-footer-hours-day">Sunday</p>
+                <p class="anbu-footer-hours-time" style="margin-bottom: 0 !important;">08:00 am - 02:30 pm</p>
+            </div>
+
+            <!-- Leave a Google Review Column -->
+            <div class="anbu-footer-col">
+                <h5 class="anbu-footer-title">Leave a Google Review</h5>
+                <p class="anbu-footer-review-text">We would love to hear your feedback! Click the button below to leave a review on Google.</p>
+                <a href="https://www.google.com/maps/place/Anbu+Traders/@12.0011839,79.6992895,13z/data=!4m10!1m2!2m1!1sanbu+traders!3m6!1s0x3a53673c683b5d23:0xa33ec6770f905c31!8m2!3d12.0011839!4d79.7734468!15sCgxhbmJ1IHRyYWRlcnNaDiIMYW5idSB0cmFkZXJzkgEYYnVpbGRpbmdfbWF0ZXJpYWxzX3N0b3JlmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5mYWpGWk5XbFJSUkFC4AEA!16s%2Fg%2F11b6_csq4r?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="anbu-footer-review-cta">Leave a Review</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="anbu-unified-copyright">
+    <div class="anbu-footer-container">
+        <div class="anbu-copyright-inner">
+            <p>Copyright &copy; 2026 <a class="anbu-copyright-highlight" href="../index.html">Anbu Traders</a>. All Rights Reserved.</p>
+            <p>Proudly created with <a class="anbu-copyright-highlight" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a></p>
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+    <!-- ==============================================
+         10. FLOATING ACTION BUTTONS
+         ============================================== -->
+    <div class="floating-actions-wrap">
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20I%20would%20like%20to%20enquire%20about%20Asian%20Paints." class="btn-floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Floating Back to Top Button -->
+        <a href="#" class="btn-floating-top" id="btnBackToTop" aria-label="Back to Top">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- ==============================================
+         11. MODAL: GET A QUOTE
+         ============================================== -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0 pt-4 px-4">
+                    <div>
+                        <span class="section-eyebrow mb-1">ASIAN PAINTS</span>
+                        <h4 class="modal-title fw-bold" id="quoteModalLabel" style="color: #062B5B;">Request an Asian Paints Quote</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="quoteForm">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Your Full Name</label>
+                            <input type="text" id="quoteName" class="form-control rounded-3" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Phone Number</label>
+                            <input type="tel" id="quotePhone" class="form-control rounded-3" placeholder="+91 96263 XXXXX" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Interested Asian Paints Product</label>
+                            <select id="quoteService" class="form-select rounded-3">
+                                <option value="Asian Paints Royale Glitz Luxury Emulsion">Asian Paints Royale Glitz Luxury Emulsion</option>
+                                <option value="Asian Paints Apex Ultima WeatherProof Exterior">Asian Paints Apex Ultima WeatherProof Exterior</option>
+                                <option value="Asian Paints Tractor Acrylic Emulsion">Asian Paints Tractor Acrylic Emulsion</option>
+                                <option value="Asian Paints TruCare Wall Primer">Asian Paints TruCare Wall Primer</option>
+                                <option value="Asian Paints Colour Spectra Mixing Consultation">Asian Paints Colour Spectra Tinting Consultation</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Approx. Carpet Area (Optional)</label>
+                            <input type="text" id="quoteArea" class="form-control rounded-3" placeholder="e.g. 1200 sq.ft or 2 BHK">
+                        </div>
+                        <button type="submit" class="btn-get-quote w-100 justify-content-center py-3 fs-6">
+                            Send via WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         12. MODAL: LIVE PAINT ESTIMATOR
+         ============================================== -->
+    <div class="modal fade" id="estimatorModal" tabindex="-1" aria-labelledby="estimatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header border-0 pb-0 pt-4 px-4">
+                    <div>
+                        <span class="section-eyebrow mb-1">PAINT ESTIMATOR CALCULATOR</span>
+                        <h4 class="modal-title fw-bold" id="estimatorModalLabel" style="color: #062B5B;">Instant Paint Quantity Calculator</h4>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6 border-end">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Carpet Area of House (Square Feet)</label>
+                                <input type="number" id="calcSqft" class="form-control rounded-3" value="1000" min="100" max="25000">
+                                <small class="text-muted">Total carpet floor area in sq.ft</small>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Type of Painting Project</label>
+                                <select id="calcType" class="form-select rounded-3">
+                                    <option value="interior">Interior Painting (Royale / Tractor)</option>
+                                    <option value="exterior">Exterior Weather Defense (Apex Ultima)</option>
+                                    <option value="both">Both Interior &amp; Exterior</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold">Number of Coats</label>
+                                <select id="calcCoats" class="form-select rounded-3">
+                                    <option value="2">2 Coats (Standard)</option>
+                                    <option value="3">3 Coats (Premium Deep Tone)</option>
+                                </select>
+                            </div>
+                            <button type="button" id="btnCalculate" class="btn-get-quote w-100 justify-content-center py-2 mt-2">
+                                Recalculate Requirement
+                            </button>
+                        </div>
+
+                        <div class="col-md-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <h6 class="fw-bold mb-3" style="color: #062B5B;">Estimated Materials Required:</h6>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="calc-result-pill">
+                                            <h4 id="resPaint">28 L</h4>
+                                            <small>Asian Paints Emulsion</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="calc-result-pill">
+                                            <h4 id="resPrimer">18 L</h4>
+                                            <small>TruCare Primer</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="calc-result-pill">
+                                            <h4 id="resPutty">60 Kg</h4>
+                                            <small>Birla Wall Putty</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="calc-result-pill">
+                                            <h4 id="resApprox">₹ 14,900</h4>
+                                            <small>Estimated Paint Cost</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-3 border-top">
+                                <a id="btnEstimatorWhatsapp" href="https://wa.me/9626325204?text=Hello%20Anbu%20Paints,%20my%20house%20is%201000%20sq.ft.%20Please%20quote%20for%20Asian%20Paints." class="btn-get-quote w-100 justify-content-center py-2" target="_blank" rel="noopener noreferrer">
+                                    Book Asian Paints on WhatsApp <i class="fab fa-whatsapp ms-2 fs-5"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================
+         13. SCRIPTS
+         ============================================== -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/venom-button.js"></script>
+
+    <script>
+        function redirectToGoogleReview() {
+            var googleReviewLink = 'https://www.google.com/maps/place/ANBU+TRADERS+-+PIPES+AND+SHEETS/@12.002837,79.762673,391m/data=!3m1!1e3!4m8!3m7!1s0x3a53670027dfb5a9:0x7a2309fe84b1a2d0!8m2!3d12.0022224!4d79.7647595!9m1!1b1!16s%2Fg%2F11l_954p8h?hl=en';
+            window.open(googleReviewLink, '_blank');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar "Get a Quote" Venom 3D Symbiote Liquid Button
+            if (typeof initVenomButton === 'function' && document.querySelector('#navVenomStage')) {
+                var sharedNavVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                initVenomButton({
+                    stage: '#navVenomStage',
+                    btn: '#navVenomBtn',
+                    glCanvas: '#navVenomGlCanvas',
+                    handCanvas: '#navVenomHandCanvas',
+                    label: 'Get a Quote <i class="fa fa-arrow-right ms-1"></i>',
+                    gooColor: '#EA580C',
+                    textColor: '#FFFFFF',
+                    shine: '#FFF5EB',
+                    size: 42,
+                    cursor: 'native',
+                    autoplay: false,
+                    hover: 25,
+                    reach: 110,
+                    advanced: sharedNavVenomAdv,
+                    onClick: function () {
+                        var modalEl = document.getElementById('quoteModal');
+                        if (modalEl) {
+                            var modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                            modal.show();
+                        }
+                    }
+                });
+            }
+
+            // Hero Carousel initialization with 5s cycle
+            var heroCarouselEl = document.getElementById('heroPaintCarousel');
+            if (heroCarouselEl && window.bootstrap) {
+                var heroCarousel = bootstrap.Carousel.getOrCreateInstance(heroCarouselEl, {
+                    interval: 5000,
+                    pause: 'hover',
+                    ride: 'carousel',
+                    wrap: true
+                });
+                heroCarousel.cycle();
+            }
+
+            // Venom 3D Symbiote Liquid Paint Buttons for Hero Carousel
+            if (typeof initVenomButton === 'function') {
+                var sharedVenomAdv = {
+                    hover: 25,
+                    sense: 180,
+                    release: 140,
+                    strandWidth: 90,
+                    glint: 120,
+                    rim: 100,
+                    recoil: 80,
+                    spikes: 80,
+                    drops: 30
+                };
+
+                var heroVenomConfigs = [
+                    { stage: '#heroVenomStage1', btn: '#heroVenomBtn1', gl: '#heroVenomGl1', hand: '#heroVenomHand1', label: 'Explore Asian Paints <i class="fa fa-arrow-right ms-1"></i>', href: '#products-grid' },
+                    { stage: '#heroVenomStage2', btn: '#heroVenomBtn2', gl: '#heroVenomGl2', hand: '#heroVenomHand2', label: 'View Apex Products <i class="fa fa-arrow-right ms-1"></i>', href: '#products-grid' },
+                    { stage: '#heroVenomStage3', btn: '#heroVenomBtn3', gl: '#heroVenomGl3', hand: '#heroVenomHand3', label: 'Explore Royale Range <i class="fa fa-arrow-right ms-1"></i>', href: '#products-grid' }
+                ];
+
+                var heroVenomInstances = [];
+                heroVenomConfigs.forEach(function (cfg) {
+                    if (document.querySelector(cfg.stage)) {
+                        var inst = initVenomButton({
+                            stage: cfg.stage,
+                            btn: cfg.btn,
+                            glCanvas: cfg.gl,
+                            handCanvas: cfg.hand,
+                            label: cfg.label,
+                            gooColor: '#EA580C',
+                            textColor: '#FFFFFF',
+                            shine: '#FFF0EB',
+                            size: 48,
+                            cursor: 'native',
+                            autoplay: false,
+                            hover: 25,
+                            reach: 120,
+                            advanced: sharedVenomAdv,
+                            onClick: function () {
+                                if (cfg.href.startsWith('#')) {
+                                    var target = document.querySelector(cfg.href);
+                                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                                } else {
+                                    window.open(cfg.href, '_blank');
+                                }
+                            }
+                        });
+                        heroVenomInstances.push(inst);
+                    }
+                });
+
+                var activePill = document.querySelector('#heroVenomBtn1');
+                if (activePill && activePill.offsetWidth > 50) {
+                    var wrap1 = activePill.closest('.venom-btn-wrapper');
+                    if (wrap1) wrap1.style.width = activePill.offsetWidth + 'px';
+                }
+
+                if (heroCarouselEl) {
+                    heroCarouselEl.addEventListener('slid.bs.carousel', function (e) {
+                        var idx = e.to;
+                        if (heroVenomConfigs[idx]) {
+                            var pill = document.querySelector(heroVenomConfigs[idx].btn);
+                            if (pill && pill.offsetWidth > 50) {
+                                var wrap = pill.closest('.venom-btn-wrapper');
+                                if (wrap) wrap.style.width = pill.offsetWidth + 'px';
+                            }
+                        }
+                        if (heroVenomInstances[idx] && typeof heroVenomInstances[idx].fit === 'function') {
+                            heroVenomInstances[idx].fit();
+                        }
+                    });
+                }
+            }
+
+            // Initialize Hero Carousel with smooth 5s auto-cycle
+            var heroCarouselEl = document.getElementById('heroPaintCarousel');
+            if (heroCarouselEl && window.bootstrap) {
+                var heroCarousel = bootstrap.Carousel.getOrCreateInstance(heroCarouselEl, {
+                    interval: 5000,
+                    pause: 'hover',
+                    ride: 'carousel',
+                    wrap: true
+                });
+                heroCarousel.cycle();
+            }
+
+            // Universal Vanilla Modal Controller
+            function closeAllModals() {
+                document.querySelectorAll('.modal').forEach(function(m) {
+                    m.classList.remove('show');
+                    m.style.display = 'none';
+                    m.setAttribute('aria-hidden', 'true');
+                    m.removeAttribute('aria-modal');
+                });
+                var bd = document.getElementById('vanillaBackdrop');
+                if (bd) bd.remove();
+                document.body.classList.remove('modal-open');
+            }
+
+            document.querySelectorAll('[data-bs-toggle="modal"]').forEach(function(trigger) {
+                trigger.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('data-bs-target');
+                    var targetModal = document.querySelector(targetId);
+                    if (targetModal) {
+                        e.preventDefault();
+                        targetModal.classList.add('show');
+                        targetModal.style.display = 'block';
+                        targetModal.setAttribute('aria-modal', 'true');
+                        targetModal.removeAttribute('aria-hidden');
+
+                        var existing = document.getElementById('vanillaBackdrop');
+                        if (!existing) {
+                            var bd = document.createElement('div');
+                            bd.className = 'modal-backdrop fade show modal-blur-backdrop';
+                            bd.id = 'vanillaBackdrop';
+                            document.body.appendChild(bd);
+                            bd.addEventListener('click', function() {
+                                closeAllModals();
+                            });
+                        }
+                        document.body.classList.add('modal-open');
+                    }
+                });
+            });
+
+            document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    closeAllModals();
+                });
+            });
+
+            // Back to Top Button
+            var backToTopBtn = document.getElementById('btnBackToTop');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 350) {
+                    if (backToTopBtn) backToTopBtn.style.display = 'flex';
+                } else {
+                    if (backToTopBtn) backToTopBtn.style.display = 'none';
+                }
+            });
+
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Live Paint Estimator Calculator
+            function runPaintCalculation() {
+                var sqftInput = document.getElementById('calcSqft');
+                var typeSelect = document.getElementById('calcType');
+                var coatsSelect = document.getElementById('calcCoats');
+
+                var sqft = parseFloat(sqftInput ? sqftInput.value : 1000) || 1000;
+                var type = typeSelect ? typeSelect.value : 'interior';
+                var coats = parseInt(coatsSelect ? coatsSelect.value : 2, 10) || 2;
+
+                var wallAreaMultiplier = (type === 'both') ? 4.5 : (type === 'exterior') ? 1.8 : 2.5;
+                var totalWallArea = sqft * wallAreaMultiplier;
+
+                var coveragePerLiter = (coats === 3) ? 90 : 130;
+                var litersPaint = Math.round(totalWallArea / coveragePerLiter);
+                var litersPrimer = Math.round(totalWallArea / 180);
+                var kgPutty = Math.round(totalWallArea / 25);
+                var estCost = Math.round(litersPaint * 390 + litersPrimer * 160 + kgPutty * 45);
+
+                var resPaint = document.getElementById('resPaint');
+                var resPrimer = document.getElementById('resPrimer');
+                var resPutty = document.getElementById('resPutty');
+                var resApprox = document.getElementById('resApprox');
+                var btnEstWhatsapp = document.getElementById('btnEstimatorWhatsapp');
+
+                if (resPaint) resPaint.textContent = litersPaint + ' L';
+                if (resPrimer) resPrimer.textContent = litersPrimer + ' L';
+                if (resPutty) resPutty.textContent = kgPutty + ' Kg';
+                if (resApprox) resApprox.textContent = '₹ ' + estCost.toLocaleString('en-IN');
+
+                if (btnEstWhatsapp) {
+                    var msg = 'Hello Anbu Paints, my house is ' + sqft + ' sq.ft (' + type + '). Asian Paints estimate: ' + litersPaint + 'L Emulsion, ' + litersPrimer + 'L Primer, ' + kgPutty + 'Kg Putty (~₹' + estCost.toLocaleString('en-IN') + '). Please provide wholesale pricing.';
+                    btnEstWhatsapp.href = 'https://wa.me/9626325204?text=' + encodeURIComponent(msg);
+                }
+            }
+
+            var btnCalc = document.getElementById('btnCalculate');
+            if (btnCalc) btnCalc.addEventListener('click', runPaintCalculation);
+            var calcSqft = document.getElementById('calcSqft');
+            if (calcSqft) calcSqft.addEventListener('input', runPaintCalculation);
+            var calcType = document.getElementById('calcType');
+            if (calcType) calcType.addEventListener('change', runPaintCalculation);
+            var calcCoats = document.getElementById('calcCoats');
+            if (calcCoats) calcCoats.addEventListener('change', runPaintCalculation);
+
+            // WhatsApp Quote Form Handler
+            var quoteForm = document.getElementById('quoteForm');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = document.getElementById('quoteName').value;
+                    var phone = document.getElementById('quotePhone').value;
+                    var service = document.getElementById('quoteService').value;
+                    var area = document.getElementById('quoteArea').value || 'Not specified';
+
+                    var text = 'Hello Anbu Paints (Asian Paints Division),\n\n' +
+                        'I would like to request a quote:\n' +
+                        '• Name: ' + name + '\n' +
+                        '• Phone: ' + phone + '\n' +
+                        '• Product: ' + service + '\n' +
+                        '• Area / Details: ' + area + '\n\n' +
+                        'Please connect with me regarding pricing and shade cards.';
+
+                    window.open('https://wa.me/9626325204?text=' + encodeURIComponent(text), '_blank');
+                    closeAllModals();
+                });
+            }
+        });
+    </script>
+    <!-- Viscous Liquid Paint Fluid Simulation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var paintEl = document.getElementById('liquid-paint');
+            if (window.LiquidPaint && paintEl) {
+                LiquidPaint.mount(paintEl, {
+                    crimson: '#D7263D', // Asian Paints Royale Red
+                    gold: '#FF9F1C',    // Asian Paints Sunshine Gold
+                    blue: '#1D4ED8',    // Apex Ultima Royal Blue
+                    violet: '#7C3AED',  // Velvet Royal Violet
+                    teal: '#0D9488',    // Emerald Turquoise
+                    base: '#07050E',    // Deep Obsidian Base
+                    viscosity: 1.15,
+                    gloss: 1.45,
+                    speed: 0.85
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

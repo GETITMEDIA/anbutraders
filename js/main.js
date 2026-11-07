@@ -17,13 +17,17 @@
     
     // Initiate the wowjs (active across all screens, mobile & desktop)
     if (typeof WOW !== 'undefined') {
-        new WOW({
+        var wowInstance = new WOW({
             boxClass: 'wow',
             animateClass: 'animated',
             offset: 20,
             mobile: true,
             live: true
-        }).init();
+        });
+        wowInstance.init();
+        setTimeout(function() {
+            window.dispatchEvent(new Event('scroll'));
+        }, 50);
     }
 
 

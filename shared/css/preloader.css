@@ -1,0 +1,78 @@
+/* ========================================================
+   ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+   ======================================================== */
+
+html.anbu-preloader-active,
+body.anbu-preloader-active {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.anbu-preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  pointer-events: all;
+  cursor: default;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.anbu-preloader-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.anbu-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.anbu-preloader-video {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  background-color: transparent;
+  display: block;
+}
+
+.anbu-flying-logo-wrapper {
+  position: fixed;
+  z-index: 100000000;
+  pointer-events: none;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.anbu-flying-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.anbu-preloader.anbu-dismissed {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: none !important;
+}

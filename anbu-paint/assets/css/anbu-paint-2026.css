@@ -160,15 +160,20 @@ a {
   position: sticky;
   top: 0;
   z-index: 1030;
-  padding: 8px 0 !important;
+  min-height: 84px;
+  padding: 0 !important;
   overflow: visible !important;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
 }
 
 .anbu-navbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 94px;
+  width: 100%;
   overflow: visible !important;
 }
 
@@ -181,8 +186,8 @@ a {
 }
 
 .anbu-brand-logo-img {
-  height: 70px !important;
-  max-height: 72px;
+  height: 72px !important;
+  max-height: 74px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -192,9 +197,21 @@ a {
   transform: scale(1.04);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
+  .anbu-navbar { min-height: 82px; }
+  .anbu-navbar-inner { min-height: 82px; }
   .anbu-brand-logo-img {
-    height: 56px !important;
+    height: 60px !important;
+    max-height: 62px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .anbu-navbar { min-height: 72px; }
+  .anbu-navbar-inner { min-height: 72px; }
+  .anbu-brand-logo-img {
+    height: 50px !important;
+    max-height: 52px;
   }
 }
 
