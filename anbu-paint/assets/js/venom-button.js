@@ -1162,3 +1162,19 @@ void main(){
 
   global.initVenomButton = initVenomButton;
 })(typeof window !== "undefined" ? window : this);
+
+// Universal Mobile Navigation Dropdown Toggle for Anbu Paints
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', function () {
+    var mobileProdToggle = document.getElementById('mobileProd');
+    var mobileProdMenu = document.getElementById('mobileProdMenu');
+    if (mobileProdToggle && mobileProdMenu) {
+      mobileProdToggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        mobileProdMenu.classList.toggle('show');
+        mobileProdToggle.classList.toggle('show');
+      });
+    }
+  });
+}

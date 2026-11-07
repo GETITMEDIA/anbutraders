@@ -4341,11 +4341,12 @@ select:focus-visible {
 
 .stat-simple-number {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(32px, 3.2vw, 42px);
+  font-size: clamp(28px, 3.2vw, 42px);
   font-weight: 800;
   color: #FFFFFF;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .stat-simple-unit {
@@ -4380,6 +4381,56 @@ select:focus-visible {
   }
   .facts-simple-bar {
     padding: 28px 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .facts-simple-bar {
+    padding: 24px 12px !important;
+    border-radius: 18px;
+  }
+  .facts-simple-bar .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+  }
+  /* Perfect 2x2 Grid quadrants on mobile */
+  .stat-item-simple {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 14px 6px !important;
+    box-sizing: border-box !important;
+  }
+  /* Clean quadrant separation dividers */
+  .stat-item-simple:nth-child(1),
+  .stat-item-simple:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  .stat-item-simple:nth-child(1),
+  .stat-item-simple:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  .stat-simple-icon {
+    margin-bottom: 6px;
+  }
+  .stat-simple-icon i {
+    font-size: 20px;
+  }
+  .stat-simple-number {
+    font-size: clamp(18px, 5vw, 23px) !important;
+    white-space: nowrap !important;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .stat-simple-label {
+    font-size: 10.5px !important;
+    letter-spacing: 0.4px !important;
+    margin-top: 4px;
+    line-height: 1.25;
+    white-space: normal;
+    padding: 0 2px;
   }
 }
 
