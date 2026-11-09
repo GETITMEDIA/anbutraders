@@ -99,18 +99,18 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 shadow-sm">
         <div class="container">
-            <a href="index.html" class="navbar-brand me-0 d-flex align-items-center">
+            <a href="index.html" class="navbar-brand me-0 d-flex align-items-center" aria-label="Anbu Traders Home">
                 <img id="anbu-navbar-logo" src="logos/ANUBU STEEL new logo.png" alt="Anbu Traders Logo" class="anbu-navbar-logo-img">
             </a>
             
-            <div class="d-flex align-items-center ms-auto me-2 d-lg-none gap-2">
-                <a href="tel:+919626325204" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Call +91 96263 25204" aria-label="Call Now">
-                    <i class="fa fa-phone-alt text-white"></i>
+            <div class="anbu-nav-mobile-actions d-flex align-items-center gap-2 d-lg-none ms-auto">
+                <a href="tel:+919626325204" class="anbu-nav-mobile-call" title="Call +91 96263 25204" aria-label="Call Now">
+                    <i class="fa fa-phone-alt"></i>
                 </a>
+                <button type="button" class="navbar-toggler anbu-nav-mobile-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
@@ -160,28 +160,32 @@
                     <div class="hero-intro-block">
                         <!-- Eyebrow -->
                         <div class="hero-eyebrow-tracking" id="heroEyebrow">
-                            ARCHITECTURE &mdash; INTERIORS &mdash; LANDSCAPES
+                            PRIMARY TMT STEEL • ROOFING SHEETS • CEMENT • PAINTS
                         </div>
 
                         <!-- Editorial Luxury Display Headline -->
                         <h1 class="hero-display-serif-title" id="heroHeadline">
-                            <span class="hero-title-line-1">Spaces</span>
-                            <span class="hero-title-line-2">That Inspire</span>
+                            <span class="hero-title-line-1">Building Trust.</span>
+                            <span class="hero-title-line-2">Delivering Strength.</span>
                         </h1>
 
                         <!-- Lead Description -->
                         <p class="hero-display-lead" id="heroLeadText">
-                            We design meaningful spaces that blend architecture, nature and modern living.
+                            Pondicherry's premier wholesale hub for primary TMT steel rebars, certified JSW roofing sheets, structural MS pipes, cement &amp; paints.
                         </p>
 
                         <!-- CTA Actions Group -->
                         <div class="hero-action-buttons">
-                            <a href="#businesses" class="hero-btn-pill-primary" id="heroExploreBtn" aria-label="Explore Our Work">
-                                <span>Explore Our Work</span>
+                            <a href="#businesses" class="hero-btn-pill-primary" id="heroExploreBtn" aria-label="Explore Our Divisions">
+                                <span>Explore Divisions</span>
                                 <svg class="hero-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
+                            </a>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20get%20a%20price%20quote%20for%20building%20materials." class="hero-btn-pill-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Instant WhatsApp Quote">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Instant Quote</span>
                             </a>
                         </div>
                     </div>
@@ -189,29 +193,29 @@
                     <!-- Bottom Floating Shelf Tray (Left Card Perfectly Aligned with Headline Above) -->
                     <div class="hero-bottom-shelf">
                         <!-- Left: Featured Project Capsule Card (Aligined with Content Left) -->
-                        <div class="hero-featured-project-card" id="heroFeaturedCard">
+                        <div class="hero-featured-project-card d-none d-lg-block" id="heroFeaturedCard">
                             <div class="featured-card-grid">
                                 <!-- Left Column: Eyebrow + Thumbnail -->
                                 <div class="featured-media-col">
-                                    <span class="featured-eyebrow-label">FEATURED PROJECT</span>
+                                    <span class="featured-eyebrow-label">CERTIFIED SUPPLY</span>
                                     <div class="featured-thumb-frame">
-                                        <img src="img/main_herosec/hero2.png" alt="The Horizon Villa" id="featuredProjectThumb" class="featured-thumb-img" loading="eager">
+                                        <img src="img/main_herosec/hero2.png" alt="Industrial Projects" id="featuredProjectThumb" class="featured-thumb-img" loading="eager">
                                     </div>
                                 </div>
 
                                 <!-- Right Column: Details + Controls -->
                                 <div class="featured-info-col">
                                     <div class="featured-top-row">
-                                        <h3 class="featured-project-title" id="featuredProjectTitle">The Horizon Villa</h3>
+                                        <h3 class="featured-project-title" id="featuredProjectTitle">Industrial Sheds &amp; Warehouses</h3>
                                     </div>
 
                                     <p class="featured-project-desc" id="featuredProjectDesc">
-                                        A modern villa that blends natural surroundings with contemporary design.
+                                        Prime structural steel, MS pipes &amp; JSW color sheets supplied across Pondicherry &amp; Tamil Nadu.
                                     </p>
 
                                     <div class="featured-action-row">
                                         <a href="#businesses" class="featured-view-link" id="featuredViewLink">
-                                            <span>View Project</span>
+                                            <span>View Divisions</span>
                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -222,9 +226,9 @@
                                     <!-- Pagination Dots & Arrow Controls Row (3 Slides) -->
                                     <div class="featured-nav-row">
                                         <div class="featured-pagination-dots" id="featuredDots" role="tablist" aria-label="Project slide navigation">
-                                            <button class="feat-dot active" data-slide="0" aria-label="Slide 1 - The Horizon Villa" role="tab" aria-selected="true"></button>
-                                            <button class="feat-dot" data-slide="1" aria-label="Slide 2 - The Coastal Residence" role="tab" aria-selected="false"></button>
-                                            <button class="feat-dot" data-slide="2" aria-label="Slide 3 - The Cliffside Villa" role="tab" aria-selected="false"></button>
+                                            <button class="feat-dot active" data-slide="0" aria-label="Slide 1 - Primary TMT Steel" role="tab" aria-selected="true"></button>
+                                            <button class="feat-dot" data-slide="1" aria-label="Slide 2 - JSW Roofing Sheets" role="tab" aria-selected="false"></button>
+                                            <button class="feat-dot" data-slide="2" aria-label="Slide 3 - Cement & Paints" role="tab" aria-selected="false"></button>
                                         </div>
 
                                         <div class="featured-arrow-btns">
@@ -248,51 +252,48 @@
 
                         <!-- Right: Statistics Showcase Card -->
                         <div class="hero-stats-showcase-card">
-                            <!-- Stat 1: Projects Completed -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-                                        <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
-                                        <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
-                                        <path d="M10 6h4"></path>
-                                        <path d="M10 10h4"></path>
-                                        <path d="M10 14h4"></path>
-                                        <path d="M10 18h4"></path>
-                                    </svg>
+                            <div class="hero-stats-flex">
+                                <!-- Stat 1: Projects Supplied -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                                            <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
+                                            <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat1Num">10,000+</div>
+                                    <div class="hero-stat-label" id="heroStat1Lbl">Projects Supplied</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat1Num">250+</div>
-                                <div class="hero-stat-label" id="heroStat1Lbl">Projects Completed</div>
-                            </div>
 
-                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+                                <div class="hero-stat-col-divider" aria-hidden="true"></div>
 
-                            <!-- Stat 2: Happy Clients -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="9" cy="7" r="4"></circle>
-                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                    </svg>
+                                <!-- Stat 2: Tons in Stock -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat2Num">3,000+</div>
+                                    <div class="hero-stat-label" id="heroStat2Lbl">Tons in Stock</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat2Num">120+</div>
-                                <div class="hero-stat-label" id="heroStat2Lbl">Happy Clients</div>
-                            </div>
 
-                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+                                <div class="hero-stat-col-divider" aria-hidden="true"></div>
 
-                            <!-- Stat 3: Countries Worldwide -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2l2.3 2.4 3.3-.2 1.3 3.1 3.1 1.3-.2 3.4 2.4 2.4-2.4 2.4.2 3.4-3.1 1.3-1.3 3.1-3.3-.2-2.3 2.4-2.3-2.4-3.3.2-1.3-3.1-3.1-1.3.2-3.4-2.4-2.4 2.4-2.4-.2-3.4 3.1-1.3 1.3-3.1 3.3.2L12 2z"></path>
-                                        <polygon points="12 8 13.2 10.8 16.2 11.1 13.9 13.1 14.6 16 12 14.4 9.4 16 10.1 13.1 7.8 11.1 10.8 10.8 12 8" fill="none" stroke="currentColor" stroke-width="1.5"></polygon>
-                                    </svg>
+                                <!-- Stat 3: Years of Trust -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="8" r="6"></circle>
+                                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat3Num">12+</div>
+                                    <div class="hero-stat-label" id="heroStat3Lbl">Years of Trust</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat3Num">15+</div>
-                                <div class="hero-stat-label" id="heroStat3Lbl">Countries Worldwide</div>
                             </div>
                         </div>
                     </div>
@@ -330,41 +331,41 @@
                     {
                         bg: 'img/main_herosec/hero2.png',
                         thumb: 'img/main_herosec/hero2.png',
-                        eyebrow: 'ARCHITECTURE — INTERIORS — LANDSCAPES',
-                        line1: 'Spaces',
-                        line2: 'That Inspire',
-                        lead: 'We design meaningful spaces that blend architecture, nature and modern living.',
-                        title: 'The Horizon Villa',
-                        desc: 'A modern villa that blends natural surroundings with contemporary design.',
-                        stat1: '250+', stat1Lbl: 'Projects Completed',
-                        stat2: '120+', stat2Lbl: 'Happy Clients',
-                        stat3: '15+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'PRIMARY TMT STEEL • DIRECT MILL SUPPLY',
+                        line1: 'Building Trust.',
+                        line2: 'Delivering Strength.',
+                        lead: 'Pondicherry\'s premier wholesale hub for primary TMT steel rebars, certified JSW roofing sheets, structural MS pipes, cement & paints.',
+                        title: 'Industrial Sheds & Warehouses',
+                        desc: 'Prime structural steel, MS pipes & JSW color sheets supplied across Pondicherry & Tamil Nadu.',
+                        stat1: '10,000+', stat1Lbl: 'Projects Supplied',
+                        stat2: '3,000+', stat2Lbl: 'Tons in Stock',
+                        stat3: '12+', stat3Lbl: 'Years of Trust'
                     },
                     {
                         bg: 'img/main_herosec/hero3.png',
                         thumb: 'img/main_herosec/hero3.png',
-                        eyebrow: 'STRUCTURAL STEEL — INDUSTRIAL ROOFING',
-                        line1: 'Crafted',
-                        line2: 'To Last',
-                        lead: 'Engineered steel structures and precision roofing engineered for generational strength.',
-                        title: 'The Coastal Residence',
-                        desc: 'Modern industrial architecture with premium JSW coastal roofing installation.',
-                        stat1: '380+', stat1Lbl: 'Projects Completed',
-                        stat2: '190+', stat2Lbl: 'Happy Clients',
-                        stat3: '18+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'JSW ROOFING SHEETS • STRUCTURAL MS PIPES',
+                        line1: 'Engineered Roofing.',
+                        line2: 'Built to Last.',
+                        lead: 'Authorized distributor of JSW Pragati & Colouron+ profile roofing sheets, MS square & rectangular hollow sections.',
+                        title: 'Commercial & Factory Roofing',
+                        desc: 'Custom CNC sheet lengths, anti-rust coatings, and crane dispatch directly from our Sedarapet depot.',
+                        stat1: '100%', stat1Lbl: 'Genuine Mill Stock',
+                        stat2: '100-Ton', stat2Lbl: 'Digital Weighbridge',
+                        stat3: 'Zero', stat3Lbl: 'Shortage Guarantee'
                     },
                     {
                         bg: 'img/main_herosec/hero1.png',
                         thumb: 'img/main_herosec/hero1.png',
-                        eyebrow: 'CIVIL WORKS — REBAR FOUNDATIONS',
-                        line1: 'Built',
-                        line2: 'From Core',
-                        lead: 'Strong foundations built with primary mill TMT rebars, certified aggregates and cement.',
-                        title: 'The Cliffside Villa',
-                        desc: 'Reinforced concrete frame engineered to withstand coastal elevation and seismic loads.',
-                        stat1: '100T', stat1Lbl: 'Projects Completed',
-                        stat2: '10,000+', stat2Lbl: 'Happy Clients',
-                        stat3: '11+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'CEMENT & PAINTS • COMPLETE BUILDING SOLUTIONS',
+                        line1: 'Direct Factory Supply.',
+                        line2: 'Unmatched Value.',
+                        lead: 'Fresh batches of UltraTech, Dalmia & Ramco cement, paired with computerized color tinting from Asian & JSW Paints.',
+                        title: 'Infrastructure & Residential Supply',
+                        desc: 'Comprehensive civil supply with fast on-site delivery and bulk project contractor discounts.',
+                        stat1: '1 Lakh+', stat1Lbl: 'Satisfied Clients',
+                        stat2: 'Fleet', stat2Lbl: 'Crane Dispatch',
+                        stat3: 'Daily', stat3Lbl: 'Express Site Delivery'
                     }
                 ];
 

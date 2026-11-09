@@ -9,7 +9,7 @@
     <meta name="keywords" content="Anbu Traders, steel suppliers Pondicherry, cement wholesale Pondicherry, TMT rebars, JSW sheets, APL Apollo pipes, Asian Paints showroom, Sedarapet, Vanur, construction materials">
 
     <!-- Favicon -->
-   <link rel="icon" type="image/png" href="../favicon.png">
+   <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,18 +99,18 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 shadow-sm">
         <div class="container">
-            <a href="index.html" class="navbar-brand me-0 d-flex align-items-center">
+            <a href="index.html" class="navbar-brand me-0 d-flex align-items-center" aria-label="Anbu Traders Home">
                 <img id="anbu-navbar-logo" src="logos/ANUBU STEEL new logo.png" alt="Anbu Traders Logo" class="anbu-navbar-logo-img">
             </a>
             
-            <div class="d-flex align-items-center ms-auto me-2 d-lg-none gap-2">
-                <a href="tel:+919626325204" class="btn btn-primary btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;" title="Call +91 96263 25204" aria-label="Call Now">
-                    <i class="fa fa-phone-alt text-white"></i>
+            <div class="anbu-nav-mobile-actions d-flex align-items-center gap-2 d-lg-none ms-auto">
+                <a href="tel:+919626325204" class="anbu-nav-mobile-call" title="Call +91 96263 25204" aria-label="Call Now">
+                    <i class="fa fa-phone-alt"></i>
                 </a>
+                <button type="button" class="navbar-toggler anbu-nav-mobile-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
@@ -119,9 +119,9 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Businesses</a>
                         <div class="dropdown-menu bg-light m-0">
-                            <a href="../sheets-pipes-site/index.html" class="dropdown-item">Sheets and Pipes</a>
-                            <a href="../paint-site/index.html" class="dropdown-item">Paints</a>
-                            <a href="../steel-cement-site/index.html" class="dropdown-item">Steel &amp; Cement</a>
+                            <a href="sheets-pipes-site/index.html" class="dropdown-item">Sheets and Pipes</a>
+                            <a href="paint-site/index.html" class="dropdown-item">Paints</a>
+                            <a href="steel-cement-site/index.html" class="dropdown-item">Steel &amp; Cement</a>
                         </div>
                     </div>
                     <a href="#products" class="nav-item nav-link">Products</a>
@@ -160,28 +160,32 @@
                     <div class="hero-intro-block">
                         <!-- Eyebrow -->
                         <div class="hero-eyebrow-tracking" id="heroEyebrow">
-                            ARCHITECTURE &mdash; INTERIORS &mdash; LANDSCAPES
+                            PRIMARY TMT STEEL • ROOFING SHEETS • CEMENT • PAINTS
                         </div>
 
                         <!-- Editorial Luxury Display Headline -->
                         <h1 class="hero-display-serif-title" id="heroHeadline">
-                            <span class="hero-title-line-1">Spaces</span>
-                            <span class="hero-title-line-2">That Inspire</span>
+                            <span class="hero-title-line-1">Building Trust.</span>
+                            <span class="hero-title-line-2">Delivering Strength.</span>
                         </h1>
 
                         <!-- Lead Description -->
                         <p class="hero-display-lead" id="heroLeadText">
-                            We design meaningful spaces that blend architecture, nature and modern living.
+                            Pondicherry's premier wholesale hub for primary TMT steel rebars, certified JSW roofing sheets, structural MS pipes, cement &amp; paints.
                         </p>
 
                         <!-- CTA Actions Group -->
                         <div class="hero-action-buttons">
-                            <a href="#businesses" class="hero-btn-pill-primary" id="heroExploreBtn" aria-label="Explore Our Work">
-                                <span>Explore Our Work</span>
+                            <a href="#businesses" class="hero-btn-pill-primary" id="heroExploreBtn" aria-label="Explore Our Divisions">
+                                <span>Explore Divisions</span>
                                 <svg class="hero-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
+                            </a>
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20get%20a%20price%20quote%20for%20building%20materials." class="hero-btn-pill-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Instant WhatsApp Quote">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Instant Quote</span>
                             </a>
                         </div>
                     </div>
@@ -189,29 +193,29 @@
                     <!-- Bottom Floating Shelf Tray (Left Card Perfectly Aligned with Headline Above) -->
                     <div class="hero-bottom-shelf">
                         <!-- Left: Featured Project Capsule Card (Aligined with Content Left) -->
-                        <div class="hero-featured-project-card" id="heroFeaturedCard">
+                        <div class="hero-featured-project-card d-none d-lg-block" id="heroFeaturedCard">
                             <div class="featured-card-grid">
                                 <!-- Left Column: Eyebrow + Thumbnail -->
                                 <div class="featured-media-col">
-                                    <span class="featured-eyebrow-label">FEATURED PROJECT</span>
+                                    <span class="featured-eyebrow-label">CERTIFIED SUPPLY</span>
                                     <div class="featured-thumb-frame">
-                                        <img src="img/main_herosec/hero2.png" alt="The Horizon Villa" id="featuredProjectThumb" class="featured-thumb-img" loading="eager">
+                                        <img src="img/main_herosec/hero2.png" alt="Industrial Projects" id="featuredProjectThumb" class="featured-thumb-img" loading="eager">
                                     </div>
                                 </div>
 
                                 <!-- Right Column: Details + Controls -->
                                 <div class="featured-info-col">
                                     <div class="featured-top-row">
-                                        <h3 class="featured-project-title" id="featuredProjectTitle">The Horizon Villa</h3>
+                                        <h3 class="featured-project-title" id="featuredProjectTitle">Industrial Sheds &amp; Warehouses</h3>
                                     </div>
 
                                     <p class="featured-project-desc" id="featuredProjectDesc">
-                                        A modern villa that blends natural surroundings with contemporary design.
+                                        Prime structural steel, MS pipes &amp; JSW color sheets supplied across Pondicherry &amp; Tamil Nadu.
                                     </p>
 
                                     <div class="featured-action-row">
                                         <a href="#businesses" class="featured-view-link" id="featuredViewLink">
-                                            <span>View Project</span>
+                                            <span>View Divisions</span>
                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -222,9 +226,9 @@
                                     <!-- Pagination Dots & Arrow Controls Row (3 Slides) -->
                                     <div class="featured-nav-row">
                                         <div class="featured-pagination-dots" id="featuredDots" role="tablist" aria-label="Project slide navigation">
-                                            <button class="feat-dot active" data-slide="0" aria-label="Slide 1 - The Horizon Villa" role="tab" aria-selected="true"></button>
-                                            <button class="feat-dot" data-slide="1" aria-label="Slide 2 - The Coastal Residence" role="tab" aria-selected="false"></button>
-                                            <button class="feat-dot" data-slide="2" aria-label="Slide 3 - The Cliffside Villa" role="tab" aria-selected="false"></button>
+                                            <button class="feat-dot active" data-slide="0" aria-label="Slide 1 - Primary TMT Steel" role="tab" aria-selected="true"></button>
+                                            <button class="feat-dot" data-slide="1" aria-label="Slide 2 - JSW Roofing Sheets" role="tab" aria-selected="false"></button>
+                                            <button class="feat-dot" data-slide="2" aria-label="Slide 3 - Cement & Paints" role="tab" aria-selected="false"></button>
                                         </div>
 
                                         <div class="featured-arrow-btns">
@@ -248,51 +252,48 @@
 
                         <!-- Right: Statistics Showcase Card -->
                         <div class="hero-stats-showcase-card">
-                            <!-- Stat 1: Projects Completed -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-                                        <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
-                                        <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
-                                        <path d="M10 6h4"></path>
-                                        <path d="M10 10h4"></path>
-                                        <path d="M10 14h4"></path>
-                                        <path d="M10 18h4"></path>
-                                    </svg>
+                            <div class="hero-stats-flex">
+                                <!-- Stat 1: Projects Supplied -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                                            <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
+                                            <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat1Num">10,000+</div>
+                                    <div class="hero-stat-label" id="heroStat1Lbl">Projects Supplied</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat1Num">250+</div>
-                                <div class="hero-stat-label" id="heroStat1Lbl">Projects Completed</div>
-                            </div>
 
-                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+                                <div class="hero-stat-col-divider" aria-hidden="true"></div>
 
-                            <!-- Stat 2: Happy Clients -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="9" cy="7" r="4"></circle>
-                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                    </svg>
+                                <!-- Stat 2: Tons in Stock -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat2Num">3,000+</div>
+                                    <div class="hero-stat-label" id="heroStat2Lbl">Tons in Stock</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat2Num">120+</div>
-                                <div class="hero-stat-label" id="heroStat2Lbl">Happy Clients</div>
-                            </div>
 
-                            <div class="hero-stat-col-divider" aria-hidden="true"></div>
+                                <div class="hero-stat-col-divider" aria-hidden="true"></div>
 
-                            <!-- Stat 3: Countries Worldwide -->
-                            <div class="hero-stat-col">
-                                <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2l2.3 2.4 3.3-.2 1.3 3.1 3.1 1.3-.2 3.4 2.4 2.4-2.4 2.4.2 3.4-3.1 1.3-1.3 3.1-3.3-.2-2.3 2.4-2.3-2.4-3.3.2-1.3-3.1-3.1-1.3.2-3.4-2.4-2.4 2.4-2.4-.2-3.4 3.1-1.3 1.3-3.1 3.3.2L12 2z"></path>
-                                        <polygon points="12 8 13.2 10.8 16.2 11.1 13.9 13.1 14.6 16 12 14.4 9.4 16 10.1 13.1 7.8 11.1 10.8 10.8 12 8" fill="none" stroke="currentColor" stroke-width="1.5"></polygon>
-                                    </svg>
+                                <!-- Stat 3: Years of Trust -->
+                                <div class="hero-stat-col">
+                                    <div class="hero-stat-icon-wrap" aria-hidden="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="8" r="6"></circle>
+                                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="hero-stat-number" id="heroStat3Num">12+</div>
+                                    <div class="hero-stat-label" id="heroStat3Lbl">Years of Trust</div>
                                 </div>
-                                <div class="hero-stat-number" id="heroStat3Num">15+</div>
-                                <div class="hero-stat-label" id="heroStat3Lbl">Countries Worldwide</div>
                             </div>
                         </div>
                     </div>
@@ -330,41 +331,41 @@
                     {
                         bg: 'img/main_herosec/hero2.png',
                         thumb: 'img/main_herosec/hero2.png',
-                        eyebrow: 'ARCHITECTURE — INTERIORS — LANDSCAPES',
-                        line1: 'Spaces',
-                        line2: 'That Inspire',
-                        lead: 'We design meaningful spaces that blend architecture, nature and modern living.',
-                        title: 'The Horizon Villa',
-                        desc: 'A modern villa that blends natural surroundings with contemporary design.',
-                        stat1: '250+', stat1Lbl: 'Projects Completed',
-                        stat2: '120+', stat2Lbl: 'Happy Clients',
-                        stat3: '15+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'PRIMARY TMT STEEL • DIRECT MILL SUPPLY',
+                        line1: 'Building Trust.',
+                        line2: 'Delivering Strength.',
+                        lead: 'Pondicherry\'s premier wholesale hub for primary TMT steel rebars, certified JSW roofing sheets, structural MS pipes, cement & paints.',
+                        title: 'Industrial Sheds & Warehouses',
+                        desc: 'Prime structural steel, MS pipes & JSW color sheets supplied across Pondicherry & Tamil Nadu.',
+                        stat1: '10,000+', stat1Lbl: 'Projects Supplied',
+                        stat2: '3,000+', stat2Lbl: 'Tons in Stock',
+                        stat3: '12+', stat3Lbl: 'Years of Trust'
                     },
                     {
                         bg: 'img/main_herosec/hero3.png',
                         thumb: 'img/main_herosec/hero3.png',
-                        eyebrow: 'STRUCTURAL STEEL — INDUSTRIAL ROOFING',
-                        line1: 'Crafted',
-                        line2: 'To Last',
-                        lead: 'Engineered steel structures and precision roofing engineered for generational strength.',
-                        title: 'The Coastal Residence',
-                        desc: 'Modern industrial architecture with premium JSW coastal roofing installation.',
-                        stat1: '380+', stat1Lbl: 'Projects Completed',
-                        stat2: '190+', stat2Lbl: 'Happy Clients',
-                        stat3: '18+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'JSW ROOFING SHEETS • STRUCTURAL MS PIPES',
+                        line1: 'Engineered Roofing.',
+                        line2: 'Built to Last.',
+                        lead: 'Authorized distributor of JSW Pragati & Colouron+ profile roofing sheets, MS square & rectangular hollow sections.',
+                        title: 'Commercial & Factory Roofing',
+                        desc: 'Custom CNC sheet lengths, anti-rust coatings, and crane dispatch directly from our Sedarapet depot.',
+                        stat1: '100%', stat1Lbl: 'Genuine Mill Stock',
+                        stat2: '100-Ton', stat2Lbl: 'Digital Weighbridge',
+                        stat3: 'Zero', stat3Lbl: 'Shortage Guarantee'
                     },
                     {
                         bg: 'img/main_herosec/hero1.png',
                         thumb: 'img/main_herosec/hero1.png',
-                        eyebrow: 'CIVIL WORKS — REBAR FOUNDATIONS',
-                        line1: 'Built',
-                        line2: 'From Core',
-                        lead: 'Strong foundations built with primary mill TMT rebars, certified aggregates and cement.',
-                        title: 'The Cliffside Villa',
-                        desc: 'Reinforced concrete frame engineered to withstand coastal elevation and seismic loads.',
-                        stat1: '100T', stat1Lbl: 'Projects Completed',
-                        stat2: '10,000+', stat2Lbl: 'Happy Clients',
-                        stat3: '11+', stat3Lbl: 'Countries Worldwide'
+                        eyebrow: 'CEMENT & PAINTS • COMPLETE BUILDING SOLUTIONS',
+                        line1: 'Direct Factory Supply.',
+                        line2: 'Unmatched Value.',
+                        lead: 'Fresh batches of UltraTech, Dalmia & Ramco cement, paired with computerized color tinting from Asian & JSW Paints.',
+                        title: 'Infrastructure & Residential Supply',
+                        desc: 'Comprehensive civil supply with fast on-site delivery and bulk project contractor discounts.',
+                        stat1: '1 Lakh+', stat1Lbl: 'Satisfied Clients',
+                        stat2: 'Fleet', stat2Lbl: 'Crane Dispatch',
+                        stat3: 'Daily', stat3Lbl: 'Express Site Delivery'
                     }
                 ];
 
@@ -824,7 +825,7 @@
                                 Grade-53 high-strength cements and weatherproof composites with 100-Ton digital weighbridge slips.
                             </p>
                             <div class="biz-clean-footer">
-                                <a href="../steel-cement-site/index.html" class="biz-clean-cta">
+                                <a href="steel-cement-site/index.html" class="biz-clean-cta">
                                     <span>Explore Division</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -852,7 +853,7 @@
                                 High-tensile Fe 550D earthquake-resistant billet rebars in straight 12m bundles with mill test certificates.
                             </p>
                             <div class="biz-clean-footer">
-                                <a href="../steel-cement-site/index.html" class="biz-clean-cta">
+                                <a href="steel-cement-site/index.html" class="biz-clean-cta">
                                     <span>Explore Division</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -880,7 +881,7 @@
                                 Corrosion-resistant Galvalume roofing sheets, heavy MS square tubes, and GI pipes with site cutting.
                             </p>
                             <div class="biz-clean-footer">
-                                <a href="../sheets-pipes-site/index.html" class="biz-clean-cta">
+                                <a href="sheets-pipes-site/index.html" class="biz-clean-cta">
                                     <span>Explore Division</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -908,7 +909,7 @@
                                 Automated spectrophotometer shade dispenser for luxury emulsions, exterior guards, and waterproofing.
                             </p>
                             <div class="biz-clean-footer">
-                                <a href="../paint-site/index.html" class="biz-clean-cta">
+                                <a href="paint-site/index.html" class="biz-clean-cta">
                                     <span>Explore Division</span>
                                     <i class="fa fa-arrow-right"></i>
                                 </a>
@@ -1460,185 +1461,169 @@
 
 
 
-            <section class="anbu-trust-section" id="why-choose-us" aria-labelledby="trust-title">
+    <!-- ==============================================
+         WHY CHOOSE ANBU TRADERS — SIMPLE & ELEGANT CARD DESIGN (2026)
+         ============================================== -->
+    <section class="anbu-why-section site-section" id="why-choose-us" aria-labelledby="why-title">
         <div class="container">
-            <div class="anbu-trust-bento-card wow fadeInUp" data-wow-delay="0.1s">
-                <div class="anbu-trust-grid">
-                    
-                    <!-- 1. LEFT COLUMN: Intro & Values -->
-                    <div class="trust-col trust-intro-col">
-                        <div class="trust-ambient-orb"></div>
-                        
-                        <div>
-                            <!-- Eyebrow Pill with Pulsing Radar Beacon -->
-                            <div class="trust-eyebrow-pill">
-                                <span class="trust-pulse-beacon"></span>
-                                <span>WHY ANBU TRADERS</span>
+            <!-- Section Header -->
+            <div class="unified-section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 740px;">
+                <div class="unified-section-eyebrow mb-2">
+                    <span class="unified-pulse-dot"></span>
+                    <span>WHY CHOOSE ANBU TRADERS</span>
+                </div>
+                <h2 id="why-title" class="unified-section-title mb-2">
+                    Reliable Supply, <span class="text-brand-orange">Without the Guesswork.</span>
+                </h2>
+                <div class="unified-title-bar mb-3"></div>
+                <p class="unified-lead-text">
+                    Good material, right weight, quick dispatch. Direct factory cement, primary TMT steel, and roofing sheets delivered with 100-ton computerized accuracy.
+                </p>
+            </div>
+
+            <!-- 4 Simple Value Cards Grid -->
+            <div class="row g-4 mb-4">
+                <!-- Card 1: Mill-Certified Stock -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="why-simple-card">
+                        <div class="why-card-top">
+                            <div class="why-card-icon icon-orange">
+                                <i class="fas fa-certificate"></i>
                             </div>
-
-                            <!-- Modern Headline with High-Impact Gradient Accent -->
-                            <h2 id="trust-title" class="trust-title">
-                                Reliable supply,<br>
-                                <span class="trust-title-gradient">without the guesswork.</span>
-                            </h2>
-
-                            <!-- Lead text -->
-                            <p class="trust-lead">
-                                Good material, right weight, quick dispatch. Direct factory cement, primary TMT steel, and roofing sheets.
-                            </p>
-
-                            <!-- Key Trust Badges Strip (Micro-Pills) -->
-                            <div class="trust-perks-list">
-                                <div class="trust-perk-item">
-                                    <span class="perk-check"><i class="fa fa-check"></i></span>
-                                    <span>Direct Mill Wholesale Pricing</span>
-                                </div>
-                                <div class="trust-perk-item">
-                                    <span class="perk-check"><i class="fa fa-check"></i></span>
-                                    <span>100% Tested Prime Grade Fe550D &amp; OPC/PPC</span>
-                                </div>
-                                <div class="trust-perk-item">
-                                    <span class="perk-check"><i class="fa fa-check"></i></span>
-                                    <span>Same-Day Fleet Transport &amp; Offloading</span>
-                                </div>
-                            </div>
+                            <span class="why-card-badge badge-orange">100% Genuine</span>
                         </div>
-
-                        <!-- Action Buttons with Ripple & Glow -->
-                        <div class="trust-action-row">
-                            <a href="tel:+919626325204" class="trust-btn-primary btn-ripple">
-                                <i class="fa fa-phone-alt trust-btn-icon"></i>
-                                <span>Talk to our team</span>
-                                <i class="fa fa-arrow-right ms-2 trust-btn-arrow"></i>
-                            </a>
-                            <a href="https://wa.me/919626325204?text=Hello%20Anbu%20Traders%2C%20I%20would%20like%20to%20know%20more%20about%20your%20materials%20and%20pricing." class="trust-btn-whatsapp btn-ripple" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
+                        <h3 class="why-card-title">Mill-Certified Stock</h3>
+                        <p class="why-card-desc">
+                            Direct mill materials from Tata Tiscon, JSW Neosteel, Agni TMT &amp; UltraTech with official manufacturer test certificates.
+                        </p>
+                        <div class="why-card-footer">
+                            <span class="why-card-perk"><i class="fas fa-check-circle text-orange"></i> Primary Billet Steel</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- 2. MIDDLE COLUMN: Real Depot Showcase with Interactive Hotspots -->
-                    <div class="trust-col trust-visual-col">
-                        <div class="trust-image-wrapper">
-                            <img src="img/opt/storefront-1200.jpg" width="1200" height="885" loading="lazy" alt="Anbu Traders material yard and storefront in Sedarapet, Pondicherry" class="trust-storefront-img">
-                            <div class="trust-image-overlay"></div>
+                <!-- Card 2: Exact Digital Weight -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="why-simple-card">
+                        <div class="why-card-top">
+                            <div class="why-card-icon icon-blue">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <span class="why-card-badge badge-blue">Zero Shortage</span>
+                        </div>
+                        <h3 class="why-card-title">Exact Digital Weight</h3>
+                        <p class="why-card-desc">
+                            Every single load is weighed on our on-site 100-ton computerized digital weighbridge with printed verification slips.
+                        </p>
+                        <div class="why-card-footer">
+                            <span class="why-card-perk"><i class="fas fa-check-circle text-blue"></i> Computerized Weight Slips</span>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- Top Live Depot Status Tag -->
-                            <div class="trust-badge-live">
-                                <span class="live-dot-pulse"></span>
+                <!-- Card 3: Direct Mill Pricing -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="why-simple-card">
+                        <div class="why-card-top">
+                            <div class="why-card-icon icon-navy">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <span class="why-card-badge badge-navy">Wholesale Rates</span>
+                        </div>
+                        <h3 class="why-card-title">Direct Mill Pricing</h3>
+                        <p class="why-card-desc">
+                            Transparent wholesale rates without intermediary markups for contractors, site engineers, and individual home builders.
+                        </p>
+                        <div class="why-card-footer">
+                            <span class="why-card-perk"><i class="fas fa-check-circle text-navy"></i> Bulk Discount Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Quick Fleet Delivery -->
+                <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="why-simple-card">
+                        <div class="why-card-top">
+                            <div class="why-card-icon icon-emerald">
+                                <i class="fas fa-truck-moving"></i>
+                            </div>
+                            <span class="why-card-badge badge-emerald">Own Fleet</span>
+                        </div>
+                        <h3 class="why-card-title">Quick Site Dispatch</h3>
+                        <p class="why-card-desc">
+                            Company-owned logistics fleet equipped with crane unloading vehicles ready to reach your project site on time.
+                        </p>
+                        <div class="why-card-footer">
+                            <span class="why-card-perk"><i class="fas fa-check-circle text-emerald"></i> Crane Offloading Fleet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Storefront Depot & Key Numbers Showcase Card -->
+            <div class="why-depot-showcase-card wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-0 align-items-stretch">
+                    <!-- Left: Depot Storefront Photo with Clean Badges -->
+                    <div class="col-lg-5 col-xl-4">
+                        <div class="why-depot-media">
+                            <img src="img/opt/storefront-1200.jpg" alt="Anbu Traders material yard and storefront in Sedarapet, Pondicherry" class="why-depot-img" loading="lazy">
+                            <div class="why-depot-overlay"></div>
+                            <div class="why-depot-tag top-tag">
+                                <span class="depot-pulse-dot"></span>
                                 <span>Live Depot &bull; Open 8 AM - 8 PM</span>
                             </div>
-
-                            <!-- Interactive Hotspot 1: Steel Stock -->
-                            <div class="trust-hotspot hotspot-steel" tabindex="0" role="button" aria-label="Primary Rebar Stock info">
-                                <span class="hotspot-pulse"></span>
-                                <span class="hotspot-pin"><i class="fa fa-cubes"></i></span>
-                                <div class="hotspot-card">
-                                    <strong>Primary Rebar Stock</strong>
-                                    <small>Tata Tiscon &amp; JSW Neosteel Ready</small>
-                                </div>
-                            </div>
-
-                            <!-- Interactive Hotspot 2: Depot Weighbridge -->
-                            <div class="trust-hotspot hotspot-depot" tabindex="0" role="button" aria-label="Weighbridge Station info">
-                                <span class="hotspot-pulse"></span>
-                                <span class="hotspot-pin"><i class="fa fa-balance-scale"></i></span>
-                                <div class="hotspot-card">
-                                    <strong>100-Ton Weighbridge</strong>
-                                    <small>Calibrated Computerized Slips</small>
-                                </div>
-                            </div>
-
-                            <!-- Bottom Location Chip -->
-                            <div class="trust-location-chip">
-                                <i class="fa fa-map-marker-alt text-orange"></i>
+                            <div class="why-depot-tag bottom-tag">
+                                <i class="fas fa-map-marker-alt text-brand-orange me-1"></i>
                                 <span>Sedarapet, Pondicherry</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. RIGHT COLUMN: 3 Interactive Feature Cards -->
-                    <div class="trust-features-col">
-                        
-                        <!-- Card 1 -->
-                        <div class="trust-feature-card">
-                            <div class="trust-feature-icon icon-orange">
-                                <i class="fa fa-certificate"></i>
+                    <!-- Right: Verified Trust Stats & CTA Actions -->
+                    <div class="col-lg-7 col-xl-8">
+                        <div class="why-depot-content">
+                            <div class="why-depot-header mb-4">
+                                <span class="why-depot-kicker">DIRECT MILL DISTRIBUTOR &bull; SEDARAPET DEPOT</span>
+                                <h3 class="why-depot-heading">Pondicherry's Trusted Building Material Hub</h3>
+                                <p class="why-depot-sub">
+                                    Visit our physical distribution yard in Sedarapet or contact our wholesale desk for fast project estimation, live weighment, and instant dispatch.
+                                </p>
                             </div>
-                            <div class="trust-feature-content">
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <h3 class="trust-feature-title">Mill-certified stock</h3>
-                                    <span class="trust-feature-tag tag-orange">100% Genuine</span>
+
+                            <!-- 3 Big Simple Stat Blocks -->
+                            <div class="why-stats-grid mb-4">
+                                <div class="why-stat-item">
+                                    <span class="why-stat-number"><span data-toggle="counter-up">11</span>+</span>
+                                    <strong class="why-stat-title">Years of Trust</strong>
+                                    <span class="why-stat-detail">Est. 2013 &bull; Authorized Dealer</span>
                                 </div>
-                                <p class="trust-feature-desc">Genuine materials from trusted brands with official test certificates.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="trust-feature-card">
-                            <div class="trust-feature-icon icon-blue">
-                                <i class="fa fa-balance-scale"></i>
-                            </div>
-                            <div class="trust-feature-content">
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <h3 class="trust-feature-title">Exact weight</h3>
-                                    <span class="trust-feature-tag tag-blue">Zero Shortage</span>
+                                <div class="why-stat-item">
+                                    <span class="why-stat-number"><span data-toggle="counter-up">100</span>-Ton</span>
+                                    <strong class="why-stat-title">Digital Weighbridge</strong>
+                                    <span class="why-stat-detail">Computerized Weight Slips</span>
                                 </div>
-                                <p class="trust-feature-desc">Digital slips for every load from our on-site 100-ton computerized weighbridge.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 3 -->
-                        <div class="trust-feature-card">
-                            <div class="trust-feature-icon icon-emerald">
-                                <i class="fa fa-truck"></i>
-                            </div>
-                            <div class="trust-feature-content">
-                                <div class="d-flex align-items-center justify-content-between mb-1">
-                                    <h3 class="trust-feature-title">Quick dispatch</h3>
-                                    <span class="trust-feature-tag tag-emerald">Own Fleet</span>
+                                <div class="why-stat-item">
+                                    <span class="why-stat-number"><span data-toggle="counter-up">10,000</span>+</span>
+                                    <strong class="why-stat-title">Deliveries Completed</strong>
+                                    <span class="why-stat-detail">Across Pondicherry &amp; TN</span>
                                 </div>
-                                <p class="trust-feature-desc">Ready to reach your site with company-owned crane unloading vehicles.</p>
                             </div>
-                        </div>
 
-                    </div>
-
-                </div>
-
-                <!-- 4. BOTTOM CREDENTIALS STRIP WITH LIVE ANIMATED COUNTERS -->
-                <div class="anbu-trust-stats-bar" aria-label="Anbu Traders Key Verification Figures">
-                    <div class="trust-stat-box">
-                        <div class="stat-number-wrap">
-                            <span class="stat-num" data-counter-target="11" data-counter-suffix="+">11+</span>
-                        </div>
-                        <div class="stat-info">
-                            <strong class="stat-label">Years of trust</strong>
-                            <span class="stat-sub">Est. 2013 &bull; Authorized Dealer</span>
-                        </div>
-                    </div>
-
-                    <div class="trust-stat-box">
-                        <div class="stat-number-wrap">
-                            <span class="stat-num" data-counter-target="100" data-counter-suffix="-Ton">100-Ton</span>
-                        </div>
-                        <div class="stat-info">
-                            <strong class="stat-label">Digital weighbridge</strong>
-                            <span class="stat-sub">Computerized Weight Slips</span>
-                        </div>
-                    </div>
-
-                    <div class="trust-stat-box">
-                        <div class="stat-number-wrap">
-                            <span class="stat-num" data-counter-target="10000" data-counter-suffix="+">10,000+</span>
-                        </div>
-                        <div class="stat-info">
-                            <strong class="stat-label">Deliveries completed</strong>
-                            <span class="stat-sub">Across Pondicherry &amp; Tamil Nadu</span>
+                            <!-- CTA Actions Row -->
+                            <div class="why-depot-actions d-flex flex-wrap align-items-center gap-3">
+                                <a href="tel:+919626325204" class="btn btn-primary btn-glow btn-ripple px-4 py-2 d-inline-flex align-items-center">
+                                    <i class="fas fa-phone-alt me-2"></i>
+                                    <span>Talk to our team</span>
+                                    <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                                <a href="https://wa.me/919626325204?text=Hello%20Anbu%20Traders%2C%20I%20would%20like%20to%20know%20more%20about%20your%20materials%20and%20pricing." class="btn btn-outline-success btn-ripple px-4 py-2 d-inline-flex align-items-center" target="_blank" rel="noopener">
+                                    <i class="fab fa-whatsapp me-2 fs-5"></i>
+                                    <span>WhatsApp Enquiry</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -2117,9 +2102,9 @@
                 <a class="anbu-footer-link" href="about.html">About Us</a>
                 <a class="anbu-footer-link" href="contact.html">Contact Us</a>
                 <a class="anbu-footer-link" href="service.html">Our Services</a>
-                <a class="anbu-footer-link" href="../steel-cement-site/index.html">Steel</a>
-                <a class="anbu-footer-link" href="../sheets-pipes-site/index.html">Sheets And Pipes</a>
-                <a class="anbu-footer-link" href="../paint-site/index.html">Paints</a>
+                <a class="anbu-footer-link" href="steel-cement-site/index.html">Steel</a>
+                <a class="anbu-footer-link" href="sheets-pipes-site/index.html">Sheets And Pipes</a>
+                <a class="anbu-footer-link" href="paint-site/index.html">Paints</a>
                 </div>
             </div>
 
