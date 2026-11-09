@@ -7078,6 +7078,387 @@ img, video, canvas, svg {
 }
 
 /* ========================================================
+   WHY CHOOSE ANBU TRADERS — 2026 ELEVATED DESIGN SYSTEM
+   ======================================================== */
+.anbu-why-section {
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ──── 4 Value Cards ──── */
+.why-simple-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(6, 43, 91, 0.08);
+  border-radius: 20px;
+  padding: 28px 24px 22px;
+  box-shadow: 0 4px 20px -2px rgba(6, 43, 91, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.why-simple-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px -8px rgba(6, 43, 91, 0.12);
+  border-color: rgba(243, 106, 33, 0.35);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.why-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  transition: transform 0.3s ease;
+}
+
+.why-simple-card:hover .why-card-icon {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.why-card-icon.icon-orange {
+  background: rgba(243, 106, 33, 0.12);
+  color: #F36A21;
+}
+
+.why-card-icon.icon-blue {
+  background: rgba(26, 115, 232, 0.12);
+  color: #1a73e8;
+}
+
+.why-card-icon.icon-navy {
+  background: rgba(6, 43, 91, 0.1);
+  color: #062B5B;
+}
+
+.why-card-icon.icon-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+}
+
+.why-card-badge {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.why-card-badge.badge-orange {
+  background: #FFF7ED;
+  color: #EA580C;
+  border: 1px solid #FFEDD5;
+}
+
+.why-card-badge.badge-blue {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #DBEAFE;
+}
+
+.why-card-badge.badge-navy {
+  background: #F1F5F9;
+  color: #0F172A;
+  border: 1px solid #E2E8F0;
+}
+
+.why-card-badge.badge-emerald {
+  background: #ECFDF5;
+  color: #047857;
+  border: 1px solid #D1FAE5;
+}
+
+.why-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.why-card-desc {
+  font-size: 0.885rem;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.why-card-footer {
+  padding-top: 14px;
+  border-top: 1px dashed rgba(6, 43, 91, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.why-card-perk {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.why-card-perk i.text-orange { color: #F36A21; }
+.why-card-perk i.text-blue { color: #1a73e8; }
+.why-card-perk i.text-navy { color: #062B5B; }
+.why-card-perk i.text-emerald { color: #10B981; }
+
+/* ──── Storefront Depot Showcase Card ──── */
+.why-depot-showcase-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(6, 43, 91, 0.09);
+  border-radius: 24px;
+  box-shadow: 0 12px 36px -8px rgba(6, 43, 91, 0.08);
+  overflow: hidden;
+  margin-top: 36px;
+  position: relative;
+}
+
+.why-depot-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+.why-depot-img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.why-depot-showcase-card:hover .why-depot-img {
+  transform: scale(1.04);
+}
+
+.why-depot-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 43, 91, 0.35) 0%, rgba(6, 43, 91, 0.1) 40%, rgba(6, 43, 91, 0.8) 100%);
+  pointer-events: none;
+}
+
+.why-depot-tag {
+  position: absolute;
+  z-index: 2;
+  font-family: var(--font-heading);
+}
+
+.why-depot-tag.top-tag {
+  top: 18px;
+  left: 18px;
+  background: rgba(6, 43, 91, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.depot-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #22C55E;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+  display: inline-block;
+}
+
+.why-depot-tag.bottom-tag {
+  bottom: 18px;
+  left: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--primary-navy);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.why-depot-content {
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-depot-kicker {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #F36A21;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.why-depot-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--primary-navy);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.why-depot-sub {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #64748B;
+  margin-bottom: 24px;
+}
+
+.why-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: #F8FAFC;
+  border: 1px solid rgba(6, 43, 91, 0.08);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin-bottom: 28px;
+}
+
+.why-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.why-stat-number span {
+  color: #F36A21;
+}
+
+.why-stat-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 3px;
+}
+
+.why-stat-detail {
+  font-size: 0.74rem;
+  color: #64748B;
+  line-height: 1.35;
+}
+
+.why-depot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.why-depot-actions .btn-primary {
+  background: linear-gradient(135deg, #F36A21 0%, #E05810 100%) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 12px 28px !important;
+  box-shadow: 0 6px 20px rgba(243, 106, 33, 0.35) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.why-depot-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(243, 106, 33, 0.45) !important;
+}
+
+.why-depot-actions .btn-outline-success {
+  border: 2px solid #25D366 !important;
+  color: #15803D !important;
+  background: rgba(37, 211, 102, 0.06) !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  padding: 10px 24px !important;
+  transition: transform 0.25s ease, background-color 0.25s ease !important;
+}
+
+.why-depot-actions .btn-outline-success:hover {
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.3) !important;
+}
+
+@media (max-width: 991.98px) {
+  .why-depot-media {
+    min-height: 280px;
+    border-radius: 24px 24px 0 0;
+  }
+  .why-depot-img {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .why-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 16px;
+  }
+  .why-stat-item {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(6, 43, 91, 0.08);
+  }
+  .why-stat-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .why-depot-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .why-depot-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========================================================
    HOW WE DELIVER — 4-STEP LOGISTICS TIMELINE
    ======================================================== */
 .how-we-deliver-section {

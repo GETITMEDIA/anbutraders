@@ -811,23 +811,70 @@ a {
   box-shadow: 0 6px 18px rgba(6, 43, 91, 0.08);
 }
 
-/* ── Business Statistics Bar ── */
+/* ── Business Statistics Bar (2026 Elevated Floating Aurora Card) ── */
 .anbu-stats-section {
-  background: var(--primary-navy) !important;
-  padding: 48px 0;
+  padding: clamp(40px, 5vw, 60px) 0;
+  background: #F8FAFC !important;
   position: relative;
-  overflow: hidden;
 }
 
-.anbu-stats-section::before {
+.anbu-stats-card.gradient-border-card {
+  position: relative;
+  background: linear-gradient(125deg, #062B5B 0%, #1e1b4b 18%, #701a75 38%, #c2410c 58%, #0284c7 78%, #062B5B 100%) !important;
+  background-size: 320% 320% !important;
+  animation: fullContainerGradientFlow 9s ease infinite !important;
+  border-radius: 22px;
+  padding: 38px 24px;
+  box-shadow: 0 18px 45px rgba(6, 43, 91, 0.35), 0 0 40px rgba(243, 106, 33, 0.35), 0 0 55px rgba(0, 192, 255, 0.25) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.anbu-stats-card.gradient-border-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(6, 43, 91, 0.45), 0 0 55px rgba(243, 106, 33, 0.45), 0 0 75px rgba(0, 192, 255, 0.35) !important;
+}
+
+.anbu-stats-card.gradient-border-card::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 80% 50%, rgba(255, 101, 0, 0.12) 0%, transparent 60%);
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 25% 30%, rgba(243, 106, 33, 0.45) 0%, transparent 45%),
+              radial-gradient(circle at 75% 70%, rgba(0, 192, 255, 0.45) 0%, transparent 45%),
+              radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+              radial-gradient(circle at 80% 25%, rgba(236, 72, 153, 0.35) 0%, transparent 40%);
+  animation: floatingAmbientGlow 10s ease-in-out infinite alternate;
+  z-index: 0;
   pointer-events: none;
+}
+
+.anbu-stats-card.gradient-border-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(4, 15, 30, 0.25) 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 21px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes fullContainerGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatingAmbientGlow {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 
 .anbu-stat-item {
@@ -835,147 +882,342 @@ a {
   padding: 10px 15px;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.anbu-stat-item.stat-divider {
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .anbu-stat-icon {
-  font-size: 34px;
-  color: rgba(255, 255, 255, 0.45);
+  font-size: 32px;
+  background: linear-gradient(135deg, #F36A21 0%, #ff9d5c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   margin-bottom: 8px;
-  transition: var(--transition);
+  line-height: 1;
+  filter: drop-shadow(0 4px 10px rgba(243, 106, 33, 0.45));
+  transition: transform 0.3s ease;
 }
 
 .anbu-stat-item:hover .anbu-stat-icon {
-  color: var(--primary-orange);
-  transform: scale(1.1);
+  transform: translateY(-4px) scale(1.15);
 }
 
 .anbu-stat-number {
   font-family: var(--font-heading) !important;
-  font-size: 38px !important;
+  font-size: clamp(28px, 3.2vw, 42px) !important;
   font-weight: 800 !important;
   color: #FFFFFF !important;
-  margin-bottom: 2px !important;
+  line-height: 1.15;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.stat-plus {
+  color: #F36A21;
+  font-weight: 800;
+  margin-left: 2px;
 }
 
 .anbu-stat-label {
   font-family: var(--font-heading) !important;
-  font-size: 13.5px !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
   color: #CBD5E1 !important;
-  letter-spacing: 0.5px;
-  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 
-/* ── Products Section ── */
+@media (max-width: 991.98px) {
+  .anbu-stat-item.stat-divider {
+    border-left: none;
+  }
+  .anbu-stat-item {
+    padding: 16px 8px;
+  }
+  .anbu-stats-card.gradient-border-card {
+    padding: 28px 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .anbu-stats-card.gradient-border-card {
+    padding: 18px 10px !important;
+    border-radius: 18px;
+  }
+  .anbu-stats-card .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+  }
+  .anbu-stat-item {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 14px 6px !important;
+    box-sizing: border-box !important;
+  }
+  .anbu-stat-item:nth-child(1),
+  .anbu-stat-item:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  .anbu-stat-item:nth-child(1),
+  .anbu-stat-item:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
+  .anbu-stat-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  .anbu-stat-number {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+  .anbu-stat-label {
+    font-size: 10.5px !important;
+  }
+}
+
+/* ── Products Section (2026 Modern Clean Cards) ── */
 .anbu-products-section {
-  padding: 85px 0 90px;
+  padding: clamp(64px, 8vw, 100px) 0;
   background: #F8FAFC;
+  position: relative;
+}
+
+.anbu-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(243, 106, 33, 0.08);
+  color: #F36A21;
+  border: 1px solid rgba(243, 106, 33, 0.25);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.anbu-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+
+.anbu-section-subtext {
+  font-size: 15px;
+  color: #64748B;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 .anbu-product-card {
   background: #FFFFFF;
-  border-radius: var(--radius-lg);
+  border-radius: 20px;
   overflow: hidden;
-  border: 1px solid var(--card-border);
-  box-shadow: 0 6px 20px rgba(6, 43, 91, 0.05);
-  transition: var(--transition);
+  border: 1px solid rgba(6, 43, 91, 0.09);
+  box-shadow: 0 4px 20px -2px rgba(6, 43, 91, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
 }
 
 .anbu-product-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(6, 43, 91, 0.14);
-  border-color: rgba(255, 101, 0, 0.35);
+  box-shadow: 0 20px 38px -8px rgba(6, 43, 91, 0.14);
+  border-color: rgba(243, 106, 33, 0.35);
 }
 
 .anbu-product-img-wrap {
   position: relative;
-  height: 200px;
+  height: 210px;
   overflow: hidden;
-  background: #E2E8F0;
+  background: #062B5B;
 }
 
 .anbu-product-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
 }
 
 .anbu-product-card:hover .anbu-product-img {
   transform: scale(1.08);
 }
 
+.anbu-product-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 43, 91, 0.25) 0%, transparent 40%, rgba(6, 43, 91, 0.4) 100%);
+  pointer-events: none;
+}
+
+/* Category Badge & Live Stock Pill */
+.anbu-product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(6, 43, 91, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.anbu-stock-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: rgba(22, 163, 74, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 .anbu-product-content {
-  padding: 24px 22px;
+  padding: 24px 22px 20px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .anbu-product-title {
-  font-size: 18px !important;
+  font-family: var(--font-heading) !important;
+  font-size: 18.5px !important;
   font-weight: 700 !important;
   color: var(--primary-navy) !important;
   margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  transition: color 0.2s ease;
+}
+
+.anbu-product-card:hover .anbu-product-title {
+  color: #F36A21 !important;
 }
 
 .anbu-product-desc {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 16px;
-  min-height: 40px;
-}
-
-.anbu-product-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
+  font-size: 13.5px;
+  color: #64748B;
+  line-height: 1.6;
+  margin-bottom: 20px;
   flex-grow: 1;
+  min-height: 64px;
 }
 
-.anbu-product-features li {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Primary Action: Inquire Price Button */
+.anbu-btn-inquire-price {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, #F36A21 0%, #E05810 100%) !important;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  padding: 11px 20px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(243, 106, 33, 0.35) !important;
+  transition: all 0.25s ease !important;
+  width: 100%;
 }
 
-.anbu-product-features li i {
-  color: var(--primary-orange);
-  font-size: 14px;
+.anbu-btn-inquire-price:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(243, 106, 33, 0.48) !important;
+  color: #FFFFFF !important;
 }
 
-.anbu-btn-product-details {
+.anbu-btn-inquire-price i.lab {
+  font-size: 18px;
+}
+
+/* Secondary Action: Tech Spec Button */
+.anbu-btn-tech-spec {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  color: #64748B !important;
+  font-family: var(--font-heading) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 8px 12px !important;
+  margin-top: 6px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+  cursor: pointer;
+  width: 100%;
+}
+
+.anbu-btn-tech-spec:hover {
+  color: var(--primary-navy) !important;
+  background: rgba(6, 43, 91, 0.05) !important;
+}
+
+/* Carousel Arrows */
+.anbu-carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(6, 43, 91, 0.12);
+  color: var(--primary-navy);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  background: transparent;
-  color: var(--primary-orange) !important;
-  border: 1.5px solid var(--primary-orange);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 13.5px;
-  padding: 9px 18px;
-  border-radius: var(--radius-full);
-  transition: var(--transition);
-  text-align: center;
-  width: 100%;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.06);
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 
-.anbu-btn-product-details:hover {
-  background: var(--primary-orange);
-  color: #FFFFFF !important;
-  box-shadow: 0 6px 18px rgba(255, 101, 0, 0.35);
+.anbu-carousel-arrow:hover {
+  background: #F36A21;
+  border-color: #F36A21;
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(243, 106, 33, 0.35);
+  transform: scale(1.08);
 }
 
 /* ── Why Choose Us Section ── */

@@ -493,6 +493,48 @@ a {
     transform: rotate(180deg);
     color: var(--primary-orange);
   }
+
+  /* Mobile Products Accordion Styling */
+  .mobile-dropdown-menu {
+    position: static !important;
+    float: none !important;
+    display: none;
+    background: rgba(6, 43, 91, 0.04) !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    padding: 8px 12px !important;
+    margin: 6px 0 !important;
+    width: 100% !important;
+  }
+
+  .mobile-dropdown-menu.show {
+    display: block !important;
+  }
+
+  .mobile-dropdown-menu .dropdown-item {
+    font-size: 14px !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    color: var(--primary-navy) !important;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Keep mobile header clean on small phones (<576px) */
+  @media (max-width: 575.98px) {
+    .anbu-navbar-inner .btn-get-quote {
+      display: none !important;
+    }
+  }
+
+  /* Dim floating WhatsApp button when mobile drawer is open so it never blocks menu items */
+  body.mobile-nav-open .floating-actions-wrap,
+  .anbu-navbar:has(#anbuMobileNav.show) ~ .floating-actions-wrap {
+    opacity: 0.1 !important;
+    pointer-events: none !important;
+    transition: opacity 0.25s ease;
+  }
 }
 
 /* Orange Pill CTA Button */
