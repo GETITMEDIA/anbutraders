@@ -252,17 +252,33 @@
 
                         <!-- Right: Statistics Showcase Card -->
                         <div class="hero-stats-showcase-card">
+                            <div class="hero-stats-top-bar">
+                                <span class="hero-stats-eyebrow">
+                                    <span class="hero-stats-pulse-dot" aria-hidden="true"></span>
+                                    PROVEN TRACK RECORD
+                                </span>
+                                <span class="hero-stats-pill-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 12 11 14 15 10"></polyline>
+                                    </svg>
+                                    <span>100% Mill Certified</span>
+                                </span>
+                            </div>
                             <div class="hero-stats-flex">
                                 <!-- Stat 1: Projects Supplied -->
                                 <div class="hero-stat-col">
                                     <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
                                             <path d="M6 12H4a2 2 0 0 0-2 2v8h4"></path>
                                             <path d="M18 9h2a2 2 0 0 1 2 2v11h-4"></path>
+                                            <path d="M10 6h4"></path>
+                                            <path d="M10 10h4"></path>
+                                            <path d="M10 14h4"></path>
                                         </svg>
                                     </div>
-                                    <div class="hero-stat-number" id="heroStat1Num">10,000+</div>
+                                    <div class="hero-stat-number" id="heroStat1Num">10,000<span class="stat-accent">+</span></div>
                                     <div class="hero-stat-label" id="heroStat1Lbl">Projects Supplied</div>
                                 </div>
 
@@ -271,13 +287,13 @@
                                 <!-- Stat 2: Tons in Stock -->
                                 <div class="hero-stat-col">
                                     <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                                             <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                                             <line x1="12" y1="22.08" x2="12" y2="12"></line>
                                         </svg>
                                     </div>
-                                    <div class="hero-stat-number" id="heroStat2Num">3,000+</div>
+                                    <div class="hero-stat-number" id="heroStat2Num">3,000<span class="stat-accent">+</span></div>
                                     <div class="hero-stat-label" id="heroStat2Lbl">Tons in Stock</div>
                                 </div>
 
@@ -286,12 +302,12 @@
                                 <!-- Stat 3: Years of Trust -->
                                 <div class="hero-stat-col">
                                     <div class="hero-stat-icon-wrap" aria-hidden="true">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <circle cx="12" cy="8" r="6"></circle>
                                             <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
                                         </svg>
                                     </div>
-                                    <div class="hero-stat-number" id="heroStat3Num">12+</div>
+                                    <div class="hero-stat-number" id="heroStat3Num">12<span class="stat-accent">+</span></div>
                                     <div class="hero-stat-label" id="heroStat3Lbl">Years of Trust</div>
                                 </div>
                             </div>
@@ -337,9 +353,9 @@
                         lead: 'Pondicherry\'s premier wholesale hub for primary TMT steel rebars, certified JSW roofing sheets, structural MS pipes, cement & paints.',
                         title: 'Industrial Sheds & Warehouses',
                         desc: 'Prime structural steel, MS pipes & JSW color sheets supplied across Pondicherry & Tamil Nadu.',
-                        stat1: '10,000+', stat1Lbl: 'Projects Supplied',
-                        stat2: '3,000+', stat2Lbl: 'Tons in Stock',
-                        stat3: '12+', stat3Lbl: 'Years of Trust'
+                        stat1: '10,000<span class="stat-accent">+</span>', stat1Lbl: 'Projects Supplied',
+                        stat2: '3,000<span class="stat-accent">+</span>', stat2Lbl: 'Tons in Stock',
+                        stat3: '12<span class="stat-accent">+</span>', stat3Lbl: 'Years of Trust'
                     },
                     {
                         bg: 'img/main_herosec/hero3.png',
@@ -350,9 +366,9 @@
                         lead: 'Authorized distributor of JSW Pragati & Colouron+ profile roofing sheets, MS square & rectangular hollow sections.',
                         title: 'Commercial & Factory Roofing',
                         desc: 'Custom CNC sheet lengths, anti-rust coatings, and crane dispatch directly from our Sedarapet depot.',
-                        stat1: '100%', stat1Lbl: 'Genuine Mill Stock',
-                        stat2: '100-Ton', stat2Lbl: 'Digital Weighbridge',
-                        stat3: 'Zero', stat3Lbl: 'Shortage Guarantee'
+                        stat1: '100<span class="stat-accent">%</span>', stat1Lbl: 'Genuine Mill Stock',
+                        stat2: '100<span class="stat-accent">-Ton</span>', stat2Lbl: 'Digital Weighbridge',
+                        stat3: '100<span class="stat-accent">%</span>', stat3Lbl: 'Exact Weight Guarantee'
                     },
                     {
                         bg: 'img/main_herosec/hero1.png',
@@ -363,9 +379,9 @@
                         lead: 'Fresh batches of UltraTech, Dalmia & Ramco cement, paired with computerized color tinting from Asian & JSW Paints.',
                         title: 'Infrastructure & Residential Supply',
                         desc: 'Comprehensive civil supply with fast on-site delivery and bulk project contractor discounts.',
-                        stat1: '1 Lakh+', stat1Lbl: 'Satisfied Clients',
-                        stat2: 'Fleet', stat2Lbl: 'Crane Dispatch',
-                        stat3: 'Daily', stat3Lbl: 'Express Site Delivery'
+                        stat1: '1 Lakh<span class="stat-accent">+</span>', stat1Lbl: 'Satisfied Clients',
+                        stat2: '25<span class="stat-accent">+</span>', stat2Lbl: 'Crane & Truck Fleet',
+                        stat3: '24<span class="stat-accent">/7</span>', stat3Lbl: 'Express Site Delivery'
                     }
                 ];
 
@@ -442,11 +458,11 @@
                     if (leadEl) leadEl.textContent = data.lead;
                     if (titleEl) titleEl.textContent = data.title;
                     if (descEl) descEl.textContent = data.desc;
-                    if (stat1El) stat1El.textContent = data.stat1;
+                    if (stat1El) stat1El.innerHTML = data.stat1;
                     if (stat1LblEl) stat1LblEl.textContent = data.stat1Lbl;
-                    if (stat2El) stat2El.textContent = data.stat2;
+                    if (stat2El) stat2El.innerHTML = data.stat2;
                     if (stat2LblEl) stat2LblEl.textContent = data.stat2Lbl;
-                    if (stat3El) stat3El.textContent = data.stat3;
+                    if (stat3El) stat3El.innerHTML = data.stat3;
                     if (stat3LblEl) stat3LblEl.textContent = data.stat3Lbl;
 
                     dots.forEach(function(dot, i) {
