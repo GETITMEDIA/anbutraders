@@ -19,7 +19,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Line Awesome & FontAwesome Icons -->
     <link href="assets/css/line-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/fontAwesomePro.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     
     <!-- Anbu Traders 2026 Core Design System Stylesheet -->
     <link href="assets/css/a-steel-2026.css" rel="stylesheet">
@@ -75,10 +75,10 @@
 
                 <!-- Navigation Actions -->
                 <div class="anbu-nav-actions">
-                    <a class="anbu-btn-main-site" href="../index.html">
+                    <a class="anbu-btn-main-site d-none d-md-inline-flex" href="../index.html">
                         <i class="las la-arrow-left"></i> Main Site
                     </a>
-                    <a class="anbu-btn-enquiry" href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20materials%20seen%20in%20your%20Project%20Gallery." target="_blank" rel="noopener noreferrer">
+                    <a class="anbu-btn-enquiry d-none d-sm-inline-flex" href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20materials%20seen%20in%20your%20Project%20Gallery." target="_blank" rel="noopener noreferrer">
                         <i class="lab la-whatsapp"></i> Enquiry
                     </a>
                     <button class="anbu-mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation" data-bs-toggle="modal" data-bs-target="#mobileNavModal">
@@ -724,15 +724,25 @@
             const itemsToShow = filteredProjects.slice(0, displayedCount);
 
             grid.innerHTML = itemsToShow.map((item, index) => `
-                <div class="anbu-gallery-item" onclick="openLightbox(${index})" title="Click to view full image">
-                    <img src="${item.src}" alt="${item.title}" loading="lazy">
-                    <span class="anbu-gallery-cat-tag">${item.catLabel}</span>
-                    <div class="anbu-gallery-zoom-btn">
-                        <i class="las la-search-plus"></i> View Full Image
+                <div class="anbu-gallery-card">
+                    <div class="anbu-gallery-img-wrap" onclick="openLightbox(${index})" style="cursor: pointer;" title="Click to view full photo">
+                        <img src="${item.src}" alt="${item.title}" class="anbu-gallery-img" loading="lazy">
+                        <span class="anbu-gallery-badge">${item.catLabel}</span>
+                        <button type="button" class="anbu-gallery-zoom-trigger" onclick="event.stopPropagation(); openLightbox(${index})" title="View Full Photo" aria-label="View Full Photo">
+                            <i class="las la-expand-arrows-alt"></i>
+                        </button>
                     </div>
-                    <div class="anbu-gallery-overlay">
+                    <div class="anbu-gallery-content">
                         <h5 class="anbu-gallery-title">${item.title}</h5>
-                        <p class="anbu-gallery-desc">${item.desc.substring(0, 85)}...</p>
+                        <p class="anbu-gallery-desc">${item.desc}</p>
+                        <div class="anbu-gallery-actions">
+                            <a href="https://wa.me/9626325204?text=Hello%20Anbu%20Traders,%20I%20am%20interested%20in%20materials%20for:%20${encodeURIComponent(item.title)}." class="anbu-btn-inquire-price" target="_blank" rel="noopener noreferrer">
+                                <i class="lab la-whatsapp"></i> Inquire Materials <i class="las la-arrow-right ms-1"></i>
+                            </a>
+                            <button type="button" class="anbu-btn-tech-spec" onclick="openLightbox(${index})">
+                                <i class="las la-search-plus"></i> View Full Photo
+                            </button>
+                        </div>
                     </div>
                 </div>
             `).join('');

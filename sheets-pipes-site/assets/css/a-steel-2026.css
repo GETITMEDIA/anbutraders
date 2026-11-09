@@ -2440,48 +2440,54 @@ a {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   GALLERY PAGE STYLES (2026 Modern Industrial System)
+   GALLERY PAGE STYLES (2026 Architectural Steel & Sheets System)
+   Matching the Premium Reference Aesthetic of Anbu Traders
    ══════════════════════════════════════════════════════════════ */
 .anbu-page-header {
   position: relative;
-  background-color: #020C1B;
-  background-image: 
-    linear-gradient(135deg, rgba(2, 12, 27, 0.94) 0%, rgba(6, 43, 91, 0.88) 100%),
-    url('../img/slider/anbu-hero-industrial-banner.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 85px 0 95px;
-  color: #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 45%, #F1F5F9 100%);
+  padding: clamp(48px, 6vw, 75px) 0 clamp(40px, 5vw, 60px);
+  color: var(--primary-navy);
   text-align: center;
   overflow: hidden;
+  border-bottom: 1px solid #E2E8F0;
 }
 
-.anbu-page-header::after {
+.anbu-page-header::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 24px;
-  background: linear-gradient(to top, #F8FAFC, transparent);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1000px, 100vw);
+  height: 100%;
+  background: radial-gradient(circle at 50% 20%, rgba(243, 106, 33, 0.08) 0%, rgba(6, 43, 91, 0.03) 50%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.anbu-page-header .container {
+  position: relative;
+  z-index: 1;
 }
 
 .anbu-breadcrumb {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13.5px;
-  color: #94A3B8;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
   margin-bottom: 16px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
+  background: #FFFFFF;
   padding: 6px 16px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(6, 43, 91, 0.04);
 }
 
 .anbu-breadcrumb a {
-  color: #E2E8F0 !important;
+  color: #64748B !important;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -2491,18 +2497,19 @@ a {
 }
 
 .anbu-page-title {
-  font-size: 44px !important;
+  font-size: clamp(28px, 4vw, 44px) !important;
   font-weight: 800 !important;
-  color: #FFFFFF !important;
+  color: var(--primary-navy) !important;
   font-family: var(--font-heading);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
   margin-bottom: 14px;
+  line-height: 1.2;
 }
 
 .anbu-page-subtitle {
-  font-size: 16.5px;
-  color: #CBD5E1;
-  max-width: 720px;
+  font-size: clamp(14px, 1.6vw, 16.5px);
+  color: #64748B;
+  max-width: 680px;
   margin: 0 auto 28px;
   line-height: 1.6;
 }
@@ -2511,7 +2518,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   margin-top: 10px;
 }
 
@@ -2519,105 +2526,109 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(2, 12, 27, 0.7);
-  border: 1px solid rgba(255, 101, 0, 0.35);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: 9999px;
   padding: 8px 18px;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: var(--primary-navy);
+  box-shadow: 0 2px 10px rgba(6, 43, 91, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.anbu-header-stat-pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(243, 106, 33, 0.4);
 }
 
 .anbu-header-stat-pill i {
   color: var(--primary-orange);
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* ── Gallery Main Section ── */
 .anbu-gallery-section {
-  padding: 60px 0 100px;
+  padding: 50px 0 90px;
   background: #F8FAFC;
   min-height: 70vh;
 }
 
-/* ── Filter Tabs ── */
+/* ── Filter Toolbar ── */
 .anbu-gallery-filters-wrap {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 45px;
+  padding: 6px;
 }
 
 .anbu-gallery-filter-btn {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  color: #334155;
+  color: #475569;
   font-family: var(--font-heading);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: 9999px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 6px rgba(6, 43, 91, 0.03);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
 }
 
 .anbu-gallery-filter-btn:hover {
-  border-color: rgba(255, 101, 0, 0.5);
+  border-color: rgba(243, 106, 33, 0.45);
   color: var(--primary-orange);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(6, 43, 91, 0.08);
+  box-shadow: 0 6px 18px rgba(6, 43, 91, 0.08);
 }
 
 .anbu-gallery-filter-btn.active {
-  background: var(--primary-orange);
-  border-color: var(--primary-orange);
+  background: linear-gradient(135deg, #FF6500 0%, #F36A21 100%) !important;
+  border-color: #F36A21 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 18px rgba(255, 101, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(243, 106, 33, 0.35) !important;
 }
 
 .anbu-gallery-filter-btn .filter-count {
   font-size: 11.5px;
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(6, 43, 91, 0.06);
+  color: #475569;
   padding: 2px 8px;
   border-radius: 9999px;
   font-weight: 700;
 }
 
 .anbu-gallery-filter-btn.active .filter-count {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.28);
   color: #FFFFFF;
 }
 
-/* ── Gallery Grid ── */
+/* ── Gallery Cards Grid ── */
 .anbu-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
-@media (max-width: 991px) {
-  .anbu-page-title {
-    font-size: 34px !important;
-  }
+@media (max-width: 991.98px) {
   .anbu-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
-@media (max-width: 600px) {
-  .anbu-page-title {
-    font-size: 28px !important;
-  }
+@media (max-width: 575.98px) {
   .anbu-gallery-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
   .anbu-gallery-filters-wrap {
     justify-content: flex-start;
@@ -2625,34 +2636,47 @@ a {
     padding-bottom: 8px;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .anbu-gallery-filters-wrap::-webkit-scrollbar {
+    display: none;
   }
   .anbu-gallery-filter-btn {
     white-space: nowrap;
     padding: 8px 16px;
     font-size: 13px;
+    flex-shrink: 0;
   }
 }
 
-/* ── Gallery Card Item ── */
-.anbu-gallery-item {
-  position: relative;
-  border-radius: 16px;
+/* ── Clean 2026 Project Card (Matching Product Card Standard) ── */
+.anbu-gallery-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px rgba(6, 43, 91, 0.05);
   overflow: hidden;
-  background: #020C1B;
-  aspect-ratio: 16 / 11;
-  box-shadow: 0 4px 20px rgba(6, 43, 91, 0.08);
-  border: 1px solid rgba(6, 43, 91, 0.06);
-  cursor: pointer;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.anbu-gallery-item:hover {
+.anbu-gallery-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 38px rgba(6, 43, 91, 0.18), 0 0 16px rgba(255, 101, 0, 0.15);
-  border-color: rgba(255, 101, 0, 0.3);
+  box-shadow: 0 20px 42px rgba(6, 43, 91, 0.12);
+  border-color: rgba(243, 106, 33, 0.4);
 }
 
-.anbu-gallery-item img {
+/* Photo area: 100% clean, unobstructed */
+.anbu-gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.anbu-gallery-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2660,89 +2684,96 @@ a {
   display: block;
 }
 
-.anbu-gallery-item:hover img {
-  transform: scale(1.08);
+.anbu-gallery-card:hover .anbu-gallery-img {
+  transform: scale(1.06);
 }
 
-/* Top Category Tag */
-.anbu-gallery-cat-tag {
+/* Category badge floating on top-left of image */
+.anbu-gallery-badge {
   position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(2, 12, 27, 0.85);
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
-  color: var(--primary-orange);
-  border: 1px solid rgba(255, 101, 0, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--primary-navy);
+  border: 1px solid rgba(6, 43, 91, 0.1);
   border-radius: 9999px;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
   padding: 4px 12px;
-  z-index: 3;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(6, 43, 91, 0.08);
 }
 
-/* Hover Center Zoom Button */
-.anbu-gallery-zoom-btn {
+/* Quick Zoom trigger on top-right of image */
+.anbu-gallery-zoom-trigger {
   position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.7);
-  background: rgba(2, 12, 27, 0.85);
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 101, 0, 0.6);
-  color: #FFFFFF;
-  padding: 8px 18px;
-  border-radius: 9999px;
-  font-size: 12.5px;
-  font-weight: 600;
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(6, 43, 91, 0.1);
+  color: var(--primary-orange);
   display: flex;
   align-items: center;
-  gap: 6px;
-  opacity: 0;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 4;
-  pointer-events: none;
-}
-
-.anbu-gallery-zoom-btn i {
-  color: var(--primary-orange);
+  justify-content: center;
   font-size: 16px;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.25s ease;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.1);
 }
 
-.anbu-gallery-item:hover .anbu-gallery-zoom-btn {
+.anbu-gallery-card:hover .anbu-gallery-zoom-trigger {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
-/* Bottom Card Overlay */
-.anbu-gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 35%, rgba(2, 12, 27, 0.92) 100%);
+.anbu-gallery-zoom-trigger:hover {
+  background: var(--primary-orange);
+  color: #FFFFFF;
+}
+
+/* Card Body below the photo */
+.anbu-gallery-content {
+  padding: 20px 22px 22px 22px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  z-index: 2;
-  transition: all 0.3s ease;
 }
 
 .anbu-gallery-title {
-  color: #FFFFFF !important;
-  font-size: 15.5px !important;
+  color: var(--primary-navy) !important;
+  font-size: 16.5px !important;
   font-weight: 700 !important;
   font-family: var(--font-heading);
-  margin-bottom: 3px !important;
-  line-height: 1.3;
+  margin-bottom: 6px !important;
+  line-height: 1.35;
 }
 
 .anbu-gallery-desc {
-  color: #CBD5E1;
-  font-size: 12.5px;
-  margin: 0;
-  line-height: 1.4;
-  opacity: 0.9;
+  color: #64748B;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* Action button area */
+.anbu-gallery-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
 }
 
 /* ── Load More Button & Stats ── */
