@@ -37,13 +37,18 @@
 }
 
 /* ── Global Reset & Typography ── */
+html, body {
+  overflow-x: clip !important;
+  max-width: 100%;
+  position: relative;
+}
+
 body {
   font-family: var(--font-body) !important;
   color: var(--text-muted);
   background-color: var(--body-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   line-height: 1.6;
 }
 
@@ -625,6 +630,7 @@ a {
   width: 100%;
   margin-right: -100%;
   float: left;
+  overflow: hidden !important;
 }
 
 .hero-paint-carousel-wrapper .carousel-item.active,
@@ -2208,7 +2214,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 440px;
+  width: min(440px, calc(100vw - 20px));
+  max-width: 100vw;
   height: 280px;
   display: flex;
   align-items: center;
@@ -2217,7 +2224,7 @@ a {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.25s ease, left 0.18s cubic-bezier(0.16, 1, 0.3, 1), top 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: visible !important;
+  overflow: clip !important;
 }
 
 .pill-venom-stage.active {
@@ -2751,7 +2758,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 520px;
+  width: min(520px, 92vw);
+  max-width: 100%;
   height: 340px;
   overflow: visible !important;
   display: flex;
@@ -5411,5 +5419,18 @@ section,
   .birla-benefits-section {
     padding-top: var(--section-spacing-mobile) !important;
     padding-bottom: var(--section-spacing-mobile) !important;
+  }
+}
+
+/* Global Responsive Guards for Paint Site */
+@media (max-width: 767.98px) {
+  .row.g-5 {
+    --bs-gutter-x: 1.25rem !important;
+    --bs-gutter-y: 1.25rem !important;
+  }
+  .hero-clean-cta,
+  .hero-paint-carousel-wrapper,
+  .hero-slide-bg {
+    overflow-x: clip !important;
   }
 }

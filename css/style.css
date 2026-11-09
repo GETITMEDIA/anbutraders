@@ -4919,12 +4919,9 @@ select:focus-visible {
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
-  max-width: var(--site-container-max, 1180px) !important;
+  width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: var(--container-px, clamp(24px, 2.8vw, 36px)) !important;
-  padding-right: var(--container-px, clamp(24px, 2.8vw, 36px)) !important;
-  width: 100% !important;
   box-sizing: border-box !important;
 }
 
@@ -6489,7 +6486,7 @@ img, video, canvas, svg {
   max-width: 100%;
 }
 
-/* 2. Global Container Alignment — 100% Consistent Left/Right on Every Page & Section */
+/* 2. Global Container Alignment — Standard Bootstrap 5 Container System */
 .container,
 .container-xxl,
 .container-xl,
@@ -6501,11 +6498,10 @@ img, video, canvas, svg {
 .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
   width: 100% !important;
-  max-width: var(--site-container-max) !important;
-  padding-right: var(--container-px) !important;
-  padding-left: var(--container-px) !important;
   margin-right: auto !important;
   margin-left: auto !important;
+  padding-right: var(--bs-gutter-x, 0.75rem) !important;
+  padding-left: var(--bs-gutter-x, 0.75rem) !important;
   box-sizing: border-box !important;
 }
 
@@ -6514,17 +6510,13 @@ img, video, canvas, svg {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 1180px !important;
-    padding-right: clamp(28px, 2.5vw, 36px) !important;
-    padding-left: clamp(28px, 2.5vw, 36px) !important;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
-    max-width: 1180px !important;
-    padding-right: 28px !important;
-    padding-left: 28px !important;
+    max-width: 1140px !important;
   }
 }
 
@@ -6532,8 +6524,6 @@ img, video, canvas, svg {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 960px !important;
-    padding-right: 24px !important;
-    padding-left: 24px !important;
   }
 }
 
@@ -6541,8 +6531,6 @@ img, video, canvas, svg {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 720px !important;
-    padding-right: var(--container-px-tablet) !important;
-    padding-left: var(--container-px-tablet) !important;
   }
 }
 
@@ -6550,8 +6538,6 @@ img, video, canvas, svg {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 540px !important;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
   }
 }
 
@@ -6559,8 +6545,8 @@ img, video, canvas, svg {
   .container, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm,
   .site-container, .anbu-page-hero .container, .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
     max-width: 100% !important;
-    padding-right: var(--container-px-mobile) !important;
-    padding-left: var(--container-px-mobile) !important;
+    padding-right: 16px !important;
+    padding-left: 16px !important;
   }
 }
 
@@ -7726,13 +7712,8 @@ img, video, canvas, svg {
   z-index: 1;
 }
 
-/* Standardized 1180px Site Container for Pixel-Perfect Grid Alignment */
+/* Standardized Site Container for Pixel-Perfect Grid Alignment */
 .hero-container-1180 {
-  max-width: 1180px !important;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
   position: relative;
   z-index: 2;
   flex: 1;
@@ -9408,60 +9389,21 @@ html, body { overflow-x: hidden; }
   min-height: 94px;
 }
 
-/* Ensure navbar inner container matches site container width and auto-centering exactly */
+/* Ensure navbar inner container matches standard Bootstrap 5 container */
 .navbar > .container,
-.navbar.sticky-top > .container {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
-  max-width: var(--site-content-max, 1180px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Fallback for pages that might use container-fluid */
+.navbar.sticky-top > .container,
 .navbar > .container-fluid,
 .navbar.sticky-top > .container-fluid {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
-  max-width: var(--site-content-max, 1180px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
 }
 
-/* Topbar container normalization matching navbar & hero container */
+/* Topbar container normalization matching standard container */
 .container-fluid.bg-dark {
   width: 100% !important;
   background: #062B5B !important;
   padding: 0 !important;
-}
-.container-fluid.bg-dark > .container {
-  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
-  max-width: var(--site-content-max, 1180px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
-}
-.container-fluid.bg-dark > .container-fluid,
-.container-fluid.bg-dark > .row {
-  width: min(100% - (2 * var(--site-gutter, 1rem)), var(--site-content-max, 1180px)) !important;
-  max-width: var(--site-content-max, 1180px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
 }
 
 /* Navbar Brand & Logo Alignment - Prominent, Bold & Responsive across all devices */
@@ -9736,76 +9678,27 @@ html, body { overflow-x: hidden; }
 .site-section .unified-title-bar, .businesses-section .unified-title-bar, .products-catalog-section .unified-title-bar, .why-choose-section .unified-title-bar, .anbu-features-section .unified-title-bar, .anbu-team-section .unified-title-bar, .testimonial-section .unified-title-bar, .contact-section .unified-title-bar, .service-section .unified-title-bar, .project-section .unified-title-bar, .process-section .unified-title-bar, .brands-section .unified-title-bar, .how-we-deliver-section .unified-title-bar { margin-top: 12px; margin-bottom: 20px; }
 @media (max-width: 767.98px) { .site-section, .businesses-section, .products-catalog-section, .why-choose-section, .anbu-features-section, .anbu-team-section, .testimonial-section, .contact-section, .service-section, .about-section, .project-section, .process-section, .brands-section, .how-we-deliver-section { padding-block: 48px !important; } }
 /* ========================================================================
-   UNIVERSAL CONTENT CONTAINER
-   Section backgrounds may span the viewport, but their content always stays
-   inside one centered container so margins and alignment remain predictable.
+   UNIVERSAL BOOTSTRAP 5 CONTAINER NORMALIZATION
+   Keeps all content sections aligned to the unified Bootstrap 5 grid.
    ======================================================================== */
-:root { --global-content-max: 1180px; --global-content-gutter: clamp(16px, 3.2vw, 48px); }
-
-/* Normalize every common section container, including sections that were
-   authored with container-fluid or a direct row instead of .container. */
 .site-section > .container,
-.site-section > .container-fluid,
-.site-section > .container-xxl,
 .businesses-section > .container,
-.businesses-section > .container-fluid,
 .products-catalog-section > .container,
-.products-catalog-section > .container-fluid,
 .why-choose-section > .container,
-.why-choose-section > .container-fluid,
 .anbu-features-section > .container,
-.anbu-features-section > .container-fluid,
 .anbu-team-section > .container,
-.anbu-team-section > .container-fluid,
 .testimonial-section > .container,
-.testimonial-section > .container-fluid,
 .contact-section > .container,
-.contact-section > .container-fluid,
 .service-section > .container,
-.service-section > .container-fluid,
 .project-section > .container,
-.project-section > .container-fluid,
 .process-section > .container,
-.process-section > .container-fluid,
 .brands-section > .container,
-.brands-section > .container-fluid,
 .how-we-deliver-section > .container,
-.how-we-deliver-section > .container-fluid,
 .anbu-trust-section > .container,
-.anbu-trust-section > .container-fluid,
-.anbu-404-section > .container,
-.anbu-cta-banner-section {
-  width: min(100% - (2 * var(--global-content-gutter)), var(--global-content-max)) !important;
-  max-width: var(--global-content-max) !important;
+.anbu-404-section > .container {
+  width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Keep Bootstrap rows inside the container instead of letting negative
-   gutters push content against the viewport edge. */
-.site-section > .container > .row,
-.site-section > .container-fluid > .row,
-.businesses-section > .container > .row,
-.products-catalog-section > .container > .row,
-.why-choose-section > .container > .row,
-.anbu-features-section > .container > .row,
-.anbu-team-section > .container > .row,
-.testimonial-section > .container > .row,
-.contact-section > .container > .row,
-.service-section > .container > .row,
-.project-section > .container > .row,
-.process-section > .container > .row,
-.brands-section > .container > .row,
-.how-we-deliver-section > .container > .row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-@media (max-width: 575.98px) {
-  :root { --global-content-gutter: 16px; }
 }
 
 /* Safety: Never allow wow animation classes to keep content stuck hidden */
