@@ -24,6 +24,7 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/cement-2026.css">
+    <link rel="stylesheet" href="../css/cement-redesign.css">
 
     <!-- Responsive Stylesheet -->
     <link rel="stylesheet" href="../css/responsive.css">
@@ -32,50 +33,99 @@
 
 <body class="light-version">
 
-    <!-- ##### Header Area Start ##### -->
-   <nav class="navbar navbar-expand-lg fixed-top" id="banner" style="background-color: white; color: #000;" >
-    <!-- Your navbar content here -->
-
+    <!-- ==============================================
+         1. TOPBAR & SOCIAL STRIP
+         ============================================== -->
+    <div class="container-fluid anbu-topbar px-0">
         <div class="container">
-            <!-- Brand -->
-          <a class="navbar-brand" href="#" style="display: flex; align-items: center; font-family: Arial, sans-serif; font-size: 20px; color: #333; text-decoration: none;">
-    <span style="margin-right: 10px;">
-        <img src="../img/Anbu-Steel-&-Cement--Logo1.png" alt="logo" style="height: 100px; width: auto;">
-    </span> 
-    
-</a>
+            <div class="row no-gutters align-items-center">
+                <div class="col-12 col-lg-6 px-0 text-left">
+                    <div class="d-inline-flex align-items-center py-2 text-white">
+                        <span class="topbar-follow-label">Follow Us:</span>
+                        <span class="topbar-social-links ml-2">
+                            <a href="https://www.facebook.com/people/Anbu-Traders-Pondy/61574478773419/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.youtube.com/@anbutraders1353" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/anbutraders_?igsh=MWY1cGtmOWFhejIyZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6 px-0 text-right d-none d-lg-block">
+                    <div class="topbar-right d-inline-flex align-items-center text-white py-2 px-4">
+                        <a href="tel:+919626325204" class="topbar-call-link" title="Call Wholesale Desk Directly">
+                            <i class="fa fa-phone mr-2 text-white"></i>
+                            <span>Direct Wholesale Desk: +91 96263 25204</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- ==============================================
+         2. CLEAN WHITE NAVBAR
+         ============================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="banner">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img id="anbu-navbar-logo" src="../img/Anbu-Steel-&-Cement--Logo1.png" alt="Anbu Steel & Cement Logo" class="anbu-navbar-logo">
+            </a>
 
-            <!-- Navbar links -->
-             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
+            <div class="d-flex align-items-center ml-auto mr-3 d-lg-none">
+                <a href="tel:+919626325204" class="btn btn-call-mobile rounded-circle d-flex align-items-center justify-content-center mr-2" title="Call Now" aria-label="Call Now">
+                    <i class="fa fa-phone text-white"></i>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars menu-icon" style="font-size: 22px; color: #062b5b;"></i>
+                    <i class="fa fa-times close-icon" style="font-size: 22px; color: #062b5b; display: none;"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class='nav-link' href='about-us.html'>About Us</a>
+                        <a class="nav-link" href="about-us.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class='nav-link' href='services.html'>Services</a>
+                        <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class='nav-link' href='our-projects.html'>ourproject</a>
+                        <a class="nav-link" href="our-projects.html">Our Projects</a>
                     </li>
-                  
-                   
                     <li class="nav-item">
-                        <a class='nav-link' href='contact-us.html'>Contact</a>
+                        <a class="nav-link" href="contact-us.html">Contact</a>
                     </li>
-                   
+                    <li class="nav-item d-lg-none my-2 text-center w-100">
+                        <a href="tel:+919626325204" class="nav-link" style="color: var(--c-orange) !important; font-weight: 700;">
+                            <i class="fa fa-phone mr-1"></i> Call: +91 96263 25204
+                        </a>
+                    </li>
                 </ul>
+
+                <div class="anbu-nav-actions d-none d-lg-flex align-items-center">
+                    <a href="../../main-site/index.html" class="anbu-portal-btn mr-2" title="Return to Main Portal">
+                        <i class="fa fa-arrow-left mr-1"></i> Main Site
+                    </a>
+                    <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Steel%20and%20Cement." class="anbu-enquiry-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-whatsapp mr-1"></i> Enquiry
+                    </a>
+                </div>
+
+                <div class="d-lg-none p-3 border-top w-100 text-center">
+                    <div class="d-flex flex-column">
+                        <a href="../../main-site/index.html" class="anbu-portal-btn justify-content-center mb-2">
+                            <i class="fa fa-arrow-left mr-1"></i> Main Site
+                        </a>
+                        <a href="https://wa.me/919626325204?text=Hi%20Anbu%20Traders,%20I%20would%20like%20to%20enquire%20about%20Steel%20and%20Cement." class="anbu-enquiry-btn justify-content-center" target="_blank" rel="noopener noreferrer">
+                            <i class="fa fa-whatsapp mr-1"></i> WhatsApp Enquiry
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-    <!-- ##### Header Area End ##### -->
 
     <!-- ##### Welcome Area Start ##### -->
     <div class="breadcumb-area clearfix auto-init">

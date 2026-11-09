@@ -131,98 +131,87 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: rotate(0deg); }
 }
 
-/* ── 1. Navbar Redesign (Signature Angled Brand Logo + Sleek Underline) ── */
+@media (max-width: 991.98px) {
+  .anbu-topbar {
+    display: none !important;
+  }
+}
+
+/* ── 1. Navbar Redesign (Clean Brand Logo + Paint Site Harmonized Layout) ── */
 .navbar#banner {
   background-color: #ffffff !important;
   border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
-  box-shadow: 0 4px 20px rgba(6, 43, 91, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(6, 43, 91, 0.06) !important;
   padding: 0 !important;
-  min-height: 94px;
+  min-height: 90px;
   transition: all 0.3s ease !important;
   z-index: 1030 !important;
 }
 
 .navbar#banner .navbar-brand {
   position: relative;
-  padding-right: 42px;
+  padding-right: 0;
   padding-left: 0;
-  height: 94px;
+  height: 90px;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: transparent;
   text-decoration: none;
-  margin-right: 12px;
+  margin-right: 0;
 }
 
 .navbar#banner .navbar-brand::after {
-  position: absolute;
-  content: "";
-  width: 46px;
-  height: 100%;
-  top: 0;
-  right: -23px;
-  transform: skewX(-30deg);
-  background-color: var(--c-orange);
-  z-index: 1;
+  display: none !important;
+  content: none !important;
 }
 
 .navbar#banner .navbar-brand img.anbu-navbar-logo {
-  height: 68px !important;
+  height: 70px !important;
   max-height: 72px;
   width: auto !important;
   object-fit: contain;
   position: relative;
   z-index: 2;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navbar#banner .navbar-brand:hover img.anbu-navbar-logo {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 @media (max-width: 991.98px) {
   .navbar#banner { min-height: 82px; }
   .navbar#banner .navbar-brand { height: 82px; }
   .navbar#banner .navbar-brand img.anbu-navbar-logo {
-    height: 58px !important;
-    max-height: 60px;
+    height: 62px !important;
+    max-height: 64px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .navbar#banner { min-height: 72px; }
-  .navbar#banner .navbar-brand { height: 72px; }
+  .navbar#banner { min-height: 76px; }
+  .navbar#banner .navbar-brand { height: 76px; }
   .navbar#banner .navbar-brand img.anbu-navbar-logo {
-    height: 48px !important;
-    max-height: 50px;
+    height: 54px !important;
+    max-height: 56px;
   }
 }
 
-/* Nav Links with Underline Indicator (Clean, No clumsy bubble) */
+/* Nav Links (Matches Paint Site & Main Site) */
 .navbar-nav .nav-link {
   font-family: var(--font-heading) !important;
-  font-size: 15px !important;
+  font-size: 14.5px !important;
   font-weight: 600 !important;
-  color: var(--c-navy-dark) !important;
-  padding: 26px 16px !important;
+  color: #0f172a !important;
+  padding: 8px 16px !important;
   position: relative;
   background: transparent !important;
   text-decoration: none;
   transition: color 0.25s ease;
-  letter-spacing: 0.2px;
 }
 
 .navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  height: 2.5px;
-  background: var(--c-orange);
-  border-radius: 2px;
-  transform: scaleX(0);
-  transition: transform 0.25s ease;
+  display: none !important;
 }
 
 .navbar-nav .nav-link:hover,
@@ -231,66 +220,38 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent !important;
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-item.active .nav-link::after {
-  transform: scaleX(1);
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: 700 !important;
 }
 
-/* Call Button in Navbar */
+/* Hide redundant Call Button in Desktop Navbar (Already in Topbar) */
 .btn-call-nav {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: 1.5px solid var(--c-orange);
-  color: var(--c-orange) !important;
-  font-family: var(--font-heading);
-  font-size: 13.5px;
-  font-weight: 700;
-  border-radius: 50px;
-  padding: 8px 18px;
-  background: #ffffff;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  display: none !important;
 }
 
-.btn-call-nav:hover {
-  background: var(--c-orange);
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(243, 106, 33, 0.35);
-  text-decoration: none;
-}
-
-@media (max-width: 1399.98px) {
-  .btn-call-nav {
-    display: none !important;
-  }
-}
-
-.btn-call-nav i {
-  animation: phoneRingPulse 2.8s infinite ease-in-out;
-}
-
-/* Portal Button (Back to Main Site) */
+/* Portal Button (Back to Main Site — Matches Paint Site Clean Outline Pill) */
 .anbu-portal-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   padding: 8px 18px;
-  border-radius: 50px;
-  background: var(--c-navy-main);
-  color: #ffffff !important;
+  border-radius: 9999px;
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
   font-family: var(--font-heading);
   font-size: 13.5px;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .anbu-portal-btn:hover {
-  background: var(--c-navy-dark);
+  background: var(--c-navy-main) !important;
+  border-color: var(--c-navy-main) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(6, 43, 91, 0.25);
+  box-shadow: 0 4px 14px rgba(6, 43, 91, 0.15);
   color: #ffffff !important;
   text-decoration: none;
 }
@@ -299,22 +260,23 @@ h1, h2, h3, h4, h5, h6 {
 .anbu-enquiry-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   padding: 9px 22px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, var(--c-orange) 0%, var(--c-orange-light) 100%);
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #ff6500 0%, #ea580c 100%) !important;
   color: #ffffff !important;
   font-family: var(--font-heading);
   font-size: 13.5px;
-  font-weight: 800;
-  box-shadow: 0 4px 15px rgba(243, 106, 33, 0.38);
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.32);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .anbu-enquiry-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(243, 106, 33, 0.55);
+  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.45);
   color: #ffffff !important;
   text-decoration: none;
 }

@@ -103,6 +103,12 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
 }
 
+@media (max-width: 991.98px) {
+  .anbu-topbar {
+    display: none !important;
+  }
+}
+
 /* ── Header / Navbar ── */
 .anbu-navbar {
   background: var(--anbu-white) !important;
@@ -124,29 +130,22 @@ h1, h2, h3, h4, h5, h6,
   width: auto !important;
   flex: 0 0 auto !important;
   height: 82px !important;
-  padding-right: 45px !important;
+  padding-right: 0 !important;
   background: var(--anbu-white) !important;
   text-decoration: none !important;
 }
 
 .anbu-navbar-brand-wrap::after {
-  position: absolute;
-  content: "";
-  width: 44px;
-  height: 100%;
-  top: 0;
-  right: -22px;
-  transform: skewX(-30deg);
-  background-color: var(--anbu-orange);
-  z-index: 1;
+  display: none !important;
+  content: none !important;
 }
 
 .anbu-navbar-brand-wrap img {
   position: relative;
   z-index: 2;
-  height: 62px;
+  height: 68px;
   width: auto;
-  max-width: 170px;
+  max-width: 190px;
   object-fit: contain;
 }
 
@@ -211,30 +210,31 @@ h1, h2, h3, h4, h5, h6,
   color: var(--anbu-orange) !important;
 }
 
-/* Return to Main Site Portal Button */
+/* Return to Main Site Portal Button (Matches Paint Site Clean Outline Pill) */
 .anbu-portal-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: var(--anbu-navy) !important;
-  color: #FFFFFF !important;
+  gap: 6px;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
   font-family: var(--anbu-font-heading);
   font-weight: 600;
   font-size: 13.5px;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border-radius: var(--anbu-radius-pill);
   text-decoration: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.2);
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: none;
   transition: var(--anbu-transition);
   white-space: nowrap;
 }
 
 .anbu-portal-btn:hover {
-  background: var(--anbu-orange) !important;
+  background: var(--anbu-navy) !important;
   color: #FFFFFF !important;
+  border-color: var(--anbu-navy) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px var(--anbu-orange-glow);
+  box-shadow: 0 4px 14px rgba(6, 43, 91, 0.15);
 }
 
 .anbu-portal-btn i {
