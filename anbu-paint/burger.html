@@ -539,6 +539,8 @@
             position: relative;
             padding-top: 24px;
             padding-left: 20px;
+            overflow: hidden;
+            max-width: 100%;
         }
 
         /* Translucent Warm Golden/Cream Organic Flowing Wave matching reference */
@@ -546,8 +548,8 @@
             position: absolute;
             top: -14px;
             left: -15px;
-            width: 330px;
-            height: 330px;
+            width: min(330px, 90vw);
+            height: min(330px, 90vw);
             background: radial-gradient(ellipse at 85% 20%, rgba(254, 240, 138, 0.55) 0%, rgba(254, 215, 170, 0.40) 45%, rgba(255, 247, 237, 0) 72%);
             border-radius: 65% 35% 55% 45% / 40% 60% 40% 60%;
             pointer-events: none;
@@ -1661,7 +1663,7 @@
          1. TOPBAR SECTION (Verified Contacts & Business Hours)
          ============================================== -->
     <div class="anbu-topbar">
-        <div class="container-fluid px-lg-5 px-3">
+        <div class="container">
             <div class="d-flex align-items-center justify-content-between">
                 <!-- Left: Showroom Phone Numbers & Email -->
                 <div class="d-flex align-items-center flex-wrap gap-lg-4 gap-2">
@@ -1700,7 +1702,7 @@
          2. MAIN NAVBAR SECTION
          ============================================== -->
     <header class="anbu-navbar">
-        <div class="container-fluid px-lg-5 px-3">
+        <div class="container">
             <div class="anbu-navbar-inner">
                 <!-- Logo: AP ANBU PAINTS -->
                 <a class="anbu-brand-group" href="index.html" aria-label="Anbu Paints Home">
@@ -1799,7 +1801,7 @@
                 <!-- Slide 1: Berger Silk BreatheEasy (hero_1.png) -->
                 <div class="carousel-item active hero-carousel-slide hero-slide-1">
                     <div class="hero-slide-bg" style="background-image: url('img/carosels_paints/hero_1.png'); background-position: center right;"></div>
-                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                    <div class="container hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
                                 <h1 class="hero-clean-title">
@@ -1830,7 +1832,7 @@
                 <!-- Slide 2: Berger WeatherCoat Anti-Dust (berger-weathercoat-hero.jpg) -->
                 <div class="carousel-item hero-carousel-slide hero-slide-2">
                     <div class="hero-slide-bg hero-slide-2-bg" style="background-image: url('paint/berger-weathercoat-hero.jpg'); background-position: right center;"></div>
-                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                    <div class="container hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
                                 <h1 class="hero-clean-title">
@@ -1861,7 +1863,7 @@
                 <!-- Slide 3: Berger Silk Glamor Luxury (berger-hero-living.jpg) -->
                 <div class="carousel-item hero-carousel-slide hero-slide-3">
                     <div class="hero-slide-bg hero-slide-3-bg" style="background-image: url('paint/berger-hero-living.jpg'); background-position: right center;"></div>
-                    <div class="container-fluid px-lg-5 px-3 hero-slide-container">
+                    <div class="container hero-slide-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-xl-6 hero-content-col">
                                 <h1 class="hero-clean-title">
@@ -1901,7 +1903,7 @@
     </section>
 
     <!-- Main Container for Remaining Sections (Matching JSW Paints Structure) -->
-    <main class="container-fluid px-lg-5 px-3">
+    <main class="container">
         <div style="max-width: 1180px; margin: 0 auto;">
 
             <!-- ==============================================
@@ -2459,7 +2461,7 @@
          ============================================== -->
     <!-- Footer Start -->
 <footer class="anbu-unified-footer">
-    <div class="anbu-footer-container">
+    <div class="container anbu-footer-container">
         <div class="anbu-footer-grid">
             <!-- Brand & Site Logo Column -->
             <div class="anbu-footer-col anbu-footer-brand-col">
@@ -2544,7 +2546,7 @@
 
 <!-- Copyright Start -->
 <div class="anbu-unified-copyright">
-    <div class="anbu-footer-container">
+    <div class="container anbu-footer-container">
         <div class="anbu-copyright-inner">
             <p>Copyright &copy; 2026 <a class="anbu-copyright-highlight" href="../index.html">Anbu Traders</a>. All Rights Reserved.</p>
             <p>Proudly created with <a class="anbu-copyright-highlight" href="https://www.getitmediasolutions.com/" target="_blank" rel="noopener noreferrer">Getitmedia solutions</a></p>

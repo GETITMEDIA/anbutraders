@@ -563,29 +563,13 @@ h1, h2, h3, h4, h5, h6,
 
 .anbu-unified-footer .anbu-footer-container,
 .anbu-unified-copyright .anbu-footer-container {
+  width: 100% !important;
   max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(24px, 2.8vw, 36px) !important;
-  padding-right: clamp(24px, 2.8vw, 36px) !important;
-  width: 100% !important;
+  padding-left: var(--bs-gutter-x, 12px) !important;
+  padding-right: var(--bs-gutter-x, 12px) !important;
   box-sizing: border-box !important;
-}
-
-@media (max-width: 991.98px) {
-  .anbu-unified-footer .anbu-footer-container,
-  .anbu-unified-copyright .anbu-footer-container {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .anbu-unified-footer .anbu-footer-container,
-  .anbu-unified-copyright .anbu-footer-container {
-    padding-left: clamp(16px, 4vw, 20px) !important;
-    padding-right: clamp(16px, 4vw, 20px) !important;
-  }
 }
 
 .anbu-footer-grid {
@@ -900,37 +884,83 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Category page spacing normalization */
-:root { --anbu-site-gutter: clamp(16px, 3.2vw, 48px); --anbu-content-max: 1180px; }
+/* Category page spacing & Bootstrap 5 container normalization */
 html, body { overflow-x: hidden; }
-.anbu-navbar { padding-left: var(--anbu-site-gutter) !important; padding-right: var(--anbu-site-gutter) !important; }
-.anbu-navbar > .container,
-.anbu-navbar > .container-fluid {
-  max-width: var(--anbu-content-max, 1180px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+.anbu-navbar { padding-left: 0 !important; padding-right: 0 !important; }
 .anbu-navbar .navbar-nav { align-items: center; gap: clamp(2px, .45vw, 8px); }
 .anbu-navbar .nav-link { margin: 0 !important; padding-left: clamp(9px, 1vw, 16px) !important; padding-right: clamp(9px, 1vw, 16px) !important; white-space: nowrap; }
 .anbu-navbar .anbu-navbar-brand-wrap { margin-left: 0 !important; }
-.anbu-container, .anbu-section > .container, .anbu-section > .container-fluid, .anbu-unified-footer .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container { width: min(100% - (2 * var(--anbu-site-gutter)), var(--anbu-content-max)); max-width: var(--anbu-content-max) !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box; }
-@media (max-width: 991.98px) { .anbu-navbar { padding-left: 16px !important; padding-right: 16px !important; } .anbu-navbar .navbar-nav { align-items: stretch; gap: 0; } }
-@media (max-width: 575.98px) { .anbu-navbar { padding-left: 12px !important; padding-right: 12px !important; } }
+@media (max-width: 991.98px) { .anbu-navbar .navbar-nav { align-items: stretch; gap: 0; } }
+
 /* Division pages use the same section rhythm as Welcome to Anbu Traders. */
 .anbu-section, .anbu-content-section, .category-section, main > section:not(.hero):not(.banner) { padding-block: clamp(56px, 7vw, 104px); }
 .anbu-section > .container, .anbu-content-section > .container, .category-section > .container, main > section:not(.hero):not(.banner) > .container { row-gap: clamp(28px, 4vw, 56px); }
 .anbu-section h2, .anbu-content-section h2, .category-section h2, main > section:not(.hero):not(.banner) h2 { margin-top: 0; margin-bottom: 12px; line-height: 1.2; }
 @media (max-width: 767.98px) { .anbu-section, .anbu-content-section, .category-section, main > section:not(.hero):not(.banner) { padding-block: 48px; } }
-/* Universal division-page content container */
-:root { --division-content-max: 1180px; --division-content-gutter: clamp(16px, 3.2vw, 48px); }
-.anbu-section > .container, .anbu-section > .container-fluid, .anbu-content-section > .container, .anbu-content-section > .container-fluid, .category-section > .container, .category-section > .container-fluid, .anbu-unified-footer .anbu-footer-container, .anbu-unified-copyright .anbu-footer-container {
-  width: min(100% - (2 * var(--division-content-gutter)), var(--division-content-max)) !important;
-  max-width: var(--division-content-max) !important;
-  margin-left: auto !important;
+
+/* Standard Bootstrap 5 Container System across all Division Sites */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.anbu-unified-footer .anbu-footer-container,
+.anbu-unified-copyright .anbu-footer-container {
+  width: 100% !important;
+  padding-right: var(--bs-gutter-x, 12px) !important;
+  padding-left: var(--bs-gutter-x, 12px) !important;
   margin-right: auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin-left: auto !important;
   box-sizing: border-box !important;
 }
-.anbu-section > .container > .row, .anbu-content-section > .container > .row, .category-section > .container > .row { margin-left: 0 !important; margin-right: 0 !important; }
-@media (max-width: 575.98px) { :root { --division-content-gutter: 16px; } }
+
+@media (min-width: 576px) {
+  .container, .container-sm,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 540px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 720px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 1140px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 1180px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container, .container-sm,
+  .anbu-unified-footer .anbu-footer-container,
+  .anbu-unified-copyright .anbu-footer-container {
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}

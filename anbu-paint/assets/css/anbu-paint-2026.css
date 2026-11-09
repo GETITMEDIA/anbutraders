@@ -1297,40 +1297,27 @@ a {
 }
 
 /* ==========================================================================
-   UNIFIED GLOBAL CONTAINER MARGIN SYSTEM (ACROSS FULL PROJECT)
+   UNIFIED GLOBAL BOOTSTRAP 5 CONTAINER SYSTEM (ACROSS FULL PROJECT)
    Ensures consistent left and right margins across all sections and pages:
    index.html, ourproject.html, gallery.html, contact.html, and brand pages.
    ========================================================================== */
 .container,
-.container-fluid.px-lg-5,
-.container-fluid.px-md-5 {
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.hero-slide-container,
+.anbu-topbar > .container,
+.anbu-navbar > .container,
+.anbu-unified-footer .anbu-footer-container,
+.anbu-unified-copyright .anbu-footer-container {
   width: 100% !important;
-  max-width: 1180px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(24px, 2.8vw, 36px) !important;
-  padding-right: clamp(24px, 2.8vw, 36px) !important;
+  padding-left: var(--bs-gutter-x, 0.75rem) !important;
+  padding-right: var(--bs-gutter-x, 0.75rem) !important;
   box-sizing: border-box !important;
-}
-
-/* Ensure topbar, navbar & footer align to exact same container margins */
-.anbu-topbar .container-fluid,
-.anbu-navbar .container-fluid,
-.anbu-footer .container-fluid {
-  max-width: 1180px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: clamp(24px, 2.8vw, 36px) !important;
-  padding-right: clamp(24px, 2.8vw, 36px) !important;
-}
-
-/* Hero container alignment */
-.hero-slide-container {
-  max-width: 1180px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: clamp(24px, 2.8vw, 36px) !important;
-  padding-right: clamp(24px, 2.8vw, 36px) !important;
 }
 
 /* ==========================================================================
@@ -3454,58 +3441,64 @@ a {
 
 
 /* ==========================================================================
-   UNIFIED GLOBAL CONTAINER & MARGIN SYSTEM (100% CONSISTENT ACROSS ENTIRE PROJECT)
+   UNIFIED GLOBAL BOOTSTRAP 5 CONTAINER SYSTEM (100% CONSISTENT ACROSS ENTIRE PROJECT)
    Ensures every single section in index.html, ourproject.html, gallery.html,
    contact.html, and brand pages has 100% identical, centered margins.
    ========================================================================== */
 .container,
-.container-fluid,
-.container-fluid.px-lg-5,
-.container-fluid.px-md-5,
-.container-fluid.px-3,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
 .hero-slide-container,
-.anbu-topbar .container-fluid,
-.anbu-navbar .container-fluid,
-.anbu-footer .container-fluid {
-  max-width: 1180px !important;
+.anbu-topbar > .container,
+.anbu-navbar > .container,
+.anbu-unified-footer .anbu-footer-container,
+.anbu-unified-copyright .anbu-footer-container {
+  width: 100% !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: clamp(24px, 2.8vw, 36px) !important;
-  padding-right: clamp(24px, 2.8vw, 36px) !important;
-  width: 100% !important;
+  padding-left: var(--bs-gutter-x, 0.75rem) !important;
+  padding-right: var(--bs-gutter-x, 0.75rem) !important;
   box-sizing: border-box !important;
 }
 
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  .container,
-  .container-fluid,
-  .container-fluid.px-lg-5,
-  .hero-slide-container {
-    max-width: 1180px !important;
-    padding-left: 28px !important;
-    padding-right: 28px !important;
+@media (min-width: 576px) {
+  .container, .container-sm, .hero-slide-container {
+    max-width: 540px !important;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .container,
-  .container-fluid,
-  .container-fluid.px-lg-5,
-  .hero-slide-container {
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md, .hero-slide-container {
     max-width: 720px !important;
-    padding-left: 24px !important;
-    padding-right: 24px !important;
   }
 }
 
-@media (max-width: 767.98px) {
-  .container,
-  .container-fluid,
-  .container-fluid.px-lg-5,
-  .hero-slide-container {
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg, .hero-slide-container {
+    max-width: 960px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .hero-slide-container {
+    max-width: 1140px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .hero-slide-container {
+    max-width: 1180px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container, .container-sm, .hero-slide-container {
     max-width: 100% !important;
-    padding-left: clamp(16px, 4vw, 20px) !important;
-    padding-right: clamp(16px, 4vw, 20px) !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 }
 
