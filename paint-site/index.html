@@ -1613,20 +1613,8 @@
             }
 
             // -------------------------------------------------------------
-            // 5. Mobile Category Dropdown Accordion Toggle & Mobile Nav Watcher
+            // 5. Mobile Nav Watcher (Dim background actions when mobile drawer is open)
             // -------------------------------------------------------------
-            var mobileProdToggle = document.getElementById('mobileProd');
-            var mobileProdMenu = document.getElementById('mobileProdMenu');
-            if (mobileProdToggle && mobileProdMenu) {
-                mobileProdToggle.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    var isShowing = mobileProdMenu.classList.toggle('show');
-                    mobileProdToggle.classList.toggle('show', isShowing);
-                    mobileProdToggle.setAttribute('aria-expanded', isShowing ? 'true' : 'false');
-                });
-            }
-
             var mobileNavEl = document.getElementById('anbuMobileNav');
             if (mobileNavEl) {
                 mobileNavEl.addEventListener('show.bs.collapse', function () {

@@ -1164,17 +1164,52 @@ void main(){
 })(typeof window !== "undefined" ? window : this);
 
 // Universal Mobile Navigation Dropdown Toggle for Anbu Paints
-if (typeof document !== 'undefined') {
-  document.addEventListener('DOMContentLoaded', function () {
+(function () {
+  function initMobileProdToggle() {
     var mobileProdToggle = document.getElementById('mobileProd');
     var mobileProdMenu = document.getElementById('mobileProdMenu');
     if (mobileProdToggle && mobileProdMenu) {
-      mobileProdToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        mobileProdMenu.classList.toggle('show');
-        mobileProdToggle.classList.toggle('show');
+      if (!mobileProdToggle.dataset.mobileBound) {
+        mobileProdToggle.dataset.mobileBound = 'true';
+
+        mobileProdToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var isShowing = mobileProdMenu.classList.toggle('show');
+          mobileProdToggle.classList.toggle('show', isShowing);
+          mobileProdToggle.setAttribute('aria-expanded', isShowing ? 'true' : 'false');
+          var chevron = mobileProdToggle.querySelector('.anbu-mobile-chevron');
+          if (chevron) {
+            chevron.style.transform = isShowing ? 'rotate(180deg)' : 'rotate(0deg)';
+            chevron.style.transition = 'transform 0.25s ease';
+          }
+        });
+      }
+    }
+
+    // Auto-close mobile drawer when tapping on an in-page section link
+    var mobileNav = document.getElementById('anbuMobileNav');
+    if (mobileNav && !mobileNav.dataset.hashBound) {
+      mobileNav.dataset.hashBound = 'true';
+      var hashLinks = mobileNav.querySelectorAll('a[href^="#"]:not([href="#"])');
+      hashLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (mobileNav.classList.contains('show')) {
+            if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+              var bs = bootstrap.Collapse.getInstance(mobileNav) || new bootstrap.Collapse(mobileNav, { toggle: false });
+              bs.hide();
+            } else {
+              mobileNav.classList.remove('show');
+            }
+          }
+        });
       });
     }
-  });
-}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileProdToggle);
+  } else {
+    initMobileProdToggle();
+  }
+})();
