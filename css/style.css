@@ -6555,11 +6555,9 @@ img, video, canvas, svg {
 .container-xxl .container,
 .container-xl .container,
 .container-lg .container,
-.container-fluid .container,
 .site-section .container .container {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  max-width: 100% !important;
 }
 
 /* 3. Global Section Vertical Rhythm */
