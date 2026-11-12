@@ -21,6 +21,10 @@
     var navLogo = document.getElementById('anbu-navbar-logo') || document.querySelector('.navbar-brand img, .header-logo img, .logo img');
 
     if (!preloader || !video) return;
+    if (!flyingWrapper) {
+      dismissImmediately();
+      return;
+    }
 
     var transitionTriggered = false;
     var isCompleted = false;
@@ -225,12 +229,17 @@
         fill: 'forwards'
       });
 
-      animation.onfinish = function () {
+      function finishFlight() {
+        if (isCompleted) return;
         isCompleted = true;
 
         // 5. Seamlessly blend into actual navbar logo with no visible jump or duplicate
         if (navLogo) {
+          navLogo.style.transition = 'none';
           navLogo.style.opacity = '1';
+          requestAnimationFrame(function () {
+            if (navLogo) navLogo.style.transition = '';
+          });
         }
 
         flyingWrapper.style.display = 'none';
@@ -242,7 +251,11 @@
         // Unlock page scrolling and interactions
         document.documentElement.classList.remove('anbu-preloader-active');
         document.body.classList.remove('anbu-preloader-active');
-      };
+      }
+
+      animation.onfinish = finishFlight;
+      // Fallback in case tab is backgrounded and WAAPI onfinish is throttled
+      setTimeout(finishFlight, flightDuration + 250);
     }
 
     // Attach listener for clicks to Home/Logo while already on same page

@@ -26,6 +26,8 @@
 
     <!-- Premium 2026 3D Paints Redesign CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/anbu-paint-2026.css?v=2026.25">
+    <!-- Shared Preloader -->
+    <link href="../shared/css/preloader.css" rel="stylesheet">
 
     <style>
         .modal-blur-backdrop {
@@ -52,6 +54,21 @@
 </head>
 
 <body>
+    <!-- ==============================================
+         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Paints">
+        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
+        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
+            <video id="anbu-preloader-video" class="anbu-preloader-video" playsinline muted autoplay preload="auto">
+                <source src="../logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.webm" type="video/webm">
+            </video>
+        </div>
+        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
+            <img id="anbu-flying-logo" class="anbu-flying-logo" src="../img/ANUBU STEEL.png" alt="Anbu Traders Logo">
+            <img id="anbu-flying-logo-target" class="anbu-flying-logo anbu-flying-logo-target" src="img/paint logo.png" alt="AP Anbu Paints Logo" style="display: none;">
+        </div>
+    </div>
 
     <!-- ==============================================
          1. TOPBAR SECTION (Verified Contacts & Business Hours)
@@ -2028,6 +2045,7 @@
         }
     })();
     </script>
+    <script src="../shared/js/preloader.js"></script>
 
 </body>
 

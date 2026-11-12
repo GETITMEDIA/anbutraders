@@ -27,9 +27,27 @@
 
     <!-- Brand 2026 High-End Design System -->
     <link rel="stylesheet" href="css/cement-redesign.css">
+
+    <!-- Shared Preloader -->
+    <link href="../shared/css/preloader.css" rel="stylesheet">
 </head>
 
 <body class="light-version">
+    <!-- ==============================================
+         ANBU TRADERS — VIDEO PRELOADER TO NAVBAR LOGO TRANSITION
+         ============================================== -->
+    <div id="anbu-preloader" class="anbu-preloader" aria-hidden="true" role="status" aria-label="Loading Anbu Steel and Cement">
+        <div id="anbu-preloader-backdrop" class="anbu-preloader-backdrop"></div>
+        <div id="anbu-video-wrapper" class="anbu-video-wrapper">
+            <video id="anbu-preloader-video" class="anbu-preloader-video" playsinline muted autoplay preload="auto">
+                <source src="../logo_animations/Create_logo_animation_for_website_20261024104721_clean_1792819090870.webm" type="video/webm">
+            </video>
+        </div>
+        <div id="anbu-flying-logo-wrapper" class="anbu-flying-logo-wrapper" style="display: none;">
+            <img id="anbu-flying-logo" class="anbu-flying-logo" src="../img/ANUBU STEEL.png" alt="Anbu Traders Logo">
+            <img id="anbu-flying-logo-target" class="anbu-flying-logo anbu-flying-logo-target" src="img/Anbu-Steel-&-Cement--Logo1.png" alt="Anbu Steel & Cement Logo" style="display: none;">
+        </div>
+    </div>
 
     <!-- ==============================================
          1. TOPBAR & SOCIAL STRIP (Signature Angled Style)
@@ -728,6 +746,7 @@
         });
     });
     </script>
+    <script src="../shared/js/preloader.js"></script>
 
 </body>
 
