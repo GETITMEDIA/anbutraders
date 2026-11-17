@@ -1212,4 +1212,85 @@ void main(){
   } else {
     initMobileProdToggle();
   }
+
+  /* Smart Hide-on-Scroll-Down / Show-on-Scroll-Up Navbar */
+  function initSmartScrollNavbar() {
+    var nav = document.querySelector('.anbu-navbar');
+    if (!nav || nav.dataset.smartScrollBound) return;
+    nav.dataset.smartScrollBound = 'true';
+
+    var progressBar = nav.querySelector('.anbu-scroll-progress');
+    if (!progressBar) {
+      progressBar = document.createElement('div');
+      progressBar.className = 'anbu-scroll-progress';
+      nav.appendChild(progressBar);
+    }
+
+    var mobileNav = document.getElementById('anbuMobileNav');
+    var lastScrollY = window.scrollY || window.pageYOffset || 0;
+    var ticking = false;
+
+    function updateNavbar() {
+      var currentY = window.scrollY || window.pageYOffset || 0;
+      var docHeight = Math.max(
+        document.documentElement.scrollHeight - window.innerHeight,
+        1
+      );
+      var pct = Math.min(Math.max((currentY / docHeight) * 100, 0), 100);
+      progressBar.style.width = pct.toFixed(1) + '%';
+
+      var isMobileMenuOpen = mobileNav && mobileNav.classList.contains('show');
+      var isDropdownOpen = !!nav.querySelector('.dropdown-menu.show');
+
+      if (isMobileMenuOpen || isDropdownOpen || currentY <= 48) {
+        nav.classList.remove('nav-scroll-hidden');
+        if (currentY > 48) {
+          nav.classList.add('nav-scroll-visible');
+        } else {
+          nav.classList.remove('nav-scroll-visible');
+        }
+        lastScrollY = currentY;
+        ticking = false;
+        return;
+      }
+
+      var delta = currentY - lastScrollY;
+      if (currentY > 115 && delta > 5) {
+        nav.classList.add('nav-scroll-hidden');
+        nav.classList.remove('nav-scroll-visible');
+      } else if (delta < -5) {
+        nav.classList.remove('nav-scroll-hidden');
+        nav.classList.add('nav-scroll-visible');
+      }
+
+      lastScrollY = currentY;
+      ticking = false;
+    }
+
+    window.addEventListener(
+      'scroll',
+      function () {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNavbar);
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+
+    if (mobileNav) {
+      mobileNav.addEventListener('show.bs.collapse', function () {
+        nav.classList.remove('nav-scroll-hidden');
+        nav.classList.add('nav-scroll-visible');
+      });
+    }
+
+    updateNavbar();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSmartScrollNavbar);
+  } else {
+    initSmartScrollNavbar();
+  }
 })();

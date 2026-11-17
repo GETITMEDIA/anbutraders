@@ -56,7 +56,7 @@
 }
 
 body, html {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -6471,7 +6471,7 @@ select:focus-visible {
 
 /* 1. Viewport & Universal Horizontal Overflow Prevention */
 html, body {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   max-width: 100% !important;
   width: 100% !important;
   position: relative;
@@ -9516,7 +9516,7 @@ img, video, canvas, svg {
 }
 /* Global spacing normalization */
 :root { --site-gutter: clamp(1rem, 3.2vw, 3rem); --site-content-max: 1180px; }
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 
 /* Sticky Navbar shell */
 .navbar.sticky-top {
@@ -9526,6 +9526,13 @@ html, body { overflow-x: hidden; }
   width: 100% !important;
   background: var(--white) !important;
   min-height: 94px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.navbar.sticky-top.nav-hidden {
+  transform: translateY(-100%);
+  box-shadow: none !important;
 }
 
 /* Ensure navbar inner container matches standard Bootstrap 5 container */

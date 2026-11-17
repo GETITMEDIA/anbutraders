@@ -167,11 +167,42 @@ a {
   z-index: 1050;
   min-height: 84px;
   padding: 0 !important;
-  transition: var(--transition);
+  transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  will-change: transform;
   display: flex !important;
   flex-direction: column !important;
   justify-content: center;
   width: 100% !important;
+}
+
+.anbu-navbar.nav-scroll-hidden {
+  transform: translateY(-108%) !important;
+  pointer-events: none;
+}
+
+.anbu-navbar.nav-scroll-visible {
+  transform: translateY(0) !important;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 12px 34px rgba(4, 20, 43, 0.12) !important;
+  border-bottom: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+.anbu-scroll-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary-orange), #fb923c);
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.55);
+  transition: width 0.08s linear;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .anbu-navbar-inner {

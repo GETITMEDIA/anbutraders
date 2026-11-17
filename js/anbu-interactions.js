@@ -309,19 +309,50 @@
   }
 
   /**
-   * 7. NAVBAR SHRINK & GLASSMORPHISM ON SCROLL
+   * 7. NAVBAR SHRINK, GLASSMORPHISM & AUTO-HIDE ON SCROLL
    */
   function initNavbarShrink() {
     var navbar = document.querySelector('.navbar.sticky-top');
     if (!navbar) return;
 
+    var lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var deltaThreshold = 6;
+
     var handleScroll = function () {
-      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (scrollY < 0) scrollY = 0;
+
       if (scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
+
+      if (scrollY <= 120) {
+        navbar.classList.remove('nav-hidden');
+        lastScrollY = scrollY;
+        return;
+      }
+
+      var navbarCollapse = document.getElementById('navbarCollapse');
+      var isMenuOpen = navbarCollapse && navbarCollapse.classList.contains('show');
+      var isDropdownOpen = !!navbar.querySelector('.dropdown-menu.show');
+      if (isMenuOpen || isDropdownOpen) {
+        navbar.classList.remove('nav-hidden');
+        lastScrollY = scrollY;
+        return;
+      }
+
+      var diff = scrollY - lastScrollY;
+      if (Math.abs(diff) < deltaThreshold) return;
+
+      if (diff > 0) {
+        navbar.classList.add('nav-hidden');
+      } else {
+        navbar.classList.remove('nav-hidden');
+      }
+
+      lastScrollY = scrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
