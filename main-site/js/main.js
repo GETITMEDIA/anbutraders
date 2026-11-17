@@ -217,7 +217,7 @@
 
 // Google Review redirect (global)
 function redirectToGoogleReview() {
-    var googleReviewLink = 'https://www.google.com/maps/place/ANBU+TRADERS+-+PIPES+AND+SHEETS/@12.002837,79.762673,391m/data=!3m1!1e3!4m8!3m7!1s0x3a53670027dfb5a9:0x7a2309fe84b1a2d0!8m2!3d12.0022224!4d79.7647595!9m1!1b1!16s%2Fg%2F11l_954p8h?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D';
+    var googleReviewLink = 'https://www.google.com/search?q=Anbu+Traders&stick=H4sIAAAAAAAA_-NgU1IxqDBONDU2Mzc0MU1NSkuzNEmxMqgwSzQyMEk2tkw1NDA2NLZcxMrjmJdUqhBSlJiSWlQMAODwe1s3AAAA&hl=en&mat=CawxgwfyFbn1ElYBzAmVZnnIvoJyfBwVLpskJn8BW3_k4fHjhaKNAX55Mmzo4kyt12wxXN6MRL3-xvazhCVyd9wR94flRnDavZwwd-ESPzPTPh3z2jRQhKhffXf2p_s0Mg&authuser=1&ved=1t:350944';
     window.open(googleReviewLink, '_blank');
 }
 
