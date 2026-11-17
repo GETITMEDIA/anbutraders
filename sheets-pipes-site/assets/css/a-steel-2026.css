@@ -3573,35 +3573,6 @@ html, body {
   background-color: var(--primary-orange) !important;
 }
 
-@media (max-width: 991.98px) {
-  .anbu-steel-hero-wrapper .hero-slide-bg::after {
-    background: linear-gradient(180deg, 
-      rgba(255, 255, 255, 0.94) 0%, 
-      rgba(255, 255, 255, 0.85) 55%, 
-      rgba(255, 255, 255, 0.40) 100%);
-  }
-  .anbu-steel-hero-wrapper .hero-title-dark,
-  .anbu-steel-hero-wrapper .hero-title-orange {
-    white-space: normal;
-  }
-  .anbu-steel-hero-wrapper .carousel-item {
-    min-height: 520px;
-  }
-  .anbu-steel-hero-wrapper .hero-slide-container {
-    padding-top: 60px;
-    padding-bottom: 70px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .anbu-steel-hero-wrapper .hero-clean-subtitle {
-    font-size: 14px;
-  }
-  .anbu-steel-hero-wrapper .carousel-item {
-    min-height: 480px;
-  }
-}
-
 /* Full-bleed hero finish */
 .anbu-steel-hero-wrapper { width: 100%; margin: 0; background: #d8cdbd; }
 .anbu-steel-hero-wrapper .carousel-inner,
@@ -3613,8 +3584,144 @@ html, body {
   .anbu-steel-hero-wrapper .hero-slide-container { display: flex; align-items: center; padding-top: 72px; padding-bottom: 72px; }
   .anbu-steel-hero-wrapper .hero-slide-container > .row { width: 100%; margin-left: 0; margin-right: 0; }
 }
+
+@media (max-width: 991.98px) {
+  .anbu-steel-hero-wrapper .hero-slide-bg::after {
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0.85) 0%, 
+      rgba(255, 255, 255, 0.55) 45%, 
+      transparent 75%);
+  }
+  .anbu-steel-hero-wrapper .hero-title-dark,
+  .anbu-steel-hero-wrapper .hero-title-orange {
+    white-space: normal;
+  }
+  .anbu-steel-hero-wrapper .carousel-item {
+    min-height: 480px;
+  }
+  .anbu-steel-hero-wrapper .hero-slide-container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+
 @media (max-width: 767.98px) {
-  .anbu-steel-hero-wrapper .hero-slide-bg { background-position: 62% center; }
+  .anbu-steel-hero-wrapper,
+  .anbu-steel-hero-wrapper .carousel-item {
+    min-height: auto !important;
+    height: auto !important;
+    background: #ffffff;
+  }
+  .anbu-steel-hero-wrapper .carousel-item.active,
+  .anbu-steel-hero-wrapper .carousel-item-next,
+  .anbu-steel-hero-wrapper .carousel-item-prev {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .anbu-steel-hero-wrapper .hero-slide-bg {
+    position: relative !important;
+    inset: auto !important;
+    width: 100%;
+    height: clamp(200px, 56vw, 310px);
+    flex-shrink: 0;
+    background-size: 135% auto !important;
+    background-position: 95% center !important;
+    transform: none !important;
+  }
+  .anbu-steel-hero-wrapper .hero-slide-bg::after {
+    display: none !important;
+  }
+  .anbu-steel-hero-wrapper .hero-slide-container {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+    margin-top: -16px;
+    padding: 18px 16px 38px !important;
+    z-index: 6;
+    max-width: 100% !important;
+    box-shadow: 0 -8px 24px rgba(6, 43, 91, 0.08);
+  }
+  .anbu-steel-hero-wrapper .hero-slide-container > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .anbu-steel-hero-wrapper .hero-content-col {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100%;
+  }
+  .anbu-steel-hero-wrapper .hero-eyebrow-pill {
+    font-size: 9.5px;
+    letter-spacing: 0.45px;
+    padding: 3px 10px;
+    margin-bottom: 6px;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .anbu-steel-hero-wrapper .hero-title-dark {
+    font-size: clamp(20px, 5.6vw, 26px) !important;
+    line-height: 1.18 !important;
+  }
+  .anbu-steel-hero-wrapper .hero-title-orange {
+    font-size: clamp(22px, 6vw, 28px) !important;
+    line-height: 1.15 !important;
+  }
+  .anbu-steel-hero-wrapper .hero-accent-line {
+    width: 38px;
+    height: 3px;
+    margin: 8px 0 10px;
+  }
+  .anbu-steel-hero-wrapper .hero-clean-subtitle {
+    font-size: 13px !important;
+    line-height: 1.48 !important;
+    margin-bottom: 14px !important;
+    color: #475569;
+    max-width: 100%;
+  }
+  .anbu-steel-hero-wrapper .hero-clean-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: auto;
+  }
+  .anbu-steel-hero-wrapper .btn-hero-clean,
+  .anbu-steel-hero-wrapper .btn-hero-clean-outline {
+    padding: 9px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .anbu-steel-hero-wrapper .hero-carousel-dots {
+    bottom: 10px !important;
+  }
+  .anbu-trust-wrapper {
+    margin-top: 12px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .anbu-steel-hero-wrapper .hero-slide-bg {
+    height: clamp(200px, 58vw, 250px);
+  }
+  .anbu-steel-hero-wrapper .hero-slide-container {
+    padding: 15px 14px 34px !important;
+  }
+  .anbu-steel-hero-wrapper .hero-title-dark {
+    font-size: clamp(20px, 5.6vw, 24px) !important;
+  }
+  .anbu-steel-hero-wrapper .hero-title-orange {
+    font-size: clamp(22px, 6vw, 26px) !important;
+  }
+  .anbu-steel-hero-wrapper .hero-clean-subtitle {
+    display: none !important;
+  }
 }
 
 /* Global Responsive Guard & Gutters */

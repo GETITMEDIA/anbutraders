@@ -2824,48 +2824,166 @@ a {
 @media (max-width: 991.98px) {
   .hero-paint-carousel-wrapper,
   .hero-carousel-slide {
-    min-height: 540px;
+    min-height: 460px;
   }
   .hero-slide-bg::after {
-    background: linear-gradient(180deg, 
-      rgba(255, 255, 255, 0.88) 0%, 
-      rgba(255, 255, 255, 0.72) 55%, 
-      rgba(255, 255, 255, 0.25) 100%);
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0.78) 0%, 
+      rgba(255, 255, 255, 0.45) 45%, 
+      transparent 75%);
   }
   .hero-slide-bg {
-    background-position: 72% center;
+    background-position: 75% center;
   }
   .hero-title-dark {
-    font-size: 38px !important;
+    font-size: 34px !important;
   }
   .hero-title-orange {
-    font-size: 42px !important;
+    font-size: 38px !important;
   }
   .hero-carousel-btn {
     display: none !important;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .hero-paint-carousel-wrapper,
   .hero-carousel-slide {
-    min-height: 480px;
+    min-height: auto !important;
+    height: auto !important;
+    background: #ffffff;
+  }
+  .hero-paint-carousel-wrapper .carousel-item.active,
+  .hero-paint-carousel-wrapper .carousel-item-next,
+  .hero-paint-carousel-wrapper .carousel-item-prev {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .hero-slide-bg {
+    position: relative !important;
+    inset: auto !important;
+    width: 100%;
+    height: clamp(195px, 50vw, 310px);
+    flex-shrink: 0;
+    background-position: 82% center !important;
+    background-size: cover !important;
+    transform: none !important;
+  }
+  .hero-slide-bg::after {
+    display: none !important;
   }
   .hero-slide-container {
-    padding-top: 45px;
-    padding-bottom: 50px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px 20px 0 0;
+    margin-top: -16px;
+    padding: 18px 16px 38px !important;
+    z-index: 6;
+    max-width: 100% !important;
+    box-shadow: 0 -8px 24px rgba(6, 43, 91, 0.08);
+  }
+  .hero-slide-container > .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .hero-content-col {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    max-width: 100%;
   }
   .hero-title-dark {
-    font-size: 28px !important;
-    line-height: 1.15 !important;
+    font-size: clamp(20px, 5.8vw, 28px) !important;
+    line-height: 1.18 !important;
   }
   .hero-title-orange {
-    font-size: 32px !important;
+    font-size: clamp(22px, 6.2vw, 30px) !important;
     line-height: 1.15 !important;
   }
+  .hero-accent-line {
+    width: 38px;
+    height: 3px;
+    margin: 8px 0 10px;
+  }
   .hero-clean-subtitle {
-    font-size: 14.5px !important;
-    margin-bottom: 22px !important;
+    font-size: 13px !important;
+    line-height: 1.48 !important;
+    margin-bottom: 14px !important;
+    color: #475569;
+    max-width: 100%;
+  }
+  .hero-clean-cta {
+    min-height: auto !important;
+    overflow: visible !important;
+    margin-top: 2px;
+  }
+  .hero-clean-cta .venom-btn-wrapper {
+    width: auto !important;
+    height: auto !important;
+    margin-top: 0 !important;
+  }
+  .hero-clean-cta .venom-stage-hero {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-flex !important;
+    pointer-events: auto !important;
+  }
+  .hero-clean-cta .venom-canvas {
+    display: none !important;
+  }
+  .hero-clean-cta .venom-pill-hero {
+    height: 40px !important;
+    padding: 0 22px !important;
+    font-size: 13px !important;
+    background: linear-gradient(135deg, #f36a21 0%, #ea580c 100%) !important;
+    box-shadow: 0 6px 18px rgba(234, 88, 12, 0.32) !important;
+    text-shadow: none !important;
+  }
+  .hero-carousel-dots {
+    bottom: 10px !important;
+    gap: 8px;
+  }
+  .hero-carousel-dots [data-bs-target] {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  .hero-carousel-dots .active {
+    width: 24px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-slide-bg {
+    height: clamp(195px, 56vw, 240px);
+    background-position: 85% center !important;
+  }
+  .hero-slide-container {
+    padding: 16px 14px 34px !important;
+  }
+  .hero-title-dark {
+    font-size: clamp(20px, 5.8vw, 24px) !important;
+  }
+  .hero-title-orange {
+    font-size: clamp(22px, 6.2vw, 26px) !important;
+  }
+  .hero-accent-line {
+    margin: 7px 0 11px;
+  }
+  .hero-clean-subtitle {
+    display: none !important;
+  }
+  .hero-clean-cta .venom-pill-hero {
+    height: 38px !important;
+    padding: 0 18px !important;
+    font-size: 12.5px !important;
   }
 }
 
