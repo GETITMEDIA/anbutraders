@@ -232,23 +232,35 @@
                         <div class="section-title">
                             <h2 class="text-white">Lets talk...</h2>                            
                         </div>
-                        <form>
+                        <form id="sheets-contact-form" novalidate>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Your Name*</label>
-                                    <input type="text" placeholder="Your Full Name">
+                                    <label for="sp_name">Your Name*</label>
+                                    <input type="text" id="sp_name" placeholder="Your Full Name" minlength="2" required>
+                                    <small class="text-warning d-none sp-err" data-for="sp_name">Please enter your full name (at least 2 characters).</small>
                                 </div>
                                 <div class="col-md-6">
-                                    <label>Email Address*</label>
-                                    <input type="email" placeholder="E-mail Address">
+                                    <label for="sp_phone">Mobile Number*</label>
+                                    <div class="d-flex align-items-stretch" style="gap: 0;">
+                                        <span class="d-inline-flex align-items-center px-3 fw-bold" style="background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.2); border-right: 0;">+91</span>
+                                        <input type="tel" id="sp_phone" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" autocomplete="tel-national" required style="flex: 1; min-width: 0;">
+                                    </div>
+                                    <small class="text-warning d-none sp-err" data-for="sp_phone">Please enter a valid 10-digit mobile number (digits only).</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sp_email">Email Address</label>
+                                    <input type="email" id="sp_email" placeholder="E-mail Address (Optional)">
+                                    <small class="text-warning d-none sp-err" data-for="sp_email">Please enter a valid email address.</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sp_subject">Subject*</label>
+                                    <input type="text" id="sp_subject" placeholder="e.g. Roofing Sheets / MS Pipes" minlength="2" required>
+                                    <small class="text-warning d-none sp-err" data-for="sp_subject">Please enter a subject.</small>
                                 </div>
                                 <div class="col-12">
-                                    <label>Subject*</label>
-                                    <input type="text" placeholder="Website">
-                                </div>
-                                <div class="col-12">
-                                    <label>Message*</label>
-                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Here"></textarea>
+                                    <label for="sp_message">Message*</label>
+                                    <textarea name="message" id="sp_message" cols="30" rows="10" placeholder="Write Here" minlength="3" required></textarea>
+                                    <small class="text-warning d-none sp-err" data-for="sp_message">Please enter your message.</small>
                                 </div>
                                 <div><button type="submit" class="bordered-btn">Send Now</button></div>
                             </div>
@@ -482,6 +494,87 @@
             </div>
         </div>
     </div>
+
+    <script>
+    (function () {
+        var form = document.getElementById('sheets-contact-form');
+        if (!form) return;
+        var nameEl = document.getElementById('sp_name');
+        var phoneEl = document.getElementById('sp_phone');
+        var emailEl = document.getElementById('sp_email');
+        var subEl = document.getElementById('sp_subject');
+        var msgEl = document.getElementById('sp_message');
+
+        function sanitizeDigits(val) {
+            return (val || '').replace(/\D/g, '').slice(0, 10);
+        }
+
+        function setError(el, show) {
+            var err = form.querySelector('.sp-err[data-for="' + el.id + '"]');
+            if (err) err.classList.toggle('d-none', !show);
+            el.style.borderColor = show ? '#ffc107' : '';
+        }
+
+        function validateField(el) {
+            if (!el) return true;
+            var val = (el.value || '').trim();
+            var valid = true;
+            if (el === phoneEl) {
+                el.value = sanitizeDigits(el.value);
+                valid = /^\d{10}$/.test(el.value);
+            } else if (el === emailEl) {
+                valid = val === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+            } else if (el === nameEl || el === subEl) {
+                valid = val.length >= 2;
+            } else if (el === msgEl) {
+                valid = val.length >= 3;
+            }
+            setError(el, !valid);
+            return valid;
+        }
+
+        if (phoneEl) {
+            phoneEl.addEventListener('input', function () {
+                this.value = sanitizeDigits(this.value);
+                var err = form.querySelector('.sp-err[data-for="sp_phone"]');
+                if ((err && !err.classList.contains('d-none')) || this.value.length === 10) {
+                    validateField(this);
+                }
+            });
+        }
+
+        [nameEl, emailEl, subEl, msgEl].forEach(function (el) {
+            if (!el) return;
+            el.addEventListener('input', function () {
+                var err = form.querySelector('.sp-err[data-for="' + this.id + '"]');
+                if (err && !err.classList.contains('d-none')) {
+                    validateField(this);
+                }
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var ok = validateField(nameEl) & validateField(phoneEl) & validateField(emailEl) & validateField(subEl) & validateField(msgEl);
+            if (!ok) {
+                var firstErr = form.querySelector('.sp-err:not(.d-none)');
+                if (firstErr) {
+                    var target = document.getElementById(firstErr.getAttribute('data-for'));
+                    if (target) target.focus();
+                }
+                return;
+            }
+            var text = 'Hi Anbu Sheets & Pipes,\nName: ' + nameEl.value.trim() +
+                '\nPhone: +91 ' + phoneEl.value +
+                (emailEl.value.trim() ? '\nEmail: ' + emailEl.value.trim() : '') +
+                '\nSubject: ' + subEl.value.trim() +
+                '\nMessage: ' + msgEl.value.trim();
+            window.open('https://wa.me/919626325204?text=' + encodeURIComponent(text), '_blank', 'noopener');
+            form.reset();
+            [nameEl, phoneEl, emailEl, subEl, msgEl].forEach(function (el) { setError(el, false); });
+        });
+    })();
+    </script>
 
 </body>
 

@@ -297,24 +297,32 @@
                             <button type="button" class="anbu-material-chip">Bulk Site Delivery</button>
                         </div>
 
-                        <form id="main_contact_form" onsubmit="event.preventDefault(); window.open('https://wa.me/919626325204?text=' + encodeURIComponent('Hi Anbu Steel & Cement,\nName: ' + document.getElementById('c_name').value + '\nPhone: ' + document.getElementById('c_phone').value + '\nRequirement: ' + document.getElementById('c_sub').value + (document.getElementById('c_qty').value ? '\nQuantity: ' + document.getElementById('c_qty').value : '') + (document.getElementById('c_loc').value ? '\nLocation: ' + document.getElementById('c_loc').value : '') + '\nDetails: ' + document.getElementById('c_msg').value), '_blank');">
+                        <form id="main_contact_form" novalidate>
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="anbu-form-group">
                                         <label for="c_name">Full Name *</label>
-                                        <input type="text" id="c_name" class="form-control" placeholder="Enter your full name" required>
+                                        <input type="text" id="c_name" class="form-control" placeholder="Enter your full name" minlength="2" required>
+                                        <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="anbu-form-group">
                                         <label for="c_phone">Phone Number *</label>
-                                        <input type="tel" id="c_phone" class="form-control" placeholder="Enter your 10-digit number" required>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text font-weight-bold">+91</span>
+                                            </div>
+                                            <input type="tel" id="c_phone" class="form-control" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                                            <div class="invalid-feedback">Please enter a valid 10-digit mobile number (digits only).</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="anbu-form-group">
                                         <label for="c_sub">Requirement / Subject *</label>
-                                        <input type="text" id="c_sub" class="form-control" placeholder="e.g. Cement Quote / TMT Steel Supply" required>
+                                        <input type="text" id="c_sub" class="form-control" placeholder="e.g. Cement Quote / TMT Steel Supply" minlength="2" required>
+                                        <div class="invalid-feedback">Please enter your requirement or subject.</div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
@@ -332,7 +340,8 @@
                                 <div class="col-12">
                                     <div class="anbu-form-group">
                                         <label for="c_msg">Project Details / Message *</label>
-                                        <textarea id="c_msg" class="form-control" placeholder="Tell us your preferred brands, bar diameters (8mm-32mm), or delivery schedule..." required></textarea>
+                                        <textarea id="c_msg" class="form-control" placeholder="Tell us your preferred brands, bar diameters (8mm-32mm), or delivery schedule..." minlength="3" required></textarea>
+                                        <div class="invalid-feedback">Please enter project details or a message.</div>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -485,6 +494,78 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/plugins.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+    (function () {
+        var form = document.getElementById('main_contact_form');
+        if (!form) return;
+        var nameEl = document.getElementById('c_name');
+        var phoneEl = document.getElementById('c_phone');
+        var subEl = document.getElementById('c_sub');
+        var qtyEl = document.getElementById('c_qty');
+        var locEl = document.getElementById('c_loc');
+        var msgEl = document.getElementById('c_msg');
+
+        function sanitizeDigits(val) {
+            return (val || '').replace(/\D/g, '').slice(0, 10);
+        }
+
+        function validateField(el) {
+            if (!el) return true;
+            var val = (el.value || '').trim();
+            var valid = true;
+            if (el === phoneEl) {
+                el.value = sanitizeDigits(el.value);
+                valid = /^\d{10}$/.test(el.value);
+            } else if (el === nameEl || el === subEl) {
+                valid = val.length >= 2;
+            } else if (el === msgEl) {
+                valid = val.length >= 3;
+            }
+            el.classList.toggle('is-invalid', !valid);
+            el.classList.toggle('is-valid', valid && val.length > 0);
+            return valid;
+        }
+
+        if (phoneEl) {
+            phoneEl.addEventListener('input', function () {
+                this.value = sanitizeDigits(this.value);
+                if (this.classList.contains('is-invalid') || this.value.length === 10) {
+                    validateField(this);
+                }
+            });
+        }
+
+        [nameEl, subEl, msgEl].forEach(function (el) {
+            if (!el) return;
+            el.addEventListener('input', function () {
+                if (this.classList.contains('is-invalid') || this.classList.contains('is-valid')) {
+                    validateField(this);
+                }
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var ok = validateField(nameEl) & validateField(phoneEl) & validateField(subEl) & validateField(msgEl);
+            if (!ok) {
+                var firstInvalid = form.querySelector('.is-invalid');
+                if (firstInvalid) firstInvalid.focus();
+                return;
+            }
+            var text = 'Hi Anbu Steel & Cement,\nName: ' + nameEl.value.trim() +
+                '\nPhone: +91 ' + phoneEl.value +
+                '\nRequirement: ' + subEl.value.trim() +
+                (qtyEl && qtyEl.value.trim() ? '\nQuantity: ' + qtyEl.value.trim() : '') +
+                (locEl && locEl.value.trim() ? '\nLocation: ' + locEl.value.trim() : '') +
+                '\nDetails: ' + msgEl.value.trim();
+            window.open('https://wa.me/919626325204?text=' + encodeURIComponent(text), '_blank', 'noopener');
+            form.reset();
+            form.querySelectorAll('.is-valid, .is-invalid').forEach(function (el) {
+                el.classList.remove('is-valid', 'is-invalid');
+            });
+        });
+    })();
+    </script>
 
 </body>
 

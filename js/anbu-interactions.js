@@ -405,6 +405,89 @@
   }
 
   /**
+   * 9. QUOTE FORM VALIDATION & DIGITS-ONLY +91 PHONE INPUT
+   */
+  function initQuoteFormValidation() {
+    var form = document.getElementById('anbu-quote-form');
+    if (!form) return;
+
+    var nameInput = document.getElementById('quote-name');
+    var phoneInput = document.getElementById('quote-phone');
+    var materialInput = document.getElementById('quote-material');
+    var quantityInput = document.getElementById('quote-quantity');
+    var locationInput = document.getElementById('quote-location');
+
+    function sanitizeDigits(val) {
+      return (val || '').replace(/\D/g, '').slice(0, 10);
+    }
+
+    function validateField(el) {
+      if (!el) return true;
+      var val = (el.value || '').trim();
+      var valid = true;
+
+      if (el === phoneInput) {
+        el.value = sanitizeDigits(el.value);
+        valid = /^\d{10}$/.test(el.value);
+      } else if (el === nameInput || el === locationInput) {
+        valid = val.length >= 2;
+      } else if (el.hasAttribute('required')) {
+        valid = val.length > 0;
+      }
+
+      el.classList.toggle('is-invalid', !valid);
+      el.classList.toggle('is-valid', valid && val.length > 0);
+      return valid;
+    }
+
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function () {
+        this.value = sanitizeDigits(this.value);
+        if (this.classList.contains('is-invalid') || this.value.length === 10) {
+          validateField(this);
+        }
+      });
+    }
+
+    [nameInput, materialInput, locationInput].forEach(function (el) {
+      if (!el) return;
+      var evt = el.tagName === 'SELECT' ? 'change' : 'input';
+      el.addEventListener(evt, function () {
+        if (this.classList.contains('is-invalid') || this.classList.contains('is-valid')) {
+          validateField(this);
+        }
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var isNameValid = validateField(nameInput);
+      var isPhoneValid = validateField(phoneInput);
+      var isMaterialValid = validateField(materialInput);
+      var isLocationValid = validateField(locationInput);
+
+      if (!isNameValid || !isPhoneValid || !isMaterialValid || !isLocationValid) {
+        var firstInvalid = form.querySelector('.is-invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      var msg = 'Quote Request: ' + nameInput.value.trim() +
+        ' | Phone: +91 ' + phoneInput.value +
+        ' | Material: ' + materialInput.value +
+        ' | Quantity: ' + ((quantityInput && quantityInput.value.trim()) || 'Not specified') +
+        ' | Location: ' + locationInput.value.trim();
+
+      window.open('https://wa.me/919626325204?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+      form.reset();
+      form.querySelectorAll('.is-valid, .is-invalid').forEach(function (el) {
+        el.classList.remove('is-valid', 'is-invalid');
+      });
+    });
+  }
+
+  /**
    * INITIALIZE ALL ON DOM READY
    */
   function initAll() {
@@ -416,6 +499,7 @@
     initBusinessesBento();
     initNavbarShrink();
     initHeroReferencePills();
+    initQuoteFormValidation();
   }
 
   if (document.readyState === 'loading') {

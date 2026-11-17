@@ -1526,24 +1526,29 @@
                             Fill in your details below. Our paint supervisor will calculate exact material quantities and provide discounted dealer rates.
                         </p>
 
-                        <form id="contactQuickForm" onsubmit="handleContactPageSubmit(event)">
+                        <form id="contactQuickForm" onsubmit="handleContactPageSubmit(event)" novalidate>
                             <div class="row g-3">
                                 <!-- Full Name -->
                                 <div class="col-md-6 col-12">
-                                    <label class="form-label-styled"><i class="fa fa-user"></i> Full Name *</label>
-                                    <input type="text" class="form-input-styled" id="formName" placeholder="Enter Name" required>
+                                    <label for="formName" class="form-label-styled"><i class="fa fa-user"></i> Full Name *</label>
+                                    <input type="text" class="form-input-styled form-control" id="formName" placeholder="Enter Name" minlength="2" required>
+                                    <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
                                 </div>
 
                                 <!-- Mobile Number -->
                                 <div class="col-md-6 col-12">
-                                    <label class="form-label-styled"><i class="fa fa-phone-alt"></i> Mobile Number *</label>
-                                    <input type="tel" class="form-input-styled" id="formPhone" placeholder="Enter Mobile Number" required>
+                                    <label for="formPhone" class="form-label-styled"><i class="fa fa-phone-alt"></i> Mobile Number *</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text fw-bold bg-light">+91</span>
+                                        <input type="tel" class="form-input-styled form-control" id="formPhone" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                                        <div class="invalid-feedback">Please enter a valid 10-digit mobile number (digits only).</div>
+                                    </div>
                                 </div>
 
                                 <!-- Paint Brand / Solution -->
                                 <div class="col-md-6 col-12">
-                                    <label class="form-label-styled"><i class="fa fa-paint-roller"></i> Interested Solution *</label>
-                                    <select class="form-input-styled" id="formService" required>
+                                    <label for="formService" class="form-label-styled"><i class="fa fa-paint-roller"></i> Interested Solution *</label>
+                                    <select class="form-input-styled form-select" id="formService" required>
                                         <option value="" selected disabled>Select Paint Category</option>
                                         <option value="Asian Paints Royale & Apex">Asian Paints (Royale / Apex / Tractor)</option>
                                         <option value="Berger Paints Silk Glamor">Berger Paints (Silk Glamor / WeatherCoat)</option>
@@ -1553,6 +1558,7 @@
                                         <option value="Computerized Color Tinting">Computerized Custom Shade Mixing (3 Mins)</option>
                                         <option value="Wholesale Contractor Bulk Pricing">Wholesale Contractor Bulk Pricing</option>
                                     </select>
+                                    <div class="invalid-feedback">Please select a paint solution.</div>
                                 </div>
 
                                 <!-- Location / Area -->
@@ -1641,14 +1647,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <form id="quoteForm">
+                    <form id="quoteForm" novalidate>
                         <div class="mb-3">
-                            <label class="form-label-styled">Your Full Name</label>
-                            <input type="text" id="quoteName" class="form-input-styled" placeholder="Enter Name" required>
+                            <label for="quoteName" class="form-label-styled">Your Full Name *</label>
+                            <input type="text" id="quoteName" class="form-input-styled form-control" placeholder="Enter Name" minlength="2" required>
+                            <div class="invalid-feedback">Please enter your full name (at least 2 characters).</div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label-styled">Phone Number</label>
-                            <input type="tel" id="quotePhone" class="form-input-styled" placeholder="Enter Mobile Number" required>
+                            <label for="quotePhone" class="form-label-styled">Phone Number *</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text fw-bold bg-light">+91</span>
+                                <input type="tel" id="quotePhone" class="form-input-styled form-control" placeholder="10-digit mobile number" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" autocomplete="tel-national" required>
+                                <div class="invalid-feedback">Please enter a valid 10-digit mobile number (digits only).</div>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label-styled">Interested Paint Solution</label>
@@ -1779,25 +1790,82 @@
 
     <!-- WhatsApp Contact Form Handler -->
     <script>
+        (function () {
+            var fName = document.getElementById('formName');
+            var fPhone = document.getElementById('formPhone');
+            var fService = document.getElementById('formService');
+            if (fPhone) {
+                fPhone.addEventListener('input', function () {
+                    this.value = (this.value || '').replace(/\D/g, '').slice(0, 10);
+                    if (this.classList.contains('is-invalid') || this.value.length === 10) {
+                        var ok = /^\d{10}$/.test(this.value);
+                        this.classList.toggle('is-invalid', !ok);
+                        this.classList.toggle('is-valid', ok);
+                    }
+                });
+            }
+            if (fName) {
+                fName.addEventListener('input', function () {
+                    if (this.classList.contains('is-invalid') || this.classList.contains('is-valid')) {
+                        var ok = this.value.trim().length >= 2;
+                        this.classList.toggle('is-invalid', !ok);
+                        this.classList.toggle('is-valid', ok);
+                    }
+                });
+            }
+            if (fService) {
+                fService.addEventListener('change', function () {
+                    var ok = !!this.value;
+                    this.classList.toggle('is-invalid', !ok);
+                    this.classList.toggle('is-valid', ok);
+                });
+            }
+        })();
+
         function handleContactPageSubmit(e) {
             e.preventDefault();
-            var name = document.getElementById('formName').value.trim();
-            var phone = document.getElementById('formPhone').value.trim();
-            var service = document.getElementById('formService').value;
+            var form = e.target;
+            var nameEl = document.getElementById('formName');
+            var phoneEl = document.getElementById('formPhone');
+            var serviceEl = document.getElementById('formService');
+            var name = nameEl.value.trim();
+            var phone = (phoneEl.value || '').replace(/\D/g, '').slice(0, 10);
+            phoneEl.value = phone;
+            var service = serviceEl.value;
             var area = document.getElementById('formArea') ? document.getElementById('formArea').value.trim() : '';
             var msg = document.getElementById('formMsg') ? document.getElementById('formMsg').value.trim() : '';
+
+            var isNameOk = name.length >= 2;
+            var isPhoneOk = /^\d{10}$/.test(phone);
+            var isServiceOk = !!service;
+            nameEl.classList.toggle('is-invalid', !isNameOk);
+            nameEl.classList.toggle('is-valid', isNameOk);
+            phoneEl.classList.toggle('is-invalid', !isPhoneOk);
+            phoneEl.classList.toggle('is-valid', isPhoneOk);
+            serviceEl.classList.toggle('is-invalid', !isServiceOk);
+            serviceEl.classList.toggle('is-valid', isServiceOk);
+
+            if (!isNameOk || !isPhoneOk || !isServiceOk) {
+                var firstErr = form.querySelector('.is-invalid');
+                if (firstErr) firstErr.focus();
+                return;
+            }
 
             var text = 'Hello AP Anbu Paints,\n\n' +
                 'I would like to request a Paint Estimate / Shade Consultation:\n' +
                 '• Full Name: ' + name + '\n' +
-                '• Mobile Number: ' + phone + '\n' +
+                '• Mobile Number: +91 ' + phone + '\n' +
                 '• Paint Solution: ' + service + '\n' +
                 (area ? ('• Approx Area / Location: ' + area + '\n') : '') +
                 (msg ? ('• Notes / Shade Code: ' + msg + '\n') : '') +
                 '\nPlease share details and pricing estimate.';
 
-            var waUrl = 'https://wa.me/9626325204?text=' + encodeURIComponent(text);
-            window.open(waUrl, '_blank');
+            var waUrl = 'https://wa.me/919626325204?text=' + encodeURIComponent(text);
+            window.open(waUrl, '_blank', 'noopener');
+            form.reset();
+            form.querySelectorAll('.is-valid, .is-invalid').forEach(function (el) {
+                el.classList.remove('is-valid', 'is-invalid');
+            });
         }
     </script>
 
@@ -1847,23 +1915,65 @@
             // Quote Modal Form Submit Handler
             var quoteForm = document.getElementById('quoteForm');
             if (quoteForm) {
+                var qNameEl = document.getElementById('quoteName');
+                var qPhoneEl = document.getElementById('quotePhone');
+                if (qPhoneEl) {
+                    qPhoneEl.addEventListener('input', function () {
+                        this.value = (this.value || '').replace(/\D/g, '').slice(0, 10);
+                        if (this.classList.contains('is-invalid') || this.value.length === 10) {
+                            var ok = /^\d{10}$/.test(this.value);
+                            this.classList.toggle('is-invalid', !ok);
+                            this.classList.toggle('is-valid', ok);
+                        }
+                    });
+                }
+                if (qNameEl) {
+                    qNameEl.addEventListener('input', function () {
+                        if (this.classList.contains('is-invalid') || this.classList.contains('is-valid')) {
+                            var ok = this.value.trim().length >= 2;
+                            this.classList.toggle('is-invalid', !ok);
+                            this.classList.toggle('is-valid', ok);
+                        }
+                    });
+                }
                 quoteForm.addEventListener('submit', function (e) {
                     e.preventDefault();
-                    var name = document.getElementById('quoteName').value.trim();
-                    var phone = document.getElementById('quotePhone').value.trim();
+                    var name = qNameEl ? qNameEl.value.trim() : '';
+                    var phone = qPhoneEl ? (qPhoneEl.value || '').replace(/\D/g, '').slice(0, 10) : '';
+                    if (qPhoneEl) qPhoneEl.value = phone;
+                    var isNameOk = name.length >= 2;
+                    var isPhoneOk = /^\d{10}$/.test(phone);
+                    if (qNameEl) {
+                        qNameEl.classList.toggle('is-invalid', !isNameOk);
+                        qNameEl.classList.toggle('is-valid', isNameOk);
+                    }
+                    if (qPhoneEl) {
+                        qPhoneEl.classList.toggle('is-invalid', !isPhoneOk);
+                        qPhoneEl.classList.toggle('is-valid', isPhoneOk);
+                    }
+                    if (!isNameOk || !isPhoneOk) {
+                        var firstErr = quoteForm.querySelector('.is-invalid');
+                        if (firstErr) firstErr.focus();
+                        return;
+                    }
+
                     var service = document.getElementById('quoteService').value;
                     var area = document.getElementById('quoteArea') ? document.getElementById('quoteArea').value.trim() : '';
 
                     var text = 'Hello AP Anbu Paints,\n\n' +
                         'I would like to request a quotation:\n' +
                         '• Name: ' + name + '\n' +
-                        '• Phone: ' + phone + '\n' +
+                        '• Phone: +91 ' + phone + '\n' +
                         '• Solution: ' + service + '\n' +
                         (area ? ('• Carpet Area: ' + area + '\n') : '') +
                         '\nPlease share details and pricing estimate.';
 
-                    var waUrl = 'https://wa.me/9626325204?text=' + encodeURIComponent(text);
-                    window.open(waUrl, '_blank');
+                    var waUrl = 'https://wa.me/919626325204?text=' + encodeURIComponent(text);
+                    window.open(waUrl, '_blank', 'noopener');
+                    quoteForm.reset();
+                    quoteForm.querySelectorAll('.is-valid, .is-invalid').forEach(function (el) {
+                        el.classList.remove('is-valid', 'is-invalid');
+                    });
 
                     var modalEl = document.getElementById('quoteModal');
                     if (modalEl && window.bootstrap && bootstrap.Modal) {
