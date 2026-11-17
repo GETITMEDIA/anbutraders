@@ -136,15 +136,27 @@
             responsive: {
                 0:{
                     items: 1,
-                    margin: 15
+                    stagePadding: 18,
+                    margin: 12,
+                    nav: false
+                },
+                576:{
+                    items: 1,
+                    stagePadding: 44,
+                    margin: 16,
+                    nav: true
                 },
                 768:{
                     items: 2,
-                    margin: 20
+                    stagePadding: 0,
+                    margin: 20,
+                    nav: true
                 },
                 992:{
                     items: 3,
-                    margin: 25
+                    stagePadding: 0,
+                    margin: 25,
+                    nav: true
                 }
             }
         });
@@ -176,6 +188,29 @@
     }
 
     
+    // Mobile horizontal row autoplay for standalone Testimonials page grid
+    var testiGrid = document.querySelector('.anbu-testi-grid');
+    if (testiGrid) {
+        var testiPaused = false;
+        setInterval(function() {
+            if (testiPaused || window.innerWidth > 767) return;
+            var card = testiGrid.firstElementChild;
+            var step = card ? (card.offsetWidth + 14) : 280;
+            var maxScroll = testiGrid.scrollWidth - testiGrid.clientWidth;
+            if (testiGrid.scrollLeft >= maxScroll - 10) {
+                testiGrid.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                testiGrid.scrollBy({ left: step, behavior: 'smooth' });
+            }
+        }, 3200);
+        testiGrid.addEventListener('touchstart', function() { testiPaused = true; }, { passive: true });
+        testiGrid.addEventListener('touchend', function() {
+            setTimeout(function() { testiPaused = false; }, 1200);
+        }, { passive: true });
+        testiGrid.addEventListener('mouseenter', function() { testiPaused = true; });
+        testiGrid.addEventListener('mouseleave', function() { testiPaused = false; });
+    }
+
 })(jQuery);
 
 // Our business tabs (defensive)

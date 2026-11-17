@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
   box-shadow: 0 4px 20px rgba(6, 43, 91, 0.06) !important;
   padding: 0 !important;
-  min-height: 86px;
+  min-height: 106px;
   transition: transform 0.36s cubic-bezier(0.16, 1, 0.3, 1),
               background-color 0.3s ease,
               box-shadow 0.3s ease,
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-right: 0;
   padding-left: 0;
-  height: 86px;
+  height: 106px;
   display: flex;
   align-items: center;
   background: transparent;
@@ -199,8 +199,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar#banner .navbar-brand img.anbu-navbar-logo {
-  height: 68px !important;
-  max-height: 70px;
+  height: 92px !important;
+  max-height: 94px !important;
+  max-width: 280px !important;
   width: auto !important;
   object-fit: contain;
   position: relative;
@@ -213,20 +214,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991.98px) {
-  .navbar#banner { min-height: 78px; }
-  .navbar#banner .navbar-brand { height: 78px; }
+  .navbar#banner { min-height: 96px; }
+  .navbar#banner .navbar-brand { height: 96px; }
   .navbar#banner .navbar-brand img.anbu-navbar-logo {
-    height: 58px !important;
-    max-height: 60px;
+    height: 82px !important;
+    max-height: 84px !important;
+    max-width: 240px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar#banner { min-height: 90px; }
+  .navbar#banner .navbar-brand { height: 90px; }
+  .navbar#banner .navbar-brand img.anbu-navbar-logo {
+    height: 76px !important;
+    max-height: 78px !important;
+    max-width: 210px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  .navbar#banner { min-height: 72px; }
-  .navbar#banner .navbar-brand { height: 72px; }
+  .navbar#banner { min-height: 86px; }
+  .navbar#banner .navbar-brand { height: 86px; }
   .navbar#banner .navbar-brand img.anbu-navbar-logo {
-    height: 52px !important;
-    max-height: 54px;
+    height: 72px !important;
+    max-height: 74px !important;
+    max-width: 195px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar#banner { min-height: 82px; }
+  .navbar#banner .navbar-brand { height: 82px; }
+  .navbar#banner .navbar-brand img.anbu-navbar-logo {
+    height: 68px !important;
+    max-height: 70px !important;
+    max-width: 170px !important;
   }
 }
 
@@ -1471,8 +1494,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .anbu-reviews-footer-cta {
-  margin-top: 34px;
+  margin-top: 26px;
   text-align: center;
+}
+
+/* Horizontal Owl Carousel Row Styling for Testimonials */
+.anbu-cement-testimonial-carousel {
+  position: relative;
+}
+
+.anbu-cement-testimonial-carousel .owl-stage {
+  display: flex !important;
+  align-items: stretch;
+  padding: 10px 0 18px;
+}
+
+.anbu-cement-testimonial-carousel .owl-item {
+  display: flex;
+  height: auto;
+}
+
+.anbu-cement-testimonial-carousel .anbu-testimonial-slide {
+  width: 100%;
+  display: flex;
+}
+
+.anbu-cement-testimonial-carousel .single-testimonial {
+  width: 100%;
+}
+
+.anbu-cement-testimonial-carousel .owl-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.anbu-cement-testimonial-carousel .owl-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(6, 43, 91, 0.14) !important;
+  color: var(--c-navy-main) !important;
+  box-shadow: 0 4px 12px rgba(6, 43, 91, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.anbu-cement-testimonial-carousel .owl-nav button:hover {
+  background: var(--c-orange) !important;
+  border-color: var(--c-orange) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.anbu-cement-testimonial-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.anbu-cement-testimonial-carousel .owl-dot span {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.anbu-cement-testimonial-carousel .owl-dot.active span {
+  width: 24px;
+  border-radius: 9999px;
+  background: var(--c-orange);
 }
 
 .anbu-google-review-pill {

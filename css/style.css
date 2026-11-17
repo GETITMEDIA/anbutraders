@@ -6337,6 +6337,38 @@ select:focus-visible {
   gap: 24px;
   margin-top: 2rem;
 }
+@media (max-width: 767.98px) {
+  .anbu-testi-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px;
+    padding: 4px 2px 16px;
+  }
+  .anbu-testi-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .anbu-testi-grid .anbu-testi-card {
+    flex: 0 0 86%;
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+}
+.testimonial-carousel .owl-stage {
+  display: flex !important;
+  align-items: stretch;
+}
+.testimonial-carousel .owl-item {
+  display: flex;
+  height: auto;
+}
+.testimonial-carousel .testimonial-card {
+  width: 100%;
+}
 .anbu-testi-card {
   background: #FFFFFF;
   border: 1px solid var(--border-light, #E2E8F0);
@@ -9576,7 +9608,7 @@ html, body { overflow-x: clip; }
 
 /* Navbar Brand & Logo Alignment - Prominent, Bold & Responsive across all devices */
 .navbar .navbar-brand {
-  height: 94px;
+  height: 106px;
   padding-left: 0 !important;
   padding-right: clamp(0.75rem, 1.5vw, 1.5rem);
   margin-left: 0 !important;
@@ -9586,10 +9618,10 @@ html, body { overflow-x: clip; }
 }
 .navbar .navbar-brand img,
 .anbu-navbar-logo-img {
-  max-width: 280px !important;
-  height: 82px !important;
-  max-height: 84px !important;
-  width: auto;
+  max-width: 300px !important;
+  height: 92px !important;
+  max-height: 94px !important;
+  width: auto !important;
   object-fit: contain;
   display: block;
   transition: height 0.2s ease, max-width 0.2s ease;
@@ -9663,19 +9695,19 @@ html, body { overflow-x: clip; }
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    min-height: 78px;
+    min-height: 96px;
     padding-left: clamp(12px, 3.5vw, 20px) !important;
     padding-right: clamp(12px, 3.5vw, 20px) !important;
   }
   .navbar .navbar-brand {
-    height: 80px;
+    height: 96px;
     padding-right: 0.5rem !important;
   }
   .navbar .navbar-brand img,
   .anbu-navbar-logo-img {
-    height: 70px !important;
-    max-height: 72px !important;
-    max-width: 220px !important;
+    height: 82px !important;
+    max-height: 84px !important;
+    max-width: 240px !important;
   }
   .navbar .navbar-collapse {
     background: #FFFFFF;
@@ -9698,46 +9730,46 @@ html, body { overflow-x: clip; }
 
 @media (max-width: 767.98px) {
   .navbar > .container {
-    min-height: 74px;
+    min-height: 90px;
   }
   .navbar .navbar-brand {
-    height: 74px;
+    height: 90px;
   }
   .navbar .navbar-brand img,
   .anbu-navbar-logo-img {
-    height: 64px !important;
-    max-height: 66px !important;
-    max-width: 190px !important;
+    height: 76px !important;
+    max-height: 78px !important;
+    max-width: 210px !important;
   }
 }
 
 @media (max-width: 575.98px) {
   .navbar > .container {
-    min-height: 72px;
+    min-height: 86px;
   }
   .navbar .navbar-brand {
-    height: 72px;
+    height: 86px;
   }
   .navbar .navbar-brand img,
   .anbu-navbar-logo-img {
-    height: 60px !important;
-    max-height: 62px !important;
-    max-width: 180px !important;
+    height: 72px !important;
+    max-height: 74px !important;
+    max-width: 195px !important;
   }
 }
 
 @media (max-width: 360px) {
   .navbar > .container {
-    min-height: 68px;
+    min-height: 82px;
   }
   .navbar .navbar-brand {
-    height: 66px;
+    height: 82px;
   }
   .navbar .navbar-brand img,
   .anbu-navbar-logo-img {
-    height: 54px !important;
-    max-height: 56px !important;
-    max-width: 150px !important;
+    height: 68px !important;
+    max-height: 70px !important;
+    max-width: 170px !important;
   }
 }
 

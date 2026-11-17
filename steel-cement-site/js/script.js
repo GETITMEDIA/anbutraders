@@ -591,6 +591,60 @@
     });
   }
 
+  /* ── 13. TESTIMONIALS HORIZONTAL AUTOPLAY CAROUSEL ── */
+  function initTestimonialsCarousel() {
+    if (!window.jQuery || typeof window.jQuery.fn.owlCarousel === 'undefined') return;
+    var $ = window.jQuery;
+    var $carousel = $('.anbu-cement-testimonial-carousel');
+    if (!$carousel.length) return;
+
+    $carousel.owlCarousel({
+      autoplay: true,
+      autoplayTimeout: 3200,
+      autoplayHoverPause: true,
+      autoplaySpeed: 750,
+      smartSpeed: 750,
+      loop: true,
+      margin: 16,
+      dots: true,
+      nav: true,
+      navText: [
+        '<i class="fas fa-arrow-left"></i>',
+        '<i class="fas fa-arrow-right"></i>'
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          stagePadding: 18,
+          margin: 14,
+          nav: false
+        },
+        576: {
+          items: 1,
+          stagePadding: 44,
+          margin: 16,
+          nav: true
+        },
+        768: {
+          items: 2,
+          stagePadding: 0,
+          margin: 20,
+          nav: true
+        },
+        992: {
+          items: 3,
+          stagePadding: 0,
+          margin: 24,
+          nav: true
+        }
+      }
+    });
+
+    $carousel.on('mouseleave touchend', function () {
+      $carousel.trigger('play.owl.autoplay', [3200]);
+    });
+  }
+
   function initAll() {
     initSmartNavbar();
     initNavigationHelpers();
@@ -604,6 +658,7 @@
     initProjectLightbox();
     initContactEnhancements();
     initFAQAccordion();
+    initTestimonialsCarousel();
   }
 
   if (document.readyState === 'loading') {

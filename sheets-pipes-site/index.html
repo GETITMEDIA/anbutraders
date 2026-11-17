@@ -1213,6 +1213,24 @@
             }
         }
 
+        // Autoplay horizontal client reviews row
+        (function() {
+            const reviewsEl = document.getElementById('reviewsContainer');
+            if (!reviewsEl) return;
+            let reviewsPaused = false;
+            setInterval(function() {
+                if (!reviewsPaused) {
+                    scrollSection('reviewsContainer', 1);
+                }
+            }, 3400);
+            reviewsEl.addEventListener('mouseenter', function() { reviewsPaused = true; });
+            reviewsEl.addEventListener('mouseleave', function() { reviewsPaused = false; });
+            reviewsEl.addEventListener('touchstart', function() { reviewsPaused = true; }, { passive: true });
+            reviewsEl.addEventListener('touchend', function() {
+                setTimeout(function() { reviewsPaused = false; }, 1200);
+            }, { passive: true });
+        })();
+
         // Set Current Year
         document.addEventListener('DOMContentLoaded', function() {
             var cy = document.querySelectorAll('.current-year');

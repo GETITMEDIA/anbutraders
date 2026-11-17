@@ -140,7 +140,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-height: 94px;
+  min-height: 106px;
   padding: 0 !important;
   display: flex;
   align-items: center;
@@ -152,7 +152,7 @@ a {
   align-items: center !important;
   justify-content: space-between !important;
   width: 100% !important;
-  min-height: 90px;
+  min-height: 106px;
 }
 
 /* Clean Brand Logo (Matches Main Site & Paint Site — Zero Slant Bar) */
@@ -165,10 +165,10 @@ a {
 }
 
 .anbu-navbar-logo-img {
-  height: 70px !important;
-  max-height: 72px;
-  width: auto;
-  max-width: 240px;
+  height: 92px !important;
+  max-height: 94px !important;
+  width: auto !important;
+  max-width: 280px !important;
   object-fit: contain;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -182,20 +182,42 @@ a {
 }
 
 @media (max-width: 991.98px) {
-  .anbu-navbar { min-height: 82px; }
-  .anbu-navbar-inner { min-height: 82px; }
+  .anbu-navbar { min-height: 96px; }
+  .anbu-navbar-inner { min-height: 96px; }
   .anbu-navbar-logo-img {
-    height: 62px !important;
-    max-height: 64px;
+    height: 82px !important;
+    max-height: 84px !important;
+    max-width: 240px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .anbu-navbar { min-height: 90px; }
+  .anbu-navbar-inner { min-height: 90px; }
+  .anbu-navbar-logo-img {
+    height: 76px !important;
+    max-height: 78px !important;
+    max-width: 210px !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  .anbu-navbar { min-height: 76px; }
-  .anbu-navbar-inner { min-height: 76px; }
+  .anbu-navbar { min-height: 86px; }
+  .anbu-navbar-inner { min-height: 86px; }
   .anbu-navbar-logo-img {
-    height: 54px !important;
-    max-height: 56px;
+    height: 72px !important;
+    max-height: 74px !important;
+    max-width: 195px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .anbu-navbar { min-height: 82px; }
+  .anbu-navbar-inner { min-height: 82px; }
+  .anbu-navbar-logo-img {
+    height: 68px !important;
+    max-height: 70px !important;
+    max-width: 170px !important;
   }
 }
 
